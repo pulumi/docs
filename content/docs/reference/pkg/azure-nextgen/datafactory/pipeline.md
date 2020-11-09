@@ -189,12 +189,12 @@ pipeline = azure_nextgen.datafactory.latest.Pipeline("pipeline",
     }],
     factory_name="exampleFactoryName",
     parameters={
-        "JobId": {
-            "type": "String",
-        },
-        "OutputBlobNameList": {
-            "type": "Array",
-        },
+        "JobId": azure_nextgen.datafactory.latest.ParameterSpecificationArgs(
+            type="String",
+        ),
+        "OutputBlobNameList": azure_nextgen.datafactory.latest.ParameterSpecificationArgs(
+            type="Array",
+        ),
     },
     pipeline_name="examplePipeline",
     resource_group_name="exampleResourceGroup",
@@ -205,9 +205,9 @@ pipeline = azure_nextgen.datafactory.latest.Pipeline("pipeline",
         },
     },
     variables={
-        "TestVariableArray": {
-            "type": "Array",
-        },
+        "TestVariableArray": azure_nextgen.datafactory.latest.VariableSpecificationArgs(
+            type="Array",
+        ),
     })
 
 ```
@@ -448,9 +448,9 @@ pipeline = azure_nextgen.datafactory.latest.Pipeline("pipeline",
     description="Example description",
     factory_name="exampleFactoryName",
     parameters={
-        "OutputBlobNameList": {
-            "type": "Array",
-        },
+        "OutputBlobNameList": azure_nextgen.datafactory.latest.ParameterSpecificationArgs(
+            type="Array",
+        ),
     },
     pipeline_name="examplePipeline",
     resource_group_name="exampleResourceGroup")
@@ -536,7 +536,7 @@ const pipeline = new azure_nextgen.datafactory.latest.Pipeline("pipeline", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activities</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Datafactory/Latest:ControlActivity, Azure-Nextgen:Datafactory/Latest:ExecutionActivity, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[Any]]</span> = None<span class="p">, </span><span class="nx">concurrency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[Dict[PipelineFolder]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ParameterSpecification]]</span> = None<span class="p">, </span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_dimensions</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Dict[str, VariableSpecification]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[ControlActivityArgs, ExecutionActivityArgs]]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[Any]]</span> = None<span class="p">, </span><span class="nx">concurrency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[PipelineFolderArgs]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, VariableSpecificationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1095,7 +1095,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#activities_python" style="color: inherit; text-decoration: inherit;">activities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datafactory/Latest:Control<wbr>Activity, Azure-Nextgen:Datafactory/Latest:Execution<wbr>Activity, Default=>]</span>
+        <span class="property-type">Sequence[Union[Control<wbr>Activity<wbr>Args, Execution<wbr>Activity<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of activities in pipeline.{{% /md %}}</dd>
 
@@ -1105,7 +1105,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Pipeline.{{% /md %}}</dd>
 
@@ -1135,7 +1135,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinefolder">Dict[Pipeline<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#pipelinefolder">Pipeline<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.{{% /md %}}</dd>
 
@@ -1145,7 +1145,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}List of parameters for pipeline.{{% /md %}}</dd>
 
@@ -1155,7 +1155,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#run_dimensions_python" style="color: inherit; text-decoration: inherit;">run_<wbr>dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Dimensions emitted by Pipeline.{{% /md %}}</dd>
 
@@ -1165,7 +1165,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Variable<wbr>Specification]</span>
+        <span class="property-type">Mapping[str, Variable<wbr>Specification<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}List of variables for pipeline.{{% /md %}}</dd>
 
@@ -1488,11 +1488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dependencyconditions_python">
-<a href="#dependencyconditions_python" style="color: inherit; text-decoration: inherit;">dependency<wbr>Conditions</a>
+        <span id="dependency_conditions_python">
+<a href="#dependency_conditions_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Match-Condition for the dependency.{{% /md %}}</dd>
 
@@ -1607,11 +1607,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dependencyconditions_python">
-<a href="#dependencyconditions_python" style="color: inherit; text-decoration: inherit;">dependency<wbr>Conditions</a>
+        <span id="dependency_conditions_python">
+<a href="#dependency_conditions_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Match-Condition for the dependency.{{% /md %}}</dd>
 
@@ -1810,14 +1810,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retryintervalinseconds_python">
-<a href="#retryintervalinseconds_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval<wbr>In<wbr>Seconds</a>
+        <span id="retry_interval_in_seconds_python">
+<a href="#retry_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1826,8 +1826,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secureinput_python">
-<a href="#secureinput_python" style="color: inherit; text-decoration: inherit;">secure<wbr>Input</a>
+        <span id="secure_input_python">
+<a href="#secure_input_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1836,8 +1836,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secureoutput_python">
-<a href="#secureoutput_python" style="color: inherit; text-decoration: inherit;">secure<wbr>Output</a>
+        <span id="secure_output_python">
+<a href="#secure_output_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>output</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1850,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -2049,14 +2049,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retryintervalinseconds_python">
-<a href="#retryintervalinseconds_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval<wbr>In<wbr>Seconds</a>
+        <span id="retry_interval_in_seconds_python">
+<a href="#retry_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2065,8 +2065,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secureinput_python">
-<a href="#secureinput_python" style="color: inherit; text-decoration: inherit;">secure<wbr>Input</a>
+        <span id="secure_input_python">
+<a href="#secure_input_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2075,8 +2075,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secureoutput_python">
-<a href="#secureoutput_python" style="color: inherit; text-decoration: inherit;">secure<wbr>Output</a>
+        <span id="secure_output_python">
+<a href="#secure_output_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>output</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2089,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependency">List[Activity<wbr>Dependency]</a></span>
+        <span class="property-type"><a href="#activitydependency">Sequence[Activity<wbr>Dependency<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
 
@@ -2284,11 +2284,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userproperties_python">
-<a href="#userproperties_python" style="color: inherit; text-decoration: inherit;">user<wbr>Properties</a>
+        <span id="user_properties_python">
+<a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userproperty">List[User<wbr>Property]</a></span>
+        <span class="property-type"><a href="#userproperty">Sequence[User<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 
@@ -2467,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
 
@@ -2483,11 +2483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userproperties_python">
-<a href="#userproperties_python" style="color: inherit; text-decoration: inherit;">user<wbr>Properties</a>
+        <span id="user_properties_python">
+<a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependency">List[Activity<wbr>Dependency]</a></span>
+        <span class="property-type"><a href="#activitydependency">Sequence[Activity<wbr>Dependency<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
 
@@ -2746,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Dict[Linked<wbr>Service<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -2756,17 +2756,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicy">Dict[Activity<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#activitypolicy">Activity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userproperties_python">
-<a href="#userproperties_python" style="color: inherit; text-decoration: inherit;">user<wbr>Properties</a>
+        <span id="user_properties_python">
+<a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userproperty">List[User<wbr>Property]</a></span>
+        <span class="property-type"><a href="#userproperty">Sequence[User<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 
@@ -3005,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd>
 
@@ -3025,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -3035,17 +3035,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Dict[Activity<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userproperties_python">
-<a href="#userproperties_python" style="color: inherit; text-decoration: inherit;">user<wbr>Properties</a>
+        <span id="user_properties_python">
+<a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
 
@@ -3180,8 +3180,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3204,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -3339,8 +3339,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3363,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -3482,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Default value of parameter.{{% /md %}}</dd>
 
@@ -3601,7 +3601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Default value of parameter.{{% /md %}}</dd>
 
@@ -3878,7 +3878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User property value. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3997,7 +3997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User property value. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4116,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Default value of variable.{{% /md %}}</dd>
 
@@ -4235,7 +4235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Default value of variable.{{% /md %}}</dd>
 

@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanpropertiesresponse">Dict[Recovery<wbr>Plan<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplanpropertiesresponse">Recovery<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd>
 
@@ -659,8 +659,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryzone_python">
-<a href="#primaryzone_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Zone</a>
+        <span id="primary_zone_python">
+<a href="#primary_zone_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -669,8 +669,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryzone_python">
-<a href="#recoveryzone_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Zone</a>
+        <span id="recovery_zone_python">
+<a href="#recovery_zone_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -838,8 +838,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="actionname_python">
-<a href="#actionname_python" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
+        <span id="action_name_python">
+<a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -852,27 +852,27 @@ The following output properties are available:
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response] | Dict[Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response] | Dict[Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Union[Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args, Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args, Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="failoverdirections_python">
-<a href="#failoverdirections_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Directions</a>
+        <span id="failover_directions_python">
+<a href="#failover_directions_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>directions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="failovertypes_python">
-<a href="#failovertypes_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Types</a>
+        <span id="failover_types_python">
+<a href="#failover_types_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd>
 
@@ -1007,8 +1007,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="fabriclocation_python">
-<a href="#fabriclocation_python" style="color: inherit; text-decoration: inherit;">fabric<wbr>Location</a>
+        <span id="fabric_location_python">
+<a href="#fabric_location_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1017,8 +1017,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runbookid_python">
-<a href="#runbookid_python" style="color: inherit; text-decoration: inherit;">runbook<wbr>Id</a>
+        <span id="runbook_id_python">
+<a href="#runbook_id_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1206,31 +1206,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endgroupactions_python">
-<a href="#endgroupactions_python" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
+        <span id="end_group_actions_python">
+<a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationprotecteditems_python">
-<a href="#replicationprotecteditems_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
+        <span id="replication_protected_items_python">
+<a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startgroupactions_python">
-<a href="#startgroupactions_python" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
+        <span id="start_group_actions_python">
+<a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd>
 
@@ -1838,7 +1838,7 @@ The following output properties are available:
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Sequence[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd>
 
@@ -1848,7 +1848,7 @@ The following output properties are available:
 <a href="#allowed_operations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>operations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of allowed operations.{{% /md %}}</dd>
 
@@ -1858,7 +1858,7 @@ The following output properties are available:
 <a href="#current_scenario_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Dict[Current<wbr>Scenario<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd>
 
@@ -1908,7 +1908,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">List[Recovery<wbr>Plan<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd>
 
@@ -1988,7 +1988,7 @@ The following output properties are available:
 <a href="#replication_providers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of replication providers.{{% /md %}}</dd>
 
@@ -2103,8 +2103,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineid_python">
-<a href="#virtualmachineid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2242,8 +2242,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="fabriclocation_python">
-<a href="#fabriclocation_python" style="color: inherit; text-decoration: inherit;">fabric<wbr>Location</a>
+        <span id="fabric_location_python">
+<a href="#fabric_location_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

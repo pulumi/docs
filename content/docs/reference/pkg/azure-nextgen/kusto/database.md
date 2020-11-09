@@ -30,7 +30,6 @@ class MyStack : Stack
         {
             ClusterName = "kustoclusterrptest4",
             DatabaseName = "KustoDatabase8",
-            Kind = "ReadWrite",
             Location = "westus",
             ResourceGroupName = "kustorptest",
         });
@@ -57,7 +56,6 @@ func main() {
 		_, err := kusto.NewDatabase(ctx, "database", &kusto.DatabaseArgs{
 			ClusterName:       pulumi.String("kustoclusterrptest4"),
 			DatabaseName:      pulumi.String("KustoDatabase8"),
-			Kind:              pulumi.String("ReadWrite"),
 			Location:          pulumi.String("westus"),
 			ResourceGroupName: pulumi.String("kustorptest"),
 		})
@@ -81,7 +79,6 @@ import pulumi_azure_nextgen as azure_nextgen
 database = azure_nextgen.kusto.latest.Database("database",
     cluster_name="kustoclusterrptest4",
     database_name="KustoDatabase8",
-    kind="ReadWrite",
     location="westus",
     resource_group_name="kustorptest")
 
@@ -98,7 +95,6 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const database = new azure_nextgen.kusto.latest.Database("database", {
     clusterName: "kustoclusterrptest4",
     databaseName: "KustoDatabase8",
-    kind: "ReadWrite",
     location: "westus",
     resourceGroupName: "kustorptest",
 });
@@ -558,7 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -595,7 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -632,7 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -669,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

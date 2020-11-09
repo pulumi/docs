@@ -399,7 +399,7 @@ The following output properties are available:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bandwidthscheduleresponse">List[Bandwidth<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bandwidthscheduleresponse">Sequence[Bandwidth<wbr>Schedule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The schedules.{{% /md %}}</dd>
 
@@ -604,7 +604,7 @@ The following output properties are available:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
 
@@ -624,7 +624,7 @@ The following output properties are available:
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Dict[Time<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#stop_python" style="color: inherit; text-decoration: inherit;">stop</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Dict[Time<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
 

@@ -357,7 +357,7 @@ The following output properties are available:
 <a href="#container_registry_credentials_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrylistcredentialsresultresponse">Dict[Registry<wbr>List<wbr>Credentials<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#registrylistcredentialsresultresponse">Registry<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -387,7 +387,7 @@ The following output properties are available:
 <a href="#notebook_access_keys_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>access_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Dict[Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -498,8 +498,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryaccesskey_python">
-<a href="#primaryaccesskey_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
+        <span id="primary_access_key_python">
+<a href="#primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -508,8 +508,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryaccesskey_python">
-<a href="#secondaryaccesskey_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
+        <span id="secondary_access_key_python">
+<a href="#secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -790,7 +790,7 @@ The following output properties are available:
 <a href="#passwords_python" style="color: inherit; text-decoration: inherit;">passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#passwordresponse">List[Password<wbr>Response]</a></span>
+        <span class="property-type"><a href="#passwordresponse">Sequence[Password<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -284,13 +284,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peeringsynclevel_csharp">
+<a href="#peeringsynclevel_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Sync<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="remoteaddressspace_csharp">
 <a href="#remoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -311,6 +321,26 @@ The following output properties are available:
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="remotevirtualnetworkaddressspace_csharp">
+<a href="#remotevirtualnetworkaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="syncremoteaddressspace_csharp">
+<a href="#syncremoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Remote<wbr>Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -401,13 +431,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peeringsynclevel_go">
+<a href="#peeringsynclevel_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Sync<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="remoteaddressspace_go">
 <a href="#remoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -428,6 +468,26 @@ The following output properties are available:
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="remotevirtualnetworkaddressspace_go">
+<a href="#remotevirtualnetworkaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="syncremoteaddressspace_go">
+<a href="#syncremoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Remote<wbr>Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -518,13 +578,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peeringsynclevel_nodejs">
+<a href="#peeringsynclevel_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Sync<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="remoteaddressspace_nodejs">
 <a href="#remoteaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -545,6 +615,26 @@ The following output properties are available:
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="remotevirtualnetworkaddressspace_nodejs">
+<a href="#remotevirtualnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="syncremoteaddressspace_nodejs">
+<a href="#syncremoteaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Remote<wbr>Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -635,13 +725,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peering_sync_level_python">
+<a href="#peering_sync_level_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>sync_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="remote_address_space_python">
 <a href="#remote_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -649,7 +749,7 @@ The following output properties are available:
 <a href="#remote_bgp_communities_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>bgp_<wbr>communities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkbgpcommunitiesresponse">Dict[Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkbgpcommunitiesresponse">Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd>
 
@@ -659,9 +759,29 @@ The following output properties are available:
 <a href="#remote_virtual_network_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="remote_virtual_network_address_space_python">
+<a href="#remote_virtual_network_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>address_<wbr>space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sync_remote_address_space_python">
+<a href="#sync_remote_address_space_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>remote_<wbr>address_<wbr>space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -754,7 +874,7 @@ The following output properties are available:
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 

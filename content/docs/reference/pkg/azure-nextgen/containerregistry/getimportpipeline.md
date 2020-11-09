@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Dict[Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">Dict[Identity<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerpropertiesresponse">Dict[Pipeline<wbr>Trigger<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinetriggerpropertiesresponse">Pipeline<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd>
 
@@ -763,7 +763,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1091,7 +1091,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Dict[Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
 

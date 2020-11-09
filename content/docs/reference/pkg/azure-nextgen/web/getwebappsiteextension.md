@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#authors_python" style="color: inherit; text-decoration: inherit;">authors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of authors.{{% /md %}}</dd>
 

@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#destination_network_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">Dict[Network<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#source_network_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">Dict[Network<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfigresponse">List[Http<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpconfigresponse">Sequence[Http<wbr>Config<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpconfigresponse">List[Tcp<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tcpconfigresponse">Sequence[Tcp<wbr>Config<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
 
@@ -1092,7 +1092,7 @@ The following output properties are available:
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">List[Http<wbr>Host<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">Sequence[Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">List[Http<wbr>Route<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">Sequence[Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
 
@@ -1370,7 +1370,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Dict[Gateway<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
 
@@ -1380,7 +1380,7 @@ The following output properties are available:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Dict[Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
 
@@ -1817,7 +1817,7 @@ The following output properties are available:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Dict[Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
 
@@ -1827,7 +1827,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">List[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
 
@@ -1936,7 +1936,7 @@ The following output properties are available:
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List[Endpoint<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
 
@@ -2085,7 +2085,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Dict[Gateway<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
 

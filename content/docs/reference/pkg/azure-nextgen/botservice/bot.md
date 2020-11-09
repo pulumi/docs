@@ -130,26 +130,26 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
     etag="etag1",
     kind="sdk",
     location="West US",
-    properties={
-        "description": "The description of the bot",
-        "developerAppInsightKey": "appinsightskey",
-        "developerAppInsightsApiKey": "appinsightsapikey",
-        "developerAppInsightsApplicationId": "appinsightsappid",
-        "displayName": "The Name of the bot",
-        "endpoint": "http://mybot.coffee",
-        "iconUrl": "http://myicon",
-        "luisAppIds": [
+    properties=azure_nextgen.botservice.latest.BotPropertiesArgs(
+        description="The description of the bot",
+        developer_app_insight_key="appinsightskey",
+        developer_app_insights_api_key="appinsightsapikey",
+        developer_app_insights_application_id="appinsightsappid",
+        display_name="The Name of the bot",
+        endpoint="http://mybot.coffee",
+        icon_url="http://myicon",
+        luis_app_ids=[
             "luisappid1",
             "luisappid2",
         ],
-        "luisKey": "luiskey",
-        "msaAppId": "exampleappid",
-    },
+        luis_key="luiskey",
+        msa_app_id="exampleappid",
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname",
-    sku={
-        "name": "S1",
-    },
+    sku=azure_nextgen.botservice.latest.SkuArgs(
+        name="S1",
+    ),
     tags={
         "tag1": "value1",
         "tag2": "value2",
@@ -211,7 +211,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[BotProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BotPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +700,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botproperties">Dict[Bot<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#botproperties">Bot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
 
@@ -710,7 +710,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
 
@@ -720,7 +720,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1317,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
 
@@ -1766,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configured_channels_python" style="color: inherit; text-decoration: inherit;">configured_<wbr>channels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
 
@@ -1786,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_channels_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>channels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
 
@@ -1876,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
 

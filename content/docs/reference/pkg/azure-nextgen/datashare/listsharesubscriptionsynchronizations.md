@@ -417,7 +417,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharesubscriptionsynchronizationresponse">List[Share<wbr>Subscription<wbr>Synchronization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharesubscriptionsynchronizationresponse">Sequence[Share<wbr>Subscription<wbr>Synchronization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
 
@@ -688,8 +688,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="durationms_python">
-<a href="#durationms_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Ms</a>
+        <span id="duration_ms_python">
+<a href="#duration_ms_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -738,8 +738,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="synchronizationid_python">
-<a href="#synchronizationid_python" style="color: inherit; text-decoration: inherit;">synchronization<wbr>Id</a>
+        <span id="synchronization_id_python">
+<a href="#synchronization_id_python" style="color: inherit; text-decoration: inherit;">synchronization_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -748,8 +748,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="synchronizationmode_python">
-<a href="#synchronizationmode_python" style="color: inherit; text-decoration: inherit;">synchronization<wbr>Mode</a>
+        <span id="synchronization_mode_python">
+<a href="#synchronization_mode_python" style="color: inherit; text-decoration: inherit;">synchronization_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

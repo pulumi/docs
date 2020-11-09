@@ -153,38 +153,38 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
-    address_space={
-        "addressPrefixes": ["10.0.0.0/16"],
-    },
+    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+        address_prefixes=["10.0.0.0/16"],
+    ),
     is_security_site=False,
     location="West US",
-    o365_policy={
-        "breakOutCategories": {
-            "allow": True,
-            "default": False,
-            "optimize": True,
-        },
-    },
+    o365_policy=azure_nextgen.network.latest.O365PolicyPropertiesArgs(
+        break_out_categories=azure_nextgen.network.latest.O365BreakOutCategoryPoliciesArgs(
+            allow=True,
+            default=False,
+            optimize=True,
+        ),
+    ),
     resource_group_name="rg1",
     tags={
         "key1": "value1",
     },
-    virtual_wan={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
-    },
-    vpn_site_links=[{
-        "bgpProperties": {
-            "asn": 1234,
-            "bgpPeeringAddress": "192.168.0.0",
-        },
-        "fqdn": "link1.vpnsite1.contoso.com",
-        "ipAddress": "50.50.50.56",
-        "linkProperties": {
-            "linkProviderName": "vendor1",
-            "linkSpeedInMbps": 0,
-        },
-        "name": "vpnSiteLink1",
-    }],
+    virtual_wan=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
+    ),
+    vpn_site_links=[azure_nextgen.network.latest.VpnSiteLinkArgs(
+        bgp_properties=azure_nextgen.network.latest.VpnLinkBgpSettingsArgs(
+            asn=1234,
+            bgp_peering_address="192.168.0.0",
+        ),
+        fqdn="link1.vpnsite1.contoso.com",
+        ip_address="50.50.50.56",
+        link_properties=azure_nextgen.network.latest.VpnLinkProviderPropertiesArgs(
+            link_provider_name="vendor1",
+            link_speed_in_mbps=0,
+        ),
+        name="vpnSiteLink1",
+    )],
     vpn_site_name="vpnSite1")
 
 ```
@@ -249,7 +249,7 @@ const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_space</span><span class="p">:</span> <span class="nx">Optional[Dict[AddressSpace]]</span> = None<span class="p">, </span><span class="nx">bgp_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[BgpSettings]]</span> = None<span class="p">, </span><span class="nx">device_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[DeviceProperties]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_security_site</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">o365_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[O365PolicyProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_wan</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">vpn_site_links</span><span class="p">:</span> <span class="nx">Optional[List[VpnSiteLink]]</span> = None<span class="p">, </span><span class="nx">vpn_site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">bgp_properties</span><span class="p">:</span> <span class="nx">Optional[BgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">device_properties</span><span class="p">:</span> <span class="nx">Optional[DevicePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_security_site</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">o365_policy</span><span class="p">:</span> <span class="nx">Optional[O365PolicyPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_wan</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_site_links</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnSiteLinkArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -898,7 +898,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Dict[Address<wbr>Space]</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AddressSpace that contains an array of IP address ranges.{{% /md %}}</dd>
 
@@ -908,7 +908,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bgp_properties_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Dict[Bgp<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
 
@@ -918,7 +918,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#device_properties_python" style="color: inherit; text-decoration: inherit;">device_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceproperties">Dict[Device<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#deviceproperties">Device<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The device properties.{{% /md %}}</dd>
 
@@ -958,7 +958,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#o365_policy_python" style="color: inherit; text-decoration: inherit;">o365_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365policyproperties">Dict[O365Policy<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#o365policyproperties">O365Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 Policy.{{% /md %}}</dd>
 
@@ -978,7 +978,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -988,7 +988,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_wan_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>wan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the vpnSite belongs.{{% /md %}}</dd>
 
@@ -998,7 +998,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpn_site_links_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>site_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelink">List[Vpn<wbr>Site<wbr>Link]</a></span>
+        <span class="property-type"><a href="#vpnsitelink">Sequence[Vpn<wbr>Site<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site links.{{% /md %}}</dd>
 
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 
@@ -1593,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
 
@@ -1792,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
 
@@ -2225,18 +2225,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custombgpipaddresses_python">
-<a href="#custombgpipaddresses_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+        <span id="custom_bgp_ip_addresses_python">
+<a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipconfigurationid_python">
-<a href="#ipconfigurationid_python" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
+        <span id="ipconfiguration_id_python">
+<a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2404,38 +2404,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultbgpipaddresses_python">
-<a href="#defaultbgpipaddresses_python" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+        <span id="default_bgp_ip_addresses_python">
+<a href="#default_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="tunnelipaddresses_python">
-<a href="#tunnelipaddresses_python" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
+        <span id="tunnel_ip_addresses_python">
+<a href="#tunnel_ip_addresses_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custombgpipaddresses_python">
-<a href="#custombgpipaddresses_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+        <span id="custom_bgp_ip_addresses_python">
+<a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipconfigurationid_python">
-<a href="#ipconfigurationid_python" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
+        <span id="ipconfiguration_id_python">
+<a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2835,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypolicies">Dict[O365Break<wbr>Out<wbr>Category<wbr>Policies]</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypolicies">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
 
@@ -2914,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">Dict[O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
 
@@ -3415,8 +3415,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkprovidername_python">
-<a href="#linkprovidername_python" style="color: inherit; text-decoration: inherit;">link<wbr>Provider<wbr>Name</a>
+        <span id="link_provider_name_python">
+<a href="#link_provider_name_python" style="color: inherit; text-decoration: inherit;">link_<wbr>provider_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3534,8 +3534,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkprovidername_python">
-<a href="#linkprovidername_python" style="color: inherit; text-decoration: inherit;">link<wbr>Provider<wbr>Name</a>
+        <span id="link_provider_name_python">
+<a href="#link_provider_name_python" style="color: inherit; text-decoration: inherit;">link_<wbr>provider_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3777,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_properties_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettings">Dict[Vpn<wbr>Link<wbr>Bgp<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettings">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
 
@@ -3813,11 +3813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkproperties_python">
-<a href="#linkproperties_python" style="color: inherit; text-decoration: inherit;">link<wbr>Properties</a>
+        <span id="link_properties_python">
+<a href="#link_properties_python" style="color: inherit; text-decoration: inherit;">link_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderproperties">Dict[Vpn<wbr>Link<wbr>Provider<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderproperties">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
 
@@ -4176,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_properties_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Dict[Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
 
@@ -4212,11 +4212,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkproperties_python">
-<a href="#linkproperties_python" style="color: inherit; text-decoration: inherit;">link<wbr>Properties</a>
+        <span id="link_properties_python">
+<a href="#link_properties_python" style="color: inherit; text-decoration: inherit;">link_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Dict[Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
 

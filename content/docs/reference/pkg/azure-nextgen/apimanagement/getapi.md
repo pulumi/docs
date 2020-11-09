@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#api_version_set_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Dict[Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#authentication_settings_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationsettingscontractresponse">Dict[Authentication<wbr>Settings<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authenticationsettingscontractresponse">Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ The following output properties are available:
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Dict[Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
 
@@ -1423,7 +1423,7 @@ The following output properties are available:
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Dict[OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
 
@@ -1433,7 +1433,7 @@ The following output properties are available:
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Dict[Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
 
@@ -1661,7 +1661,7 @@ The following output properties are available:
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
 

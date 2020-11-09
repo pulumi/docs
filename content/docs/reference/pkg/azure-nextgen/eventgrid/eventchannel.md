@@ -93,17 +93,17 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 event_channel = azure_nextgen.eventgrid.v20200401preview.EventChannel("eventChannel",
-    destination={
-        "azureSubscriptionId": "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
-        "partnerTopicName": "examplePartnerTopic1",
-        "resourceGroup": "examplerg2",
-    },
+    destination=azure_nextgen.eventgrid.v20200401preview.EventChannelDestinationArgs(
+        azure_subscription_id="5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
+        partner_topic_name="examplePartnerTopic1",
+        resource_group="examplerg2",
+    ),
     event_channel_name="exampleEventChannelName1",
     partner_namespace_name="examplePartnerNamespaceName1",
     resource_group_name="examplerg",
-    source={
-        "source": "ContosoCorp.Accounts.User1",
-    })
+    source=azure_nextgen.eventgrid.v20200401preview.EventChannelSourceArgs(
+        source="ContosoCorp.Accounts.User1",
+    ))
 
 ```
 
@@ -145,7 +145,7 @@ const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Dict[EventChannelDestination]]</span> = None<span class="p">, </span><span class="nx">event_channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_if_not_activated_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[Dict[EventChannelFilter]]</span> = None<span class="p">, </span><span class="nx">partner_namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_topic_friendly_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[EventChannelSource]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[EventChannelDestinationArgs]</span> = None<span class="p">, </span><span class="nx">event_channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_if_not_activated_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventChannelFilterArgs]</span> = None<span class="p">, </span><span class="nx">partner_namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_topic_friendly_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[EventChannelSourceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -620,7 +620,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchanneldestination">Dict[Event<wbr>Channel<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventchanneldestination">Event<wbr>Channel<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the destination of an event channel.{{% /md %}}</dd>
 
@@ -641,7 +641,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd>
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelfilter">Dict[Event<wbr>Channel<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#eventchannelfilter">Event<wbr>Channel<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event channel.{{% /md %}}</dd>
 
@@ -662,7 +662,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelsource">Dict[Event<wbr>Channel<wbr>Source]</a></span>
+        <span class="property-type"><a href="#eventchannelsource">Event<wbr>Channel<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source of the event channel. This represents a unique resource in the partner's resource model.{{% /md %}}</dd>
 
@@ -1561,7 +1561,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Eventgrid/V20200401preview:Bool<wbr>Equals<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>In<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Contains<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>In<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter, Default=>]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd>
 
@@ -1640,7 +1640,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Eventgrid/V20200401preview:Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd>
 
@@ -2401,7 +2401,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -2520,7 +2520,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3115,7 +3115,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3234,7 +3234,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3353,7 +3353,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3472,7 +3472,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3591,7 +3591,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3710,7 +3710,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3829,7 +3829,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3948,7 +3948,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -4067,7 +4067,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -4186,7 +4186,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -4305,7 +4305,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -4424,7 +4424,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 

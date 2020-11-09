@@ -114,13 +114,13 @@ sql_resource_sql_role_definition = azure_nextgen.documentdb.v20200601preview.Sql
         "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales",
         "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases",
     ],
-    permissions=[{
-        "dataActions": [
+    permissions=[azure_nextgen.documentdb.v20200601preview.PermissionArgs(
+        data_actions=[
             "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create",
             "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read",
         ],
-        "notDataActions": [],
-    }],
+        not_data_actions=[],
+    )],
     resource_group_name="myResourceGroupName",
     role_definition_id="myRoleDefinitionId",
     role_name="myRoleName",
@@ -171,7 +171,7 @@ const sqlResourceSqlRoleDefinition = new azure_nextgen.documentdb.v20200601previ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlResourceSqlRoleDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assignable_scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[List[Permission]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlResourceSqlRoleDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assignable_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,7 +610,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#assignable_scopes_python" style="color: inherit; text-decoration: inherit;">assignable_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.{{% /md %}}</dd>
 
@@ -620,7 +620,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">List[Permission]</a></span>
+        <span class="property-type"><a href="#permission">Sequence[Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of operations allowed through this Role Definition.{{% /md %}}</dd>
 
@@ -873,21 +873,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataactions_python">
-<a href="#dataactions_python" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
+        <span id="data_actions_python">
+<a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of data actions that are allowed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notdataactions_python">
-<a href="#notdataactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
+        <span id="not_data_actions_python">
+<a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of data actions that are denied.{{% /md %}}</dd>
 
@@ -992,21 +992,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataactions_python">
-<a href="#dataactions_python" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
+        <span id="data_actions_python">
+<a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of data actions that are allowed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notdataactions_python">
-<a href="#notdataactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
+        <span id="not_data_actions_python">
+<a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of data actions that are denied.{{% /md %}}</dd>
 

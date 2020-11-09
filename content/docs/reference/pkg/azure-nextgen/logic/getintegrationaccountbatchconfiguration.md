@@ -399,7 +399,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchconfigurationpropertiesresponse">Dict[Batch<wbr>Configuration<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#batchconfigurationpropertiesresponse">Batch<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The batch configuration properties.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -644,7 +644,7 @@ The following output properties are available:
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Dict[Batch<wbr>Release<wbr>Criteria<wbr>Response]</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Dict[Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd>
 
@@ -1151,7 +1151,7 @@ The following output properties are available:
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd>
 
@@ -1161,7 +1161,7 @@ The following output properties are available:
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd>
 
@@ -1171,7 +1171,7 @@ The following output properties are available:
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd>
 
@@ -1181,7 +1181,7 @@ The following output properties are available:
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
 
@@ -1191,7 +1191,7 @@ The following output properties are available:
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 
@@ -1450,7 +1450,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Dict[Recurrence<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
 

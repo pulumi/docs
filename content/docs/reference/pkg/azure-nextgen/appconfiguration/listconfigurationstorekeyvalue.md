@@ -593,7 +593,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd>
 

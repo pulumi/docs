@@ -33,6 +33,15 @@ class MyStack : Stack
             {
                 ServerVersion = "3.2",
             },
+            BackupPolicy = 
+            {
+                { "periodicModeProperties", new AzureNextGen.DocumentDB.Latest.Inputs.PeriodicModePropertiesArgs
+                {
+                    BackupIntervalInMinutes = 240,
+                    BackupRetentionIntervalInHours = 8,
+                } },
+                { "type", "Periodic" },
+            },
             ConsistencyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConsistencyPolicyArgs
             {
                 DefaultConsistencyLevel = "BoundedStaleness",
@@ -99,77 +108,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
-			AccountName: pulumi.String("ddb1"),
-			ApiProperties: &documentdb.ApiPropertiesArgs{
-				ServerVersion: pulumi.String("3.2"),
-			},
-			ConsistencyPolicy: &documentdb.ConsistencyPolicyArgs{
-				DefaultConsistencyLevel: pulumi.String("BoundedStaleness"),
-				MaxIntervalInSeconds:    pulumi.Int(10),
-				MaxStalenessPrefix:      pulumi.Int(200),
-			},
-			Cors: documentdb.CorsPolicyArray{
-				&documentdb.CorsPolicyArgs{
-					AllowedOrigins: pulumi.String("https://test"),
-				},
-			},
-			DatabaseAccountOfferType: pulumi.String("Standard"),
-			EnableAnalyticalStorage:  pulumi.Bool(true),
-			EnableFreeTier:           pulumi.Bool(false),
-			IpRules: documentdb.IpAddressOrRangeArray{
-				&documentdb.IpAddressOrRangeArgs{
-					IpAddressOrRange: pulumi.String("23.43.230.120"),
-				},
-				&documentdb.IpAddressOrRangeArgs{
-					IpAddressOrRange: pulumi.String("110.12.240.0/12"),
-				},
-			},
-			IsVirtualNetworkFilterEnabled: pulumi.Bool(true),
-			KeyVaultKeyUri:                pulumi.String("https://myKeyVault.vault.azure.net"),
-			Kind:                          pulumi.String("MongoDB"),
-			Location:                      pulumi.String("westus"),
-			Locations: documentdb.LocationArray{
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(0),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("southcentralus"),
-				},
-				&documentdb.LocationArgs{
-					FailoverPriority: pulumi.Int(1),
-					IsZoneRedundant:  pulumi.Bool(false),
-					LocationName:     pulumi.String("eastus"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags:              nil,
-			VirtualNetworkRules: documentdb.VirtualNetworkRuleArray{
-				&documentdb.VirtualNetworkRuleArgs{
-					Id:                               pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
-					IgnoreMissingVNetServiceEndpoint: pulumi.Bool(false),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -180,50 +119,57 @@ import pulumi_azure_nextgen as azure_nextgen
 
 database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount",
     account_name="ddb1",
-    api_properties={
-        "serverVersion": "3.2",
+    api_properties=azure_nextgen.documentdb.latest.ApiPropertiesArgs(
+        server_version="3.2",
+    ),
+    backup_policy={
+        "periodicModeProperties": azure_nextgen.documentdb.latest.PeriodicModePropertiesArgs(
+            backup_interval_in_minutes=240,
+            backup_retention_interval_in_hours=8,
+        ),
+        "type": "Periodic",
     },
-    consistency_policy={
-        "defaultConsistencyLevel": "BoundedStaleness",
-        "maxIntervalInSeconds": 10,
-        "maxStalenessPrefix": 200,
-    },
-    cors=[{
-        "allowedOrigins": "https://test",
-    }],
+    consistency_policy=azure_nextgen.documentdb.latest.ConsistencyPolicyArgs(
+        default_consistency_level="BoundedStaleness",
+        max_interval_in_seconds=10,
+        max_staleness_prefix=200,
+    ),
+    cors=[azure_nextgen.documentdb.latest.CorsPolicyArgs(
+        allowed_origins="https://test",
+    )],
     database_account_offer_type="Standard",
     enable_analytical_storage=True,
     enable_free_tier=False,
     ip_rules=[
-        {
-            "ipAddressOrRange": "23.43.230.120",
-        },
-        {
-            "ipAddressOrRange": "110.12.240.0/12",
-        },
+        azure_nextgen.documentdb.latest.IpAddressOrRangeArgs(
+            ip_address_or_range="23.43.230.120",
+        ),
+        azure_nextgen.documentdb.latest.IpAddressOrRangeArgs(
+            ip_address_or_range="110.12.240.0/12",
+        ),
     ],
     is_virtual_network_filter_enabled=True,
     key_vault_key_uri="https://myKeyVault.vault.azure.net",
     kind="MongoDB",
     location="westus",
     locations=[
-        {
-            "failoverPriority": 0,
-            "isZoneRedundant": False,
-            "locationName": "southcentralus",
-        },
-        {
-            "failoverPriority": 1,
-            "isZoneRedundant": False,
-            "locationName": "eastus",
-        },
+        azure_nextgen.documentdb.latest.LocationArgs(
+            failover_priority=0,
+            is_zone_redundant=False,
+            location_name="southcentralus",
+        ),
+        azure_nextgen.documentdb.latest.LocationArgs(
+            failover_priority=1,
+            is_zone_redundant=False,
+            location_name="eastus",
+        ),
     ],
     resource_group_name="rg1",
     tags={},
-    virtual_network_rules=[{
-        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-        "ignoreMissingVNetServiceEndpoint": False,
-    }])
+    virtual_network_rules=[azure_nextgen.documentdb.latest.VirtualNetworkRuleArgs(
+        id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+        ignore_missing_v_net_service_endpoint=False,
+    )])
 
 ```
 
@@ -239,6 +185,13 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
     accountName: "ddb1",
     apiProperties: {
         serverVersion: "3.2",
+    },
+    backupPolicy: {
+        periodicModeProperties: {
+            backupIntervalInMinutes: 240,
+            backupRetentionIntervalInHours: 8,
+        },
+        type: "Periodic",
     },
     consistencyPolicy: {
         defaultConsistencyLevel: "BoundedStaleness",
@@ -367,11 +320,11 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
     account_name="ddb1",
     database_account_offer_type="Standard",
     location="westus",
-    locations=[{
-        "failoverPriority": 0,
-        "isZoneRedundant": False,
-        "locationName": "southcentralus",
-    }],
+    locations=[azure_nextgen.documentdb.latest.LocationArgs(
+        failover_priority=0,
+        is_zone_redundant=False,
+        location_name="southcentralus",
+    )],
     resource_group_name="rg1")
 
 ```
@@ -412,7 +365,7 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiProperties]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[List[Capability]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ConsistencyPolicy]]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[List[CorsPolicy]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[List[IpAddressOrRange]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[List[Location]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNetworkRule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -633,6 +586,16 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#apiproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}API specific properties. Currently, supported only for MongoDB API.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backuppolicy_csharp">
+<a href="#backuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -863,6 +826,16 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="backuppolicy_go">
+<a href="#backuppolicy_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span> 
@@ -1090,6 +1063,16 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="backuppolicy_nodejs">
+<a href="#backuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Continuous<wbr>Mode<wbr>Backup<wbr>Policy | Periodic<wbr>Mode<wbr>Backup<wbr>Policy</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
@@ -1291,7 +1274,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">List[Location]</a></span>
+        <span class="property-type"><a href="#location">Sequence[Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the georeplication locations enabled for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1311,9 +1294,19 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#api_properties_python" style="color: inherit; text-decoration: inherit;">api_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiproperties">Dict[Api<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#apiproperties">Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}API specific properties. Currently, supported only for MongoDB API.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_policy_python">
+<a href="#backup_policy_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union[Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args, Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1321,7 +1314,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List[Capability]</a></span>
+        <span class="property-type"><a href="#capability">Sequence[Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cosmos DB capabilities for the account{{% /md %}}</dd>
 
@@ -1341,7 +1334,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistencypolicy">Dict[Consistency<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#consistencypolicy">Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consistency policy for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1351,7 +1344,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">List[Cors<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#corspolicy">Sequence[Cors<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd>
 
@@ -1421,7 +1414,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressorrange">List[Ip<wbr>Address<wbr>Or<wbr>Range]</a></span>
+        <span class="property-type"><a href="#ipaddressorrange">Sequence[Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules.{{% /md %}}</dd>
 
@@ -1471,7 +1464,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
 
@@ -1481,7 +1474,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List[Virtual<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Network ACL rules configured for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1840,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoverpolicyresponse">List[Failover<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#failoverpolicyresponse">Sequence[Failover<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the regions ordered by their failover priorities.{{% /md %}}</dd>
 
@@ -1870,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Private Endpoint Connections configured for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1900,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_locations_python" style="color: inherit; text-decoration: inherit;">read_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">List[Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#locationresponse">Sequence[Location<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains of the read locations enabled for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1920,7 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#write_locations_python" style="color: inherit; text-decoration: inherit;">write_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">List[Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#locationresponse">Sequence[Location<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the write location for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -2574,6 +2567,84 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="continuousmodebackuppolicyresponse">Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="corspolicy">Cors<wbr>Policy</h4>
 
 
@@ -2768,8 +2839,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2778,8 +2849,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2788,8 +2859,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exposedheaders_python">
-<a href="#exposedheaders_python" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+        <span id="exposed_headers_python">
+<a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2798,8 +2869,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxageinseconds_python">
-<a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+        <span id="max_age_in_seconds_python">
+<a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3007,8 +3078,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3017,8 +3088,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3027,8 +3098,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exposedheaders_python">
-<a href="#exposedheaders_python" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+        <span id="exposed_headers_python">
+<a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3037,8 +3108,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxageinseconds_python">
-<a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+        <span id="max_age_in_seconds_python">
+<a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3186,8 +3257,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3275,8 +3346,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipaddressorrange_python">
-<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Or<wbr>Range</a>
+        <span id="ip_address_or_range_python">
+<a href="#ip_address_or_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>or_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3354,8 +3425,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipaddressorrange_python">
-<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Or<wbr>Range</a>
+        <span id="ip_address_or_range_python">
+<a href="#ip_address_or_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>or_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3493,8 +3564,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3503,8 +3574,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iszoneredundant_python">
-<a href="#iszoneredundant_python" style="color: inherit; text-decoration: inherit;">is<wbr>Zone<wbr>Redundant</a>
+        <span id="is_zone_redundant_python">
+<a href="#is_zone_redundant_python" style="color: inherit; text-decoration: inherit;">is_<wbr>zone_<wbr>redundant</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3772,8 +3843,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3782,8 +3853,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iszoneredundant_python">
-<a href="#iszoneredundant_python" style="color: inherit; text-decoration: inherit;">is<wbr>Zone<wbr>Redundant</a>
+        <span id="is_zone_redundant_python">
+<a href="#is_zone_redundant_python" style="color: inherit; text-decoration: inherit;">is_<wbr>zone_<wbr>redundant</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3799,6 +3870,402 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_csharp">
+<a href="#periodicmodeproperties_csharp" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_go">
+<a href="#periodicmodeproperties_go" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_nodejs">
+<a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodic_mode_properties_python">
+<a href="#periodic_mode_properties_python" style="color: inherit; text-decoration: inherit;">periodic_<wbr>mode_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="periodicmodebackuppolicyresponse">Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_csharp">
+<a href="#periodicmodeproperties_csharp" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_go">
+<a href="#periodicmodeproperties_go" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_nodejs">
+<a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodic_mode_properties_python">
+<a href="#periodic_mode_properties_python" style="color: inherit; text-decoration: inherit;">periodic_<wbr>mode_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_csharp">
+<a href="#backupintervalinminutes_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_csharp">
+<a href="#backupretentionintervalinhours_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_go">
+<a href="#backupintervalinminutes_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_go">
+<a href="#backupretentionintervalinhours_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_nodejs">
+<a href="#backupintervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_nodejs">
+<a href="#backupretentionintervalinhours_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_interval_in_minutes_python">
+<a href="#backup_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>interval_<wbr>in_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_retention_interval_in_hours_python">
+<a href="#backup_retention_interval_in_hours_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>interval_<wbr>in_<wbr>hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_csharp">
+<a href="#backupintervalinminutes_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_csharp">
+<a href="#backupretentionintervalinhours_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_go">
+<a href="#backupintervalinminutes_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_go">
+<a href="#backupretentionintervalinhours_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_nodejs">
+<a href="#backupintervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_nodejs">
+<a href="#backupretentionintervalinhours_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_interval_in_minutes_python">
+<a href="#backup_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>interval_<wbr>in_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_retention_interval_in_hours_python">
+<a href="#backup_retention_interval_in_hours_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>interval_<wbr>in_<wbr>hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3826,7 +4293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3846,7 +4313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3883,7 +4350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3903,7 +4370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3940,7 +4407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3960,7 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3997,7 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4017,7 +4484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4025,7 +4492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Dict[Private<wbr>Endpoint<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
 
@@ -4035,7 +4502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
 
@@ -4348,8 +4815,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoremissingvnetserviceendpoint_python">
-<a href="#ignoremissingvnetserviceendpoint_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>VNet<wbr>Service<wbr>Endpoint</a>
+        <span id="ignore_missing_v_net_service_endpoint_python">
+<a href="#ignore_missing_v_net_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>v_<wbr>net_<wbr>service_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4467,8 +4934,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoremissingvnetserviceendpoint_python">
-<a href="#ignoremissingvnetserviceendpoint_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>VNet<wbr>Service<wbr>Endpoint</a>
+        <span id="ignore_missing_v_net_service_endpoint_python">
+<a href="#ignore_missing_v_net_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>v_<wbr>net_<wbr>service_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

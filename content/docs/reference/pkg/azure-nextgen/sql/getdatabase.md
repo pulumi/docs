@@ -1429,7 +1429,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#recommended_index_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedindexresponse">List[Recommended<wbr>Index<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recommendedindexresponse">Sequence[Recommended<wbr>Index<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The recommended indices for this database.{{% /md %}}</dd>
 
@@ -1449,7 +1449,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#service_tier_advisors_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tier_<wbr>advisors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetieradvisorresponse">List[Service<wbr>Tier<wbr>Advisor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicetieradvisorresponse">Sequence[Service<wbr>Tier<wbr>Advisor<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of service tier advisors for this database. Expanded property{{% /md %}}</dd>
 
@@ -1469,7 +1469,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#transparent_data_encryption_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>data_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transparentdataencryptionresponse">List[Transparent<wbr>Data<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transparentdataencryptionresponse">Sequence[Transparent<wbr>Data<wbr>Encryption<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The transparent data encryption info for this database.{{% /md %}}</dd>
 
@@ -1659,7 +1659,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1840,8 +1840,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="changevalueabsolute_python">
-<a href="#changevalueabsolute_python" style="color: inherit; text-decoration: inherit;">change<wbr>Value<wbr>Absolute</a>
+        <span id="change_value_absolute_python">
+<a href="#change_value_absolute_python" style="color: inherit; text-decoration: inherit;">change_<wbr>value_<wbr>absolute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1850,8 +1850,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="changevaluerelative_python">
-<a href="#changevaluerelative_python" style="color: inherit; text-decoration: inherit;">change<wbr>Value<wbr>Relative</a>
+        <span id="change_value_relative_python">
+<a href="#change_value_relative_python" style="color: inherit; text-decoration: inherit;">change_<wbr>value_<wbr>relative</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2383,7 +2383,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Columns over which to build index{{% /md %}}</dd>
 
@@ -2399,11 +2399,11 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="estimatedimpact_python">
-<a href="#estimatedimpact_python" style="color: inherit; text-decoration: inherit;">estimated<wbr>Impact</a>
+        <span id="estimated_impact_python">
+<a href="#estimated_impact_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>impact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationimpactresponse">List[Operation<wbr>Impact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#operationimpactresponse">Sequence[Operation<wbr>Impact<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The estimated impact of doing recommended index action.{{% /md %}}</dd>
 
@@ -2419,18 +2419,18 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="includedcolumns_python">
-<a href="#includedcolumns_python" style="color: inherit; text-decoration: inherit;">included<wbr>Columns</a>
+        <span id="included_columns_python">
+<a href="#included_columns_python" style="color: inherit; text-decoration: inherit;">included_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of column names to be included in the index{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="indexscript_python">
-<a href="#indexscript_python" style="color: inherit; text-decoration: inherit;">index<wbr>Script</a>
+        <span id="index_script_python">
+<a href="#index_script_python" style="color: inherit; text-decoration: inherit;">index_<wbr>script</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2439,8 +2439,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="indextype_python">
-<a href="#indextype_python" style="color: inherit; text-decoration: inherit;">index<wbr>Type</a>
+        <span id="index_type_python">
+<a href="#index_type_python" style="color: inherit; text-decoration: inherit;">index_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2469,11 +2469,11 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="reportedimpact_python">
-<a href="#reportedimpact_python" style="color: inherit; text-decoration: inherit;">reported<wbr>Impact</a>
+        <span id="reported_impact_python">
+<a href="#reported_impact_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>impact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationimpactresponse">List[Operation<wbr>Impact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#operationimpactresponse">Sequence[Operation<wbr>Impact<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The values reported after index action is complete.{{% /md %}}</dd>
 
@@ -3218,8 +3218,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="activetimeratio_python">
-<a href="#activetimeratio_python" style="color: inherit; text-decoration: inherit;">active<wbr>Time<wbr>Ratio</a>
+        <span id="active_time_ratio_python">
+<a href="#active_time_ratio_python" style="color: inherit; text-decoration: inherit;">active_<wbr>time_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3228,8 +3228,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="avgdtu_python">
-<a href="#avgdtu_python" style="color: inherit; text-decoration: inherit;">avg<wbr>Dtu</a>
+        <span id="avg_dtu_python">
+<a href="#avg_dtu_python" style="color: inherit; text-decoration: inherit;">avg_<wbr>dtu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3248,8 +3248,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="currentservicelevelobjective_python">
-<a href="#currentservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Level<wbr>Objective</a>
+        <span id="current_service_level_objective_python">
+<a href="#current_service_level_objective_python" style="color: inherit; text-decoration: inherit;">current_<wbr>service_<wbr>level_<wbr>objective</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3258,8 +3258,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="currentservicelevelobjectiveid_python">
-<a href="#currentservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+        <span id="current_service_level_objective_id_python">
+<a href="#current_service_level_objective_id_python" style="color: inherit; text-decoration: inherit;">current_<wbr>service_<wbr>level_<wbr>objective_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3268,8 +3268,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="databasesizebasedrecommendationservicelevelobjective_python">
-<a href="#databasesizebasedrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+        <span id="database_size_based_recommendation_service_level_objective_python">
+<a href="#database_size_based_recommendation_service_level_objective_python" style="color: inherit; text-decoration: inherit;">database_<wbr>size_<wbr>based_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3278,8 +3278,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="databasesizebasedrecommendationservicelevelobjectiveid_python">
-<a href="#databasesizebasedrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+        <span id="database_size_based_recommendation_service_level_objective_id_python">
+<a href="#database_size_based_recommendation_service_level_objective_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>size_<wbr>based_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3288,8 +3288,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="disasterplanbasedrecommendationservicelevelobjective_python">
-<a href="#disasterplanbasedrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+        <span id="disaster_plan_based_recommendation_service_level_objective_python">
+<a href="#disaster_plan_based_recommendation_service_level_objective_python" style="color: inherit; text-decoration: inherit;">disaster_<wbr>plan_<wbr>based_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3298,8 +3298,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="disasterplanbasedrecommendationservicelevelobjectiveid_python">
-<a href="#disasterplanbasedrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+        <span id="disaster_plan_based_recommendation_service_level_objective_id_python">
+<a href="#disaster_plan_based_recommendation_service_level_objective_id_python" style="color: inherit; text-decoration: inherit;">disaster_<wbr>plan_<wbr>based_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3318,8 +3318,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="maxdtu_python">
-<a href="#maxdtu_python" style="color: inherit; text-decoration: inherit;">max<wbr>Dtu</a>
+        <span id="max_dtu_python">
+<a href="#max_dtu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>dtu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3328,8 +3328,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="maxsizeingb_python">
-<a href="#maxsizeingb_python" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>GB</a>
+        <span id="max_size_in_gb_python">
+<a href="#max_size_in_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>in_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3338,8 +3338,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="mindtu_python">
-<a href="#mindtu_python" style="color: inherit; text-decoration: inherit;">min<wbr>Dtu</a>
+        <span id="min_dtu_python">
+<a href="#min_dtu_python" style="color: inherit; text-decoration: inherit;">min_<wbr>dtu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3358,8 +3358,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="observationperiodend_python">
-<a href="#observationperiodend_python" style="color: inherit; text-decoration: inherit;">observation<wbr>Period<wbr>End</a>
+        <span id="observation_period_end_python">
+<a href="#observation_period_end_python" style="color: inherit; text-decoration: inherit;">observation_<wbr>period_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3368,8 +3368,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="observationperiodstart_python">
-<a href="#observationperiodstart_python" style="color: inherit; text-decoration: inherit;">observation<wbr>Period<wbr>Start</a>
+        <span id="observation_period_start_python">
+<a href="#observation_period_start_python" style="color: inherit; text-decoration: inherit;">observation_<wbr>period_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3378,8 +3378,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="overallrecommendationservicelevelobjective_python">
-<a href="#overallrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+        <span id="overall_recommendation_service_level_objective_python">
+<a href="#overall_recommendation_service_level_objective_python" style="color: inherit; text-decoration: inherit;">overall_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3388,8 +3388,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="overallrecommendationservicelevelobjectiveid_python">
-<a href="#overallrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+        <span id="overall_recommendation_service_level_objective_id_python">
+<a href="#overall_recommendation_service_level_objective_id_python" style="color: inherit; text-decoration: inherit;">overall_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3398,11 +3398,11 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="servicelevelobjectiveusagemetrics_python">
-<a href="#servicelevelobjectiveusagemetrics_python" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective<wbr>Usage<wbr>Metrics</a>
+        <span id="service_level_objective_usage_metrics_python">
+<a href="#service_level_objective_usage_metrics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level_<wbr>objective_<wbr>usage_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slousagemetricresponse">List[Slo<wbr>Usage<wbr>Metric<wbr>Response]</a></span>
+        <span class="property-type"><a href="#slousagemetricresponse">Sequence[Slo<wbr>Usage<wbr>Metric<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.{{% /md %}}</dd>
 
@@ -3418,8 +3418,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="usagebasedrecommendationservicelevelobjective_python">
-<a href="#usagebasedrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+        <span id="usage_based_recommendation_service_level_objective_python">
+<a href="#usage_based_recommendation_service_level_objective_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>based_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3428,8 +3428,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="usagebasedrecommendationservicelevelobjectiveid_python">
-<a href="#usagebasedrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+        <span id="usage_based_recommendation_service_level_objective_id_python">
+<a href="#usage_based_recommendation_service_level_objective_id_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>based_<wbr>recommendation_<wbr>service_<wbr>level_<wbr>objective_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3567,23 +3567,13 @@ Get-AzSqlServerServiceObjective -Location <location>
 
     <dt class="property-required"
             title="Required">
-        <span id="inrangetimeratio_python">
-<a href="#inrangetimeratio_python" style="color: inherit; text-decoration: inherit;">in<wbr>Range<wbr>Time<wbr>Ratio</a>
+        <span id="in_range_time_ratio_python">
+<a href="#in_range_time_ratio_python" style="color: inherit; text-decoration: inherit;">in_<wbr>range_<wbr>time_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets inRangeTimeRatio for SLO usage metric.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="servicelevelobjectiveid_python">
-<a href="#servicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The serviceLevelObjectiveId for SLO usage metric.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3594,6 +3584,16 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The serviceLevelObjective for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_level_objective_id_python">
+<a href="#service_level_objective_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level_<wbr>objective_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjectiveId for SLO usage metric.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

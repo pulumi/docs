@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#usage_data_collection_policy_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>data_<wbr>collection_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Dict[Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -438,8 +438,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datacollectionfrequency_python">
-<a href="#datacollectionfrequency_python" style="color: inherit; text-decoration: inherit;">data<wbr>Collection<wbr>Frequency</a>
+        <span id="data_collection_frequency_python">
+<a href="#data_collection_frequency_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -448,8 +448,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datareportingfrequency_python">
-<a href="#datareportingfrequency_python" style="color: inherit; text-decoration: inherit;">data<wbr>Reporting<wbr>Frequency</a>
+        <span id="data_reporting_frequency_python">
+<a href="#data_reporting_frequency_python" style="color: inherit; text-decoration: inherit;">data_<wbr>reporting_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -458,18 +458,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventhubdetails_python">
-<a href="#eventhubdetails_python" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Details</a>
+        <span id="event_hub_details_python">
+<a href="#event_hub_details_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeusagedataeventhubresponse">Dict[Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edgeusagedataeventhubresponse">Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of Event Hub where the usage will be reported.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxallowedunreportedusageduration_python">
-<a href="#maxallowedunreportedusageduration_python" style="color: inherit; text-decoration: inherit;">max<wbr>Allowed<wbr>Unreported<wbr>Usage<wbr>Duration</a>
+        <span id="max_allowed_unreported_usage_duration_python">
+<a href="#max_allowed_unreported_usage_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allowed_<wbr>unreported_<wbr>usage_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

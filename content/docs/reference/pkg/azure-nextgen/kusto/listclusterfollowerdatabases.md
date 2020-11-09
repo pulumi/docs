@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#followerdatabasedefinitionresponse">List[Follower<wbr>Database<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#followerdatabasedefinitionresponse">Sequence[Follower<wbr>Database<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd>
 

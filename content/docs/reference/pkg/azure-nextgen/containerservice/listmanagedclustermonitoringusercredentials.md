@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#kubeconfigs_python" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialresultresponse">List[Credential<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#credentialresultresponse">Sequence[Credential<wbr>Result<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
 

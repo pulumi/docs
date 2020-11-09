@@ -220,7 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -357,7 +357,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -494,7 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#private_link_scoped_resources_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>scoped_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List[Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkscopedresourceresponse">Sequence[Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
 
@@ -631,7 +631,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceskuresponse">Dict[Workspace<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspaceskuresponse">Workspace<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#workspace_capping_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>capping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecappingresponse">Dict[Workspace<wbr>Capping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecappingresponse">Workspace<wbr>Capping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd>
 
@@ -830,8 +830,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scopeid_python">
-<a href="#scopeid_python" style="color: inherit; text-decoration: inherit;">scope<wbr>Id</a>
+        <span id="scope_id_python">
+<a href="#scope_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

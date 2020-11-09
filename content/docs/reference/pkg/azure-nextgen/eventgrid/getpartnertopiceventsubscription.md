@@ -681,7 +681,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Dict[Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -692,7 +692,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#dead_letter_with_resource_identity_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>with_<wbr>resource_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deadletterwithresourceidentityresponse">Dict[Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deadletterwithresourceidentityresponse">Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -703,7 +703,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#delivery_with_resource_identity_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>with_<wbr>resource_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverywithresourceidentityresponse">Dict[Delivery<wbr>With<wbr>Resource<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deliverywithresourceidentityresponse">Delivery<wbr>With<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -714,7 +714,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -745,7 +745,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionfilterresponse">Dict[Event<wbr>Subscription<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionfilterresponse">Event<wbr>Subscription<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event subscription.{{% /md %}}</dd>
 
@@ -755,7 +755,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of user defined labels.{{% /md %}}</dd>
 
@@ -765,7 +765,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Dict[Retry<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.{{% /md %}}</dd>
 
@@ -906,8 +906,8 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxeventsperbatch_python">
-<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+        <span id="max_events_per_batch_python">
+<a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -916,8 +916,8 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredbatchsizeinkilobytes_python">
-<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+        <span id="preferred_batch_size_in_kilobytes_python">
+<a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1161,7 +1161,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Dict[Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -1172,7 +1172,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Dict[Event<wbr>Subscription<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd>
 
@@ -1284,7 +1284,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
@@ -1295,7 +1295,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Dict[Event<wbr>Subscription<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd>
 
@@ -1585,7 +1585,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Eventgrid/V20200401preview:Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
 
@@ -1595,7 +1595,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd>
 
@@ -2184,7 +2184,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -2541,7 +2541,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3175,7 +3175,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3294,7 +3294,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3413,7 +3413,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3532,7 +3532,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3651,7 +3651,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3876,8 +3876,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="endpointbaseurl_python">
-<a href="#endpointbaseurl_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Base<wbr>Url</a>
+        <span id="endpoint_base_url_python">
+<a href="#endpoint_base_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>base_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3886,8 +3886,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureactivedirectoryapplicationidoruri_python">
-<a href="#azureactivedirectoryapplicationidoruri_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
+        <span id="azure_active_directory_application_id_or_uri_python">
+<a href="#azure_active_directory_application_id_or_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>application_<wbr>id_<wbr>or_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3896,8 +3896,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureactivedirectorytenantid_python">
-<a href="#azureactivedirectorytenantid_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+        <span id="azure_active_directory_tenant_id_python">
+<a href="#azure_active_directory_tenant_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3906,8 +3906,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointurl_python">
-<a href="#endpointurl_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
+        <span id="endpoint_url_python">
+<a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3916,8 +3916,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxeventsperbatch_python">
-<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+        <span id="max_events_per_batch_python">
+<a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3926,8 +3926,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredbatchsizeinkilobytes_python">
-<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+        <span id="preferred_batch_size_in_kilobytes_python">
+<a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

@@ -118,24 +118,24 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 smart_detector_alert_rule = azure_nextgen.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule",
-    action_groups={
-        "customEmailSubject": "My custom email subject",
-        "customWebhookPayload": "{\"AlertRuleName\":\"#alertrulename\"}",
-        "groupIds": ["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"],
-    },
+    action_groups=azure_nextgen.alertsmanagement.latest.ActionGroupsInformationArgs(
+        custom_email_subject="My custom email subject",
+        custom_webhook_payload="{\"AlertRuleName\":\"#alertrulename\"}",
+        group_ids=["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"],
+    ),
     alert_rule_name="MyAlertRule",
     description="Sample smart detector alert rule description",
-    detector={
-        "id": "VMMemoryLeak",
-    },
+    detector=azure_nextgen.alertsmanagement.latest.DetectorArgs(
+        id="VMMemoryLeak",
+    ),
     frequency="PT5M",
     resource_group_name="MyAlertRules",
     scope=["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1"],
     severity="Sev3",
     state="Enabled",
-    throttling={
-        "duration": "PT20M",
-    })
+    throttling=azure_nextgen.alertsmanagement.latest.ThrottlingInformationArgs(
+        duration="PT20M",
+    ))
 
 ```
 
@@ -184,7 +184,7 @@ const smartDetectorAlertRule = new azure_nextgen.alertsmanagement.latest.SmartDe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_groups</span><span class="p">:</span> <span class="nx">Optional[Dict[ActionGroupsInformation]]</span> = None<span class="p">, </span><span class="nx">alert_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detector</span><span class="p">:</span> <span class="nx">Optional[Dict[Detector]]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[Dict[ThrottlingInformation]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_groups</span><span class="p">:</span> <span class="nx">Optional[ActionGroupsInformationArgs]</span> = None<span class="p">, </span><span class="nx">alert_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detector</span><span class="p">:</span> <span class="nx">Optional[DetectorArgs]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[ThrottlingInformationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -743,7 +743,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsinformation">Dict[Action<wbr>Groups<wbr>Information]</a></span>
+        <span class="property-type"><a href="#actiongroupsinformation">Action<wbr>Groups<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
 
@@ -763,7 +763,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#detector_python" style="color: inherit; text-decoration: inherit;">detector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detector">Dict[Detector]</a></span>
+        <span class="property-type"><a href="#detector">Detector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
 
@@ -793,7 +793,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd>
 
@@ -843,7 +843,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -853,7 +853,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlinginformation">Dict[Throttling<wbr>Information]</a></span>
+        <span class="property-type"><a href="#throttlinginformation">Throttling<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
 
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
 
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
 
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_paths_python" style="color: inherit; text-decoration: inherit;">image_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
 
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
 
@@ -1618,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supported_resource_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
 
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_paths_python" style="color: inherit; text-decoration: inherit;">image_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
 
@@ -1887,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
 
@@ -1897,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supported_resource_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
 

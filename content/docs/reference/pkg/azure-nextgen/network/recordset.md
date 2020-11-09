@@ -98,9 +98,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 record_set = azure_nextgen.network.latest.RecordSet("recordSet",
-    a_records=[{
-        "ipv4Address": "1.2.3.4",
-    }],
+    a_records=[azure_nextgen.network.latest.ARecordArgs(
+        ipv4_address="1.2.3.4",
+    )],
     metadata={
         "key1": "value1",
     },
@@ -220,9 +220,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 record_set = azure_nextgen.network.latest.RecordSet("recordSet",
-    aaaa_records=[{
-        "ipv6Address": "::1",
-    }],
+    aaaa_records=[azure_nextgen.network.latest.AaaaRecordArgs(
+        ipv6_address="::1",
+    )],
     metadata={
         "key1": "value1",
     },
@@ -337,9 +337,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 record_set = azure_nextgen.network.latest.RecordSet("recordSet",
-    cname_record={
-        "cname": "contoso.com",
-    },
+    cname_record=azure_nextgen.network.latest.CnameRecordArgs(
+        cname="contoso.com",
+    ),
     metadata={
         "key1": "value1",
     },
@@ -464,10 +464,10 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
-    mx_records=[{
-        "exchange": "mail.privatezone1.com",
-        "preference": 0,
-    }],
+    mx_records=[azure_nextgen.network.latest.MxRecordArgs(
+        exchange="mail.privatezone1.com",
+        preference=0,
+    )],
     private_zone_name="privatezone1.com",
     record_type="MX",
     relative_record_set_name="recordMX",
@@ -589,9 +589,9 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
         "key1": "value1",
     },
     private_zone_name="0.0.127.in-addr.arpa",
-    ptr_records=[{
-        "ptrdname": "localhost",
-    }],
+    ptr_records=[azure_nextgen.network.latest.PtrRecordArgs(
+        ptrdname="localhost",
+    )],
     record_type="PTR",
     relative_record_set_name="1",
     resource_group_name="resourceGroup1",
@@ -721,15 +721,15 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     record_type="SOA",
     relative_record_set_name="@",
     resource_group_name="resourceGroup1",
-    soa_record={
-        "email": "azureprivatedns-hostmaster.microsoft.com",
-        "expireTime": 2419200,
-        "host": "azureprivatedns.net",
-        "minimumTtl": 300,
-        "refreshTime": 3600,
-        "retryTime": 300,
-        "serialNumber": 1,
-    },
+    soa_record=azure_nextgen.network.latest.SoaRecordArgs(
+        email="azureprivatedns-hostmaster.microsoft.com",
+        expire_time=2419200,
+        host="azureprivatedns.net",
+        minimum_ttl=300,
+        refresh_time=3600,
+        retry_time=300,
+        serial_number=1,
+    ),
     ttl=3600)
 
 ```
@@ -861,12 +861,12 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     record_type="SRV",
     relative_record_set_name="recordSRV",
     resource_group_name="resourceGroup1",
-    srv_records=[{
-        "port": 80,
-        "priority": 0,
-        "target": "contoso.com",
-        "weight": 10,
-    }],
+    srv_records=[azure_nextgen.network.latest.SrvRecordArgs(
+        port=80,
+        priority=0,
+        target="contoso.com",
+        weight=10,
+    )],
     ttl=3600)
 
 ```
@@ -997,12 +997,12 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     relative_record_set_name="recordTXT",
     resource_group_name="resourceGroup1",
     ttl=3600,
-    txt_records=[{
-        "value": [
+    txt_records=[azure_nextgen.network.latest.TxtRecordArgs(
+        value=[
             "string1",
             "string2",
         ],
-    }])
+    )])
 
 ```
 
@@ -1047,7 +1047,7 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">a_records</span><span class="p">:</span> <span class="nx">Optional[List[ARecord]]</span> = None<span class="p">, </span><span class="nx">aaaa_records</span><span class="p">:</span> <span class="nx">Optional[List[AaaaRecord]]</span> = None<span class="p">, </span><span class="nx">cname_record</span><span class="p">:</span> <span class="nx">Optional[Dict[CnameRecord]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">mx_records</span><span class="p">:</span> <span class="nx">Optional[List[MxRecord]]</span> = None<span class="p">, </span><span class="nx">private_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ptr_records</span><span class="p">:</span> <span class="nx">Optional[List[PtrRecord]]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relative_record_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[Dict[SoaRecord]]</span> = None<span class="p">, </span><span class="nx">srv_records</span><span class="p">:</span> <span class="nx">Optional[List[SrvRecord]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">txt_records</span><span class="p">:</span> <span class="nx">Optional[List[TxtRecord]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">a_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[ARecordArgs]]</span> = None<span class="p">, </span><span class="nx">aaaa_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[AaaaRecordArgs]]</span> = None<span class="p">, </span><span class="nx">cname_record</span><span class="p">:</span> <span class="nx">Optional[CnameRecordArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">mx_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[MxRecordArgs]]</span> = None<span class="p">, </span><span class="nx">private_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ptr_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[PtrRecordArgs]]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relative_record_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[SoaRecordArgs]</span> = None<span class="p">, </span><span class="nx">srv_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[SrvRecordArgs]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">txt_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[TxtRecordArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1736,7 +1736,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#a_records_python" style="color: inherit; text-decoration: inherit;">a_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#arecord">List[ARecord]</a></span>
+        <span class="property-type"><a href="#arecord">Sequence[ARecord<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd>
 
@@ -1746,7 +1746,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#aaaa_records_python" style="color: inherit; text-decoration: inherit;">aaaa_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaaarecord">List[Aaaa<wbr>Record]</a></span>
+        <span class="property-type"><a href="#aaaarecord">Sequence[Aaaa<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd>
 
@@ -1756,7 +1756,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cname_record_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>record</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cnamerecord">Dict[Cname<wbr>Record]</a></span>
+        <span class="property-type"><a href="#cnamerecord">Cname<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd>
 
@@ -1776,7 +1776,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd>
 
@@ -1786,7 +1786,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#mx_records_python" style="color: inherit; text-decoration: inherit;">mx_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mxrecord">List[Mx<wbr>Record]</a></span>
+        <span class="property-type"><a href="#mxrecord">Sequence[Mx<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd>
 
@@ -1796,7 +1796,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ptr_records_python" style="color: inherit; text-decoration: inherit;">ptr_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ptrrecord">List[Ptr<wbr>Record]</a></span>
+        <span class="property-type"><a href="#ptrrecord">Sequence[Ptr<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd>
 
@@ -1806,7 +1806,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#soa_record_python" style="color: inherit; text-decoration: inherit;">soa_<wbr>record</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#soarecord">Dict[Soa<wbr>Record]</a></span>
+        <span class="property-type"><a href="#soarecord">Soa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd>
 
@@ -1816,7 +1816,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#srv_records_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#srvrecord">List[Srv<wbr>Record]</a></span>
+        <span class="property-type"><a href="#srvrecord">Sequence[Srv<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd>
 
@@ -1836,7 +1836,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#txt_records_python" style="color: inherit; text-decoration: inherit;">txt_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#txtrecord">List[Txt<wbr>Record]</a></span>
+        <span class="property-type"><a href="#txtrecord">Sequence[Txt<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd>
 
@@ -2159,8 +2159,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4address_python">
-<a href="#ipv4address_python" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2238,8 +2238,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4address_python">
-<a href="#ipv4address_python" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2317,8 +2317,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv6address_python">
-<a href="#ipv6address_python" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2396,8 +2396,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv6address_python">
-<a href="#ipv6address_python" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4069,7 +4069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
 
@@ -4148,7 +4148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
 

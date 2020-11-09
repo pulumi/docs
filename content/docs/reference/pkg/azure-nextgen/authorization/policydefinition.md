@@ -99,20 +99,20 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
     },
     mode="All",
     parameters={
-        "prefix": {
-            "metadata": {
-                "description": "Resource name prefix",
-                "displayName": "Prefix",
-            },
-            "type": "String",
-        },
-        "suffix": {
-            "metadata": {
-                "description": "Resource name suffix",
-                "displayName": "Suffix",
-            },
-            "type": "String",
-        },
+        "prefix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
+            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+                description="Resource name prefix",
+                display_name="Prefix",
+            ),
+            type="String",
+        ),
+        "suffix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
+            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+                description="Resource name suffix",
+                display_name="Suffix",
+            ),
+            type="String",
+        ),
     },
     policy_definition_name="ResourceNaming",
     policy_rule={
@@ -278,21 +278,21 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
     },
     mode="Indexed",
     parameters={
-        "requiredRetentionDays": {
-            "allowedValues": [
+        "requiredRetentionDays": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
+            allowed_values=[
                 0,
                 30,
                 90,
                 180,
                 365,
             ],
-            "defaultValue": 365,
-            "metadata": {
-                "description": "The required diagnostic logs retention in days",
-                "displayName": "Required retention (days)",
-            },
-            "type": "Integer",
-        },
+            default_value=365,
+            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+                description="The required diagnostic logs retention in days",
+                display_name="Required retention (days)",
+            ),
+            type="Integer",
+        ),
     },
     policy_definition_name="EventHubDiagnosticLogs",
     policy_rule={
@@ -397,7 +397,7 @@ const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ParameterDefinitionsValue]]</span> = None<span class="p">, </span><span class="nx">policy_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_rule</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterDefinitionsValueArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_rule</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -866,7 +866,7 @@ The PolicyDefinition resource accepts the following [input]({{< relref "/docs/in
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -886,7 +886,7 @@ The PolicyDefinition resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Definitions<wbr>Value]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Definitions<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd>
 
@@ -896,7 +896,7 @@ The PolicyDefinition resource accepts the following [input]({{< relref "/docs/in
 <a href="#policy_rule_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy rule.{{% /md %}}</dd>
 
@@ -1239,11 +1239,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
 
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
 
@@ -1263,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
 
@@ -1557,11 +1557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
 
@@ -1571,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
 
@@ -1581,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
 

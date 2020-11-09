@@ -89,15 +89,15 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 manager = azure_nextgen.storsimple.latest.Manager("manager",
-    cis_intrinsic_settings={
-        "type": "GardaV1",
-    },
+    cis_intrinsic_settings=azure_nextgen.storsimple.latest.ManagerIntrinsicSettingsArgs(
+        type="GardaV1",
+    ),
     location="westus",
     manager_name="ManagerForSDKTest2",
     resource_group_name="ResourceGroupForSDKTest",
-    sku={
-        "name": "Standard",
-    })
+    sku=azure_nextgen.storsimple.latest.ManagerSkuArgs(
+        name="Standard",
+    ))
 
 ```
 
@@ -137,7 +137,7 @@ const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Manager</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cis_intrinsic_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagerIntrinsicSettings]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagerSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Manager</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cis_intrinsic_settings</span><span class="p">:</span> <span class="nx">Optional[ManagerIntrinsicSettingsArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ManagerSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -606,7 +606,7 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cis_intrinsic_settings_python" style="color: inherit; text-decoration: inherit;">cis_<wbr>intrinsic_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerintrinsicsettings">Dict[Manager<wbr>Intrinsic<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#managerintrinsicsettings">Manager<wbr>Intrinsic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of StorSimple Manager.{{% /md %}}</dd>
 
@@ -636,7 +636,7 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managersku">Dict[Manager<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#managersku">Manager<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Sku.{{% /md %}}</dd>
 
@@ -646,7 +646,7 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags attached to the resource.{{% /md %}}</dd>
 

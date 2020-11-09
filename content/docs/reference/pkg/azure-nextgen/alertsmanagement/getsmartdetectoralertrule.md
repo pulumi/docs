@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsinformationresponse">Dict[Action<wbr>Groups<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#actiongroupsinformationresponse">Action<wbr>Groups<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#detector_python" style="color: inherit; text-decoration: inherit;">detector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectorresponse">Dict[Detector<wbr>Response]</a></span>
+        <span class="property-type"><a href="#detectorresponse">Detector<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlinginformationresponse">Dict[Throttling<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#throttlinginformationresponse">Throttling<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The following output properties are available:
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
 
@@ -1123,7 +1123,7 @@ The following output properties are available:
 <a href="#image_paths_python" style="color: inherit; text-decoration: inherit;">image_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
 
@@ -1143,7 +1143,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ The following output properties are available:
 <a href="#supported_resource_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
 

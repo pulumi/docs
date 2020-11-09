@@ -555,7 +555,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchanneldestinationresponse">Dict[Event<wbr>Channel<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventchanneldestinationresponse">Event<wbr>Channel<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the destination of an event channel.{{% /md %}}</dd>
 
@@ -576,7 +576,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd>
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelfilterresponse">Dict[Event<wbr>Channel<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventchannelfilterresponse">Event<wbr>Channel<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event channel.{{% /md %}}</dd>
 
@@ -597,7 +597,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelsourceresponse">Dict[Event<wbr>Channel<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventchannelsourceresponse">Event<wbr>Channel<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Source of the event channel. This represents a unique resource in the partner's resource model.{{% /md %}}</dd>
 
@@ -968,7 +968,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Eventgrid/V20200401preview:Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/V20200401preview:String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd>
 
@@ -1408,7 +1408,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -1765,7 +1765,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -1884,7 +1884,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -2003,7 +2003,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -2122,7 +2122,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -2241,7 +2241,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -2360,7 +2360,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 

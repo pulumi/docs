@@ -111,7 +111,7 @@ const factory = new azure_nextgen.datafactory.latest.Factory("factory", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Factory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, GlobalParameterSpecification]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryGitHubConfiguration] | Dict[FactoryVSTSConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Factory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, GlobalParameterSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FactoryIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_configuration</span><span class="p">:</span> <span class="nx">Optional[Union[FactoryGitHubConfigurationArgs, FactoryVSTSConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -570,7 +570,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#global_parameters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Global<wbr>Parameter<wbr>Specification]</span>
+        <span class="property-type">Mapping[str, Global<wbr>Parameter<wbr>Specification<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
 
@@ -580,7 +580,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Dict[Factory<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
 
@@ -610,7 +610,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#repo_configuration_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Factory<wbr>Git<wbr>Hub<wbr>Configuration] | Dict[Factory<wbr>VSTSConfiguration]</span>
+        <span class="property-type">Union[Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Args, Factory<wbr>VSTSConfiguration<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
 
@@ -620,7 +620,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1183,8 +1183,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="collaborationbranch_python">
-<a href="#collaborationbranch_python" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1193,8 +1193,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1203,8 +1203,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1223,8 +1223,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastcommitid_python">
-<a href="#lastcommitid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1462,8 +1462,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="collaborationbranch_python">
-<a href="#collaborationbranch_python" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1472,8 +1472,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1482,8 +1482,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1502,8 +1502,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastcommitid_python">
-<a href="#lastcommitid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2009,8 +2009,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="collaborationbranch_python">
-<a href="#collaborationbranch_python" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2029,8 +2029,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2039,8 +2039,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2049,8 +2049,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastcommitid_python">
-<a href="#lastcommitid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2328,8 +2328,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="collaborationbranch_python">
-<a href="#collaborationbranch_python" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2348,8 +2348,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2358,8 +2358,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2368,8 +2368,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastcommitid_python">
-<a href="#lastcommitid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2620,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 

@@ -220,7 +220,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="workspaceuid_csharp">
+<a href="#workspaceuid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>UID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace unique identifier{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="babylonconfiguration_csharp">
+<a href="#babylonconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#babylonconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Babylon<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -241,6 +261,16 @@ The following output properties are available:
         <span class="property-type"><a href="#datalakestorageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace default data lake storage account details{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Encryption<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption details of the workspace{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -271,6 +301,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managedvirtualnetworksettings_csharp">
+<a href="#managedvirtualnetworksettings_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network Settings{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -377,7 +417,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="workspaceuid_go">
+<a href="#workspaceuid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>UID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace unique identifier{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="babylonconfiguration_go">
+<a href="#babylonconfiguration_go" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#babylonconfigurationresponse">Babylon<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -398,6 +458,16 @@ The following output properties are available:
         <span class="property-type"><a href="#datalakestorageaccountdetailsresponse">Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace default data lake storage account details{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption details of the workspace{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -428,6 +498,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managedvirtualnetworksettings_go">
+<a href="#managedvirtualnetworksettings_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworksettingsresponse">Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network Settings{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -534,7 +614,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="workspaceuid_nodejs">
+<a href="#workspaceuid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>UID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace unique identifier{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="babylonconfiguration_nodejs">
+<a href="#babylonconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">babylon<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#babylonconfigurationresponse">Babylon<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -555,6 +655,16 @@ The following output properties are available:
         <span class="property-type"><a href="#datalakestorageaccountdetailsresponse">Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace default data lake storage account details{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption details of the workspace{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -585,6 +695,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="managedvirtualnetworksettings_nodejs">
+<a href="#managedvirtualnetworksettings_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworksettingsresponse">Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network Settings{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -649,7 +769,7 @@ The following output properties are available:
 <a href="#extra_properties_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Workspace level configs and feature flags{{% /md %}}</dd>
 
@@ -691,7 +811,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="workspace_uid_python">
+<a href="#workspace_uid_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>uid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace unique identifier{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="babylon_configuration_python">
+<a href="#babylon_configuration_python" style="color: inherit; text-decoration: inherit;">babylon_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#babylonconfigurationresponse">Babylon<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -699,7 +839,7 @@ The following output properties are available:
 <a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Connectivity endpoints{{% /md %}}</dd>
 
@@ -709,9 +849,19 @@ The following output properties are available:
 <a href="#default_data_lake_storage_python" style="color: inherit; text-decoration: inherit;">default_<wbr>data_<wbr>lake_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakestorageaccountdetailsresponse">Dict[Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datalakestorageaccountdetailsresponse">Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace default data lake storage account details{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption details of the workspace{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -719,7 +869,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityresponse">Dict[Managed<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity of the workspace{{% /md %}}</dd>
 
@@ -745,11 +895,21 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="managed_virtual_network_settings_python">
+<a href="#managed_virtual_network_settings_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworksettingsresponse">Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network Settings{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the workspace{{% /md %}}</dd>
 
@@ -779,7 +939,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -789,7 +949,7 @@ The following output properties are available:
 <a href="#virtual_network_profile_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofileresponse">Dict[Virtual<wbr>Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network profile{{% /md %}}</dd>
 
@@ -804,6 +964,204 @@ The following output properties are available:
 
 
 ## Supporting Types
+
+
+<h4 id="babylonconfigurationresponse">Babylon<wbr>Configuration<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="babylonresourceid_csharp">
+<a href="#babylonresourceid_csharp" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="babylonresourceid_go">
+<a href="#babylonresourceid_go" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="babylonresourceid_nodejs">
+<a href="#babylonresourceid_nodejs" style="color: inherit; text-decoration: inherit;">babylon<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="babylon_resource_id_python">
+<a href="#babylon_resource_id_python" style="color: inherit; text-decoration: inherit;">babylon_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The customer managed key status on the workspace{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Workspace<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The customer managed key status on the workspace{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The customer managed key status on the workspace{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The customer managed key status on the workspace{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="datalakestorageaccountdetailsresponse">Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Response</h4>
@@ -917,6 +1275,125 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Filesystem name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="doubleencryptionenabled_csharp">
+<a href="#doubleencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Double Encryption enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmk_csharp">
+<a href="#cmk_csharp" style="color: inherit; text-decoration: inherit;">Cmk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="doubleencryptionenabled_go">
+<a href="#doubleencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Double Encryption enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmk_go">
+<a href="#cmk_go" style="color: inherit; text-decoration: inherit;">Cmk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="doubleencryptionenabled_nodejs">
+<a href="#doubleencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Double Encryption enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmk_nodejs">
+<a href="#cmk_nodejs" style="color: inherit; text-decoration: inherit;">cmk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="double_encryption_enabled_python">
+<a href="#double_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Double Encryption enabled{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmk_python">
+<a href="#cmk_python" style="color: inherit; text-decoration: inherit;">cmk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1084,6 +1561,165 @@ The following output properties are available:
 
 
 
+<h4 id="managedvirtualnetworksettingsresponse">Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedaadtenantidsforlinking_csharp">
+<a href="#allowedaadtenantidsforlinking_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Aad<wbr>Tenant<wbr>Ids<wbr>For<wbr>Linking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedaccesscheckontargetresource_csharp">
+<a href="#linkedaccesscheckontargetresource_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Access<wbr>Check<wbr>On<wbr>Target<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Linked Access Check On Target Resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventdataexfiltration_csharp">
+<a href="#preventdataexfiltration_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Data<wbr>Exfiltration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Prevent Data Exfiltration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedaadtenantidsforlinking_go">
+<a href="#allowedaadtenantidsforlinking_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Aad<wbr>Tenant<wbr>Ids<wbr>For<wbr>Linking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedaccesscheckontargetresource_go">
+<a href="#linkedaccesscheckontargetresource_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Access<wbr>Check<wbr>On<wbr>Target<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Linked Access Check On Target Resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventdataexfiltration_go">
+<a href="#preventdataexfiltration_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Data<wbr>Exfiltration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Prevent Data Exfiltration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedaadtenantidsforlinking_nodejs">
+<a href="#allowedaadtenantidsforlinking_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Aad<wbr>Tenant<wbr>Ids<wbr>For<wbr>Linking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedaccesscheckontargetresource_nodejs">
+<a href="#linkedaccesscheckontargetresource_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Access<wbr>Check<wbr>On<wbr>Target<wbr>Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Linked Access Check On Target Resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventdataexfiltration_nodejs">
+<a href="#preventdataexfiltration_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Data<wbr>Exfiltration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Prevent Data Exfiltration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_aad_tenant_ids_for_linking_python">
+<a href="#allowed_aad_tenant_ids_for_linking_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>aad_<wbr>tenant_<wbr>ids_<wbr>for_<wbr>linking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linked_access_check_on_target_resource_python">
+<a href="#linked_access_check_on_target_resource_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>access_<wbr>check_<wbr>on_<wbr>target_<wbr>resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Linked Access Check On Target Resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prevent_data_exfiltration_python">
+<a href="#prevent_data_exfiltration_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>data_<wbr>exfiltration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Prevent Data Exfiltration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
 
 
@@ -1103,7 +1739,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1133,7 +1769,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1170,7 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1200,7 +1836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1237,7 +1873,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1267,7 +1903,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1304,7 +1940,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1334,7 +1970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1342,7 +1978,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint which the connection belongs to.{{% /md %}}</dd>
 
@@ -1352,7 +1988,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 
@@ -1672,6 +2308,125 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Subnet ID used for computes in workspace{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturl_csharp">
+<a href="#keyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource key vault url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturl_go">
+<a href="#keyvaulturl_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource key vault url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturl_nodejs">
+<a href="#keyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource key vault url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_url_python">
+<a href="#key_vault_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource key vault url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Workspace Key sub-resource name{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

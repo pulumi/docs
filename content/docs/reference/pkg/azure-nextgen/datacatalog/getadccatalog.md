@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalsresponse">List[Principals<wbr>Response]</a></span>
+        <span class="property-type"><a href="#principalsresponse">Sequence[Principals<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalsresponse">List[Principals<wbr>Response]</a></span>
+        <span class="property-type"><a href="#principalsresponse">Sequence[Principals<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd>
 

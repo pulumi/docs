@@ -150,43 +150,43 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 peering = azure_nextgen.peering.latest.Peering("peering",
-    direct={
-        "connections": [
-            {
-                "bandwidthInMbps": 10000,
-                "bgpSession": {
-                    "maxPrefixesAdvertisedV4": 1000,
-                    "maxPrefixesAdvertisedV6": 100,
-                    "md5AuthenticationKey": "test-md5-auth-key",
-                    "sessionPrefixV4": "192.168.0.0/31",
-                    "sessionPrefixV6": "fd00::0/127",
-                },
-                "connectionIdentifier": "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-                "peeringDBFacilityId": 99999,
-                "sessionAddressProvider": "Peer",
-                "useForPeeringService": False,
-            },
-            {
-                "bandwidthInMbps": 10000,
-                "connectionIdentifier": "8AB00818-D533-4504-A25A-03A17F61201C",
-                "peeringDBFacilityId": 99999,
-                "sessionAddressProvider": "Microsoft",
-                "useForPeeringService": True,
-            },
+    direct=azure_nextgen.peering.latest.PeeringPropertiesDirectArgs(
+        connections=[
+            azure_nextgen.peering.latest.DirectConnectionArgs(
+                bandwidth_in_mbps=10000,
+                bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+                    max_prefixes_advertised_v4=1000,
+                    max_prefixes_advertised_v6=100,
+                    md5_authentication_key="test-md5-auth-key",
+                    session_prefix_v4="192.168.0.0/31",
+                    session_prefix_v6="fd00::0/127",
+                ),
+                connection_identifier="5F4CB5C7-6B43-4444-9338-9ABC72606C16",
+                peering_db_facility_id=99999,
+                session_address_provider="Peer",
+                use_for_peering_service=False,
+            ),
+            azure_nextgen.peering.latest.DirectConnectionArgs(
+                bandwidth_in_mbps=10000,
+                connection_identifier="8AB00818-D533-4504-A25A-03A17F61201C",
+                peering_db_facility_id=99999,
+                session_address_provider="Microsoft",
+                use_for_peering_service=True,
+            ),
         ],
-        "directPeeringType": "Edge",
-        "peerAsn": {
-            "id": "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
+        direct_peering_type="Edge",
+        peer_asn=azure_nextgen.peering.latest.SubResourceArgs(
+            id="/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
+        ),
+    ),
     kind="Direct",
     location="eastus",
     peering_location="peeringLocation0",
     peering_name="peeringName",
     resource_group_name="rgName",
-    sku={
-        "name": "Basic_Direct_Free",
-    })
+    sku=azure_nextgen.peering.latest.PeeringSkuArgs(
+        name="Basic_Direct_Free",
+    ))
 
 ```
 
@@ -361,34 +361,34 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 peering = azure_nextgen.peering.latest.Peering("peering",
-    direct={
-        "connections": [{
-            "bandwidthInMbps": 10000,
-            "bgpSession": {
-                "maxPrefixesAdvertisedV4": 1000,
-                "maxPrefixesAdvertisedV6": 100,
-                "microsoftSessionIPv4Address": "192.168.0.123",
-                "peerSessionIPv4Address": "192.168.0.234",
-                "sessionPrefixV4": "192.168.0.0/24",
-            },
-            "connectionIdentifier": "5F4CB5C7-6B43-4444-9338-9ABC72606C16",
-            "peeringDBFacilityId": 99999,
-            "sessionAddressProvider": "Peer",
-            "useForPeeringService": True,
-        }],
-        "directPeeringType": "IxRs",
-        "peerAsn": {
-            "id": "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
+    direct=azure_nextgen.peering.latest.PeeringPropertiesDirectArgs(
+        connections=[azure_nextgen.peering.latest.DirectConnectionArgs(
+            bandwidth_in_mbps=10000,
+            bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+                max_prefixes_advertised_v4=1000,
+                max_prefixes_advertised_v6=100,
+                microsoft_session_i_pv4_address="192.168.0.123",
+                peer_session_i_pv4_address="192.168.0.234",
+                session_prefix_v4="192.168.0.0/24",
+            ),
+            connection_identifier="5F4CB5C7-6B43-4444-9338-9ABC72606C16",
+            peering_db_facility_id=99999,
+            session_address_provider="Peer",
+            use_for_peering_service=True,
+        )],
+        direct_peering_type="IxRs",
+        peer_asn=azure_nextgen.peering.latest.SubResourceArgs(
+            id="/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
+        ),
+    ),
     kind="Direct",
     location="eastus",
     peering_location="peeringLocation0",
     peering_name="peeringName",
     resource_group_name="rgName",
-    sku={
-        "name": "Premium_Direct_Free",
-    })
+    sku=azure_nextgen.peering.latest.PeeringSkuArgs(
+        name="Premium_Direct_Free",
+    ))
 
 ```
 
@@ -570,43 +570,43 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 peering = azure_nextgen.peering.latest.Peering("peering",
-    exchange={
-        "connections": [
-            {
-                "bgpSession": {
-                    "maxPrefixesAdvertisedV4": 1000,
-                    "maxPrefixesAdvertisedV6": 100,
-                    "md5AuthenticationKey": "test-md5-auth-key",
-                    "peerSessionIPv4Address": "192.168.2.1",
-                    "peerSessionIPv6Address": "fd00::1",
-                },
-                "connectionIdentifier": "CE495334-0E94-4E51-8164-8116D6CD284D",
-                "peeringDBFacilityId": 99999,
-            },
-            {
-                "bgpSession": {
-                    "maxPrefixesAdvertisedV4": 1000,
-                    "maxPrefixesAdvertisedV6": 100,
-                    "md5AuthenticationKey": "test-md5-auth-key",
-                    "peerSessionIPv4Address": "192.168.2.2",
-                    "peerSessionIPv6Address": "fd00::2",
-                },
-                "connectionIdentifier": "CDD8E673-CB07-47E6-84DE-3739F778762B",
-                "peeringDBFacilityId": 99999,
-            },
+    exchange=azure_nextgen.peering.latest.PeeringPropertiesExchangeArgs(
+        connections=[
+            azure_nextgen.peering.latest.ExchangeConnectionArgs(
+                bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+                    max_prefixes_advertised_v4=1000,
+                    max_prefixes_advertised_v6=100,
+                    md5_authentication_key="test-md5-auth-key",
+                    peer_session_i_pv4_address="192.168.2.1",
+                    peer_session_i_pv6_address="fd00::1",
+                ),
+                connection_identifier="CE495334-0E94-4E51-8164-8116D6CD284D",
+                peering_db_facility_id=99999,
+            ),
+            azure_nextgen.peering.latest.ExchangeConnectionArgs(
+                bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+                    max_prefixes_advertised_v4=1000,
+                    max_prefixes_advertised_v6=100,
+                    md5_authentication_key="test-md5-auth-key",
+                    peer_session_i_pv4_address="192.168.2.2",
+                    peer_session_i_pv6_address="fd00::2",
+                ),
+                connection_identifier="CDD8E673-CB07-47E6-84DE-3739F778762B",
+                peering_db_facility_id=99999,
+            ),
         ],
-        "peerAsn": {
-            "id": "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
-        },
-    },
+        peer_asn=azure_nextgen.peering.latest.SubResourceArgs(
+            id="/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
+        ),
+    ),
     kind="Exchange",
     location="eastus",
     peering_location="peeringLocation0",
     peering_name="peeringName",
     resource_group_name="rgName",
-    sku={
-        "name": "Basic_Exchange_Free",
-    })
+    sku=azure_nextgen.peering.latest.PeeringSkuArgs(
+        name="Basic_Exchange_Free",
+    ))
 
 ```
 
@@ -674,7 +674,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">direct</span><span class="p">:</span> <span class="nx">Optional[Dict[PeeringPropertiesDirect]]</span> = None<span class="p">, </span><span class="nx">exchange</span><span class="p">:</span> <span class="nx">Optional[Dict[PeeringPropertiesExchange]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[PeeringSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">direct</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesDirectArgs]</span> = None<span class="p">, </span><span class="nx">exchange</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesExchangeArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PeeringSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1183,7 +1183,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringsku">Dict[Peering<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#peeringsku">Peering<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd>
 
@@ -1193,7 +1193,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#direct_python" style="color: inherit; text-decoration: inherit;">direct</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesdirect">Dict[Peering<wbr>Properties<wbr>Direct]</a></span>
+        <span class="property-type"><a href="#peeringpropertiesdirect">Peering<wbr>Properties<wbr>Direct<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd>
 
@@ -1203,7 +1203,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesexchange">Dict[Peering<wbr>Properties<wbr>Exchange]</a></span>
+        <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
 
@@ -1223,7 +1223,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1746,8 +1746,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxprefixesadvertisedv4_python">
-<a href="#maxprefixesadvertisedv4_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
+        <span id="max_prefixes_advertised_v4_python">
+<a href="#max_prefixes_advertised_v4_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1756,8 +1756,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxprefixesadvertisedv6_python">
-<a href="#maxprefixesadvertisedv6_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
+        <span id="max_prefixes_advertised_v6_python">
+<a href="#max_prefixes_advertised_v6_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v6</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1766,8 +1766,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="md5authenticationkey_python">
-<a href="#md5authenticationkey_python" style="color: inherit; text-decoration: inherit;">md5Authentication<wbr>Key</a>
+        <span id="md5_authentication_key_python">
+<a href="#md5_authentication_key_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>authentication_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1776,8 +1776,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="microsoftsessionipv4address_python">
-<a href="#microsoftsessionipv4address_python" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv4Address</a>
+        <span id="microsoft_session_i_pv4_address_python">
+<a href="#microsoft_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1786,8 +1786,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="microsoftsessionipv6address_python">
-<a href="#microsoftsessionipv6address_python" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv6Address</a>
+        <span id="microsoft_session_i_pv6_address_python">
+<a href="#microsoft_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1796,8 +1796,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peersessionipv4address_python">
-<a href="#peersessionipv4address_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv4Address</a>
+        <span id="peer_session_i_pv4_address_python">
+<a href="#peer_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1806,8 +1806,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peersessionipv6address_python">
-<a href="#peersessionipv6address_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv6Address</a>
+        <span id="peer_session_i_pv6_address_python">
+<a href="#peer_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1816,8 +1816,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionprefixv4_python">
-<a href="#sessionprefixv4_python" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V4</a>
+        <span id="session_prefix_v4_python">
+<a href="#session_prefix_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1826,8 +1826,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionprefixv6_python">
-<a href="#sessionprefixv6_python" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V6</a>
+        <span id="session_prefix_v6_python">
+<a href="#session_prefix_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v6</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2205,8 +2205,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sessionstatev4_python">
-<a href="#sessionstatev4_python" style="color: inherit; text-decoration: inherit;">session<wbr>State<wbr>V4</a>
+        <span id="session_state_v4_python">
+<a href="#session_state_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>state_<wbr>v4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2215,8 +2215,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sessionstatev6_python">
-<a href="#sessionstatev6_python" style="color: inherit; text-decoration: inherit;">session<wbr>State<wbr>V6</a>
+        <span id="session_state_v6_python">
+<a href="#session_state_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>state_<wbr>v6</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2225,8 +2225,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxprefixesadvertisedv4_python">
-<a href="#maxprefixesadvertisedv4_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
+        <span id="max_prefixes_advertised_v4_python">
+<a href="#max_prefixes_advertised_v4_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2235,8 +2235,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxprefixesadvertisedv6_python">
-<a href="#maxprefixesadvertisedv6_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
+        <span id="max_prefixes_advertised_v6_python">
+<a href="#max_prefixes_advertised_v6_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v6</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2245,8 +2245,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="md5authenticationkey_python">
-<a href="#md5authenticationkey_python" style="color: inherit; text-decoration: inherit;">md5Authentication<wbr>Key</a>
+        <span id="md5_authentication_key_python">
+<a href="#md5_authentication_key_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>authentication_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2255,8 +2255,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="microsoftsessionipv4address_python">
-<a href="#microsoftsessionipv4address_python" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv4Address</a>
+        <span id="microsoft_session_i_pv4_address_python">
+<a href="#microsoft_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2265,8 +2265,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="microsoftsessionipv6address_python">
-<a href="#microsoftsessionipv6address_python" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv6Address</a>
+        <span id="microsoft_session_i_pv6_address_python">
+<a href="#microsoft_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2275,8 +2275,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peersessionipv4address_python">
-<a href="#peersessionipv4address_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv4Address</a>
+        <span id="peer_session_i_pv4_address_python">
+<a href="#peer_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2285,8 +2285,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peersessionipv6address_python">
-<a href="#peersessionipv6address_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv6Address</a>
+        <span id="peer_session_i_pv6_address_python">
+<a href="#peer_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2295,8 +2295,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionprefixv4_python">
-<a href="#sessionprefixv4_python" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V4</a>
+        <span id="session_prefix_v4_python">
+<a href="#session_prefix_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2305,8 +2305,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionprefixv6_python">
-<a href="#sessionprefixv6_python" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V6</a>
+        <span id="session_prefix_v6_python">
+<a href="#session_prefix_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v6</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2544,18 +2544,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bgpsession_python">
-<a href="#bgpsession_python" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
+        <span id="bgp_session_python">
+<a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Dict[Bgp<wbr>Session]</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionidentifier_python">
-<a href="#connectionidentifier_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
+        <span id="connection_identifier_python">
+<a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2564,8 +2564,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringdbfacilityid_python">
-<a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
+        <span id="peering_db_facility_id_python">
+<a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2574,8 +2574,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionaddressprovider_python">
-<a href="#sessionaddressprovider_python" style="color: inherit; text-decoration: inherit;">session<wbr>Address<wbr>Provider</a>
+        <span id="session_address_provider_python">
+<a href="#session_address_provider_python" style="color: inherit; text-decoration: inherit;">session_<wbr>address_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2629,6 +2629,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="microsofttrackingid_csharp">
+<a href="#microsofttrackingid_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Tracking<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2729,6 +2739,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="microsofttrackingid_go">
+<a href="#microsofttrackingid_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Tracking<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="provisionedbandwidthinmbps_go">
 <a href="#provisionedbandwidthinmbps_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
 </span> 
@@ -2823,6 +2843,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="microsofttrackingid_nodejs">
+<a href="#microsofttrackingid_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Tracking<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2923,8 +2953,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="provisionedbandwidthinmbps_python">
-<a href="#provisionedbandwidthinmbps_python" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
+        <span id="microsoft_tracking_id_python">
+<a href="#microsoft_tracking_id_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>tracking_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioned_bandwidth_in_mbps_python">
+<a href="#provisioned_bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>bandwidth_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2943,18 +2983,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bgpsession_python">
-<a href="#bgpsession_python" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
+        <span id="bgp_session_python">
+<a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Dict[Bgp<wbr>Session<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionidentifier_python">
-<a href="#connectionidentifier_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
+        <span id="connection_identifier_python">
+<a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2963,8 +3003,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringdbfacilityid_python">
-<a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
+        <span id="peering_db_facility_id_python">
+<a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2973,8 +3013,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionaddressprovider_python">
-<a href="#sessionaddressprovider_python" style="color: inherit; text-decoration: inherit;">session<wbr>Address<wbr>Provider</a>
+        <span id="session_address_provider_python">
+<a href="#session_address_provider_python" style="color: inherit; text-decoration: inherit;">session_<wbr>address_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3122,18 +3162,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bgpsession_python">
-<a href="#bgpsession_python" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
+        <span id="bgp_session_python">
+<a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Dict[Bgp<wbr>Session]</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionidentifier_python">
-<a href="#connectionidentifier_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
+        <span id="connection_identifier_python">
+<a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3142,8 +3182,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringdbfacilityid_python">
-<a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
+        <span id="peering_db_facility_id_python">
+<a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3361,18 +3401,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bgpsession_python">
-<a href="#bgpsession_python" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
+        <span id="bgp_session_python">
+<a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Dict[Bgp<wbr>Session<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionidentifier_python">
-<a href="#connectionidentifier_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
+        <span id="connection_identifier_python">
+<a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3381,8 +3421,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringdbfacilityid_python">
-<a href="#peeringdbfacilityid_python" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
+        <span id="peering_db_facility_id_python">
+<a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3524,7 +3564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnection">List[Direct<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#directconnection">Sequence[Direct<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd>
 
@@ -3544,7 +3584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
 
@@ -3723,7 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">List[Direct<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">Sequence[Direct<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd>
 
@@ -3743,7 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
 
@@ -3852,7 +3892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnection">List[Exchange<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#exchangeconnection">Sequence[Exchange<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd>
 
@@ -3862,7 +3902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
 
@@ -3971,7 +4011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">List[Exchange<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">Sequence[Exchange<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd>
 
@@ -3981,7 +4021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
 

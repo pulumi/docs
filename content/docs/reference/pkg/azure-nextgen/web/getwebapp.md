@@ -1560,7 +1560,7 @@ http requests{{% /md %}}</dd>
 <a href="#enabled_host_names_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>host_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
 the app is not served on those hostnames.{{% /md %}}</dd>
@@ -1571,7 +1571,7 @@ the app is not served on those hostnames.{{% /md %}}</dd>
 <a href="#host_names_python" style="color: inherit; text-decoration: inherit;">host_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Hostnames associated with the app.{{% /md %}}</dd>
 
@@ -1682,7 +1682,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#slot_swap_status_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>swap_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotswapstatusresponse">Dict[Slot<wbr>Swap<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#slotswapstatusresponse">Slot<wbr>Swap<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the last deployment slot swap operation.{{% /md %}}</dd>
 
@@ -1722,7 +1722,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#traffic_manager_host_names_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>manager_<wbr>host_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Azure Traffic Manager hostnames associated with the app. Read-only.{{% /md %}}</dd>
 
@@ -1795,7 +1795,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#cloning_info_python" style="color: inherit; text-decoration: inherit;">cloning_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginforesponse">Dict[Cloning<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloninginforesponse">Cloning<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd>
 
@@ -1845,7 +1845,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#host_name_ssl_states_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name_<wbr>ssl_<wbr>states</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnamesslstateresponse">List[Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hostnamesslstateresponse">Sequence[Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Hostname SSL states are used to manage the SSL bindings for app's hostnames.{{% /md %}}</dd>
 
@@ -1866,7 +1866,7 @@ This only applies to Functions container.{{% /md %}}</dd>
 <a href="#hosting_environment_profile_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Dict[Hosting<wbr>Environment<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Hosting<wbr>Environment<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}App Service Environment to use for the app.{{% /md %}}</dd>
 
@@ -1897,7 +1897,7 @@ http requests{{% /md %}}</dd>
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Dict[Managed<wbr>Service<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity.{{% /md %}}</dd>
 
@@ -1967,7 +1967,7 @@ http requests{{% /md %}}</dd>
 <a href="#site_config_python" style="color: inherit; text-decoration: inherit;">site_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconfigresponse">Dict[Site<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#siteconfigresponse">Site<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the app.{{% /md %}}</dd>
 
@@ -1977,7 +1977,7 @@ http requests{{% /md %}}</dd>
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -2293,7 +2293,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#custom_action_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomactionresponse">Dict[Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autohealcustomactionresponse">Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd>
 
@@ -2532,7 +2532,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactionsresponse">Dict[Auto<wbr>Heal<wbr>Actions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autohealactionsresponse">Auto<wbr>Heal<wbr>Actions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd>
 
@@ -2542,7 +2542,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggersresponse">Dict[Auto<wbr>Heal<wbr>Triggers<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autohealtriggersresponse">Auto<wbr>Heal<wbr>Triggers<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd>
 
@@ -2721,7 +2721,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtriggerresponse">Dict[Requests<wbr>Based<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requestsbasedtriggerresponse">Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd>
 
@@ -2731,7 +2731,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#slow_requests_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Dict[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd>
 
@@ -2741,7 +2741,7 @@ before taking the action{{% /md %}}</dd>
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">List[Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Sequence[Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd>
 
@@ -3147,7 +3147,7 @@ together to use the same snapshot.{{% /md %}}</dd>
 <a href="#app_settings_overrides_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Application setting overrides for cloned app. If specified, these settings override the settings cloned 
 from source app. Otherwise, application settings from source app are retained.{{% /md %}}</dd>
@@ -3517,7 +3517,7 @@ for more details.{{% /md %}}</dd>
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin
 calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}</dd>
@@ -3609,7 +3609,7 @@ for more details.{{% /md %}}</dd>
 <a href="#ramp_up_rules_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampupruleresponse">List[Ramp<wbr>Up<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rampupruleresponse">Sequence[Ramp<wbr>Up<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd>
 
@@ -3764,8 +3764,8 @@ for more details.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scriptprocessor_python">
-<a href="#scriptprocessor_python" style="color: inherit; text-decoration: inherit;">script<wbr>Processor</a>
+        <span id="script_processor_python">
+<a href="#script_processor_python" style="color: inherit; text-decoration: inherit;">script_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3993,8 +3993,8 @@ for more details.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hosttype_python">
-<a href="#hosttype_python" style="color: inherit; text-decoration: inherit;">host<wbr>Type</a>
+        <span id="host_type_python">
+<a href="#host_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4033,8 +4033,8 @@ for more details.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="toupdate_python">
-<a href="#toupdate_python" style="color: inherit; text-decoration: inherit;">to<wbr>Update</a>
+        <span id="to_update_python">
+<a href="#to_update_python" style="color: inherit; text-decoration: inherit;">to_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4659,7 +4659,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}IP restriction rule headers.
 X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
@@ -4713,8 +4713,8 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetmask_python">
-<a href="#subnetmask_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mask</a>
+        <span id="subnet_mask_python">
+<a href="#subnet_mask_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mask</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4723,8 +4723,8 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnettraffictag_python">
-<a href="#subnettraffictag_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Traffic<wbr>Tag</a>
+        <span id="subnet_traffic_tag_python">
+<a href="#subnet_traffic_tag_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>traffic_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4743,8 +4743,8 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vnetsubnetresourceid_python">
-<a href="#vnetsubnetresourceid_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Resource<wbr>Id</a>
+        <span id="vnet_subnet_resource_id_python">
+<a href="#vnet_subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4753,8 +4753,8 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vnettraffictag_python">
-<a href="#vnettraffictag_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Traffic<wbr>Tag</a>
+        <span id="vnet_traffic_tag_python">
+<a href="#vnet_traffic_tag_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>traffic_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4956,7 +4956,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
 
@@ -5859,8 +5859,8 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actionhostname_python">
-<a href="#actionhostname_python" style="color: inherit; text-decoration: inherit;">action<wbr>Host<wbr>Name</a>
+        <span id="action_host_name_python">
+<a href="#action_host_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>host_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5869,8 +5869,8 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
     <dt class="property-optional"
             title="Optional">
-        <span id="changedecisioncallbackurl_python">
-<a href="#changedecisioncallbackurl_python" style="color: inherit; text-decoration: inherit;">change<wbr>Decision<wbr>Callback<wbr>Url</a>
+        <span id="change_decision_callback_url_python">
+<a href="#change_decision_callback_url_python" style="color: inherit; text-decoration: inherit;">change_<wbr>decision_<wbr>callback_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5880,8 +5880,8 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="changeintervalinminutes_python">
-<a href="#changeintervalinminutes_python" style="color: inherit; text-decoration: inherit;">change<wbr>Interval<wbr>In<wbr>Minutes</a>
+        <span id="change_interval_in_minutes_python">
+<a href="#change_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">change_<wbr>interval_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5890,8 +5890,8 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="changestep_python">
-<a href="#changestep_python" style="color: inherit; text-decoration: inherit;">change<wbr>Step</a>
+        <span id="change_step_python">
+<a href="#change_step_python" style="color: inherit; text-decoration: inherit;">change_<wbr>step</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5902,8 +5902,8 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxreroutepercentage_python">
-<a href="#maxreroutepercentage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Reroute<wbr>Percentage</a>
+        <span id="max_reroute_percentage_python">
+<a href="#max_reroute_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>reroute_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5912,8 +5912,8 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minreroutepercentage_python">
-<a href="#minreroutepercentage_python" style="color: inherit; text-decoration: inherit;">min<wbr>Reroute<wbr>Percentage</a>
+        <span id="min_reroute_percentage_python">
+<a href="#min_reroute_percentage_python" style="color: inherit; text-decoration: inherit;">min_<wbr>reroute_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5932,8 +5932,8 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reroutepercentage_python">
-<a href="#reroutepercentage_python" style="color: inherit; text-decoration: inherit;">reroute<wbr>Percentage</a>
+        <span id="reroute_percentage_python">
+<a href="#reroute_percentage_python" style="color: inherit; text-decoration: inherit;">reroute_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6610,6 +6610,26 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="vnetprivateportscount_csharp">
+<a href="#vnetprivateportscount_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Private<wbr>Ports<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetrouteallenabled_csharp">
+<a href="#vnetrouteallenabled_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Route<wbr>All<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="websocketsenabled_csharp">
 <a href="#websocketsenabled_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Sockets<wbr>Enabled</a>
 </span> 
@@ -7175,6 +7195,26 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetprivateportscount_go">
+<a href="#vnetprivateportscount_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Private<wbr>Ports<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetrouteallenabled_go">
+<a href="#vnetrouteallenabled_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Route<wbr>All<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7746,6 +7786,26 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="vnetprivateportscount_nodejs">
+<a href="#vnetprivateportscount_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Private<wbr>Ports<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetrouteallenabled_nodejs">
+<a href="#vnetrouteallenabled_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Route<wbr>All<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="websocketsenabled_nodejs">
 <a href="#websocketsenabled_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Sockets<wbr>Enabled</a>
 </span> 
@@ -7787,7 +7847,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#machine_key_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitemachinekeyresponse">Dict[Site<wbr>Machine<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd>
 
@@ -7807,7 +7867,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#api_definition_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninforesponse">Dict[Api<wbr>Definition<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apidefinitioninforesponse">Api<wbr>Definition<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd>
 
@@ -7817,7 +7877,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#api_management_config_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfigresponse">Dict[Api<wbr>Management<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apimanagementconfigresponse">Api<wbr>Management<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd>
 
@@ -7837,7 +7897,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List[Name<wbr>Value<wbr>Pair<wbr>Response]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd>
 
@@ -7857,7 +7917,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#auto_heal_rules_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>heal_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrulesresponse">Dict[Auto<wbr>Heal<wbr>Rules<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autohealrulesresponse">Auto<wbr>Heal<wbr>Rules<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd>
 
@@ -7877,7 +7937,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinforesponse">List[Conn<wbr>String<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connstringinforesponse">Sequence[Conn<wbr>String<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd>
 
@@ -7887,7 +7947,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettingsresponse">Dict[Cors<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#corssettingsresponse">Cors<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
 
@@ -7897,7 +7957,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#default_documents_python" style="color: inherit; text-decoration: inherit;">default_<wbr>documents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Default documents.{{% /md %}}</dd>
 
@@ -7927,7 +7987,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#experiments_python" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimentsresponse">Dict[Experiments<wbr>Response]</a></span>
+        <span class="property-type"><a href="#experimentsresponse">Experiments<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd>
 
@@ -7947,7 +8007,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#handler_mappings_python" style="color: inherit; text-decoration: inherit;">handler_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermappingresponse">List[Handler<wbr>Mapping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#handlermappingresponse">Sequence[Handler<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd>
 
@@ -7987,7 +8047,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#ip_security_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>security_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">List[Ip<wbr>Security<wbr>Restriction<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Sequence[Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd>
 
@@ -8027,7 +8087,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimitsresponse">Dict[Site<wbr>Limits<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sitelimitsresponse">Site<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd>
 
@@ -8178,7 +8238,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#push_python" style="color: inherit; text-decoration: inherit;">push</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettingsresponse">Dict[Push<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pushsettingsresponse">Push<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd>
 
@@ -8238,7 +8298,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#scm_ip_security_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>security_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">List[Ip<wbr>Security<wbr>Restriction<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Sequence[Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd>
 
@@ -8298,7 +8358,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#virtual_applications_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplicationresponse">List[Virtual<wbr>Application<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualapplicationresponse">Sequence[Virtual<wbr>Application<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd>
 
@@ -8311,6 +8371,26 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnet_private_ports_count_python">
+<a href="#vnet_private_ports_count_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>private_<wbr>ports_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnet_route_all_enabled_python">
+<a href="#vnet_route_all_enabled_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>route_<wbr>all_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9229,8 +9309,8 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="substatus_python">
-<a href="#substatus_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
+        <span id="sub_status_python">
+<a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9249,8 +9329,8 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="win32status_python">
-<a href="#win32status_python" style="color: inherit; text-decoration: inherit;">win32Status</a>
+        <span id="win32_status_python">
+<a href="#win32_status_python" style="color: inherit; text-decoration: inherit;">win32_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9418,8 +9498,8 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="physicalpath_python">
-<a href="#physicalpath_python" style="color: inherit; text-decoration: inherit;">physical<wbr>Path</a>
+        <span id="physical_path_python">
+<a href="#physical_path_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9428,8 +9508,8 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preloadenabled_python">
-<a href="#preloadenabled_python" style="color: inherit; text-decoration: inherit;">preload<wbr>Enabled</a>
+        <span id="preload_enabled_python">
+<a href="#preload_enabled_python" style="color: inherit; text-decoration: inherit;">preload_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9438,18 +9518,18 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualdirectories_python">
-<a href="#virtualdirectories_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Directories</a>
+        <span id="virtual_directories_python">
+<a href="#virtual_directories_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectoryresponse">List[Virtual<wbr>Directory<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualdirectoryresponse">Sequence[Virtual<wbr>Directory<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualpath_python">
-<a href="#virtualpath_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Path</a>
+        <span id="virtual_path_python">
+<a href="#virtual_path_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9557,8 +9637,8 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="physicalpath_python">
-<a href="#physicalpath_python" style="color: inherit; text-decoration: inherit;">physical<wbr>Path</a>
+        <span id="physical_path_python">
+<a href="#physical_path_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9567,8 +9647,8 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualpath_python">
-<a href="#virtualpath_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Path</a>
+        <span id="virtual_path_python">
+<a href="#virtual_path_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -33,8 +33,10 @@ class MyStack : Stack
             {
                 new AzureNextGen.NetApp.Latest.Inputs.ActiveDirectoryArgs
                 {
+                    AesEncryption = true,
                     Dns = "10.10.10.3, 10.10.10.4",
                     Domain = "10.10.10.3",
+                    LdapSigning = false,
                     OrganizationalUnit = "Engineering",
                     Password = "ad_password",
                     Site = "SiteName",
@@ -69,8 +71,10 @@ func main() {
 			AccountName: pulumi.String("account1"),
 			ActiveDirectories: netapp.ActiveDirectoryArray{
 				&netapp.ActiveDirectoryArgs{
+					AesEncryption:      pulumi.Bool(true),
 					Dns:                pulumi.String("10.10.10.3, 10.10.10.4"),
 					Domain:             pulumi.String("10.10.10.3"),
+					LdapSigning:        pulumi.Bool(false),
 					OrganizationalUnit: pulumi.String("Engineering"),
 					Password:           pulumi.String("ad_password"),
 					Site:               pulumi.String("SiteName"),
@@ -100,15 +104,17 @@ import pulumi_azure_nextgen as azure_nextgen
 
 account = azure_nextgen.netapp.latest.Account("account",
     account_name="account1",
-    active_directories=[{
-        "dns": "10.10.10.3, 10.10.10.4",
-        "domain": "10.10.10.3",
-        "organizationalUnit": "Engineering",
-        "password": "ad_password",
-        "site": "SiteName",
-        "smbServerName": "SMBServer",
-        "username": "ad_user_name",
-    }],
+    active_directories=[azure_nextgen.netapp.latest.ActiveDirectoryArgs(
+        aes_encryption=True,
+        dns="10.10.10.3, 10.10.10.4",
+        domain="10.10.10.3",
+        ldap_signing=False,
+        organizational_unit="Engineering",
+        password="ad_password",
+        site="SiteName",
+        smb_server_name="SMBServer",
+        username="ad_user_name",
+    )],
     location="eastus",
     resource_group_name="myRG")
 
@@ -125,8 +131,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const account = new azure_nextgen.netapp.latest.Account("account", {
     accountName: "account1",
     activeDirectories: [{
+        aesEncryption: true,
         dns: "10.10.10.3, 10.10.10.4",
         domain: "10.10.10.3",
+        ldapSigning: false,
         organizationalUnit: "Engineering",
         password: "ad_password",
         site: "SiteName",
@@ -153,7 +161,7 @@ const account = new azure_nextgen.netapp.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">active_directories</span><span class="p">:</span> <span class="nx">Optional[List[ActiveDirectory]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">active_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActiveDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -532,7 +540,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#active_directories_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectory">List[Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#activedirectory">Sequence[Active<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Active Directories{{% /md %}}</dd>
 
@@ -542,7 +550,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -794,6 +802,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aesencryption_csharp">
+<a href="#aesencryption_csharp" style="color: inherit; text-decoration: inherit;">Aes<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_csharp">
 <a href="#backupoperators_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
 </span> 
@@ -831,6 +849,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapsigning_csharp">
+<a href="#ldapsigning_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -921,6 +949,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aesencryption_go">
+<a href="#aesencryption_go" style="color: inherit; text-decoration: inherit;">Aes<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_go">
 <a href="#backupoperators_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
 </span> 
@@ -958,6 +996,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapsigning_go">
+<a href="#ldapsigning_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1048,6 +1096,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aesencryption_nodejs">
+<a href="#aesencryption_nodejs" style="color: inherit; text-decoration: inherit;">aes<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_nodejs">
 <a href="#backupoperators_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
 </span> 
@@ -1085,6 +1143,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapsigning_nodejs">
+<a href="#ldapsigning_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1155,8 +1223,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activedirectoryid_python">
-<a href="#activedirectoryid_python" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Id</a>
+        <span id="active_directory_id_python">
+<a href="#active_directory_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1165,8 +1233,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adname_python">
-<a href="#adname_python" style="color: inherit; text-decoration: inherit;">ad<wbr>Name</a>
+        <span id="ad_name_python">
+<a href="#ad_name_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1175,11 +1243,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupoperators_python">
-<a href="#backupoperators_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
+        <span id="aes_encryption_python">
+<a href="#aes_encryption_python" style="color: inherit; text-decoration: inherit;">aes_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_operators_python">
+<a href="#backup_operators_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>operators</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier{{% /md %}}</dd>
 
@@ -1205,8 +1283,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kdcip_python">
-<a href="#kdcip_python" style="color: inherit; text-decoration: inherit;">kdc<wbr>IP</a>
+        <span id="kdc_ip_python">
+<a href="#kdc_ip_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1215,8 +1293,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationalunit_python">
-<a href="#organizationalunit_python" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
+        <span id="ldap_signing_python">
+<a href="#ldap_signing_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organizational_unit_python">
+<a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1235,8 +1323,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverrootcacertificate_python">
-<a href="#serverrootcacertificate_python" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>CACertificate</a>
+        <span id="server_root_ca_certificate_python">
+<a href="#server_root_ca_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1255,8 +1343,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smbservername_python">
-<a href="#smbservername_python" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Name</a>
+        <span id="smb_server_name_python">
+<a href="#smb_server_name_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1333,6 +1421,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aesencryption_csharp">
+<a href="#aesencryption_csharp" style="color: inherit; text-decoration: inherit;">Aes<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_csharp">
 <a href="#backupoperators_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
 </span> 
@@ -1370,6 +1468,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapsigning_csharp">
+<a href="#ldapsigning_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1480,6 +1588,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aesencryption_go">
+<a href="#aesencryption_go" style="color: inherit; text-decoration: inherit;">Aes<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_go">
 <a href="#backupoperators_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
 </span> 
@@ -1517,6 +1635,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapsigning_go">
+<a href="#ldapsigning_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1627,6 +1755,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aesencryption_nodejs">
+<a href="#aesencryption_nodejs" style="color: inherit; text-decoration: inherit;">aes<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_nodejs">
 <a href="#backupoperators_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
 </span> 
@@ -1664,6 +1802,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapsigning_nodejs">
+<a href="#ldapsigning_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1754,8 +1902,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activedirectoryid_python">
-<a href="#activedirectoryid_python" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Id</a>
+        <span id="active_directory_id_python">
+<a href="#active_directory_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1764,8 +1912,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adname_python">
-<a href="#adname_python" style="color: inherit; text-decoration: inherit;">ad<wbr>Name</a>
+        <span id="ad_name_python">
+<a href="#ad_name_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1774,11 +1922,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupoperators_python">
-<a href="#backupoperators_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
+        <span id="aes_encryption_python">
+<a href="#aes_encryption_python" style="color: inherit; text-decoration: inherit;">aes_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_operators_python">
+<a href="#backup_operators_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>operators</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier{{% /md %}}</dd>
 
@@ -1804,8 +1962,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kdcip_python">
-<a href="#kdcip_python" style="color: inherit; text-decoration: inherit;">kdc<wbr>IP</a>
+        <span id="kdc_ip_python">
+<a href="#kdc_ip_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1814,8 +1972,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationalunit_python">
-<a href="#organizationalunit_python" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
+        <span id="ldap_signing_python">
+<a href="#ldap_signing_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>signing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organizational_unit_python">
+<a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1834,8 +2002,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverrootcacertificate_python">
-<a href="#serverrootcacertificate_python" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>CACertificate</a>
+        <span id="server_root_ca_certificate_python">
+<a href="#server_root_ca_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1854,8 +2022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smbservername_python">
-<a href="#smbservername_python" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Name</a>
+        <span id="smb_server_name_python">
+<a href="#smb_server_name_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

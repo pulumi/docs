@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Dict[Cloud<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdeliveryinforesponse">Dict[Job<wbr>Delivery<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobdeliveryinforesponse">Job<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd>
 
@@ -969,7 +969,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response] | Dict[Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response] | Dict[Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Dict[Resource<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd>
 
@@ -1104,7 +1104,7 @@ The following output properties are available:
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
 
@@ -1249,31 +1249,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filepathlist_python">
-<a href="#filepathlist_python" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>List</a>
+        <span id="file_path_list_python">
+<a href="#file_path_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fileprefixlist_python">
-<a href="#fileprefixlist_python" style="color: inherit; text-decoration: inherit;">file<wbr>Prefix<wbr>List</a>
+        <span id="file_prefix_list_python">
+<a href="#file_prefix_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>prefix_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filesharelist_python">
-<a href="#filesharelist_python" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>List</a>
+        <span id="file_share_list_python">
+<a href="#file_share_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
 
@@ -1408,31 +1408,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobpathlist_python">
-<a href="#blobpathlist_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>List</a>
+        <span id="blob_path_list_python">
+<a href="#blob_path_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobprefixlist_python">
-<a href="#blobprefixlist_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix<wbr>List</a>
+        <span id="blob_prefix_list_python">
+<a href="#blob_prefix_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerlist_python">
-<a href="#containerlist_python" style="color: inherit; text-decoration: inherit;">container<wbr>List</a>
+        <span id="container_list_python">
+<a href="#container_list_python" style="color: inherit; text-decoration: inherit;">container_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
 
@@ -1631,7 +1631,7 @@ The following output properties are available:
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">List[Additional<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">Sequence[Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
 
@@ -1641,7 +1641,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">List[Cloud<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Sequence[Cloud<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
 
@@ -1910,7 +1910,7 @@ The following output properties are available:
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
 
@@ -1936,18 +1936,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notificationpreference_python">
-<a href="#notificationpreference_python" style="color: inherit; text-decoration: inherit;">notification<wbr>Preference</a>
+        <span id="notification_preference_python">
+<a href="#notification_preference_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreferenceresponse">List[Notification<wbr>Preference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationpreferenceresponse">Sequence[Notification<wbr>Preference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="phoneextension_python">
-<a href="#phoneextension_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Extension</a>
+        <span id="phone_extension_python">
+<a href="#phone_extension_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>extension</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2458,8 +2458,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="bytesprocessed_python">
-<a href="#bytesprocessed_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Processed</a>
+        <span id="bytes_processed_python">
+<a href="#bytes_processed_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>processed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2468,8 +2468,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dataaccounttype_python">
-<a href="#dataaccounttype_python" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
+        <span id="data_account_type_python">
+<a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2478,8 +2478,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="directorieserroredout_python">
-<a href="#directorieserroredout_python" style="color: inherit; text-decoration: inherit;">directories<wbr>Errored<wbr>Out</a>
+        <span id="directories_errored_out_python">
+<a href="#directories_errored_out_python" style="color: inherit; text-decoration: inherit;">directories_<wbr>errored_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2488,8 +2488,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="fileserroredout_python">
-<a href="#fileserroredout_python" style="color: inherit; text-decoration: inherit;">files<wbr>Errored<wbr>Out</a>
+        <span id="files_errored_out_python">
+<a href="#files_errored_out_python" style="color: inherit; text-decoration: inherit;">files_<wbr>errored_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2498,8 +2498,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="filesprocessed_python">
-<a href="#filesprocessed_python" style="color: inherit; text-decoration: inherit;">files<wbr>Processed</a>
+        <span id="files_processed_python">
+<a href="#files_processed_python" style="color: inherit; text-decoration: inherit;">files_<wbr>processed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2508,8 +2508,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="invaliddirectoriesprocessed_python">
-<a href="#invaliddirectoriesprocessed_python" style="color: inherit; text-decoration: inherit;">invalid<wbr>Directories<wbr>Processed</a>
+        <span id="invalid_directories_processed_python">
+<a href="#invalid_directories_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>directories_<wbr>processed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2518,8 +2518,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="invalidfilebytesuploaded_python">
-<a href="#invalidfilebytesuploaded_python" style="color: inherit; text-decoration: inherit;">invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
+        <span id="invalid_file_bytes_uploaded_python">
+<a href="#invalid_file_bytes_uploaded_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>file_<wbr>bytes_<wbr>uploaded</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2528,8 +2528,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="invalidfilesprocessed_python">
-<a href="#invalidfilesprocessed_python" style="color: inherit; text-decoration: inherit;">invalid<wbr>Files<wbr>Processed</a>
+        <span id="invalid_files_processed_python">
+<a href="#invalid_files_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>files_<wbr>processed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2538,8 +2538,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="isenumerationinprogress_python">
-<a href="#isenumerationinprogress_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enumeration<wbr>In<wbr>Progress</a>
+        <span id="is_enumeration_in_progress_python">
+<a href="#is_enumeration_in_progress_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enumeration_<wbr>in_<wbr>progress</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2549,8 +2549,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="renamedcontainercount_python">
-<a href="#renamedcontainercount_python" style="color: inherit; text-decoration: inherit;">renamed<wbr>Container<wbr>Count</a>
+        <span id="renamed_container_count_python">
+<a href="#renamed_container_count_python" style="color: inherit; text-decoration: inherit;">renamed_<wbr>container_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2569,8 +2569,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="totalbytestoprocess_python">
-<a href="#totalbytestoprocess_python" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes<wbr>To<wbr>Process</a>
+        <span id="total_bytes_to_process_python">
+<a href="#total_bytes_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>to_<wbr>process</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2579,8 +2579,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="totalfilestoprocess_python">
-<a href="#totalfilestoprocess_python" style="color: inherit; text-decoration: inherit;">total<wbr>Files<wbr>To<wbr>Process</a>
+        <span id="total_files_to_process_python">
+<a href="#total_files_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>files_<wbr>to_<wbr>process</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2738,8 +2738,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copyloglink_python">
-<a href="#copyloglink_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Link</a>
+        <span id="copy_log_link_python">
+<a href="#copy_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2748,8 +2748,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copyverboseloglink_python">
-<a href="#copyverboseloglink_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Verbose<wbr>Log<wbr>Link</a>
+        <span id="copy_verbose_log_link_python">
+<a href="#copy_verbose_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>verbose_<wbr>log_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2887,8 +2887,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="diskserialnumber_python">
-<a href="#diskserialnumber_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Serial<wbr>Number</a>
+        <span id="disk_serial_number_python">
+<a href="#disk_serial_number_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2897,8 +2897,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="errorloglink_python">
-<a href="#errorloglink_python" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Link</a>
+        <span id="error_log_link_python">
+<a href="#error_log_link_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2907,8 +2907,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="verboseloglink_python">
-<a href="#verboseloglink_python" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Link</a>
+        <span id="verbose_log_link_python">
+<a href="#verbose_log_link_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3076,8 +3076,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="bytescopied_python">
-<a href="#bytescopied_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Copied</a>
+        <span id="bytes_copied_python">
+<a href="#bytes_copied_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3665,8 +3665,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="chainofcustodysaskey_python">
-<a href="#chainofcustodysaskey_python" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
+        <span id="chain_of_custody_sas_key_python">
+<a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3675,31 +3675,31 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="contactdetails_python">
-<a href="#contactdetails_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
+        <span id="contact_details_python">
+<a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Dict[Contact<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copylogdetails_python">
-<a href="#copylogdetails_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
+        <span id="copy_log_details_python">
+<a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copyprogress_python">
-<a href="#copyprogress_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
+        <span id="copy_progress_python">
+<a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">List[Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databoxdiskcopyprogressresponse">Sequence[Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd>
 
@@ -3709,27 +3709,27 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Dict[Package<wbr>Shipping<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="disksandsizedetails_python">
-<a href="#disksandsizedetails_python" style="color: inherit; text-decoration: inherit;">disks<wbr>And<wbr>Size<wbr>Details</a>
+        <span id="disks_and_size_details_python">
+<a href="#disks_and_size_details_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>and_<wbr>size_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Integer]</span>
+        <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="jobstages_python">
-<a href="#jobstages_python" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
+        <span id="job_stages_python">
+<a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">List[Job<wbr>Stages<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
 
@@ -3739,7 +3739,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Dict[Key<wbr>Encryption<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
 
@@ -3749,14 +3749,14 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Dict[Package<wbr>Shipping<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="reverseshipmentlabelsaskey_python">
-<a href="#reverseshipmentlabelsaskey_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
+        <span id="reverse_shipment_label_sas_key_python">
+<a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3765,28 +3765,28 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataexportdetails_python">
-<a href="#dataexportdetails_python" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
+        <span id="data_export_details_python">
+<a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">List[Data<wbr>Export<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataimportdetails_python">
-<a href="#dataimportdetails_python" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
+        <span id="data_import_details_python">
+<a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">List[Data<wbr>Import<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expecteddatasizeinterabytes_python">
-<a href="#expecteddatasizeinterabytes_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+        <span id="expected_data_size_in_terabytes_python">
+<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3809,17 +3809,17 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Dict[Preferences<wbr>Response]</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferreddisks_python">
-<a href="#preferreddisks_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Disks</a>
+        <span id="preferred_disks_python">
+<a href="#preferred_disks_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Integer]</span>
+        <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
 
@@ -3829,7 +3829,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Dict[Shipping<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 
@@ -3974,21 +3974,21 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copyloglink_python">
-<a href="#copyloglink_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Link</a>
+        <span id="copy_log_link_python">
+<a href="#copy_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copyverboseloglink_python">
-<a href="#copyverboseloglink_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Verbose<wbr>Log<wbr>Link</a>
+        <span id="copy_verbose_log_link_python">
+<a href="#copy_verbose_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>verbose_<wbr>log_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd>
 
@@ -4483,8 +4483,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="chainofcustodysaskey_python">
-<a href="#chainofcustodysaskey_python" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
+        <span id="chain_of_custody_sas_key_python">
+<a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4493,31 +4493,31 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="contactdetails_python">
-<a href="#contactdetails_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
+        <span id="contact_details_python">
+<a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Dict[Contact<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copylogdetails_python">
-<a href="#copylogdetails_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
+        <span id="copy_log_details_python">
+<a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copyprogress_python">
-<a href="#copyprogress_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
+        <span id="copy_progress_python">
+<a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">List[Copy<wbr>Progress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#copyprogressresponse">Sequence[Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd>
 
@@ -4527,17 +4527,17 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Dict[Package<wbr>Shipping<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="jobstages_python">
-<a href="#jobstages_python" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
+        <span id="job_stages_python">
+<a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">List[Job<wbr>Stages<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
 
@@ -4547,7 +4547,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Dict[Key<wbr>Encryption<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
 
@@ -4557,14 +4557,14 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Dict[Package<wbr>Shipping<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="reverseshipmentlabelsaskey_python">
-<a href="#reverseshipmentlabelsaskey_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
+        <span id="reverse_shipment_label_sas_key_python">
+<a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4573,28 +4573,28 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataexportdetails_python">
-<a href="#dataexportdetails_python" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
+        <span id="data_export_details_python">
+<a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">List[Data<wbr>Export<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataimportdetails_python">
-<a href="#dataimportdetails_python" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
+        <span id="data_import_details_python">
+<a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">List[Data<wbr>Import<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicepassword_python">
-<a href="#devicepassword_python" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
+        <span id="device_password_python">
+<a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4603,8 +4603,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expecteddatasizeinterabytes_python">
-<a href="#expecteddatasizeinterabytes_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+        <span id="expected_data_size_in_terabytes_python">
+<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4617,7 +4617,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Dict[Preferences<wbr>Response]</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
 
@@ -4627,7 +4627,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Dict[Shipping<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 
@@ -5122,8 +5122,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="chainofcustodysaskey_python">
-<a href="#chainofcustodysaskey_python" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
+        <span id="chain_of_custody_sas_key_python">
+<a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5132,31 +5132,31 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="contactdetails_python">
-<a href="#contactdetails_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
+        <span id="contact_details_python">
+<a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Dict[Contact<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copylogdetails_python">
-<a href="#copylogdetails_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
+        <span id="copy_log_details_python">
+<a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Azure-Nextgen:Databox/Latest:Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="copyprogress_python">
-<a href="#copyprogress_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
+        <span id="copy_progress_python">
+<a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyprogressresponse">List[Copy<wbr>Progress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#copyprogressresponse">Sequence[Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd>
 
@@ -5166,17 +5166,17 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Dict[Package<wbr>Shipping<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="jobstages_python">
-<a href="#jobstages_python" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
+        <span id="job_stages_python">
+<a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstagesresponse">List[Job<wbr>Stages<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
 
@@ -5186,7 +5186,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Dict[Key<wbr>Encryption<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
 
@@ -5196,14 +5196,14 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageshippingdetailsresponse">Dict[Package<wbr>Shipping<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="reverseshipmentlabelsaskey_python">
-<a href="#reverseshipmentlabelsaskey_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
+        <span id="reverse_shipment_label_sas_key_python">
+<a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5212,28 +5212,28 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataexportdetails_python">
-<a href="#dataexportdetails_python" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
+        <span id="data_export_details_python">
+<a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataexportdetailsresponse">List[Data<wbr>Export<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataimportdetails_python">
-<a href="#dataimportdetails_python" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
+        <span id="data_import_details_python">
+<a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataimportdetailsresponse">List[Data<wbr>Import<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicepassword_python">
-<a href="#devicepassword_python" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
+        <span id="device_password_python">
+<a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5242,8 +5242,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expecteddatasizeinterabytes_python">
-<a href="#expecteddatasizeinterabytes_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+        <span id="expected_data_size_in_terabytes_python">
+<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5256,7 +5256,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Dict[Preferences<wbr>Response]</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
 
@@ -5266,7 +5266,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Dict[Shipping<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
 
@@ -5401,28 +5401,28 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="accountdetails_python">
-<a href="#accountdetails_python" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
+        <span id="account_details_python">
+<a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Managed<wbr>Disk<wbr>Details<wbr>Response] | Dict[Storage<wbr>Account<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="transferconfiguration_python">
-<a href="#transferconfiguration_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration</a>
+        <span id="transfer_configuration_python">
+<a href="#transfer_configuration_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponse">Dict[Transfer<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponse">Transfer<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcollectionlevel_python">
-<a href="#logcollectionlevel_python" style="color: inherit; text-decoration: inherit;">log<wbr>Collection<wbr>Level</a>
+        <span id="log_collection_level_python">
+<a href="#log_collection_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>collection_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5500,13 +5500,92 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="accountdetails_python">
-<a href="#accountdetails_python" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
+        <span id="account_details_python">
+<a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Managed<wbr>Disk<wbr>Details<wbr>Response] | Dict[Storage<wbr>Account<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Union[Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args, Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="doubleencryption_csharp">
+<a href="#doubleencryption_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="doubleencryption_go">
+<a href="#doubleencryption_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="doubleencryption_nodejs">
+<a href="#doubleencryption_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="double_encryption_python">
+<a href="#double_encryption_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5609,8 +5688,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="filterfilepath_python">
-<a href="#filterfilepath_python" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Path</a>
+        <span id="filter_file_path_python">
+<a href="#filter_file_path_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5619,13 +5698,132 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="filterfiletype_python">
-<a href="#filterfiletype_python" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Type</a>
+        <span id="filter_file_type_python">
+<a href="#filter_file_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassigned_csharp">
+<a href="#userassigned_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassigned_go">
+<a href="#userassigned_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassigned_nodejs">
+<a href="#userassigned_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_python">
+<a href="#user_assigned_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5907,18 +6105,18 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="jobstagedetails_python">
-<a href="#jobstagedetails_python" style="color: inherit; text-decoration: inherit;">job<wbr>Stage<wbr>Details</a>
+        <span id="job_stage_details_python">
+<a href="#job_stage_details_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stage_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="stagename_python">
-<a href="#stagename_python" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
+        <span id="stage_name_python">
+<a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5927,8 +6125,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="stagestatus_python">
-<a href="#stagestatus_python" style="color: inherit; text-decoration: inherit;">stage<wbr>Status</a>
+        <span id="stage_status_python">
+<a href="#stage_status_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5937,8 +6135,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="stagetime_python">
-<a href="#stagetime_python" style="color: inherit; text-decoration: inherit;">stage<wbr>Time</a>
+        <span id="stage_time_python">
+<a href="#stage_time_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5972,6 +6170,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identityproperties_csharp">
+<a href="#identityproperties_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6012,6 +6220,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="identityproperties_go">
+<a href="#identityproperties_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="kekurl_go">
 <a href="#kekurl_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
 </span> 
@@ -6049,6 +6267,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="identityproperties_nodejs">
+<a href="#identityproperties_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="kekurl_nodejs">
 <a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
 </span> 
@@ -6083,6 +6311,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_properties_python">
+<a href="#identity_properties_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6245,8 +6483,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="stagingstorageaccountid_python">
-<a href="#stagingstorageaccountid_python" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
+        <span id="staging_storage_account_id_python">
+<a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6255,8 +6493,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharepassword_python">
-<a href="#sharepassword_python" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
+        <span id="share_password_python">
+<a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6364,8 +6602,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sendnotification_python">
-<a href="#sendnotification_python" style="color: inherit; text-decoration: inherit;">send<wbr>Notification</a>
+        <span id="send_notification_python">
+<a href="#send_notification_python" style="color: inherit; text-decoration: inherit;">send_<wbr>notification</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6374,8 +6612,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="stagename_python">
-<a href="#stagename_python" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
+        <span id="stage_name_python">
+<a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6523,8 +6761,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="trackingid_python">
-<a href="#trackingid_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
+        <span id="tracking_id_python">
+<a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6533,8 +6771,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="trackingurl_python">
-<a href="#trackingurl_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
+        <span id="tracking_url_python">
+<a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6558,6 +6796,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionpreferences_csharp">
+<a href="#encryptionpreferences_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6588,6 +6836,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionpreferences_go">
+<a href="#encryptionpreferences_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="preferreddatacenterregion_go">
 <a href="#preferreddatacenterregion_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Data<wbr>Center<wbr>Region</a>
 </span> 
@@ -6612,6 +6870,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionpreferences_nodejs">
+<a href="#encryptionpreferences_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6642,21 +6910,31 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferreddatacenterregion_python">
-<a href="#preferreddatacenterregion_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Data<wbr>Center<wbr>Region</a>
+        <span id="encryption_preferences_python">
+<a href="#encryption_preferences_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferred_data_center_region_python">
+<a href="#preferred_data_center_region_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>data_<wbr>center_<wbr>region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transportpreferences_python">
-<a href="#transportpreferences_python" style="color: inherit; text-decoration: inherit;">transport<wbr>Preferences</a>
+        <span id="transport_preferences_python">
+<a href="#transport_preferences_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferencesresponse">Dict[Transport<wbr>Preferences<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
 
@@ -6708,6 +6986,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6744,6 +7032,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6782,6 +7080,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6819,6 +7127,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6846,16 +7164,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="postalcode_csharp">
-<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6896,6 +7204,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_csharp">
+<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6956,16 +7274,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="postalcode_go">
-<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
 </span> 
@@ -7003,6 +7311,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_go">
+<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7063,16 +7381,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="postalcode_nodejs">
-<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
 </span> 
@@ -7110,6 +7418,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="postalcode_nodejs">
+<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7170,16 +7488,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="postal_code_python">
-<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
 </span> 
@@ -7190,8 +7498,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="addresstype_python">
-<a href="#addresstype_python" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
+        <span id="address_type_python">
+<a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7220,6 +7528,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="postal_code_python">
+<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
 </span> 
@@ -7227,16 +7545,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="streetaddress3_python">
-<a href="#streetaddress3_python" style="color: inherit; text-decoration: inherit;">street<wbr>Address3</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7250,8 +7558,18 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zipextendedcode_python">
-<a href="#zipextendedcode_python" style="color: inherit; text-decoration: inherit;">zip<wbr>Extended<wbr>Code</a>
+        <span id="street_address3_python">
+<a href="#street_address3_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zip_extended_code_python">
+<a href="#zip_extended_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>extended_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7528,8 +7846,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharepassword_python">
-<a href="#sharepassword_python" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
+        <span id="share_password_python">
+<a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7667,8 +7985,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dataaccounttype_python">
-<a href="#dataaccounttype_python" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
+        <span id="data_account_type_python">
+<a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7677,8 +7995,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transferallblobs_python">
-<a href="#transferallblobs_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Blobs</a>
+        <span id="transfer_all_blobs_python">
+<a href="#transfer_all_blobs_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>blobs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7687,8 +8005,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transferallfiles_python">
-<a href="#transferallfiles_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Files</a>
+        <span id="transfer_all_files_python">
+<a href="#transfer_all_files_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7826,8 +8144,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="transferconfigurationtype_python">
-<a href="#transferconfigurationtype_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration<wbr>Type</a>
+        <span id="transfer_configuration_type_python">
+<a href="#transfer_configuration_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7836,21 +8154,21 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transferalldetails_python">
-<a href="#transferalldetails_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Details</a>
+        <span id="transfer_all_details_python">
+<a href="#transfer_all_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Dict[Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details]</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transferfilterdetails_python">
-<a href="#transferfilterdetails_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>Filter<wbr>Details</a>
+        <span id="transfer_filter_details_python">
+<a href="#transfer_filter_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>filter_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Dict[Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details]</a></span>
+        <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
 
@@ -7929,7 +8247,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferalldetailsresponse">Dict[Transfer<wbr>All<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
 
@@ -8008,7 +8326,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferfilterdetailsresponse">Dict[Transfer<wbr>Filter<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
 
@@ -8173,8 +8491,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dataaccounttype_python">
-<a href="#dataaccounttype_python" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
+        <span id="data_account_type_python">
+<a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8183,31 +8501,31 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurefilefilterdetails_python">
-<a href="#azurefilefilterdetails_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Filter<wbr>Details</a>
+        <span id="azure_file_filter_details_python">
+<a href="#azure_file_filter_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>filter_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilefilterdetailsresponse">Dict[Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobfilterdetails_python">
-<a href="#blobfilterdetails_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Filter<wbr>Details</a>
+        <span id="blob_filter_details_python">
+<a href="#blob_filter_details_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>filter_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobfilterdetailsresponse">Dict[Blob<wbr>Filter<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobfilterdetailsresponse">Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filterfiledetails_python">
-<a href="#filterfiledetails_python" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Details</a>
+        <span id="filter_file_details_python">
+<a href="#filter_file_details_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfiledetailsresponse">List[Filter<wbr>File<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filterfiledetailsresponse">Sequence[Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
 
@@ -8282,13 +8600,211 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="preferredshipmenttype_python">
-<a href="#preferredshipmenttype_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shipment<wbr>Type</a>
+        <span id="preferred_shipment_type_python">
+<a href="#preferred_shipment_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shipment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -92,11 +92,11 @@ import pulumi_azure_nextgen as azure_nextgen
 replication_protection_container_mapping = azure_nextgen.recoveryservices.latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping",
     fabric_name="cloud1",
     mapping_name="cloud1protectionprofile1",
-    properties={
-        "policyId": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
-        "providerSpecificInput": {},
-        "targetProtectionContainerId": "Microsoft Azure",
-    },
+    properties=azure_nextgen.recoveryservices.latest.CreateProtectionContainerMappingInputPropertiesArgs(
+        policy_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+        provider_specific_input={},
+        target_protection_container_id="Microsoft Azure",
+    ),
     protection_container_name="cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
@@ -140,7 +140,7 @@ const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CreateProtectionContainerMappingInputProperties]]</span> = None<span class="p">, </span><span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreateProtectionContainerMappingInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -569,7 +569,7 @@ The ReplicationProtectionContainerMapping resource accepts the following [input]
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createprotectioncontainermappinginputproperties">Dict[Create<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Input<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#createprotectioncontainermappinginputproperties">Create<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure protection input properties.{{% /md %}}</dd>
 
@@ -882,8 +882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentautoupdatestatus_python">
-<a href="#agentautoupdatestatus_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Auto<wbr>Update<wbr>Status</a>
+        <span id="agent_auto_update_status_python">
+<a href="#agent_auto_update_status_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>auto_<wbr>update_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -892,8 +892,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automationaccountarmid_python">
-<a href="#automationaccountarmid_python" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Arm<wbr>Id</a>
+        <span id="automation_account_arm_id_python">
+<a href="#automation_account_arm_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>arm_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1061,8 +1061,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentautoupdatestatus_python">
-<a href="#agentautoupdatestatus_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Auto<wbr>Update<wbr>Status</a>
+        <span id="agent_auto_update_status_python">
+<a href="#agent_auto_update_status_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>auto_<wbr>update_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1071,8 +1071,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automationaccountarmid_python">
-<a href="#automationaccountarmid_python" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Arm<wbr>Id</a>
+        <span id="automation_account_arm_id_python">
+<a href="#automation_account_arm_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>arm_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1081,8 +1081,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jobschedulename_python">
-<a href="#jobschedulename_python" style="color: inherit; text-decoration: inherit;">job<wbr>Schedule<wbr>Name</a>
+        <span id="job_schedule_name_python">
+<a href="#job_schedule_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>schedule_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[A2AContainer<wbr>Mapping<wbr>Input] | Dict[VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input]</span>
+        <span class="property-type">Union[A2AContainer<wbr>Mapping<wbr>Input<wbr>Args, VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd>
 
@@ -1749,8 +1749,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1759,8 +1759,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customerresolvability_python">
-<a href="#customerresolvability_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
+        <span id="customer_resolvability_python">
+<a href="#customer_resolvability_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>resolvability</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1769,8 +1769,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1779,53 +1779,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorid_python">
-<a href="#errorid_python" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1839,6 +1799,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_id_python">
+<a href="#error_id_python" style="color: inherit; text-decoration: inherit;">error_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -1849,18 +1829,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innerhealtherrors_python">
-<a href="#innerhealtherrors_python" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inner_health_errors_python">
+<a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1869,8 +1869,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1879,8 +1879,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1889,8 +1889,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2298,8 +2298,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2308,8 +2308,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2318,43 +2318,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2368,6 +2338,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -2378,8 +2358,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2388,8 +2388,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2398,8 +2398,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2408,8 +2408,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2801,7 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_error_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>error_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health error.{{% /md %}}</dd>
 
@@ -2831,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response] | Dict[VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Union[A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args, VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd>
 
@@ -3136,23 +3136,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="servicebusconnectionstringsecretname_python">
-<a href="#servicebusconnectionstringsecretname_python" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Connection<wbr>String<wbr>Secret<wbr>Name</a>
+        <span id="service_bus_connection_string_secret_name_python">
+<a href="#service_bus_connection_string_secret_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>connection_<wbr>string_<wbr>secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret name of the service bus connection string.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="storageaccountsassecretname_python">
-<a href="#storageaccountsassecretname_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Sas<wbr>Secret<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The secret name of the storage account.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3163,6 +3153,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storage_account_sas_secret_name_python">
+<a href="#storage_account_sas_secret_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>sas_<wbr>secret_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The secret name of the storage account.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3415,23 +3415,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="servicebusconnectionstringsecretname_python">
-<a href="#servicebusconnectionstringsecretname_python" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Connection<wbr>String<wbr>Secret<wbr>Name</a>
+        <span id="service_bus_connection_string_secret_name_python">
+<a href="#service_bus_connection_string_secret_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>connection_<wbr>string_<wbr>secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret name of the service bus connection string.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="storageaccountsassecretname_python">
-<a href="#storageaccountsassecretname_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Sas<wbr>Secret<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The secret name of the storage account.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3442,6 +3432,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storage_account_sas_secret_name_python">
+<a href="#storage_account_sas_secret_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>sas_<wbr>secret_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The secret name of the storage account.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

@@ -25,6 +25,7 @@ Explore the resources and functions of the security module in the Azure NextGen 
     <li><a href="onpremiseiotsensor" title="OnPremiseIotSensor"><span class="symbol resource"></span>OnPremiseIotSensor</a></li>
     <li><a href="securitycontact" title="SecurityContact"><span class="symbol resource"></span>SecurityContact</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
+    <li><a href="sqlvulnerabilityassessmentbaselinerule" title="SqlVulnerabilityAssessmentBaselineRule"><span class="symbol resource"></span>SqlVulnerabilityAssessmentBaselineRule</a></li>
     <li><a href="workspacesetting" title="WorkspaceSetting"><span class="symbol resource"></span>WorkspaceSetting</a></li>
 </ul>
 
@@ -44,6 +45,7 @@ Explore the resources and functions of the security module in the Azure NextGen 
     <li><a href="getonpremiseiotsensor" title="GetOnPremiseIotSensor"><span class="symbol function"></span>GetOnPremiseIotSensor</a></li>
     <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="symbol function"></span>GetSecurityContact</a></li>
     <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="symbol function"></span>GetServerVulnerabilityAssessment</a></li>
+    <li><a href="getsqlvulnerabilityassessmentbaselinerule" title="GetSqlVulnerabilityAssessmentBaselineRule"><span class="symbol function"></span>GetSqlVulnerabilityAssessmentBaselineRule</a></li>
     <li><a href="getworkspacesetting" title="GetWorkspaceSetting"><span class="symbol function"></span>GetWorkspaceSetting</a></li>
 </ul>
 
@@ -54,7 +56,7 @@ Explore the resources and functions of the security module in the Azure NextGen 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

@@ -86,11 +86,11 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 hub = azure_nextgen.customerinsights.latest.Hub("hub",
-    hub_billing_info={
-        "maxUnits": 5,
-        "minUnits": 1,
-        "skuName": "B0",
-    },
+    hub_billing_info=azure_nextgen.customerinsights.latest.HubBillingInfoFormatArgs(
+        max_units=5,
+        min_units=1,
+        sku_name="B0",
+    ),
     hub_name="sdkTestHub",
     location="West US",
     resource_group_name="TestHubRG")
@@ -132,7 +132,7 @@ const hub = new azure_nextgen.customerinsights.latest.Hub("hub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Hub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_billing_info</span><span class="p">:</span> <span class="nx">Optional[Dict[HubBillingInfoFormat]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_features</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Hub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_billing_info</span><span class="p">:</span> <span class="nx">Optional[HubBillingInfoFormatArgs]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_features</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -531,7 +531,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#hub_billing_info_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>billing_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubbillinginfoformat">Dict[Hub<wbr>Billing<wbr>Info<wbr>Format]</a></span>
+        <span class="property-type"><a href="#hubbillinginfoformat">Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Billing settings of the hub.{{% /md %}}</dd>
 
@@ -551,7 +551,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

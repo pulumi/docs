@@ -180,7 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectedclusteraadprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -260,7 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -270,7 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -297,7 +297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectedclusteraadprofileresponse">Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -377,7 +377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -387,7 +387,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -414,7 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectedclusteraadprofileresponse">Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -494,7 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -504,7 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -529,9 +529,9 @@ The following output properties are available:
 <a href="#aad_profile_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Dict[Connected<wbr>Cluster<wbr>AADProfile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteridentityresponse">Dict[Connected<wbr>Cluster<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectedclusteridentityresponse">Connected<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the connected cluster.{{% /md %}}</dd>
 
@@ -611,7 +611,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -621,7 +621,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

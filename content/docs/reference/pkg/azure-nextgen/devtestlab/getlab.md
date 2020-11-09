@@ -1105,7 +1105,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#announcement_python" style="color: inherit; text-decoration: inherit;">announcement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labannouncementpropertiesresponse">Dict[Lab<wbr>Announcement<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#labannouncementpropertiesresponse">Lab<wbr>Announcement<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd>
 
@@ -1125,7 +1125,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd>
 
@@ -1155,7 +1155,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#mandatory_artifacts_resource_ids_linux_python" style="color: inherit; text-decoration: inherit;">mandatory_<wbr>artifacts_<wbr>resource_<wbr>ids_<wbr>linux</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
 
@@ -1165,7 +1165,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#mandatory_artifacts_resource_ids_windows_python" style="color: inherit; text-decoration: inherit;">mandatory_<wbr>artifacts_<wbr>resource_<wbr>ids_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
 
@@ -1187,7 +1187,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#support_python" style="color: inherit; text-decoration: inherit;">support</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labsupportpropertiesresponse">Dict[Lab<wbr>Support<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#labsupportpropertiesresponse">Lab<wbr>Support<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd>
 
@@ -1197,7 +1197,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 

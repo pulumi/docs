@@ -257,7 +257,7 @@ The following output properties are available:
 <a href="#passwords_python" style="color: inherit; text-decoration: inherit;">passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrypasswordresponse">List[Registry<wbr>Password<wbr>Response]</a></span>
+        <span class="property-type"><a href="#registrypasswordresponse">Sequence[Registry<wbr>Password<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of passwords for a container registry.{{% /md %}}</dd>
 

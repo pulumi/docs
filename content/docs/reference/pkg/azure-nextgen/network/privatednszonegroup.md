@@ -87,9 +87,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 private_dns_zone_group = azure_nextgen.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup",
-    private_dns_zone_configs=[{
-        "privateDnsZoneId": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
-    }],
+    private_dns_zone_configs=[azure_nextgen.network.latest.PrivateDnsZoneConfigArgs(
+        private_dns_zone_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
+    )],
     private_dns_zone_group_name="testPdnsgroup",
     private_endpoint_name="testPe",
     resource_group_name="rg1")
@@ -129,7 +129,7 @@ const privateDnsZoneGroup = new azure_nextgen.network.latest.PrivateDnsZoneGroup
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateDnsZoneGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_configs</span><span class="p">:</span> <span class="nx">Optional[List[PrivateDnsZoneConfig]]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateDnsZoneGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateDnsZoneConfigArgs]]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -558,7 +558,7 @@ The PrivateDnsZoneGroup resource accepts the following [input]({{< relref "/docs
 <a href="#private_dns_zone_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatednszoneconfig">List[Private<wbr>Dns<wbr>Zone<wbr>Config]</a></span>
+        <span class="property-type"><a href="#privatednszoneconfig">Sequence[Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of private dns zone configurations of the private dns zone group.{{% /md %}}</dd>
 
@@ -841,8 +841,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatednszoneid_python">
-<a href="#privatednszoneid_python" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Id</a>
+        <span id="private_dns_zone_id_python">
+<a href="#private_dns_zone_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -980,11 +980,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="recordsets_python">
-<a href="#recordsets_python" style="color: inherit; text-decoration: inherit;">record<wbr>Sets</a>
+        <span id="record_sets_python">
+<a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordsetresponse">List[Record<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recordsetresponse">Sequence[Record<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of information regarding a recordSet, holding information to identify private resources.{{% /md %}}</dd>
 
@@ -1000,8 +1000,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatednszoneid_python">
-<a href="#privatednszoneid_python" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Id</a>
+        <span id="private_dns_zone_id_python">
+<a href="#private_dns_zone_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1253,14 +1253,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The private ip address of the private endpoint.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordsetname_python">
-<a href="#recordsetname_python" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Name</a>
+        <span id="record_set_name_python">
+<a href="#record_set_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

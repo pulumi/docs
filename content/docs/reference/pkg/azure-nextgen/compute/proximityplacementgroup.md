@@ -115,7 +115,7 @@ const proximityPlacementGroup = new azure_nextgen.compute.latest.ProximityPlacem
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProximityPlacementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">colocation_status</span><span class="p">:</span> <span class="nx">Optional[Dict[InstanceViewStatus]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProximityPlacementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">colocation_status</span><span class="p">:</span> <span class="nx">Optional[InstanceViewStatusArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -524,7 +524,7 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 <a href="#colocation_status_python" style="color: inherit; text-decoration: inherit;">colocation_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">Dict[Instance<wbr>View<wbr>Status]</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
 
@@ -544,7 +544,7 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -773,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_sets_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd>
 
@@ -813,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_scale_sets_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd>
 
@@ -823,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd>
 
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#colocation_status_python" style="color: inherit; text-decoration: inherit;">colocation_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Dict[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd>
 

@@ -177,44 +177,44 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "image": {
-                    "uri": "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
-                },
-                "name": "osDisk",
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                image=azure_nextgen.compute.latest.VirtualHardDiskArgs(
+                    uri="http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
+                ),
+                name="osDisk",
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -458,54 +458,54 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "name": "osDisk",
-                "vhdContainers": [
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                name="osDisk",
+                vhd_containers=[
                     "http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer",
                     "http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer",
                     "http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer",
                     "http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer",
                     "http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer",
                 ],
-            },
-        },
-    },
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -743,46 +743,46 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -1051,61 +1051,61 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_DS1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "dataDisks": [{
-                "caching": "ReadWrite",
-                "createOption": "Empty",
-                "diskSizeGB": 1023,
-                "lun": 0,
-                "managedDisk": {
-                    "diskEncryptionSet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
-                    },
-                    "storageAccountType": "Standard_LRS",
-                },
-            }],
-            "imageReference": {
-                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "diskEncryptionSet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
-                    },
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_DS1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            data_disks=[azure_nextgen.compute.latest.VirtualMachineScaleSetDataDiskArgs(
+                caching="ReadWrite",
+                create_option="Empty",
+                disk_size_gb=1023,
+                lun=0,
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    ),
+                    storage_account_type="Standard_LRS",
+                ),
+            )],
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    ),
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -1373,58 +1373,58 @@ import pulumi_azure_nextgen as azure_nextgen
 virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
-    plan={
-        "name": "windows2016",
-        "product": "windows-data-science-vm",
-        "publisher": "microsoft-ads",
-    },
+    plan=azure_nextgen.compute.latest.PlanArgs(
+        name="windows2016",
+        product="windows-data-science-vm",
+        publisher="microsoft-ads",
+    ),
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_DS1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "securityProfile": {
-            "encryptionAtHost": True,
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "windows-data-science-vm",
-                "publisher": "microsoft-ads",
-                "sku": "windows2016",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadOnly",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_DS1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        security_profile=azure_nextgen.compute.latest.SecurityProfileArgs(
+            encryption_at_host=True,
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="windows-data-science-vm",
+                publisher="microsoft-ads",
+                sku="windows2016",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadOnly",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -1681,55 +1681,55 @@ import pulumi_azure_nextgen as azure_nextgen
 virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
-    plan={
-        "name": "windows2016",
-        "product": "windows-data-science-vm",
-        "publisher": "microsoft-ads",
-    },
+    plan=azure_nextgen.compute.latest.PlanArgs(
+        name="windows2016",
+        product="windows-data-science-vm",
+        publisher="microsoft-ads",
+    ),
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "windows-data-science-vm",
-                "publisher": "microsoft-ads",
-                "sku": "windows2016",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="windows-data-science-vm",
+                publisher="microsoft-ads",
+                sku="windows2016",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -1985,52 +1985,52 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "applicationGatewayBackendAddressPools": [{
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
-                    }],
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    application_gateway_backend_address_pools=[azure_nextgen.compute.latest.SubResourceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                    )],
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -2305,59 +2305,59 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "loadBalancerBackendAddressPools": [{
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
-                    }],
-                    "loadBalancerInboundNatPools": [{
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
-                    }],
-                    "name": "{vmss-name}",
-                    "publicIPAddressConfiguration": {
-                        "name": "{vmss-name}",
-                        "publicIPAddressVersion": "IPv4",
-                    },
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    load_balancer_backend_address_pools=[azure_nextgen.compute.latest.SubResourceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                    )],
+                    load_balancer_inbound_nat_pools=[azure_nextgen.compute.latest.SubResourceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
+                    )],
+                    name="{vmss-name}",
+                    public_ip_address_configuration=azure_nextgen.compute.latest.VirtualMachineScaleSetPublicIPAddressConfigurationArgs(
+                        name="{vmss-name}",
+                        public_ip_address_version="IPv4",
+                    ),
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -2612,56 +2612,56 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
-    automatic_repairs_policy={
-        "enabled": True,
-        "gracePeriod": "PT30M",
-    },
+    automatic_repairs_policy=azure_nextgen.compute.latest.AutomaticRepairsPolicyArgs(
+        enabled=True,
+        grace_period="PT30M",
+    ),
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -2918,55 +2918,55 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "diagnosticsProfile": {
-            "bootDiagnostics": {
-                "enabled": True,
-                "storageUri": "http://{existing-storage-account-name}.blob.core.windows.net",
-            },
-        },
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        diagnostics_profile=azure_nextgen.compute.latest.DiagnosticsProfileArgs(
+            boot_diagnostics=azure_nextgen.compute.latest.BootDiagnosticsArgs(
+                enabled=True,
+                storage_uri="http://{existing-storage-account-name}.blob.core.windows.net",
+            ),
+        ),
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -3240,62 +3240,62 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D2_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "dataDisks": [
-                {
-                    "createOption": "Empty",
-                    "diskSizeGB": 1023,
-                    "lun": 0,
-                },
-                {
-                    "createOption": "Empty",
-                    "diskSizeGB": 1023,
-                    "lun": 1,
-                },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D2_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            data_disks=[
+                azure_nextgen.compute.latest.VirtualMachineScaleSetDataDiskArgs(
+                    create_option="Empty",
+                    disk_size_gb=1023,
+                    lun=0,
+                ),
+                azure_nextgen.compute.latest.VirtualMachineScaleSetDataDiskArgs(
+                    create_option="Empty",
+                    disk_size_gb=1023,
+                    lun=1,
+                ),
             ],
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "diskSizeGB": 512,
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                disk_size_gb=512,
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -3566,59 +3566,59 @@ import pulumi_azure_nextgen as azure_nextgen
 virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
-    plan={
-        "name": "windows2016",
-        "product": "windows-data-science-vm",
-        "publisher": "microsoft-ads",
-    },
+    plan=azure_nextgen.compute.latest.PlanArgs(
+        name="windows2016",
+        product="windows-data-science-vm",
+        publisher="microsoft-ads",
+    ),
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_DS1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "windows-data-science-vm",
-                "publisher": "microsoft-ads",
-                "sku": "windows2016",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadOnly",
-                "createOption": "FromImage",
-                "diffDiskSettings": {
-                    "option": "Local",
-                    "placement": "ResourceDisk",
-                },
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_DS1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="windows-data-science-vm",
+                publisher="microsoft-ads",
+                sku="windows2016",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadOnly",
+                create_option="FromImage",
+                diff_disk_settings=azure_nextgen.compute.latest.DiffDiskSettingsArgs(
+                    option="Local",
+                    placement="ResourceDisk",
+                ),
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -3883,58 +3883,58 @@ import pulumi_azure_nextgen as azure_nextgen
 virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
-    plan={
-        "name": "windows2016",
-        "product": "windows-data-science-vm",
-        "publisher": "microsoft-ads",
-    },
+    plan=azure_nextgen.compute.latest.PlanArgs(
+        name="windows2016",
+        product="windows-data-science-vm",
+        publisher="microsoft-ads",
+    ),
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_DS1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "windows-data-science-vm",
-                "publisher": "microsoft-ads",
-                "sku": "windows2016",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadOnly",
-                "createOption": "FromImage",
-                "diffDiskSettings": {
-                    "option": "Local",
-                },
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_DS1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="windows-data-science-vm",
+                publisher="microsoft-ads",
+                sku="windows2016",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadOnly",
+                create_option="FromImage",
+                diff_disk_settings=azure_nextgen.compute.latest.DiffDiskSettingsArgs(
+                    option="Local",
+                ),
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -4224,66 +4224,66 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "diagnosticsProfile": {
-            "bootDiagnostics": {
-                "enabled": True,
-                "storageUri": "http://{existing-storage-account-name}.blob.core.windows.net",
-            },
-        },
-        "extensionProfile": {
-            "extensions": [{
-                "autoUpgradeMinorVersion": False,
-                "name": "{extension-name}",
-                "publisher": "{extension-Publisher}",
-                "settings": {},
-                "type": "{extension-Type}",
-                "typeHandlerVersion": "{handler-version}",
-            }],
-            "extensionsTimeBudget": "PT1H20M",
-        },
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        diagnostics_profile=azure_nextgen.compute.latest.DiagnosticsProfileArgs(
+            boot_diagnostics=azure_nextgen.compute.latest.BootDiagnosticsArgs(
+                enabled=True,
+                storage_uri="http://{existing-storage-account-name}.blob.core.windows.net",
+            ),
+        ),
+        extension_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetExtensionProfileArgs(
+            extensions=[azure_nextgen.compute.latest.VirtualMachineScaleSetExtensionArgs(
+                auto_upgrade_minor_version=False,
+                name="{extension-name}",
+                publisher="{extension-Publisher}",
+                settings={},
+                type="{extension-Type}",
+                type_handler_version="{handler-version}",
+            )],
+            extensions_time_budget="PT1H20M",
+        ),
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -4551,54 +4551,54 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "diagnosticsProfile": {
-            "bootDiagnostics": {
-                "enabled": True,
-            },
-        },
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        diagnostics_profile=azure_nextgen.compute.latest.DiagnosticsProfileArgs(
+            boot_diagnostics=azure_nextgen.compute.latest.BootDiagnosticsArgs(
+                enabled=True,
+            ),
+        ),
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -4842,49 +4842,49 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -5123,49 +5123,49 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Premium_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Premium_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -5428,57 +5428,57 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-            "linuxConfiguration": {
-                "disablePasswordAuthentication": True,
-                "ssh": {
-                    "publicKeys": [{
-                        "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
-                        "path": "/home/{your-username}/.ssh/authorized_keys",
-                    }],
-                },
-            },
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+            linux_configuration=azure_nextgen.compute.latest.LinuxConfigurationArgs(
+                disable_password_authentication=True,
+                ssh=azure_nextgen.compute.latest.SshConfigurationArgs(
+                    public_keys=[azure_nextgen.compute.latest.SshPublicKeyArgs(
+                        key_data="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
+                        path="/home/{your-username}/.ssh/authorized_keys",
+                    )],
+                ),
+            ),
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -5739,55 +5739,55 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 3,
-        "name": "Standard_D1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Manual",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "scheduledEventsProfile": {
-            "terminateNotificationProfile": {
-                "enable": True,
-                "notBeforeTimeout": "PT5M",
-            },
-        },
-        "storageProfile": {
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        scheduled_events_profile=azure_nextgen.compute.latest.ScheduledEventsProfileArgs(
+            terminate_notification_profile=azure_nextgen.compute.latest.TerminateNotificationProfileArgs(
+                enable=True,
+                not_before_timeout="PT5M",
+            ),
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}")
 
 ```
@@ -6070,62 +6070,62 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     location="centralus",
     overprovision=True,
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 2,
-        "name": "Standard_A1_v2",
-        "tier": "Standard",
-    },
-    upgrade_policy={
-        "mode": "Automatic",
-    },
-    virtual_machine_profile={
-        "networkProfile": {
-            "networkInterfaceConfigurations": [{
-                "enableIPForwarding": True,
-                "ipConfigurations": [{
-                    "name": "{vmss-name}",
-                    "subnet": {
-                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
-                    },
-                }],
-                "name": "{vmss-name}",
-                "primary": True,
-            }],
-        },
-        "osProfile": {
-            "adminPassword": "{your-password}",
-            "adminUsername": "{your-username}",
-            "computerNamePrefix": "{vmss-name}",
-        },
-        "storageProfile": {
-            "dataDisks": [
-                {
-                    "createOption": "Empty",
-                    "diskSizeGB": 1023,
-                    "lun": 0,
-                },
-                {
-                    "createOption": "Empty",
-                    "diskSizeGB": 1023,
-                    "lun": 1,
-                },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=2,
+        name="Standard_A1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Automatic",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                enable_ip_forwarding=True,
+                ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                    name="{vmss-name}",
+                    subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    ),
+                )],
+                name="{vmss-name}",
+                primary=True,
+            )],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            data_disks=[
+                azure_nextgen.compute.latest.VirtualMachineScaleSetDataDiskArgs(
+                    create_option="Empty",
+                    disk_size_gb=1023,
+                    lun=0,
+                ),
+                azure_nextgen.compute.latest.VirtualMachineScaleSetDataDiskArgs(
+                    create_option="Empty",
+                    disk_size_gb=1023,
+                    lun=1,
+                ),
             ],
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter",
-                "version": "latest",
-            },
-            "osDisk": {
-                "caching": "ReadWrite",
-                "createOption": "FromImage",
-                "diskSizeGB": 512,
-                "managedDisk": {
-                    "storageAccountType": "Standard_LRS",
-                },
-            },
-        },
-    },
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter",
+                version="latest",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                disk_size_gb=512,
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
     vm_scale_set_name="{vmss-name}",
     zones=[
         "1",
@@ -6225,7 +6225,7 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachineScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[Dict[AdditionalCapabilities]]</span> = None<span class="p">, </span><span class="nx">automatic_repairs_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[AutomaticRepairsPolicy]]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_vms</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_group</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineScaleSetIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[Plan]]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleInPolicy]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[UpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineScaleSetVMProfile]]</span> = None<span class="p">, </span><span class="nx">vm_scale_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachineScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[AdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">automatic_repairs_policy</span><span class="p">:</span> <span class="nx">Optional[AutomaticRepairsPolicyArgs]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_vms</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_group</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PlanArgs]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[ScaleInPolicyArgs]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[UpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">virtual_machine_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineScaleSetVMProfileArgs]</span> = None<span class="p">, </span><span class="nx">vm_scale_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7054,7 +7054,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcapabilities">Dict[Additional<wbr>Capabilities]</a></span>
+        <span class="property-type"><a href="#additionalcapabilities">Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.{{% /md %}}</dd>
 
@@ -7064,7 +7064,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#automatic_repairs_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>repairs_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticrepairspolicy">Dict[Automatic<wbr>Repairs<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#automaticrepairspolicy">Automatic<wbr>Repairs<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for automatic repairs.{{% /md %}}</dd>
 
@@ -7084,7 +7084,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#host_group_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.{{% /md %}}</dd>
 
@@ -7094,7 +7094,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetidentity">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetidentity">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the virtual machine scale set, if configured.{{% /md %}}</dd>
 
@@ -7114,7 +7114,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Dict[Plan]</a></span>
+        <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.{{% /md %}}</dd>
 
@@ -7134,7 +7134,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#proximity_placement_group_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.{{% /md %}}</dd>
 
@@ -7144,7 +7144,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#scale_in_policy_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleinpolicy">Dict[Scale<wbr>In<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#scaleinpolicy">Scale<wbr>In<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.{{% /md %}}</dd>
 
@@ -7164,7 +7164,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set sku.{{% /md %}}</dd>
 
@@ -7174,7 +7174,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -7184,7 +7184,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#upgrade_policy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradepolicy">Dict[Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#upgradepolicy">Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The upgrade policy.{{% /md %}}</dd>
 
@@ -7194,7 +7194,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#virtual_machine_profile_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetvmprofile">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMProfile]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetvmprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine profile.{{% /md %}}</dd>
 
@@ -7214,7 +7214,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set{{% /md %}}</dd>
 
@@ -7785,8 +7785,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="componentname_python">
-<a href="#componentname_python" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
+        <span id="component_name_python">
+<a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7805,8 +7805,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passname_python">
-<a href="#passname_python" style="color: inherit; text-decoration: inherit;">pass<wbr>Name</a>
+        <span id="pass_name_python">
+<a href="#pass_name_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7815,8 +7815,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="settingname_python">
-<a href="#settingname_python" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
+        <span id="setting_name_python">
+<a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7984,8 +7984,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="componentname_python">
-<a href="#componentname_python" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
+        <span id="component_name_python">
+<a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8004,8 +8004,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passname_python">
-<a href="#passname_python" style="color: inherit; text-decoration: inherit;">pass<wbr>Name</a>
+        <span id="pass_name_python">
+<a href="#pass_name_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8014,8 +8014,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="settingname_python">
-<a href="#settingname_python" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
+        <span id="setting_name_python">
+<a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9127,7 +9127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnostics">Dict[Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#bootdiagnostics">Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd>
 
@@ -9206,7 +9206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Dict[Boot<wbr>Diagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd>
 
@@ -10279,7 +10279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Dict[Ssh<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
 
@@ -10438,7 +10438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Dict[Ssh<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
 
@@ -11471,7 +11471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The rules to be followed when scaling-in a virtual machine scale set. <br><br> Possible values are: <br><br> **Default** When a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set. Then, it will be balanced across Fault Domains as far as possible. Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in. <br><br> **OldestVM** When a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the oldest virtual machines that are not protected will be chosen for removal. <br><br> **NewestVM** When a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the newest virtual machines that are not protected will be chosen for removal. <br><br>{{% /md %}}</dd>
 
@@ -11550,7 +11550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The rules to be followed when scaling-in a virtual machine scale set. <br><br> Possible values are: <br><br> **Default** When a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set. Then, it will be balanced across Fault Domains as far as possible. Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in. <br><br> **OldestVM** When a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the oldest virtual machines that are not protected will be chosen for removal. <br><br> **NewestVM** When a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the newest virtual machines that are not protected will be chosen for removal. <br><br>{{% /md %}}</dd>
 
@@ -11629,7 +11629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminate_notification_profile_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofile">Dict[Terminate<wbr>Notification<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofile">Terminate<wbr>Notification<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd>
 
@@ -11708,7 +11708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminate_notification_profile_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofileresponse">Dict[Terminate<wbr>Notification<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd>
 
@@ -12263,7 +12263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">List[Ssh<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#sshpublickey">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
 
@@ -12342,7 +12342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
 
@@ -12447,8 +12447,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12566,8 +12566,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13115,7 +13115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicy">Dict[Automatic<wbr>OSUpgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicy">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd>
 
@@ -13135,7 +13135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicy">Dict[Rolling<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicy">Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd>
 
@@ -13274,7 +13274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Dict[Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd>
 
@@ -13294,7 +13294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicyresponse">Dict[Rolling<wbr>Upgrade<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicyresponse">Rolling<wbr>Upgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd>
 
@@ -13399,8 +13399,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13409,8 +13409,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13518,8 +13518,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13528,8 +13528,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13641,17 +13641,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">List[Vault<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#vaultcertificate">Sequence[Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 
@@ -13760,17 +13760,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List[Vault<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 
@@ -14307,7 +14307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd>
 
@@ -14706,7 +14706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd>
 
@@ -15115,7 +15115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -15125,7 +15125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
 
@@ -15145,7 +15145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -15274,7 +15274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextension">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextension">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd>
 
@@ -15393,7 +15393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd>
 
@@ -15882,7 +15882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -15892,7 +15892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
 
@@ -15912,7 +15912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -16281,7 +16281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_gateway_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd>
 
@@ -16291,7 +16291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd>
 
@@ -16307,23 +16307,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerinboundnatpools_python">
-<a href="#loadbalancerinboundnatpools_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Pools</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List[Sub<wbr>Resource]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="load_balancer_backend_address_pools_python">
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_inbound_nat_pools_python">
+<a href="#load_balancer_inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -16351,7 +16351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd>
 
@@ -16361,7 +16361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Dict[Api<wbr>Entity<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd>
 
@@ -16720,7 +16720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_gateway_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd>
 
@@ -16730,7 +16730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd>
 
@@ -16746,23 +16746,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerinboundnatpools_python">
-<a href="#loadbalancerinboundnatpools_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Pools</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="load_balancer_backend_address_pools_python">
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_inbound_nat_pools_python">
+<a href="#load_balancer_inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -16790,7 +16790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd>
 
@@ -16800,7 +16800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Dict[Api<wbr>Entity<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd>
 
@@ -17078,7 +17078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -17302,8 +17302,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iptagtype_python">
-<a href="#iptagtype_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Tag<wbr>Type</a>
+        <span id="ip_tag_type_python">
+<a href="#ip_tag_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tag_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17421,8 +17421,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iptagtype_python">
-<a href="#iptagtype_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Tag<wbr>Type</a>
+        <span id="ip_tag_type_python">
+<a href="#ip_tag_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tag_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17544,7 +17544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Dict[Disk<wbr>Encryption<wbr>Set<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd>
 
@@ -17663,7 +17663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Dict[Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd>
 
@@ -17962,7 +17962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd>
 
@@ -17982,7 +17982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd>
 
@@ -18022,7 +18022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd>
 
@@ -18111,7 +18111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DNS servers IP addresses{{% /md %}}</dd>
 
@@ -18190,7 +18190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DNS servers IP addresses{{% /md %}}</dd>
 
@@ -18479,7 +18479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd>
 
@@ -18499,7 +18499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd>
 
@@ -18539,7 +18539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd>
 
@@ -18658,7 +18658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_probe_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Dict[Api<wbr>Entity<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd>
 
@@ -18668,7 +18668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd>
 
@@ -18777,7 +18777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_probe_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Dict[Api<wbr>Entity<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd>
 
@@ -18787,7 +18787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd>
 
@@ -19156,7 +19156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettings">Dict[Diff<wbr>Disk<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#diffdisksettings">Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd>
 
@@ -19176,7 +19176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Dict[Virtual<wbr>Hard<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd>
 
@@ -19186,7 +19186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd>
 
@@ -19216,7 +19216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vhd_containers_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the container urls that are used to store operating system disks for the scale set.{{% /md %}}</dd>
 
@@ -19595,7 +19595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettingsresponse">Dict[Diff<wbr>Disk<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd>
 
@@ -19615,7 +19615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Dict[Virtual<wbr>Hard<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd>
 
@@ -19625,7 +19625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd>
 
@@ -19655,7 +19655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vhd_containers_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the container urls that are used to store operating system disks for the scale set.{{% /md %}}</dd>
 
@@ -19964,7 +19964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Dict[Linux<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
@@ -19974,7 +19974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">List[Vault<wbr>Secret<wbr>Group]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -19984,7 +19984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfiguration">Dict[Windows<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd>
 
@@ -20283,7 +20283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Dict[Linux<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
@@ -20293,7 +20293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">List[Vault<wbr>Secret<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -20303,7 +20303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Dict[Windows<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd>
 
@@ -20542,7 +20542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd>
 
@@ -20562,7 +20562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptag">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptag">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd>
 
@@ -20582,7 +20582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd>
 
@@ -20979,7 +20979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd>
 
@@ -20999,7 +20999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd>
 
@@ -21019,7 +21019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd>
 
@@ -21158,7 +21158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -21168,7 +21168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Dict[Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd>
 
@@ -21178,7 +21178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -21317,7 +21317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -21327,7 +21327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Dict[Image<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd>
 
@@ -21337,7 +21337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -21407,7 +21407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -21524,7 +21524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -21641,7 +21641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -21716,7 +21716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billing_profile_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofile">Dict[Billing<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#billingprofile">Billing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd>
 
@@ -21726,7 +21726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofile">Dict[Diagnostics<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#diagnosticsprofile">Diagnostics<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd>
 
@@ -21746,7 +21746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -21758,7 +21758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -21766,7 +21766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -21776,7 +21776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -21796,7 +21796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduled_events_profile_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>events_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofile">Dict[Scheduled<wbr>Events<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofile">Scheduled<wbr>Events<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd>
 
@@ -21806,7 +21806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofile">Dict[Security<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#securityprofile">Security<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -21816,7 +21816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
 
@@ -21886,7 +21886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -22003,7 +22003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -22120,7 +22120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -22195,7 +22195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billing_profile_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofileresponse">Dict[Billing<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#billingprofileresponse">Billing<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd>
 
@@ -22205,7 +22205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Dict[Diagnostics<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd>
 
@@ -22225,7 +22225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -22237,7 +22237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -22245,7 +22245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -22255,7 +22255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -22275,7 +22275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduled_events_profile_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>events_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofileresponse">Dict[Scheduled<wbr>Events<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd>
 
@@ -22285,7 +22285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Dict[Security<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd>
 
@@ -22295,7 +22295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
 
@@ -22374,7 +22374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistener">List[Win<wbr>RMListener]</a></span>
+        <span class="property-type"><a href="#winrmlistener">Sequence[Win<wbr>RMListener<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd>
 
@@ -22453,7 +22453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">List[Win<wbr>RMListener<wbr>Response]</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd>
 
@@ -22558,8 +22558,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22677,8 +22677,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22920,7 +22920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_unattend_content_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontent">List[Additional<wbr>Unattend<wbr>Content]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontent">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd>
 
@@ -22940,7 +22940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettings">Dict[Patch<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
 
@@ -22970,7 +22970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#win_rm_python" style="color: inherit; text-decoration: inherit;">win_<wbr>rm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfiguration">Dict[Win<wbr>RMConfiguration]</a></span>
+        <span class="property-type"><a href="#winrmconfiguration">Win<wbr>RMConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd>
 
@@ -23199,7 +23199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_unattend_content_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">List[Additional<wbr>Unattend<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd>
 
@@ -23219,7 +23219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Dict[Patch<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
 
@@ -23249,7 +23249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#win_rm_python" style="color: inherit; text-decoration: inherit;">win_<wbr>rm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Dict[Win<wbr>RMConfiguration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd>
 

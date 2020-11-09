@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#domain_security_settings_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>security_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsecuritysettingsresponse">Dict[Domain<wbr>Security<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#domainsecuritysettingsresponse">Domain<wbr>Security<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DomainSecurity Settings{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#ldaps_settings_python" style="color: inherit; text-decoration: inherit;">ldaps_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ldapssettingsresponse">Dict[Ldaps<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ldapssettingsresponse">Ldaps<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Secure LDAP Settings{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Dict[Notification<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification Settings{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#replica_sets_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicasetresponse">List[Replica<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#replicasetresponse">Sequence[Replica<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1269,8 +1269,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastdetected_python">
-<a href="#lastdetected_python" style="color: inherit; text-decoration: inherit;">last<wbr>Detected</a>
+        <span id="last_detected_python">
+<a href="#last_detected_python" style="color: inherit; text-decoration: inherit;">last_<wbr>detected</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1299,8 +1299,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resolutionuri_python">
-<a href="#resolutionuri_python" style="color: inherit; text-decoration: inherit;">resolution<wbr>Uri</a>
+        <span id="resolution_uri_python">
+<a href="#resolution_uri_python" style="color: inherit; text-decoration: inherit;">resolution_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1930,7 +1930,7 @@ The following output properties are available:
 <a href="#additional_recipients_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of additional recipients{{% /md %}}</dd>
 
@@ -2295,18 +2295,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="domaincontrolleripaddress_python">
-<a href="#domaincontrolleripaddress_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Controller<wbr>Ip<wbr>Address</a>
+        <span id="domain_controller_ip_address_python">
+<a href="#domain_controller_ip_address_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>controller_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Controller IP Address{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="externalaccessipaddress_python">
-<a href="#externalaccessipaddress_python" style="color: inherit; text-decoration: inherit;">external<wbr>Access<wbr>Ip<wbr>Address</a>
+        <span id="external_access_ip_address_python">
+<a href="#external_access_ip_address_python" style="color: inherit; text-decoration: inherit;">external_<wbr>access_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2315,18 +2315,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthalerts_python">
-<a href="#healthalerts_python" style="color: inherit; text-decoration: inherit;">health<wbr>Alerts</a>
+        <span id="health_alerts_python">
+<a href="#health_alerts_python" style="color: inherit; text-decoration: inherit;">health_<wbr>alerts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">List[Health<wbr>Alert<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthalertresponse">Sequence[Health<wbr>Alert<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="healthlastevaluated_python">
-<a href="#healthlastevaluated_python" style="color: inherit; text-decoration: inherit;">health<wbr>Last<wbr>Evaluated</a>
+        <span id="health_last_evaluated_python">
+<a href="#health_last_evaluated_python" style="color: inherit; text-decoration: inherit;">health_<wbr>last_<wbr>evaluated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2335,18 +2335,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthmonitors_python">
-<a href="#healthmonitors_python" style="color: inherit; text-decoration: inherit;">health<wbr>Monitors</a>
+        <span id="health_monitors_python">
+<a href="#health_monitors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>monitors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">List[Health<wbr>Monitor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">Sequence[Health<wbr>Monitor<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="replicasetid_python">
-<a href="#replicasetid_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Set<wbr>Id</a>
+        <span id="replica_set_id_python">
+<a href="#replica_set_id_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2365,8 +2365,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vnetsiteid_python">
-<a href="#vnetsiteid_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Site<wbr>Id</a>
+        <span id="vnet_site_id_python">
+<a href="#vnet_site_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>site_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

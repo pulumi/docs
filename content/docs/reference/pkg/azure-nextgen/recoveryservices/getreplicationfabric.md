@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fabricpropertiesresponse">Dict[Fabric<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fabricpropertiesresponse">Fabric<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fabric related data.{{% /md %}}</dd>
 
@@ -590,8 +590,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="agentid_python">
-<a href="#agentid_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Id</a>
+        <span id="agent_id_python">
+<a href="#agent_id_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -600,8 +600,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="biosid_python">
-<a href="#biosid_python" style="color: inherit; text-decoration: inherit;">bios<wbr>Id</a>
+        <span id="bios_id_python">
+<a href="#bios_id_python" style="color: inherit; text-decoration: inherit;">bios_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -614,7 +614,7 @@ The following output properties are available:
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdiskdetailsresponse">List[Agent<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentdiskdetailsresponse">Sequence[Agent<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The details of agent disks.{{% /md %}}</dd>
 
@@ -829,8 +829,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="capacityinbytes_python">
-<a href="#capacityinbytes_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>In<wbr>Bytes</a>
+        <span id="capacity_in_bytes_python">
+<a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -839,8 +839,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="diskid_python">
-<a href="#diskid_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+        <span id="disk_id_python">
+<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -859,8 +859,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isosdisk_python">
-<a href="#isosdisk_python" style="color: inherit; text-decoration: inherit;">is<wbr>OSDisk</a>
+        <span id="is_os_disk_python">
+<a href="#is_os_disk_python" style="color: inherit; text-decoration: inherit;">is_<wbr>os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -869,8 +869,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lunid_python">
-<a href="#lunid_python" style="color: inherit; text-decoration: inherit;">lun<wbr>Id</a>
+        <span id="lun_id_python">
+<a href="#lun_id_python" style="color: inherit; text-decoration: inherit;">lun_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -978,11 +978,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerids_python">
-<a href="#containerids_python" style="color: inherit; text-decoration: inherit;">container<wbr>Ids</a>
+        <span id="container_ids_python">
+<a href="#container_ids_python" style="color: inherit; text-decoration: inherit;">container_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The container Ids for the Azure fabric.{{% /md %}}</dd>
 
@@ -1197,8 +1197,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="freespace_python">
-<a href="#freespace_python" style="color: inherit; text-decoration: inherit;">free<wbr>Space</a>
+        <span id="free_space_python">
+<a href="#free_space_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1207,8 +1207,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="symbolicname_python">
-<a href="#symbolicname_python" style="color: inherit; text-decoration: inherit;">symbolic<wbr>Name</a>
+        <span id="symbolic_name_python">
+<a href="#symbolic_name_python" style="color: inherit; text-decoration: inherit;">symbolic_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1470,7 +1470,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd>
 
@@ -1968,7 +1968,7 @@ The following output properties are available:
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VSite<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response] | Dict[VMware<wbr>Details<wbr>Response] | Dict[VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response] | Dict[Vmm<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, VMware<wbr>Details<wbr>Response<wbr>Args, VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args, Vmm<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd>
 
@@ -1978,7 +1978,7 @@ The following output properties are available:
 <a href="#encryption_details_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Dict[Encryption<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption details for the fabric.{{% /md %}}</dd>
 
@@ -2008,7 +2008,7 @@ The following output properties are available:
 <a href="#health_error_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>error_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fabric health error details.{{% /md %}}</dd>
 
@@ -2028,7 +2028,7 @@ The following output properties are available:
 <a href="#rollover_encryption_details_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>encryption_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Dict[Encryption<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollover encryption details for the fabric.{{% /md %}}</dd>
 
@@ -2523,8 +2523,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2533,8 +2533,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customerresolvability_python">
-<a href="#customerresolvability_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
+        <span id="customer_resolvability_python">
+<a href="#customer_resolvability_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>resolvability</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2543,8 +2543,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2553,53 +2553,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorid_python">
-<a href="#errorid_python" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2613,6 +2573,26 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_id_python">
+<a href="#error_id_python" style="color: inherit; text-decoration: inherit;">error_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -2623,18 +2603,38 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innerhealtherrors_python">
-<a href="#innerhealtherrors_python" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inner_health_errors_python">
+<a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2643,8 +2643,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2653,8 +2653,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2663,8 +2663,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3175,14 +3175,14 @@ The following output properties are available:
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdetailsresponse">List[Agent<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentdetailsresponse">Sequence[Agent<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of agent details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="controlplaneuri_python">
-<a href="#controlplaneuri_python" style="color: inherit; text-decoration: inherit;">control<wbr>Plane<wbr>Uri</a>
+        <span id="control_plane_uri_python">
+<a href="#control_plane_uri_python" style="color: inherit; text-decoration: inherit;">control_<wbr>plane_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3191,8 +3191,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dataplaneuri_python">
-<a href="#dataplaneuri_python" style="color: inherit; text-decoration: inherit;">data<wbr>Plane<wbr>Uri</a>
+        <span id="data_plane_uri_python">
+<a href="#data_plane_uri_python" style="color: inherit; text-decoration: inherit;">data_<wbr>plane_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3205,14 +3205,14 @@ The following output properties are available:
 <a href="#dras_python" style="color: inherit; text-decoration: inherit;">dras</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dradetailsresponse">List[Dra<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dradetailsresponse">Sequence[Dra<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DRAs.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="physicalsiteid_python">
-<a href="#physicalsiteid_python" style="color: inherit; text-decoration: inherit;">physical<wbr>Site<wbr>Id</a>
+        <span id="physical_site_id_python">
+<a href="#physical_site_id_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>site_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3221,73 +3221,63 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="processservers_python">
-<a href="#processservers_python" style="color: inherit; text-decoration: inherit;">process<wbr>Servers</a>
+        <span id="process_servers_python">
+<a href="#process_servers_python" style="color: inherit; text-decoration: inherit;">process_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverdetailsresponse">List[Process<wbr>Server<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#processserverdetailsresponse">Sequence[Process<wbr>Server<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of process servers.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="pushinstallers_python">
-<a href="#pushinstallers_python" style="color: inherit; text-decoration: inherit;">push<wbr>Installers</a>
+        <span id="push_installers_python">
+<a href="#push_installers_python" style="color: inherit; text-decoration: inherit;">push_<wbr>installers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushinstallerdetailsresponse">List[Push<wbr>Installer<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pushinstallerdetailsresponse">Sequence[Push<wbr>Installer<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of push installers.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="rcmproxies_python">
-<a href="#rcmproxies_python" style="color: inherit; text-decoration: inherit;">rcm<wbr>Proxies</a>
+        <span id="rcm_proxies_python">
+<a href="#rcm_proxies_python" style="color: inherit; text-decoration: inherit;">rcm_<wbr>proxies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcmproxydetailsresponse">List[Rcm<wbr>Proxy<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rcmproxydetailsresponse">Sequence[Rcm<wbr>Proxy<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of RCM proxies.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="replicationagents_python">
-<a href="#replicationagents_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Agents</a>
+        <span id="replication_agents_python">
+<a href="#replication_agents_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>agents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationagentdetailsresponse">List[Replication<wbr>Agent<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#replicationagentdetailsresponse">Sequence[Replication<wbr>Agent<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of replication agents.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="reprotectagents_python">
-<a href="#reprotectagents_python" style="color: inherit; text-decoration: inherit;">reprotect<wbr>Agents</a>
+        <span id="reprotect_agents_python">
+<a href="#reprotect_agents_python" style="color: inherit; text-decoration: inherit;">reprotect_<wbr>agents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reprotectagentdetailsresponse">List[Reprotect<wbr>Agent<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reprotectagentdetailsresponse">Sequence[Reprotect<wbr>Agent<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of reprotect agents.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="servicecontainerid_python">
-<a href="#servicecontainerid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Container<wbr>Id</a>
+        <span id="service_container_id_python">
+<a href="#service_container_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>container_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service container Id.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceresourceid_python">
-<a href="#serviceresourceid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The service resource Id.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3301,8 +3291,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vmwaresiteid_python">
-<a href="#vmwaresiteid_python" style="color: inherit; text-decoration: inherit;">vmware<wbr>Site<wbr>Id</a>
+        <span id="service_resource_id_python">
+<a href="#service_resource_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service resource Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmware_site_id_python">
+<a href="#vmware_site_id_python" style="color: inherit; text-decoration: inherit;">vmware_<wbr>site_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3710,8 +3710,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3720,8 +3720,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3730,43 +3730,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3780,6 +3750,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -3790,8 +3770,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3800,8 +3800,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3810,8 +3810,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3820,8 +3820,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4409,23 +4409,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentexpirydate_python">
-<a href="#agentexpirydate_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Expiry<wbr>Date</a>
+        <span id="agent_expiry_date_python">
+<a href="#agent_expiry_date_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>expiry_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Agent expiry date.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="agentversiondetails_python">
-<a href="#agentversiondetails_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Dict[Version<wbr>Details<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Agent version details.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4439,11 +4429,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datastores_python">
-<a href="#datastores_python" style="color: inherit; text-decoration: inherit;">data<wbr>Stores</a>
+        <span id="agent_version_details_python">
+<a href="#agent_version_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreresponse">List[Data<wbr>Store<wbr>Response]</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Agent version details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_stores_python">
+<a href="#data_stores_python" style="color: inherit; text-decoration: inherit;">data_<wbr>stores</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datastoreresponse">Sequence[Data<wbr>Store<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of data stores in the fabric.{{% /md %}}</dd>
 
@@ -4463,7 +4463,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd>
 
@@ -4499,8 +4499,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="marsagentexpirydate_python">
-<a href="#marsagentexpirydate_python" style="color: inherit; text-decoration: inherit;">mars<wbr>Agent<wbr>Expiry<wbr>Date</a>
+        <span id="mars_agent_expiry_date_python">
+<a href="#mars_agent_expiry_date_python" style="color: inherit; text-decoration: inherit;">mars_<wbr>agent_<wbr>expiry_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4509,8 +4509,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="marsagentversion_python">
-<a href="#marsagentversion_python" style="color: inherit; text-decoration: inherit;">mars<wbr>Agent<wbr>Version</a>
+        <span id="mars_agent_version_python">
+<a href="#mars_agent_version_python" style="color: inherit; text-decoration: inherit;">mars_<wbr>agent_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4519,11 +4519,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="marsagentversiondetails_python">
-<a href="#marsagentversiondetails_python" style="color: inherit; text-decoration: inherit;">mars<wbr>Agent<wbr>Version<wbr>Details</a>
+        <span id="mars_agent_version_details_python">
+<a href="#mars_agent_version_details_python" style="color: inherit; text-decoration: inherit;">mars_<wbr>agent_<wbr>version_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Dict[Version<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mars agent version details.{{% /md %}}</dd>
 
@@ -4559,28 +4559,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionvolumes_python">
-<a href="#retentionvolumes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Volumes</a>
+        <span id="retention_volumes_python">
+<a href="#retention_volumes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionvolumeresponse">List[Retention<wbr>Volume<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentionvolumeresponse">Sequence[Retention<wbr>Volume<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The retention volumes of Master target Server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="versionstatus_python">
-<a href="#versionstatus_python" style="color: inherit; text-decoration: inherit;">version<wbr>Status</a>
+        <span id="version_status_python">
+<a href="#version_status_python" style="color: inherit; text-decoration: inherit;">version_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5327,8 +5327,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="availablememoryinbytes_python">
-<a href="#availablememoryinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>In<wbr>Bytes</a>
+        <span id="available_memory_in_bytes_python">
+<a href="#available_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5337,8 +5337,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="availablespaceinbytes_python">
-<a href="#availablespaceinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="available_space_in_bytes_python">
+<a href="#available_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5347,8 +5347,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="freespacepercentage_python">
-<a href="#freespacepercentage_python" style="color: inherit; text-decoration: inherit;">free<wbr>Space<wbr>Percentage</a>
+        <span id="free_space_percentage_python">
+<a href="#free_space_percentage_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5371,14 +5371,14 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="historichealth_python">
-<a href="#historichealth_python" style="color: inherit; text-decoration: inherit;">historic<wbr>Health</a>
+        <span id="historic_health_python">
+<a href="#historic_health_python" style="color: inherit; text-decoration: inherit;">historic_<wbr>health</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5407,8 +5407,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="memoryusagepercentage_python">
-<a href="#memoryusagepercentage_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Usage<wbr>Percentage</a>
+        <span id="memory_usage_percentage_python">
+<a href="#memory_usage_percentage_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>usage_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5427,8 +5427,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="processorusagepercentage_python">
-<a href="#processorusagepercentage_python" style="color: inherit; text-decoration: inherit;">processor<wbr>Usage<wbr>Percentage</a>
+        <span id="processor_usage_percentage_python">
+<a href="#processor_usage_percentage_python" style="color: inherit; text-decoration: inherit;">processor_<wbr>usage_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5437,8 +5437,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="throughputinbytes_python">
-<a href="#throughputinbytes_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>In<wbr>Bytes</a>
+        <span id="throughput_in_bytes_python">
+<a href="#throughput_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5447,8 +5447,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="throughputuploadpendingdatainbytes_python">
-<a href="#throughputuploadpendingdatainbytes_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>Upload<wbr>Pending<wbr>Data<wbr>In<wbr>Bytes</a>
+        <span id="throughput_upload_pending_data_in_bytes_python">
+<a href="#throughput_upload_pending_data_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>upload_<wbr>pending_<wbr>data_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5457,8 +5457,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="totalmemoryinbytes_python">
-<a href="#totalmemoryinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Memory<wbr>In<wbr>Bytes</a>
+        <span id="total_memory_in_bytes_python">
+<a href="#total_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5467,8 +5467,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="totalspaceinbytes_python">
-<a href="#totalspaceinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="total_space_in_bytes_python">
+<a href="#total_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5477,8 +5477,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usedmemoryinbytes_python">
-<a href="#usedmemoryinbytes_python" style="color: inherit; text-decoration: inherit;">used<wbr>Memory<wbr>In<wbr>Bytes</a>
+        <span id="used_memory_in_bytes_python">
+<a href="#used_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5487,8 +5487,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usedspaceinbytes_python">
-<a href="#usedspaceinbytes_python" style="color: inherit; text-decoration: inherit;">used<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="used_space_in_bytes_python">
+<a href="#used_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6636,8 +6636,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="marscommunicationstatus_python">
-<a href="#marscommunicationstatus_python" style="color: inherit; text-decoration: inherit;">mars<wbr>Communication<wbr>Status</a>
+        <span id="mars_communication_status_python">
+<a href="#mars_communication_status_python" style="color: inherit; text-decoration: inherit;">mars_<wbr>communication_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6646,8 +6646,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="marsregistrationstatus_python">
-<a href="#marsregistrationstatus_python" style="color: inherit; text-decoration: inherit;">mars<wbr>Registration<wbr>Status</a>
+        <span id="mars_registration_status_python">
+<a href="#mars_registration_status_python" style="color: inherit; text-decoration: inherit;">mars_<wbr>registration_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6656,8 +6656,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="psstatsrefreshtime_python">
-<a href="#psstatsrefreshtime_python" style="color: inherit; text-decoration: inherit;">ps<wbr>Stats<wbr>Refresh<wbr>Time</a>
+        <span id="ps_stats_refresh_time_python">
+<a href="#ps_stats_refresh_time_python" style="color: inherit; text-decoration: inherit;">ps_<wbr>stats_<wbr>refresh_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6666,8 +6666,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="throughputinbytes_python">
-<a href="#throughputinbytes_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>In<wbr>Bytes</a>
+        <span id="throughput_in_bytes_python">
+<a href="#throughput_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6676,8 +6676,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="throughputinmbps_python">
-<a href="#throughputinmbps_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>In<wbr>MBps</a>
+        <span id="throughput_in_m_bps_python">
+<a href="#throughput_in_m_bps_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>in_<wbr>m_<wbr>bps</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6686,8 +6686,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="throughputstatus_python">
-<a href="#throughputstatus_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>Status</a>
+        <span id="throughput_status_python">
+<a href="#throughput_status_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6696,8 +6696,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="throughputuploadpendingdatainbytes_python">
-<a href="#throughputuploadpendingdatainbytes_python" style="color: inherit; text-decoration: inherit;">throughput<wbr>Upload<wbr>Pending<wbr>Data<wbr>In<wbr>Bytes</a>
+        <span id="throughput_upload_pending_data_in_bytes_python">
+<a href="#throughput_upload_pending_data_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>upload_<wbr>pending_<wbr>data_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6706,23 +6706,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentexpirydate_python">
-<a href="#agentexpirydate_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Expiry<wbr>Date</a>
+        <span id="agent_expiry_date_python">
+<a href="#agent_expiry_date_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>expiry_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Agent expiry date.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="agentversiondetails_python">
-<a href="#agentversiondetails_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Dict[Version<wbr>Details<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The agent version details.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6736,8 +6726,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availablememoryinbytes_python">
-<a href="#availablememoryinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>In<wbr>Bytes</a>
+        <span id="agent_version_details_python">
+<a href="#agent_version_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="available_memory_in_bytes_python">
+<a href="#available_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6746,8 +6746,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availablespaceinbytes_python">
-<a href="#availablespaceinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="available_space_in_bytes_python">
+<a href="#available_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6756,8 +6756,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuload_python">
-<a href="#cpuload_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Load</a>
+        <span id="cpu_load_python">
+<a href="#cpu_load_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6766,8 +6766,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuloadstatus_python">
-<a href="#cpuloadstatus_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Load<wbr>Status</a>
+        <span id="cpu_load_status_python">
+<a href="#cpu_load_status_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>load_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6790,7 +6790,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd>
 
@@ -6846,8 +6846,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryusagestatus_python">
-<a href="#memoryusagestatus_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Usage<wbr>Status</a>
+        <span id="memory_usage_status_python">
+<a href="#memory_usage_status_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>usage_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6856,11 +6856,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mobilityserviceupdates_python">
-<a href="#mobilityserviceupdates_python" style="color: inherit; text-decoration: inherit;">mobility<wbr>Service<wbr>Updates</a>
+        <span id="mobility_service_updates_python">
+<a href="#mobility_service_updates_python" style="color: inherit; text-decoration: inherit;">mobility_<wbr>service_<wbr>updates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mobilityserviceupdateresponse">List[Mobility<wbr>Service<wbr>Update<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mobilityserviceupdateresponse">Sequence[Mobility<wbr>Service<wbr>Update<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of the mobility service updates available on the Process Server.{{% /md %}}</dd>
 
@@ -6886,8 +6886,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="psservicestatus_python">
-<a href="#psservicestatus_python" style="color: inherit; text-decoration: inherit;">ps<wbr>Service<wbr>Status</a>
+        <span id="ps_service_status_python">
+<a href="#ps_service_status_python" style="color: inherit; text-decoration: inherit;">ps_<wbr>service_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6896,8 +6896,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationpaircount_python">
-<a href="#replicationpaircount_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Pair<wbr>Count</a>
+        <span id="replication_pair_count_python">
+<a href="#replication_pair_count_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>pair_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6906,8 +6906,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spaceusagestatus_python">
-<a href="#spaceusagestatus_python" style="color: inherit; text-decoration: inherit;">space<wbr>Usage<wbr>Status</a>
+        <span id="space_usage_status_python">
+<a href="#space_usage_status_python" style="color: inherit; text-decoration: inherit;">space_<wbr>usage_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6916,8 +6916,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertexpirydate_python">
-<a href="#sslcertexpirydate_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Expiry<wbr>Date</a>
+        <span id="ssl_cert_expiry_date_python">
+<a href="#ssl_cert_expiry_date_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>expiry_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6926,8 +6926,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertexpiryremainingdays_python">
-<a href="#sslcertexpiryremainingdays_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Expiry<wbr>Remaining<wbr>Days</a>
+        <span id="ssl_cert_expiry_remaining_days_python">
+<a href="#ssl_cert_expiry_remaining_days_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>expiry_<wbr>remaining_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6936,8 +6936,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemload_python">
-<a href="#systemload_python" style="color: inherit; text-decoration: inherit;">system<wbr>Load</a>
+        <span id="system_load_python">
+<a href="#system_load_python" style="color: inherit; text-decoration: inherit;">system_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6946,8 +6946,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemloadstatus_python">
-<a href="#systemloadstatus_python" style="color: inherit; text-decoration: inherit;">system<wbr>Load<wbr>Status</a>
+        <span id="system_load_status_python">
+<a href="#system_load_status_python" style="color: inherit; text-decoration: inherit;">system_<wbr>load_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6956,8 +6956,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalmemoryinbytes_python">
-<a href="#totalmemoryinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Memory<wbr>In<wbr>Bytes</a>
+        <span id="total_memory_in_bytes_python">
+<a href="#total_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6966,8 +6966,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalspaceinbytes_python">
-<a href="#totalspaceinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="total_space_in_bytes_python">
+<a href="#total_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6976,8 +6976,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="versionstatus_python">
-<a href="#versionstatus_python" style="color: inherit; text-decoration: inherit;">version<wbr>Status</a>
+        <span id="version_status_python">
+<a href="#version_status_python" style="color: inherit; text-decoration: inherit;">version_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7219,7 +7219,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd>
 
@@ -7498,7 +7498,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd>
 
@@ -7777,7 +7777,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd>
 
@@ -8056,7 +8056,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd>
 
@@ -8261,8 +8261,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="capacityinbytes_python">
-<a href="#capacityinbytes_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>In<wbr>Bytes</a>
+        <span id="capacity_in_bytes_python">
+<a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -8271,8 +8271,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="freespaceinbytes_python">
-<a href="#freespaceinbytes_python" style="color: inherit; text-decoration: inherit;">free<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="free_space_in_bytes_python">
+<a href="#free_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -8281,8 +8281,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdpercentage_python">
-<a href="#thresholdpercentage_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percentage</a>
+        <span id="threshold_percentage_python">
+<a href="#threshold_percentage_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9419,26 +9419,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentexpirydate_python">
-<a href="#agentexpirydate_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Expiry<wbr>Date</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Agent expiry date.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="agentversiondetails_python">
-<a href="#agentversiondetails_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Dict[Version<wbr>Details<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The agent version details.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="agent_count_python">
 <a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
 </span> 
@@ -9446,6 +9426,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The number of source and target servers configured to talk to this CS.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="agent_expiry_date_python">
+<a href="#agent_expiry_date_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>expiry_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Agent expiry date.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9459,8 +9449,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availablememoryinbytes_python">
-<a href="#availablememoryinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>In<wbr>Bytes</a>
+        <span id="agent_version_details_python">
+<a href="#agent_version_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="available_memory_in_bytes_python">
+<a href="#available_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9469,8 +9469,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availablespaceinbytes_python">
-<a href="#availablespaceinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="available_space_in_bytes_python">
+<a href="#available_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9479,8 +9479,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuload_python">
-<a href="#cpuload_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Load</a>
+        <span id="cpu_load_python">
+<a href="#cpu_load_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9489,8 +9489,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuloadstatus_python">
-<a href="#cpuloadstatus_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Load<wbr>Status</a>
+        <span id="cpu_load_status_python">
+<a href="#cpu_load_status_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>load_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9499,8 +9499,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="csservicestatus_python">
-<a href="#csservicestatus_python" style="color: inherit; text-decoration: inherit;">cs<wbr>Service<wbr>Status</a>
+        <span id="cs_service_status_python">
+<a href="#cs_service_status_python" style="color: inherit; text-decoration: inherit;">cs_<wbr>service_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9509,8 +9509,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databaseserverload_python">
-<a href="#databaseserverload_python" style="color: inherit; text-decoration: inherit;">database<wbr>Server<wbr>Load</a>
+        <span id="database_server_load_python">
+<a href="#database_server_load_python" style="color: inherit; text-decoration: inherit;">database_<wbr>server_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9519,8 +9519,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databaseserverloadstatus_python">
-<a href="#databaseserverloadstatus_python" style="color: inherit; text-decoration: inherit;">database<wbr>Server<wbr>Load<wbr>Status</a>
+        <span id="database_server_load_status_python">
+<a href="#database_server_load_status_python" style="color: inherit; text-decoration: inherit;">database_<wbr>server_<wbr>load_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9559,18 +9559,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mastertargetservers_python">
-<a href="#mastertargetservers_python" style="color: inherit; text-decoration: inherit;">master<wbr>Target<wbr>Servers</a>
+        <span id="master_target_servers_python">
+<a href="#master_target_servers_python" style="color: inherit; text-decoration: inherit;">master_<wbr>target_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mastertargetserverresponse">List[Master<wbr>Target<wbr>Server<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mastertargetserverresponse">Sequence[Master<wbr>Target<wbr>Server<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Master Target servers associated with the fabric.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryusagestatus_python">
-<a href="#memoryusagestatus_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Usage<wbr>Status</a>
+        <span id="memory_usage_status_python">
+<a href="#memory_usage_status_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>usage_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9579,8 +9579,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processservercount_python">
-<a href="#processservercount_python" style="color: inherit; text-decoration: inherit;">process<wbr>Server<wbr>Count</a>
+        <span id="process_server_count_python">
+<a href="#process_server_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>server_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9589,18 +9589,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processservers_python">
-<a href="#processservers_python" style="color: inherit; text-decoration: inherit;">process<wbr>Servers</a>
+        <span id="process_servers_python">
+<a href="#process_servers_python" style="color: inherit; text-decoration: inherit;">process_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverresponse">List[Process<wbr>Server<wbr>Response]</a></span>
+        <span class="property-type"><a href="#processserverresponse">Sequence[Process<wbr>Server<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Process Servers associated with the fabric.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protectedservers_python">
-<a href="#protectedservers_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Servers</a>
+        <span id="protected_servers_python">
+<a href="#protected_servers_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9609,8 +9609,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pstemplateversion_python">
-<a href="#pstemplateversion_python" style="color: inherit; text-decoration: inherit;">ps<wbr>Template<wbr>Version</a>
+        <span id="ps_template_version_python">
+<a href="#ps_template_version_python" style="color: inherit; text-decoration: inherit;">ps_<wbr>template_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9619,8 +9619,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationpaircount_python">
-<a href="#replicationpaircount_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Pair<wbr>Count</a>
+        <span id="replication_pair_count_python">
+<a href="#replication_pair_count_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>pair_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9629,18 +9629,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runasaccounts_python">
-<a href="#runasaccounts_python" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Accounts</a>
+        <span id="run_as_accounts_python">
+<a href="#run_as_accounts_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasaccountresponse">List[Run<wbr>As<wbr>Account<wbr>Response]</a></span>
+        <span class="property-type"><a href="#runasaccountresponse">Sequence[Run<wbr>As<wbr>Account<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of run as accounts created on the server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spaceusagestatus_python">
-<a href="#spaceusagestatus_python" style="color: inherit; text-decoration: inherit;">space<wbr>Usage<wbr>Status</a>
+        <span id="space_usage_status_python">
+<a href="#space_usage_status_python" style="color: inherit; text-decoration: inherit;">space_<wbr>usage_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9649,8 +9649,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertexpirydate_python">
-<a href="#sslcertexpirydate_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Expiry<wbr>Date</a>
+        <span id="ssl_cert_expiry_date_python">
+<a href="#ssl_cert_expiry_date_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>expiry_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9659,8 +9659,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertexpiryremainingdays_python">
-<a href="#sslcertexpiryremainingdays_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Expiry<wbr>Remaining<wbr>Days</a>
+        <span id="ssl_cert_expiry_remaining_days_python">
+<a href="#ssl_cert_expiry_remaining_days_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>expiry_<wbr>remaining_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9669,8 +9669,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemload_python">
-<a href="#systemload_python" style="color: inherit; text-decoration: inherit;">system<wbr>Load</a>
+        <span id="system_load_python">
+<a href="#system_load_python" style="color: inherit; text-decoration: inherit;">system_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9679,8 +9679,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemloadstatus_python">
-<a href="#systemloadstatus_python" style="color: inherit; text-decoration: inherit;">system<wbr>Load<wbr>Status</a>
+        <span id="system_load_status_python">
+<a href="#system_load_status_python" style="color: inherit; text-decoration: inherit;">system_<wbr>load_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9689,8 +9689,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalmemoryinbytes_python">
-<a href="#totalmemoryinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Memory<wbr>In<wbr>Bytes</a>
+        <span id="total_memory_in_bytes_python">
+<a href="#total_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9699,8 +9699,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalspaceinbytes_python">
-<a href="#totalspaceinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Space<wbr>In<wbr>Bytes</a>
+        <span id="total_space_in_bytes_python">
+<a href="#total_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9709,8 +9709,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="versionstatus_python">
-<a href="#versionstatus_python" style="color: inherit; text-decoration: inherit;">version<wbr>Status</a>
+        <span id="version_status_python">
+<a href="#version_status_python" style="color: inherit; text-decoration: inherit;">version_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9719,8 +9719,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webload_python">
-<a href="#webload_python" style="color: inherit; text-decoration: inherit;">web<wbr>Load</a>
+        <span id="web_load_python">
+<a href="#web_load_python" style="color: inherit; text-decoration: inherit;">web_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9729,8 +9729,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webloadstatus_python">
-<a href="#webloadstatus_python" style="color: inherit; text-decoration: inherit;">web<wbr>Load<wbr>Status</a>
+        <span id="web_load_status_python">
+<a href="#web_load_status_python" style="color: inherit; text-decoration: inherit;">web_<wbr>load_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9898,23 +9898,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="migrationsolutionid_python">
-<a href="#migrationsolutionid_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Solution<wbr>Id</a>
+        <span id="migration_solution_id_python">
+<a href="#migration_solution_id_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>solution_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Migration solution ARM Id.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceresourceid_python">
-<a href="#serviceresourceid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The service resource Id.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9928,8 +9918,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vmwaresiteid_python">
-<a href="#vmwaresiteid_python" style="color: inherit; text-decoration: inherit;">vmware<wbr>Site<wbr>Id</a>
+        <span id="service_resource_id_python">
+<a href="#service_resource_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service resource Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmware_site_id_python">
+<a href="#vmware_site_id_python" style="color: inherit; text-decoration: inherit;">vmware_<wbr>site_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

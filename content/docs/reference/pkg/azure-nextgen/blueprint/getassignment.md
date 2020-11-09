@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Dict[Managed<wbr>Service<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Value<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Blueprint assignment parameter values.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#resource_groups_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Resource<wbr>Group<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Resource<wbr>Group<wbr>Value<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Names and locations of resource group placeholders.{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentstatusresponse">Dict[Assignment<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentstatusresponse">Assignment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of blueprint assignment. This field is readonly.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#locks_python" style="color: inherit; text-decoration: inherit;">locks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentlocksettingsresponse">Dict[Assignment<wbr>Lock<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentlocksettingsresponse">Assignment<wbr>Lock<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines how resources deployed by a blueprint assignment are locked.{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The following output properties are available:
 <a href="#excluded_actions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.{{% /md %}}</dd>
 
@@ -864,7 +864,7 @@ The following output properties are available:
 <a href="#excluded_principals_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.{{% /md %}}</dd>
 
@@ -1023,7 +1023,7 @@ The following output properties are available:
 <a href="#managed_resources_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of resources that were created by the blueprint assignment.{{% /md %}}</dd>
 
@@ -1311,7 +1311,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 
@@ -1420,7 +1420,7 @@ The following output properties are available:
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Dict[Secret<wbr>Value<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd>
 
@@ -1430,7 +1430,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -1688,7 +1688,7 @@ The following output properties are available:
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Dict[Key<wbr>Vault<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd>
 
@@ -1704,8 +1704,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretversion_python">
-<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

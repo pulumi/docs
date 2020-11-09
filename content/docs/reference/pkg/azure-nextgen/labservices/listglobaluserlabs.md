@@ -187,7 +187,7 @@ The following output properties are available:
 <a href="#labs_python" style="color: inherit; text-decoration: inherit;">labs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labdetailsresponse">List[Lab<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#labdetailsresponse">Sequence[Lab<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all the labs{{% /md %}}</dd>
 

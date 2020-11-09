@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtargetresponse">List[Job<wbr>Target<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobtargetresponse">Sequence[Job<wbr>Target<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Members of the target group.{{% /md %}}</dd>
 
@@ -680,8 +680,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="membershiptype_python">
-<a href="#membershiptype_python" style="color: inherit; text-decoration: inherit;">membership<wbr>Type</a>
+        <span id="membership_type_python">
+<a href="#membership_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -690,8 +690,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshcredential_python">
-<a href="#refreshcredential_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Credential</a>
+        <span id="refresh_credential_python">
+<a href="#refresh_credential_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -710,8 +710,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shardmapname_python">
-<a href="#shardmapname_python" style="color: inherit; text-decoration: inherit;">shard<wbr>Map<wbr>Name</a>
+        <span id="shard_map_name_python">
+<a href="#shard_map_name_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>map_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

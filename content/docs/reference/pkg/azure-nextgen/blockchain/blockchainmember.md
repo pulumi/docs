@@ -97,9 +97,9 @@ blockchain_member = azure_nextgen.blockchain.v20180601preview.BlockchainMember("
     password="1234abcdEFG1",
     protocol="Quorum",
     resource_group_name="mygroup",
-    validator_nodes_sku={
-        "capacity": 2,
-    })
+    validator_nodes_sku=azure_nextgen.blockchain.v20180601preview.BlockchainMemberNodesSkuArgs(
+        capacity=2,
+    ))
 
 ```
 
@@ -140,7 +140,7 @@ const blockchainMember = new azure_nextgen.blockchain.v20180601preview.Blockchai
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blockchain_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_management_account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_member_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallRule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">validator_nodes_sku</span><span class="p">:</span> <span class="nx">Optional[Dict[BlockchainMemberNodesSku]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlockchainMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blockchain_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_management_account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_member_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consortium_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validator_nodes_sku</span><span class="p">:</span> <span class="nx">Optional[BlockchainMemberNodesSkuArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -789,7 +789,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">List[Firewall<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallrule">Sequence[Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets firewall rules{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain member Sku.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describes the resource.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#validator_nodes_sku_python" style="color: inherit; text-decoration: inherit;">validator_<wbr>nodes_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blockchainmembernodessku">Dict[Blockchain<wbr>Member<wbr>Nodes<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#blockchainmembernodessku">Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain validator nodes Sku.{{% /md %}}</dd>
 

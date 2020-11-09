@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.DesktopVirtualization.V20191210Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20191210Preview.ApplicationArgs
+        var application = new AzureNextGen.DesktopVirtualization.V20201102Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20201102Preview.ApplicationArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationName = "application1",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20191210preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201102preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.desktopvirtualization.v20191210preview.Application("application",
+application = azure_nextgen.desktopvirtualization.v20201102preview.Application("application",
     application_group_name="applicationGroup1",
     application_name="application1",
     command_line_arguments="arguments",
@@ -113,7 +113,7 @@ application = azure_nextgen.desktopvirtualization.v20191210preview.Application("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.desktopvirtualization.v20191210preview.Application("application", {
+const application = new azure_nextgen.desktopvirtualization.v20201102preview.Application("application", {
     applicationGroupName: "applicationGroup1",
     applicationName: "application1",
     commandLineArguments: "arguments",
@@ -143,7 +143,7 @@ const application = new azure_nextgen.desktopvirtualization.v20191210preview.App
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command_line_arguments</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command_line_setting</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icon_index</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">icon_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_in_portal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command_line_arguments</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command_line_setting</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icon_index</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">icon_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msix_package_application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msix_package_family_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_in_portal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -357,6 +357,16 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="applicationtype_csharp">
+<a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="commandlinearguments_csharp">
 <a href="#commandlinearguments_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Arguments</a>
 </span> 
@@ -417,6 +427,26 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="msixpackageapplicationid_csharp">
+<a href="#msixpackageapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msixpackagefamilyname_csharp">
+<a href="#msixpackagefamilyname_csharp" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Family<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="showinportal_csharp">
 <a href="#showinportal_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>In<wbr>Portal</a>
 </span> 
@@ -471,6 +501,16 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationtype_go">
+<a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -534,6 +574,26 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="msixpackageapplicationid_go">
+<a href="#msixpackageapplicationid_go" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msixpackagefamilyname_go">
+<a href="#msixpackagefamilyname_go" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Family<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="showinportal_go">
 <a href="#showinportal_go" style="color: inherit; text-decoration: inherit;">Show<wbr>In<wbr>Portal</a>
 </span> 
@@ -588,6 +648,16 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationtype_nodejs">
+<a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -651,6 +721,26 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="msixpackageapplicationid_nodejs">
+<a href="#msixpackageapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msixpackagefamilyname_nodejs">
+<a href="#msixpackagefamilyname_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Family<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="showinportal_nodejs">
 <a href="#showinportal_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>In<wbr>Portal</a>
 </span> 
@@ -705,6 +795,16 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_type_python">
+<a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -765,6 +865,26 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Path to icon.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msix_package_application_id_python">
+<a href="#msix_package_application_id_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>application_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msix_package_family_name_python">
+<a href="#msix_package_family_name_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>family_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -842,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -899,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -956,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1013,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

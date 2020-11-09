@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgppeerstatusresponse">List[Bgp<wbr>Peer<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bgppeerstatusresponse">Sequence[Bgp<wbr>Peer<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of BGP peers.{{% /md %}}</dd>
 
@@ -568,8 +568,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectedduration_python">
-<a href="#connectedduration_python" style="color: inherit; text-decoration: inherit;">connected<wbr>Duration</a>
+        <span id="connected_duration_python">
+<a href="#connected_duration_python" style="color: inherit; text-decoration: inherit;">connected_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -578,8 +578,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localaddress_python">
-<a href="#localaddress_python" style="color: inherit; text-decoration: inherit;">local<wbr>Address</a>
+        <span id="local_address_python">
+<a href="#local_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -588,8 +588,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="messagesreceived_python">
-<a href="#messagesreceived_python" style="color: inherit; text-decoration: inherit;">messages<wbr>Received</a>
+        <span id="messages_received_python">
+<a href="#messages_received_python" style="color: inherit; text-decoration: inherit;">messages_<wbr>received</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -598,8 +598,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="messagessent_python">
-<a href="#messagessent_python" style="color: inherit; text-decoration: inherit;">messages<wbr>Sent</a>
+        <span id="messages_sent_python">
+<a href="#messages_sent_python" style="color: inherit; text-decoration: inherit;">messages_<wbr>sent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -618,8 +618,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="routesreceived_python">
-<a href="#routesreceived_python" style="color: inherit; text-decoration: inherit;">routes<wbr>Received</a>
+        <span id="routes_received_python">
+<a href="#routes_received_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>received</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

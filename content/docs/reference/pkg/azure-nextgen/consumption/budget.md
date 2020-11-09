@@ -132,63 +132,63 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
     budget_name="TestBudget",
     category="Cost",
     e_tag="\"1d34d016a593709\"",
-    filter={
-        "and": [
-            {
-                "dimensions": {
-                    "name": "ResourceId",
-                    "operator": "In",
-                    "values": [
+    filter=azure_nextgen.consumption.latest.BudgetFilterArgs(
+        and_=[
+            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
+                dimensions=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+                    name="ResourceId",
+                    operator="In",
+                    values=[
                         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2",
                         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1",
                     ],
-                },
-            },
-            {
-                "tags": {
-                    "name": "category",
-                    "operator": "In",
-                    "values": [
+                ),
+            ),
+            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
+                tags=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+                    name="category",
+                    operator="In",
+                    values=[
                         "Dev",
                         "Prod",
                     ],
-                },
-            },
-            {
-                "tags": {
-                    "name": "department",
-                    "operator": "In",
-                    "values": [
+                ),
+            ),
+            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
+                tags=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+                    name="department",
+                    operator="In",
+                    values=[
                         "engineering",
                         "sales",
                     ],
-                },
-            },
+                ),
+            ),
         ],
-    },
+    ),
     notifications={
-        "Actual_GreaterThan_80_Percent": {
-            "contactEmails": [
+        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.latest.NotificationArgs(
+            contact_emails=[
                 "johndoe@contoso.com",
                 "janesmith@contoso.com",
             ],
-            "contactGroups": ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup"],
-            "contactRoles": [
+            contact_groups=["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup"],
+            contact_roles=[
                 "Contributor",
                 "Reader",
             ],
-            "enabled": True,
-            "operator": "GreaterThan",
-            "threshold": 80,
-            "thresholdType": "Actual",
-        },
+            enabled=True,
+            operator="GreaterThan",
+            threshold=80,
+            threshold_type="Actual",
+        ),
     },
     scope="subscriptions/00000000-0000-0000-0000-000000000000",
     time_grain="Monthly",
-    time_period={
-        "endDate": "2018-10-31T00:00:00Z",
-        "startDate": "2017-10-01T00:00:00Z",
-    })
+    time_period=azure_nextgen.consumption.latest.BudgetTimePeriodArgs(
+        end_date="2018-10-31T00:00:00Z",
+        start_date="2017-10-01T00:00:00Z",
+    ))
 
 ```
 
@@ -280,7 +280,7 @@ const budget = new azure_nextgen.consumption.latest.Budget("budget", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">budget_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[Dict[BudgetFilter]]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Notification]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_grain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period</span><span class="p">:</span> <span class="nx">Optional[Dict[BudgetTimePeriod]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">budget_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[BudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, NotificationArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_grain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period</span><span class="p">:</span> <span class="nx">Optional[BudgetTimePeriodArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -799,7 +799,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiod">Dict[Budget<wbr>Time<wbr>Period]</a></span>
+        <span class="property-type"><a href="#budgettimeperiod">Budget<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilter">Dict[Budget<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Notification]</span>
+        <span class="property-type">Mapping[str, Notification<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
 
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_spend_python" style="color: inherit; text-decoration: inherit;">current_<wbr>spend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentspendresponse">Dict[Current<wbr>Spend<wbr>Response]</a></span>
+        <span class="property-type"><a href="#currentspendresponse">Current<wbr>Spend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
 
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
 
@@ -1355,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
 
@@ -1524,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">List[Budget<wbr>Filter<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Sequence[Budget<wbr>Filter<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
 
@@ -1534,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Dict[Budget<wbr>Comparison<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
 
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Dict[Budget<wbr>Filter<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
 
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Dict[Budget<wbr>Comparison<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 
@@ -1663,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Dict[Budget<wbr>Comparison<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
 
@@ -1673,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Dict[Budget<wbr>Comparison<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 
@@ -1782,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Dict[Budget<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
 
@@ -1792,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Dict[Budget<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 
@@ -1961,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">List[Budget<wbr>Filter<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Sequence[Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
 
@@ -1971,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Dict[Budget<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
 
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Dict[Budget<wbr>Filter<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
 
@@ -1991,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Dict[Budget<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 
@@ -2573,11 +2573,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="contactemails_python">
-<a href="#contactemails_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
+        <span id="contact_emails_python">
+<a href="#contact_emails_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 
@@ -2613,21 +2613,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contactgroups_python">
-<a href="#contactgroups_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
+        <span id="contact_groups_python">
+<a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contactroles_python">
-<a href="#contactroles_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
+        <span id="contact_roles_python">
+<a href="#contact_roles_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 
@@ -2852,11 +2852,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="contactemails_python">
-<a href="#contactemails_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
+        <span id="contact_emails_python">
+<a href="#contact_emails_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 
@@ -2892,21 +2892,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contactgroups_python">
-<a href="#contactgroups_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
+        <span id="contact_groups_python">
+<a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contactroles_python">
-<a href="#contactroles_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
+        <span id="contact_roles_python">
+<a href="#contact_roles_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 

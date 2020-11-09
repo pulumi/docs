@@ -139,21 +139,21 @@ virtual_hub_route_table_v2 = azure_nextgen.network.latest.VirtualHubRouteTableV2
     resource_group_name="rg1",
     route_table_name="virtualHubRouteTable1a",
     routes=[
-        {
-            "destinationType": "CIDR",
-            "destinations": [
+        azure_nextgen.network.latest.VirtualHubRouteV2Args(
+            destination_type="CIDR",
+            destinations=[
                 "20.10.0.0/16",
                 "20.20.0.0/16",
             ],
-            "nextHopType": "IPAddress",
-            "nextHops": ["10.0.0.68"],
-        },
-        {
-            "destinationType": "CIDR",
-            "destinations": ["0.0.0.0/0"],
-            "nextHopType": "IPAddress",
-            "nextHops": ["10.0.0.68"],
-        },
+            next_hop_type="IPAddress",
+            next_hops=["10.0.0.68"],
+        ),
+        azure_nextgen.network.latest.VirtualHubRouteV2Args(
+            destination_type="CIDR",
+            destinations=["0.0.0.0/0"],
+            next_hop_type="IPAddress",
+            next_hops=["10.0.0.68"],
+        ),
     ],
     virtual_hub_name="virtualHub1")
 
@@ -207,7 +207,7 @@ const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteT
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attached_connections</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[List[VirtualHubRouteV2]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attached_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualHubRouteV2Args]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -646,7 +646,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
 <a href="#attached_connections_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
 
@@ -676,7 +676,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2">List[Virtual<wbr>Hub<wbr>Route<wbr>V2]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 
@@ -1023,19 +1023,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nexthops_python">
-<a href="#nexthops_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1046,6 +1036,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="next_hops_python">
+<a href="#next_hops_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1222,19 +1222,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nexthops_python">
-<a href="#nexthops_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1245,6 +1235,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="next_hops_python">
+<a href="#next_hops_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

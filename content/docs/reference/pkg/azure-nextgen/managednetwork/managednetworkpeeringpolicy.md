@@ -103,15 +103,15 @@ import pulumi_azure_nextgen as azure_nextgen
 managed_network_peering_policy = azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
     managed_network_name="myManagedNetwork",
     managed_network_peering_policy_name="myHubAndSpoke",
-    properties={
-        "hub": {
-            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
-        },
-        "spokes": [{
-            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
-        }],
-        "type": "HubAndSpokeTopology",
-    },
+    properties=azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicyPropertiesArgs(
+        hub=azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
+        ),
+        spokes=[azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
+        )],
+        type="HubAndSpokeTopology",
+    ),
     resource_group_name="myResourceGroup")
 
 ```
@@ -155,7 +155,7 @@ const managedNetworkPeeringPolicy = new azure_nextgen.managednetwork.v20190601pr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNetworkPeeringPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_peering_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedNetworkPeeringPolicyProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNetworkPeeringPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_peering_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ManagedNetworkPeeringPolicyPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -544,7 +544,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Dict[Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
 
@@ -891,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
 
@@ -901,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
 
@@ -911,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
 
@@ -1170,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
 
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
 
@@ -1190,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
 

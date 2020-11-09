@@ -16,7 +16,7 @@ Sku sub resource.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Create or update the sku of Vendor resource
+### Create or update the sku of vendor resource
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -30,21 +30,15 @@ class MyStack : Stack
         {
             DeploymentMode = "PrivateEdgeZone",
             ManagedApplicationTemplate = ,
-            Preview = true,
-            SkuName = "TestSku",
-            VendorName = "TestVendor",
-            VirtualNetworkFunctionTemplate = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionTemplateArgs
+            NetworkFunctionTemplate = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionTemplateArgs
             {
-                VirutalNetworkFunctionRoleConfigurations = 
+                NetworkFunctionRoleConfigurations = 
                 {
-                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionRoleConfigurationArgs
+                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionRoleConfigurationArgs
                     {
-                        ImageReference = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.ImageReferenceArgs
+                        CustomProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.CustomProfileArgs
                         {
-                            OsType = "Linux",
-                            SasUri = "https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>",
-                            VhdName = "vhdName",
-                            VhdType = "VHD",
+                            MetadataConfigurationPath = "/var/logs/network.cfg",
                         },
                         NetworkInterfaces = 
                         {
@@ -85,15 +79,61 @@ class MyStack : Stack
                         },
                         OsProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.OsProfileArgs
                         {
-                            AdminPassword = "dummypassword",
                             AdminUsername = "dummyuser",
+                            CustomData = "base-64 encoded string of custom data",
+                            LinuxConfiguration = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.LinuxConfigurationArgs
+                            {
+                                Ssh = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SshConfigurationArgs
+                                {
+                                    PublicKeys = 
+                                    {
+                                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SshPublicKeyArgs
+                                        {
+                                            KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
+                                            Path = "home/user/.ssh/authorized_keys",
+                                        },
+                                    },
+                                },
+                            },
                         },
                         RoleName = "test",
                         RoleType = "VirtualMachine",
+                        StorageProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.StorageProfileArgs
+                        {
+                            DataDisks = 
+                            {
+                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.DataDiskArgs
+                                {
+                                    CreateOption = "Empty",
+                                    DiskSizeGB = 10,
+                                    Name = "DataDisk1",
+                                },
+                            },
+                            ImageReference = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.ImageReferenceArgs
+                            {
+                                Offer = "UbuntuServer",
+                                Publisher = "Canonical",
+                                Sku = "18.04-LTS",
+                                Version = "18.04.201804262",
+                            },
+                            OsDisk = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.OsDiskArgs
+                            {
+                                DiskSizeGB = 30,
+                                Name = "vhdName",
+                                OsType = "Linux",
+                                Vhd = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualHardDiskArgs
+                                {
+                                    Uri = "https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
+                                },
+                            },
+                        },
                         VirtualMachineSize = "Standard_D3_v2",
                     },
                 },
             },
+            Preview = true,
+            SkuName = "TestSku",
+            VendorName = "TestVendor",
         });
     }
 
@@ -109,6 +149,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -118,17 +160,11 @@ func main() {
 		_, err := hybridnetwork.NewVendorSkus(ctx, "vendorSkus", &hybridnetwork.VendorSkusArgs{
 			DeploymentMode:             pulumi.String("PrivateEdgeZone"),
 			ManagedApplicationTemplate: nil,
-			Preview:                    pulumi.Bool(true),
-			SkuName:                    pulumi.String("TestSku"),
-			VendorName:                 pulumi.String("TestVendor"),
-			VirtualNetworkFunctionTemplate: &hybridnetwork.VirtualNetworkFunctionTemplateArgs{
-				VirutalNetworkFunctionRoleConfigurations: hybridnetwork.VirtualNetworkFunctionRoleConfigurationArray{
-					&hybridnetwork.VirtualNetworkFunctionRoleConfigurationArgs{
-						ImageReference: &hybridnetwork.ImageReferenceArgs{
-							OsType:  pulumi.String("Linux"),
-							SasUri:  pulumi.String("https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>"),
-							VhdName: pulumi.String("vhdName"),
-							VhdType: pulumi.String("VHD"),
+			NetworkFunctionTemplate: &hybridnetwork.NetworkFunctionTemplateArgs{
+				NetworkFunctionRoleConfigurations: hybridnetwork.NetworkFunctionRoleConfigurationArray{
+					&hybridnetwork.NetworkFunctionRoleConfigurationArgs{
+						CustomProfile: &hybridnetwork.CustomProfileArgs{
+							MetadataConfigurationPath: pulumi.String("/var/logs/network.cfg"),
 						},
 						NetworkInterfaces: hybridnetwork.NetworkInterfaceArray{
 							&hybridnetwork.NetworkInterfaceArgs{
@@ -161,15 +197,51 @@ func main() {
 							},
 						},
 						OsProfile: &hybridnetwork.OsProfileArgs{
-							AdminPassword: pulumi.String("dummypassword"),
 							AdminUsername: pulumi.String("dummyuser"),
+							CustomData:    pulumi.String("base-64 encoded string of custom data"),
+							LinuxConfiguration: &hybridnetwork.LinuxConfigurationArgs{
+								Ssh: &hybridnetwork.SshConfigurationArgs{
+									PublicKeys: hybridnetwork.SshPublicKeyArray{
+										&hybridnetwork.SshPublicKeyArgs{
+											KeyData: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH"),
+											Path:    pulumi.String("home/user/.ssh/authorized_keys"),
+										},
+									},
+								},
+							},
 						},
-						RoleName:           pulumi.String("test"),
-						RoleType:           pulumi.String("VirtualMachine"),
+						RoleName: pulumi.String("test"),
+						RoleType: pulumi.String("VirtualMachine"),
+						StorageProfile: &hybridnetwork.StorageProfileArgs{
+							DataDisks: hybridnetwork.DataDiskArray{
+								&hybridnetwork.DataDiskArgs{
+									CreateOption: pulumi.String("Empty"),
+									DiskSizeGB:   pulumi.Int(10),
+									Name:         pulumi.String("DataDisk1"),
+								},
+							},
+							ImageReference: &hybridnetwork.ImageReferenceArgs{
+								Offer:     pulumi.String("UbuntuServer"),
+								Publisher: pulumi.String("Canonical"),
+								Sku:       pulumi.String("18.04-LTS"),
+								Version:   pulumi.String("18.04.201804262"),
+							},
+							OsDisk: &hybridnetwork.OsDiskArgs{
+								DiskSizeGB: pulumi.Int(30),
+								Name:       pulumi.String("vhdName"),
+								OsType:     pulumi.String("Linux"),
+								Vhd: &hybridnetwork.VirtualHardDiskArgs{
+									Uri: pulumi.String(fmt.Sprintf("%v%v%v", "https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw", "%", "3D")),
+								},
+							},
+						},
 						VirtualMachineSize: pulumi.String("Standard_D3_v2"),
 					},
 				},
 			},
+			Preview:    pulumi.Bool(true),
+			SkuName:    pulumi.String("TestSku"),
+			VendorName: pulumi.String("TestVendor"),
 		})
 		if err != nil {
 			return err
@@ -191,52 +263,78 @@ import pulumi_azure_nextgen as azure_nextgen
 vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus",
     deployment_mode="PrivateEdgeZone",
     managed_application_template={},
+    network_function_template=azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionTemplateArgs(
+        network_function_role_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionRoleConfigurationArgs(
+            custom_profile=azure_nextgen.hybridnetwork.v20200101preview.CustomProfileArgs(
+                metadata_configuration_path="/var/logs/network.cfg",
+            ),
+            network_interfaces=[
+                azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
+                    ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+                        gateway="",
+                        ip_address="",
+                        ip_allocation_method="Dynamic",
+                        ip_version="IPv4",
+                        subnet="",
+                    )],
+                    mac_address="",
+                    network_interface_name="nic1",
+                    vm_switch_type="Wan",
+                ),
+                azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
+                    ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+                        gateway="",
+                        ip_address="",
+                        ip_allocation_method="Dynamic",
+                        ip_version="IPv4",
+                        subnet="",
+                    )],
+                    mac_address="",
+                    network_interface_name="nic2",
+                    vm_switch_type="Management",
+                ),
+            ],
+            os_profile=azure_nextgen.hybridnetwork.v20200101preview.OsProfileArgs(
+                admin_username="dummyuser",
+                custom_data="base-64 encoded string of custom data",
+                linux_configuration=azure_nextgen.hybridnetwork.v20200101preview.LinuxConfigurationArgs(
+                    ssh=azure_nextgen.hybridnetwork.v20200101preview.SshConfigurationArgs(
+                        public_keys=[azure_nextgen.hybridnetwork.v20200101preview.SshPublicKeyArgs(
+                            key_data="ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
+                            path="home/user/.ssh/authorized_keys",
+                        )],
+                    ),
+                ),
+            ),
+            role_name="test",
+            role_type="VirtualMachine",
+            storage_profile=azure_nextgen.hybridnetwork.v20200101preview.StorageProfileArgs(
+                data_disks=[azure_nextgen.hybridnetwork.v20200101preview.DataDiskArgs(
+                    create_option="Empty",
+                    disk_size_gb=10,
+                    name="DataDisk1",
+                )],
+                image_reference=azure_nextgen.hybridnetwork.v20200101preview.ImageReferenceArgs(
+                    offer="UbuntuServer",
+                    publisher="Canonical",
+                    sku="18.04-LTS",
+                    version="18.04.201804262",
+                ),
+                os_disk=azure_nextgen.hybridnetwork.v20200101preview.OsDiskArgs(
+                    disk_size_gb=30,
+                    name="vhdName",
+                    os_type="Linux",
+                    vhd=azure_nextgen.hybridnetwork.v20200101preview.VirtualHardDiskArgs(
+                        uri="https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
+                    ),
+                ),
+            ),
+            virtual_machine_size="Standard_D3_v2",
+        )],
+    ),
     preview=True,
     sku_name="TestSku",
-    vendor_name="TestVendor",
-    virtual_network_function_template={
-        "virutalNetworkFunctionRoleConfigurations": [{
-            "imageReference": {
-                "osType": "Linux",
-                "sasUri": "https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>",
-                "vhdName": "vhdName",
-                "vhdType": "VHD",
-            },
-            "networkInterfaces": [
-                {
-                    "ipConfigurations": [{
-                        "gateway": "",
-                        "ipAddress": "",
-                        "ipAllocationMethod": "Dynamic",
-                        "ipVersion": "IPv4",
-                        "subnet": "",
-                    }],
-                    "macAddress": "",
-                    "networkInterfaceName": "nic1",
-                    "vmSwitchType": "Wan",
-                },
-                {
-                    "ipConfigurations": [{
-                        "gateway": "",
-                        "ipAddress": "",
-                        "ipAllocationMethod": "Dynamic",
-                        "ipVersion": "IPv4",
-                        "subnet": "",
-                    }],
-                    "macAddress": "",
-                    "networkInterfaceName": "nic2",
-                    "vmSwitchType": "Management",
-                },
-            ],
-            "osProfile": {
-                "adminPassword": "dummypassword",
-                "adminUsername": "dummyuser",
-            },
-            "roleName": "test",
-            "roleType": "VirtualMachine",
-            "virtualMachineSize": "Standard_D3_v2",
-        }],
-    })
+    vendor_name="TestVendor")
 
 ```
 
@@ -251,16 +349,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus", {
     deploymentMode: "PrivateEdgeZone",
     managedApplicationTemplate: {},
-    preview: true,
-    skuName: "TestSku",
-    vendorName: "TestVendor",
-    virtualNetworkFunctionTemplate: {
-        virutalNetworkFunctionRoleConfigurations: [{
-            imageReference: {
-                osType: "Linux",
-                sasUri: "https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>",
-                vhdName: "vhdName",
-                vhdType: "VHD",
+    networkFunctionTemplate: {
+        networkFunctionRoleConfigurations: [{
+            customProfile: {
+                metadataConfigurationPath: "/var/logs/network.cfg",
             },
             networkInterfaces: [
                 {
@@ -289,14 +381,46 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
                 },
             ],
             osProfile: {
-                adminPassword: "dummypassword",
                 adminUsername: "dummyuser",
+                customData: "base-64 encoded string of custom data",
+                linuxConfiguration: {
+                    ssh: {
+                        publicKeys: [{
+                            keyData: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
+                            path: "home/user/.ssh/authorized_keys",
+                        }],
+                    },
+                },
             },
             roleName: "test",
             roleType: "VirtualMachine",
+            storageProfile: {
+                dataDisks: [{
+                    createOption: "Empty",
+                    diskSizeGB: 10,
+                    name: "DataDisk1",
+                }],
+                imageReference: {
+                    offer: "UbuntuServer",
+                    publisher: "Canonical",
+                    sku: "18.04-LTS",
+                    version: "18.04.201804262",
+                },
+                osDisk: {
+                    diskSizeGB: 30,
+                    name: "vhdName",
+                    osType: "Linux",
+                    vhd: {
+                        uri: `https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D`,
+                    },
+                },
+            },
             virtualMachineSize: "Standard_D3_v2",
         }],
     },
+    preview: true,
+    skuName: "TestSku",
+    vendorName: "TestVendor",
 });
 
 ```
@@ -315,7 +439,7 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VendorSkus</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_application_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">managed_application_template</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vendor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_function_template</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkFunctionTemplate]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VendorSkus</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_application_parameters</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">managed_application_template</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">network_function_template</span><span class="p">:</span> <span class="nx">Optional[NetworkFunctionTemplateArgs]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -515,17 +639,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Sku deployment mode.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -535,7 +649,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -546,6 +660,16 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctiontemplate_csharp">
+<a href="#networkfunctiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctiontemplate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -565,27 +689,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Sku type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkfunctiontemplate_csharp">
-<a href="#virtualnetworkfunctiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Function<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctiontemplate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Function<wbr>Template<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The template definition of the virtual network function.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -622,17 +726,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sku deployment mode.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -642,7 +736,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -653,6 +747,16 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctiontemplate_go">
+<a href="#networkfunctiontemplate_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -672,27 +776,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sku type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkfunctiontemplate_go">
-<a href="#virtualnetworkfunctiontemplate_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Function<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctiontemplate">Virtual<wbr>Network<wbr>Function<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}The template definition of the virtual network function.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -729,17 +813,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sku deployment mode.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -749,7 +823,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -760,6 +834,16 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctiontemplate_nodejs">
+<a href="#networkfunctiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -779,27 +863,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sku type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkfunctiontemplate_nodejs">
-<a href="#virtualnetworkfunctiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Function<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctiontemplate">Virtual<wbr>Network<wbr>Function<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}The template definition of the virtual network function.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -836,17 +900,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Sku deployment mode.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -854,9 +908,9 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managed_application_parameters_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>application_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -864,9 +918,19 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managed_application_template_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>application_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_function_template_python">
+<a href="#network_function_template_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -886,27 +950,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Sku type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtual_network_function_template_python">
-<a href="#virtual_network_function_template_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>function_<wbr>template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctiontemplate">Dict[Virtual<wbr>Network<wbr>Function<wbr>Template]</a></span>
-    </dt>
-    <dd>{{% md %}}The template definition of the virtual network function.{{% /md %}}</dd>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -944,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -964,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -991,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1011,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1038,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1058,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1085,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1105,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1123,6 +1167,482 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+<h4 id="customprofile">Custom<wbr>Profile</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadataconfigurationpath_csharp">
+<a href="#metadataconfigurationpath_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadataconfigurationpath_go">
+<a href="#metadataconfigurationpath_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadataconfigurationpath_nodejs">
+<a href="#metadataconfigurationpath_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Configuration<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_configuration_path_python">
+<a href="#metadata_configuration_path_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>configuration_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="customprofileresponse">Custom<wbr>Profile<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadataconfigurationpath_csharp">
+<a href="#metadataconfigurationpath_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadataconfigurationpath_go">
+<a href="#metadataconfigurationpath_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadataconfigurationpath_nodejs">
+<a href="#metadataconfigurationpath_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Configuration<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_configuration_path_python">
+<a href="#metadata_configuration_path_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>configuration_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="datadisk">Data<wbr>Disk</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createoption_csharp">
+<a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createoption_go">
+<a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createoption_nodejs">
+<a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_option_python">
+<a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="datadiskresponse">Data<wbr>Disk<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createoption_csharp">
+<a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createoption_go">
+<a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createoption_nodejs">
+<a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_option_python">
+<a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="imagereference">Image<wbr>Reference</h4>
 
 
@@ -1136,43 +1656,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="exactversion_csharp">
+<a href="#exactversion_csharp" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_csharp">
-<a href="#sasuri_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_csharp">
-<a href="#vhdname_csharp" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Name</a>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_csharp">
-<a href="#vhdtype_csharp" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Type</a>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1183,43 +1713,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="exactversion_go">
+<a href="#exactversion_go" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_go">
-<a href="#sasuri_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_go">
-<a href="#vhdname_go" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Name</a>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_go">
-<a href="#vhdtype_go" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Type</a>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1230,43 +1770,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="exactversion_nodejs">
+<a href="#exactversion_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_nodejs">
-<a href="#sasuri_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_nodejs">
-<a href="#vhdname_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Name</a>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_nodejs">
-<a href="#vhdtype_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Type</a>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1277,43 +1827,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+        <span id="exact_version_python">
+<a href="#exact_version_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sas_uri_python">
-<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_python">
-<a href="#vhdname_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Name</a>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_python">
-<a href="#vhdtype_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Type</a>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1335,43 +1895,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="exactversion_csharp">
+<a href="#exactversion_csharp" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_csharp">
-<a href="#sasuri_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_csharp">
-<a href="#vhdname_csharp" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Name</a>
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_csharp">
-<a href="#vhdtype_csharp" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Type</a>
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1382,43 +1952,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="exactversion_go">
+<a href="#exactversion_go" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_go">
-<a href="#sasuri_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_go">
-<a href="#vhdname_go" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Name</a>
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_go">
-<a href="#vhdtype_go" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Type</a>
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1429,43 +2009,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="exactversion_nodejs">
+<a href="#exactversion_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasuri_nodejs">
-<a href="#sasuri_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_nodejs">
-<a href="#vhdname_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Name</a>
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_nodejs">
-<a href="#vhdtype_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Type</a>
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1476,43 +2066,1167 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+        <span id="exact_version_python">
+<a href="#exact_version_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sas_uri_python">
-<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VHD SAS URI.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdname_python">
-<a href="#vhdname_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Name</a>
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdtype_python">
-<a href="#vhdtype_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Type</a>
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VHD type.{{% /md %}}</dd>
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="linuxconfiguration">Linux<wbr>Configuration</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_csharp">
+<a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_go">
+<a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_nodejs">
+<a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_python">
+<a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_csharp">
+<a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_go">
+<a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_nodejs">
+<a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_python">
+<a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="networkfunctionroleconfiguration">Network<wbr>Function<wbr>Role<wbr>Configuration</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customprofile_csharp">
+<a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osprofile_csharp">
+<a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roletype_csharp">
+<a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_csharp">
+<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdataparameters_csharp">
+<a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdatatemplate_csharp">
+<a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachinesize_csharp">
+<a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customprofile_go">
+<a href="#customprofile_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofile">Custom<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterface">[]Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osprofile_go">
+<a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roletype_go">
+<a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_go">
+<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdataparameters_go">
+<a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdatatemplate_go">
+<a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachinesize_go">
+<a href="#virtualmachinesize_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customprofile_nodejs">
+<a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofile">Custom<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osprofile_nodejs">
+<a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roletype_nodejs">
+<a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_nodejs">
+<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdataparameters_nodejs">
+<a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdatatemplate_nodejs">
+<a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachinesize_nodejs">
+<a href="#virtualmachinesize_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_profile_python">
+<a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofile">Custom<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterface">Sequence[Network<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_profile_python">
+<a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofile">Os<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="role_type_python">
+<a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_profile_python">
+<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_data_parameters_python">
+<a href="#user_data_parameters_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_data_template_python">
+<a href="#user_data_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_size_python">
+<a href="#virtual_machine_size_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="networkfunctionroleconfigurationresponse">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customprofile_csharp">
+<a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osprofile_csharp">
+<a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roletype_csharp">
+<a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_csharp">
+<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdataparameters_csharp">
+<a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdatatemplate_csharp">
+<a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachinesize_csharp">
+<a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customprofile_go">
+<a href="#customprofile_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">[]Network<wbr>Interface<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osprofile_go">
+<a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roletype_go">
+<a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_go">
+<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdataparameters_go">
+<a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdatatemplate_go">
+<a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachinesize_go">
+<a href="#virtualmachinesize_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customprofile_nodejs">
+<a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osprofile_nodejs">
+<a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roletype_nodejs">
+<a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_nodejs">
+<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdataparameters_nodejs">
+<a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userdatatemplate_nodejs">
+<a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachinesize_nodejs">
+<a href="#virtualmachinesize_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_profile_python">
+<a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_profile_python">
+<a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="role_type_python">
+<a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Role type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_profile_python">
+<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_data_parameters_python">
+<a href="#user_data_parameters_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_data_template_python">
+<a href="#user_data_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_size_python">
+<a href="#virtual_machine_size_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="networkfunctiontemplate">Network<wbr>Function<wbr>Template</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctionroleconfigurations_csharp">
+<a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctionroleconfigurations_go">
+<a href="#networkfunctionroleconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">[]Network<wbr>Function<wbr>Role<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctionroleconfigurations_nodejs">
+<a href="#networkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Role<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">Network<wbr>Function<wbr>Role<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_function_role_configurations_python">
+<a href="#network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>role_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="networkfunctiontemplateresponse">Network<wbr>Function<wbr>Template<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctionroleconfigurations_csharp">
+<a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctionroleconfigurations_go">
+<a href="#networkfunctionroleconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">[]Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfunctionroleconfigurations_nodejs">
+<a href="#networkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Role<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_function_role_configurations_python">
+<a href="#network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>role_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1570,7 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1617,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1664,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1679,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">List[Network<wbr>Interface<wbr>IPConfiguration]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
 
@@ -1705,13 +3419,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmswitchtype_python">
-<a href="#vmswitchtype_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Switch<wbr>Type</a>
+        <span id="vm_switch_type_python">
+<a href="#vm_switch_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>switch_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1938,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
 
@@ -1954,8 +3668,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipallocationmethod_python">
-<a href="#ipallocationmethod_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Method</a>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_allocation_method_python">
+<a href="#ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1964,23 +3688,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipversion_python">
-<a href="#ipversion_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ip_address_python">
-<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2217,7 +3931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
 
@@ -2233,8 +3947,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipallocationmethod_python">
-<a href="#ipallocationmethod_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Method</a>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_allocation_method_python">
+<a href="#ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2243,23 +3967,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipversion_python">
-<a href="#ipversion_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ip_address_python">
-<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2327,7 +4041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2374,7 +4088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2421,7 +4135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2436,7 +4150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
 
@@ -2462,13 +4176,411 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmswitchtype_python">
-<a href="#vmswitchtype_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Switch<wbr>Type</a>
+        <span id="vm_switch_type_python">
+<a href="#vm_switch_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>switch_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of VM switch{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="osdisk">Os<wbr>Disk</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_csharp">
+<a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_go">
+<a href="#vhd_go" style="color: inherit; text-decoration: inherit;">Vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_nodejs">
+<a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_python">
+<a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="osdiskresponse">Os<wbr>Disk<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_csharp">
+<a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_go">
+<a href="#vhd_go" style="color: inherit; text-decoration: inherit;">Vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_nodejs">
+<a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vhd_python">
+<a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2490,16 +4602,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminpassword_csharp">
-<a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
 </span> 
@@ -2510,13 +4612,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublickey_csharp">
-<a href="#sshpublickey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
+        <span id="customdata_csharp">
+<a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdatarequired_csharp">
+<a href="#customdatarequired_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxconfiguration_csharp">
+<a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2524,16 +4646,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="adminpassword_go">
-<a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2547,13 +4659,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublickey_go">
-<a href="#sshpublickey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
+        <span id="customdata_go">
+<a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdatarequired_go">
+<a href="#customdatarequired_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxconfiguration_go">
+<a href="#linuxconfiguration_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2561,16 +4693,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="adminpassword_nodejs">
-<a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2584,13 +4706,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublickey_nodejs">
-<a href="#sshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Key</a>
+        <span id="customdata_nodejs">
+<a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdatarequired_nodejs">
+<a href="#customdatarequired_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxconfiguration_nodejs">
+<a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2598,16 +4740,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="admin_password_python">
-<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2621,13 +4753,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssh_public_key_python">
-<a href="#ssh_public_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>key</a>
+        <span id="custom_data_python">
+<a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_data_required_python">
+<a href="#custom_data_required_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linux_configuration_python">
+<a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2649,16 +4801,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminpassword_csharp">
-<a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
 </span> 
@@ -2669,13 +4811,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublickey_csharp">
-<a href="#sshpublickey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
+        <span id="customdata_csharp">
+<a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdatarequired_csharp">
+<a href="#customdatarequired_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxconfiguration_csharp">
+<a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2683,16 +4845,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="adminpassword_go">
-<a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2706,13 +4858,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublickey_go">
-<a href="#sshpublickey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
+        <span id="customdata_go">
+<a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdatarequired_go">
+<a href="#customdatarequired_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxconfiguration_go">
+<a href="#linuxconfiguration_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2720,16 +4892,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="adminpassword_nodejs">
-<a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2743,13 +4905,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublickey_nodejs">
-<a href="#sshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Key</a>
+        <span id="customdata_nodejs">
+<a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdatarequired_nodejs">
+<a href="#customdatarequired_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxconfiguration_nodejs">
+<a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2757,16 +4939,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="admin_password_python">
-<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2780,13 +4952,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssh_public_key_python">
-<a href="#ssh_public_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>key</a>
+        <span id="custom_data_python">
+<a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_data_required_python">
+<a href="#custom_data_required_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linux_configuration_python">
+<a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2795,7 +4987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="virtualnetworkfunctionroleconfiguration">Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration</h4>
+<h4 id="sshconfiguration">Ssh<wbr>Configuration</h4>
 
 
 
@@ -2805,6 +4997,412 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickeys_csharp">
+<a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickeys_go">
+<a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickey">[]Ssh<wbr>Public<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickeys_nodejs">
+<a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickey">Ssh<wbr>Public<wbr>Key[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_keys_python">
+<a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickey">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickeys_csharp">
+<a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickeys_go">
+<a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">[]Ssh<wbr>Public<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publickeys_nodejs">
+<a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_keys_python">
+<a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sshpublickey">Ssh<wbr>Public<wbr>Key</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keydata_csharp">
+<a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keydata_go">
+<a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keydata_nodejs">
+<a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keydata_csharp">
+<a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keydata_go">
+<a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keydata_nodejs">
+<a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="storageprofile">Storage<wbr>Profile</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadisks_csharp">
+<a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2814,77 +5412,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkinterfaces_csharp">
-<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+        <span id="osdisk_csharp">
+<a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#osdisk">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osprofile_csharp">
-<a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rolename_csharp">
-<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="roletype_csharp">
-<a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_csharp">
-<a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_csharp">
-<a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_csharp">
-<a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2895,83 +5433,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="datadisks_go">
+<a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadisk">[]Data<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="imagereference_go">
 <a href="#imagereference_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkinterfaces_go">
-<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+        <span id="osdisk_go">
+<a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">[]Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#osdisk">Os<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osprofile_go">
-<a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rolename_go">
-<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="roletype_go">
-<a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_go">
-<a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_go">
-<a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_go">
-<a href="#virtualmachinesize_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2982,83 +5470,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="datadisks_nodejs">
+<a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadisk">Data<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="imagereference_nodejs">
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkinterfaces_nodejs">
-<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+        <span id="osdisk_nodejs">
+<a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#osdisk">Os<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osprofile_nodejs">
-<a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rolename_nodejs">
-<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="roletype_nodejs">
-<a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_nodejs">
-<a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_nodejs">
-<a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_nodejs">
-<a href="#virtualmachinesize_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3069,83 +5507,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="data_disks_python">
+<a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadisk">Sequence[Data<wbr>Disk<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="image_reference_python">
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Dict[Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="network_interfaces_python">
-<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+        <span id="os_disk_python">
+<a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">List[Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#osdisk">Os<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="os_profile_python">
-<a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Dict[Os<wbr>Profile]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="role_name_python">
-<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="role_type_python">
-<a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_python">
-<a href="#userdataparameters_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_python">
-<a href="#userdatatemplate_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_python">
-<a href="#virtualmachinesize_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3154,7 +5542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="virtualnetworkfunctionroleconfigurationresponse">Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response</h4>
+<h4 id="storageprofileresponse">Storage<wbr>Profile<wbr>Response</h4>
 
 
 
@@ -3164,6 +5552,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadisks_csharp">
+<a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3173,77 +5571,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkinterfaces_csharp">
-<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+        <span id="osdisk_csharp">
+<a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osprofile_csharp">
-<a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rolename_csharp">
-<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="roletype_csharp">
-<a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_csharp">
-<a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_csharp">
-<a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_csharp">
-<a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3251,6 +5589,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadisks_go">
+<a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskresponse">[]Data<wbr>Disk<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3260,77 +5608,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkinterfaces_go">
-<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+        <span id="osdisk_go">
+<a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">[]Network<wbr>Interface<wbr>Response</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osprofile_go">
-<a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rolename_go">
-<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="roletype_go">
-<a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_go">
-<a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_go">
-<a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_go">
-<a href="#virtualmachinesize_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3338,6 +5626,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadisks_nodejs">
+<a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskresponse">Data<wbr>Disk<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3347,77 +5645,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkinterfaces_nodejs">
-<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+        <span id="osdisk_nodejs">
+<a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osprofile_nodejs">
-<a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rolename_nodejs">
-<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="roletype_nodejs">
-<a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_nodejs">
-<a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_nodejs">
-<a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_nodejs">
-<a href="#virtualmachinesize_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3425,6 +5663,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_disks_python">
+<a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3432,79 +5680,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Dict[Image<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition of image reference.{{% /md %}}</dd>
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="network_interfaces_python">
-<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+        <span id="os_disk_python">
+<a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List[Network<wbr>Interface<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="os_profile_python">
-<a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Dict[Os<wbr>Profile<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of virtual network function.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="role_name_python">
-<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network function role.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="role_type_python">
-<a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdataparameters_python">
-<a href="#userdataparameters_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userdatatemplate_python">
-<a href="#userdatatemplate_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinesize_python">
-<a href="#virtualmachinesize_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3513,7 +5701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="virtualnetworkfunctiontemplate">Virtual<wbr>Network<wbr>Function<wbr>Template</h4>
+<h4 id="virtualharddisk">Virtual<wbr>Hard<wbr>Disk</h4>
 
 
 
@@ -3526,13 +5714,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutalnetworkfunctionroleconfigurations_csharp">
-<a href="#virutalnetworkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Virutal<wbr>Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3543,13 +5731,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutalnetworkfunctionroleconfigurations_go">
-<a href="#virutalnetworkfunctionroleconfigurations_go" style="color: inherit; text-decoration: inherit;">Virutal<wbr>Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfiguration">[]Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3560,13 +5748,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutalnetworkfunctionroleconfigurations_nodejs">
-<a href="#virutalnetworkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">virutal<wbr>Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfiguration">Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3577,13 +5765,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutal_network_function_role_configurations_python">
-<a href="#virutal_network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">virutal_<wbr>network_<wbr>function_<wbr>role_<wbr>configurations</a>
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfiguration">List[Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3592,7 +5780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="virtualnetworkfunctiontemplateresponse">Virtual<wbr>Network<wbr>Function<wbr>Template<wbr>Response</h4>
+<h4 id="virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</h4>
 
 
 
@@ -3605,13 +5793,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutalnetworkfunctionroleconfigurations_csharp">
-<a href="#virutalnetworkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Virutal<wbr>Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3622,13 +5810,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutalnetworkfunctionroleconfigurations_go">
-<a href="#virutalnetworkfunctionroleconfigurations_go" style="color: inherit; text-decoration: inherit;">Virutal<wbr>Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfigurationresponse">[]Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3639,13 +5827,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutalnetworkfunctionroleconfigurations_nodejs">
-<a href="#virutalnetworkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">virutal<wbr>Network<wbr>Function<wbr>Role<wbr>Configurations</a>
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfigurationresponse">Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3656,13 +5844,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virutal_network_function_role_configurations_python">
-<a href="#virutal_network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">virutal_<wbr>network_<wbr>function_<wbr>role_<wbr>configurations</a>
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkfunctionroleconfigurationresponse">List[Virtual<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An array of virtual network function role definitions.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

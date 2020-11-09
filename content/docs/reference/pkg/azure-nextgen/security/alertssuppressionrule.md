@@ -111,16 +111,16 @@ alerts_suppression_rule = azure_nextgen.security.v20190101preview.AlertsSuppress
     expiration_date_utc="2019-12-01T19:50:47.083633Z",
     reason="FalsePositive",
     state="Enabled",
-    suppression_alerts_scope={
-        "allOf": [
-            {
-                "field": "entities.ip.address",
-            },
-            {
-                "field": "entities.process.commandline",
-            },
+    suppression_alerts_scope=azure_nextgen.security.v20190101preview.SuppressionAlertsScopeArgs(
+        all_of=[
+            azure_nextgen.security.v20190101preview.ScopeElementArgs(
+                field="entities.ip.address",
+            ),
+            azure_nextgen.security.v20190101preview.ScopeElementArgs(
+                field="entities.process.commandline",
+            ),
         ],
-    })
+    ))
 
 ```
 
@@ -167,7 +167,7 @@ const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.Alerts
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertsSuppressionRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alerts_suppression_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_alerts_scope</span><span class="p">:</span> <span class="nx">Optional[Dict[SuppressionAlertsScope]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertsSuppressionRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alerts_suppression_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_alerts_scope</span><span class="p">:</span> <span class="nx">Optional[SuppressionAlertsScopeArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -636,7 +636,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
 <a href="#suppression_alerts_scope_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>alerts_<wbr>scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionalertsscope">Dict[Suppression<wbr>Alerts<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#suppressionalertsscope">Suppression<wbr>Alerts<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
 
@@ -1081,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelement">List[Scope<wbr>Element]</a></span>
+        <span class="property-type"><a href="#scopeelement">Sequence[Scope<wbr>Element<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
 
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelementresponse">List[Scope<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scopeelementresponse">Sequence[Scope<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
 

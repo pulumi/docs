@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#connector_properties_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The connector properties.{{% /md %}}</dd>
 

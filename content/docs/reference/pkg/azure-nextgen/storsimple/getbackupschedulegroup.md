@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Dict[Time<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The start time. When this field is specified we will generate Default GrandFather Father Son Backup Schedules.{{% /md %}}</dd>
 

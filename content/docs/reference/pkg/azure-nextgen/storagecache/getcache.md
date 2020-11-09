@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachehealthresponse">Dict[Cache<wbr>Health<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cachehealthresponse">Cache<wbr>Health<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Health of the Cache.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#mount_addresses_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of IP addresses that can be used by clients mounting this Cache.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettingsresponse">Dict[Cache<wbr>Encryption<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cacheencryptionsettingsresponse">Cache<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentityresponse">Dict[Cache<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cacheidentityresponse">Cache<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd>
 
@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#network_settings_python" style="color: inherit; text-decoration: inherit;">network_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettingsresponse">Dict[Cache<wbr>Network<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cachenetworksettingsresponse">Cache<wbr>Network<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettingsresponse">Dict[Cache<wbr>Security<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cachesecuritysettingsresponse">Cache<wbr>Security<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheresponsesku">Dict[Cache<wbr>Response<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#cacheresponsesku">Cache<wbr>Response<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}ARM tags as name/value pairs.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#upgrade_status_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheupgradestatusresponse">Dict[Cache<wbr>Upgrade<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cacheupgradestatusresponse">Cache<wbr>Upgrade<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upgrade status of the Cache.{{% /md %}}</dd>
 
@@ -874,7 +874,7 @@ The following output properties are available:
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd>
 
@@ -1261,7 +1261,7 @@ The following output properties are available:
 <a href="#utility_addresses_python" style="color: inherit; text-decoration: inherit;">utility_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd>
 
@@ -1787,7 +1787,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd>
 

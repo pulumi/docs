@@ -136,31 +136,31 @@ import pulumi_azure_nextgen as azure_nextgen
 job = azure_nextgen.importexport.latest.Job("job",
     job_name="myExportJob",
     location="West US",
-    properties={
-        "backupDriveManifest": True,
-        "diagnosticsPath": "waimportexport",
-        "export": {
-            "blobPathPrefix": ["/"],
-        },
-        "jobType": "Export",
-        "logLevel": "Verbose",
-        "returnAddress": {
-            "city": "Redmond",
-            "countryOrRegion": "USA",
-            "email": "Test@contoso.com",
-            "phone": "4250000000",
-            "postalCode": "98007",
-            "recipientName": "Test",
-            "stateOrProvince": "wa",
-            "streetAddress1": "Street1",
-            "streetAddress2": "street2",
-        },
-        "returnShipping": {
-            "carrierAccountNumber": "989ffff",
-            "carrierName": "FedEx",
-        },
-        "storageAccountId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
-    },
+    properties=azure_nextgen.importexport.latest.JobDetailsArgs(
+        backup_drive_manifest=True,
+        diagnostics_path="waimportexport",
+        export=azure_nextgen.importexport.latest.ExportArgs(
+            blob_path_prefix=["/"],
+        ),
+        job_type="Export",
+        log_level="Verbose",
+        return_address=azure_nextgen.importexport.latest.ReturnAddressArgs(
+            city="Redmond",
+            country_or_region="USA",
+            email="Test@contoso.com",
+            phone="4250000000",
+            postal_code="98007",
+            recipient_name="Test",
+            state_or_province="wa",
+            street_address1="Street1",
+            street_address2="street2",
+        ),
+        return_shipping=azure_nextgen.importexport.latest.ReturnShippingArgs(
+            carrier_account_number="989ffff",
+            carrier_name="FedEx",
+        ),
+        storage_account_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+    ),
     resource_group_name="myResourceGroup")
 
 ```
@@ -336,35 +336,35 @@ import pulumi_azure_nextgen as azure_nextgen
 job = azure_nextgen.importexport.latest.Job("job",
     job_name="myJob",
     location="West US",
-    properties={
-        "backupDriveManifest": True,
-        "diagnosticsPath": "waimportexport",
-        "driveList": [{
-            "bitLockerKey": "238810-662376-448998-450120-652806-203390-606320-483076",
-            "driveHeaderHash": "0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
-            "driveId": "9CA995BB",
-            "manifestFile": "\\8a0c23f7-14b7-470a-9633-fcd46590a1bc.manifest",
-            "manifestHash": "4228EC5D8E048CB9B515338C789314BE8D0B2FDBC7C7A0308E1C826242CDE74E",
-        }],
-        "jobType": "Import",
-        "logLevel": "Verbose",
-        "returnAddress": {
-            "city": "Redmond",
-            "countryOrRegion": "USA",
-            "email": "Test@contoso.com",
-            "phone": "4250000000",
-            "postalCode": "98007",
-            "recipientName": "Test",
-            "stateOrProvince": "wa",
-            "streetAddress1": "Street1",
-            "streetAddress2": "street2",
-        },
-        "returnShipping": {
-            "carrierAccountNumber": "989ffff",
-            "carrierName": "FedEx",
-        },
-        "storageAccountId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
-    },
+    properties=azure_nextgen.importexport.latest.JobDetailsArgs(
+        backup_drive_manifest=True,
+        diagnostics_path="waimportexport",
+        drive_list=[azure_nextgen.importexport.latest.DriveStatusArgs(
+            bit_locker_key="238810-662376-448998-450120-652806-203390-606320-483076",
+            drive_header_hash="0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
+            drive_id="9CA995BB",
+            manifest_file="\\8a0c23f7-14b7-470a-9633-fcd46590a1bc.manifest",
+            manifest_hash="4228EC5D8E048CB9B515338C789314BE8D0B2FDBC7C7A0308E1C826242CDE74E",
+        )],
+        job_type="Import",
+        log_level="Verbose",
+        return_address=azure_nextgen.importexport.latest.ReturnAddressArgs(
+            city="Redmond",
+            country_or_region="USA",
+            email="Test@contoso.com",
+            phone="4250000000",
+            postal_code="98007",
+            recipient_name="Test",
+            state_or_province="wa",
+            street_address1="Street1",
+            street_address2="street2",
+        ),
+        return_shipping=azure_nextgen.importexport.latest.ReturnShippingArgs(
+            carrier_account_number="989ffff",
+            carrier_name="FedEx",
+        ),
+        storage_account_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+    ),
     resource_group_name="myResourceGroup")
 
 ```
@@ -428,7 +428,7 @@ const job = new azure_nextgen.importexport.latest.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[JobDetails]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[JobDetailsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -807,7 +807,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdetails">Dict[Job<wbr>Details]</a></span>
+        <span class="property-type"><a href="#jobdetails">Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd>
 
@@ -817,7 +817,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
 
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitydetailsresponse">Dict[Identity<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identitydetailsresponse">Identity<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd>
 
@@ -1430,8 +1430,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitlockerkey_python">
-<a href="#bitlockerkey_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
+        <span id="bit_locker_key_python">
+<a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1440,8 +1440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bytessucceeded_python">
-<a href="#bytessucceeded_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
+        <span id="bytes_succeeded_python">
+<a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1450,8 +1450,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="copystatus_python">
-<a href="#copystatus_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Status</a>
+        <span id="copy_status_python">
+<a href="#copy_status_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1460,8 +1460,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveheaderhash_python">
-<a href="#driveheaderhash_python" style="color: inherit; text-decoration: inherit;">drive<wbr>Header<wbr>Hash</a>
+        <span id="drive_header_hash_python">
+<a href="#drive_header_hash_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>header_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1470,8 +1470,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveid_python">
-<a href="#driveid_python" style="color: inherit; text-decoration: inherit;">drive<wbr>Id</a>
+        <span id="drive_id_python">
+<a href="#drive_id_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1480,8 +1480,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorloguri_python">
-<a href="#errorloguri_python" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Uri</a>
+        <span id="error_log_uri_python">
+<a href="#error_log_uri_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1490,8 +1490,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifestfile_python">
-<a href="#manifestfile_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>File</a>
+        <span id="manifest_file_python">
+<a href="#manifest_file_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1500,8 +1500,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifesthash_python">
-<a href="#manifesthash_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>Hash</a>
+        <span id="manifest_hash_python">
+<a href="#manifest_hash_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1510,8 +1510,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifesturi_python">
-<a href="#manifesturi_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>Uri</a>
+        <span id="manifest_uri_python">
+<a href="#manifest_uri_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1540,8 +1540,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="verboseloguri_python">
-<a href="#verboseloguri_python" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Uri</a>
+        <span id="verbose_log_uri_python">
+<a href="#verbose_log_uri_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1949,8 +1949,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitlockerkey_python">
-<a href="#bitlockerkey_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
+        <span id="bit_locker_key_python">
+<a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1959,8 +1959,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bytessucceeded_python">
-<a href="#bytessucceeded_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
+        <span id="bytes_succeeded_python">
+<a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1969,8 +1969,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="copystatus_python">
-<a href="#copystatus_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Status</a>
+        <span id="copy_status_python">
+<a href="#copy_status_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1979,8 +1979,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveheaderhash_python">
-<a href="#driveheaderhash_python" style="color: inherit; text-decoration: inherit;">drive<wbr>Header<wbr>Hash</a>
+        <span id="drive_header_hash_python">
+<a href="#drive_header_hash_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>header_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1989,8 +1989,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveid_python">
-<a href="#driveid_python" style="color: inherit; text-decoration: inherit;">drive<wbr>Id</a>
+        <span id="drive_id_python">
+<a href="#drive_id_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1999,8 +1999,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorloguri_python">
-<a href="#errorloguri_python" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Uri</a>
+        <span id="error_log_uri_python">
+<a href="#error_log_uri_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2009,8 +2009,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifestfile_python">
-<a href="#manifestfile_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>File</a>
+        <span id="manifest_file_python">
+<a href="#manifest_file_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2019,8 +2019,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifesthash_python">
-<a href="#manifesthash_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>Hash</a>
+        <span id="manifest_hash_python">
+<a href="#manifest_hash_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2029,8 +2029,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifesturi_python">
-<a href="#manifesturi_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>Uri</a>
+        <span id="manifest_uri_python">
+<a href="#manifest_uri_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2059,8 +2059,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="verboseloguri_python">
-<a href="#verboseloguri_python" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Uri</a>
+        <span id="verbose_log_uri_python">
+<a href="#verbose_log_uri_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2530,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
 
@@ -2540,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
 
@@ -2689,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
 
@@ -2699,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_path_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
 
@@ -3467,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformation">Dict[Package<wbr>Information]</a></span>
+        <span class="property-type"><a href="#packageinformation">Package<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
 
@@ -3487,7 +3487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatus">List[Drive<wbr>Status]</a></span>
+        <span class="property-type"><a href="#drivestatus">Sequence[Drive<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
 
@@ -3497,7 +3497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetails">Dict[Encryption<wbr>Key<wbr>Details]</a></span>
+        <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
 
@@ -3507,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#export">Dict[Export]</a></span>
+        <span class="property-type"><a href="#export">Export<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
 
@@ -3567,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddress">Dict[Return<wbr>Address]</a></span>
+        <span class="property-type"><a href="#returnaddress">Return<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
 
@@ -3577,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformation">Dict[Package<wbr>Information]</a></span>
+        <span class="property-type"><a href="#packageinformation">Package<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
 
@@ -3587,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshipping">Dict[Return<wbr>Shipping]</a></span>
+        <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
 
@@ -3597,7 +3597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformation">Dict[Shipping<wbr>Information]</a></span>
+        <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
 
@@ -4226,7 +4226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Dict[Package<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
 
@@ -4246,7 +4246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">List[Drive<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">Sequence[Drive<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
 
@@ -4256,7 +4256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Dict[Encryption<wbr>Key<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
 
@@ -4266,7 +4266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Dict[Export<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportresponse">Export<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
 
@@ -4326,7 +4326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Dict[Return<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
 
@@ -4336,7 +4336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Dict[Package<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
 
@@ -4346,7 +4346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Dict[Return<wbr>Shipping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
 
@@ -4356,7 +4356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Dict[Shipping<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
 

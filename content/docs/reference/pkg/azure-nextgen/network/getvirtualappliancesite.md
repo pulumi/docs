@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#o365_policy_python" style="color: inherit; text-decoration: inherit;">o365_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#office365policypropertiesresponse">Dict[Office365Policy<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#office365policypropertiesresponse">Office365Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office 365 Policy.{{% /md %}}</dd>
 
@@ -713,7 +713,7 @@ The following output properties are available:
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Dict[Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd>
 

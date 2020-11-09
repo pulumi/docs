@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringserviceskuresponse">Dict[Peering<wbr>Service<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#peeringserviceskuresponse">Peering<wbr>Service<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the type of the peering service.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 

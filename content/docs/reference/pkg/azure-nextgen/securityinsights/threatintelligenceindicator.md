@@ -197,7 +197,7 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[List[ThreatIntelligenceGranularMarkingModel]]</span> = None<span class="p">, </span><span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[List[ThreatIntelligenceKillChainPhase]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceGranularMarkingModelArgs]]</span> = None<span class="p">, </span><span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceKillChainPhaseArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1326,7 +1326,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#external_references_python" style="color: inherit; text-decoration: inherit;">external_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}External References{{% /md %}}</dd>
 
@@ -1336,7 +1336,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#granular_markings_python" style="color: inherit; text-decoration: inherit;">granular_<wbr>markings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">List[Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model]</a></span>
+        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Sequence[Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Granular Markings{{% /md %}}</dd>
 
@@ -1346,7 +1346,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#indicator_types_python" style="color: inherit; text-decoration: inherit;">indicator_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd>
 
@@ -1356,7 +1356,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#kill_chain_phases_python" style="color: inherit; text-decoration: inherit;">kill_<wbr>chain_<wbr>phases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencekillchainphase">List[Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase]</a></span>
+        <span class="property-type"><a href="#threatintelligencekillchainphase">Sequence[Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kill chain phases{{% /md %}}</dd>
 
@@ -1366,7 +1366,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
 
@@ -1436,7 +1436,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#threat_intelligence_tags_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intelligence_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of tags{{% /md %}}</dd>
 
@@ -1446,7 +1446,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#threat_types_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Threat types{{% /md %}}</dd>
 
@@ -1739,8 +1739,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="markingref_python">
-<a href="#markingref_python" style="color: inherit; text-decoration: inherit;">marking<wbr>Ref</a>
+        <span id="marking_ref_python">
+<a href="#marking_ref_python" style="color: inherit; text-decoration: inherit;">marking_<wbr>ref</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1753,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd>
 
@@ -1858,8 +1858,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="killchainname_python">
-<a href="#killchainname_python" style="color: inherit; text-decoration: inherit;">kill<wbr>Chain<wbr>Name</a>
+        <span id="kill_chain_name_python">
+<a href="#kill_chain_name_python" style="color: inherit; text-decoration: inherit;">kill_<wbr>chain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1868,8 +1868,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="phasename_python">
-<a href="#phasename_python" style="color: inherit; text-decoration: inherit;">phase<wbr>Name</a>
+        <span id="phase_name_python">
+<a href="#phase_name_python" style="color: inherit; text-decoration: inherit;">phase_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

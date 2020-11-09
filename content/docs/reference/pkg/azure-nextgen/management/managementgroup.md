@@ -85,11 +85,11 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 management_group = azure_nextgen.management.latest.ManagementGroup("managementGroup",
-    details={
-        "parent": {
-            "id": "/providers/Microsoft.Management/managementGroups/RootGroup",
-        },
-    },
+    details=azure_nextgen.management.latest.CreateManagementGroupDetailsArgs(
+        parent=azure_nextgen.management.latest.CreateParentGroupInfoArgs(
+            id="/providers/Microsoft.Management/managementGroups/RootGroup",
+        ),
+    ),
     display_name="ChildGroup",
     group_id="ChildGroup")
 
@@ -129,7 +129,7 @@ const managementGroup = new azure_nextgen.management.latest.ManagementGroup("man
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[Dict[CreateManagementGroupDetails]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[CreateManagementGroupDetailsArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -458,7 +458,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmanagementgroupdetails">Dict[Create<wbr>Management<wbr>Group<wbr>Details]</a></span>
+        <span class="property-type"><a href="#createmanagementgroupdetails">Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of a management group used during creation.{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_python" style="color: inherit; text-decoration: inherit;">children</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
 
@@ -707,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd>
 
@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Dict[Create<wbr>Parent<wbr>Group<wbr>Info]</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd>
 
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_python" style="color: inherit; text-decoration: inherit;">children</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
 
@@ -1292,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Dict[Parent<wbr>Group<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd>
 

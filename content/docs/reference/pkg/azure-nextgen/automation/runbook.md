@@ -121,13 +121,13 @@ runbook = azure_nextgen.automation.latest.Runbook("runbook",
     log_progress=True,
     log_verbose=False,
     name="Get-AzureVMTutorial",
-    publish_content_link={
-        "contentHash": {
-            "algorithm": "SHA256",
-            "value": "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
-        },
-        "uri": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
-    },
+    publish_content_link=azure_nextgen.automation.latest.ContentLinkArgs(
+        content_hash=azure_nextgen.automation.latest.ContentHashArgs(
+            algorithm="SHA256",
+            value="115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
+        ),
+        uri="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+    ),
     resource_group_name="rg",
     runbook_name="Get-AzureVMTutorial",
     runbook_type="PowerShellWorkflow",
@@ -258,7 +258,7 @@ import pulumi_azure_nextgen as azure_nextgen
 runbook = azure_nextgen.automation.latest.Runbook("runbook",
     automation_account_name="ContoseAutomationAccount",
     description="Description of the Runbook",
-    draft={},
+    draft=azure_nextgen.automation.latest.RunbookDraftArgs(),
     location="East US 2",
     log_progress=False,
     log_verbose=False,
@@ -314,7 +314,7 @@ const runbook = new azure_nextgen.automation.latest.Runbook("runbook", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draft</span><span class="p">:</span> <span class="nx">Optional[Dict[RunbookDraft]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_activity_trace</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish_content_link</span><span class="p">:</span> <span class="nx">Optional[Dict[ContentLink]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Runbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draft</span><span class="p">:</span> <span class="nx">Optional[RunbookDraftArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_activity_trace</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publish_content_link</span><span class="p">:</span> <span class="nx">Optional[ContentLinkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -953,7 +953,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#draft_python" style="color: inherit; text-decoration: inherit;">draft</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookdraft">Dict[Runbook<wbr>Draft]</a></span>
+        <span class="property-type"><a href="#runbookdraft">Runbook<wbr>Draft<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook properties.{{% /md %}}</dd>
 
@@ -1013,7 +1013,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publish_content_link_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Dict[Content<wbr>Link]</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the published runbook content link.{{% /md %}}</dd>
 
@@ -1023,7 +1023,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags attached to the resource.{{% /md %}}</dd>
 
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_types_python" style="color: inherit; text-decoration: inherit;">output_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd>
 
@@ -1482,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Runbook<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook parameters.{{% /md %}}</dd>
 
@@ -1888,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Dict[Content<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 
@@ -2047,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Dict[Content<wbr>Hash<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 
@@ -2306,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draft_content_link_python" style="color: inherit; text-decoration: inherit;">draft_<wbr>content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Dict[Content<wbr>Link]</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd>
 
@@ -2336,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_types_python" style="color: inherit; text-decoration: inherit;">output_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd>
 
@@ -2346,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Runbook<wbr>Parameter]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd>
 
@@ -2585,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draft_content_link_python" style="color: inherit; text-decoration: inherit;">draft_<wbr>content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Dict[Content<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd>
 
@@ -2615,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_types_python" style="color: inherit; text-decoration: inherit;">output_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd>
 
@@ -2625,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Runbook<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd>
 
@@ -2800,8 +2800,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ismandatory_python">
-<a href="#ismandatory_python" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
+        <span id="is_mandatory_python">
+<a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2999,8 +2999,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ismandatory_python">
-<a href="#ismandatory_python" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
+        <span id="is_mandatory_python">
+<a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

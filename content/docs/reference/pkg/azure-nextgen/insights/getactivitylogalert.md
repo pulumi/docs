@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactionlistresponse">Dict[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitylogalertactionlistresponse">Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertallofconditionresponse">Dict[Activity<wbr>Log<wbr>Alert<wbr>All<wbr>Of<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitylogalertallofconditionresponse">Activity<wbr>Log<wbr>Alert<wbr>All<wbr>Of<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resourceIds that will be used as prefixes. The alert will only apply to activityLogs with resourceIds that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -660,8 +660,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -670,11 +670,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
+        <span id="webhook_properties_python">
+<a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
 
@@ -753,7 +753,7 @@ The following output properties are available:
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactiongroupresponse">List[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitylogalertactiongroupresponse">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The following output properties are available:
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertleafconditionresponse">List[Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitylogalertleafconditionresponse">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
 

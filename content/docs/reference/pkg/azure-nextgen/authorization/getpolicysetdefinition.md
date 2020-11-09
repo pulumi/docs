@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#policy_definitions_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitionreferenceresponse">List[Policy<wbr>Definition<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#policydefinitionreferenceresponse">Sequence[Policy<wbr>Definition<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of policy definition references.{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Definitions<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Definitions<wbr>Value<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The policy set definition parameters that can be used in policy definition references.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#policy_definition_groups_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitiongroupresponse">List[Policy<wbr>Definition<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#policydefinitiongroupresponse">Sequence[Policy<wbr>Definition<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The metadata describing groups of policy definition references within the policy set definition.{{% /md %}}</dd>
 
@@ -680,11 +680,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The following output properties are available:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
 
@@ -1117,8 +1117,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalmetadataid_python">
-<a href="#additionalmetadataid_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Id</a>
+        <span id="additional_metadata_id_python">
+<a href="#additional_metadata_id_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>metadata_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1326,11 +1326,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupnames_python">
-<a href="#groupnames_python" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
+        <span id="group_names_python">
+<a href="#group_names_python" style="color: inherit; text-decoration: inherit;">group_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The name of the groups that this policy definition reference belongs to.{{% /md %}}</dd>
 
@@ -1340,7 +1340,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Values<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
 

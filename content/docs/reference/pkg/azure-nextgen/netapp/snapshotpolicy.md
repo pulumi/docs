@@ -124,30 +124,30 @@ import pulumi_azure_nextgen as azure_nextgen
 
 snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
     account_name="account1",
-    daily_schedule={
-        "hour": 14,
-        "minute": 30,
-        "snapshotsToKeep": 4,
-    },
-    hourly_schedule={
-        "minute": 50,
-        "snapshotsToKeep": 2,
-    },
+    daily_schedule=azure_nextgen.netapp.latest.DailyScheduleArgs(
+        hour=14,
+        minute=30,
+        snapshots_to_keep=4,
+    ),
+    hourly_schedule=azure_nextgen.netapp.latest.HourlyScheduleArgs(
+        minute=50,
+        snapshots_to_keep=2,
+    ),
     location="eastus",
-    monthly_schedule={
-        "daysOfMonth": "10,11,12",
-        "hour": 14,
-        "minute": 15,
-        "snapshotsToKeep": 5,
-    },
+    monthly_schedule=azure_nextgen.netapp.latest.MonthlyScheduleArgs(
+        days_of_month="10,11,12",
+        hour=14,
+        minute=15,
+        snapshots_to_keep=5,
+    ),
     resource_group_name="myRG",
     snapshot_policy_name="snapshotPolicyName",
-    weekly_schedule={
-        "day": "Wednesday",
-        "hour": 14,
-        "minute": 45,
-        "snapshotsToKeep": 3,
-    })
+    weekly_schedule=azure_nextgen.netapp.latest.WeeklyScheduleArgs(
+        day="Wednesday",
+        hour=14,
+        minute=45,
+        snapshots_to_keep=3,
+    ))
 
 ```
 
@@ -203,7 +203,7 @@ const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotP
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SnapshotPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[DailySchedule]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hourly_schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[HourlySchedule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monthly_schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[MonthlySchedule]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">weekly_schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[WeeklySchedule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SnapshotPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_schedule</span><span class="p">:</span> <span class="nx">Optional[DailyScheduleArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hourly_schedule</span><span class="p">:</span> <span class="nx">Optional[HourlyScheduleArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monthly_schedule</span><span class="p">:</span> <span class="nx">Optional[MonthlyScheduleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">weekly_schedule</span><span class="p">:</span> <span class="nx">Optional[WeeklyScheduleArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -742,7 +742,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyschedule">Dict[Daily<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#dailyschedule">Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
 
@@ -762,7 +762,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourlyschedule">Dict[Hourly<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#hourlyschedule">Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
 
@@ -772,7 +772,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyschedule">Dict[Monthly<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
 
@@ -782,7 +782,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -792,7 +792,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyschedule">Dict[Weekly<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
 

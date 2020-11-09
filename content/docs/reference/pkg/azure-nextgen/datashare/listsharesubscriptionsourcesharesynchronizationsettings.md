@@ -337,7 +337,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledsourcesynchronizationsettingresponse">List[Scheduled<wbr>Source<wbr>Synchronization<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduledsourcesynchronizationsettingresponse">Sequence[Scheduled<wbr>Source<wbr>Synchronization<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
 
@@ -458,8 +458,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recurrenceinterval_python">
-<a href="#recurrenceinterval_python" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Interval</a>
+        <span id="recurrence_interval_python">
+<a href="#recurrence_interval_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -468,8 +468,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="synchronizationtime_python">
-<a href="#synchronizationtime_python" style="color: inherit; text-decoration: inherit;">synchronization<wbr>Time</a>
+        <span id="synchronization_time_python">
+<a href="#synchronization_time_python" style="color: inherit; text-decoration: inherit;">synchronization_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

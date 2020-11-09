@@ -102,10 +102,10 @@ machine_group = azure_nextgen.operationalinsights.v20151101preview.MachineGroup(
     etag="8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
     kind="machineGroup",
     machine_group_name="ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
-    machines=[{
-        "id": "/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
-        "kind": "ref:machinewithhints",
-    }],
+    machines=[azure_nextgen.operationalinsights.v20151101preview.MachineReferenceWithHintsArgs(
+        id="/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
+        kind="ref:machinewithhints",
+    )],
     resource_group_name="rg-sm",
     workspace_name="D6F79F14-E563-469B-84B5-9286D2803B2F")
 
@@ -149,7 +149,7 @@ const machineGroup = new azure_nextgen.operationalinsights.v20151101preview.Mach
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machines</span><span class="p">:</span> <span class="nx">Optional[List[MachineReferenceWithHints]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machines</span><span class="p">:</span> <span class="nx">Optional[Sequence[MachineReferenceWithHintsArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -658,7 +658,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#machines_python" style="color: inherit; text-decoration: inherit;">machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinereferencewithhints">List[Machine<wbr>Reference<wbr>With<wbr>Hints]</a></span>
+        <span class="property-type"><a href="#machinereferencewithhints">Sequence[Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
 
@@ -1100,8 +1100,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="displaynamehint_python">
-<a href="#displaynamehint_python" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Hint</a>
+        <span id="display_name_hint_python">
+<a href="#display_name_hint_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>hint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1130,8 +1130,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="osfamilyhint_python">
-<a href="#osfamilyhint_python" style="color: inherit; text-decoration: inherit;">os<wbr>Family<wbr>Hint</a>
+        <span id="os_family_hint_python">
+<a href="#os_family_hint_python" style="color: inherit; text-decoration: inherit;">os_<wbr>family_<wbr>hint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

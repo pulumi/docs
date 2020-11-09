@@ -107,7 +107,7 @@ const serviceTask = new azure_nextgen.datamigration.v20180715preview.ServiceTask
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectToMongoDbTaskProperties] | Dict[ConnectToSourceOracleSyncTaskProperties] | Dict[ConnectToSourcePostgreSqlSyncTaskProperties] | Dict[ConnectToSourceSqlServerSyncTaskProperties] | Dict[ConnectToSourceSqlServerTaskProperties] | Dict[ConnectToTargetAzureDbForMySqlTaskProperties] | Dict[ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties] | Dict[ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskProperties] | Dict[ConnectToTargetSqlDbTaskProperties] | Dict[ConnectToTargetSqlMISyncTaskProperties] | Dict[ConnectToTargetSqlMITaskProperties] | Dict[ConnectToTargetSqlSqlDbSyncTaskProperties] | Dict[GetTdeCertificatesSqlTaskProperties] | Dict[GetUserTablesOracleTaskProperties] | Dict[GetUserTablesPostgreSqlTaskProperties] | Dict[GetUserTablesSqlSyncTaskProperties] | Dict[GetUserTablesSqlTaskProperties] | Dict[MigrateMongoDbTaskProperties] | Dict[MigrateMySqlAzureDbForMySqlSyncTaskProperties] | Dict[MigrateOracleAzureDbForPostgreSqlSyncTaskProperties] | Dict[MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties] | Dict[MigrateSqlServerSqlDbSyncTaskProperties] | Dict[MigrateSqlServerSqlDbTaskProperties] | Dict[MigrateSqlServerSqlMISyncTaskProperties] | Dict[MigrateSqlServerSqlMITaskProperties] | Dict[MigrateSsisTaskProperties] | Dict[ValidateMigrationInputSqlServerSqlDbSyncTaskProperties] | Dict[ValidateMigrationInputSqlServerSqlMISyncTaskProperties] | Dict[ValidateMigrationInputSqlServerSqlMITaskProperties] | Dict[ValidateMongoDbTaskProperties] | Dict[ValidateOracleAzureDbForPostgreSqlSyncTaskProperties]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ConnectToMongoDbTaskPropertiesArgs, ConnectToSourceOracleSyncTaskPropertiesArgs, ConnectToSourcePostgreSqlSyncTaskPropertiesArgs, ConnectToSourceSqlServerSyncTaskPropertiesArgs, ConnectToSourceSqlServerTaskPropertiesArgs, ConnectToTargetAzureDbForMySqlTaskPropertiesArgs, ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs, ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskPropertiesArgs, ConnectToTargetSqlDbTaskPropertiesArgs, ConnectToTargetSqlMISyncTaskPropertiesArgs, ConnectToTargetSqlMITaskPropertiesArgs, ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs, GetTdeCertificatesSqlTaskPropertiesArgs, GetUserTablesOracleTaskPropertiesArgs, GetUserTablesPostgreSqlTaskPropertiesArgs, GetUserTablesSqlSyncTaskPropertiesArgs, GetUserTablesSqlTaskPropertiesArgs, MigrateMongoDbTaskPropertiesArgs, MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs, MigrateOracleAzureDbForPostgreSqlSyncTaskPropertiesArgs, MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs, MigrateSqlServerSqlDbSyncTaskPropertiesArgs, MigrateSqlServerSqlDbTaskPropertiesArgs, MigrateSqlServerSqlMISyncTaskPropertiesArgs, MigrateSqlServerSqlMITaskPropertiesArgs, MigrateSsisTaskPropertiesArgs, ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs, ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs, ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs, ValidateMongoDbTaskPropertiesArgs, ValidateOracleAzureDbForPostgreSqlSyncTaskPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -496,7 +496,7 @@ The ServiceTask resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Connect<wbr>To<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties] | Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties] | Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties] | Dict[Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Properties] | Dict[Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Properties] | Dict[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties] | Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties] | Dict[Migrate<wbr>Ssis<wbr>Task<wbr>Properties] | Dict[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties] | Dict[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties] | Dict[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties] | Dict[Validate<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties] | Dict[Validate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties]</span>
+        <span class="property-type">Union[Connect<wbr>To<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args, Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args, Migrate<wbr>Ssis<wbr>Task<wbr>Properties<wbr>Args, Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args, Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args, Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args, Validate<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties<wbr>Args, Validate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Custom task properties{{% /md %}}</dd>
 
@@ -799,8 +799,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="appkey_python">
-<a href="#appkey_python" style="color: inherit; text-decoration: inherit;">app<wbr>Key</a>
+        <span id="app_key_python">
+<a href="#app_key_python" style="color: inherit; text-decoration: inherit;">app_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -958,8 +958,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="appkey_python">
-<a href="#appkey_python" style="color: inherit; text-decoration: inherit;">app<wbr>Key</a>
+        <span id="app_key_python">
+<a href="#app_key_python" style="color: inherit; text-decoration: inherit;">app_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1117,8 +1117,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="familysequencenumber_python">
-<a href="#familysequencenumber_python" style="color: inherit; text-decoration: inherit;">family<wbr>Sequence<wbr>Number</a>
+        <span id="family_sequence_number_python">
+<a href="#family_sequence_number_python" style="color: inherit; text-decoration: inherit;">family_<wbr>sequence_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1127,8 +1127,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filelocation_python">
-<a href="#filelocation_python" style="color: inherit; text-decoration: inherit;">file<wbr>Location</a>
+        <span id="file_location_python">
+<a href="#file_location_python" style="color: inherit; text-decoration: inherit;">file_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1486,8 +1486,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfinisheddate_python">
-<a href="#backupfinisheddate_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Finished<wbr>Date</a>
+        <span id="backup_finished_date_python">
+<a href="#backup_finished_date_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>finished_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1496,8 +1496,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetid_python">
-<a href="#backupsetid_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Id</a>
+        <span id="backup_set_id_python">
+<a href="#backup_set_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1506,8 +1506,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupstartdate_python">
-<a href="#backupstartdate_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Start<wbr>Date</a>
+        <span id="backup_start_date_python">
+<a href="#backup_start_date_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>start_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1536,8 +1536,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstlsn_python">
-<a href="#firstlsn_python" style="color: inherit; text-decoration: inherit;">first<wbr>Lsn</a>
+        <span id="first_lsn_python">
+<a href="#first_lsn_python" style="color: inherit; text-decoration: inherit;">first_<wbr>lsn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1546,8 +1546,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isbackuprestored_python">
-<a href="#isbackuprestored_python" style="color: inherit; text-decoration: inherit;">is<wbr>Backup<wbr>Restored</a>
+        <span id="is_backup_restored_python">
+<a href="#is_backup_restored_python" style="color: inherit; text-decoration: inherit;">is_<wbr>backup_<wbr>restored</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1556,8 +1556,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastlsn_python">
-<a href="#lastlsn_python" style="color: inherit; text-decoration: inherit;">last<wbr>Lsn</a>
+        <span id="last_lsn_python">
+<a href="#last_lsn_python" style="color: inherit; text-decoration: inherit;">last_<wbr>lsn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1576,11 +1576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="listofbackupfiles_python">
-<a href="#listofbackupfiles_python" style="color: inherit; text-decoration: inherit;">list<wbr>Of<wbr>Backup<wbr>Files</a>
+        <span id="list_of_backup_files_python">
+<a href="#list_of_backup_files_python" style="color: inherit; text-decoration: inherit;">list_<wbr>of_<wbr>backup_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupfileinforesponse">List[Backup<wbr>File<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backupfileinforesponse">Sequence[Backup<wbr>File<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of files in the backup set{{% /md %}}</dd>
 
@@ -1843,11 +1843,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -1857,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbconnectioninfo">Dict[Mongo<wbr>Db<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mongodbconnectioninfo">Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a connection to a MongoDB data source{{% /md %}}</dd>
 
@@ -2086,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -2096,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -2106,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbclusterinforesponse">List[Mongo<wbr>Db<wbr>Cluster<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbclusterinforesponse">Sequence[Mongo<wbr>Db<wbr>Cluster<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array containing a single MongoDbClusterInfo object{{% /md %}}</dd>
 
@@ -2122,11 +2122,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -2136,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbconnectioninforesponse">Dict[Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbconnectioninforesponse">Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a connection to a MongoDB data source{{% /md %}}</dd>
 
@@ -2215,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oracleconnectioninfo">Dict[Oracle<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#oracleconnectioninfo">Oracle<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to Oracle source{{% /md %}}</dd>
 
@@ -2294,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oracleconnectioninforesponse">Dict[Oracle<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#oracleconnectioninforesponse">Oracle<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to Oracle source{{% /md %}}</dd>
 
@@ -2463,14 +2463,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of schemas on source server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverbrandversion_python">
-<a href="#sourceserverbrandversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="source_server_brand_version_python">
+<a href="#source_server_brand_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2479,8 +2479,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2489,11 +2489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 
@@ -2598,11 +2598,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -2612,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourceoraclesynctaskinput">Dict[Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttosourceoraclesynctaskinput">Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -2841,7 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -2851,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -2861,7 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourceoraclesynctaskoutputresponse">List[Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttosourceoraclesynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -2877,11 +2877,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -2891,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourceoraclesynctaskinputresponse">Dict[Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttosourceoraclesynctaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -2970,7 +2970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd>
 
@@ -3049,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd>
 
@@ -3248,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of databases on source server{{% /md %}}</dd>
 
@@ -3264,8 +3264,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverbrandversion_python">
-<a href="#sourceserverbrandversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="source_server_brand_version_python">
+<a href="#source_server_brand_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3274,8 +3274,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3284,11 +3284,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 
@@ -3393,11 +3393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -3407,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Dict[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -3636,7 +3636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -3646,7 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -3656,7 +3656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">List[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -3672,11 +3672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -3686,7 +3686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Dict[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -3791,11 +3791,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -3805,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Dict[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -4034,7 +4034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -4044,7 +4044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -4054,7 +4054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -4070,11 +4070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -4084,7 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Dict[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -4343,14 +4343,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkpermissionsgroup_python">
-<a href="#checkpermissionsgroup_python" style="color: inherit; text-decoration: inherit;">check<wbr>Permissions<wbr>Group</a>
+        <span id="check_permissions_group_python">
+<a href="#check_permissions_group_python" style="color: inherit; text-decoration: inherit;">check_<wbr>permissions_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4359,8 +4359,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectagentjobs_python">
-<a href="#collectagentjobs_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Agent<wbr>Jobs</a>
+        <span id="collect_agent_jobs_python">
+<a href="#collect_agent_jobs_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4369,8 +4369,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectdatabases_python">
-<a href="#collectdatabases_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Databases</a>
+        <span id="collect_databases_python">
+<a href="#collect_databases_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4379,8 +4379,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectlogins_python">
-<a href="#collectlogins_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Logins</a>
+        <span id="collect_logins_python">
+<a href="#collect_logins_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4389,8 +4389,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collecttdecertificateinfo_python">
-<a href="#collecttdecertificateinfo_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Tde<wbr>Certificate<wbr>Info</a>
+        <span id="collect_tde_certificate_info_python">
+<a href="#collect_tde_certificate_info_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>tde_<wbr>certificate_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4399,8 +4399,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validatessiscatalogonly_python">
-<a href="#validatessiscatalogonly_python" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssis<wbr>Catalog<wbr>Only</a>
+        <span id="validate_ssis_catalog_only_python">
+<a href="#validate_ssis_catalog_only_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssis_<wbr>catalog_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4662,14 +4662,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkpermissionsgroup_python">
-<a href="#checkpermissionsgroup_python" style="color: inherit; text-decoration: inherit;">check<wbr>Permissions<wbr>Group</a>
+        <span id="check_permissions_group_python">
+<a href="#check_permissions_group_python" style="color: inherit; text-decoration: inherit;">check_<wbr>permissions_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4678,8 +4678,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectagentjobs_python">
-<a href="#collectagentjobs_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Agent<wbr>Jobs</a>
+        <span id="collect_agent_jobs_python">
+<a href="#collect_agent_jobs_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4688,8 +4688,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectdatabases_python">
-<a href="#collectdatabases_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Databases</a>
+        <span id="collect_databases_python">
+<a href="#collect_databases_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4698,8 +4698,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectlogins_python">
-<a href="#collectlogins_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Logins</a>
+        <span id="collect_logins_python">
+<a href="#collect_logins_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4708,8 +4708,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collecttdecertificateinfo_python">
-<a href="#collecttdecertificateinfo_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Tde<wbr>Certificate<wbr>Info</a>
+        <span id="collect_tde_certificate_info_python">
+<a href="#collect_tde_certificate_info_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>tde_<wbr>certificate_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4718,8 +4718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validatessiscatalogonly_python">
-<a href="#validatessiscatalogonly_python" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssis<wbr>Catalog<wbr>Only</a>
+        <span id="validate_ssis_catalog_only_python">
+<a href="#validate_ssis_catalog_only_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssis_<wbr>catalog_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5027,8 +5027,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="jobcategory_python">
-<a href="#jobcategory_python" style="color: inherit; text-decoration: inherit;">job<wbr>Category</a>
+        <span id="job_category_python">
+<a href="#job_category_python" style="color: inherit; text-decoration: inherit;">job_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5037,8 +5037,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="jobowner_python">
-<a href="#jobowner_python" style="color: inherit; text-decoration: inherit;">job<wbr>Owner</a>
+        <span id="job_owner_python">
+<a href="#job_owner_python" style="color: inherit; text-decoration: inherit;">job_<wbr>owner</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5047,8 +5047,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lastexecutedon_python">
-<a href="#lastexecutedon_python" style="color: inherit; text-decoration: inherit;">last<wbr>Executed<wbr>On</a>
+        <span id="last_executed_on_python">
+<a href="#last_executed_on_python" style="color: inherit; text-decoration: inherit;">last_<wbr>executed_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5057,11 +5057,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="migrationeligibility_python">
-<a href="#migrationeligibility_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Eligibility</a>
+        <span id="migration_eligibility_python">
+<a href="#migration_eligibility_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>eligibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Dict[Migration<wbr>Eligibility<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of agent job for migration.{{% /md %}}</dd>
 
@@ -5077,11 +5077,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 
@@ -5316,18 +5316,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="databasefiles_python">
-<a href="#databasefiles_python" style="color: inherit; text-decoration: inherit;">database<wbr>Files</a>
+        <span id="database_files_python">
+<a href="#database_files_python" style="color: inherit; text-decoration: inherit;">database_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasefileinforesponse">List[Database<wbr>File<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databasefileinforesponse">Sequence[Database<wbr>File<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of database files{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="databasestate_python">
-<a href="#databasestate_python" style="color: inherit; text-decoration: inherit;">database<wbr>State</a>
+        <span id="database_state_python">
+<a href="#database_state_python" style="color: inherit; text-decoration: inherit;">database_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5356,8 +5356,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sizemb_python">
-<a href="#sizemb_python" style="color: inherit; text-decoration: inherit;">size<wbr>MB</a>
+        <span id="size_mb_python">
+<a href="#size_mb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5585,8 +5585,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultdatabase_python">
-<a href="#defaultdatabase_python" style="color: inherit; text-decoration: inherit;">default<wbr>Database</a>
+        <span id="default_database_python">
+<a href="#default_database_python" style="color: inherit; text-decoration: inherit;">default_<wbr>database</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5615,8 +5615,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="logintype_python">
-<a href="#logintype_python" style="color: inherit; text-decoration: inherit;">login<wbr>Type</a>
+        <span id="login_type_python">
+<a href="#login_type_python" style="color: inherit; text-decoration: inherit;">login_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5625,11 +5625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="migrationeligibility_python">
-<a href="#migrationeligibility_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Eligibility</a>
+        <span id="migration_eligibility_python">
+<a href="#migration_eligibility_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>eligibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Dict[Migration<wbr>Eligibility<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of login for migration.{{% /md %}}</dd>
 
@@ -5924,21 +5924,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="agentjobs_python">
-<a href="#agentjobs_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Jobs</a>
+        <span id="agent_jobs_python">
+<a href="#agent_jobs_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source agent jobs as a map from agent job name to id.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="databasetdecertificatemapping_python">
-<a href="#databasetdecertificatemapping_python" style="color: inherit; text-decoration: inherit;">database<wbr>Tde<wbr>Certificate<wbr>Mapping</a>
+        <span id="database_tde_certificate_mapping_python">
+<a href="#database_tde_certificate_mapping_python" style="color: inherit; text-decoration: inherit;">database_<wbr>tde_<wbr>certificate_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to TDE certificate name, if applicable{{% /md %}}</dd>
 
@@ -5948,7 +5948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -5968,14 +5968,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logins_python" style="color: inherit; text-decoration: inherit;">logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source logins as a map from login name to login id.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverbrandversion_python">
-<a href="#sourceserverbrandversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="source_server_brand_version_python">
+<a href="#source_server_brand_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5984,8 +5984,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5994,11 +5994,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 
@@ -6103,11 +6103,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -6117,7 +6117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Dict[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -6346,7 +6346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -6356,7 +6356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -6366,7 +6366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -6382,11 +6382,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -6396,7 +6396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Dict[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -6505,7 +6505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Dict[My<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd>
 
@@ -6515,7 +6515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Dict[My<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd>
 
@@ -6624,7 +6624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Dict[My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd>
 
@@ -6634,7 +6634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Dict[My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd>
 
@@ -6833,7 +6833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of databases on target server{{% /md %}}</dd>
 
@@ -6859,8 +6859,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6869,11 +6869,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 
@@ -6978,11 +6978,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -6992,7 +6992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Dict[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -7221,7 +7221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -7231,7 +7231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -7241,7 +7241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">List[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -7257,11 +7257,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -7271,7 +7271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Dict[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -7380,7 +7380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd>
 
@@ -7390,7 +7390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd>
 
@@ -7499,7 +7499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd>
 
@@ -7509,7 +7509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd>
 
@@ -7708,7 +7708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of databases on target server{{% /md %}}</dd>
 
@@ -7724,8 +7724,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7734,8 +7734,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7744,11 +7744,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 
@@ -7853,11 +7853,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -7867,7 +7867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Dict[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -8096,7 +8096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -8106,7 +8106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -8116,7 +8116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">List[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -8132,11 +8132,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -8146,7 +8146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Dict[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -8225,7 +8225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd>
 
@@ -8304,7 +8304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd>
 
@@ -8503,14 +8503,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of databases on target server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8519,8 +8519,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8529,21 +8529,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databaseschemamap_python">
-<a href="#databaseschemamap_python" style="color: inherit; text-decoration: inherit;">database<wbr>Schema<wbr>Map</a>
+        <span id="database_schema_map_python">
+<a href="#database_schema_map_python" style="color: inherit; text-decoration: inherit;">database_<wbr>schema_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskoutputresponsedatabaseschemamap">List[Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Database<wbr>Schema<wbr>Map]</a></span>
+        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskoutputresponsedatabaseschemamap">Sequence[Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Database<wbr>Schema<wbr>Map<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mapping of schemas per database{{% /md %}}</dd>
 
@@ -8662,7 +8662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8767,11 +8767,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -8781,7 +8781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskinput">Dict[Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -9010,7 +9010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -9020,7 +9020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -9030,7 +9030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskoutputresponse">List[Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -9046,11 +9046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -9060,7 +9060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskinputresponse">Dict[Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetoracleazuredbforpostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -9139,7 +9139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd>
 
@@ -9218,7 +9218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd>
 
@@ -9387,7 +9387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -9403,8 +9403,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9413,8 +9413,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9522,11 +9522,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -9536,7 +9536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -9765,7 +9765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -9775,7 +9775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -9785,7 +9785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -9801,11 +9801,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -9815,7 +9815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -9920,11 +9920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azureapp_python">
-<a href="#azureapp_python" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
+        <span id="azure_app_python">
+<a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Dict[Azure<wbr>Active<wbr>Directory<wbr>App]</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
 
@@ -9934,7 +9934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
 
@@ -10039,11 +10039,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azureapp_python">
-<a href="#azureapp_python" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
+        <span id="azure_app_python">
+<a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Dict[Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
 
@@ -10053,7 +10053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
 
@@ -10188,8 +10188,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10198,8 +10198,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10208,11 +10208,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 
@@ -10317,11 +10317,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -10331,7 +10331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -10560,7 +10560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -10570,7 +10570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -10580,7 +10580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">List[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -10596,11 +10596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -10610,7 +10610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -10779,14 +10779,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectagentjobs_python">
-<a href="#collectagentjobs_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Agent<wbr>Jobs</a>
+        <span id="collect_agent_jobs_python">
+<a href="#collect_agent_jobs_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10795,8 +10795,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectlogins_python">
-<a href="#collectlogins_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Logins</a>
+        <span id="collect_logins_python">
+<a href="#collect_logins_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10805,8 +10805,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validatessiscatalogonly_python">
-<a href="#validatessiscatalogonly_python" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssis<wbr>Catalog<wbr>Only</a>
+        <span id="validate_ssis_catalog_only_python">
+<a href="#validate_ssis_catalog_only_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssis_<wbr>catalog_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10978,14 +10978,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectagentjobs_python">
-<a href="#collectagentjobs_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Agent<wbr>Jobs</a>
+        <span id="collect_agent_jobs_python">
+<a href="#collect_agent_jobs_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10994,8 +10994,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectlogins_python">
-<a href="#collectlogins_python" style="color: inherit; text-decoration: inherit;">collect<wbr>Logins</a>
+        <span id="collect_logins_python">
+<a href="#collect_logins_python" style="color: inherit; text-decoration: inherit;">collect_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -11004,8 +11004,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validatessiscatalogonly_python">
-<a href="#validatessiscatalogonly_python" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssis<wbr>Catalog<wbr>Only</a>
+        <span id="validate_ssis_catalog_only_python">
+<a href="#validate_ssis_catalog_only_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssis_<wbr>catalog_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -11233,11 +11233,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="agentjobs_python">
-<a href="#agentjobs_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Jobs</a>
+        <span id="agent_jobs_python">
+<a href="#agent_jobs_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of agent jobs on the target server.{{% /md %}}</dd>
 
@@ -11257,14 +11257,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logins_python" style="color: inherit; text-decoration: inherit;">logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of logins on the target server.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11273,8 +11273,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11283,11 +11283,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 
@@ -11392,11 +11392,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -11406,7 +11406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -11635,7 +11635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -11645,7 +11645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -11655,7 +11655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">List[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -11671,11 +11671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -11685,7 +11685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -11794,7 +11794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
 
@@ -11804,7 +11804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd>
 
@@ -11913,7 +11913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
 
@@ -11923,7 +11923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd>
 
@@ -12028,11 +12028,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -12042,7 +12042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -12271,7 +12271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -12281,7 +12281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -12291,7 +12291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -12307,11 +12307,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -12321,7 +12321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Dict[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -12636,8 +12636,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12646,8 +12646,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="errorprefix_python">
-<a href="#errorprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+        <span id="error_prefix_python">
+<a href="#error_prefix_python" style="color: inherit; text-decoration: inherit;">error_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12656,8 +12656,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="itemscompletedcount_python">
-<a href="#itemscompletedcount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
+        <span id="items_completed_count_python">
+<a href="#items_completed_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>completed_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -12666,8 +12666,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="itemscount_python">
-<a href="#itemscount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
+        <span id="items_count_python">
+<a href="#items_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -12686,8 +12686,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="resultprefix_python">
-<a href="#resultprefix_python" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+        <span id="result_prefix_python">
+<a href="#result_prefix_python" style="color: inherit; text-decoration: inherit;">result_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12696,8 +12696,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13005,18 +13005,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupfiles_python">
-<a href="#backupfiles_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Files</a>
+        <span id="backup_files_python">
+<a href="#backup_files_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of backup files for the current database.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="backupfinishdate_python">
-<a href="#backupfinishdate_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Finish<wbr>Date</a>
+        <span id="backup_finish_date_python">
+<a href="#backup_finish_date_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>finish_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13045,8 +13045,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="familycount_python">
-<a href="#familycount_python" style="color: inherit; text-decoration: inherit;">family<wbr>Count</a>
+        <span id="family_count_python">
+<a href="#family_count_python" style="color: inherit; text-decoration: inherit;">family_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -13055,8 +13055,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="iscompressed_python">
-<a href="#iscompressed_python" style="color: inherit; text-decoration: inherit;">is<wbr>Compressed</a>
+        <span id="is_compressed_python">
+<a href="#is_compressed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compressed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -13065,8 +13065,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isdamaged_python">
-<a href="#isdamaged_python" style="color: inherit; text-decoration: inherit;">is<wbr>Damaged</a>
+        <span id="is_damaged_python">
+<a href="#is_damaged_python" style="color: inherit; text-decoration: inherit;">is_<wbr>damaged</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -13364,8 +13364,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logicalname_python">
-<a href="#logicalname_python" style="color: inherit; text-decoration: inherit;">logical<wbr>Name</a>
+        <span id="logical_name_python">
+<a href="#logical_name_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13374,8 +13374,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="physicalfullname_python">
-<a href="#physicalfullname_python" style="color: inherit; text-decoration: inherit;">physical<wbr>Full<wbr>Name</a>
+        <span id="physical_full_name_python">
+<a href="#physical_full_name_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>full_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13384,8 +13384,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restorefullname_python">
-<a href="#restorefullname_python" style="color: inherit; text-decoration: inherit;">restore<wbr>Full<wbr>Name</a>
+        <span id="restore_full_name_python">
+<a href="#restore_full_name_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>full_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13394,8 +13394,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizemb_python">
-<a href="#sizemb_python" style="color: inherit; text-decoration: inherit;">size<wbr>MB</a>
+        <span id="size_mb_python">
+<a href="#size_mb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -13743,8 +13743,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13753,8 +13753,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="errorprefix_python">
-<a href="#errorprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+        <span id="error_prefix_python">
+<a href="#error_prefix_python" style="color: inherit; text-decoration: inherit;">error_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13763,8 +13763,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="itemscompletedcount_python">
-<a href="#itemscompletedcount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
+        <span id="items_completed_count_python">
+<a href="#items_completed_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>completed_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -13773,8 +13773,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="itemscount_python">
-<a href="#itemscount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
+        <span id="items_count_python">
+<a href="#items_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -13793,8 +13793,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="resultprefix_python">
-<a href="#resultprefix_python" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+        <span id="result_prefix_python">
+<a href="#result_prefix_python" style="color: inherit; text-decoration: inherit;">result_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13803,8 +13803,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sizemb_python">
-<a href="#sizemb_python" style="color: inherit; text-decoration: inherit;">size<wbr>MB</a>
+        <span id="size_mb_python">
+<a href="#size_mb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -13813,8 +13813,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13942,8 +13942,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="hasrows_python">
-<a href="#hasrows_python" style="color: inherit; text-decoration: inherit;">has<wbr>Rows</a>
+        <span id="has_rows_python">
+<a href="#has_rows_python" style="color: inherit; text-decoration: inherit;">has_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -14409,31 +14409,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Dict[File<wbr>Share]</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedcertificates_python">
-<a href="#selectedcertificates_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Certificates</a>
+        <span id="selected_certificates_python">
+<a href="#selected_certificates_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinput">List[Selected<wbr>Certificate<wbr>Input]</a></span>
+        <span class="property-type"><a href="#selectedcertificateinput">Sequence[Selected<wbr>Certificate<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd>
 
@@ -14568,31 +14568,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Dict[File<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedcertificates_python">
-<a href="#selectedcertificates_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Certificates</a>
+        <span id="selected_certificates_python">
+<a href="#selected_certificates_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinputresponse">List[Selected<wbr>Certificate<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#selectedcertificateinputresponse">Sequence[Selected<wbr>Certificate<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd>
 
@@ -14697,21 +14697,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="base64encodedcertificates_python">
-<a href="#base64encodedcertificates_python" style="color: inherit; text-decoration: inherit;">base64Encoded<wbr>Certificates</a>
+        <span id="base64_encoded_certificates_python">
+<a href="#base64_encoded_certificates_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>encoded_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Mapping from certificate name to base 64 encoded format.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 
@@ -14816,11 +14816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -14830,7 +14830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Dict[Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -15059,7 +15059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -15069,7 +15069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -15079,7 +15079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">List[Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">Sequence[Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -15095,11 +15095,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -15109,7 +15109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Dict[Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -15214,21 +15214,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oracleconnectioninfo">Dict[Oracle<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#oracleconnectioninfo">Oracle<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to Oracle source{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedschemas_python">
-<a href="#selectedschemas_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Schemas</a>
+        <span id="selected_schemas_python">
+<a href="#selected_schemas_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>schemas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Oracle schemas for which to collect tables{{% /md %}}</dd>
 
@@ -15333,21 +15333,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oracleconnectioninforesponse">Dict[Oracle<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#oracleconnectioninforesponse">Oracle<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to Oracle source{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedschemas_python">
-<a href="#selectedschemas_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Schemas</a>
+        <span id="selected_schemas_python">
+<a href="#selected_schemas_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>schemas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Oracle schemas for which to collect tables{{% /md %}}</dd>
 
@@ -15496,17 +15496,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasetableresponse">List[Database<wbr>Table<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databasetableresponse">Sequence[Database<wbr>Table<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of valid tables found for this schema{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 
@@ -15611,11 +15611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -15625,7 +15625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablesoracletaskinput">Dict[Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#getusertablesoracletaskinput">Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -15854,7 +15854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -15864,7 +15864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -15874,7 +15874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablesoracletaskoutputresponse">List[Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablesoracletaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -15890,11 +15890,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -15904,7 +15904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablesoracletaskinputresponse">Dict[Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablesoracletaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -16009,21 +16009,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to PostgreSQL source{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of PostgreSQL databases for which to collect tables{{% /md %}}</dd>
 
@@ -16128,21 +16128,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to PostgreSQL source{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of PostgreSQL databases for which to collect tables{{% /md %}}</dd>
 
@@ -16291,17 +16291,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasetableresponse">List[Database<wbr>Table<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databasetableresponse">Sequence[Database<wbr>Table<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of valid tables found for this database{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd>
 
@@ -16406,11 +16406,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -16420,7 +16420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablespostgresqltaskinput">Dict[Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#getusertablespostgresqltaskinput">Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -16649,7 +16649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -16659,7 +16659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -16669,7 +16669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablespostgresqltaskoutputresponse">List[Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablespostgresqltaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -16685,11 +16685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -16699,7 +16699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablespostgresqltaskinputresponse">Dict[Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablespostgresqltaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -16864,21 +16864,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedsourcedatabases_python">
-<a href="#selectedsourcedatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Source<wbr>Databases</a>
+        <span id="selected_source_databases_python">
+<a href="#selected_source_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>source_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source database names to collect tables for{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedtargetdatabases_python">
-<a href="#selectedtargetdatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Target<wbr>Databases</a>
+        <span id="selected_target_databases_python">
+<a href="#selected_target_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>target_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of target database names to collect tables for{{% /md %}}</dd>
 
@@ -16888,7 +16888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
 
@@ -16898,7 +16898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd>
 
@@ -17063,21 +17063,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedsourcedatabases_python">
-<a href="#selectedsourcedatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Source<wbr>Databases</a>
+        <span id="selected_source_databases_python">
+<a href="#selected_source_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>source_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source database names to collect tables for{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selectedtargetdatabases_python">
-<a href="#selectedtargetdatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Target<wbr>Databases</a>
+        <span id="selected_target_databases_python">
+<a href="#selected_target_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>target_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of target database names to collect tables for{{% /md %}}</dd>
 
@@ -17087,7 +17087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
 
@@ -17097,7 +17097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd>
 
@@ -17262,41 +17262,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="databasestosourcetables_python">
-<a href="#databasestosourcetables_python" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Source<wbr>Tables</a>
+        <span id="databases_to_source_tables_python">
+<a href="#databases_to_source_tables_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>to_<wbr>source_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Database<wbr>Table<wbr>Response>]</span>
+        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="databasestotargettables_python">
-<a href="#databasestotargettables_python" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Target<wbr>Tables</a>
+        <span id="databases_to_target_tables_python">
+<a href="#databases_to_target_tables_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>to_<wbr>target_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Database<wbr>Table<wbr>Response>]</span>
+        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="tablevalidationerrors_python">
-<a href="#tablevalidationerrors_python" style="color: inherit; text-decoration: inherit;">table<wbr>Validation<wbr>Errors</a>
+        <span id="table_validation_errors_python">
+<a href="#table_validation_errors_python" style="color: inherit; text-decoration: inherit;">table_<wbr>validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of validation errors{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 
@@ -17401,11 +17401,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -17415,7 +17415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Dict[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -17644,7 +17644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -17654,7 +17654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -17664,7 +17664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">List[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -17680,11 +17680,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -17694,7 +17694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Dict[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -17799,21 +17799,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of database names to collect tables for{{% /md %}}</dd>
 
@@ -17918,21 +17918,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectioninfo_python">
-<a href="#connectioninfo_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
+        <span id="connection_info_python">
+<a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of database names to collect tables for{{% /md %}}</dd>
 
@@ -18067,11 +18067,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="databasestotables_python">
-<a href="#databasestotables_python" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Tables</a>
+        <span id="databases_to_tables_python">
+<a href="#databases_to_tables_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>to_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Database<wbr>Table<wbr>Response>]</span>
+        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd>
 
@@ -18087,11 +18087,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd>
 
@@ -18196,11 +18196,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -18210,7 +18210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinput">Dict[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -18439,7 +18439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -18449,7 +18449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -18459,7 +18459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">List[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -18475,11 +18475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -18489,7 +18489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Dict[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -18624,8 +18624,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="managedinstanceresourceid_python">
-<a href="#managedinstanceresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Resource<wbr>Id</a>
+        <span id="managed_instance_resource_id_python">
+<a href="#managed_instance_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18783,8 +18783,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="managedinstanceresourceid_python">
-<a href="#managedinstanceresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Resource<wbr>Id</a>
+        <span id="managed_instance_resource_id_python">
+<a href="#managed_instance_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18882,8 +18882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedatabasename_python">
-<a href="#sourcedatabasename_python" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Name</a>
+        <span id="source_database_name_python">
+<a href="#source_database_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18965,7 +18965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd>
 
@@ -19134,7 +19134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -19144,7 +19144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Dict[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -19164,7 +19164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Dict[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd>
 
@@ -19269,11 +19269,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -19283,7 +19283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbmigrationsettings">Dict[Mongo<wbr>Db<wbr>Migration<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#mongodbmigrationsettings">Mongo<wbr>Db<wbr>Migration<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how a MongoDB data migration should be performed{{% /md %}}</dd>
 
@@ -19512,7 +19512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -19522,7 +19522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -19532,7 +19532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Mongo<wbr>Db<wbr>Collection<wbr>Progress<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Mongo<wbr>Db<wbr>Database<wbr>Progress<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Mongo<wbr>Db<wbr>Migration<wbr>Progress<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Mongo<wbr>Db<wbr>Collection<wbr>Progress<wbr>Response<wbr>Args, Mongo<wbr>Db<wbr>Database<wbr>Progress<wbr>Response<wbr>Args, Mongo<wbr>Db<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19548,11 +19548,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -19562,7 +19562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbmigrationsettingsresponse">Dict[Mongo<wbr>Db<wbr>Migration<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbmigrationsettingsresponse">Mongo<wbr>Db<wbr>Migration<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how a MongoDB data migration should be performed{{% /md %}}</dd>
 
@@ -19787,11 +19787,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -19807,28 +19807,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19837,11 +19837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -20066,11 +20066,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -20086,28 +20086,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -20116,11 +20116,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -20255,11 +20255,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">List[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">Sequence[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -20269,7 +20269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Dict[My<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd>
 
@@ -20279,7 +20279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Dict[My<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd>
 
@@ -20414,11 +20414,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">List[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">Sequence[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -20428,7 +20428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Dict[My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd>
 
@@ -20438,7 +20438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Dict[My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd>
 
@@ -20597,7 +20597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd>
 
@@ -21122,8 +21122,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="appliedchanges_python">
-<a href="#appliedchanges_python" style="color: inherit; text-decoration: inherit;">applied<wbr>Changes</a>
+        <span id="applied_changes_python">
+<a href="#applied_changes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21132,8 +21132,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21142,8 +21142,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21152,8 +21152,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21172,8 +21172,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21182,8 +21182,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadcompletedtables_python">
-<a href="#fullloadcompletedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Completed<wbr>Tables</a>
+        <span id="full_load_completed_tables_python">
+<a href="#full_load_completed_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>completed_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21192,8 +21192,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloaderroredtables_python">
-<a href="#fullloaderroredtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Errored<wbr>Tables</a>
+        <span id="full_load_errored_tables_python">
+<a href="#full_load_errored_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>errored_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21202,8 +21202,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadloadingtables_python">
-<a href="#fullloadloadingtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Loading<wbr>Tables</a>
+        <span id="full_load_loading_tables_python">
+<a href="#full_load_loading_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>loading_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21212,8 +21212,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadqueuedtables_python">
-<a href="#fullloadqueuedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Queued<wbr>Tables</a>
+        <span id="full_load_queued_tables_python">
+<a href="#full_load_queued_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>queued_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21232,8 +21232,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="incomingchanges_python">
-<a href="#incomingchanges_python" style="color: inherit; text-decoration: inherit;">incoming<wbr>Changes</a>
+        <span id="incoming_changes_python">
+<a href="#incoming_changes_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -21242,8 +21242,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="initializationcompleted_python">
-<a href="#initializationcompleted_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Completed</a>
+        <span id="initialization_completed_python">
+<a href="#initialization_completed_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>completed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -21272,8 +21272,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21385,7 +21385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Dict[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
 
@@ -21650,8 +21650,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21670,8 +21670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserver_python">
-<a href="#sourceserver_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server</a>
+        <span id="source_server_python">
+<a href="#source_server_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21680,8 +21680,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21690,8 +21690,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21700,8 +21700,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserver_python">
-<a href="#targetserver_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server</a>
+        <span id="target_server_python">
+<a href="#target_server_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21710,8 +21710,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22179,8 +22179,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22189,8 +22189,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22199,8 +22199,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22209,8 +22209,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dataerrorscounter_python">
-<a href="#dataerrorscounter_python" style="color: inherit; text-decoration: inherit;">data<wbr>Errors<wbr>Counter</a>
+        <span id="data_errors_counter_python">
+<a href="#data_errors_counter_python" style="color: inherit; text-decoration: inherit;">data_<wbr>errors_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -22229,8 +22229,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadendedon_python">
-<a href="#fullloadendedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Ended<wbr>On</a>
+        <span id="full_load_ended_on_python">
+<a href="#full_load_ended_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22239,8 +22239,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadestfinishtime_python">
-<a href="#fullloadestfinishtime_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Est<wbr>Finish<wbr>Time</a>
+        <span id="full_load_est_finish_time_python">
+<a href="#full_load_est_finish_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>est_<wbr>finish_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22249,8 +22249,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadstartedon_python">
-<a href="#fullloadstartedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Started<wbr>On</a>
+        <span id="full_load_started_on_python">
+<a href="#full_load_started_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -22259,8 +22259,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadtotalrows_python">
-<a href="#fullloadtotalrows_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Total<wbr>Rows</a>
+        <span id="full_load_total_rows_python">
+<a href="#full_load_total_rows_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>total_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -22309,8 +22309,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totalchangesapplied_python">
-<a href="#totalchangesapplied_python" style="color: inherit; text-decoration: inherit;">total<wbr>Changes<wbr>Applied</a>
+        <span id="total_changes_applied_python">
+<a href="#total_changes_applied_python" style="color: inherit; text-decoration: inherit;">total_<wbr>changes_<wbr>applied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -22418,11 +22418,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -22432,7 +22432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Dict[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -22661,7 +22661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -22671,7 +22671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -22681,7 +22681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -22697,11 +22697,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -22711,7 +22711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Dict[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -22816,11 +22816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -22830,7 +22830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinput">Dict[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinput">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -23059,7 +23059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -23069,7 +23069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -23079,7 +23079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -23095,11 +23095,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -23109,7 +23109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinputresponse">Dict[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinputresponse">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -23394,8 +23394,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="casemanipulation_python">
-<a href="#casemanipulation_python" style="color: inherit; text-decoration: inherit;">case<wbr>Manipulation</a>
+        <span id="case_manipulation_python">
+<a href="#case_manipulation_python" style="color: inherit; text-decoration: inherit;">case_<wbr>manipulation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23404,11 +23404,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -23434,28 +23434,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23464,11 +23464,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -23753,8 +23753,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="casemanipulation_python">
-<a href="#casemanipulation_python" style="color: inherit; text-decoration: inherit;">case<wbr>Manipulation</a>
+        <span id="case_manipulation_python">
+<a href="#case_manipulation_python" style="color: inherit; text-decoration: inherit;">case_<wbr>manipulation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23763,11 +23763,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -23793,28 +23793,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -23823,11 +23823,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -23962,11 +23962,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsyncdatabaseinput">List[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsyncdatabaseinput">Sequence[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -23976,7 +23976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oracleconnectioninfo">Dict[Oracle<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#oracleconnectioninfo">Oracle<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source Oracle{{% /md %}}</dd>
 
@@ -23986,7 +23986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd>
 
@@ -24121,11 +24121,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsyncdatabaseinputresponse">List[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsyncdatabaseinputresponse">Sequence[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -24135,7 +24135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oracleconnectioninforesponse">Dict[Oracle<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#oracleconnectioninforesponse">Oracle<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source Oracle{{% /md %}}</dd>
 
@@ -24145,7 +24145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd>
 
@@ -24304,7 +24304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd>
 
@@ -24829,8 +24829,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="appliedchanges_python">
-<a href="#appliedchanges_python" style="color: inherit; text-decoration: inherit;">applied<wbr>Changes</a>
+        <span id="applied_changes_python">
+<a href="#applied_changes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24839,8 +24839,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24849,8 +24849,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24859,8 +24859,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24879,8 +24879,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24889,8 +24889,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadcompletedtables_python">
-<a href="#fullloadcompletedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Completed<wbr>Tables</a>
+        <span id="full_load_completed_tables_python">
+<a href="#full_load_completed_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>completed_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24899,8 +24899,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloaderroredtables_python">
-<a href="#fullloaderroredtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Errored<wbr>Tables</a>
+        <span id="full_load_errored_tables_python">
+<a href="#full_load_errored_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>errored_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24909,8 +24909,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadloadingtables_python">
-<a href="#fullloadloadingtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Loading<wbr>Tables</a>
+        <span id="full_load_loading_tables_python">
+<a href="#full_load_loading_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>loading_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24919,8 +24919,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadqueuedtables_python">
-<a href="#fullloadqueuedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Queued<wbr>Tables</a>
+        <span id="full_load_queued_tables_python">
+<a href="#full_load_queued_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>queued_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24939,8 +24939,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="incomingchanges_python">
-<a href="#incomingchanges_python" style="color: inherit; text-decoration: inherit;">incoming<wbr>Changes</a>
+        <span id="incoming_changes_python">
+<a href="#incoming_changes_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -24949,8 +24949,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="initializationcompleted_python">
-<a href="#initializationcompleted_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Completed</a>
+        <span id="initialization_completed_python">
+<a href="#initialization_completed_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>completed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -24979,8 +24979,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25092,7 +25092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Dict[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
 
@@ -25357,8 +25357,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25377,8 +25377,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserver_python">
-<a href="#sourceserver_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server</a>
+        <span id="source_server_python">
+<a href="#source_server_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25387,8 +25387,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25397,8 +25397,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25407,8 +25407,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserver_python">
-<a href="#targetserver_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server</a>
+        <span id="target_server_python">
+<a href="#target_server_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25417,8 +25417,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25886,8 +25886,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -25896,8 +25896,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -25906,8 +25906,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -25916,8 +25916,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dataerrorscounter_python">
-<a href="#dataerrorscounter_python" style="color: inherit; text-decoration: inherit;">data<wbr>Errors<wbr>Counter</a>
+        <span id="data_errors_counter_python">
+<a href="#data_errors_counter_python" style="color: inherit; text-decoration: inherit;">data_<wbr>errors_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -25936,8 +25936,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadendedon_python">
-<a href="#fullloadendedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Ended<wbr>On</a>
+        <span id="full_load_ended_on_python">
+<a href="#full_load_ended_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25946,8 +25946,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadestfinishtime_python">
-<a href="#fullloadestfinishtime_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Est<wbr>Finish<wbr>Time</a>
+        <span id="full_load_est_finish_time_python">
+<a href="#full_load_est_finish_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>est_<wbr>finish_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25956,8 +25956,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadstartedon_python">
-<a href="#fullloadstartedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Started<wbr>On</a>
+        <span id="full_load_started_on_python">
+<a href="#full_load_started_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -25966,8 +25966,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadtotalrows_python">
-<a href="#fullloadtotalrows_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Total<wbr>Rows</a>
+        <span id="full_load_total_rows_python">
+<a href="#full_load_total_rows_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>total_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -26016,8 +26016,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totalchangesapplied_python">
-<a href="#totalchangesapplied_python" style="color: inherit; text-decoration: inherit;">total<wbr>Changes<wbr>Applied</a>
+        <span id="total_changes_applied_python">
+<a href="#total_changes_applied_python" style="color: inherit; text-decoration: inherit;">total_<wbr>changes_<wbr>applied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -26245,11 +26245,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -26265,28 +26265,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedtables_python">
-<a href="#selectedtables_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Tables</a>
+        <span id="selected_tables_python">
+<a href="#selected_tables_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinput">List[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinput">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tables selected for migration{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -26295,11 +26295,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -26524,11 +26524,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -26544,28 +26544,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedtables_python">
-<a href="#selectedtables_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Tables</a>
+        <span id="selected_tables_python">
+<a href="#selected_tables_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinputresponse">List[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinputresponse">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tables selected for migration{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -26574,11 +26574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -26871,11 +26871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">List[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -26885,7 +26885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd>
 
@@ -26895,7 +26895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd>
 
@@ -27030,11 +27030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">List[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -27044,7 +27044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd>
 
@@ -27054,7 +27054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd>
 
@@ -27213,7 +27213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd>
 
@@ -27738,8 +27738,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="appliedchanges_python">
-<a href="#appliedchanges_python" style="color: inherit; text-decoration: inherit;">applied<wbr>Changes</a>
+        <span id="applied_changes_python">
+<a href="#applied_changes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27748,8 +27748,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27758,8 +27758,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27768,8 +27768,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27788,8 +27788,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -27798,8 +27798,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadcompletedtables_python">
-<a href="#fullloadcompletedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Completed<wbr>Tables</a>
+        <span id="full_load_completed_tables_python">
+<a href="#full_load_completed_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>completed_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27808,8 +27808,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloaderroredtables_python">
-<a href="#fullloaderroredtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Errored<wbr>Tables</a>
+        <span id="full_load_errored_tables_python">
+<a href="#full_load_errored_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>errored_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27818,8 +27818,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadloadingtables_python">
-<a href="#fullloadloadingtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Loading<wbr>Tables</a>
+        <span id="full_load_loading_tables_python">
+<a href="#full_load_loading_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>loading_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27828,8 +27828,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadqueuedtables_python">
-<a href="#fullloadqueuedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Queued<wbr>Tables</a>
+        <span id="full_load_queued_tables_python">
+<a href="#full_load_queued_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>queued_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27848,8 +27848,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="incomingchanges_python">
-<a href="#incomingchanges_python" style="color: inherit; text-decoration: inherit;">incoming<wbr>Changes</a>
+        <span id="incoming_changes_python">
+<a href="#incoming_changes_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -27858,8 +27858,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="initializationcompleted_python">
-<a href="#initializationcompleted_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Completed</a>
+        <span id="initialization_completed_python">
+<a href="#initialization_completed_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>completed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -27888,8 +27888,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28001,7 +28001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Dict[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
 
@@ -28356,8 +28356,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28376,8 +28376,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserver_python">
-<a href="#sourceserver_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server</a>
+        <span id="source_server_python">
+<a href="#source_server_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28386,8 +28386,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceservertype_python">
-<a href="#sourceservertype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Type</a>
+        <span id="source_server_type_python">
+<a href="#source_server_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28396,8 +28396,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28406,8 +28406,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28426,8 +28426,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserver_python">
-<a href="#targetserver_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server</a>
+        <span id="target_server_python">
+<a href="#target_server_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28436,8 +28436,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetservertype_python">
-<a href="#targetservertype_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Type</a>
+        <span id="target_server_type_python">
+<a href="#target_server_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28446,8 +28446,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28915,8 +28915,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -28925,8 +28925,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -28935,8 +28935,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -28945,8 +28945,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dataerrorscounter_python">
-<a href="#dataerrorscounter_python" style="color: inherit; text-decoration: inherit;">data<wbr>Errors<wbr>Counter</a>
+        <span id="data_errors_counter_python">
+<a href="#data_errors_counter_python" style="color: inherit; text-decoration: inherit;">data_<wbr>errors_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -28965,8 +28965,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadendedon_python">
-<a href="#fullloadendedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Ended<wbr>On</a>
+        <span id="full_load_ended_on_python">
+<a href="#full_load_ended_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28975,8 +28975,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadestfinishtime_python">
-<a href="#fullloadestfinishtime_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Est<wbr>Finish<wbr>Time</a>
+        <span id="full_load_est_finish_time_python">
+<a href="#full_load_est_finish_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>est_<wbr>finish_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28985,8 +28985,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadstartedon_python">
-<a href="#fullloadstartedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Started<wbr>On</a>
+        <span id="full_load_started_on_python">
+<a href="#full_load_started_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28995,8 +28995,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadtotalrows_python">
-<a href="#fullloadtotalrows_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Total<wbr>Rows</a>
+        <span id="full_load_total_rows_python">
+<a href="#full_load_total_rows_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>total_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -29045,8 +29045,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totalchangesapplied_python">
-<a href="#totalchangesapplied_python" style="color: inherit; text-decoration: inherit;">total<wbr>Changes<wbr>Applied</a>
+        <span id="total_changes_applied_python">
+<a href="#total_changes_applied_python" style="color: inherit; text-decoration: inherit;">total_<wbr>changes_<wbr>applied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -29154,11 +29154,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -29168,7 +29168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Dict[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -29397,7 +29397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -29407,7 +29407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -29417,7 +29417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -29433,11 +29433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -29447,7 +29447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Dict[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -29612,8 +29612,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="makesourcedbreadonly_python">
-<a href="#makesourcedbreadonly_python" style="color: inherit; text-decoration: inherit;">make<wbr>Source<wbr>Db<wbr>Read<wbr>Only</a>
+        <span id="make_source_db_read_only_python">
+<a href="#make_source_db_read_only_python" style="color: inherit; text-decoration: inherit;">make_<wbr>source_<wbr>db_<wbr>read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -29632,18 +29632,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -29811,8 +29811,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="makesourcedbreadonly_python">
-<a href="#makesourcedbreadonly_python" style="color: inherit; text-decoration: inherit;">make<wbr>Source<wbr>Db<wbr>Read<wbr>Only</a>
+        <span id="make_source_db_read_only_python">
+<a href="#make_source_db_read_only_python" style="color: inherit; text-decoration: inherit;">make_<wbr>source_<wbr>db_<wbr>read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -29831,18 +29831,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -30140,11 +30140,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -30170,28 +30170,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -30200,11 +30200,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -30499,11 +30499,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationsetting_python">
-<a href="#migrationsetting_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Setting</a>
+        <span id="migration_setting_python">
+<a href="#migration_setting_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Migration settings which tune the migration behavior{{% /md %}}</dd>
 
@@ -30529,28 +30529,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesetting_python">
-<a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
+        <span id="source_setting_python">
+<a href="#source_setting_python" style="color: inherit; text-decoration: inherit;">source_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablemap_python">
-<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+        <span id="table_map_python">
+<a href="#table_map_python" style="color: inherit; text-decoration: inherit;">table_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -30559,11 +30559,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsetting_python">
-<a href="#targetsetting_python" style="color: inherit; text-decoration: inherit;">target<wbr>Setting</a>
+        <span id="target_setting_python">
+<a href="#target_setting_python" style="color: inherit; text-decoration: inherit;">target_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
 
@@ -30728,11 +30728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -30742,7 +30742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -30752,17 +30752,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationoptions_python">
-<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+        <span id="validation_options_python">
+<a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Dict[Migration<wbr>Validation<wbr>Options]</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd>
 
@@ -30927,11 +30927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -30941,7 +30941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -30951,17 +30951,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationoptions_python">
-<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+        <span id="validation_options_python">
+<a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Dict[Migration<wbr>Validation<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd>
 
@@ -31120,7 +31120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd>
 
@@ -31645,8 +31645,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="appliedchanges_python">
-<a href="#appliedchanges_python" style="color: inherit; text-decoration: inherit;">applied<wbr>Changes</a>
+        <span id="applied_changes_python">
+<a href="#applied_changes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31655,8 +31655,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31665,8 +31665,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31675,8 +31675,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31695,8 +31695,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -31705,8 +31705,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadcompletedtables_python">
-<a href="#fullloadcompletedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Completed<wbr>Tables</a>
+        <span id="full_load_completed_tables_python">
+<a href="#full_load_completed_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>completed_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31715,8 +31715,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloaderroredtables_python">
-<a href="#fullloaderroredtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Errored<wbr>Tables</a>
+        <span id="full_load_errored_tables_python">
+<a href="#full_load_errored_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>errored_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31725,8 +31725,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadloadingtables_python">
-<a href="#fullloadloadingtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Loading<wbr>Tables</a>
+        <span id="full_load_loading_tables_python">
+<a href="#full_load_loading_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>loading_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31735,8 +31735,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadqueuedtables_python">
-<a href="#fullloadqueuedtables_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Queued<wbr>Tables</a>
+        <span id="full_load_queued_tables_python">
+<a href="#full_load_queued_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>queued_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31755,8 +31755,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="incomingchanges_python">
-<a href="#incomingchanges_python" style="color: inherit; text-decoration: inherit;">incoming<wbr>Changes</a>
+        <span id="incoming_changes_python">
+<a href="#incoming_changes_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -31765,8 +31765,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="initializationcompleted_python">
-<a href="#initializationcompleted_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Completed</a>
+        <span id="initialization_completed_python">
+<a href="#initialization_completed_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>completed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -31795,8 +31795,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -31908,7 +31908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Dict[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
 
@@ -32203,8 +32203,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="databasecount_python">
-<a href="#databasecount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Count</a>
+        <span id="database_count_python">
+<a href="#database_count_python" style="color: inherit; text-decoration: inherit;">database_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -32213,8 +32213,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32233,8 +32233,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserver_python">
-<a href="#sourceserver_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server</a>
+        <span id="source_server_python">
+<a href="#source_server_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32243,8 +32243,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32253,8 +32253,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32263,8 +32263,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserver_python">
-<a href="#targetserver_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server</a>
+        <span id="target_server_python">
+<a href="#target_server_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32273,8 +32273,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32742,8 +32742,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcdeletecounter_python">
-<a href="#cdcdeletecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Delete<wbr>Counter</a>
+        <span id="cdc_delete_counter_python">
+<a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -32752,8 +32752,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcinsertcounter_python">
-<a href="#cdcinsertcounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Insert<wbr>Counter</a>
+        <span id="cdc_insert_counter_python">
+<a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -32762,8 +32762,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="cdcupdatecounter_python">
-<a href="#cdcupdatecounter_python" style="color: inherit; text-decoration: inherit;">cdc<wbr>Update<wbr>Counter</a>
+        <span id="cdc_update_counter_python">
+<a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -32772,8 +32772,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dataerrorscounter_python">
-<a href="#dataerrorscounter_python" style="color: inherit; text-decoration: inherit;">data<wbr>Errors<wbr>Counter</a>
+        <span id="data_errors_counter_python">
+<a href="#data_errors_counter_python" style="color: inherit; text-decoration: inherit;">data_<wbr>errors_<wbr>counter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -32792,8 +32792,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadendedon_python">
-<a href="#fullloadendedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Ended<wbr>On</a>
+        <span id="full_load_ended_on_python">
+<a href="#full_load_ended_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32802,8 +32802,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadestfinishtime_python">
-<a href="#fullloadestfinishtime_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Est<wbr>Finish<wbr>Time</a>
+        <span id="full_load_est_finish_time_python">
+<a href="#full_load_est_finish_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>est_<wbr>finish_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32812,8 +32812,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadstartedon_python">
-<a href="#fullloadstartedon_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Started<wbr>On</a>
+        <span id="full_load_started_on_python">
+<a href="#full_load_started_on_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -32822,8 +32822,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fullloadtotalrows_python">
-<a href="#fullloadtotalrows_python" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>Total<wbr>Rows</a>
+        <span id="full_load_total_rows_python">
+<a href="#full_load_total_rows_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>total_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -32872,8 +32872,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totalchangesapplied_python">
-<a href="#totalchangesapplied_python" style="color: inherit; text-decoration: inherit;">total<wbr>Changes<wbr>Applied</a>
+        <span id="total_changes_applied_python">
+<a href="#total_changes_applied_python" style="color: inherit; text-decoration: inherit;">total_<wbr>changes_<wbr>applied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -32981,11 +32981,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -32995,7 +32995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -33224,7 +33224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -33234,7 +33234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -33244,7 +33244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -33260,11 +33260,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -33274,7 +33274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -33445,11 +33445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -33459,7 +33459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -33469,17 +33469,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationoptions_python">
-<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+        <span id="validation_options_python">
+<a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Dict[Migration<wbr>Validation<wbr>Options]</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -33652,11 +33652,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -33666,7 +33666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -33676,17 +33676,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationoptions_python">
-<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+        <span id="validation_options_python">
+<a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Dict[Migration<wbr>Validation<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -34193,8 +34193,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -34203,8 +34203,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="errorcount_python">
-<a href="#errorcount_python" style="color: inherit; text-decoration: inherit;">error<wbr>Count</a>
+        <span id="error_count_python">
+<a href="#error_count_python" style="color: inherit; text-decoration: inherit;">error_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -34213,8 +34213,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="errorprefix_python">
-<a href="#errorprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+        <span id="error_prefix_python">
+<a href="#error_prefix_python" style="color: inherit; text-decoration: inherit;">error_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -34223,11 +34223,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
 
@@ -34253,8 +34253,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="numberofobjects_python">
-<a href="#numberofobjects_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Objects</a>
+        <span id="number_of_objects_python">
+<a href="#number_of_objects_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>objects</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -34263,8 +34263,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="numberofobjectscompleted_python">
-<a href="#numberofobjectscompleted_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Objects<wbr>Completed</a>
+        <span id="number_of_objects_completed_python">
+<a href="#number_of_objects_completed_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>objects_<wbr>completed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -34273,18 +34273,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="objectsummary_python">
-<a href="#objectsummary_python" style="color: inherit; text-decoration: inherit;">object<wbr>Summary</a>
+        <span id="object_summary_python">
+<a href="#object_summary_python" style="color: inherit; text-decoration: inherit;">object_<wbr>summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="resultprefix_python">
-<a href="#resultprefix_python" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+        <span id="result_prefix_python">
+<a href="#result_prefix_python" style="color: inherit; text-decoration: inherit;">result_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -34303,8 +34303,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -34515,7 +34515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Dict[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
 
@@ -35050,11 +35050,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="databasesummary_python">
-<a href="#databasesummary_python" style="color: inherit; text-decoration: inherit;">database<wbr>Summary</a>
+        <span id="database_summary_python">
+<a href="#database_summary_python" style="color: inherit; text-decoration: inherit;">database_<wbr>summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Database<wbr>Summary<wbr>Result<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd>
 
@@ -35064,14 +35064,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="durationinseconds_python">
-<a href="#durationinseconds_python" style="color: inherit; text-decoration: inherit;">duration<wbr>In<wbr>Seconds</a>
+        <span id="duration_in_seconds_python">
+<a href="#duration_in_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -35080,8 +35080,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35090,11 +35090,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
 
@@ -35120,8 +35120,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverbrandversion_python">
-<a href="#sourceserverbrandversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="source_server_brand_version_python">
+<a href="#source_server_brand_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35130,8 +35130,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35140,8 +35140,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35170,8 +35170,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35180,8 +35180,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35190,21 +35190,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationreportresult_python">
-<a href="#migrationreportresult_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Report<wbr>Result</a>
+        <span id="migration_report_result_python">
+<a href="#migration_report_result_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>report_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationreportresultresponse">Dict[Migration<wbr>Report<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrationreportresultresponse">Migration<wbr>Report<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Report Result, provides unique url for downloading your migration report.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationvalidationresult_python">
-<a href="#migrationvalidationresult_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Validation<wbr>Result</a>
+        <span id="migration_validation_result_python">
+<a href="#migration_validation_result_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>validation_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationresultresponse">Dict[Migration<wbr>Validation<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrationvalidationresultresponse">Migration<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Validation Results{{% /md %}}</dd>
 
@@ -35549,8 +35549,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35559,8 +35559,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="errorprefix_python">
-<a href="#errorprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+        <span id="error_prefix_python">
+<a href="#error_prefix_python" style="color: inherit; text-decoration: inherit;">error_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35579,8 +35579,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="itemscompletedcount_python">
-<a href="#itemscompletedcount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
+        <span id="items_completed_count_python">
+<a href="#items_completed_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>completed_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -35589,8 +35589,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="itemscount_python">
-<a href="#itemscount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
+        <span id="items_count_python">
+<a href="#items_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -35599,8 +35599,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="objectname_python">
-<a href="#objectname_python" style="color: inherit; text-decoration: inherit;">object<wbr>Name</a>
+        <span id="object_name_python">
+<a href="#object_name_python" style="color: inherit; text-decoration: inherit;">object_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35609,8 +35609,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="resultprefix_python">
-<a href="#resultprefix_python" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+        <span id="result_prefix_python">
+<a href="#result_prefix_python" style="color: inherit; text-decoration: inherit;">result_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35619,8 +35619,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35827,11 +35827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -35841,7 +35841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -36070,7 +36070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -36080,7 +36080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -36090,7 +36090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -36106,11 +36106,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -36120,7 +36120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -36295,8 +36295,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="restoredatabasename_python">
-<a href="#restoredatabasename_python" style="color: inherit; text-decoration: inherit;">restore<wbr>Database<wbr>Name</a>
+        <span id="restore_database_name_python">
+<a href="#restore_database_name_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -36305,21 +36305,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfilepaths_python">
-<a href="#backupfilepaths_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Paths</a>
+        <span id="backup_file_paths_python">
+<a href="#backup_file_paths_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of backup files to be used in case of existing backups.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Dict[File<wbr>Share]</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd>
 
@@ -36494,8 +36494,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="restoredatabasename_python">
-<a href="#restoredatabasename_python" style="color: inherit; text-decoration: inherit;">restore<wbr>Database<wbr>Name</a>
+        <span id="restore_database_name_python">
+<a href="#restore_database_name_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -36504,21 +36504,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfilepaths_python">
-<a href="#backupfilepaths_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Paths</a>
+        <span id="backup_file_paths_python">
+<a href="#backup_file_paths_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of backup files to be used in case of existing backups.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Dict[File<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd>
 
@@ -36743,21 +36743,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azureapp_python">
-<a href="#azureapp_python" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
+        <span id="azure_app_python">
+<a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Dict[Azure<wbr>Active<wbr>Directory<wbr>App]</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -36767,14 +36767,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="storageresourceid_python">
-<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+        <span id="storage_resource_id_python">
+<a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -36787,17 +36787,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Dict[File<wbr>Share]</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
@@ -37022,21 +37022,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azureapp_python">
-<a href="#azureapp_python" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
+        <span id="azure_app_python">
+<a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Dict[Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -37046,14 +37046,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="storageresourceid_python">
-<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+        <span id="storage_resource_id_python">
+<a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -37066,17 +37066,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Dict[File<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
@@ -37481,11 +37481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="activebackupsets_python">
-<a href="#activebackupsets_python" style="color: inherit; text-decoration: inherit;">active<wbr>Backup<wbr>Sets</a>
+        <span id="active_backup_sets_python">
+<a href="#active_backup_sets_python" style="color: inherit; text-decoration: inherit;">active_<wbr>backup_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">List[Backup<wbr>Set<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Sequence[Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backup sets that are currently active (Either being uploaded or getting restored){{% /md %}}</dd>
 
@@ -37501,8 +37501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -37511,8 +37511,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="errorprefix_python">
-<a href="#errorprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+        <span id="error_prefix_python">
+<a href="#error_prefix_python" style="color: inherit; text-decoration: inherit;">error_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -37521,21 +37521,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="fullbackupsetinfo_python">
-<a href="#fullbackupsetinfo_python" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Set<wbr>Info</a>
+        <span id="full_backup_set_info_python">
+<a href="#full_backup_set_info_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>set_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Dict[Backup<wbr>Set<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of full backup set{{% /md %}}</dd>
 
@@ -37551,8 +37551,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isfullbackuprestored_python">
-<a href="#isfullbackuprestored_python" style="color: inherit; text-decoration: inherit;">is<wbr>Full<wbr>Backup<wbr>Restored</a>
+        <span id="is_full_backup_restored_python">
+<a href="#is_full_backup_restored_python" style="color: inherit; text-decoration: inherit;">is_<wbr>full_<wbr>backup_<wbr>restored</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -37561,11 +37561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lastrestoredbackupsetinfo_python">
-<a href="#lastrestoredbackupsetinfo_python" style="color: inherit; text-decoration: inherit;">last<wbr>Restored<wbr>Backup<wbr>Set<wbr>Info</a>
+        <span id="last_restored_backup_set_info_python">
+<a href="#last_restored_backup_set_info_python" style="color: inherit; text-decoration: inherit;">last_<wbr>restored_<wbr>backup_<wbr>set_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Dict[Backup<wbr>Set<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Last applied backup set information{{% /md %}}</dd>
 
@@ -37581,8 +37581,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedatabasename_python">
-<a href="#sourcedatabasename_python" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Name</a>
+        <span id="source_database_name_python">
+<a href="#source_database_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -37591,8 +37591,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -37704,7 +37704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Dict[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
 
@@ -38119,8 +38119,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="databasecount_python">
-<a href="#databasecount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Count</a>
+        <span id="database_count_python">
+<a href="#database_count_python" style="color: inherit; text-decoration: inherit;">database_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -38129,8 +38129,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="databaseerrorcount_python">
-<a href="#databaseerrorcount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Error<wbr>Count</a>
+        <span id="database_error_count_python">
+<a href="#database_error_count_python" style="color: inherit; text-decoration: inherit;">database_<wbr>error_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -38139,8 +38139,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38159,8 +38159,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverbrandversion_python">
-<a href="#sourceserverbrandversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="source_server_brand_version_python">
+<a href="#source_server_brand_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38169,8 +38169,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceservername_python">
-<a href="#sourceservername_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Name</a>
+        <span id="source_server_name_python">
+<a href="#source_server_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38179,8 +38179,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38189,8 +38189,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38209,8 +38209,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38219,8 +38219,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetservername_python">
-<a href="#targetservername_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Name</a>
+        <span id="target_server_name_python">
+<a href="#target_server_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38229,8 +38229,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38338,11 +38338,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -38352,7 +38352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -38581,7 +38581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -38591,7 +38591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -38601,7 +38601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -38617,11 +38617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -38631,7 +38631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -38946,21 +38946,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupblobshare_python">
-<a href="#backupblobshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
+        <span id="backup_blob_share_python">
+<a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Dict[Blob<wbr>Share]</a></span>
+        <span class="property-type"><a href="#blobshare">Blob<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -38970,7 +38970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -38980,14 +38980,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aaddomainname_python">
-<a href="#aaddomainname_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Domain<wbr>Name</a>
+        <span id="aad_domain_name_python">
+<a href="#aad_domain_name_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>domain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -38996,18 +38996,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Dict[File<wbr>Share]</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmode_python">
-<a href="#backupmode_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Mode</a>
+        <span id="backup_mode_python">
+<a href="#backup_mode_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -39016,21 +39016,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedagentjobs_python">
-<a href="#selectedagentjobs_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Agent<wbr>Jobs</a>
+        <span id="selected_agent_jobs_python">
+<a href="#selected_agent_jobs_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Agent Jobs to migrate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedlogins_python">
-<a href="#selectedlogins_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Logins</a>
+        <span id="selected_logins_python">
+<a href="#selected_logins_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Logins to migrate.{{% /md %}}</dd>
 
@@ -39345,21 +39345,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupblobshare_python">
-<a href="#backupblobshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
+        <span id="backup_blob_share_python">
+<a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Dict[Blob<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -39369,7 +39369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -39379,14 +39379,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aaddomainname_python">
-<a href="#aaddomainname_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Domain<wbr>Name</a>
+        <span id="aad_domain_name_python">
+<a href="#aad_domain_name_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>domain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -39395,18 +39395,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Dict[File<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmode_python">
-<a href="#backupmode_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Mode</a>
+        <span id="backup_mode_python">
+<a href="#backup_mode_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -39415,21 +39415,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedagentjobs_python">
-<a href="#selectedagentjobs_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Agent<wbr>Jobs</a>
+        <span id="selected_agent_jobs_python">
+<a href="#selected_agent_jobs_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Agent Jobs to migrate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedlogins_python">
-<a href="#selectedlogins_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Logins</a>
+        <span id="selected_logins_python">
+<a href="#selected_logins_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Logins to migrate.{{% /md %}}</dd>
 
@@ -39714,8 +39714,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -39724,11 +39724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration errors and warnings per job{{% /md %}}</dd>
 
@@ -39774,8 +39774,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -40113,8 +40113,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -40123,11 +40123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd>
 
@@ -40153,8 +40153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sizemb_python">
-<a href="#sizemb_python" style="color: inherit; text-decoration: inherit;">size<wbr>MB</a>
+        <span id="size_mb_python">
+<a href="#size_mb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -40173,8 +40173,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -40296,7 +40296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Dict[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd>
 
@@ -40591,8 +40591,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -40601,11 +40601,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Login migration errors and warnings per login{{% /md %}}</dd>
 
@@ -40621,8 +40621,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="loginname_python">
-<a href="#loginname_python" style="color: inherit; text-decoration: inherit;">login<wbr>Name</a>
+        <span id="login_name_python">
+<a href="#login_name_python" style="color: inherit; text-decoration: inherit;">login_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -40651,8 +40651,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -41190,11 +41190,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="agentjobs_python">
-<a href="#agentjobs_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Jobs</a>
+        <span id="agent_jobs_python">
+<a href="#agent_jobs_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected agent jobs as a map from name to id{{% /md %}}</dd>
 
@@ -41204,14 +41204,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -41220,11 +41220,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
 
@@ -41244,7 +41244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logins_python" style="color: inherit; text-decoration: inherit;">logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected logins as a map from name to id{{% /md %}}</dd>
 
@@ -41260,28 +41260,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="orphanedusersinfo_python">
-<a href="#orphanedusersinfo_python" style="color: inherit; text-decoration: inherit;">orphaned<wbr>Users<wbr>Info</a>
+        <span id="orphaned_users_info_python">
+<a href="#orphaned_users_info_python" style="color: inherit; text-decoration: inherit;">orphaned_<wbr>users_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orphaneduserinforesponse">List[Orphaned<wbr>User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#orphaneduserinforesponse">Sequence[Orphaned<wbr>User<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of orphaned users.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serverroleresults_python">
-<a href="#serverroleresults_python" style="color: inherit; text-decoration: inherit;">server<wbr>Role<wbr>Results</a>
+        <span id="server_role_results_python">
+<a href="#server_role_results_python" style="color: inherit; text-decoration: inherit;">server_<wbr>role_<wbr>results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverbrandversion_python">
-<a href="#sourceserverbrandversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="source_server_brand_version_python">
+<a href="#source_server_brand_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -41290,8 +41290,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -41300,8 +41300,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -41330,8 +41330,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -41340,8 +41340,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -41449,11 +41449,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -41463,7 +41463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -41692,7 +41692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -41702,7 +41702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -41712,7 +41712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -41728,11 +41728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -41742,7 +41742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Dict[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -41881,17 +41881,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="ssismigrationinfo_python">
-<a href="#ssismigrationinfo_python" style="color: inherit; text-decoration: inherit;">ssis<wbr>Migration<wbr>Info</a>
+        <span id="ssis_migration_info_python">
+<a href="#ssis_migration_info_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>migration_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssismigrationinfo">Dict[Ssis<wbr>Migration<wbr>Info]</a></span>
+        <span class="property-type"><a href="#ssismigrationinfo">Ssis<wbr>Migration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package migration information.{{% /md %}}</dd>
 
@@ -41901,7 +41901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -42040,17 +42040,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="ssismigrationinfo_python">
-<a href="#ssismigrationinfo_python" style="color: inherit; text-decoration: inherit;">ssis<wbr>Migration<wbr>Info</a>
+        <span id="ssis_migration_info_python">
+<a href="#ssis_migration_info_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>migration_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssismigrationinforesponse">Dict[Ssis<wbr>Migration<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ssismigrationinforesponse">Ssis<wbr>Migration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package migration information.{{% /md %}}</dd>
 
@@ -42060,7 +42060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -42435,8 +42435,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42445,11 +42445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
 
@@ -42475,8 +42475,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverbrandversion_python">
-<a href="#sourceserverbrandversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="source_server_brand_version_python">
+<a href="#source_server_brand_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42485,8 +42485,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverversion_python">
-<a href="#sourceserverversion_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Version</a>
+        <span id="source_server_version_python">
+<a href="#source_server_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42505,8 +42505,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42525,8 +42525,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverbrandversion_python">
-<a href="#targetserverbrandversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Brand<wbr>Version</a>
+        <span id="target_server_brand_version_python">
+<a href="#target_server_brand_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>brand_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42535,8 +42535,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetserverversion_python">
-<a href="#targetserverversion_python" style="color: inherit; text-decoration: inherit;">target<wbr>Server<wbr>Version</a>
+        <span id="target_server_version_python">
+<a href="#target_server_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42854,8 +42854,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42864,18 +42864,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="foldername_python">
-<a href="#foldername_python" style="color: inherit; text-decoration: inherit;">folder<wbr>Name</a>
+        <span id="folder_name_python">
+<a href="#folder_name_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42924,8 +42924,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -43043,11 +43043,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -43057,7 +43057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratessistaskinput">Dict[Migrate<wbr>Ssis<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratessistaskinput">Migrate<wbr>Ssis<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -43286,7 +43286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -43296,7 +43296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -43306,7 +43306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Ssis<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Ssis<wbr>Task<wbr>Output<wbr>Project<wbr>Level<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Ssis<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Ssis<wbr>Task<wbr>Output<wbr>Project<wbr>Level<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -43322,11 +43322,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -43336,7 +43336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratessistaskinputresponse">Dict[Migrate<wbr>Ssis<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratessistaskinputresponse">Migrate<wbr>Ssis<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -43451,8 +43451,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="committimestamp_python">
-<a href="#committimestamp_python" style="color: inherit; text-decoration: inherit;">commit<wbr>Time<wbr>Stamp</a>
+        <span id="commit_time_stamp_python">
+<a href="#commit_time_stamp_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>time_<wbr>stamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -43564,7 +43564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd>
 
@@ -43743,7 +43743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -43753,7 +43753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Dict[Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -43773,7 +43773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Dict[Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd>
 
@@ -43878,8 +43878,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="iseligibleformigration_python">
-<a href="#iseligibleformigration_python" style="color: inherit; text-decoration: inherit;">is<wbr>Eligible<wbr>For<wbr>Migration</a>
+        <span id="is_eligible_for_migration_python">
+<a href="#is_eligible_for_migration_python" style="color: inherit; text-decoration: inherit;">is_<wbr>eligible_<wbr>for_<wbr>migration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -43888,11 +43888,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationmessages_python">
-<a href="#validationmessages_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Messages</a>
+        <span id="validation_messages_python">
+<a href="#validation_messages_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>messages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility failure for the server object.{{% /md %}}</dd>
 
@@ -44007,8 +44007,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reporturl_python">
-<a href="#reporturl_python" style="color: inherit; text-decoration: inherit;">report<wbr>Url</a>
+        <span id="report_url_python">
+<a href="#report_url_python" style="color: inherit; text-decoration: inherit;">report_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -44266,8 +44266,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endedon_python">
-<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+        <span id="ended_on_python">
+<a href="#ended_on_python" style="color: inherit; text-decoration: inherit;">ended_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -44286,8 +44286,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="migrationid_python">
-<a href="#migrationid_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Id</a>
+        <span id="migration_id_python">
+<a href="#migration_id_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -44296,8 +44296,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedatabasename_python">
-<a href="#sourcedatabasename_python" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Name</a>
+        <span id="source_database_name_python">
+<a href="#source_database_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -44306,8 +44306,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startedon_python">
-<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+        <span id="started_on_python">
+<a href="#started_on_python" style="color: inherit; text-decoration: inherit;">started_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -44326,8 +44326,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetdatabasename_python">
-<a href="#targetdatabasename_python" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
+        <span id="target_database_name_python">
+<a href="#target_database_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -44465,8 +44465,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enabledataintegrityvalidation_python">
-<a href="#enabledataintegrityvalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Data<wbr>Integrity<wbr>Validation</a>
+        <span id="enable_data_integrity_validation_python">
+<a href="#enable_data_integrity_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>data_<wbr>integrity_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -44475,8 +44475,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablequeryanalysisvalidation_python">
-<a href="#enablequeryanalysisvalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Query<wbr>Analysis<wbr>Validation</a>
+        <span id="enable_query_analysis_validation_python">
+<a href="#enable_query_analysis_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>query_<wbr>analysis_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -44485,8 +44485,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableschemavalidation_python">
-<a href="#enableschemavalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Schema<wbr>Validation</a>
+        <span id="enable_schema_validation_python">
+<a href="#enable_schema_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>schema_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -44624,8 +44624,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enabledataintegrityvalidation_python">
-<a href="#enabledataintegrityvalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Data<wbr>Integrity<wbr>Validation</a>
+        <span id="enable_data_integrity_validation_python">
+<a href="#enable_data_integrity_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>data_<wbr>integrity_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -44634,8 +44634,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablequeryanalysisvalidation_python">
-<a href="#enablequeryanalysisvalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Query<wbr>Analysis<wbr>Validation</a>
+        <span id="enable_query_analysis_validation_python">
+<a href="#enable_query_analysis_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>query_<wbr>analysis_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -44644,8 +44644,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableschemavalidation_python">
-<a href="#enableschemavalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Schema<wbr>Validation</a>
+        <span id="enable_schema_validation_python">
+<a href="#enable_schema_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>schema_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -44823,8 +44823,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="migrationid_python">
-<a href="#migrationid_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Id</a>
+        <span id="migration_id_python">
+<a href="#migration_id_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -44843,11 +44843,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summaryresults_python">
-<a href="#summaryresults_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Results</a>
+        <span id="summary_results_python">
+<a href="#summary_results_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Validation summary results for each database{{% /md %}}</dd>
 
@@ -45016,14 +45016,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbdatabaseinforesponse">List[Mongo<wbr>Db<wbr>Database<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbdatabaseinforesponse">Sequence[Mongo<wbr>Db<wbr>Database<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of non-system databases in the cluster{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="supportssharding_python">
-<a href="#supportssharding_python" style="color: inherit; text-decoration: inherit;">supports<wbr>Sharding</a>
+        <span id="supports_sharding_python">
+<a href="#supports_sharding_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>sharding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -45451,8 +45451,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="averagedocumentsize_python">
-<a href="#averagedocumentsize_python" style="color: inherit; text-decoration: inherit;">average<wbr>Document<wbr>Size</a>
+        <span id="average_document_size_python">
+<a href="#average_document_size_python" style="color: inherit; text-decoration: inherit;">average_<wbr>document_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -45461,8 +45461,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="datasize_python">
-<a href="#datasize_python" style="color: inherit; text-decoration: inherit;">data<wbr>Size</a>
+        <span id="data_size_python">
+<a href="#data_size_python" style="color: inherit; text-decoration: inherit;">data_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -45481,8 +45481,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="documentcount_python">
-<a href="#documentcount_python" style="color: inherit; text-decoration: inherit;">document<wbr>Count</a>
+        <span id="document_count_python">
+<a href="#document_count_python" style="color: inherit; text-decoration: inherit;">document_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -45491,8 +45491,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="iscapped_python">
-<a href="#iscapped_python" style="color: inherit; text-decoration: inherit;">is<wbr>Capped</a>
+        <span id="is_capped_python">
+<a href="#is_capped_python" style="color: inherit; text-decoration: inherit;">is_<wbr>capped</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -45501,8 +45501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="issystemcollection_python">
-<a href="#issystemcollection_python" style="color: inherit; text-decoration: inherit;">is<wbr>System<wbr>Collection</a>
+        <span id="is_system_collection_python">
+<a href="#is_system_collection_python" style="color: inherit; text-decoration: inherit;">is_<wbr>system_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -45511,8 +45511,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isview_python">
-<a href="#isview_python" style="color: inherit; text-decoration: inherit;">is<wbr>View</a>
+        <span id="is_view_python">
+<a href="#is_view_python" style="color: inherit; text-decoration: inherit;">is_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -45541,8 +45541,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="supportssharding_python">
-<a href="#supportssharding_python" style="color: inherit; text-decoration: inherit;">supports<wbr>Sharding</a>
+        <span id="supports_sharding_python">
+<a href="#supports_sharding_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>sharding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -45555,14 +45555,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_key_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbshardkeyinforesponse">Dict[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbshardkeyinforesponse">Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shard key on the collection, or null if the collection is not sharded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viewof_python">
-<a href="#viewof_python" style="color: inherit; text-decoration: inherit;">view<wbr>Of</a>
+        <span id="view_of_python">
+<a href="#view_of_python" style="color: inherit; text-decoration: inherit;">view_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -46000,8 +46000,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="bytescopied_python">
-<a href="#bytescopied_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Copied</a>
+        <span id="bytes_copied_python">
+<a href="#bytes_copied_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -46010,8 +46010,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="documentscopied_python">
-<a href="#documentscopied_python" style="color: inherit; text-decoration: inherit;">documents<wbr>Copied</a>
+        <span id="documents_copied_python">
+<a href="#documents_copied_python" style="color: inherit; text-decoration: inherit;">documents_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -46020,8 +46020,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="elapsedtime_python">
-<a href="#elapsedtime_python" style="color: inherit; text-decoration: inherit;">elapsed<wbr>Time</a>
+        <span id="elapsed_time_python">
+<a href="#elapsed_time_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -46034,14 +46034,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Error<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Error<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The errors and warnings that have occurred for the current object. The keys are the error codes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="eventspending_python">
-<a href="#eventspending_python" style="color: inherit; text-decoration: inherit;">events<wbr>Pending</a>
+        <span id="events_pending_python">
+<a href="#events_pending_python" style="color: inherit; text-decoration: inherit;">events_<wbr>pending</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -46050,8 +46050,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsreplayed_python">
-<a href="#eventsreplayed_python" style="color: inherit; text-decoration: inherit;">events<wbr>Replayed</a>
+        <span id="events_replayed_python">
+<a href="#events_replayed_python" style="color: inherit; text-decoration: inherit;">events_<wbr>replayed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -46070,16 +46070,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totaldocuments_python">
-<a href="#totaldocuments_python" style="color: inherit; text-decoration: inherit;">total<wbr>Documents</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="total_bytes_python">
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
 </span> 
@@ -46088,10 +46078,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="total_documents_python">
+<a href="#total_documents_python" style="color: inherit; text-decoration: inherit;">total_<wbr>documents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
-        <span id="lasteventtime_python">
-<a href="#lasteventtime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Event<wbr>Time</a>
+        <span id="last_event_time_python">
+<a href="#last_event_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>event_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -46100,8 +46100,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastreplaytime_python">
-<a href="#lastreplaytime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Replay<wbr>Time</a>
+        <span id="last_replay_time_python">
+<a href="#last_replay_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>replay_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -46259,8 +46259,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="candelete_python">
-<a href="#candelete_python" style="color: inherit; text-decoration: inherit;">can<wbr>Delete</a>
+        <span id="can_delete_python">
+<a href="#can_delete_python" style="color: inherit; text-decoration: inherit;">can_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -46273,14 +46273,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_key_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbshardkeysetting">Dict[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#mongodbshardkeysetting">Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a MongoDB shard key{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetrus_python">
-<a href="#targetrus_python" style="color: inherit; text-decoration: inherit;">target<wbr>RUs</a>
+        <span id="target_rus_python">
+<a href="#target_rus_python" style="color: inherit; text-decoration: inherit;">target_<wbr>rus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -46418,8 +46418,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="candelete_python">
-<a href="#candelete_python" style="color: inherit; text-decoration: inherit;">can<wbr>Delete</a>
+        <span id="can_delete_python">
+<a href="#can_delete_python" style="color: inherit; text-decoration: inherit;">can_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -46432,14 +46432,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_key_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbshardkeysettingresponse">Dict[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbshardkeysettingresponse">Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a MongoDB shard key{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetrus_python">
-<a href="#targetrus_python" style="color: inherit; text-decoration: inherit;">target<wbr>RUs</a>
+        <span id="target_rus_python">
+<a href="#target_rus_python" style="color: inherit; text-decoration: inherit;">target_<wbr>rus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47015,8 +47015,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="averagedocumentsize_python">
-<a href="#averagedocumentsize_python" style="color: inherit; text-decoration: inherit;">average<wbr>Document<wbr>Size</a>
+        <span id="average_document_size_python">
+<a href="#average_document_size_python" style="color: inherit; text-decoration: inherit;">average_<wbr>document_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47029,14 +47029,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collections_python" style="color: inherit; text-decoration: inherit;">collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcollectioninforesponse">List[Mongo<wbr>Db<wbr>Collection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbcollectioninforesponse">Sequence[Mongo<wbr>Db<wbr>Collection<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of supported collections in a MongoDB database{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="datasize_python">
-<a href="#datasize_python" style="color: inherit; text-decoration: inherit;">data<wbr>Size</a>
+        <span id="data_size_python">
+<a href="#data_size_python" style="color: inherit; text-decoration: inherit;">data_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47045,8 +47045,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="documentcount_python">
-<a href="#documentcount_python" style="color: inherit; text-decoration: inherit;">document<wbr>Count</a>
+        <span id="document_count_python">
+<a href="#document_count_python" style="color: inherit; text-decoration: inherit;">document_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47075,8 +47075,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="supportssharding_python">
-<a href="#supportssharding_python" style="color: inherit; text-decoration: inherit;">supports<wbr>Sharding</a>
+        <span id="supports_sharding_python">
+<a href="#supports_sharding_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>sharding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -47544,8 +47544,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="bytescopied_python">
-<a href="#bytescopied_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Copied</a>
+        <span id="bytes_copied_python">
+<a href="#bytes_copied_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47554,8 +47554,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="documentscopied_python">
-<a href="#documentscopied_python" style="color: inherit; text-decoration: inherit;">documents<wbr>Copied</a>
+        <span id="documents_copied_python">
+<a href="#documents_copied_python" style="color: inherit; text-decoration: inherit;">documents_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47564,8 +47564,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="elapsedtime_python">
-<a href="#elapsedtime_python" style="color: inherit; text-decoration: inherit;">elapsed<wbr>Time</a>
+        <span id="elapsed_time_python">
+<a href="#elapsed_time_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -47578,14 +47578,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Error<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Error<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The errors and warnings that have occurred for the current object. The keys are the error codes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="eventspending_python">
-<a href="#eventspending_python" style="color: inherit; text-decoration: inherit;">events<wbr>Pending</a>
+        <span id="events_pending_python">
+<a href="#events_pending_python" style="color: inherit; text-decoration: inherit;">events_<wbr>pending</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47594,8 +47594,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsreplayed_python">
-<a href="#eventsreplayed_python" style="color: inherit; text-decoration: inherit;">events<wbr>Replayed</a>
+        <span id="events_replayed_python">
+<a href="#events_replayed_python" style="color: inherit; text-decoration: inherit;">events_<wbr>replayed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47614,16 +47614,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totaldocuments_python">
-<a href="#totaldocuments_python" style="color: inherit; text-decoration: inherit;">total<wbr>Documents</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="total_bytes_python">
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
 </span> 
@@ -47632,20 +47622,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="total_documents_python">
+<a href="#total_documents_python" style="color: inherit; text-decoration: inherit;">total_<wbr>documents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="collections_python">
 <a href="#collections_python" style="color: inherit; text-decoration: inherit;">collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Collection<wbr>Progress<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Collection<wbr>Progress<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The progress of the collections in the database. The keys are the unqualified names of the collections{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lasteventtime_python">
-<a href="#lasteventtime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Event<wbr>Time</a>
+        <span id="last_event_time_python">
+<a href="#last_event_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>event_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -47654,8 +47654,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastreplaytime_python">
-<a href="#lastreplaytime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Replay<wbr>Time</a>
+        <span id="last_replay_time_python">
+<a href="#last_replay_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>replay_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -47787,14 +47787,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collections_python" style="color: inherit; text-decoration: inherit;">collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Collection<wbr>Settings]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Collection<wbr>Settings<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The collections on the source database to migrate to the target. The keys are the unqualified names of the collections.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetrus_python">
-<a href="#targetrus_python" style="color: inherit; text-decoration: inherit;">target<wbr>RUs</a>
+        <span id="target_rus_python">
+<a href="#target_rus_python" style="color: inherit; text-decoration: inherit;">target_<wbr>rus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -47906,14 +47906,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collections_python" style="color: inherit; text-decoration: inherit;">collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Collection<wbr>Settings<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Collection<wbr>Settings<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The collections on the source database to migrate to the target. The keys are the unqualified names of the collections.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetrus_python">
-<a href="#targetrus_python" style="color: inherit; text-decoration: inherit;">target<wbr>RUs</a>
+        <span id="target_rus_python">
+<a href="#target_rus_python" style="color: inherit; text-decoration: inherit;">target_<wbr>rus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -48580,8 +48580,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="bytescopied_python">
-<a href="#bytescopied_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Copied</a>
+        <span id="bytes_copied_python">
+<a href="#bytes_copied_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -48590,8 +48590,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="documentscopied_python">
-<a href="#documentscopied_python" style="color: inherit; text-decoration: inherit;">documents<wbr>Copied</a>
+        <span id="documents_copied_python">
+<a href="#documents_copied_python" style="color: inherit; text-decoration: inherit;">documents_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -48600,8 +48600,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="elapsedtime_python">
-<a href="#elapsedtime_python" style="color: inherit; text-decoration: inherit;">elapsed<wbr>Time</a>
+        <span id="elapsed_time_python">
+<a href="#elapsed_time_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -48614,14 +48614,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Error<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Error<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The errors and warnings that have occurred for the current object. The keys are the error codes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="eventspending_python">
-<a href="#eventspending_python" style="color: inherit; text-decoration: inherit;">events<wbr>Pending</a>
+        <span id="events_pending_python">
+<a href="#events_pending_python" style="color: inherit; text-decoration: inherit;">events_<wbr>pending</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -48630,8 +48630,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsreplayed_python">
-<a href="#eventsreplayed_python" style="color: inherit; text-decoration: inherit;">events<wbr>Replayed</a>
+        <span id="events_replayed_python">
+<a href="#events_replayed_python" style="color: inherit; text-decoration: inherit;">events_<wbr>replayed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -48650,16 +48650,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totaldocuments_python">
-<a href="#totaldocuments_python" style="color: inherit; text-decoration: inherit;">total<wbr>Documents</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="total_bytes_python">
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
 </span> 
@@ -48668,20 +48658,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="total_documents_python">
+<a href="#total_documents_python" style="color: inherit; text-decoration: inherit;">total_<wbr>documents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="databases_python">
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Database<wbr>Progress<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Database<wbr>Progress<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The progress of the databases in the migration. The keys are the names of the databases{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lasteventtime_python">
-<a href="#lasteventtime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Event<wbr>Time</a>
+        <span id="last_event_time_python">
+<a href="#last_event_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>event_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -48690,8 +48690,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastreplaytime_python">
-<a href="#lastreplaytime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Replay<wbr>Time</a>
+        <span id="last_replay_time_python">
+<a href="#last_replay_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>replay_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -48943,7 +48943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Database<wbr>Settings]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Database<wbr>Settings<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The databases on the source cluster to migrate to the target. The keys are the names of the databases.{{% /md %}}</dd>
 
@@ -48953,7 +48953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbconnectioninfo">Dict[Mongo<wbr>Db<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mongodbconnectioninfo">Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings used to connect to the source cluster{{% /md %}}</dd>
 
@@ -48963,14 +48963,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbconnectioninfo">Dict[Mongo<wbr>Db<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mongodbconnectioninfo">Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings used to connect to the target cluster{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="boostrus_python">
-<a href="#boostrus_python" style="color: inherit; text-decoration: inherit;">boost<wbr>RUs</a>
+        <span id="boost_rus_python">
+<a href="#boost_rus_python" style="color: inherit; text-decoration: inherit;">boost_<wbr>rus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -48993,7 +48993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbthrottlingsettings">Dict[Mongo<wbr>Db<wbr>Throttling<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#mongodbthrottlingsettings">Mongo<wbr>Db<wbr>Throttling<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings used to limit the resource usage of the migration{{% /md %}}</dd>
 
@@ -49222,7 +49222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mongo<wbr>Db<wbr>Database<wbr>Settings<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mongo<wbr>Db<wbr>Database<wbr>Settings<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The databases on the source cluster to migrate to the target. The keys are the names of the databases.{{% /md %}}</dd>
 
@@ -49232,7 +49232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbconnectioninforesponse">Dict[Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbconnectioninforesponse">Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings used to connect to the source cluster{{% /md %}}</dd>
 
@@ -49242,14 +49242,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbconnectioninforesponse">Dict[Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbconnectioninforesponse">Mongo<wbr>Db<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings used to connect to the target cluster{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="boostrus_python">
-<a href="#boostrus_python" style="color: inherit; text-decoration: inherit;">boost<wbr>RUs</a>
+        <span id="boost_rus_python">
+<a href="#boost_rus_python" style="color: inherit; text-decoration: inherit;">boost_<wbr>rus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -49272,7 +49272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbthrottlingsettingsresponse">Dict[Mongo<wbr>Db<wbr>Throttling<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbthrottlingsettingsresponse">Mongo<wbr>Db<wbr>Throttling<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings used to limit the resource usage of the migration{{% /md %}}</dd>
 
@@ -49619,14 +49619,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbshardkeyfieldresponse">List[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbshardkeyfieldresponse">Sequence[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Field<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fields within the shard key{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="isunique_python">
-<a href="#isunique_python" style="color: inherit; text-decoration: inherit;">is<wbr>Unique</a>
+        <span id="is_unique_python">
+<a href="#is_unique_python" style="color: inherit; text-decoration: inherit;">is_<wbr>unique</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -49738,14 +49738,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbshardkeyfield">List[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Field]</a></span>
+        <span class="property-type"><a href="#mongodbshardkeyfield">Sequence[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fields within the shard key{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="isunique_python">
-<a href="#isunique_python" style="color: inherit; text-decoration: inherit;">is<wbr>Unique</a>
+        <span id="is_unique_python">
+<a href="#is_unique_python" style="color: inherit; text-decoration: inherit;">is_<wbr>unique</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -49857,14 +49857,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbshardkeyfieldresponse">List[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbshardkeyfieldresponse">Sequence[Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Field<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fields within the shard key{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="isunique_python">
-<a href="#isunique_python" style="color: inherit; text-decoration: inherit;">is<wbr>Unique</a>
+        <span id="is_unique_python">
+<a href="#is_unique_python" style="color: inherit; text-decoration: inherit;">is_<wbr>unique</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -50002,8 +50002,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxparallelism_python">
-<a href="#maxparallelism_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallelism</a>
+        <span id="max_parallelism_python">
+<a href="#max_parallelism_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallelism</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -50012,8 +50012,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minfreecpu_python">
-<a href="#minfreecpu_python" style="color: inherit; text-decoration: inherit;">min<wbr>Free<wbr>Cpu</a>
+        <span id="min_free_cpu_python">
+<a href="#min_free_cpu_python" style="color: inherit; text-decoration: inherit;">min_<wbr>free_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -50022,8 +50022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minfreememorymb_python">
-<a href="#minfreememorymb_python" style="color: inherit; text-decoration: inherit;">min<wbr>Free<wbr>Memory<wbr>Mb</a>
+        <span id="min_free_memory_mb_python">
+<a href="#min_free_memory_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>free_<wbr>memory_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -50161,8 +50161,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxparallelism_python">
-<a href="#maxparallelism_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallelism</a>
+        <span id="max_parallelism_python">
+<a href="#max_parallelism_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallelism</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -50171,8 +50171,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minfreecpu_python">
-<a href="#minfreecpu_python" style="color: inherit; text-decoration: inherit;">min<wbr>Free<wbr>Cpu</a>
+        <span id="min_free_cpu_python">
+<a href="#min_free_cpu_python" style="color: inherit; text-decoration: inherit;">min_<wbr>free_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -50181,8 +50181,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minfreememorymb_python">
-<a href="#minfreememorymb_python" style="color: inherit; text-decoration: inherit;">min<wbr>Free<wbr>Memory<wbr>Mb</a>
+        <span id="min_free_memory_mb_python">
+<a href="#min_free_memory_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>free_<wbr>memory_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -50732,7 +50732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Inner errors that caused this error{{% /md %}}</dd>
 
@@ -50877,8 +50877,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -51036,8 +51036,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -51464,8 +51464,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptconnection_python">
-<a href="#encryptconnection_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Connection</a>
+        <span id="encrypt_connection_python">
+<a href="#encrypt_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -51484,8 +51484,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustservercertificate_python">
-<a href="#trustservercertificate_python" style="color: inherit; text-decoration: inherit;">trust<wbr>Server<wbr>Certificate</a>
+        <span id="trust_server_certificate_python">
+<a href="#trust_server_certificate_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>server_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -51783,8 +51783,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptconnection_python">
-<a href="#encryptconnection_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Connection</a>
+        <span id="encrypt_connection_python">
+<a href="#encrypt_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -51803,8 +51803,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustservercertificate_python">
-<a href="#trustservercertificate_python" style="color: inherit; text-decoration: inherit;">trust<wbr>Server<wbr>Certificate</a>
+        <span id="trust_server_certificate_python">
+<a href="#trust_server_certificate_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>server_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -52042,8 +52042,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actionablemessage_python">
-<a href="#actionablemessage_python" style="color: inherit; text-decoration: inherit;">actionable<wbr>Message</a>
+        <span id="actionable_message_python">
+<a href="#actionable_message_python" style="color: inherit; text-decoration: inherit;">actionable_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -52062,8 +52062,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hresult_python">
-<a href="#hresult_python" style="color: inherit; text-decoration: inherit;">h<wbr>Result</a>
+        <span id="h_result_python">
+<a href="#h_result_python" style="color: inherit; text-decoration: inherit;">h_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -52072,8 +52072,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linenumber_python">
-<a href="#linenumber_python" style="color: inherit; text-decoration: inherit;">line<wbr>Number</a>
+        <span id="line_number_python">
+<a href="#line_number_python" style="color: inherit; text-decoration: inherit;">line_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -52092,8 +52092,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stacktrace_python">
-<a href="#stacktrace_python" style="color: inherit; text-decoration: inherit;">stack<wbr>Trace</a>
+        <span id="stack_trace_python">
+<a href="#stack_trace_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>trace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -52619,8 +52619,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -52629,8 +52629,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalsettings_python">
-<a href="#additionalsettings_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Settings</a>
+        <span id="additional_settings_python">
+<a href="#additional_settings_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -52649,8 +52649,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptconnection_python">
-<a href="#encryptconnection_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Connection</a>
+        <span id="encrypt_connection_python">
+<a href="#encrypt_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -52679,8 +52679,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustservercertificate_python">
-<a href="#trustservercertificate_python" style="color: inherit; text-decoration: inherit;">trust<wbr>Server<wbr>Certificate</a>
+        <span id="trust_server_certificate_python">
+<a href="#trust_server_certificate_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>server_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -52978,8 +52978,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -52988,8 +52988,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalsettings_python">
-<a href="#additionalsettings_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Settings</a>
+        <span id="additional_settings_python">
+<a href="#additional_settings_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53008,8 +53008,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptconnection_python">
-<a href="#encryptconnection_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Connection</a>
+        <span id="encrypt_connection_python">
+<a href="#encrypt_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -53038,8 +53038,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustservercertificate_python">
-<a href="#trustservercertificate_python" style="color: inherit; text-decoration: inherit;">trust<wbr>Server<wbr>Certificate</a>
+        <span id="trust_server_certificate_python">
+<a href="#trust_server_certificate_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>server_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -53187,8 +53187,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmentoverwriteoption_python">
-<a href="#environmentoverwriteoption_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Overwrite<wbr>Option</a>
+        <span id="environment_overwrite_option_python">
+<a href="#environment_overwrite_option_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>overwrite_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53197,8 +53197,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectoverwriteoption_python">
-<a href="#projectoverwriteoption_python" style="color: inherit; text-decoration: inherit;">project<wbr>Overwrite<wbr>Option</a>
+        <span id="project_overwrite_option_python">
+<a href="#project_overwrite_option_python" style="color: inherit; text-decoration: inherit;">project_<wbr>overwrite_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53207,8 +53207,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssisstoretype_python">
-<a href="#ssisstoretype_python" style="color: inherit; text-decoration: inherit;">ssis<wbr>Store<wbr>Type</a>
+        <span id="ssis_store_type_python">
+<a href="#ssis_store_type_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>store_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53346,8 +53346,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmentoverwriteoption_python">
-<a href="#environmentoverwriteoption_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Overwrite<wbr>Option</a>
+        <span id="environment_overwrite_option_python">
+<a href="#environment_overwrite_option_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>overwrite_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53356,8 +53356,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectoverwriteoption_python">
-<a href="#projectoverwriteoption_python" style="color: inherit; text-decoration: inherit;">project<wbr>Overwrite<wbr>Option</a>
+        <span id="project_overwrite_option_python">
+<a href="#project_overwrite_option_python" style="color: inherit; text-decoration: inherit;">project_<wbr>overwrite_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53366,8 +53366,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssisstoretype_python">
-<a href="#ssisstoretype_python" style="color: inherit; text-decoration: inherit;">ssis<wbr>Store<wbr>Type</a>
+        <span id="ssis_store_type_python">
+<a href="#ssis_store_type_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>store_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53505,11 +53505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="exceptionsandwarnings_python">
-<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+        <span id="exceptions_and_warnings_python">
+<a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
 
@@ -53664,8 +53664,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="eventtext_python">
-<a href="#eventtext_python" style="color: inherit; text-decoration: inherit;">event<wbr>Text</a>
+        <span id="event_text_python">
+<a href="#event_text_python" style="color: inherit; text-decoration: inherit;">event_<wbr>text</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53674,8 +53674,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="eventtypestring_python">
-<a href="#eventtypestring_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type<wbr>String</a>
+        <span id="event_type_string_python">
+<a href="#event_type_string_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53684,8 +53684,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timestampstring_python">
-<a href="#timestampstring_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>String</a>
+        <span id="timestamp_string_python">
+<a href="#timestamp_string_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -53793,11 +53793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -53807,7 +53807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Dict[Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -54036,7 +54036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -54046,7 +54046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -54056,7 +54056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">List[Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">Sequence[Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -54072,11 +54072,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -54086,7 +54086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Dict[Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -54311,21 +54311,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azureapp_python">
-<a href="#azureapp_python" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
+        <span id="azure_app_python">
+<a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Dict[Azure<wbr>Active<wbr>Directory<wbr>App]</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -54335,14 +54335,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="storageresourceid_python">
-<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+        <span id="storage_resource_id_python">
+<a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -54355,17 +54355,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Dict[File<wbr>Share]</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
@@ -54590,21 +54590,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azureapp_python">
-<a href="#azureapp_python" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
+        <span id="azure_app_python">
+<a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Dict[Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -54614,14 +54614,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="storageresourceid_python">
-<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+        <span id="storage_resource_id_python">
+<a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -54634,17 +54634,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Dict[File<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
@@ -54799,11 +54799,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd>
 
@@ -54908,11 +54908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -54922,7 +54922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Dict[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -55151,7 +55151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -55161,7 +55161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -55171,7 +55171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">List[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">Sequence[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -55187,11 +55187,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -55201,7 +55201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Dict[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -55456,21 +55456,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupblobshare_python">
-<a href="#backupblobshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
+        <span id="backup_blob_share_python">
+<a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Dict[Blob<wbr>Share]</a></span>
+        <span class="property-type"><a href="#blobshare">Blob<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -55480,7 +55480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -55490,24 +55490,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Dict[File<wbr>Share]</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmode_python">
-<a href="#backupmode_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Mode</a>
+        <span id="backup_mode_python">
+<a href="#backup_mode_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -55516,11 +55516,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedlogins_python">
-<a href="#selectedlogins_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Logins</a>
+        <span id="selected_logins_python">
+<a href="#selected_logins_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Logins to migrate{{% /md %}}</dd>
 
@@ -55775,21 +55775,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupblobshare_python">
-<a href="#backupblobshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
+        <span id="backup_blob_share_python">
+<a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Dict[Blob<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -55799,7 +55799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -55809,24 +55809,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupfileshare_python">
-<a href="#backupfileshare_python" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
+        <span id="backup_file_share_python">
+<a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Dict[File<wbr>Share<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmode_python">
-<a href="#backupmode_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Mode</a>
+        <span id="backup_mode_python">
+<a href="#backup_mode_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -55835,11 +55835,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selectedlogins_python">
-<a href="#selectedlogins_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Logins</a>
+        <span id="selected_logins_python">
+<a href="#selected_logins_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Logins to migrate{{% /md %}}</dd>
 
@@ -56124,41 +56124,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="backupfoldererrors_python">
-<a href="#backupfoldererrors_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Folder<wbr>Errors</a>
+        <span id="backup_folder_errors_python">
+<a href="#backup_folder_errors_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>folder_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the BackupFolder path{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="backupsharecredentialserrors_python">
-<a href="#backupsharecredentialserrors_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Share<wbr>Credentials<wbr>Errors</a>
+        <span id="backup_share_credentials_errors_python">
+<a href="#backup_share_credentials_errors_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>share_<wbr>credentials_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with backup share user name and password credentials{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="backupstorageaccounterrors_python">
-<a href="#backupstorageaccounterrors_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Storage<wbr>Account<wbr>Errors</a>
+        <span id="backup_storage_account_errors_python">
+<a href="#backup_storage_account_errors_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>storage_<wbr>account_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the storage account provided.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="existingbackuperrors_python">
-<a href="#existingbackuperrors_python" style="color: inherit; text-decoration: inherit;">existing<wbr>Backup<wbr>Errors</a>
+        <span id="existing_backup_errors_python">
+<a href="#existing_backup_errors_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>backup_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with existing backup files.{{% /md %}}</dd>
 
@@ -56184,21 +56184,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="restoredatabasenameerrors_python">
-<a href="#restoredatabasenameerrors_python" style="color: inherit; text-decoration: inherit;">restore<wbr>Database<wbr>Name<wbr>Errors</a>
+        <span id="restore_database_name_errors_python">
+<a href="#restore_database_name_errors_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>database_<wbr>name_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the RestoreDatabaseName{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databasebackupinfo_python">
-<a href="#databasebackupinfo_python" style="color: inherit; text-decoration: inherit;">database<wbr>Backup<wbr>Info</a>
+        <span id="database_backup_info_python">
+<a href="#database_backup_info_python" style="color: inherit; text-decoration: inherit;">database_<wbr>backup_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupinforesponse">Dict[Database<wbr>Backup<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databasebackupinforesponse">Database<wbr>Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about backup files when existing backup mode is used.{{% /md %}}</dd>
 
@@ -56303,11 +56303,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -56317,7 +56317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Dict[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -56546,7 +56546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -56556,7 +56556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -56566,7 +56566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">List[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">Sequence[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -56582,11 +56582,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -56596,7 +56596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Dict[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd>
 
@@ -56701,11 +56701,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -56715,7 +56715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbmigrationsettings">Dict[Mongo<wbr>Db<wbr>Migration<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#mongodbmigrationsettings">Mongo<wbr>Db<wbr>Migration<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how a MongoDB data migration should be performed{{% /md %}}</dd>
 
@@ -56944,7 +56944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -56954,7 +56954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -56964,7 +56964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbmigrationprogressresponse">List[Mongo<wbr>Db<wbr>Migration<wbr>Progress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbmigrationprogressresponse">Sequence[Mongo<wbr>Db<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array containing a single MongoDbMigrationProgress object{{% /md %}}</dd>
 
@@ -56980,11 +56980,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -56994,7 +56994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbmigrationsettingsresponse">Dict[Mongo<wbr>Db<wbr>Migration<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongodbmigrationsettingsresponse">Mongo<wbr>Db<wbr>Migration<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how a MongoDB data migration should be performed{{% /md %}}</dd>
 
@@ -57099,11 +57099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -57113,7 +57113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinput">Dict[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinput">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input for the task that migrates Oracle databases to Azure Database for PostgreSQL for online migrations{{% /md %}}</dd>
 
@@ -57342,7 +57342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Azure-Nextgen:Datamigration/V20180715preview:Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd>
 
@@ -57352,7 +57352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List[OData<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd>
 
@@ -57362,7 +57362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validateoracleazuredbpostgresqlsynctaskoutputresponse">List[Validate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#validateoracleazuredbpostgresqlsynctaskoutputresponse">Sequence[Validate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array containing a single validation error response object{{% /md %}}</dd>
 
@@ -57378,11 +57378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdata_python">
-<a href="#clientdata_python" style="color: inherit; text-decoration: inherit;">client<wbr>Data</a>
+        <span id="client_data_python">
+<a href="#client_data_python" style="color: inherit; text-decoration: inherit;">client_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs of client data to attach meta data information to task{{% /md %}}</dd>
 
@@ -57392,7 +57392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinputresponse">Dict[Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrateoracleazuredbpostgresqlsynctaskinputresponse">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input for the task that migrates Oracle databases to Azure Database for PostgreSQL for online migrations{{% /md %}}</dd>
 
@@ -57467,11 +57467,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd>
 
@@ -57606,11 +57606,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -57620,7 +57620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd>
 
@@ -57630,7 +57630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Dict[Sql<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -57765,11 +57765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="selecteddatabases_python">
-<a href="#selecteddatabases_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
+        <span id="selected_databases_python">
+<a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd>
 
@@ -57779,7 +57779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd>
 
@@ -57789,7 +57789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Dict[Sql<wbr>Connection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -57944,11 +57944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="validationerrors_python">
-<a href="#validationerrors_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
+        <span id="validation_errors_python">
+<a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd>
 

@@ -22,7 +22,7 @@ meta_desc: "Explore the JobCollection resource of the scheduler module, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobCollection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[JobCollectionProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobCollection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[JobCollectionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -441,7 +441,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionproperties">Dict[Job<wbr>Collection<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#jobcollectionproperties">Job<wbr>Collection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd>
 
@@ -451,7 +451,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
 
@@ -718,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquota">Dict[Job<wbr>Collection<wbr>Quota]</a></span>
+        <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
 
@@ -728,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
 
@@ -877,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquotaresponse">Dict[Job<wbr>Collection<wbr>Quota<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
 
@@ -887,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
 
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_recurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrence">Dict[Job<wbr>Max<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
 
@@ -1215,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_recurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Dict[Job<wbr>Max<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
 

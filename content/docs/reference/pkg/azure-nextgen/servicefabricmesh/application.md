@@ -167,32 +167,32 @@ application = azure_nextgen.servicefabricmesh.v20180901preview.Application("appl
     description="Service Fabric Mesh sample application.",
     location="EastUS",
     resource_group_name="sbz_demo",
-    services=[{
-        "codePackages": [{
-            "endpoints": [{
-                "name": "helloWorldListener",
-                "port": 80,
-            }],
-            "image": "seabreeze/sbz-helloworld:1.0-alpine",
-            "name": "helloWorldCode",
-            "resources": {
-                "requests": {
-                    "cpu": 1,
-                    "memoryInGB": 1,
-                },
-            },
-        }],
-        "description": "SeaBreeze Hello World Service.",
-        "name": "helloWorldService",
-        "networkRefs": [{
-            "endpointRefs": [{
-                "name": "helloWorldListener",
-            }],
-            "name": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
-        }],
-        "osType": "Linux",
-        "replicaCount": 1,
-    }],
+    services=[azure_nextgen.servicefabricmesh.v20180901preview.ServiceResourceDescriptionArgs(
+        code_packages=[azure_nextgen.servicefabricmesh.v20180901preview.ContainerCodePackagePropertiesArgs(
+            endpoints=[azure_nextgen.servicefabricmesh.v20180901preview.EndpointPropertiesArgs(
+                name="helloWorldListener",
+                port=80,
+            )],
+            image="seabreeze/sbz-helloworld:1.0-alpine",
+            name="helloWorldCode",
+            resources=azure_nextgen.servicefabricmesh.v20180901preview.ResourceRequirementsArgs(
+                requests=azure_nextgen.servicefabricmesh.v20180901preview.ResourceRequestsArgs(
+                    cpu=1,
+                    memory_in_gb=1,
+                ),
+            ),
+        )],
+        description="SeaBreeze Hello World Service.",
+        name="helloWorldService",
+        network_refs=[azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
+            endpoint_refs=[azure_nextgen.servicefabricmesh.v20180901preview.EndpointRefArgs(
+                name="helloWorldListener",
+            )],
+            name="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
+        )],
+        os_type="Linux",
+        replica_count=1,
+    )],
     tags={})
 
 ```
@@ -255,7 +255,7 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">debug_params</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[DiagnosticsDescription]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[List[ServiceResourceDescription]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">debug_params</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[DiagnosticsDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceResourceDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -744,7 +744,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsdescription">Dict[Diagnostics<wbr>Description]</a></span>
+        <span class="property-type"><a href="#diagnosticsdescription">Diagnostics<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the diagnostics definition and usage for an application resource.{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresourcedescription">List[Service<wbr>Resource<wbr>Description]</a></span>
+        <span class="property-type"><a href="#serviceresourcedescription">Sequence[Service<wbr>Resource<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.{{% /md %}}</dd>
 
@@ -764,7 +764,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_names_python" style="color: inherit; text-decoration: inherit;">service_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of the services in the application.{{% /md %}}</dd>
 
@@ -1327,8 +1327,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleincrement_python">
-<a href="#scaleincrement_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Increment</a>
+        <span id="scale_increment_python">
+<a href="#scale_increment_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>increment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1486,8 +1486,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleincrement_python">
-<a href="#scaleincrement_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Increment</a>
+        <span id="scale_increment_python">
+<a href="#scale_increment_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>increment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1655,18 +1655,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="creationparameters_python">
-<a href="#creationparameters_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Parameters</a>
+        <span id="creation_parameters_python">
+<a href="#creation_parameters_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Dict[Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationpath_python">
-<a href="#destinationpath_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Path</a>
+        <span id="destination_path_python">
+<a href="#destination_path_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1794,8 +1794,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sizedisk_python">
-<a href="#sizedisk_python" style="color: inherit; text-decoration: inherit;">size<wbr>Disk</a>
+        <span id="size_disk_python">
+<a href="#size_disk_python" style="color: inherit; text-decoration: inherit;">size_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1913,8 +1913,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sizedisk_python">
-<a href="#sizedisk_python" style="color: inherit; text-decoration: inherit;">size<wbr>Disk</a>
+        <span id="size_disk_python">
+<a href="#size_disk_python" style="color: inherit; text-decoration: inherit;">size_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2092,18 +2092,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="creationparameters_python">
-<a href="#creationparameters_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Parameters</a>
+        <span id="creation_parameters_python">
+<a href="#creation_parameters_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Dict[Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationpath_python">
-<a href="#destinationpath_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Path</a>
+        <span id="destination_path_python">
+<a href="#destination_path_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2265,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_python" style="color: inherit; text-decoration: inherit;">mechanism</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanism">Dict[Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism]</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanism">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd>
 
@@ -2285,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtrigger">Dict[Average<wbr>Load<wbr>Scaling<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#averageloadscalingtrigger">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd>
 
@@ -2424,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_python" style="color: inherit; text-decoration: inherit;">mechanism</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Dict[Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd>
 
@@ -2444,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Dict[Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd>
 
@@ -2767,8 +2767,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lowerloadthreshold_python">
-<a href="#lowerloadthreshold_python" style="color: inherit; text-decoration: inherit;">lower<wbr>Load<wbr>Threshold</a>
+        <span id="lower_load_threshold_python">
+<a href="#lower_load_threshold_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>load_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2781,14 +2781,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetric">Dict[Auto<wbr>Scaling<wbr>Resource<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetric">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleintervalinseconds_python">
-<a href="#scaleintervalinseconds_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Interval<wbr>In<wbr>Seconds</a>
+        <span id="scale_interval_in_seconds_python">
+<a href="#scale_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2797,8 +2797,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="upperloadthreshold_python">
-<a href="#upperloadthreshold_python" style="color: inherit; text-decoration: inherit;">upper<wbr>Load<wbr>Threshold</a>
+        <span id="upper_load_threshold_python">
+<a href="#upper_load_threshold_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>load_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2966,8 +2966,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lowerloadthreshold_python">
-<a href="#lowerloadthreshold_python" style="color: inherit; text-decoration: inherit;">lower<wbr>Load<wbr>Threshold</a>
+        <span id="lower_load_threshold_python">
+<a href="#lower_load_threshold_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>load_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2980,14 +2980,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Dict[Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleintervalinseconds_python">
-<a href="#scaleintervalinseconds_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Interval<wbr>In<wbr>Seconds</a>
+        <span id="scale_interval_in_seconds_python">
+<a href="#scale_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2996,8 +2996,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="upperloadthreshold_python">
-<a href="#upperloadthreshold_python" style="color: inherit; text-decoration: inherit;">upper<wbr>Load<wbr>Threshold</a>
+        <span id="upper_load_threshold_python">
+<a href="#upper_load_threshold_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>load_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3265,8 +3265,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autokeyconfigurl_python">
-<a href="#autokeyconfigurl_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Key<wbr>Config<wbr>Url</a>
+        <span id="auto_key_config_url_python">
+<a href="#auto_key_config_url_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>key_<wbr>config_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3285,18 +3285,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fluentdconfigurl_python">
-<a href="#fluentdconfigurl_python" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config<wbr>Url</a>
+        <span id="fluentd_config_url_python">
+<a href="#fluentd_config_url_python" style="color: inherit; text-decoration: inherit;">fluentd_<wbr>config_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maconfigurl_python">
-<a href="#maconfigurl_python" style="color: inherit; text-decoration: inherit;">ma<wbr>Config<wbr>Url</a>
+        <span id="ma_config_url_python">
+<a href="#ma_config_url_python" style="color: inherit; text-decoration: inherit;">ma_<wbr>config_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3584,8 +3584,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autokeyconfigurl_python">
-<a href="#autokeyconfigurl_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Key<wbr>Config<wbr>Url</a>
+        <span id="auto_key_config_url_python">
+<a href="#auto_key_config_url_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>key_<wbr>config_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3604,18 +3604,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fluentdconfigurl_python">
-<a href="#fluentdconfigurl_python" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config<wbr>Url</a>
+        <span id="fluentd_config_url_python">
+<a href="#fluentd_config_url_python" style="color: inherit; text-decoration: inherit;">fluentd_<wbr>config_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maconfigurl_python">
-<a href="#maconfigurl_python" style="color: inherit; text-decoration: inherit;">ma<wbr>Config<wbr>Url</a>
+        <span id="ma_config_url_python">
+<a href="#ma_config_url_python" style="color: inherit; text-decoration: inherit;">ma_<wbr>config_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4127,7 +4127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Dict[Resource<wbr>Requirements]</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd>
 
@@ -4137,7 +4137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Command array to execute within the container in exec form.{{% /md %}}</dd>
 
@@ -4147,7 +4147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Dict[Diagnostics<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
 
@@ -4157,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointproperties">List[Endpoint<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#endpointproperties">Sequence[Endpoint<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd>
 
@@ -4177,17 +4177,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List[Environment<wbr>Variable]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Sequence[Environment<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageregistrycredential_python">
-<a href="#imageregistrycredential_python" style="color: inherit; text-decoration: inherit;">image<wbr>Registry<wbr>Credential</a>
+        <span id="image_registry_credential_python">
+<a href="#image_registry_credential_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredential">Dict[Image<wbr>Registry<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#imageregistrycredential">Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd>
 
@@ -4197,17 +4197,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">List[Container<wbr>Label]</a></span>
+        <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reliablecollectionsrefs_python">
-<a href="#reliablecollectionsrefs_python" style="color: inherit; text-decoration: inherit;">reliable<wbr>Collections<wbr>Refs</a>
+        <span id="reliable_collections_refs_python">
+<a href="#reliable_collections_refs_python" style="color: inherit; text-decoration: inherit;">reliable_<wbr>collections_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsref">List[Reliable<wbr>Collections<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#reliablecollectionsref">Sequence[Reliable<wbr>Collections<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd>
 
@@ -4217,17 +4217,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setting">List[Setting]</a></span>
+        <span class="property-type"><a href="#setting">Sequence[Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumerefs_python">
-<a href="#volumerefs_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Refs</a>
+        <span id="volume_refs_python">
+<a href="#volume_refs_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereference">List[Volume<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#volumereference">Sequence[Volume<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd>
 
@@ -4237,7 +4237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolume">List[Application<wbr>Scoped<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolume">Sequence[Application<wbr>Scoped<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd>
 
@@ -4746,7 +4746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerinstanceviewresponse">Dict[Container<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerinstanceviewresponse">Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runtime information of a container instance.{{% /md %}}</dd>
 
@@ -4766,7 +4766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Dict[Resource<wbr>Requirements<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd>
 
@@ -4776,7 +4776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Command array to execute within the container in exec form.{{% /md %}}</dd>
 
@@ -4786,7 +4786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Dict[Diagnostics<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
 
@@ -4796,7 +4796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponse">List[Endpoint<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponse">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd>
 
@@ -4816,17 +4816,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List[Environment<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageregistrycredential_python">
-<a href="#imageregistrycredential_python" style="color: inherit; text-decoration: inherit;">image<wbr>Registry<wbr>Credential</a>
+        <span id="image_registry_credential_python">
+<a href="#image_registry_credential_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">Dict[Image<wbr>Registry<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd>
 
@@ -4836,17 +4836,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabelresponse">List[Container<wbr>Label<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerlabelresponse">Sequence[Container<wbr>Label<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reliablecollectionsrefs_python">
-<a href="#reliablecollectionsrefs_python" style="color: inherit; text-decoration: inherit;">reliable<wbr>Collections<wbr>Refs</a>
+        <span id="reliable_collections_refs_python">
+<a href="#reliable_collections_refs_python" style="color: inherit; text-decoration: inherit;">reliable_<wbr>collections_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsrefresponse">List[Reliable<wbr>Collections<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reliablecollectionsrefresponse">Sequence[Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd>
 
@@ -4856,17 +4856,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingresponse">List[Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#settingresponse">Sequence[Setting<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumerefs_python">
-<a href="#volumerefs_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Refs</a>
+        <span id="volume_refs_python">
+<a href="#volume_refs_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereferenceresponse">List[Volume<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumereferenceresponse">Sequence[Volume<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd>
 
@@ -4876,7 +4876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumeresponse">List[Application<wbr>Scoped<wbr>Volume<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumeresponse">Sequence[Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd>
 
@@ -5111,8 +5111,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firsttimestamp_python">
-<a href="#firsttimestamp_python" style="color: inherit; text-decoration: inherit;">first<wbr>Timestamp</a>
+        <span id="first_timestamp_python">
+<a href="#first_timestamp_python" style="color: inherit; text-decoration: inherit;">first_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5121,8 +5121,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lasttimestamp_python">
-<a href="#lasttimestamp_python" style="color: inherit; text-decoration: inherit;">last<wbr>Timestamp</a>
+        <span id="last_timestamp_python">
+<a href="#last_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5320,11 +5320,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="currentstate_python">
-<a href="#currentstate_python" style="color: inherit; text-decoration: inherit;">current<wbr>State</a>
+        <span id="current_state_python">
+<a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Dict[Container<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd>
 
@@ -5334,24 +5334,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containereventresponse">List[Container<wbr>Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containereventresponse">Sequence[Container<wbr>Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of this container instance.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="previousstate_python">
-<a href="#previousstate_python" style="color: inherit; text-decoration: inherit;">previous<wbr>State</a>
+        <span id="previous_state_python">
+<a href="#previous_state_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Dict[Container<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartcount_python">
-<a href="#restartcount_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
+        <span id="restart_count_python">
+<a href="#restart_count_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5787,8 +5787,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="detailstatus_python">
-<a href="#detailstatus_python" style="color: inherit; text-decoration: inherit;">detail<wbr>Status</a>
+        <span id="detail_status_python">
+<a href="#detail_status_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5970,7 +5970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_sink_refs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sink_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.{{% /md %}}</dd>
 
@@ -5990,7 +5990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">List[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description]</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd>
 
@@ -6129,7 +6129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_sink_refs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sink_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.{{% /md %}}</dd>
 
@@ -6149,7 +6149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">List[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd>
 
@@ -6264,11 +6264,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sinkrefs_python">
-<a href="#sinkrefs_python" style="color: inherit; text-decoration: inherit;">sink<wbr>Refs</a>
+        <span id="sink_refs_python">
+<a href="#sink_refs_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.{{% /md %}}</dd>
 
@@ -6383,11 +6383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sinkrefs_python">
-<a href="#sinkrefs_python" style="color: inherit; text-decoration: inherit;">sink<wbr>Refs</a>
+        <span id="sink_refs_python">
+<a href="#sink_refs_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.{{% /md %}}</dd>
 
@@ -7448,7 +7448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">List[Endpoint<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#endpointref">Sequence[Endpoint<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
 
@@ -7567,7 +7567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List[Endpoint<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
 
@@ -7692,8 +7692,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="donotpersiststate_python">
-<a href="#donotpersiststate_python" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Persist<wbr>State</a>
+        <span id="do_not_persist_state_python">
+<a href="#do_not_persist_state_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>persist_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7811,8 +7811,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="donotpersiststate_python">
-<a href="#donotpersiststate_python" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Persist<wbr>State</a>
+        <span id="do_not_persist_state_python">
+<a href="#do_not_persist_state_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>persist_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8400,7 +8400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequests">Dict[Resource<wbr>Requests]</a></span>
+        <span class="property-type"><a href="#resourcerequests">Resource<wbr>Requests<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd>
 
@@ -8410,7 +8410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimits">Dict[Resource<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#resourcelimits">Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd>
 
@@ -8519,7 +8519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Dict[Resource<wbr>Requests<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd>
 
@@ -8529,7 +8529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Dict[Resource<wbr>Limits<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd>
 
@@ -8814,11 +8814,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="codepackages_python">
-<a href="#codepackages_python" style="color: inherit; text-decoration: inherit;">code<wbr>Packages</a>
+        <span id="code_packages_python">
+<a href="#code_packages_python" style="color: inherit; text-decoration: inherit;">code_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackageproperties">List[Container<wbr>Code<wbr>Package<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#containercodepackageproperties">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd>
 
@@ -8834,11 +8834,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalingpolicies_python">
-<a href="#autoscalingpolicies_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Policies</a>
+        <span id="auto_scaling_policies_python">
+<a href="#auto_scaling_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicy">List[Auto<wbr>Scaling<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicy">Sequence[Auto<wbr>Scaling<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd>
 
@@ -8858,7 +8858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Dict[Diagnostics<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
 
@@ -8874,11 +8874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkrefs_python">
-<a href="#networkrefs_python" style="color: inherit; text-decoration: inherit;">network<wbr>Refs</a>
+        <span id="network_refs_python">
+<a href="#network_refs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">List[Network<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#networkref">Sequence[Network<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd>
 
@@ -9383,11 +9383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="codepackages_python">
-<a href="#codepackages_python" style="color: inherit; text-decoration: inherit;">code<wbr>Packages</a>
+        <span id="code_packages_python">
+<a href="#code_packages_python" style="color: inherit; text-decoration: inherit;">code_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackagepropertiesresponse">List[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containercodepackagepropertiesresponse">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd>
 
@@ -9473,11 +9473,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalingpolicies_python">
-<a href="#autoscalingpolicies_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Policies</a>
+        <span id="auto_scaling_policies_python">
+<a href="#auto_scaling_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyresponse">List[Auto<wbr>Scaling<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyresponse">Sequence[Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd>
 
@@ -9497,7 +9497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Dict[Diagnostics<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd>
 
@@ -9513,11 +9513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkrefs_python">
-<a href="#networkrefs_python" style="color: inherit; text-decoration: inherit;">network<wbr>Refs</a>
+        <span id="network_refs_python">
+<a href="#network_refs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">List[Network<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Sequence[Network<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd>
 
@@ -9900,8 +9900,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationpath_python">
-<a href="#destinationpath_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Path</a>
+        <span id="destination_path_python">
+<a href="#destination_path_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10059,8 +10059,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationpath_python">
-<a href="#destinationpath_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Path</a>
+        <span id="destination_path_python">
+<a href="#destination_path_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

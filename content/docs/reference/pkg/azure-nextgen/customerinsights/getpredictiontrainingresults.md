@@ -387,7 +387,7 @@ The following output properties are available:
 <a href="#canonical_profiles_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canonicalprofiledefinitionresponse">List[Canonical<wbr>Profile<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#canonicalprofiledefinitionresponse">Sequence[Canonical<wbr>Profile<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd>
 
@@ -397,7 +397,7 @@ The following output properties are available:
 <a href="#prediction_distribution_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>distribution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Dict[Prediction<wbr>Distribution<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Prediction<wbr>Distribution<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd>
 
@@ -538,8 +538,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="canonicalprofileid_python">
-<a href="#canonicalprofileid_python" style="color: inherit; text-decoration: inherit;">canonical<wbr>Profile<wbr>Id</a>
+        <span id="canonical_profile_id_python">
+<a href="#canonical_profile_id_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>profile_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -552,7 +552,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">List[Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">Sequence[Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd>
 
@@ -747,16 +747,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="profilepropertyname_python">
-<a href="#profilepropertyname_python" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span> 
@@ -764,6 +754,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Profile name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_property_name_python">
+<a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -930,14 +930,14 @@ The following output properties are available:
 <a href="#distributions_python" style="color: inherit; text-decoration: inherit;">distributions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">List[Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions]</a></span>
+        <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">Sequence[Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalnegatives_python">
-<a href="#totalnegatives_python" style="color: inherit; text-decoration: inherit;">total<wbr>Negatives</a>
+        <span id="total_negatives_python">
+<a href="#total_negatives_python" style="color: inherit; text-decoration: inherit;">total_<wbr>negatives</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -946,8 +946,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalpositives_python">
-<a href="#totalpositives_python" style="color: inherit; text-decoration: inherit;">total<wbr>Positives</a>
+        <span id="total_positives_python">
+<a href="#total_positives_python" style="color: inherit; text-decoration: inherit;">total_<wbr>positives</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1155,8 +1155,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negativesabovethreshold_python">
-<a href="#negativesabovethreshold_python" style="color: inherit; text-decoration: inherit;">negatives<wbr>Above<wbr>Threshold</a>
+        <span id="negatives_above_threshold_python">
+<a href="#negatives_above_threshold_python" style="color: inherit; text-decoration: inherit;">negatives_<wbr>above_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1175,8 +1175,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="positivesabovethreshold_python">
-<a href="#positivesabovethreshold_python" style="color: inherit; text-decoration: inherit;">positives<wbr>Above<wbr>Threshold</a>
+        <span id="positives_above_threshold_python">
+<a href="#positives_above_threshold_python" style="color: inherit; text-decoration: inherit;">positives_<wbr>above_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1185,8 +1185,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scorethreshold_python">
-<a href="#scorethreshold_python" style="color: inherit; text-decoration: inherit;">score<wbr>Threshold</a>
+        <span id="score_threshold_python">
+<a href="#score_threshold_python" style="color: inherit; text-decoration: inherit;">score_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

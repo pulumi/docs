@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainergetpropertiesresponseoptions">Dict[Sql<wbr>Container<wbr>Get<wbr>Properties<wbr>Response<wbr>Options]</a></span>
+        <span class="property-type"><a href="#sqlcontainergetpropertiesresponseoptions">Sql<wbr>Container<wbr>Get<wbr>Properties<wbr>Response<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainergetpropertiesresponseresource">Dict[Sql<wbr>Container<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#sqlcontainergetpropertiesresponseresource">Sql<wbr>Container<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
 
@@ -1021,7 +1021,7 @@ The following output properties are available:
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of paths using which data within the container can be partitioned{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ The following output properties are available:
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">List[Indexes<wbr>Response]</a></span>
+        <span class="property-type"><a href="#indexesresponse">Sequence[Indexes<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd>
 
@@ -1627,7 +1627,7 @@ The following output properties are available:
 <a href="#composite_indexes_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">List[Composite<wbr>Path<wbr>Response>]</a></span>
+        <span class="property-type"><a href="#compositepathresponse">Sequence[Sequence[Composite<wbr>Path<wbr>Response<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd>
 
@@ -1637,7 +1637,7 @@ The following output properties are available:
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">List[Excluded<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">Sequence[Excluded<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd>
 
@@ -1647,7 +1647,7 @@ The following output properties are available:
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">List[Included<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#includedpathresponse">Sequence[Included<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd>
 
@@ -1667,7 +1667,7 @@ The following output properties are available:
 <a href="#spatial_indexes_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">List[Spatial<wbr>Spec<wbr>Response]</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">Sequence[Spatial<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd>
 
@@ -1786,7 +1786,7 @@ The following output properties are available:
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd>
 
@@ -1895,7 +1895,7 @@ The following output properties are available:
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Dict[Autoscale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
 
@@ -1963,7 +1963,7 @@ The following output properties are available:
 <a href="#ts_csharp" style="color: inherit; text-decoration: inherit;">Ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -2070,7 +2070,7 @@ The following output properties are available:
 <a href="#ts_go" style="color: inherit; text-decoration: inherit;">Ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -2177,7 +2177,7 @@ The following output properties are available:
 <a href="#ts_nodejs" style="color: inherit; text-decoration: inherit;">ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -2284,7 +2284,7 @@ The following output properties are available:
 <a href="#ts_python" style="color: inherit; text-decoration: inherit;">ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -2304,7 +2304,7 @@ The following output properties are available:
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Dict[Conflict<wbr>Resolution<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the container.{{% /md %}}</dd>
 
@@ -2324,7 +2324,7 @@ The following output properties are available:
 <a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Dict[Indexing<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container{{% /md %}}</dd>
 
@@ -2334,7 +2334,7 @@ The following output properties are available:
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Dict[Container<wbr>Partition<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd>
 
@@ -2344,7 +2344,7 @@ The following output properties are available:
 <a href="#unique_key_policy_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>key_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Dict[Unique<wbr>Key<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd>
 
@@ -2423,7 +2423,7 @@ The following output properties are available:
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">List[Unique<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">Sequence[Unique<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd>
 
@@ -2502,7 +2502,7 @@ The following output properties are available:
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of paths must be unique for each document in the Azure Cosmos DB service{{% /md %}}</dd>
 

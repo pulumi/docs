@@ -103,18 +103,18 @@ import pulumi_azure_nextgen as azure_nextgen
 
 export_pipeline = azure_nextgen.containerregistry.v20191201preview.ExportPipeline("exportPipeline",
     export_pipeline_name="myExportPipeline",
-    identity={
-        "type": "SystemAssigned",
-    },
+    identity=azure_nextgen.containerregistry.v20191201preview.IdentityPropertiesArgs(
+        type="SystemAssigned",
+    ),
     location="westus",
     options=["OverwriteBlobs"],
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    target={
-        "keyVaultUri": "https://myvault.vault.azure.net/secrets/acrexportsas",
-        "type": "AzureStorageBlobContainer",
-        "uri": "https://accountname.blob.core.windows.net/containername",
-    })
+    target=azure_nextgen.containerregistry.v20191201preview.ExportPipelineTargetPropertiesArgs(
+        key_vault_uri="https://myvault.vault.azure.net/secrets/acrexportsas",
+        type="AzureStorageBlobContainer",
+        uri="https://accountname.blob.core.windows.net/containername",
+    ))
 
 ```
 
@@ -158,7 +158,7 @@ const exportPipeline = new azure_nextgen.containerregistry.v20191201preview.Expo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[IdentityProperties]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[Dict[ExportPipelineTargetProperties]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[ExportPipelineTargetPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,7 +597,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetproperties">Dict[Export<wbr>Pipeline<wbr>Target<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetproperties">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the export pipeline.{{% /md %}}</dd>
 
@@ -607,7 +607,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Dict[Identity<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the export pipeline.{{% /md %}}</dd>
 
@@ -627,7 +627,7 @@ The ExportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -1377,7 +1377,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1588,7 +1588,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 

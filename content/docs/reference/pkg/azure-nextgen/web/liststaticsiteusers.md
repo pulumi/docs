@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticsiteuserarmresourceresponse">List[Static<wbr>Site<wbr>User<wbr>ARMResource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#staticsiteuserarmresourceresponse">Sequence[Static<wbr>Site<wbr>User<wbr>ARMResource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
 

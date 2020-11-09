@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">List[Vnet<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Sequence[Vnet<wbr>Route<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd>
 

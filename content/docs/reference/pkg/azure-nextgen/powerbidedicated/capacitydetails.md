@@ -105,19 +105,19 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capacityDetails",
-    administration={
-        "members": [
+    administration=azure_nextgen.powerbidedicated.latest.DedicatedCapacityAdministratorsArgs(
+        members=[
             "azsdktest@microsoft.com",
             "azsdktest2@microsoft.com",
         ],
-    },
+    ),
     dedicated_capacity_name="azsdktest",
     location="West US",
     resource_group_name="TestRG",
-    sku={
-        "name": "A1",
-        "tier": "PBIE_Azure",
-    },
+    sku=azure_nextgen.powerbidedicated.latest.ResourceSkuArgs(
+        name="A1",
+        tier="PBIE_Azure",
+    ),
     tags={
         "testKey": "testValue",
     })
@@ -167,7 +167,7 @@ const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetail
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CapacityDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administration</span><span class="p">:</span> <span class="nx">Optional[Dict[DedicatedCapacityAdministrators]]</span> = None<span class="p">, </span><span class="nx">dedicated_capacity_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CapacityDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administration</span><span class="p">:</span> <span class="nx">Optional[DedicatedCapacityAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">dedicated_capacity_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -576,7 +576,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Dict[Resource<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the PowerBI Dedicated resource.{{% /md %}}</dd>
 
@@ -586,7 +586,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#administration_python" style="color: inherit; text-decoration: inherit;">administration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedcapacityadministrators">Dict[Dedicated<wbr>Capacity<wbr>Administrators]</a></span>
+        <span class="property-type"><a href="#dedicatedcapacityadministrators">Dedicated<wbr>Capacity<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of Dedicated capacity administrators{{% /md %}}</dd>
 
@@ -596,7 +596,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
 
@@ -923,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
 
@@ -1002,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
 

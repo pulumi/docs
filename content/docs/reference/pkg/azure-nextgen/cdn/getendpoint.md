@@ -959,7 +959,7 @@ The following output properties are available:
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deepcreatedoriginresponse">List[Deep<wbr>Created<wbr>Origin<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deepcreatedoriginresponse">Sequence[Deep<wbr>Created<wbr>Origin<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN.{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#content_types_to_compress_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ The following output properties are available:
 <a href="#default_origin_group_python" style="color: inherit; text-decoration: inherit;">default_<wbr>origin_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Dict[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ The following output properties are available:
 <a href="#delivery_policy_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesupdateparametersresponsedeliverypolicy">Dict[Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Response<wbr>Delivery<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesupdateparametersresponsedeliverypolicy">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Response<wbr>Delivery<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the delivery rules to be used for an endpoint.{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geofilterresponse">List[Geo<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#geofilterresponse">Sequence[Geo<wbr>Filter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/{{% /md %}}</dd>
 
@@ -1079,7 +1079,7 @@ The following output properties are available:
 <a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deepcreatedorigingroupresponse">List[Deep<wbr>Created<wbr>Origin<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deepcreatedorigingroupresponse">Sequence[Deep<wbr>Created<wbr>Origin<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The origin groups comprising of origins that are used for load balancing the traffic based on availability.{{% /md %}}</dd>
 
@@ -1129,7 +1129,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ The following output properties are available:
 <a href="#url_signing_keys_python" style="color: inherit; text-decoration: inherit;">url_<wbr>signing_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningkeyresponse">List[Url<wbr>Signing<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlsigningkeyresponse">Sequence[Url<wbr>Signing<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of keys used to validate the signed URL hashes.{{% /md %}}</dd>
 
@@ -1149,7 +1149,7 @@ The following output properties are available:
 <a href="#web_application_firewall_policy_link_python" style="color: inherit; text-decoration: inherit;">web_<wbr>application_<wbr>firewall_<wbr>policy_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesupdateparametersresponsewebapplicationfirewallpolicylink">Dict[Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesupdateparametersresponsewebapplicationfirewallpolicylink">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for the endpoint (if applicable){{% /md %}}</dd>
 
@@ -1320,8 +1320,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cachebehavior_python">
-<a href="#cachebehavior_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Behavior</a>
+        <span id="cache_behavior_python">
+<a href="#cache_behavior_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1330,8 +1330,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cachetype_python">
-<a href="#cachetype_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Type</a>
+        <span id="cache_type_python">
+<a href="#cache_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1340,8 +1340,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1350,8 +1350,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheduration_python">
-<a href="#cacheduration_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
+        <span id="cache_duration_python">
+<a href="#cache_duration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1489,8 +1489,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1499,8 +1499,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="querystringbehavior_python">
-<a href="#querystringbehavior_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
+        <span id="query_string_behavior_python">
+<a href="#query_string_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1738,8 +1738,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1758,18 +1758,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1792,7 +1792,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -2001,7 +2001,7 @@ The following output properties are available:
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
 
@@ -2011,7 +2011,7 @@ The following output properties are available:
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparametersresponse">Dict[Health<wbr>Probe<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
 
@@ -2021,7 +2021,7 @@ The following output properties are available:
 <a href="#response_based_origin_error_detection_settings_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>origin_<wbr>error_<wbr>detection_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Dict[Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd>
 
@@ -2629,7 +2629,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Dict[Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
 
@@ -2708,7 +2708,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Dict[Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
 
@@ -2787,7 +2787,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Dict[Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -2866,7 +2866,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Dict[Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -2945,7 +2945,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Dict[Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3024,7 +3024,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Dict[Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3103,7 +3103,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Dict[Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3182,7 +3182,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Dict[Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3261,7 +3261,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Dict[Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3340,7 +3340,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparametersresponse">Dict[Header<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
 
@@ -3419,7 +3419,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Dict[Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3498,7 +3498,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Dict[Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3577,7 +3577,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Dict[Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3656,7 +3656,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Dict[Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -3825,7 +3825,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response, Azure-Nextgen:Cdn/Latest:Url<wbr>Redirect<wbr>Action<wbr>Response, Azure-Nextgen:Cdn/Latest:Url<wbr>Rewrite<wbr>Action<wbr>Response, Azure-Nextgen:Cdn/Latest:Url<wbr>Signing<wbr>Action<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Rewrite<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Signing<wbr>Action<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd>
 
@@ -3845,7 +3845,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response, Azure-Nextgen:Cdn/Latest:Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd>
 
@@ -3934,7 +3934,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparametersresponse">Dict[Header<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
 
@@ -4013,7 +4013,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Dict[Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -4092,7 +4092,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Dict[Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -4171,7 +4171,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Dict[Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
 
@@ -4280,7 +4280,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliveryruleresponse">List[Delivery<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deliveryruleresponse">Sequence[Delivery<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the delivery rules.{{% /md %}}</dd>
 
@@ -4514,11 +4514,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycodes_python">
-<a href="#countrycodes_python" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
+        <span id="country_codes_python">
+<a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd>
 
@@ -4693,8 +4693,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="headeraction_python">
-<a href="#headeraction_python" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
+        <span id="header_action_python">
+<a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4703,8 +4703,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4713,8 +4713,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5210,8 +5210,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5230,18 +5230,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5439,8 +5439,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5459,18 +5459,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5483,7 +5483,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -5708,8 +5708,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5728,16 +5728,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="secretversion_python">
-<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="secret_name_python">
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span> 
@@ -5745,6 +5735,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5987,8 +5987,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6007,18 +6007,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6041,7 +6041,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -6236,8 +6236,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6256,18 +6256,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6280,7 +6280,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -6475,8 +6475,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6495,18 +6495,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6519,7 +6519,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -6714,8 +6714,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6734,18 +6734,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6758,7 +6758,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -6983,8 +6983,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7003,18 +7003,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7037,7 +7037,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -7202,8 +7202,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7222,18 +7222,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7401,8 +7401,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7421,18 +7421,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7630,8 +7630,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7650,18 +7650,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7674,7 +7674,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -7892,7 +7892,7 @@ The following output properties are available:
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">List[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
 
@@ -8107,8 +8107,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8127,18 +8127,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8151,7 +8151,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -8346,8 +8346,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8366,18 +8366,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8390,7 +8390,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -8585,8 +8585,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8605,18 +8605,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8629,7 +8629,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -8884,8 +8884,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8894,8 +8894,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="redirecttype_python">
-<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+        <span id="redirect_type_python">
+<a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8904,8 +8904,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customfragment_python">
-<a href="#customfragment_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
+        <span id="custom_fragment_python">
+<a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8914,8 +8914,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customhostname_python">
-<a href="#customhostname_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Hostname</a>
+        <span id="custom_hostname_python">
+<a href="#custom_hostname_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8924,8 +8924,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custompath_python">
-<a href="#custompath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
+        <span id="custom_path_python">
+<a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8934,8 +8934,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customquerystring_python">
-<a href="#customquerystring_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
+        <span id="custom_query_string_python">
+<a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8944,8 +8944,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationprotocol_python">
-<a href="#destinationprotocol_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Protocol</a>
+        <span id="destination_protocol_python">
+<a href="#destination_protocol_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9027,7 +9027,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlredirectactionparametersresponse">Dict[Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlredirectactionparametersresponse">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
 
@@ -9202,8 +9202,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9212,8 +9212,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepattern_python">
-<a href="#sourcepattern_python" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
+        <span id="source_pattern_python">
+<a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9222,8 +9222,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preserveunmatchedpath_python">
-<a href="#preserveunmatchedpath_python" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
+        <span id="preserve_unmatched_path_python">
+<a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9305,7 +9305,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Dict[Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
 
@@ -9520,18 +9520,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsubnets_python">
-<a href="#ipsubnets_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnets</a>
+        <span id="ip_subnets_python">
+<a href="#ip_subnets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Match values to match against. Supports CIDR ranges (both IPv4 and IPv6).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="odatatype_python">
-<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9540,11 +9540,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parameternameoverride_python">
-<a href="#parameternameoverride_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name<wbr>Override</a>
+        <span id="parameter_name_override_python">
+<a href="#parameter_name_override_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningparamidentifierresponse">List[Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlsigningparamidentifierresponse">Sequence[Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd>
 
@@ -9623,7 +9623,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningactionparametersresponse">Dict[Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#urlsigningactionparametersresponse">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
 
@@ -9728,16 +9728,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keysourceparameters_python">
-<a href="#keysourceparameters_python" style="color: inherit; text-decoration: inherit;">key<wbr>Source<wbr>Parameters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Dict[Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span> 
@@ -9745,6 +9735,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_source_parameters_python">
+<a href="#key_source_parameters_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source_<wbr>parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9847,8 +9847,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="paramindicator_python">
-<a href="#paramindicator_python" style="color: inherit; text-decoration: inherit;">param<wbr>Indicator</a>
+        <span id="param_indicator_python">
+<a href="#param_indicator_python" style="color: inherit; text-decoration: inherit;">param_<wbr>indicator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9857,8 +9857,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="paramname_python">
-<a href="#paramname_python" style="color: inherit; text-decoration: inherit;">param<wbr>Name</a>
+        <span id="param_name_python">
+<a href="#param_name_python" style="color: inherit; text-decoration: inherit;">param_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

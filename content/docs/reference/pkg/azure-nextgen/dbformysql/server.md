@@ -76,12 +76,12 @@ server = azure_nextgen.dbformysql.latest.Server("server",
     },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
-    sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
-        "tier": "GeneralPurpose",
-    },
+    sku=azure_nextgen.dbformysql.latest.SkuArgs(
+        capacity=2,
+        family="Gen5",
+        name="GP_Gen5_2",
+        tier="GeneralPurpose",
+    ),
     tags={
         "ElasticServer": "1",
     })
@@ -185,20 +185,20 @@ server = azure_nextgen.dbformysql.latest.Server("server",
         "administratorLoginPassword": "pass$w0rd",
         "createMode": "Default",
         "sslEnforcement": "Enabled",
-        "storageProfile": {
-            "backupRetentionDays": 7,
-            "geoRedundantBackup": "Enabled",
-            "storageMB": 128000,
-        },
+        "storageProfile": azure_nextgen.dbformysql.latest.StorageProfileArgs(
+            backup_retention_days=7,
+            geo_redundant_backup="Enabled",
+            storage_mb=128000,
+        ),
     },
     resource_group_name="testrg",
     server_name="mysqltestsvc4",
-    sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
-        "tier": "GeneralPurpose",
-    },
+    sku=azure_nextgen.dbformysql.latest.SkuArgs(
+        capacity=2,
+        family="Gen5",
+        name="GP_Gen5_2",
+        tier="GeneralPurpose",
+    ),
     tags={
         "ElasticServer": "1",
     })
@@ -373,12 +373,12 @@ server = azure_nextgen.dbformysql.latest.Server("server",
     },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
-    sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
-        "tier": "GeneralPurpose",
-    },
+    sku=azure_nextgen.dbformysql.latest.SkuArgs(
+        capacity=2,
+        family="Gen5",
+        name="GP_Gen5_2",
+        tier="GeneralPurpose",
+    ),
     tags={
         "ElasticServer": "1",
     })
@@ -428,7 +428,7 @@ const server = new azure_nextgen.dbformysql.latest.Server("server", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerPropertiesForDefaultCreate] | Dict[ServerPropertiesForGeoRestore] | Dict[ServerPropertiesForReplica] | Dict[ServerPropertiesForRestore]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ServerPropertiesForDefaultCreateArgs, ServerPropertiesForGeoRestoreArgs, ServerPropertiesForReplicaArgs, ServerPropertiesForRestoreArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -847,7 +847,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create] | Dict[Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore] | Dict[Server<wbr>Properties<wbr>For<wbr>Replica] | Dict[Server<wbr>Properties<wbr>For<wbr>Restore]</span>
+        <span class="property-type">Union[Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args, Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args, Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args, Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
 
@@ -877,7 +877,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Dict[Resource<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
 
@@ -887,7 +887,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU (pricing tier) of the server.{{% /md %}}</dd>
 
@@ -897,7 +897,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Application-specific metadata in the form of key-value pairs.{{% /md %}}</dd>
 
@@ -967,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1154,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1516,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">List[Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">Sequence[Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections on a server{{% /md %}}</dd>
 
@@ -1528,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Dict[Storage<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
 
@@ -2131,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Dict[Private<wbr>Endpoint<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
 
@@ -2141,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Dict[Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 
@@ -2260,7 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Dict[Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd>
 
@@ -2768,7 +2768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
 
@@ -3033,8 +3033,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverid_python">
-<a href="#sourceserverid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
+        <span id="source_server_id_python">
+<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3087,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
 
@@ -3352,8 +3352,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverid_python">
-<a href="#sourceserverid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
+        <span id="source_server_id_python">
+<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3406,7 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
 
@@ -3711,8 +3711,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceserverid_python">
-<a href="#sourceserverid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
+        <span id="source_server_id_python">
+<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3765,7 +3765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
 

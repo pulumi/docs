@@ -121,23 +121,23 @@ bandwidth_setting = azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthS
     bandwidth_setting_name="BWSForTest",
     manager_name="ManagerForSDKTest1",
     resource_group_name="ResourceGroupForSDKTest",
-    schedules=[{
-        "days": [
+    schedules=[azure_nextgen.storsimple.latest.BandwidthScheduleArgs(
+        days=[
             "Saturday",
             "Sunday",
         ],
-        "rateInMbps": 10,
-        "start": {
-            "hours": 10,
-            "minutes": 0,
-            "seconds": 0,
-        },
-        "stop": {
-            "hours": 20,
-            "minutes": 0,
-            "seconds": 0,
-        },
-    }])
+        rate_in_mbps=10,
+        start=azure_nextgen.storsimple.latest.TimeArgs(
+            hours=10,
+            minutes=0,
+            seconds=0,
+        ),
+        stop=azure_nextgen.storsimple.latest.TimeArgs(
+            hours=20,
+            minutes=0,
+            seconds=0,
+        ),
+    )])
 
 ```
 
@@ -188,7 +188,7 @@ const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("b
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BandwidthSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[List[BandwidthSchedule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BandwidthSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BandwidthScheduleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -567,7 +567,7 @@ The BandwidthSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bandwidthschedule">List[Bandwidth<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#bandwidthschedule">Sequence[Bandwidth<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The schedules.{{% /md %}}</dd>
 
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
 
@@ -974,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Dict[Time]</a></span>
+        <span class="property-type"><a href="#time">Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
 
@@ -984,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_python" style="color: inherit; text-decoration: inherit;">stop</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Dict[Time]</a></span>
+        <span class="property-type"><a href="#time">Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
 
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Dict[Time<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
 
@@ -1183,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_python" style="color: inherit; text-decoration: inherit;">stop</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Dict[Time<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
 

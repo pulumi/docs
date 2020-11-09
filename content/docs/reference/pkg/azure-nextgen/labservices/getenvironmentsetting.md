@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#latest_operation_result_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Dict[Latest<wbr>Operation<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesettingsresponse">Dict[Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesettingsresponse">Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -1343,7 +1343,7 @@ The following output properties are available:
 <a href="#vm_state_details_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>state_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Dict[Vm<wbr>State<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
 
@@ -1612,7 +1612,7 @@ The following output properties are available:
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Dict[Reference<wbr>Vm<wbr>Response]</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
 

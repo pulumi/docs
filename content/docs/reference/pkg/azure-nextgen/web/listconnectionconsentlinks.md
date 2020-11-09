@@ -24,7 +24,7 @@ meta_desc: "Explore the ListConnectionConsentLinks function of the web module, i
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connection_consent_links(</span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[List[ConsentLinkParameterDefinition]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectionConsentLinksResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connection_consent_links(</span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConsentLinkParameterDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectionConsentLinksResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -186,7 +186,7 @@ The following arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consentlinkparameterdefinition">List[Consent<wbr>Link<wbr>Parameter<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#consentlinkparameterdefinition">Sequence[Consent<wbr>Link<wbr>Parameter<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources{{% /md %}}</dd>
 
@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consentlinkdefinitionresponse">List[Consent<wbr>Link<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#consentlinkdefinitionresponse">Sequence[Consent<wbr>Link<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources{{% /md %}}</dd>
 
@@ -448,8 +448,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstpartyloginuri_python">
-<a href="#firstpartyloginuri_python" style="color: inherit; text-decoration: inherit;">first<wbr>Party<wbr>Login<wbr>Uri</a>
+        <span id="first_party_login_uri_python">
+<a href="#first_party_login_uri_python" style="color: inherit; text-decoration: inherit;">first_<wbr>party_<wbr>login_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -647,8 +647,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parametername_python">
-<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+        <span id="parameter_name_python">
+<a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -657,8 +657,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirecturl_python">
-<a href="#redirecturl_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
+        <span id="redirect_url_python">
+<a href="#redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

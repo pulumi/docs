@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#data_protection_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesresponsedataprotection">Dict[Volume<wbr>Properties<wbr>Response<wbr>Data<wbr>Protection]</a></span>
+        <span class="property-type"><a href="#volumepropertiesresponsedataprotection">Volume<wbr>Properties<wbr>Response<wbr>Data<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
 
@@ -1079,7 +1079,7 @@ The following output properties are available:
 <a href="#export_policy_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesresponseexportpolicy">Dict[Volume<wbr>Properties<wbr>Response<wbr>Export<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#volumepropertiesresponseexportpolicy">Volume<wbr>Properties<wbr>Response<wbr>Export<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#mount_targets_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetpropertiesresponse">List[Mount<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">Sequence[Mount<wbr>Target<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
 
@@ -1119,7 +1119,7 @@ The following output properties are available:
 <a href="#protocol_types_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1660,8 +1660,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedclients_python">
-<a href="#allowedclients_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Clients</a>
+        <span id="allowed_clients_python">
+<a href="#allowed_clients_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>clients</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1680,8 +1680,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hasrootaccess_python">
-<a href="#hasrootaccess_python" style="color: inherit; text-decoration: inherit;">has<wbr>Root<wbr>Access</a>
+        <span id="has_root_access_python">
+<a href="#has_root_access_python" style="color: inherit; text-decoration: inherit;">has_<wbr>root_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1690,8 +1690,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kerberos5readonly_python">
-<a href="#kerberos5readonly_python" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Only</a>
+        <span id="kerberos5_read_only_python">
+<a href="#kerberos5_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1700,8 +1700,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kerberos5readwrite_python">
-<a href="#kerberos5readwrite_python" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Write</a>
+        <span id="kerberos5_read_write_python">
+<a href="#kerberos5_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>write</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1710,8 +1710,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kerberos5ireadonly_python">
-<a href="#kerberos5ireadonly_python" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Only</a>
+        <span id="kerberos5i_read_only_python">
+<a href="#kerberos5i_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1720,8 +1720,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kerberos5ireadwrite_python">
-<a href="#kerberos5ireadwrite_python" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Write</a>
+        <span id="kerberos5i_read_write_python">
+<a href="#kerberos5i_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>write</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1730,8 +1730,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kerberos5preadonly_python">
-<a href="#kerberos5preadonly_python" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Only</a>
+        <span id="kerberos5p_read_only_python">
+<a href="#kerberos5p_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1740,8 +1740,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kerberos5preadwrite_python">
-<a href="#kerberos5preadwrite_python" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Write</a>
+        <span id="kerberos5p_read_write_python">
+<a href="#kerberos5p_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>write</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1770,8 +1770,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ruleindex_python">
-<a href="#ruleindex_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
+        <span id="rule_index_python">
+<a href="#rule_index_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1780,8 +1780,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unixreadonly_python">
-<a href="#unixreadonly_python" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
+        <span id="unix_read_only_python">
+<a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1790,8 +1790,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unixreadwrite_python">
-<a href="#unixreadwrite_python" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Write</a>
+        <span id="unix_read_write_python">
+<a href="#unix_read_write_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>write</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1979,8 +1979,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mounttargetid_python">
-<a href="#mounttargetid_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Id</a>
+        <span id="mount_target_id_python">
+<a href="#mount_target_id_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1989,8 +1989,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smbserverfqdn_python">
-<a href="#smbserverfqdn_python" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Fqdn</a>
+        <span id="smb_server_fqdn_python">
+<a href="#smb_server_fqdn_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2570,7 +2570,7 @@ The following output properties are available:
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Dict[Volume<wbr>Backup<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
 
@@ -2580,7 +2580,7 @@ The following output properties are available:
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Dict[Replication<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
 
@@ -2590,7 +2590,7 @@ The following output properties are available:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Dict[Volume<wbr>Snapshot<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
 
@@ -2669,7 +2669,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">List[Export<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
 

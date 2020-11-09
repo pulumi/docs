@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#storage_location_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocationresponse">Dict[Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocationresponse">Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The storage location for a packet capture session.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilterresponse">List[Packet<wbr>Capture<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packetcapturefilterresponse">Sequence[Packet<wbr>Capture<wbr>Filter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of packet capture filters.{{% /md %}}</dd>
 
@@ -790,8 +790,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localipaddress_python">
-<a href="#localipaddress_python" style="color: inherit; text-decoration: inherit;">local<wbr>IPAddress</a>
+        <span id="local_ip_address_python">
+<a href="#local_ip_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -800,8 +800,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localport_python">
-<a href="#localport_python" style="color: inherit; text-decoration: inherit;">local<wbr>Port</a>
+        <span id="local_port_python">
+<a href="#local_port_python" style="color: inherit; text-decoration: inherit;">local_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -820,8 +820,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteipaddress_python">
-<a href="#remoteipaddress_python" style="color: inherit; text-decoration: inherit;">remote<wbr>IPAddress</a>
+        <span id="remote_ip_address_python">
+<a href="#remote_ip_address_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -830,8 +830,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteport_python">
-<a href="#remoteport_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Port</a>
+        <span id="remote_port_python">
+<a href="#remote_port_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

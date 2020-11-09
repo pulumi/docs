@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tldlegalagreementresponse">List[Tld<wbr>Legal<wbr>Agreement<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tldlegalagreementresponse">Sequence[Tld<wbr>Legal<wbr>Agreement<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
 
@@ -478,8 +478,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="agreementkey_python">
-<a href="#agreementkey_python" style="color: inherit; text-decoration: inherit;">agreement<wbr>Key</a>
+        <span id="agreement_key_python">
+<a href="#agreement_key_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkmappingpropertiesresponse">Dict[Network<wbr>Mapping<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkmappingpropertiesresponse">Network<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd>
 
@@ -580,8 +580,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryfabriclocation_python">
-<a href="#primaryfabriclocation_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Location</a>
+        <span id="primary_fabric_location_python">
+<a href="#primary_fabric_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -590,8 +590,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryfabriclocation_python">
-<a href="#recoveryfabriclocation_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Location</a>
+        <span id="recovery_fabric_location_python">
+<a href="#recovery_fabric_location_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#fabric_specific_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response] | Dict[Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response] | Dict[Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args, Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args, Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
 

@@ -59,7 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -69,7 +69,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -86,7 +86,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -96,7 +96,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -113,7 +113,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -123,7 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -140,7 +140,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -150,7 +150,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -180,7 +180,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the device.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -190,7 +200,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networkfunctions_csharp">
+<a href="#networkfunctions_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network functions deployed on the device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -200,7 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the hybrid network device resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the device resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -220,17 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="virtualnetworkfunctions_csharp">
-<a href="#virtualnetworkfunctions_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Functions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network functions deployed on the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -240,17 +250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hybrid<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the azure stack edge device.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -277,7 +277,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the device.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -287,7 +297,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networkfunctions_go">
+<a href="#networkfunctions_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network functions deployed on the device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -297,7 +317,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the hybrid network device resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the device resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -317,17 +337,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="virtualnetworkfunctions_go">
-<a href="#virtualnetworkfunctions_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Functions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network functions deployed on the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -337,17 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the azure stack edge device.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -374,7 +374,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the device.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -384,7 +394,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networkfunctions_nodejs">
+<a href="#networkfunctions_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network functions deployed on the device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -394,7 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the hybrid network device resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the device resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -414,17 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="virtualnetworkfunctions_nodejs">
-<a href="#virtualnetworkfunctions_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Functions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network functions deployed on the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -434,17 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the azure stack edge device.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -471,7 +471,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the device.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -481,7 +491,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="network_functions_python">
+<a href="#network_functions_python" style="color: inherit; text-decoration: inherit;">network_<wbr>functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network functions deployed on the device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -491,7 +511,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the hybrid network device resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the device resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -511,17 +531,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="virtual_network_functions_python">
-<a href="#virtual_network_functions_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>functions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network functions deployed on the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -529,19 +539,9 @@ The following output properties are available:
 <a href="#azure_stack_edge_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>stack_<wbr>edge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the azure stack edge device.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

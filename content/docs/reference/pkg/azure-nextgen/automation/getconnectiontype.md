@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#field_definitions_python" style="color: inherit; text-decoration: inherit;">field_<wbr>definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Field<wbr>Definition<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Field<wbr>Definition<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Gets the field definitions of the connection type.{{% /md %}}</dd>
 
@@ -660,16 +660,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isoptional_python">
-<a href="#isoptional_python" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the isOptional flag of the connection field definition.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_encrypted_python">
 <a href="#is_encrypted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>encrypted</a>
 </span> 
@@ -677,6 +667,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the isEncrypted flag of the connection field definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_optional_python">
+<a href="#is_optional_python" style="color: inherit; text-decoration: inherit;">is_<wbr>optional</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the isOptional flag of the connection field definition.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

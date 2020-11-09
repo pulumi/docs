@@ -101,16 +101,16 @@ import pulumi_azure_nextgen as azure_nextgen
 
 connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGateway",
     connection_gateway_name="test123",
-    properties={
-        "backendUri": "https://WABI-WEST-US-redirect.analysis.windows.net",
-        "connectionGatewayInstallation": {
-            "id": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
-        },
-        "contactInformation": ["test123@microsoft.com"],
-        "displayName": "test123",
-        "machineName": "TEST123",
-        "status": "Installed",
-    },
+    properties=azure_nextgen.web.latest.ConnectionGatewayDefinitionPropertiesArgs(
+        backend_uri="https://WABI-WEST-US-redirect.analysis.windows.net",
+        connection_gateway_installation=azure_nextgen.web.latest.ConnectionGatewayReferenceArgs(
+            id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
+        ),
+        contact_information=["test123@microsoft.com"],
+        display_name="test123",
+        machine_name="TEST123",
+        status="Installed",
+    ),
     resource_group_name="testResourceGroup")
 
 ```
@@ -154,7 +154,7 @@ const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connec
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionGatewayDefinitionProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConnectionGatewayDefinitionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -573,7 +573,7 @@ The ConnectionGateway resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewaydefinitionproperties">Dict[Connection<wbr>Gateway<wbr>Definition<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#connectiongatewaydefinitionproperties">Connection<wbr>Gateway<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -583,7 +583,7 @@ The ConnectionGateway resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1020,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_gateway_installation_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>gateway_<wbr>installation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreference">Dict[Connection<wbr>Gateway<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#connectiongatewayreference">Connection<wbr>Gateway<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd>
 
@@ -1030,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_information_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The gateway admin{{% /md %}}</dd>
 
@@ -1070,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -1339,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_gateway_installation_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>gateway_<wbr>installation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Dict[Connection<wbr>Gateway<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd>
 
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_information_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The gateway admin{{% /md %}}</dd>
 
@@ -1389,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 

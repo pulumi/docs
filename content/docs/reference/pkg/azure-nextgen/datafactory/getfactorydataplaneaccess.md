@@ -507,7 +507,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccesspolicyresponse">Dict[User<wbr>Access<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useraccesspolicyresponse">User<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user access policy.{{% /md %}}</dd>
 
@@ -708,8 +708,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accessresourcepath_python">
-<a href="#accessresourcepath_python" style="color: inherit; text-decoration: inherit;">access<wbr>Resource<wbr>Path</a>
+        <span id="access_resource_path_python">
+<a href="#access_resource_path_python" style="color: inherit; text-decoration: inherit;">access_<wbr>resource_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

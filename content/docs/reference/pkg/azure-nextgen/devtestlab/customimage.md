@@ -23,7 +23,7 @@ A custom image.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_plan</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomImagePropertiesFromPlan]]</span> = None<span class="p">, </span><span class="nx">data_disk_storage_info</span><span class="p">:</span> <span class="nx">Optional[List[DataDiskStorageTypeInfo]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_plan_authorized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vhd</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomImagePropertiesCustom]]</span> = None<span class="p">, </span><span class="nx">vm</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomImagePropertiesFromVm]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_plan</span><span class="p">:</span> <span class="nx">Optional[CustomImagePropertiesFromPlanArgs]</span> = None<span class="p">, </span><span class="nx">data_disk_storage_info</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataDiskStorageTypeInfoArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_plan_authorized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vhd</span><span class="p">:</span> <span class="nx">Optional[CustomImagePropertiesCustomArgs]</span> = None<span class="p">, </span><span class="nx">vm</span><span class="p">:</span> <span class="nx">Optional[CustomImagePropertiesFromVmArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -682,7 +682,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#custom_image_plan_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>image_<wbr>plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromplan">Dict[Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
 
@@ -692,7 +692,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#data_disk_storage_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>storage_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskstoragetypeinfo">List[Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info]</a></span>
+        <span class="property-type"><a href="#datadiskstoragetypeinfo">Sequence[Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
 
@@ -752,7 +752,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -762,7 +762,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiescustom">Dict[Custom<wbr>Image<wbr>Properties<wbr>Custom]</a></span>
+        <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
 
@@ -772,7 +772,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromvm">Dict[Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm]</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
 
@@ -1795,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinfo">Dict[Linux<wbr>Os<wbr>Info]</a></span>
+        <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
 
@@ -1815,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinfo">Dict[Windows<wbr>Os<wbr>Info]</a></span>
+        <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
 
@@ -1954,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Dict[Linux<wbr>Os<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
 
@@ -1974,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Dict[Windows<wbr>Os<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
 

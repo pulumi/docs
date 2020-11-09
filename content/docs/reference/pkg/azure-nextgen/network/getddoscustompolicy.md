@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#protocol_custom_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>custom_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocolcustomsettingsformatresponse">List[Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#protocolcustomsettingsformatresponse">Sequence[Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -730,8 +730,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcerateoverride_python">
-<a href="#sourcerateoverride_python" style="color: inherit; text-decoration: inherit;">source<wbr>Rate<wbr>Override</a>
+        <span id="source_rate_override_python">
+<a href="#source_rate_override_python" style="color: inherit; text-decoration: inherit;">source_<wbr>rate_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -740,8 +740,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="triggerrateoverride_python">
-<a href="#triggerrateoverride_python" style="color: inherit; text-decoration: inherit;">trigger<wbr>Rate<wbr>Override</a>
+        <span id="trigger_rate_override_python">
+<a href="#trigger_rate_override_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>rate_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -750,8 +750,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="triggersensitivityoverride_python">
-<a href="#triggersensitivityoverride_python" style="color: inherit; text-decoration: inherit;">trigger<wbr>Sensitivity<wbr>Override</a>
+        <span id="trigger_sensitivity_override_python">
+<a href="#trigger_sensitivity_override_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>sensitivity_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

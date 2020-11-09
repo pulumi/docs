@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Alerting<wbr>Action<wbr>Response] | Dict[Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">Dict[Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Dict[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -814,24 +814,24 @@ The following output properties are available:
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerconditionresponse">Dict[Trigger<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aznsaction_python">
-<a href="#aznsaction_python" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
+        <span id="azns_action_python">
+<a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroupresponse">Dict[Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlinginmin_python">
-<a href="#throttlinginmin_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
+        <span id="throttling_in_min_python">
+<a href="#throttling_in_min_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>in_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -969,11 +969,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiongroup_python">
-<a href="#actiongroup_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
+        <span id="action_group_python">
+<a href="#action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
 
@@ -989,8 +989,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailsubject_python">
-<a href="#emailsubject_python" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
+        <span id="email_subject_python">
+<a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1098,8 +1098,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1112,7 +1112,7 @@ The following output properties are available:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimensionresponse">List[Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dimensionresponse">Sequence[Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
 
@@ -1271,7 +1271,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
 
@@ -1436,8 +1436,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metriccolumn_python">
-<a href="#metriccolumn_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Column</a>
+        <span id="metric_column_python">
+<a href="#metric_column_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>column</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1446,8 +1446,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictriggertype_python">
-<a href="#metrictriggertype_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
+        <span id="metric_trigger_type_python">
+<a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1466,8 +1466,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdoperator_python">
-<a href="#thresholdoperator_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
+        <span id="threshold_operator_python">
+<a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1549,7 +1549,7 @@ The following output properties are available:
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteriaresponse">List[Criteria<wbr>Response]</a></span>
+        <span class="property-type"><a href="#criteriaresponse">Sequence[Criteria<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
 
@@ -1847,7 +1847,7 @@ The following output properties are available:
 <a href="#authorized_resources_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
 
@@ -2012,8 +2012,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="thresholdoperator_python">
-<a href="#thresholdoperator_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
+        <span id="threshold_operator_python">
+<a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2022,11 +2022,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictrigger_python">
-<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+        <span id="metric_trigger_python">
+<a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictriggerresponse">Dict[Log<wbr>Metric<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
 

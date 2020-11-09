@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#volume_backups_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>backups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupsresponse">List[Volume<wbr>Backups<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumebackupsresponse">Sequence[Volume<wbr>Backups<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
 
@@ -850,8 +850,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupscount_python">
-<a href="#backupscount_python" style="color: inherit; text-decoration: inherit;">backups<wbr>Count</a>
+        <span id="backups_count_python">
+<a href="#backups_count_python" style="color: inherit; text-decoration: inherit;">backups_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -860,8 +860,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyenabled_python">
-<a href="#policyenabled_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Enabled</a>
+        <span id="policy_enabled_python">
+<a href="#policy_enabled_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

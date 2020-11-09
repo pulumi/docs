@@ -82,10 +82,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 role_assignment = azure_nextgen.authorization.latest.RoleAssignment("roleAssignment",
-    properties={
-        "principalId": "d93a38bc-d029-4160-bfb0-fbda779ac214",
-        "roleDefinitionId": "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
-    },
+    properties=azure_nextgen.authorization.latest.RoleAssignmentPropertiesArgs(
+        principal_id="d93a38bc-d029-4160-bfb0-fbda779ac214",
+        role_definition_id="/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
+    ),
     role_assignment_name="roleAssignmentName",
     scope="scope")
 
@@ -124,7 +124,7 @@ const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("ro
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[RoleAssignmentProperties]]</span> = None<span class="p">, </span><span class="nx">role_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[RoleAssignmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">role_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,7 +413,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleassignmentproperties">Dict[Role<wbr>Assignment<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#roleassignmentproperties">Role<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Role assignment properties.{{% /md %}}</dd>
 

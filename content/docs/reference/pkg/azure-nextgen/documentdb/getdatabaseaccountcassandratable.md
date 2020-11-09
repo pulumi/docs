@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Dict[Cassandra<wbr>Schema<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
 
@@ -733,7 +733,7 @@ The following output properties are available:
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">List[Cluster<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">Sequence[Cluster<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd>
 
@@ -743,7 +743,7 @@ The following output properties are available:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">List[Column<wbr>Response]</a></span>
+        <span class="property-type"><a href="#columnresponse">Sequence[Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd>
 
@@ -753,7 +753,7 @@ The following output properties are available:
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">List[Cassandra<wbr>Partition<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd>
 
@@ -868,8 +868,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orderby_python">
-<a href="#orderby_python" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
+        <span id="order_by_python">
+<a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

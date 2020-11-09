@@ -93,11 +93,11 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 rule = azure_nextgen.servicebus.latest.Rule("rule",
-    correlation_filter={
-        "properties": {
+    correlation_filter=azure_nextgen.servicebus.latest.CorrelationFilterArgs(
+        properties={
             "topicHint": "Crop",
         },
-    },
+    ),
     filter_type="CorrelationFilter",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
@@ -300,9 +300,9 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
     rule_name="sdk-Rules-6571",
-    sql_filter={
-        "sqlExpression": "myproperty=test",
-    },
+    sql_filter=azure_nextgen.servicebus.latest.SqlFilterArgs(
+        sql_expression="myproperty=test",
+    ),
     subscription_name="sdk-Subscriptions-8691",
     topic_name="sdk-Topics-2081")
 
@@ -344,7 +344,7 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Dict[Action]]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[Dict[CorrelationFilter]]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[Dict[SqlFilter]]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[ActionArgs]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[CorrelationFilterArgs]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[SqlFilterArgs]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -863,7 +863,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Dict[Action]</a></span>
+        <span class="property-type"><a href="#action">Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.{{% /md %}}</dd>
 
@@ -873,7 +873,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#correlation_filter_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#correlationfilter">Dict[Correlation<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#correlationfilter">Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of correlationFilter{{% /md %}}</dd>
 
@@ -893,7 +893,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sql_filter_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlfilter">Dict[Sql<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#sqlfilter">Sql<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of sqlFilter{{% /md %}}</dd>
 
@@ -1768,7 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}dictionary object for custom filters{{% /md %}}</dd>
 
@@ -2207,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}dictionary object for custom filters{{% /md %}}</dd>
 

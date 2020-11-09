@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#children_python" style="color: inherit; text-decoration: inherit;">children</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupdetailsresponse">Dict[Management<wbr>Group<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgroupdetailsresponse">Management<wbr>Group<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of a management group.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The following output properties are available:
 <a href="#children_python" style="color: inherit; text-decoration: inherit;">children</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd>
 
@@ -963,7 +963,7 @@ The following output properties are available:
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Dict[Parent<wbr>Group<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd>
 

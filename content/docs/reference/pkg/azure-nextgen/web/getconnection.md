@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiondefinitionresponseproperties">Dict[Api<wbr>Connection<wbr>Definition<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#apiconnectiondefinitionresponseproperties">Api<wbr>Connection<wbr>Definition<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The following output properties are available:
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Dict[Api<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ The following output properties are available:
 <a href="#custom_parameter_values_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of custom parameter values{{% /md %}}</dd>
 
@@ -804,7 +804,7 @@ The following output properties are available:
 <a href="#non_secret_parameter_values_python" style="color: inherit; text-decoration: inherit;">non_<wbr>secret_<wbr>parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of nonsecret parameter values{{% /md %}}</dd>
 
@@ -814,7 +814,7 @@ The following output properties are available:
 <a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of parameter values{{% /md %}}</dd>
 
@@ -824,7 +824,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List[Connection<wbr>Status<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd>
 
@@ -834,7 +834,7 @@ The following output properties are available:
 <a href="#test_links_python" style="color: inherit; text-decoration: inherit;">test_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd>
 
@@ -1302,7 +1302,7 @@ The following output properties are available:
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -1671,7 +1671,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1810,7 +1810,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Dict[Connection<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd>
 

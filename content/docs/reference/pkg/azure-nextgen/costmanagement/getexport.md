@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Dict[Export<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Dict[Export<wbr>Delivery<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Dict[Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportscheduleresponse">Dict[Export<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportscheduleresponse">Export<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd>
 
@@ -794,7 +794,7 @@ The following output properties are available:
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Dict[Export<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
 
@@ -804,7 +804,7 @@ The following output properties are available:
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Dict[Export<wbr>Delivery<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
 
@@ -834,7 +834,7 @@ The following output properties are available:
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Dict[Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
 
@@ -1032,7 +1032,7 @@ The following output properties are available:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd>
 
@@ -1141,7 +1141,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Dict[Export<wbr>Dataset<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd>
 
@@ -1340,7 +1340,7 @@ The following output properties are available:
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetresponse">Dict[Export<wbr>Dataset<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd>
 
@@ -1350,7 +1350,7 @@ The following output properties are available:
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiodresponse">Dict[Export<wbr>Time<wbr>Period<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd>
 
@@ -1588,7 +1588,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestinationresponse">Dict[Export<wbr>Delivery<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd>
 
@@ -1667,7 +1667,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionresponse">List[Export<wbr>Execution<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportexecutionresponse">Sequence[Export<wbr>Execution<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of export executions.{{% /md %}}</dd>
 
@@ -2126,7 +2126,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -2146,14 +2146,14 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailsresponse">Dict[Error<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of any error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="executiontype_python">
-<a href="#executiontype_python" style="color: inherit; text-decoration: inherit;">execution<wbr>Type</a>
+        <span id="execution_type_python">
+<a href="#execution_type_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2172,8 +2172,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingendtime_python">
-<a href="#processingendtime_python" style="color: inherit; text-decoration: inherit;">processing<wbr>End<wbr>Time</a>
+        <span id="processing_end_time_python">
+<a href="#processing_end_time_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2182,8 +2182,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingstarttime_python">
-<a href="#processingstarttime_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Start<wbr>Time</a>
+        <span id="processing_start_time_python">
+<a href="#processing_start_time_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2192,11 +2192,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runsettings_python">
-<a href="#runsettings_python" style="color: inherit; text-decoration: inherit;">run<wbr>Settings</a>
+        <span id="run_settings_python">
+<a href="#run_settings_python" style="color: inherit; text-decoration: inherit;">run_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonexportpropertiesresponse">Dict[Common<wbr>Export<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd>
 
@@ -2212,8 +2212,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="submittedby_python">
-<a href="#submittedby_python" style="color: inherit; text-decoration: inherit;">submitted<wbr>By</a>
+        <span id="submitted_by_python">
+<a href="#submitted_by_python" style="color: inherit; text-decoration: inherit;">submitted_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2222,8 +2222,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="submittedtime_python">
-<a href="#submittedtime_python" style="color: inherit; text-decoration: inherit;">submitted<wbr>Time</a>
+        <span id="submitted_time_python">
+<a href="#submitted_time_python" style="color: inherit; text-decoration: inherit;">submitted_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2494,7 +2494,7 @@ The following output properties are available:
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Dict[Export<wbr>Recurrence<wbr>Period<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
 

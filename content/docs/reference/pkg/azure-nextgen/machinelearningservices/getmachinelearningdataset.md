@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponse">Dict[Dataset<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetresponse">Dataset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset properties{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1014,7 +1014,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd>
 
@@ -1024,7 +1024,7 @@ The following output properties are available:
 <a href="#dataset_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dict[Dataset<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd>
 
@@ -1034,7 +1034,7 @@ The following output properties are available:
 <a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Dict[Dataset<wbr>Response<wbr>Latest]</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd>
 
@@ -1403,7 +1403,7 @@ The following output properties are available:
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd>
 
@@ -1423,7 +1423,7 @@ The following output properties are available:
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
 
@@ -1433,7 +1433,7 @@ The following output properties are available:
 <a href="#sql_data_path_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Dict[Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path]</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd>
 
@@ -2122,7 +2122,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
 
@@ -2132,7 +2132,7 @@ The following output properties are available:
 <a href="#telemetry_info_python" style="color: inherit; text-decoration: inherit;">telemetry_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd>
 
@@ -2162,7 +2162,7 @@ The following output properties are available:
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd>
 
@@ -2172,7 +2172,7 @@ The following output properties are available:
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Dict[Dataset<wbr>Response<wbr>Data<wbr>Path]</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd>
 
@@ -2182,7 +2182,7 @@ The following output properties are available:
 <a href="#dataset_definition_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>definition_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dict[Dataset<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd>
 
@@ -2192,7 +2192,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
 
@@ -2540,7 +2540,7 @@ The following output properties are available:
 <a href="#deprecated_by_python" style="color: inherit; text-decoration: inherit;">deprecated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dict[Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By]</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd>
 
@@ -2868,7 +2868,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 

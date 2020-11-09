@@ -145,39 +145,39 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 export = azure_nextgen.costmanagement.latest.Export("export",
-    definition={
-        "dataSet": {
-            "configuration": {
-                "columns": [
+    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+                columns=[
                     "Date",
                     "MeterId",
                     "ResourceId",
                     "ResourceLocation",
                     "Quantity",
                 ],
-            },
-            "granularity": "Daily",
-        },
-        "timeframe": "MonthToDate",
-        "type": "ActualCost",
-    },
-    delivery_info={
-        "destination": {
-            "container": "exports",
-            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
-            "rootFolderPath": "ad-hoc",
-        },
-    },
+            ),
+            granularity="Daily",
+        ),
+        timeframe="MonthToDate",
+        type="ActualCost",
+    ),
+    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+            container="exports",
+            resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            root_folder_path="ad-hoc",
+        ),
+    ),
     export_name="TestExport",
     format="Csv",
-    schedule={
-        "recurrence": "Weekly",
-        "recurrencePeriod": {
-            "from": "2020-06-01T00:00:00Z",
-            "to": "2020-10-31T00:00:00Z",
-        },
-        "status": "Active",
-    },
+    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+        recurrence="Weekly",
+        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+            from_="2020-06-01T00:00:00Z",
+            to="2020-10-31T00:00:00Z",
+        ),
+        status="Active",
+    ),
     scope="providers/Microsoft.Billing/billingAccounts/123456")
 
 ```
@@ -360,39 +360,39 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 export = azure_nextgen.costmanagement.latest.Export("export",
-    definition={
-        "dataSet": {
-            "configuration": {
-                "columns": [
+    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+                columns=[
                     "Date",
                     "MeterId",
                     "ResourceId",
                     "ResourceLocation",
                     "Quantity",
                 ],
-            },
-            "granularity": "Daily",
-        },
-        "timeframe": "MonthToDate",
-        "type": "ActualCost",
-    },
-    delivery_info={
-        "destination": {
-            "container": "exports",
-            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
-            "rootFolderPath": "ad-hoc",
-        },
-    },
+            ),
+            granularity="Daily",
+        ),
+        timeframe="MonthToDate",
+        type="ActualCost",
+    ),
+    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+            container="exports",
+            resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            root_folder_path="ad-hoc",
+        ),
+    ),
     export_name="TestExport",
     format="Csv",
-    schedule={
-        "recurrence": "Weekly",
-        "recurrencePeriod": {
-            "from": "2020-06-01T00:00:00Z",
-            "to": "2020-10-31T00:00:00Z",
-        },
-        "status": "Active",
-    },
+    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+        recurrence="Weekly",
+        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+            from_="2020-06-01T00:00:00Z",
+            to="2020-10-31T00:00:00Z",
+        ),
+        status="Active",
+    ),
     scope="providers/Microsoft.Billing/billingAccounts/12/departments/1234")
 
 ```
@@ -575,39 +575,39 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 export = azure_nextgen.costmanagement.latest.Export("export",
-    definition={
-        "dataSet": {
-            "configuration": {
-                "columns": [
+    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+                columns=[
                     "Date",
                     "MeterId",
                     "ResourceId",
                     "ResourceLocation",
                     "Quantity",
                 ],
-            },
-            "granularity": "Daily",
-        },
-        "timeframe": "MonthToDate",
-        "type": "ActualCost",
-    },
-    delivery_info={
-        "destination": {
-            "container": "exports",
-            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
-            "rootFolderPath": "ad-hoc",
-        },
-    },
+            ),
+            granularity="Daily",
+        ),
+        timeframe="MonthToDate",
+        type="ActualCost",
+    ),
+    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+            container="exports",
+            resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            root_folder_path="ad-hoc",
+        ),
+    ),
     export_name="TestExport",
     format="Csv",
-    schedule={
-        "recurrence": "Weekly",
-        "recurrencePeriod": {
-            "from": "2020-06-01T00:00:00Z",
-            "to": "2020-10-31T00:00:00Z",
-        },
-        "status": "Active",
-    },
+    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+        recurrence="Weekly",
+        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+            from_="2020-06-01T00:00:00Z",
+            to="2020-10-31T00:00:00Z",
+        ),
+        status="Active",
+    ),
     scope="providers/Microsoft.Billing/billingAccounts/100/enrollmentAccounts/456")
 
 ```
@@ -790,39 +790,39 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 export = azure_nextgen.costmanagement.latest.Export("export",
-    definition={
-        "dataSet": {
-            "configuration": {
-                "columns": [
+    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+                columns=[
                     "Date",
                     "MeterId",
                     "ResourceId",
                     "ResourceLocation",
                     "Quantity",
                 ],
-            },
-            "granularity": "Daily",
-        },
-        "timeframe": "MonthToDate",
-        "type": "ActualCost",
-    },
-    delivery_info={
-        "destination": {
-            "container": "exports",
-            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
-            "rootFolderPath": "ad-hoc",
-        },
-    },
+            ),
+            granularity="Daily",
+        ),
+        timeframe="MonthToDate",
+        type="ActualCost",
+    ),
+    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+            container="exports",
+            resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            root_folder_path="ad-hoc",
+        ),
+    ),
     export_name="TestExport",
     format="Csv",
-    schedule={
-        "recurrence": "Weekly",
-        "recurrencePeriod": {
-            "from": "2020-06-01T00:00:00Z",
-            "to": "2020-10-31T00:00:00Z",
-        },
-        "status": "Active",
-    },
+    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+        recurrence="Weekly",
+        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+            from_="2020-06-01T00:00:00Z",
+            to="2020-10-31T00:00:00Z",
+        ),
+        status="Active",
+    ),
     scope="providers/Microsoft.Management/managementGroups/TestMG")
 
 ```
@@ -1005,39 +1005,39 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 export = azure_nextgen.costmanagement.latest.Export("export",
-    definition={
-        "dataSet": {
-            "configuration": {
-                "columns": [
+    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+                columns=[
                     "Date",
                     "MeterId",
                     "ResourceId",
                     "ResourceLocation",
                     "Quantity",
                 ],
-            },
-            "granularity": "Daily",
-        },
-        "timeframe": "MonthToDate",
-        "type": "ActualCost",
-    },
-    delivery_info={
-        "destination": {
-            "container": "exports",
-            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
-            "rootFolderPath": "ad-hoc",
-        },
-    },
+            ),
+            granularity="Daily",
+        ),
+        timeframe="MonthToDate",
+        type="ActualCost",
+    ),
+    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+            container="exports",
+            resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            root_folder_path="ad-hoc",
+        ),
+    ),
     export_name="TestExport",
     format="Csv",
-    schedule={
-        "recurrence": "Weekly",
-        "recurrencePeriod": {
-            "from": "2020-06-01T00:00:00Z",
-            "to": "2020-10-31T00:00:00Z",
-        },
-        "status": "Active",
-    },
+    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+        recurrence="Weekly",
+        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+            from_="2020-06-01T00:00:00Z",
+            to="2020-10-31T00:00:00Z",
+        ),
+        status="Active",
+    ),
     scope="subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG")
 
 ```
@@ -1220,39 +1220,39 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 export = azure_nextgen.costmanagement.latest.Export("export",
-    definition={
-        "dataSet": {
-            "configuration": {
-                "columns": [
+    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+                columns=[
                     "Date",
                     "MeterId",
                     "ResourceId",
                     "ResourceLocation",
                     "Quantity",
                 ],
-            },
-            "granularity": "Daily",
-        },
-        "timeframe": "MonthToDate",
-        "type": "ActualCost",
-    },
-    delivery_info={
-        "destination": {
-            "container": "exports",
-            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
-            "rootFolderPath": "ad-hoc",
-        },
-    },
+            ),
+            granularity="Daily",
+        ),
+        timeframe="MonthToDate",
+        type="ActualCost",
+    ),
+    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+            container="exports",
+            resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            root_folder_path="ad-hoc",
+        ),
+    ),
     export_name="TestExport",
     format="Csv",
-    schedule={
-        "recurrence": "Weekly",
-        "recurrencePeriod": {
-            "from": "2020-06-01T00:00:00Z",
-            "to": "2020-10-31T00:00:00Z",
-        },
-        "status": "Active",
-    },
+    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+        recurrence="Weekly",
+        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+            from_="2020-06-01T00:00:00Z",
+            to="2020-10-31T00:00:00Z",
+        ),
+        status="Active",
+    ),
     scope="subscriptions/00000000-0000-0000-0000-000000000000")
 
 ```
@@ -1318,7 +1318,7 @@ const _export = new azure_nextgen.costmanagement.latest.Export("export", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Export</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[Dict[ExportDefinition]]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[Dict[ExportDeliveryInfo]]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[ExportSchedule]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Export</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[ExportDefinitionArgs]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[ExportDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ExportScheduleArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1727,7 +1727,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinition">Dict[Export<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#exportdefinition">Export<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
 
@@ -1737,7 +1737,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinfo">Dict[Export<wbr>Delivery<wbr>Info]</a></span>
+        <span class="property-type"><a href="#exportdeliveryinfo">Export<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
 
@@ -1787,7 +1787,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportschedule">Dict[Export<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#exportschedule">Export<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd>
 
@@ -2026,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Dict[Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
 
@@ -2234,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Dict[Export<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
 
@@ -2244,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Dict[Export<wbr>Delivery<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
 
@@ -2274,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Dict[Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
 
@@ -2502,7 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfiguration">Dict[Export<wbr>Dataset<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#exportdatasetconfiguration">Export<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd>
 
@@ -2591,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd>
 
@@ -2670,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd>
 
@@ -2779,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Dict[Export<wbr>Dataset<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd>
 
@@ -2978,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdataset">Dict[Export<wbr>Dataset]</a></span>
+        <span class="property-type"><a href="#exportdataset">Export<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd>
 
@@ -2988,7 +2988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiod">Dict[Export<wbr>Time<wbr>Period]</a></span>
+        <span class="property-type"><a href="#exporttimeperiod">Export<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd>
 
@@ -3177,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetresponse">Dict[Export<wbr>Dataset<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd>
 
@@ -3187,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiodresponse">Dict[Export<wbr>Time<wbr>Period<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd>
 
@@ -3584,7 +3584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestination">Dict[Export<wbr>Delivery<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#exportdeliverydestination">Export<wbr>Delivery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd>
 
@@ -3663,7 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestinationresponse">Dict[Export<wbr>Delivery<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd>
 
@@ -3742,7 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionresponse">List[Export<wbr>Execution<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportexecutionresponse">Sequence[Export<wbr>Execution<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of export executions.{{% /md %}}</dd>
 
@@ -4201,7 +4201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -4221,14 +4221,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailsresponse">Dict[Error<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of any error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="executiontype_python">
-<a href="#executiontype_python" style="color: inherit; text-decoration: inherit;">execution<wbr>Type</a>
+        <span id="execution_type_python">
+<a href="#execution_type_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4247,8 +4247,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingendtime_python">
-<a href="#processingendtime_python" style="color: inherit; text-decoration: inherit;">processing<wbr>End<wbr>Time</a>
+        <span id="processing_end_time_python">
+<a href="#processing_end_time_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4257,8 +4257,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingstarttime_python">
-<a href="#processingstarttime_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Start<wbr>Time</a>
+        <span id="processing_start_time_python">
+<a href="#processing_start_time_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4267,11 +4267,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runsettings_python">
-<a href="#runsettings_python" style="color: inherit; text-decoration: inherit;">run<wbr>Settings</a>
+        <span id="run_settings_python">
+<a href="#run_settings_python" style="color: inherit; text-decoration: inherit;">run_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonexportpropertiesresponse">Dict[Common<wbr>Export<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd>
 
@@ -4287,8 +4287,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="submittedby_python">
-<a href="#submittedby_python" style="color: inherit; text-decoration: inherit;">submitted<wbr>By</a>
+        <span id="submitted_by_python">
+<a href="#submitted_by_python" style="color: inherit; text-decoration: inherit;">submitted_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4297,8 +4297,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="submittedtime_python">
-<a href="#submittedtime_python" style="color: inherit; text-decoration: inherit;">submitted<wbr>Time</a>
+        <span id="submitted_time_python">
+<a href="#submitted_time_python" style="color: inherit; text-decoration: inherit;">submitted_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4688,7 +4688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiod">Dict[Export<wbr>Recurrence<wbr>Period]</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiod">Export<wbr>Recurrence<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
 
@@ -4847,7 +4847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Dict[Export<wbr>Recurrence<wbr>Period<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
 

@@ -1353,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_details_python" style="color: inherit; text-decoration: inherit;">count_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messagecountdetailsresponse">Dict[Message<wbr>Count<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Message Count Details.{{% /md %}}</dd>
 

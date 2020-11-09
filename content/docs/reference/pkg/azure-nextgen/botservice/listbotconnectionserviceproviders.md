@@ -177,7 +177,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceproviderresponse">List[Service<wbr>Provider<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceproviderresponse">Sequence[Service<wbr>Provider<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets the list of bot service providers and their properties.{{% /md %}}</dd>
 
@@ -448,8 +448,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="helpurl_python">
-<a href="#helpurl_python" style="color: inherit; text-decoration: inherit;">help<wbr>Url</a>
+        <span id="help_url_python">
+<a href="#help_url_python" style="color: inherit; text-decoration: inherit;">help_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -697,8 +697,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="devportalurl_python">
-<a href="#devportalurl_python" style="color: inherit; text-decoration: inherit;">dev<wbr>Portal<wbr>Url</a>
+        <span id="dev_portal_url_python">
+<a href="#dev_portal_url_python" style="color: inherit; text-decoration: inherit;">dev_<wbr>portal_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -751,7 +751,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceproviderparameterresponse">List[Service<wbr>Provider<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponse">Sequence[Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of parameters for the Service Provider{{% /md %}}</dd>
 
@@ -830,7 +830,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceproviderpropertiesresponse">Dict[Service<wbr>Provider<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceproviderpropertiesresponse">Service<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Properties of a Service Provider Object{{% /md %}}</dd>
 

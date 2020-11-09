@@ -208,59 +208,59 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
-    cors={
-        "allowedOrigins": [
+    cors=azure_nextgen.signalrservice.latest.SignalRCorsSettingsArgs(
+        allowed_origins=[
             "https://foo.com",
             "https://bar.com",
         ],
-    },
+    ),
     features=[
-        {
-            "flag": "ServiceMode",
-            "properties": {},
-            "value": "Serverless",
-        },
-        {
-            "flag": "EnableConnectivityLogs",
-            "properties": {},
-            "value": "True",
-        },
-        {
-            "flag": "EnableMessagingLogs",
-            "properties": {},
-            "value": "False",
-        },
+        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+            flag="ServiceMode",
+            properties={},
+            value="Serverless",
+        ),
+        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+            flag="EnableConnectivityLogs",
+            properties={},
+            value="True",
+        ),
+        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+            flag="EnableMessagingLogs",
+            properties={},
+            value="False",
+        ),
     ],
     kind="SignalR",
     location="eastus",
-    network_acls={
-        "defaultAction": "Deny",
-        "privateEndpoints": [{
-            "allow": ["ServerConnection"],
-            "name": "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-        }],
-        "publicNetwork": {
-            "allow": ["ClientConnection"],
-        },
-    },
+    network_acls=azure_nextgen.signalrservice.latest.SignalRNetworkACLsArgs(
+        default_action="Deny",
+        private_endpoints=[azure_nextgen.signalrservice.latest.PrivateEndpointACLArgs(
+            allow=["ServerConnection"],
+            name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+        )],
+        public_network=azure_nextgen.signalrservice.latest.NetworkACLArgs(
+            allow=["ClientConnection"],
+        ),
+    ),
     resource_group_name="myResourceGroup",
     resource_name="mySignalRService",
-    sku={
-        "capacity": 1,
-        "name": "Standard_S1",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.signalrservice.latest.ResourceSkuArgs(
+        capacity=1,
+        name="Standard_S1",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     },
-    upstream={
-        "templates": [{
-            "categoryPattern": "*",
-            "eventPattern": "connect,disconnect",
-            "hubPattern": "*",
-            "urlTemplate": "https://example.com/chat/api/connect",
-        }],
-    })
+    upstream=azure_nextgen.signalrservice.latest.ServerlessUpstreamSettingsArgs(
+        templates=[azure_nextgen.signalrservice.latest.UpstreamTemplateArgs(
+            category_pattern="*",
+            event_pattern="connect,disconnect",
+            hub_pattern="*",
+            url_template="https://example.com/chat/api/connect",
+        )],
+    ))
 
 ```
 
@@ -344,7 +344,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Dict[SignalRCorsSettings]]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[List[SignalRFeature]]</span> = None<span class="p">, </span><span class="nx">host_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[Dict[SignalRNetworkACLs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upstream</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerlessUpstreamSettings]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[SignalRCorsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[SignalRFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">host_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[SignalRNetworkACLsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upstream</span><span class="p">:</span> <span class="nx">Optional[ServerlessUpstreamSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -911,7 +911,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrcorssettings">Dict[Signal<wbr>RCors<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
 
@@ -921,7 +921,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrfeature">List[Signal<wbr>RFeature]</a></span>
+        <span class="property-type"><a href="#signalrfeature">Sequence[Signal<wbr>RFeature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of SignalR featureFlags. e.g. ServiceMode.
 
@@ -967,7 +967,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrnetworkacls">Dict[Signal<wbr>RNetwork<wbr>ACLs]</a></span>
+        <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd>
 
@@ -977,7 +977,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Dict[Resource<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd>
 
@@ -987,7 +987,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
 
@@ -997,7 +997,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#upstream_python" style="color: inherit; text-decoration: inherit;">upstream</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlessupstreamsettings">Dict[Serverless<wbr>Upstream<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd>
 
@@ -1386,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the SignalR resource.{{% /md %}}</dd>
 
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -1564,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -1673,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -1842,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -1991,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -2001,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
 
@@ -2270,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
 
@@ -2280,7 +2280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
 
@@ -3139,7 +3139,7 @@ If present, following values are allowed:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplate">List[Upstream<wbr>Template]</a></span>
+        <span class="property-type"><a href="#upstreamtemplate">Sequence[Upstream<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
 
@@ -3218,7 +3218,7 @@ If present, following values are allowed:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">List[Upstream<wbr>Template<wbr>Response]</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">Sequence[Upstream<wbr>Template<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
 
@@ -3297,7 +3297,7 @@ If present, following values are allowed:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
 
@@ -3376,7 +3376,7 @@ If present, following values are allowed:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
 
@@ -3543,7 +3543,7 @@ If present, following values are allowed:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
 
@@ -3710,7 +3710,7 @@ If present, following values are allowed:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
 
@@ -3859,7 +3859,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">List[Private<wbr>Endpoint<wbr>ACL]</a></span>
+        <span class="property-type"><a href="#privateendpointacl">Sequence[Private<wbr>Endpoint<wbr>ACLArgs]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
 
@@ -3869,7 +3869,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Dict[Network<wbr>ACL]</a></span>
+        <span class="property-type"><a href="#networkacl">Network<wbr>ACLArgs</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
 
@@ -4018,7 +4018,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">List[Private<wbr>Endpoint<wbr>ACLResponse]</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
 
@@ -4028,7 +4028,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Dict[Network<wbr>ACLResponse]</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
 
@@ -4243,8 +4243,8 @@ For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="categorypattern_python">
-<a href="#categorypattern_python" style="color: inherit; text-decoration: inherit;">category<wbr>Pattern</a>
+        <span id="category_pattern_python">
+<a href="#category_pattern_python" style="color: inherit; text-decoration: inherit;">category_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4257,8 +4257,8 @@ There are 3 kind of patterns supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventpattern_python">
-<a href="#eventpattern_python" style="color: inherit; text-decoration: inherit;">event<wbr>Pattern</a>
+        <span id="event_pattern_python">
+<a href="#event_pattern_python" style="color: inherit; text-decoration: inherit;">event_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4271,8 +4271,8 @@ There are 3 kind of patterns supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hubpattern_python">
-<a href="#hubpattern_python" style="color: inherit; text-decoration: inherit;">hub<wbr>Pattern</a>
+        <span id="hub_pattern_python">
+<a href="#hub_pattern_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4494,8 +4494,8 @@ For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="categorypattern_python">
-<a href="#categorypattern_python" style="color: inherit; text-decoration: inherit;">category<wbr>Pattern</a>
+        <span id="category_pattern_python">
+<a href="#category_pattern_python" style="color: inherit; text-decoration: inherit;">category_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4508,8 +4508,8 @@ There are 3 kind of patterns supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventpattern_python">
-<a href="#eventpattern_python" style="color: inherit; text-decoration: inherit;">event<wbr>Pattern</a>
+        <span id="event_pattern_python">
+<a href="#event_pattern_python" style="color: inherit; text-decoration: inherit;">event_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4522,8 +4522,8 @@ There are 3 kind of patterns supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hubpattern_python">
-<a href="#hubpattern_python" style="color: inherit; text-decoration: inherit;">hub<wbr>Pattern</a>
+        <span id="hub_pattern_python">
+<a href="#hub_pattern_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

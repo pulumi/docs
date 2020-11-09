@@ -116,18 +116,18 @@ import pulumi_azure_nextgen as azure_nextgen
 enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel",
     etag="etag1",
     location="West US",
-    properties={
-        "nodes": [{
-            "azureLocation": "WestUs",
-            "azureSku": "Int1",
-            "name": "Node 1",
-        }],
-    },
+    properties=azure_nextgen.botservice.latest.EnterpriseChannelPropertiesArgs(
+        nodes=[azure_nextgen.botservice.latest.EnterpriseChannelNodeArgs(
+            azure_location="WestUs",
+            azure_sku="Int1",
+            name="Node 1",
+        )],
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="contoso-dl",
-    sku={
-        "name": "S1",
-    },
+    sku=azure_nextgen.botservice.latest.SkuArgs(
+        name="S1",
+    ),
     tags={
         "tag1": "value1",
         "tag2": "value2",
@@ -180,7 +180,7 @@ const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnterpriseChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[EnterpriseChannelProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnterpriseChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[EnterpriseChannelPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -669,7 +669,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisechannelproperties">Dict[Enterprise<wbr>Channel<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#enterprisechannelproperties">Enterprise<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1022,16 +1022,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azuresku_python">
-<a href="#azuresku_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Sku</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="azure_location_python">
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
 </span> 
@@ -1039,6 +1029,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azure_sku_python">
+<a href="#azure_sku_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1251,16 +1251,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azuresku_python">
-<a href="#azuresku_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Sku</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="azure_location_python">
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
 </span> 
@@ -1268,6 +1258,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azure_sku_python">
+<a href="#azure_sku_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisechannelnode">List[Enterprise<wbr>Channel<wbr>Node]</a></span>
+        <span class="property-type"><a href="#enterprisechannelnode">Sequence[Enterprise<wbr>Channel<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
 
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisechannelnoderesponse">List[Enterprise<wbr>Channel<wbr>Node<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enterprisechannelnoderesponse">Sequence[Enterprise<wbr>Channel<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
 

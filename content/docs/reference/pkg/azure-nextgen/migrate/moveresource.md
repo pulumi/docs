@@ -23,7 +23,7 @@ Defines the move resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[MoveResourceProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[MoveResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -372,7 +372,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceproperties">Dict[Move<wbr>Resource<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#moveresourceproperties">Move<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource properties.{{% /md %}}</dd>
 
@@ -618,8 +618,8 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="moveresourceid_python">
-<a href="#moveresourceid_python" style="color: inherit; text-decoration: inherit;">move<wbr>Resource<wbr>Id</a>
+        <span id="move_resource_id_python">
+<a href="#move_resource_id_python" style="color: inherit; text-decoration: inherit;">move_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -768,8 +768,8 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="faultdomain_python">
-<a href="#faultdomain_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain</a>
+        <span id="fault_domain_python">
+<a href="#fault_domain_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -778,8 +778,8 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatedomain_python">
-<a href="#updatedomain_python" style="color: inherit; text-decoration: inherit;">update<wbr>Domain</a>
+        <span id="update_domain_python">
+<a href="#update_domain_python" style="color: inherit; text-decoration: inherit;">update_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -927,8 +927,8 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="faultdomain_python">
-<a href="#faultdomain_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain</a>
+        <span id="fault_domain_python">
+<a href="#fault_domain_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -937,8 +937,8 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatedomain_python">
-<a href="#updatedomain_python" style="color: inherit; text-decoration: inherit;">update<wbr>Domain</a>
+        <span id="update_domain_python">
+<a href="#update_domain_python" style="color: inherit; text-decoration: inherit;">update_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1426,16 +1426,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipallocationmethod_python">
-<a href="#privateipallocationmethod_python" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
@@ -1447,11 +1437,21 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
     <dt class="property-optional"
             title="Optional">
+        <span id="private_ip_allocation_method_python">
+<a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">Dict[Subnet<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
 
@@ -1669,16 +1669,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipallocationmethod_python">
-<a href="#privateipallocationmethod_python" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
@@ -1690,11 +1680,21 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
     <dt class="property-optional"
             title="Optional">
+        <span id="private_ip_allocation_method_python">
+<a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Dict[Subnet<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
 
@@ -1809,8 +1809,8 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcearmresourceid_python">
-<a href="#sourcearmresourceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+        <span id="source_arm_resource_id_python">
+<a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1928,8 +1928,8 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcearmresourceid_python">
-<a href="#sourcearmresourceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+        <span id="source_arm_resource_id_python">
+<a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2154,7 +2154,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">List[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">Sequence[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd>
 
@@ -2164,7 +2164,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">List[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">Sequence[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd>
 
@@ -2397,7 +2397,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">List[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">Sequence[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd>
 
@@ -2407,7 +2407,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">List[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">Sequence[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd>
 
@@ -3008,18 +3008,18 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automaticresolution_python">
-<a href="#automaticresolution_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Resolution</a>
+        <span id="automatic_resolution_python">
+<a href="#automatic_resolution_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Dict[Automatic<wbr>Resolution<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependencytype_python">
-<a href="#dependencytype_python" style="color: inherit; text-decoration: inherit;">dependency<wbr>Type</a>
+        <span id="dependency_type_python">
+<a href="#dependency_type_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3038,8 +3038,8 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isoptional_python">
-<a href="#isoptional_python" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
+        <span id="is_optional_python">
+<a href="#is_optional_python" style="color: inherit; text-decoration: inherit;">is_<wbr>optional</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3048,18 +3048,18 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manualresolution_python">
-<a href="#manualresolution_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Resolution</a>
+        <span id="manual_resolution_python">
+<a href="#manual_resolution_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Dict[Manual<wbr>Resolution<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resolutionstatus_python">
-<a href="#resolutionstatus_python" style="color: inherit; text-decoration: inherit;">resolution<wbr>Status</a>
+        <span id="resolution_status_python">
+<a href="#resolution_status_python" style="color: inherit; text-decoration: inherit;">resolution_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3068,8 +3068,8 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resolutiontype_python">
-<a href="#resolutiontype_python" style="color: inherit; text-decoration: inherit;">resolution<wbr>Type</a>
+        <span id="resolution_type_python">
+<a href="#resolution_type_python" style="color: inherit; text-decoration: inherit;">resolution_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3251,7 +3251,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Sequence[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
 
@@ -3350,7 +3350,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Dict[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
 
@@ -3529,7 +3529,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#depends_on_overrides_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverride">List[Move<wbr>Resource<wbr>Dependency<wbr>Override]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverride">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd>
 
@@ -3549,7 +3549,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Availability<wbr>Set<wbr>Resource<wbr>Settings] | Dict[Load<wbr>Balancer<wbr>Resource<wbr>Settings] | Dict[Network<wbr>Interface<wbr>Resource<wbr>Settings] | Dict[Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings] | Dict[Public<wbr>IPAddress<wbr>Resource<wbr>Settings] | Dict[Resource<wbr>Group<wbr>Resource<wbr>Settings] | Dict[Sql<wbr>Database<wbr>Resource<wbr>Settings] | Dict[Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings] | Dict[Sql<wbr>Server<wbr>Resource<wbr>Settings] | Dict[Virtual<wbr>Machine<wbr>Resource<wbr>Settings] | Dict[Virtual<wbr>Network<wbr>Resource<wbr>Settings]</span>
+        <span class="property-type">Union[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args, Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args, Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args, Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args, Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args, Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args, Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args, Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args, Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args, Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args, Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -3627,7 +3627,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3734,7 +3734,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3841,7 +3841,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings</a></span>
+        <span class="property-type">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response | Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response | Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3898,7 +3898,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyresponse">List[Move<wbr>Resource<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd>
 
@@ -3908,7 +3908,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Dict[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors]</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
 
@@ -3918,7 +3918,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#move_status_python" style="color: inherit; text-decoration: inherit;">move_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Dict[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status]</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
 
@@ -3948,7 +3948,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#source_resource_settings_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Dict[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings]</a></span>
+        <span class="property-type">Union[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
 
@@ -3968,7 +3968,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#depends_on_overrides_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">List[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd>
 
@@ -3988,7 +3988,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response]</span>
+        <span class="property-type">Union[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -4067,7 +4067,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Dict[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
 
@@ -4256,7 +4256,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorresponse">Dict[Move<wbr>Resource<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An error response from the azure resource mover service.{{% /md %}}</dd>
 
@@ -4266,88 +4266,9 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#job_status_python" style="color: inherit; text-decoration: inherit;">job_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Dict[Job<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="moveresourcepropertiesresponsesourceresourcesettings">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="targetresourcename_csharp">
-<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="targetresourcename_go">
-<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="targetresourcename_nodejs">
-<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="target_resource_name_python">
-<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4504,7 +4425,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettings">List[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettings">Sequence[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd>
 
@@ -4663,7 +4584,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">List[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Sequence[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd>
 
@@ -4782,7 +4703,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityrule">List[Nsg<wbr>Security<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#nsgsecurityrule">Sequence[Nsg<wbr>Security<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd>
 
@@ -4901,7 +4822,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityruleresponse">List[Nsg<wbr>Security<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">Sequence[Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd>
 
@@ -5130,7 +5051,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">List[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
 
@@ -5156,16 +5077,6 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipallocationmethod_python">
-<a href="#privateipallocationmethod_python" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
@@ -5176,11 +5087,21 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="private_ip_allocation_method_python">
+<a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">Dict[Subnet<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
 
@@ -5409,7 +5330,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">List[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
 
@@ -5435,16 +5356,6 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipallocationmethod_python">
-<a href="#privateipallocationmethod_python" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
@@ -5455,11 +5366,21 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="private_ip_allocation_method_python">
+<a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Dict[Subnet<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
 
@@ -6670,8 +6591,8 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fqdn_python">
-<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">f<wbr>QDN</a>
+        <span id="f_qdn_python">
+<a href="#f_qdn_python" style="color: inherit; text-decoration: inherit;">f_<wbr>qdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6680,8 +6601,8 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicipallocationmethod_python">
-<a href="#publicipallocationmethod_python" style="color: inherit; text-decoration: inherit;">public<wbr>IPAllocation<wbr>Method</a>
+        <span id="public_ip_allocation_method_python">
+<a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6949,8 +6870,8 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fqdn_python">
-<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">f<wbr>QDN</a>
+        <span id="f_qdn_python">
+<a href="#f_qdn_python" style="color: inherit; text-decoration: inherit;">f_<wbr>qdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6959,8 +6880,8 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicipallocationmethod_python">
-<a href="#publicipallocationmethod_python" style="color: inherit; text-decoration: inherit;">public<wbr>IPAllocation<wbr>Method</a>
+        <span id="public_ip_allocation_method_python">
+<a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7880,8 +7801,8 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcearmresourceid_python">
-<a href="#sourcearmresourceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+        <span id="source_arm_resource_id_python">
+<a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7999,8 +7920,8 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcearmresourceid_python">
-<a href="#sourcearmresourceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+        <span id="source_arm_resource_id_python">
+<a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8426,16 +8347,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetavailabilityzone_python">
-<a href="#targetavailabilityzone_python" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="target_availability_set_id_python">
 <a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
 </span> 
@@ -8443,6 +8354,16 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_availability_zone_python">
+<a href="#target_availability_zone_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8625,16 +8546,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetavailabilityzone_python">
-<a href="#targetavailabilityzone_python" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="target_availability_set_id_python">
 <a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
 </span> 
@@ -8642,6 +8553,16 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_availability_zone_python">
+<a href="#target_availability_zone_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8864,7 +8785,7 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd>
 
@@ -8874,7 +8795,7 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.{{% /md %}}</dd>
@@ -8896,7 +8817,7 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettings">List[Subnet<wbr>Resource<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#subnetresourcesettings">Sequence[Subnet<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd>
 
@@ -9111,7 +9032,7 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd>
 
@@ -9121,7 +9042,7 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.{{% /md %}}</dd>
@@ -9143,7 +9064,7 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettingsresponse">List[Subnet<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">Sequence[Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd>
 

@@ -23,7 +23,7 @@ Guest configuration assignment is an association between a machine and guest con
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">guest_configuration_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[GuestConfigurationAssignmentProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GuestConfigurationHCRPAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">guest_configuration_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[GuestConfigurationAssignmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -452,7 +452,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationassignmentproperties">Dict[Guest<wbr>Configuration<wbr>Assignment<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationinforesponse">Dict[Configuration<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd>
 
@@ -997,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reasons_python" style="color: inherit; text-decoration: inherit;">reasons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">List[Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd>
 
@@ -1396,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentinforesponse">Dict[Assignment<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd>
 
@@ -1406,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourceresponse">List[Assignment<wbr>Report<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourceresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd>
 
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vminforesponse">Dict[VMInfo<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the VM.{{% /md %}}</dd>
 
@@ -2450,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_configuration_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigation">Dict[Guest<wbr>Configuration<wbr>Navigation]</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
 
@@ -2839,7 +2839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_configuration_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Dict[Guest<wbr>Configuration<wbr>Navigation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
 
@@ -2849,7 +2849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_assignment_report_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>assignment_<wbr>report</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresponse">Dict[Assignment<wbr>Report<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd>
 
@@ -3048,7 +3048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameter">List[Configuration<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#configurationparameter">Sequence[Configuration<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
 
@@ -3058,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsetting">Dict[Configuration<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
 
@@ -3367,7 +3367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameterresponse">List[Configuration<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
 
@@ -3377,7 +3377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsettingresponse">Dict[Configuration<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
 

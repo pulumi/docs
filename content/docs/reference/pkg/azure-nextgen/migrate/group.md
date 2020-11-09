@@ -653,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouppropertiesresponse">Dict[Group<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#grouppropertiesresponse">Group<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the group.{{% /md %}}</dd>
 
@@ -911,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessments_python" style="color: inherit; text-decoration: inherit;">assessments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of References to Assessments created on this group.{{% /md %}}</dd>
 

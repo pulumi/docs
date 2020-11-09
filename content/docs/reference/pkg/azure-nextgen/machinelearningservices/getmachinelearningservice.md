@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[ACIService<wbr>Response<wbr>Response] | Dict[AKSVariant<wbr>Response<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Service properties{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1324,24 +1324,24 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Dict[Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error]</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="modelconfigmap_python">
-<a href="#modelconfigmap_python" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
+        <span id="model_config_map_python">
+<a href="#model_config_map_python" style="color: inherit; text-decoration: inherit;">model_<wbr>config_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scoringuri_python">
-<a href="#scoringuri_python" style="color: inherit; text-decoration: inherit;">scoring<wbr>Uri</a>
+        <span id="scoring_uri_python">
+<a href="#scoring_uri_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1360,8 +1360,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="swaggeruri_python">
-<a href="#swaggeruri_python" style="color: inherit; text-decoration: inherit;">swagger<wbr>Uri</a>
+        <span id="swagger_uri_python">
+<a href="#swagger_uri_python" style="color: inherit; text-decoration: inherit;">swagger_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1370,8 +1370,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appinsightsenabled_python">
-<a href="#appinsightsenabled_python" style="color: inherit; text-decoration: inherit;">app<wbr>Insights<wbr>Enabled</a>
+        <span id="app_insights_enabled_python">
+<a href="#app_insights_enabled_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1380,8 +1380,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenabled_python">
-<a href="#authenabled_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
+        <span id="auth_enabled_python">
+<a href="#auth_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1400,28 +1400,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerresourcerequirements_python">
-<a href="#containerresourcerequirements_python" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
+        <span id="container_resource_requirements_python">
+<a href="#container_resource_requirements_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>requirements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Dict[Container<wbr>Resource<wbr>Requirements<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datacollection_python">
-<a href="#datacollection_python" style="color: inherit; text-decoration: inherit;">data<wbr>Collection</a>
+        <span id="data_collection_python">
+<a href="#data_collection_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">Dict[ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection]</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymenttype_python">
-<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1444,7 +1444,7 @@ The following output properties are available:
 <a href="#encryption_properties_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">Dict[ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties.{{% /md %}}</dd>
 
@@ -1454,7 +1454,7 @@ The following output properties are available:
 <a href="#environment_image_request_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>image_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">Dict[ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request]</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
 
@@ -1464,7 +1464,7 @@ The following output properties are available:
 <a href="#kv_tags_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
 
@@ -1484,7 +1484,7 @@ The following output properties are available:
 <a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List[Model<wbr>Response]</a></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd>
 
@@ -1494,14 +1494,14 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicfqdn_python">
-<a href="#publicfqdn_python" style="color: inherit; text-decoration: inherit;">public<wbr>Fqdn</a>
+        <span id="public_fqdn_python">
+<a href="#public_fqdn_python" style="color: inherit; text-decoration: inherit;">public_<wbr>fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1510,8 +1510,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicip_python">
-<a href="#publicip_python" style="color: inherit; text-decoration: inherit;">public<wbr>IP</a>
+        <span id="public_ip_python">
+<a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1520,8 +1520,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcertificate_python">
-<a href="#sslcertificate_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate</a>
+        <span id="ssl_certificate_python">
+<a href="#ssl_certificate_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1530,8 +1530,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslenabled_python">
-<a href="#sslenabled_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enabled</a>
+        <span id="ssl_enabled_python">
+<a href="#ssl_enabled_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1540,8 +1540,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslkey_python">
-<a href="#sslkey_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Key</a>
+        <span id="ssl_key_python">
+<a href="#ssl_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1550,11 +1550,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vnetconfiguration_python">
-<a href="#vnetconfiguration_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Configuration</a>
+        <span id="vnet_configuration_python">
+<a href="#vnet_configuration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">Dict[ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd>
 
@@ -1659,8 +1659,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventhubenabled_python">
-<a href="#eventhubenabled_python" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Enabled</a>
+        <span id="event_hub_enabled_python">
+<a href="#event_hub_enabled_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1669,8 +1669,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storageenabled_python">
-<a href="#storageenabled_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Enabled</a>
+        <span id="storage_enabled_python">
+<a href="#storage_enabled_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2061,7 +2061,7 @@ The following output properties are available:
 <a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">List[Image<wbr>Asset<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imageassetresponse">Sequence[Image<wbr>Asset<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
 
@@ -2081,7 +2081,7 @@ The following output properties are available:
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Dict[Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment]</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
 
@@ -2091,7 +2091,7 @@ The following output properties are available:
 <a href="#environment_reference_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Dict[Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
 
@@ -2101,7 +2101,7 @@ The following output properties are available:
 <a href="#model_ids_python" style="color: inherit; text-decoration: inherit;">model_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of model Ids.{{% /md %}}</dd>
 
@@ -2111,7 +2111,7 @@ The following output properties are available:
 <a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List[Model<wbr>Response]</a></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd>
 
@@ -2549,7 +2549,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Dict[Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error]</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
 
@@ -2565,8 +2565,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymenttype_python">
-<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2599,7 +2599,7 @@ The following output properties are available:
 <a href="#kv_tags_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
 
@@ -2609,14 +2609,14 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trafficpercentile_python">
-<a href="#trafficpercentile_python" style="color: inherit; text-decoration: inherit;">traffic<wbr>Percentile</a>
+        <span id="traffic_percentile_python">
+<a href="#traffic_percentile_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>percentile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3236,7 +3236,7 @@ The following output properties are available:
 <a href="#docker_python" style="color: inherit; text-decoration: inherit;">docker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Dict[Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker]</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd>
 
@@ -3246,7 +3246,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Definition of environment variables to be defined in the environment.{{% /md %}}</dd>
 
@@ -3276,7 +3276,7 @@ The following output properties are available:
 <a href="#python_python" style="color: inherit; text-decoration: inherit;">python</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Dict[Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python]</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd>
 
@@ -3286,7 +3286,7 @@ The following output properties are available:
 <a href="#r_python" style="color: inherit; text-decoration: inherit;">r</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Dict[Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>R]</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>RArgs</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd>
 
@@ -3296,7 +3296,7 @@ The following output properties are available:
 <a href="#spark_python" style="color: inherit; text-decoration: inherit;">spark</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Dict[Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark]</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd>
 
@@ -3743,7 +3743,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 
@@ -3918,8 +3918,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mimetype_python">
-<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+        <span id="mime_type_python">
+<a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4180,7 +4180,7 @@ The following output properties are available:
 <a href="#base_image_registry_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Dict[Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd>
 
@@ -4359,7 +4359,7 @@ The following output properties are available:
 <a href="#conda_dependencies_python" style="color: inherit; text-decoration: inherit;">conda_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -4671,7 +4671,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#bio_conductor_packages_python" style="color: inherit; text-decoration: inherit;">bio_<wbr>conductor_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The packages from Bioconductor.{{% /md %}}</dd>
 
@@ -4681,7 +4681,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#cran_packages_python" style="color: inherit; text-decoration: inherit;">cran_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackageresponse">List[RCran<wbr>Package<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rcranpackageresponse">Sequence[RCran<wbr>Package<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd>
 
@@ -4691,7 +4691,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#custom_url_packages_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>url_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The packages from custom urls.{{% /md %}}</dd>
 
@@ -4701,7 +4701,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#git_hub_packages_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackageresponseresponse">List[RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rgithubpackageresponseresponse">Sequence[RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd>
 
@@ -4881,7 +4881,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackageresponse">List[Spark<wbr>Maven<wbr>Package<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sparkmavenpackageresponse">Sequence[Spark<wbr>Maven<wbr>Package<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd>
 
@@ -4901,7 +4901,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#repositories_python" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of spark repositories.{{% /md %}}</dd>
 
@@ -5576,8 +5576,8 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="mimetype_python">
-<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+        <span id="mime_type_python">
+<a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5620,17 +5620,17 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#datasets_python" style="color: inherit; text-decoration: inherit;">datasets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="derivedmodelids_python">
-<a href="#derivedmodelids_python" style="color: inherit; text-decoration: inherit;">derived<wbr>Model<wbr>Ids</a>
+        <span id="derived_model_ids_python">
+<a href="#derived_model_ids_python" style="color: inherit; text-decoration: inherit;">derived_<wbr>model_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Models derived from this model{{% /md %}}</dd>
 
@@ -5666,8 +5666,8 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="frameworkversion_python">
-<a href="#frameworkversion_python" style="color: inherit; text-decoration: inherit;">framework<wbr>Version</a>
+        <span id="framework_version_python">
+<a href="#framework_version_python" style="color: inherit; text-decoration: inherit;">framework_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5690,7 +5690,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#kv_tags_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Model tag dictionary. Items are mutable.{{% /md %}}</dd>
 
@@ -5706,8 +5706,8 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parentmodelid_python">
-<a href="#parentmodelid_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Model<wbr>Id</a>
+        <span id="parent_model_id_python">
+<a href="#parent_model_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>model_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5720,17 +5720,17 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Model property dictionary. Properties are immutable.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcerequirements_python">
-<a href="#resourcerequirements_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Requirements</a>
+        <span id="resource_requirements_python">
+<a href="#resource_requirements_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>requirements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Dict[Container<wbr>Resource<wbr>Requirements<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd>
 
@@ -5746,8 +5746,8 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sampleinputdata_python">
-<a href="#sampleinputdata_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Input<wbr>Data</a>
+        <span id="sample_input_data_python">
+<a href="#sample_input_data_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>input_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5756,8 +5756,8 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sampleoutputdata_python">
-<a href="#sampleoutputdata_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Output<wbr>Data</a>
+        <span id="sample_output_data_python">
+<a href="#sample_output_data_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>output_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6127,7 +6127,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
 

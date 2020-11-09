@@ -91,11 +91,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 user = azure_nextgen.databoxedge.latest.User("user",
     device_name="testedgedevice",
-    encrypted_password={
-        "encryptionAlgorithm": "None",
-        "encryptionCertThumbprint": "blah",
-        "value": "Password@1",
-    },
+    encrypted_password=azure_nextgen.databoxedge.latest.AsymmetricEncryptedSecretArgs(
+        encryption_algorithm="None",
+        encryption_cert_thumbprint="blah",
+        value="Password@1",
+    ),
     name="user1",
     resource_group_name="GroupForEdgeAutomation",
     share_access_rights=[],
@@ -140,7 +140,7 @@ const user = new azure_nextgen.databoxedge.latest.User("user", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[Dict[AsymmetricEncryptedSecret]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_access_rights</span><span class="p">:</span> <span class="nx">Optional[List[ShareAccessRight]]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[AsymmetricEncryptedSecretArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShareAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -559,7 +559,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Dict[Asymmetric<wbr>Encrypted<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password details.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#share_access_rights_python" style="color: inherit; text-decoration: inherit;">share_<wbr>access_<wbr>rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareaccessright">List[Share<wbr>Access<wbr>Right]</a></span>
+        <span class="property-type"><a href="#shareaccessright">Sequence[Share<wbr>Access<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
 
@@ -1120,8 +1120,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1130,8 +1130,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="shareid_python">
-<a href="#shareid_python" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+        <span id="share_id_python">
+<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1239,8 +1239,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1249,8 +1249,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="shareid_python">
-<a href="#shareid_python" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+        <span id="share_id_python">
+<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

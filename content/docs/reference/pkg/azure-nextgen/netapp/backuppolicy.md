@@ -131,7 +131,7 @@ const backupPolicy = new azure_nextgen.netapp.latest.BackupPolicy("backupPolicy"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monthly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_backups</span><span class="p">:</span> <span class="nx">Optional[List[VolumeBackups]]</span> = None<span class="p">, </span><span class="nx">volumes_assigned</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">weekly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">yearly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monthly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_backups</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeBackupsArgs]]</span> = None<span class="p">, </span><span class="nx">volumes_assigned</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">weekly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">yearly_backups_to_keep</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -760,7 +760,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -770,7 +770,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#volume_backups_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>backups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackups">List[Volume<wbr>Backups]</a></span>
+        <span class="property-type"><a href="#volumebackups">Sequence[Volume<wbr>Backups<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
 
@@ -1143,8 +1143,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupscount_python">
-<a href="#backupscount_python" style="color: inherit; text-decoration: inherit;">backups<wbr>Count</a>
+        <span id="backups_count_python">
+<a href="#backups_count_python" style="color: inherit; text-decoration: inherit;">backups_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1153,8 +1153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyenabled_python">
-<a href="#policyenabled_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Enabled</a>
+        <span id="policy_enabled_python">
+<a href="#policy_enabled_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1302,8 +1302,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupscount_python">
-<a href="#backupscount_python" style="color: inherit; text-decoration: inherit;">backups<wbr>Count</a>
+        <span id="backups_count_python">
+<a href="#backups_count_python" style="color: inherit; text-decoration: inherit;">backups_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1312,8 +1312,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyenabled_python">
-<a href="#policyenabled_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Enabled</a>
+        <span id="policy_enabled_python">
+<a href="#policy_enabled_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

@@ -93,10 +93,10 @@ import pulumi_azure_nextgen as azure_nextgen
 data_controller = azure_nextgen.azuredata.v20200908preview.DataController("dataController",
     data_controller_name="testdataController",
     location="northeurope",
-    on_premise_property={
-        "id": "12345678-1234-1234-ab12-1a2b3c4d5e6f",
-        "publicSigningKey": "publicOnPremSigningKey",
-    },
+    on_premise_property=azure_nextgen.azuredata.v20200908preview.OnPremisePropertyArgs(
+        id="12345678-1234-1234-ab12-1a2b3c4d5e6f",
+        public_signing_key="publicOnPremSigningKey",
+    ),
     resource_group_name="testrg",
     tags={
         "mytag": "myval",
@@ -141,7 +141,7 @@ const dataController = new azure_nextgen.azuredata.v20200908preview.DataControll
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataController</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_controller_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">k8s_raw</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">last_uploaded_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_premise_property</span><span class="p">:</span> <span class="nx">Optional[Dict[OnPremiseProperty]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataController</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_controller_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">k8s_raw</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">last_uploaded_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_premise_property</span><span class="p">:</span> <span class="nx">Optional[OnPremisePropertyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -570,7 +570,7 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
 <a href="#on_premise_property_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>property</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremiseproperty">Dict[On<wbr>Premise<wbr>Property]</a></span>
+        <span class="property-type"><a href="#onpremiseproperty">On<wbr>Premise<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties from the on premise data controller{{% /md %}}</dd>
 
@@ -590,7 +590,7 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
 <a href="#k8s_raw_python" style="color: inherit; text-decoration: inherit;">k8s_<wbr>raw</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
 
@@ -610,7 +610,7 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Dict[System<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd>
 

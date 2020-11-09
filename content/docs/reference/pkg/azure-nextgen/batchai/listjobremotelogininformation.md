@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remotelogininformationresponse">List[Remote<wbr>Login<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#remotelogininformationresponse">Sequence[Remote<wbr>Login<wbr>Information<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of returned remote login details.{{% /md %}}</dd>
 
@@ -498,8 +498,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

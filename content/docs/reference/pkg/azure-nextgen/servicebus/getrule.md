@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionresponse">Dict[Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#actionresponse">Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#correlation_filter_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#correlationfilterresponse">Dict[Correlation<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#correlationfilterresponse">Correlation<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of correlationFilter{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#sql_filter_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlfilterresponse">Dict[Sql<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlfilterresponse">Sql<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of sqlFilter{{% /md %}}</dd>
 
@@ -1103,7 +1103,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}dictionary object for custom filters{{% /md %}}</dd>
 

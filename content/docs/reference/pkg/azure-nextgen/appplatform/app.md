@@ -110,20 +110,20 @@ import pulumi_azure_nextgen as azure_nextgen
 app = azure_nextgen.appplatform.latest.App("app",
     app_name="myapp",
     location="eastus",
-    properties={
-        "activeDeploymentName": "mydeployment1",
-        "fqdn": "myapp.mydomain.com",
-        "httpsOnly": False,
-        "persistentDisk": {
-            "mountPath": "mypersistentdisk",
-            "sizeInGB": 2,
-        },
-        "public": True,
-        "temporaryDisk": {
-            "mountPath": "mytemporarydisk",
-            "sizeInGB": 2,
-        },
-    },
+    properties=azure_nextgen.appplatform.latest.AppResourcePropertiesArgs(
+        active_deployment_name="mydeployment1",
+        fqdn="myapp.mydomain.com",
+        https_only=False,
+        persistent_disk=azure_nextgen.appplatform.latest.PersistentDiskArgs(
+            mount_path="mypersistentdisk",
+            size_in_gb=2,
+        ),
+        public=True,
+        temporary_disk=azure_nextgen.appplatform.latest.TemporaryDiskArgs(
+            mount_path="mytemporarydisk",
+            size_in_gb=2,
+        ),
+    ),
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -174,7 +174,7 @@ const app = new azure_nextgen.appplatform.latest.App("app", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedIdentityProperties]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AppResourceProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AppResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -583,7 +583,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityproperties">Dict[Managed<wbr>Identity<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#managedidentityproperties">Managed<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd>
 
@@ -603,7 +603,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourceproperties">Dict[App<wbr>Resource<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#appresourceproperties">App<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd>
 
@@ -1030,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdisk">Dict[Persistent<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#persistentdisk">Persistent<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
 
@@ -1050,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydisk">Dict[Temporary<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#temporarydisk">Temporary<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
 
@@ -1429,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Dict[Persistent<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
 
@@ -1449,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Dict[Temporary<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
 

@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofileresponse">List[Autoscale<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscaleprofileresponse">Sequence[Autoscale<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotificationresponse">List[Autoscale<wbr>Notification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalenotificationresponse">Sequence[Autoscale<wbr>Notification<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -664,7 +664,7 @@ The following output properties are available:
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Dict[Email<wbr>Notification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The following output properties are available:
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">List[Webhook<wbr>Notification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">Sequence[Webhook<wbr>Notification<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd>
 
@@ -873,7 +873,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Dict[Scale<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd>
 
@@ -893,17 +893,17 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">List[Scale<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">Sequence[Scale<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixeddate_python">
-<a href="#fixeddate_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
+        <span id="fixed_date_python">
+<a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Dict[Time<wbr>Window<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd>
 
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Dict[Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd>
 
@@ -1048,18 +1048,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customemails_python">
-<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+        <span id="custom_emails_python">
+<a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptionadministrator_python">
-<a href="#sendtosubscriptionadministrator_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+        <span id="send_to_subscription_administrator_python">
+<a href="#send_to_subscription_administrator_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>administrator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1068,8 +1068,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptioncoadministrators_python">
-<a href="#sendtosubscriptioncoadministrators_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrators</a>
+        <span id="send_to_subscription_co_administrators_python">
+<a href="#send_to_subscription_co_administrators_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>co_<wbr>administrators</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1417,8 +1417,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1427,8 +1427,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricresourceuri_python">
-<a href="#metricresourceuri_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Uri</a>
+        <span id="metric_resource_uri_python">
+<a href="#metric_resource_uri_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1467,23 +1467,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="timewindow_python">
-<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1495,20 +1485,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="time_window_python">
+<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1630,7 +1630,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Dict[Recurrent<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd>
 
@@ -1799,7 +1799,7 @@ The following output properties are available:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.{{% /md %}}</dd>
 
@@ -1809,7 +1809,7 @@ The following output properties are available:
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM times are not supported).{{% /md %}}</dd>
 
@@ -1819,7 +1819,7 @@ The following output properties are available:
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A collection of minutes at which the profile takes effect at.{{% /md %}}</dd>
 
@@ -2322,8 +2322,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dimensionname_python">
-<a href="#dimensionname_python" style="color: inherit; text-decoration: inherit;">dimension<wbr>Name</a>
+        <span id="dimension_name_python">
+<a href="#dimension_name_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2346,7 +2346,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of dimension values. For example: ["App1","App2"].{{% /md %}}</dd>
 
@@ -2451,21 +2451,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="metrictrigger_python">
-<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+        <span id="metric_trigger_python">
+<a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Dict[Metric<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleaction_python">
-<a href="#scaleaction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
+        <span id="scale_action_python">
+<a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Dict[Scale<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd>
 
@@ -2733,7 +2733,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}a property bag of settings. This value can be empty.{{% /md %}}</dd>
 

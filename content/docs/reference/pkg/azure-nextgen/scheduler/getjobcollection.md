@@ -349,7 +349,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionpropertiesresponse">Dict[Job<wbr>Collection<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobcollectionpropertiesresponse">Job<wbr>Collection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd>
 
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
 
@@ -534,7 +534,7 @@ The following output properties are available:
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquotaresponse">Dict[Job<wbr>Collection<wbr>Quota<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
 
@@ -544,7 +544,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
 
@@ -713,7 +713,7 @@ The following output properties are available:
 <a href="#max_recurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Dict[Job<wbr>Max<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
 

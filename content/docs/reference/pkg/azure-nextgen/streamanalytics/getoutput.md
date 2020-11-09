@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Dict[Diagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
 
@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response] | Dict[Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Serialization<wbr>Response] | Dict[Csv<wbr>Serialization<wbr>Response] | Dict[Json<wbr>Serialization<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -809,8 +809,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -819,8 +819,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filepathprefix_python">
-<a href="#filepathprefix_python" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>Prefix</a>
+        <span id="file_path_prefix_python">
+<a href="#file_path_prefix_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -849,8 +849,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -859,8 +859,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserdisplayname_python">
-<a href="#tokenuserdisplayname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
+        <span id="token_user_display_name_python">
+<a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -869,8 +869,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserprincipalname_python">
-<a href="#tokenuserprincipalname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
+        <span id="token_user_principal_name_python">
+<a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1397,11 +1397,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columnstoremove_python">
-<a href="#columnstoremove_python" style="color: inherit; text-decoration: inherit;">columns<wbr>To<wbr>Remove</a>
+        <span id="columns_to_remove_python">
+<a href="#columns_to_remove_python" style="color: inherit; text-decoration: inherit;">columns_<wbr>to_<wbr>remove</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If specified, each item in the array is the name of a column to remove (if present) from output event entities.{{% /md %}}</dd>
 
@@ -1417,8 +1417,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rowkey_python">
-<a href="#rowkey_python" style="color: inherit; text-decoration: inherit;">row<wbr>Key</a>
+        <span id="row_key_python">
+<a href="#row_key_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1636,8 +1636,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1646,8 +1646,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1660,14 +1660,14 @@ The following output properties are available:
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List[Storage<wbr>Account<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1785,8 +1785,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2027,7 +2027,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">List[Diagnostic<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
 
@@ -2272,8 +2272,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectionnamepattern_python">
-<a href="#collectionnamepattern_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name<wbr>Pattern</a>
+        <span id="collection_name_pattern_python">
+<a href="#collection_name_pattern_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2292,8 +2292,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="documentid_python">
-<a href="#documentid_python" style="color: inherit; text-decoration: inherit;">document<wbr>Id</a>
+        <span id="document_id_python">
+<a href="#document_id_python" style="color: inherit; text-decoration: inherit;">document_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2531,8 +2531,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2541,8 +2541,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2969,8 +2969,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserdisplayname_python">
-<a href="#tokenuserdisplayname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
+        <span id="token_user_display_name_python">
+<a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2979,8 +2979,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserprincipalname_python">
-<a href="#tokenuserprincipalname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
+        <span id="token_user_principal_name_python">
+<a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3178,11 +3178,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertycolumns_python">
-<a href="#propertycolumns_python" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+        <span id="property_columns_python">
+<a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd>
 
@@ -3208,8 +3208,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3218,8 +3218,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3417,11 +3417,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertycolumns_python">
-<a href="#propertycolumns_python" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+        <span id="property_columns_python">
+<a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd>
 
@@ -3437,8 +3437,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3447,8 +3447,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

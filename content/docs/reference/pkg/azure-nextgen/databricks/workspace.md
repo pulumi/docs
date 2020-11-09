@@ -91,11 +91,11 @@ import pulumi_azure_nextgen as azure_nextgen
 workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters={
-        "prepareEncryption": {
-            "value": True,
-        },
-    },
+    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
+        prepare_encryption=azure_nextgen.databricks.latest.WorkspaceCustomBooleanParameterArgs(
+            value=True,
+        ),
+    ),
     resource_group_name="rg",
     workspace_name="myWorkspace")
 
@@ -301,17 +301,17 @@ import pulumi_azure_nextgen as azure_nextgen
 workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters={
-        "customPrivateSubnetName": {
-            "value": "myPrivateSubnet",
-        },
-        "customPublicSubnetName": {
-            "value": "myPublicSubnet",
-        },
-        "customVirtualNetworkId": {
-            "value": "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
-        },
-    },
+    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
+        custom_private_subnet_name=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+            value="myPrivateSubnet",
+        ),
+        custom_public_subnet_name=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+            value="myPublicSubnet",
+        ),
+        custom_virtual_network_id=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+            value="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
+        ),
+    ),
     resource_group_name="rg",
     workspace_name="myWorkspace")
 
@@ -440,19 +440,19 @@ import pulumi_azure_nextgen as azure_nextgen
 workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters={
-        "encryption": {
-            "value": {
-                "keyName": "myKeyName",
-                "keySource": "Microsoft.Keyvault",
-                "keyVaultUri": "https://myKeyVault.vault.azure.net/",
-                "keyVersion": "00000000000000000000000000000000",
-            },
-        },
-        "prepareEncryption": {
-            "value": True,
-        },
-    },
+    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
+        encryption=azure_nextgen.databricks.latest.WorkspaceEncryptionParameterArgs(
+            value=azure_nextgen.databricks.latest.EncryptionArgs(
+                key_name="myKeyName",
+                key_source="Microsoft.Keyvault",
+                key_vault_uri="https://myKeyVault.vault.azure.net/",
+                key_version="00000000000000000000000000000000",
+            ),
+        ),
+        prepare_encryption=azure_nextgen.databricks.latest.WorkspaceCustomBooleanParameterArgs(
+            value=True,
+        ),
+    ),
     resource_group_name="rg",
     workspace_name="myWorkspace")
 
@@ -570,13 +570,13 @@ import pulumi_azure_nextgen as azure_nextgen
 workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters={
-        "encryption": {
-            "value": {
-                "keySource": "Default",
-            },
-        },
-    },
+    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
+        encryption=azure_nextgen.databricks.latest.WorkspaceEncryptionParameterArgs(
+            value=azure_nextgen.databricks.latest.EncryptionArgs(
+                key_source="Default",
+            ),
+        ),
+    ),
     resource_group_name="rg",
     workspace_name="myWorkspace")
 
@@ -620,7 +620,7 @@ const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[List[WorkspaceProviderAuthorization]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[WorkspaceCustomParameters]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">ui_definition_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceProviderAuthorizationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCustomParametersArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ui_definition_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1129,7 +1129,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceproviderauthorization">List[Workspace<wbr>Provider<wbr>Authorization]</a></span>
+        <span class="property-type"><a href="#workspaceproviderauthorization">Sequence[Workspace<wbr>Provider<wbr>Authorization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The workspace provider authorizations.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomparameters">Dict[Workspace<wbr>Custom<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#workspacecustomparameters">Workspace<wbr>Custom<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workspace's custom parameters.{{% /md %}}</dd>
 
@@ -1149,7 +1149,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Dict[Created<wbr>By<wbr>Response]</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that created the workspace.{{% /md %}}</dd>
 
@@ -1598,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_identity_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityconfigurationresponse">Dict[Managed<wbr>Identity<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedidentityconfigurationresponse">Managed<wbr>Identity<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of Managed Identity of Storage Account{{% /md %}}</dd>
 
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Dict[Created<wbr>By<wbr>Response]</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.{{% /md %}}</dd>
 
@@ -3058,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aml_workspace_id_python" style="color: inherit; text-decoration: inherit;">aml_<wbr>workspace_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd>
 
@@ -3068,7 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_private_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>private_<wbr>subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd>
 
@@ -3078,7 +3078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_public_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>public_<wbr>subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd>
 
@@ -3088,7 +3088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>virtual_<wbr>network_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd>
 
@@ -3098,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_no_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>no_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd>
 
@@ -3108,7 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameter">Dict[Workspace<wbr>Encryption<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameter">Workspace<wbr>Encryption<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepare_encryption_python" style="color: inherit; text-decoration: inherit;">prepare_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd>
 
@@ -3128,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">require_<wbr>infrastructure_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
 
@@ -3417,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aml_workspace_id_python" style="color: inherit; text-decoration: inherit;">aml_<wbr>workspace_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd>
 
@@ -3427,7 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_private_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>private_<wbr>subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd>
 
@@ -3437,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_public_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>public_<wbr>subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd>
 
@@ -3447,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>virtual_<wbr>network_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd>
 
@@ -3457,7 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_no_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>no_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd>
 
@@ -3467,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Dict[Workspace<wbr>Encryption<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd>
 
@@ -3477,7 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepare_encryption_python" style="color: inherit; text-decoration: inherit;">prepare_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd>
 
@@ -3487,7 +3487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">require_<wbr>infrastructure_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
 
@@ -3764,7 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Dict[Encryption]</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd>
 
@@ -3883,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Dict[Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd>
 

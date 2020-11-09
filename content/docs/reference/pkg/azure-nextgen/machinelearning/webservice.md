@@ -23,7 +23,7 @@ Instance of an Azure ML web service resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[WebServicePropertiesForGraph]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">web_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[WebServicePropertiesForGraphArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">web_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -382,7 +382,7 @@ The WebService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservicepropertiesforgraph">Dict[Web<wbr>Service<wbr>Properties<wbr>For<wbr>Graph]</a></span>
+        <span class="property-type"><a href="#webservicepropertiesforgraph">Web<wbr>Service<wbr>Properties<wbr>For<wbr>Graph<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the property payload that describes the web service.{{% /md %}}</dd>
 
@@ -412,7 +412,7 @@ The WebService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -865,11 +865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="locationinfo_python">
-<a href="#locationinfo_python" style="color: inherit; text-decoration: inherit;">location<wbr>Info</a>
+        <span id="location_info_python">
+<a href="#location_info_python" style="color: inherit; text-decoration: inherit;">location_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocation">Dict[Blob<wbr>Location]</a></span>
+        <span class="property-type"><a href="#bloblocation">Blob<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access information for the asset.{{% /md %}}</dd>
 
@@ -905,11 +905,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputports_python">
-<a href="#inputports_python" style="color: inherit; text-decoration: inherit;">input<wbr>Ports</a>
+        <span id="input_ports_python">
+<a href="#input_ports_python" style="color: inherit; text-decoration: inherit;">input_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Input<wbr>Port]</span>
+        <span class="property-type">Mapping[str, Input<wbr>Port<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information about the asset's input ports.{{% /md %}}</dd>
 
@@ -919,17 +919,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}If the asset is a custom module, this holds the module's metadata.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputports_python">
-<a href="#outputports_python" style="color: inherit; text-decoration: inherit;">output<wbr>Ports</a>
+        <span id="output_ports_python">
+<a href="#output_ports_python" style="color: inherit; text-decoration: inherit;">output_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Output<wbr>Port]</span>
+        <span class="property-type">Mapping[str, Output<wbr>Port<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information about the asset's output ports.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameter">List[Module<wbr>Asset<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#moduleassetparameter">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If the asset is a custom module, this holds the module's parameters.{{% /md %}}</dd>
 
@@ -1224,11 +1224,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="locationinfo_python">
-<a href="#locationinfo_python" style="color: inherit; text-decoration: inherit;">location<wbr>Info</a>
+        <span id="location_info_python">
+<a href="#location_info_python" style="color: inherit; text-decoration: inherit;">location_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocationresponse">Dict[Blob<wbr>Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bloblocationresponse">Blob<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access information for the asset.{{% /md %}}</dd>
 
@@ -1264,11 +1264,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputports_python">
-<a href="#inputports_python" style="color: inherit; text-decoration: inherit;">input<wbr>Ports</a>
+        <span id="input_ports_python">
+<a href="#input_ports_python" style="color: inherit; text-decoration: inherit;">input_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Input<wbr>Port<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Input<wbr>Port<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information about the asset's input ports.{{% /md %}}</dd>
 
@@ -1278,17 +1278,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}If the asset is a custom module, this holds the module's metadata.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputports_python">
-<a href="#outputports_python" style="color: inherit; text-decoration: inherit;">output<wbr>Ports</a>
+        <span id="output_ports_python">
+<a href="#output_ports_python" style="color: inherit; text-decoration: inherit;">output_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Output<wbr>Port<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Output<wbr>Port<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information about the asset's output ports.{{% /md %}}</dd>
 
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameterresponse">List[Module<wbr>Asset<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moduleassetparameterresponse">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If the asset is a custom module, this holds the module's parameters.{{% /md %}}</dd>
 
@@ -1745,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_python" style="color: inherit; text-decoration: inherit;">enum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}If the data type is categorical, this provides the list of accepted categories.{{% /md %}}</dd>
 
@@ -1761,8 +1761,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xmsisnullable_python">
-<a href="#xmsisnullable_python" style="color: inherit; text-decoration: inherit;">x<wbr>Ms<wbr>Isnullable</a>
+        <span id="x_ms_isnullable_python">
+<a href="#x_ms_isnullable_python" style="color: inherit; text-decoration: inherit;">x_<wbr>ms_<wbr>isnullable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1771,8 +1771,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xmsisordered_python">
-<a href="#xmsisordered_python" style="color: inherit; text-decoration: inherit;">x<wbr>Ms<wbr>Isordered</a>
+        <span id="x_ms_isordered_python">
+<a href="#x_ms_isordered_python" style="color: inherit; text-decoration: inherit;">x_<wbr>ms_<wbr>isordered</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1984,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_python" style="color: inherit; text-decoration: inherit;">enum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}If the data type is categorical, this provides the list of accepted categories.{{% /md %}}</dd>
 
@@ -2000,8 +2000,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xmsisnullable_python">
-<a href="#xmsisnullable_python" style="color: inherit; text-decoration: inherit;">x<wbr>Ms<wbr>Isnullable</a>
+        <span id="x_ms_isnullable_python">
+<a href="#x_ms_isnullable_python" style="color: inherit; text-decoration: inherit;">x_<wbr>ms_<wbr>isnullable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2010,8 +2010,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xmsisordered_python">
-<a href="#xmsisordered_python" style="color: inherit; text-decoration: inherit;">x<wbr>Ms<wbr>Isordered</a>
+        <span id="x_ms_isordered_python">
+<a href="#x_ms_isordered_python" style="color: inherit; text-decoration: inherit;">x_<wbr>ms_<wbr>isordered</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2519,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#global_parameters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Sample input data for the web service's global parameters{{% /md %}}</dd>
 
@@ -2529,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>>]</span>
+        <span class="property-type">Mapping[str, Sequence[Sequence[Any]]]</span>
     </dt>
     <dd>{{% md %}}Sample input data for the web service's input(s) given as an input name to sample input values matrix map.{{% /md %}}</dd>
 
@@ -2638,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#global_parameters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Sample input data for the web service's global parameters{{% /md %}}</dd>
 
@@ -2648,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>>]</span>
+        <span class="property-type">Mapping[str, Sequence[Sequence[Any]]]</span>
     </dt>
     <dd>{{% md %}}Sample input data for the web service's input(s) given as an input name to sample input values matrix map.{{% /md %}}</dd>
 
@@ -2813,8 +2813,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcenodeid_python">
-<a href="#sourcenodeid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Node<wbr>Id</a>
+        <span id="source_node_id_python">
+<a href="#source_node_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2823,8 +2823,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceportid_python">
-<a href="#sourceportid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Id</a>
+        <span id="source_port_id_python">
+<a href="#source_port_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2833,8 +2833,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetnodeid_python">
-<a href="#targetnodeid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Node<wbr>Id</a>
+        <span id="target_node_id_python">
+<a href="#target_node_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2843,8 +2843,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetportid_python">
-<a href="#targetportid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Port<wbr>Id</a>
+        <span id="target_port_id_python">
+<a href="#target_port_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3012,8 +3012,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcenodeid_python">
-<a href="#sourcenodeid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Node<wbr>Id</a>
+        <span id="source_node_id_python">
+<a href="#source_node_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3022,8 +3022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceportid_python">
-<a href="#sourceportid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Id</a>
+        <span id="source_port_id_python">
+<a href="#source_port_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3032,8 +3032,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetnodeid_python">
-<a href="#targetnodeid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Node<wbr>Id</a>
+        <span id="target_node_id_python">
+<a href="#target_node_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3042,8 +3042,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetportid_python">
-<a href="#targetportid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Port<wbr>Id</a>
+        <span id="target_port_id_python">
+<a href="#target_port_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3221,8 +3221,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputid_python">
-<a href="#inputid_python" style="color: inherit; text-decoration: inherit;">input<wbr>Id</a>
+        <span id="input_id_python">
+<a href="#input_id_python" style="color: inherit; text-decoration: inherit;">input_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3231,8 +3231,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputid_python">
-<a href="#outputid_python" style="color: inherit; text-decoration: inherit;">output<wbr>Id</a>
+        <span id="output_id_python">
+<a href="#output_id_python" style="color: inherit; text-decoration: inherit;">output_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3245,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Web<wbr>Service<wbr>Parameter]</span>
+        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.{{% /md %}}</dd>
 
@@ -3420,8 +3420,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputid_python">
-<a href="#inputid_python" style="color: inherit; text-decoration: inherit;">input<wbr>Id</a>
+        <span id="input_id_python">
+<a href="#input_id_python" style="color: inherit; text-decoration: inherit;">input_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3430,8 +3430,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputid_python">
-<a href="#outputid_python" style="color: inherit; text-decoration: inherit;">output<wbr>Id</a>
+        <span id="output_id_python">
+<a href="#output_id_python" style="color: inherit; text-decoration: inherit;">output_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3444,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Web<wbr>Service<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.{{% /md %}}</dd>
 
@@ -3583,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edges_python" style="color: inherit; text-decoration: inherit;">edges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphedge">List[Graph<wbr>Edge]</a></span>
+        <span class="property-type"><a href="#graphedge">Sequence[Graph<wbr>Edge<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of edges making up the graph.{{% /md %}}</dd>
 
@@ -3593,7 +3593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#graph_parameters_python" style="color: inherit; text-decoration: inherit;">graph_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Graph<wbr>Parameter]</span>
+        <span class="property-type">Mapping[str, Graph<wbr>Parameter<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.{{% /md %}}</dd>
 
@@ -3603,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Graph<wbr>Node]</span>
+        <span class="property-type">Mapping[str, Graph<wbr>Node<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The set of nodes making up the graph, provided as a nodeId to GraphNode map{{% /md %}}</dd>
 
@@ -3742,7 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edges_python" style="color: inherit; text-decoration: inherit;">edges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphedgeresponse">List[Graph<wbr>Edge<wbr>Response]</a></span>
+        <span class="property-type"><a href="#graphedgeresponse">Sequence[Graph<wbr>Edge<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of edges making up the graph.{{% /md %}}</dd>
 
@@ -3752,7 +3752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#graph_parameters_python" style="color: inherit; text-decoration: inherit;">graph_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Graph<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Graph<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.{{% /md %}}</dd>
 
@@ -3762,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Graph<wbr>Node<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Graph<wbr>Node<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The set of nodes making up the graph, provided as a nodeId to GraphNode map{{% /md %}}</dd>
 
@@ -3901,7 +3901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphparameterlink">List[Graph<wbr>Parameter<wbr>Link]</a></span>
+        <span class="property-type"><a href="#graphparameterlink">Sequence[Graph<wbr>Parameter<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Association links for this parameter to nodes in the graph.{{% /md %}}</dd>
 
@@ -4026,8 +4026,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4036,8 +4036,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="parameterkey_python">
-<a href="#parameterkey_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Key</a>
+        <span id="parameter_key_python">
+<a href="#parameter_key_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4145,8 +4145,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4155,8 +4155,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="parameterkey_python">
-<a href="#parameterkey_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Key</a>
+        <span id="parameter_key_python">
+<a href="#parameter_key_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4298,7 +4298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphparameterlinkresponse">List[Graph<wbr>Parameter<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#graphparameterlinkresponse">Sequence[Graph<wbr>Parameter<wbr>Link<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Association links for this parameter to nodes in the graph.{{% /md %}}</dd>
 
@@ -4739,8 +4739,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="interfacestring_python">
-<a href="#interfacestring_python" style="color: inherit; text-decoration: inherit;">interface<wbr>String</a>
+        <span id="interface_string_python">
+<a href="#interface_string_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4753,7 +4753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameter">List[Module<wbr>Asset<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#moduleassetparameter">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the parameter.{{% /md %}}</dd>
 
@@ -4858,8 +4858,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="interfacestring_python">
-<a href="#interfacestring_python" style="color: inherit; text-decoration: inherit;">interface<wbr>String</a>
+        <span id="interface_string_python">
+<a href="#interface_string_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4872,7 +4872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameterresponse">List[Module<wbr>Asset<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moduleassetparameterresponse">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the parameter.{{% /md %}}</dd>
 
@@ -5007,11 +5007,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modevaluesinfo_python">
-<a href="#modevaluesinfo_python" style="color: inherit; text-decoration: inherit;">mode<wbr>Values<wbr>Info</a>
+        <span id="mode_values_info_python">
+<a href="#mode_values_info_python" style="color: inherit; text-decoration: inherit;">mode_<wbr>values_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mode<wbr>Value<wbr>Info]</span>
+        <span class="property-type">Mapping[str, Mode<wbr>Value<wbr>Info<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Definitions for nested interface parameters if this is a complex module parameter.{{% /md %}}</dd>
 
@@ -5027,8 +5027,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parametertype_python">
-<a href="#parametertype_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Type</a>
+        <span id="parameter_type_python">
+<a href="#parameter_type_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5166,11 +5166,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modevaluesinfo_python">
-<a href="#modevaluesinfo_python" style="color: inherit; text-decoration: inherit;">mode<wbr>Values<wbr>Info</a>
+        <span id="mode_values_info_python">
+<a href="#mode_values_info_python" style="color: inherit; text-decoration: inherit;">mode_<wbr>values_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Mode<wbr>Value<wbr>Info<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Mode<wbr>Value<wbr>Info<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Definitions for nested interface parameters if this is a complex module parameter.{{% /md %}}</dd>
 
@@ -5186,8 +5186,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parametertype_python">
-<a href="#parametertype_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Type</a>
+        <span id="parameter_type_python">
+<a href="#parameter_type_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5675,7 +5675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Table<wbr>Specification]</span>
+        <span class="property-type">Mapping[str, Table<wbr>Specification<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.{{% /md %}}</dd>
 
@@ -5874,7 +5874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Table<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Table<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.{{% /md %}}</dd>
 
@@ -6371,7 +6371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Column<wbr>Specification]</span>
+        <span class="property-type">Mapping[str, Column<wbr>Specification<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The set of columns within the data table.{{% /md %}}</dd>
 
@@ -6610,7 +6610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Column<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Column<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The set of columns within the data table.{{% /md %}}</dd>
 
@@ -6977,7 +6977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The parameter value{{% /md %}}</dd>
 
@@ -7096,7 +7096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The parameter value{{% /md %}}</dd>
 
@@ -7685,7 +7685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Asset<wbr>Item]</span>
+        <span class="property-type">Mapping[str, Asset<wbr>Item<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.{{% /md %}}</dd>
 
@@ -7695,7 +7695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commitment_plan_python" style="color: inherit; text-decoration: inherit;">commitment_<wbr>plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplan">Dict[Commitment<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#commitmentplan">Commitment<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.{{% /md %}}</dd>
 
@@ -7715,7 +7715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsconfiguration">Dict[Diagnostics<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#diagnosticsconfiguration">Diagnostics<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the diagnostics traces collection for the web service.{{% /md %}}</dd>
 
@@ -7725,7 +7725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#example_request_python" style="color: inherit; text-decoration: inherit;">example_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#examplerequest">Dict[Example<wbr>Request]</a></span>
+        <span class="property-type"><a href="#examplerequest">Example<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines sample input data for one or more of the service's inputs.{{% /md %}}</dd>
 
@@ -7745,7 +7745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecification">Dict[Service<wbr>Input<wbr>Output<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecification">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.{{% /md %}}</dd>
 
@@ -7755,7 +7755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservicekeys">Dict[Web<wbr>Service<wbr>Keys]</a></span>
+        <span class="property-type"><a href="#webservicekeys">Web<wbr>Service<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.{{% /md %}}</dd>
 
@@ -7765,7 +7765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_learning_workspace_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>learning_<wbr>workspace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningworkspace">Dict[Machine<wbr>Learning<wbr>Workspace]</a></span>
+        <span class="property-type"><a href="#machinelearningworkspace">Machine<wbr>Learning<wbr>Workspace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Machine Learning workspace containing the experiment that is source for the web service.{{% /md %}}</dd>
 
@@ -7775,7 +7775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecification">Dict[Service<wbr>Input<wbr>Output<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecification">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.{{% /md %}}</dd>
 
@@ -7785,7 +7785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphpackage">Dict[Graph<wbr>Package]</a></span>
+        <span class="property-type"><a href="#graphpackage">Graph<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of the graph package making up this web service.{{% /md %}}</dd>
 
@@ -7795,7 +7795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Web<wbr>Service<wbr>Parameter]</span>
+        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.{{% /md %}}</dd>
 
@@ -7815,7 +7815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payloads_location_python" style="color: inherit; text-decoration: inherit;">payloads_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocation">Dict[Blob<wbr>Location]</a></span>
+        <span class="property-type"><a href="#bloblocation">Blob<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.{{% /md %}}</dd>
 
@@ -7835,7 +7835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#realtime_configuration_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimeconfiguration">Dict[Realtime<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#realtimeconfiguration">Realtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration settings for the web service endpoint.{{% /md %}}</dd>
 
@@ -7845,7 +7845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Dict[Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.{{% /md %}}</dd>
 
@@ -8604,7 +8604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Asset<wbr>Item<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Asset<wbr>Item<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.{{% /md %}}</dd>
 
@@ -8614,7 +8614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commitment_plan_python" style="color: inherit; text-decoration: inherit;">commitment_<wbr>plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplanresponse">Dict[Commitment<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#commitmentplanresponse">Commitment<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.{{% /md %}}</dd>
 
@@ -8634,7 +8634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsconfigurationresponse">Dict[Diagnostics<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsconfigurationresponse">Diagnostics<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the diagnostics traces collection for the web service.{{% /md %}}</dd>
 
@@ -8644,7 +8644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#example_request_python" style="color: inherit; text-decoration: inherit;">example_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#examplerequestresponse">Dict[Example<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#examplerequestresponse">Example<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines sample input data for one or more of the service's inputs.{{% /md %}}</dd>
 
@@ -8664,7 +8664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Dict[Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.{{% /md %}}</dd>
 
@@ -8674,7 +8674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservicekeysresponse">Dict[Web<wbr>Service<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#webservicekeysresponse">Web<wbr>Service<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.{{% /md %}}</dd>
 
@@ -8684,7 +8684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_learning_workspace_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>learning_<wbr>workspace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningworkspaceresponse">Dict[Machine<wbr>Learning<wbr>Workspace<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningworkspaceresponse">Machine<wbr>Learning<wbr>Workspace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Machine Learning workspace containing the experiment that is source for the web service.{{% /md %}}</dd>
 
@@ -8694,7 +8694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Dict[Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.{{% /md %}}</dd>
 
@@ -8704,7 +8704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphpackageresponse">Dict[Graph<wbr>Package<wbr>Response]</a></span>
+        <span class="property-type"><a href="#graphpackageresponse">Graph<wbr>Package<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of the graph package making up this web service.{{% /md %}}</dd>
 
@@ -8714,7 +8714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Web<wbr>Service<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.{{% /md %}}</dd>
 
@@ -8734,7 +8734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payloads_location_python" style="color: inherit; text-decoration: inherit;">payloads_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocationresponse">Dict[Blob<wbr>Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bloblocationresponse">Blob<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.{{% /md %}}</dd>
 
@@ -8754,7 +8754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#realtime_configuration_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimeconfigurationresponse">Dict[Realtime<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#realtimeconfigurationresponse">Realtime<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration settings for the web service endpoint.{{% /md %}}</dd>
 
@@ -8764,7 +8764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Dict[Storage<wbr>Account<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.{{% /md %}}</dd>
 

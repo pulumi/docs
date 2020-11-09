@@ -32,8 +32,8 @@ class MyStack : Stack
             Properties = 
             {
                 { "endpointType", "ServiceBus" },
-                { "primaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=" },
-                { "secondaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=" },
+                { "primaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc" },
+                { "secondaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc" },
             },
             ResourceGroupName = "resRg",
             ResourceName = "myDigitalTwinsService",
@@ -60,8 +60,8 @@ digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint(
     endpoint_name="myServiceBus",
     properties={
         "endpointType": "ServiceBus",
-        "primaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
-        "secondaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
+        "primaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+        "secondaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
     },
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
@@ -80,8 +80,8 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
     endpointName: "myServiceBus",
     properties: {
         endpointType: "ServiceBus",
-        primaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
-        secondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
+        primaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+        secondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
     },
     resourceGroupName: "resRg",
     resourceName: "myDigitalTwinsService",
@@ -103,7 +103,7 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[EventGrid] | Dict[EventHub] | Dict[ServiceBus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[EventGridArgs, EventHubArgs, ServiceBusArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -287,6 +287,16 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -305,16 +315,6 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -331,6 +331,16 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -352,16 +362,6 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -378,6 +378,16 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Event<wbr>Grid | Event<wbr>Hub | Service<wbr>Bus</span>
+    </dt>
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -399,16 +409,6 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Event<wbr>Grid | Event<wbr>Hub | Service<wbr>Bus</span>
-    </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -425,6 +425,16 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union[Event<wbr>Grid<wbr>Args, Event<wbr>Hub<wbr>Args, Service<wbr>Bus<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -445,16 +455,6 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[Event<wbr>Grid] | Dict[Event<wbr>Hub] | Dict[Service<wbr>Bus]</span>
-    </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -785,8 +785,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey1_python">
-<a href="#accesskey1_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key1</a>
+        <span id="access_key1_python">
+<a href="#access_key1_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key1</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -795,8 +795,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="topicendpoint_python">
-<a href="#topicendpoint_python" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
+        <span id="topic_endpoint_python">
+<a href="#topic_endpoint_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -805,8 +805,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesskey2_python">
-<a href="#accesskey2_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
+        <span id="access_key2_python">
+<a href="#access_key2_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key2</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -815,8 +815,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1044,8 +1044,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey1_python">
-<a href="#accesskey1_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key1</a>
+        <span id="access_key1_python">
+<a href="#access_key1_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key1</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1074,8 +1074,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="topicendpoint_python">
-<a href="#topicendpoint_python" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
+        <span id="topic_endpoint_python">
+<a href="#topic_endpoint_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1084,8 +1084,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesskey2_python">
-<a href="#accesskey2_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
+        <span id="access_key2_python">
+<a href="#access_key2_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key2</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1094,8 +1094,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1233,8 +1233,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionstringprimarykey_python">
-<a href="#connectionstringprimarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Primary<wbr>Key</a>
+        <span id="connection_string_primary_key_python">
+<a href="#connection_string_primary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>primary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1243,8 +1243,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionstringsecondarykey_python">
-<a href="#connectionstringsecondarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
+        <span id="connection_string_secondary_key_python">
+<a href="#connection_string_secondary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>secondary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1253,8 +1253,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1452,8 +1452,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionstringprimarykey_python">
-<a href="#connectionstringprimarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Primary<wbr>Key</a>
+        <span id="connection_string_primary_key_python">
+<a href="#connection_string_primary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>primary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1482,8 +1482,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionstringsecondarykey_python">
-<a href="#connectionstringsecondarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
+        <span id="connection_string_secondary_key_python">
+<a href="#connection_string_secondary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>secondary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1492,8 +1492,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1631,8 +1631,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="primaryconnectionstring_python">
-<a href="#primaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
+        <span id="primary_connection_string_python">
+<a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1641,8 +1641,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1651,8 +1651,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryconnectionstring_python">
-<a href="#secondaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
+        <span id="secondary_connection_string_python">
+<a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1860,8 +1860,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="primaryconnectionstring_python">
-<a href="#primaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
+        <span id="primary_connection_string_python">
+<a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1880,8 +1880,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1890,8 +1890,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryconnectionstring_python">
-<a href="#secondaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
+        <span id="secondary_connection_string_python">
+<a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

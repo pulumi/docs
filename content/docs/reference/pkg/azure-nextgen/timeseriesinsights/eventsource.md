@@ -119,7 +119,7 @@ const eventSource = new azure_nextgen.timeseriesinsights.latest.EventSource("eve
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_source_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_timestamp</span><span class="p">:</span> <span class="nx">Optional[Dict[LocalTimestamp]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_source_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_timestamp</span><span class="p">:</span> <span class="nx">Optional[LocalTimestampArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,7 +578,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#local_timestamp_python" style="color: inherit; text-decoration: inherit;">local_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamp">Dict[Local<wbr>Timestamp]</a></span>
+        <span class="property-type"><a href="#localtimestamp">Local<wbr>Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd>
 
@@ -588,7 +588,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd>
 
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_offset_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone_<wbr>offset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamptimezoneoffset">Dict[Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset]</a></span>
+        <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd>
 

@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#alert_notifications_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Dict[Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications]</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
 
@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#notifications_by_role_python" style="color: inherit; text-decoration: inherit;">notifications_<wbr>by_<wbr>role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Dict[Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role]</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
 
@@ -623,7 +623,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
 

@@ -304,6 +304,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type of the raw content. Example : text/csv or text/tsv {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="created_csharp">
+<a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time the watchlist was created{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span> 
@@ -311,16 +331,6 @@ The following output properties are available:
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="createdtimeutc_csharp">
-<a href="#createdtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time the watchlist was created{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -354,6 +364,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="isdeleted_csharp">
+<a href="#isdeleted_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deleted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the watchlist is deleted or not{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -364,23 +384,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="lastupdatedtimeutc_csharp">
-<a href="#lastupdatedtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
+        <span id="numberoflinestoskip_csharp">
+<a href="#numberoflinestoskip_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Lines<wbr>To<wbr>Skip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
+    <dd>{{% md %}}The number of lines in a csv/tsv content to skip before the header{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="notes_csharp">
-<a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
+        <span id="rawcontent_csharp">
+<a href="#rawcontent_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The notes of the watchlist{{% /md %}}</dd>
+    <dd>{{% md %}}The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -390,7 +410,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenantId where the watchlist belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenantId where the watchlist belongs to{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="updated_csharp">
+<a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -404,13 +434,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="watchlistitems_csharp">
-<a href="#watchlistitems_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Items</a>
+        <span id="watchlistalias_csharp">
+<a href="#watchlistalias_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Alias</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#watchlistitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Watchlist<wbr>Item<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}List of watchlist items.{{% /md %}}</dd>
+    <dd>{{% md %}}The alias of the watchlist{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="watchlistid_csharp">
+<a href="#watchlistid_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -421,16 +461,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the watchlist{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="workspaceid_csharp">
-<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The workspaceId where the watchlist belongs to.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -491,6 +521,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type of the raw content. Example : text/csv or text/tsv {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="created_go">
+<a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time the watchlist was created{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span> 
@@ -498,16 +548,6 @@ The following output properties are available:
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="createdtimeutc_go">
-<a href="#createdtimeutc_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time the watchlist was created{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -541,6 +581,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="isdeleted_go">
+<a href="#isdeleted_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deleted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the watchlist is deleted or not{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -551,23 +601,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="lastupdatedtimeutc_go">
-<a href="#lastupdatedtimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
+        <span id="numberoflinestoskip_go">
+<a href="#numberoflinestoskip_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Lines<wbr>To<wbr>Skip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
+    <dd>{{% md %}}The number of lines in a csv/tsv content to skip before the header{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="notes_go">
-<a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
+        <span id="rawcontent_go">
+<a href="#rawcontent_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The notes of the watchlist{{% /md %}}</dd>
+    <dd>{{% md %}}The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -577,7 +627,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenantId where the watchlist belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenantId where the watchlist belongs to{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="updated_go">
+<a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -591,13 +651,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="watchlistitems_go">
-<a href="#watchlistitems_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Items</a>
+        <span id="watchlistalias_go">
+<a href="#watchlistalias_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Alias</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#watchlistitemresponse">[]Watchlist<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of watchlist items.{{% /md %}}</dd>
+    <dd>{{% md %}}The alias of the watchlist{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="watchlistid_go">
+<a href="#watchlistid_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -608,16 +678,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the watchlist{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="workspaceid_go">
-<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The workspaceId where the watchlist belongs to.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -678,6 +738,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type of the raw content. Example : text/csv or text/tsv {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="created_nodejs">
+<a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time the watchlist was created{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span> 
@@ -685,16 +765,6 @@ The following output properties are available:
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="createdtimeutc_nodejs">
-<a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time the watchlist was created{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -728,6 +798,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="isdeleted_nodejs">
+<a href="#isdeleted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deleted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the watchlist is deleted or not{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -738,23 +818,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="lastupdatedtimeutc_nodejs">
-<a href="#lastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time<wbr>Utc</a>
+        <span id="numberoflinestoskip_nodejs">
+<a href="#numberoflinestoskip_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Lines<wbr>To<wbr>Skip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
+    <dd>{{% md %}}The number of lines in a csv/tsv content to skip before the header{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="notes_nodejs">
-<a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
+        <span id="rawcontent_nodejs">
+<a href="#rawcontent_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The notes of the watchlist{{% /md %}}</dd>
+    <dd>{{% md %}}The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -764,7 +844,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenantId where the watchlist belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenantId where the watchlist belongs to{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="updated_nodejs">
+<a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -778,13 +868,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="watchlistitems_nodejs">
-<a href="#watchlistitems_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Items</a>
+        <span id="watchlistalias_nodejs">
+<a href="#watchlistalias_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Alias</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#watchlistitemresponse">Watchlist<wbr>Item<wbr>Response[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of watchlist items.{{% /md %}}</dd>
+    <dd>{{% md %}}The alias of the watchlist{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="watchlistid_nodejs">
+<a href="#watchlistid_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -795,16 +895,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the watchlist{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="workspaceid_nodejs">
-<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The workspaceId where the watchlist belongs to.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -865,23 +955,33 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
+    <dd>{{% md %}}The content type of the raw content. Example : text/csv or text/tsv {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="created_time_utc_python">
-<a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
+        <span id="created_python">
+<a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time the watchlist was created{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -915,33 +1015,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="is_deleted_python">
+<a href="#is_deleted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deleted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the watchlist is deleted or not{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this watchlist{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="last_updated_time_utc_python">
-<a href="#last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time_<wbr>utc</a>
+        <span id="number_of_lines_to_skip_python">
+<a href="#number_of_lines_to_skip_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>lines_<wbr>to_<wbr>skip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
+    <dd>{{% md %}}The number of lines in a csv/tsv content to skip before the header{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="notes_python">
-<a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
+        <span id="raw_content_python">
+<a href="#raw_content_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The notes of the watchlist{{% /md %}}</dd>
+    <dd>{{% md %}}The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -951,7 +1061,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tenantId where the watchlist belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenantId where the watchlist belongs to{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="updated_python">
+<a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last time the watchlist was updated{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -959,19 +1079,29 @@ The following output properties are available:
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="watchlist_items_python">
-<a href="#watchlist_items_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>items</a>
+        <span id="watchlist_alias_python">
+<a href="#watchlist_alias_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>alias</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#watchlistitemresponse">List[Watchlist<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}List of watchlist items.{{% /md %}}</dd>
+    <dd>{{% md %}}The alias of the watchlist{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="watchlist_id_python">
+<a href="#watchlist_id_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -982,16 +1112,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the watchlist{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="workspace_id_python">
-<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The workspaceId where the watchlist belongs to.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1157,605 +1277,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="watchlistitemresponse">Watchlist<wbr>Item<wbr>Response</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistid_csharp">
-<a href="#watchlistid_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The watchlist id of the parent of this watchlist item{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistitempair_csharp">
-<a href="#watchlistitempair_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Pair</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdtimeutc_csharp">
-<a href="#createdtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="entitymapping_csharp">
-<a href="#entitymapping_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastupdatedtimeutc_csharp">
-<a href="#lastupdatedtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_csharp">
-<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenantId to which this watchlist item belongs to{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="timetoliveutc_csharp">
-<a href="#timetoliveutc_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time to live for the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="updatedby_csharp">
-<a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemname_csharp">
-<a href="#watchlistitemname_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemtype_csharp">
-<a href="#watchlistitemtype_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistid_go">
-<a href="#watchlistid_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The watchlist id of the parent of this watchlist item{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistitempair_go">
-<a href="#watchlistitempair_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Pair</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdtimeutc_go">
-<a href="#createdtimeutc_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="entitymapping_go">
-<a href="#entitymapping_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastupdatedtimeutc_go">
-<a href="#lastupdatedtimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_go">
-<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenantId to which this watchlist item belongs to{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="timetoliveutc_go">
-<a href="#timetoliveutc_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time to live for the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="updatedby_go">
-<a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemname_go">
-<a href="#watchlistitemname_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemtype_go">
-<a href="#watchlistitemtype_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistid_nodejs">
-<a href="#watchlistid_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The watchlist id of the parent of this watchlist item{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistitempair_nodejs">
-<a href="#watchlistitempair_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Pair</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdtimeutc_nodejs">
-<a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="entitymapping_nodejs">
-<a href="#entitymapping_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastupdatedtimeutc_nodejs">
-<a href="#lastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_nodejs">
-<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenantId to which this watchlist item belongs to{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="timetoliveutc_nodejs">
-<a href="#timetoliveutc_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Live<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The time to live for the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="updatedby_nodejs">
-<a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemname_nodejs">
-<a href="#watchlistitemname_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemtype_nodejs">
-<a href="#watchlistitemtype_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistid_python">
-<a href="#watchlistid_python" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The watchlist id of the parent of this watchlist item{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="watchlistitempair_python">
-<a href="#watchlistitempair_python" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Pair</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="created_time_utc_python">
-<a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="entitymapping_python">
-<a href="#entitymapping_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="last_updated_time_utc_python">
-<a href="#last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time_<wbr>utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenant_id_python">
-<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The tenantId to which this watchlist item belongs to{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="timetoliveutc_python">
-<a href="#timetoliveutc_python" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Live<wbr>Utc</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The time to live for the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="updated_by_python">
-<a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemname_python">
-<a href="#watchlistitemname_python" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the watchlist item{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="watchlistitemtype_python">
-<a href="#watchlistitemtype_python" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

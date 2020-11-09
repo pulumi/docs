@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#partner_servers_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerinforesponse">List[Partner<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#partnerinforesponse">Sequence[Partner<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of partner server information for the failover group.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#read_write_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadwriteendpointresponse">Dict[Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#failovergroupreadwriteendpointresponse">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of databases in the failover group.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#read_only_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadonlyendpointresponse">Dict[Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#failovergroupreadonlyendpointresponse">Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

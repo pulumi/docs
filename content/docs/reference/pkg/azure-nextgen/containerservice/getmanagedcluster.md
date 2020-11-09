@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Dict[Power<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#aad_profile_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraadprofileresponse">Dict[Managed<wbr>Cluster<wbr>AADProfile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusteraadprofileresponse">Managed<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd>
 
@@ -1099,7 +1099,7 @@ The following output properties are available:
 <a href="#addon_profiles_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteragentpoolprofileresponse">List[Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusteragentpoolprofileresponse">Sequence[Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
 
@@ -1119,7 +1119,7 @@ The following output properties are available:
 <a href="#api_server_access_profile_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>access_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterapiserveraccessprofileresponse">Dict[Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusterapiserveraccessprofileresponse">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd>
 
@@ -1129,7 +1129,7 @@ The following output properties are available:
 <a href="#auto_scaler_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpropertiesresponseautoscalerprofile">Dict[Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#managedclusterpropertiesresponseautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd>
 
@@ -1179,7 +1179,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteridentityresponse">Dict[Managed<wbr>Cluster<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusteridentityresponse">Managed<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd>
 
@@ -1189,7 +1189,7 @@ The following output properties are available:
 <a href="#identity_profile_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Identity<wbr>Profile]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Identity<wbr>Profile]</span>
     </dt>
     <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ The following output properties are available:
 <a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofileresponse">Dict[Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ The following output properties are available:
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicenetworkprofileresponse">Dict[Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicenetworkprofileresponse">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd>
 
@@ -1239,7 +1239,7 @@ The following output properties are available:
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterserviceprincipalprofileresponse">Dict[Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusterserviceprincipalprofileresponse">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd>
 
@@ -1249,7 +1249,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterskuresponse">Dict[Managed<wbr>Cluster<wbr>SKUResponse]</a></span>
+        <span class="property-type"><a href="#managedclusterskuresponse">Managed<wbr>Cluster<wbr>SKUResponse</a></span>
     </dt>
     <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd>
 
@@ -1259,7 +1259,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1269,7 +1269,7 @@ The following output properties are available:
 <a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterwindowsprofileresponse">Dict[Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusterwindowsprofileresponse">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
 
@@ -1473,7 +1473,7 @@ The following output properties are available:
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Dict[Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 
@@ -1842,7 +1842,7 @@ The following output properties are available:
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
 
@@ -1991,7 +1991,7 @@ The following output properties are available:
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 
@@ -2066,8 +2066,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2325,11 +2325,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="admin_group_object_i_ds_python">
-<a href="#admin_group_object_i_ds_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>i_<wbr>ds</a>
+        <span id="admin_group_object_ids_python">
+<a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd>
 
@@ -2498,7 +2498,7 @@ The following output properties are available:
 <a href="#authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd>
 
@@ -2657,7 +2657,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Dict[Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd>
 
@@ -2667,7 +2667,7 @@ The following output properties are available:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd>
 
@@ -3705,7 +3705,7 @@ The following output properties are available:
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Dict[Power<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
 
@@ -3725,7 +3725,7 @@ The following output properties are available:
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
 
@@ -3805,7 +3805,7 @@ The following output properties are available:
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
 
@@ -3815,7 +3815,7 @@ The following output properties are available:
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
 
@@ -3905,7 +3905,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
 
@@ -3925,7 +3925,7 @@ The following output properties are available:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Dict[Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
 
@@ -4144,7 +4144,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -4498,11 +4498,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="effective_outbound_i_ps_python">
-<a href="#effective_outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>i_<wbr>ps</a>
+        <span id="effective_outbound_ips_python">
+<a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
 
@@ -4518,23 +4518,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="managed_outbound_i_ps_python">
-<a href="#managed_outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>i_<wbr>ps</a>
+        <span id="managed_outbound_ips_python">
+<a href="#managed_outbound_ips_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="outbound_i_ps_python">
-<a href="#outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>i_<wbr>ps</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs]</a></span>
-    </dt>
-    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4542,9 +4532,19 @@ The following output properties are available:
 <a href="#outbound_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outbound_ips_python">
+<a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4700,7 +4700,7 @@ The following output properties are available:
 <a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
 
@@ -4775,11 +4775,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_python">
-<a href="#public_i_ps_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
 
@@ -5885,7 +5885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5895,7 +5895,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5922,7 +5922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5932,7 +5932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5959,7 +5959,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5969,7 +5969,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5996,7 +5996,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6006,7 +6006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

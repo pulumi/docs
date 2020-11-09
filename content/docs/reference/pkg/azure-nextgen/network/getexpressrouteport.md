@@ -719,7 +719,7 @@ The following output properties are available:
 <a href="#circuits_python" style="color: inherit; text-decoration: inherit;">circuits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Dict[Managed<wbr>Service<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of ExpressRoutePort, if configured.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkresponse">List[Express<wbr>Route<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressroutelinkresponse">Sequence[Express<wbr>Route<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of physical links of the ExpressRoutePort resource.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1040,8 +1040,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="caksecretidentifier_python">
-<a href="#caksecretidentifier_python" style="color: inherit; text-decoration: inherit;">cak<wbr>Secret<wbr>Identifier</a>
+        <span id="cak_secret_identifier_python">
+<a href="#cak_secret_identifier_python" style="color: inherit; text-decoration: inherit;">cak_<wbr>secret_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1060,8 +1060,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cknsecretidentifier_python">
-<a href="#cknsecretidentifier_python" style="color: inherit; text-decoration: inherit;">ckn<wbr>Secret<wbr>Identifier</a>
+        <span id="ckn_secret_identifier_python">
+<a href="#ckn_secret_identifier_python" style="color: inherit; text-decoration: inherit;">ckn_<wbr>secret_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1070,8 +1070,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scistate_python">
-<a href="#scistate_python" style="color: inherit; text-decoration: inherit;">sci<wbr>State</a>
+        <span id="sci_state_python">
+<a href="#sci_state_python" style="color: inherit; text-decoration: inherit;">sci_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1469,8 +1469,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="interfacename_python">
-<a href="#interfacename_python" style="color: inherit; text-decoration: inherit;">interface<wbr>Name</a>
+        <span id="interface_name_python">
+<a href="#interface_name_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1479,8 +1479,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="patchpanelid_python">
-<a href="#patchpanelid_python" style="color: inherit; text-decoration: inherit;">patch<wbr>Panel<wbr>Id</a>
+        <span id="patch_panel_id_python">
+<a href="#patch_panel_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>panel_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1499,8 +1499,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rackid_python">
-<a href="#rackid_python" style="color: inherit; text-decoration: inherit;">rack<wbr>Id</a>
+        <span id="rack_id_python">
+<a href="#rack_id_python" style="color: inherit; text-decoration: inherit;">rack_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1509,8 +1509,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="routername_python">
-<a href="#routername_python" style="color: inherit; text-decoration: inherit;">router<wbr>Name</a>
+        <span id="router_name_python">
+<a href="#router_name_python" style="color: inherit; text-decoration: inherit;">router_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1519,8 +1519,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminstate_python">
-<a href="#adminstate_python" style="color: inherit; text-decoration: inherit;">admin<wbr>State</a>
+        <span id="admin_state_python">
+<a href="#admin_state_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1539,11 +1539,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="macsecconfig_python">
-<a href="#macsecconfig_python" style="color: inherit; text-decoration: inherit;">mac<wbr>Sec<wbr>Config</a>
+        <span id="mac_sec_config_python">
+<a href="#mac_sec_config_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>sec_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Dict[Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd>
 
@@ -1752,7 +1752,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 

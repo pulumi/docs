@@ -200,52 +200,52 @@ import pulumi_azure_nextgen as azure_nextgen
 
 gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
     description="Service Fabric Mesh sample gateway.",
-    destination_network={
-        "name": "helloWorldNetwork",
-    },
+    destination_network=azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
+        name="helloWorldNetwork",
+    ),
     gateway_resource_name="sampleGateway",
-    http=[{
-        "hosts": [{
-            "name": "contoso.com",
-            "routes": [{
-                "destination": {
-                    "applicationName": "httpHelloWorldApp",
-                    "endpointName": "indexHttpEndpoint",
-                    "serviceName": "indexService",
-                },
-                "match": {
-                    "headers": [{
-                        "name": "accept",
-                        "type": "exact",
-                        "value": "application/json",
-                    }],
-                    "path": {
-                        "rewrite": "/",
-                        "type": "prefix",
-                        "value": "/index",
-                    },
-                },
-                "name": "index",
-            }],
-        }],
-        "name": "contosoWebsite",
-        "port": 8081,
-    }],
+    http=[azure_nextgen.servicefabricmesh.v20180901preview.HttpConfigArgs(
+        hosts=[azure_nextgen.servicefabricmesh.v20180901preview.HttpHostConfigArgs(
+            name="contoso.com",
+            routes=[azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteConfigArgs(
+                destination=azure_nextgen.servicefabricmesh.v20180901preview.GatewayDestinationArgs(
+                    application_name="httpHelloWorldApp",
+                    endpoint_name="indexHttpEndpoint",
+                    service_name="indexService",
+                ),
+                match=azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchRuleArgs(
+                    headers=[azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchHeaderArgs(
+                        name="accept",
+                        type="exact",
+                        value="application/json",
+                    )],
+                    path=azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchPathArgs(
+                        rewrite="/",
+                        type="prefix",
+                        value="/index",
+                    ),
+                ),
+                name="index",
+            )],
+        )],
+        name="contosoWebsite",
+        port=8081,
+    )],
     location="EastUS",
     resource_group_name="sbz_demo",
-    source_network={
-        "name": "Open",
-    },
+    source_network=azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
+        name="Open",
+    ),
     tags={},
-    tcp=[{
-        "destination": {
-            "applicationName": "helloWorldApp",
-            "endpointName": "helloWorldListener",
-            "serviceName": "helloWorldService",
-        },
-        "name": "web",
-        "port": 80,
-    }])
+    tcp=[azure_nextgen.servicefabricmesh.v20180901preview.TcpConfigArgs(
+        destination=azure_nextgen.servicefabricmesh.v20180901preview.GatewayDestinationArgs(
+            application_name="helloWorldApp",
+            endpoint_name="helloWorldListener",
+            service_name="helloWorldService",
+        ),
+        name="web",
+        port=80,
+    )])
 
 ```
 
@@ -323,7 +323,7 @@ const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("ga
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_network</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkRef]]</span> = None<span class="p">, </span><span class="nx">gateway_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[List[HttpConfig]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_network</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkRef]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tcp</span><span class="p">:</span> <span class="nx">Optional[List[TcpConfig]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_network</span><span class="p">:</span> <span class="nx">Optional[NetworkRefArgs]</span> = None<span class="p">, </span><span class="nx">gateway_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[Sequence[HttpConfigArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_network</span><span class="p">:</span> <span class="nx">Optional[NetworkRefArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tcp</span><span class="p">:</span> <span class="nx">Optional[Sequence[TcpConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -792,7 +792,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destination_network_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Dict[Network<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_network_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Dict[Network<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
 
@@ -852,7 +852,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfig">List[Http<wbr>Config]</a></span>
+        <span class="property-type"><a href="#httpconfig">Sequence[Http<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -872,7 +872,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpconfig">List[Tcp<wbr>Config]</a></span>
+        <span class="property-type"><a href="#tcpconfig">Sequence[Tcp<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
 
@@ -1815,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfig">List[Http<wbr>Host<wbr>Config]</a></span>
+        <span class="property-type"><a href="#httphostconfig">Sequence[Http<wbr>Host<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd>
 
@@ -1974,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">List[Http<wbr>Host<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">Sequence[Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd>
 
@@ -2113,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfig">List[Http<wbr>Route<wbr>Config]</a></span>
+        <span class="property-type"><a href="#httprouteconfig">Sequence[Http<wbr>Route<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
 
@@ -2232,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">List[Http<wbr>Route<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">Sequence[Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
 
@@ -2371,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Dict[Gateway<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
 
@@ -2381,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchrule">Dict[Http<wbr>Route<wbr>Match<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#httproutematchrule">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
 
@@ -2530,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Dict[Gateway<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
 
@@ -2540,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Dict[Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
 
@@ -3295,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpath">Dict[Http<wbr>Route<wbr>Match<wbr>Path]</a></span>
+        <span class="property-type"><a href="#httproutematchpath">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
 
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheader">List[Http<wbr>Route<wbr>Match<wbr>Header]</a></span>
+        <span class="property-type"><a href="#httproutematchheader">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
 
@@ -3414,7 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Dict[Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
 
@@ -3424,7 +3424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">List[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
 
@@ -3533,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">List[Endpoint<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#endpointref">Sequence[Endpoint<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
 
@@ -3652,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List[Endpoint<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
 
@@ -3801,7 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Dict[Gateway<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
 
@@ -3960,7 +3960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Dict[Gateway<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
 

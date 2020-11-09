@@ -119,20 +119,20 @@ import pulumi_azure_nextgen as azure_nextgen
 instance_failover_group = azure_nextgen.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup",
     failover_group_name="failover-group-test-3",
     location_name="Japan East",
-    managed_instance_pairs=[{
-        "partnerManagedInstanceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
-        "primaryManagedInstanceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
-    }],
-    partner_regions=[{
-        "location": "Japan West",
-    }],
-    read_only_endpoint={
-        "failoverPolicy": "Disabled",
-    },
-    read_write_endpoint={
-        "failoverPolicy": "Automatic",
-        "failoverWithDataLossGracePeriodMinutes": 480,
-    },
+    managed_instance_pairs=[azure_nextgen.sql.v20171001preview.ManagedInstancePairInfoArgs(
+        partner_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
+        primary_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
+    )],
+    partner_regions=[azure_nextgen.sql.v20171001preview.PartnerRegionInfoArgs(
+        location="Japan West",
+    )],
+    read_only_endpoint=azure_nextgen.sql.v20171001preview.InstanceFailoverGroupReadOnlyEndpointArgs(
+        failover_policy="Disabled",
+    ),
+    read_write_endpoint=azure_nextgen.sql.v20171001preview.InstanceFailoverGroupReadWriteEndpointArgs(
+        failover_policy="Automatic",
+        failover_with_data_loss_grace_period_minutes=480,
+    ),
     resource_group_name="Default")
 
 ```
@@ -181,7 +181,7 @@ const instanceFailoverGroup = new azure_nextgen.sql.v20171001preview.InstanceFai
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">failover_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_pairs</span><span class="p">:</span> <span class="nx">Optional[List[ManagedInstancePairInfo]]</span> = None<span class="p">, </span><span class="nx">partner_regions</span><span class="p">:</span> <span class="nx">Optional[List[PartnerRegionInfo]]</span> = None<span class="p">, </span><span class="nx">read_only_endpoint</span><span class="p">:</span> <span class="nx">Optional[Dict[InstanceFailoverGroupReadOnlyEndpoint]]</span> = None<span class="p">, </span><span class="nx">read_write_endpoint</span><span class="p">:</span> <span class="nx">Optional[Dict[InstanceFailoverGroupReadWriteEndpoint]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">failover_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_pairs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstancePairInfoArgs]]</span> = None<span class="p">, </span><span class="nx">partner_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PartnerRegionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">read_only_endpoint</span><span class="p">:</span> <span class="nx">Optional[InstanceFailoverGroupReadOnlyEndpointArgs]</span> = None<span class="p">, </span><span class="nx">read_write_endpoint</span><span class="p">:</span> <span class="nx">Optional[InstanceFailoverGroupReadWriteEndpointArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,7 +610,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#managed_instance_pairs_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>pairs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepairinfo">List[Managed<wbr>Instance<wbr>Pair<wbr>Info]</a></span>
+        <span class="property-type"><a href="#managedinstancepairinfo">Sequence[Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of managed instance pairs in the failover group.{{% /md %}}</dd>
 
@@ -620,7 +620,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#partner_regions_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerregioninfo">List[Partner<wbr>Region<wbr>Info]</a></span>
+        <span class="property-type"><a href="#partnerregioninfo">Sequence[Partner<wbr>Region<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Partner region information for the failover group.{{% /md %}}</dd>
 
@@ -630,7 +630,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#read_write_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Dict[Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd>
 
@@ -650,7 +650,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#read_only_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Dict[Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd>
 
@@ -1399,8 +1399,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="partnermanagedinstanceid_python">
-<a href="#partnermanagedinstanceid_python" style="color: inherit; text-decoration: inherit;">partner<wbr>Managed<wbr>Instance<wbr>Id</a>
+        <span id="partner_managed_instance_id_python">
+<a href="#partner_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1409,8 +1409,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarymanagedinstanceid_python">
-<a href="#primarymanagedinstanceid_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Managed<wbr>Instance<wbr>Id</a>
+        <span id="primary_managed_instance_id_python">
+<a href="#primary_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1518,8 +1518,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="partnermanagedinstanceid_python">
-<a href="#partnermanagedinstanceid_python" style="color: inherit; text-decoration: inherit;">partner<wbr>Managed<wbr>Instance<wbr>Id</a>
+        <span id="partner_managed_instance_id_python">
+<a href="#partner_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1528,8 +1528,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarymanagedinstanceid_python">
-<a href="#primarymanagedinstanceid_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Managed<wbr>Instance<wbr>Id</a>
+        <span id="primary_managed_instance_id_python">
+<a href="#primary_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

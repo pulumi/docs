@@ -339,7 +339,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpropertiesresponse">Dict[Job<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobpropertiesresponse">Job<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job properties.{{% /md %}}</dd>
 
@@ -669,8 +669,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateexpirationdate_python">
-<a href="#certificateexpirationdate_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Expiration<wbr>Date</a>
+        <span id="certificate_expiration_date_python">
+<a href="#certificate_expiration_date_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>expiration_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -679,8 +679,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatesubjectname_python">
-<a href="#certificatesubjectname_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Subject<wbr>Name</a>
+        <span id="certificate_subject_name_python">
+<a href="#certificate_subject_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>subject_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -912,7 +912,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Basic<wbr>Authentication<wbr>Response] | Dict[Client<wbr>Cert<wbr>Authentication<wbr>Response] | Dict[OAuth<wbr>Authentication<wbr>Response]</span>
+        <span class="property-type">Union[Basic<wbr>Authentication<wbr>Response<wbr>Args, Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args, OAuth<wbr>Authentication<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -932,7 +932,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the headers.{{% /md %}}</dd>
 
@@ -1211,7 +1211,7 @@ The following output properties are available:
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Dict[Job<wbr>Error<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd>
 
@@ -1221,7 +1221,7 @@ The following output properties are available:
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Dict[Storage<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Dict[Http<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
 
@@ -1241,7 +1241,7 @@ The following output properties are available:
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Dict[Retry<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
 
@@ -1251,7 +1251,7 @@ The following output properties are available:
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Dict[Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
 
@@ -1261,7 +1261,7 @@ The following output properties are available:
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Dict[Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
 
@@ -1500,7 +1500,7 @@ The following output properties are available:
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Dict[Storage<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
 
@@ -1510,7 +1510,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Dict[Http<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
 
@@ -1520,7 +1520,7 @@ The following output properties are available:
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Dict[Retry<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
 
@@ -1530,7 +1530,7 @@ The following output properties are available:
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Dict[Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
 
@@ -1540,7 +1540,7 @@ The following output properties are available:
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Dict[Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
 
@@ -1749,7 +1749,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Dict[Job<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd>
 
@@ -1759,7 +1759,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Dict[Job<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd>
 
@@ -1769,7 +1769,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Dict[Job<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd>
 
@@ -2028,7 +2028,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Dict[Job<wbr>Recurrence<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2346,7 +2346,7 @@ The following output properties are available:
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hours of the day that the job should execute at.{{% /md %}}</dd>
 
@@ -2356,7 +2356,7 @@ The following output properties are available:
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the minutes of the hour that the job should execute at.{{% /md %}}</dd>
 
@@ -2366,7 +2366,7 @@ The following output properties are available:
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
 
@@ -2376,7 +2376,7 @@ The following output properties are available:
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd>
 
@@ -2386,7 +2386,7 @@ The following output properties are available:
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -3960,7 +3960,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Dict[Service<wbr>Bus<wbr>Authentication<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
 
@@ -3970,7 +3970,7 @@ The following output properties are available:
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Dict[Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
 
@@ -3980,7 +3980,7 @@ The following output properties are available:
 <a href="#custom_message_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the custom message properties.{{% /md %}}</dd>
 
@@ -4279,7 +4279,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Dict[Service<wbr>Bus<wbr>Authentication<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
 
@@ -4289,7 +4289,7 @@ The following output properties are available:
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Dict[Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
 
@@ -4299,7 +4299,7 @@ The following output properties are available:
 <a href="#custom_message_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the custom message properties.{{% /md %}}</dd>
 

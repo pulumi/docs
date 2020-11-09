@@ -24,7 +24,7 @@ meta_desc: "Explore the ListConnectedClusterUserCredentials function of the kube
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connected_cluster_user_credentials(</span><span class="nx">authentication_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[Dict[AuthenticationDetailsValue]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectedClusterUserCredentialsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connected_cluster_user_credentials(</span><span class="nx">authentication_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[AuthenticationDetailsValueArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectedClusterUserCredentialsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -87,7 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationdetailsvalue">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Inputs.<wbr>Authentication<wbr>Details<wbr>Value<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -134,7 +134,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -181,7 +181,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -226,9 +226,9 @@ The following arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationdetailsvalue">Dict[Authentication<wbr>Details<wbr>Value]</a></span>
+        <span class="property-type"><a href="#authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#kubeconfigs_python" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialresultresponse">List[Credential<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#credentialresultresponse">Sequence[Credential<wbr>Result<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
 

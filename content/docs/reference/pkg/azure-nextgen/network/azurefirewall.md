@@ -400,105 +400,105 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "apprulecoll",
-        "priority": 110,
-        "rules": [{
-            "description": "Deny inbound rule",
-            "name": "rule1",
-            "protocols": [{
-                "port": 443,
-                "protocolType": "Https",
-            }],
-            "sourceAddresses": [
+    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="apprulecoll",
+        priority=110,
+        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+            description="Deny inbound rule",
+            name="rule1",
+            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+                port=443,
+                protocol_type="Https",
+            )],
+            source_addresses=[
                 "216.58.216.164",
                 "10.0.0.0/24",
             ],
-            "targetFqdns": ["www.test.com"],
-        }],
-    }],
+            target_fqdns=["www.test.com"],
+        )],
+    )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[{
-        "name": "azureFirewallIpConfiguration",
-        "publicIPAddress": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
-        },
-        "subnet": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
-        },
-    }],
+    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+        name="azureFirewallIpConfiguration",
+        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        ),
+        subnet=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        ),
+    )],
     location="West US",
-    nat_rule_collections=[{
-        "action": {
-            "type": "Dnat",
-        },
-        "name": "natrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "D-NAT all outbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["443"],
-                "name": "DNAT-HTTPS-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedAddress": "1.2.3.5",
-                "translatedPort": "8443",
-            },
-            {
-                "description": "D-NAT all inbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["80"],
-                "name": "DNAT-HTTP-traffic-With-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedFqdn": "internalhttpserver",
-                "translatedPort": "880",
-            },
+    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+            type="Dnat",
+        ),
+        name="natrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all outbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["443"],
+                name="DNAT-HTTPS-traffic",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_address="1.2.3.5",
+                translated_port="8443",
+            ),
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all inbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["80"],
+                name="DNAT-HTTP-traffic-With-FQDN",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_fqdn="internalhttpserver",
+                translated_port="880",
+            ),
         ],
-    }],
-    network_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "netrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "Block traffic based on source IPs and ports",
-                "destinationAddresses": ["*"],
-                "destinationPorts": [
+    )],
+    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="netrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports",
+                destination_addresses=["*"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": [
+                name="L4-traffic",
+                protocols=["TCP"],
+                source_addresses=[
                     "192.168.1.1-192.168.1.12",
                     "10.1.4.12-10.1.4.255",
                 ],
-            },
-            {
-                "description": "Block traffic based on source IPs and ports to amazon",
-                "destinationFqdns": ["www.amazon.com"],
-                "destinationPorts": [
+            ),
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports to amazon",
+                destination_fqdns=["www.amazon.com"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic-with-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
-            },
+                name="L4-traffic-with-FQDN",
+                protocols=["TCP"],
+                source_addresses=["10.2.4.12-10.2.4.255"],
+            ),
         ],
-    }],
+    )],
     resource_group_name="rg1",
-    sku={
-        "name": "AZFW_VNet",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+        name="AZFW_VNet",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     },
@@ -1023,105 +1023,105 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         "key1": "value1",
         "key2": "value2",
     },
-    application_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "apprulecoll",
-        "priority": 110,
-        "rules": [{
-            "description": "Deny inbound rule",
-            "name": "rule1",
-            "protocols": [{
-                "port": 443,
-                "protocolType": "Https",
-            }],
-            "sourceAddresses": [
+    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="apprulecoll",
+        priority=110,
+        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+            description="Deny inbound rule",
+            name="rule1",
+            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+                port=443,
+                protocol_type="Https",
+            )],
+            source_addresses=[
                 "216.58.216.164",
                 "10.0.0.0/24",
             ],
-            "targetFqdns": ["www.test.com"],
-        }],
-    }],
+            target_fqdns=["www.test.com"],
+        )],
+    )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[{
-        "name": "azureFirewallIpConfiguration",
-        "publicIPAddress": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
-        },
-        "subnet": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
-        },
-    }],
+    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+        name="azureFirewallIpConfiguration",
+        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        ),
+        subnet=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        ),
+    )],
     location="West US",
-    nat_rule_collections=[{
-        "action": {
-            "type": "Dnat",
-        },
-        "name": "natrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "D-NAT all outbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["443"],
-                "name": "DNAT-HTTPS-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedAddress": "1.2.3.5",
-                "translatedPort": "8443",
-            },
-            {
-                "description": "D-NAT all inbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["80"],
-                "name": "DNAT-HTTP-traffic-With-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedFqdn": "internalhttpserver",
-                "translatedPort": "880",
-            },
+    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+            type="Dnat",
+        ),
+        name="natrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all outbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["443"],
+                name="DNAT-HTTPS-traffic",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_address="1.2.3.5",
+                translated_port="8443",
+            ),
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all inbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["80"],
+                name="DNAT-HTTP-traffic-With-FQDN",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_fqdn="internalhttpserver",
+                translated_port="880",
+            ),
         ],
-    }],
-    network_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "netrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "Block traffic based on source IPs and ports",
-                "destinationAddresses": ["*"],
-                "destinationPorts": [
+    )],
+    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="netrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports",
+                destination_addresses=["*"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": [
+                name="L4-traffic",
+                protocols=["TCP"],
+                source_addresses=[
                     "192.168.1.1-192.168.1.12",
                     "10.1.4.12-10.1.4.255",
                 ],
-            },
-            {
-                "description": "Block traffic based on source IPs and ports to amazon",
-                "destinationFqdns": ["www.amazon.com"],
-                "destinationPorts": [
+            ),
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports to amazon",
+                destination_fqdns=["www.amazon.com"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic-with-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
-            },
+                name="L4-traffic-with-FQDN",
+                protocols=["TCP"],
+                source_addresses=["10.2.4.12-10.2.4.255"],
+            ),
         ],
-    }],
+    )],
     resource_group_name="rg1",
-    sku={
-        "name": "AZFW_VNet",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+        name="AZFW_VNet",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     },
@@ -1637,105 +1637,105 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "apprulecoll",
-        "priority": 110,
-        "rules": [{
-            "description": "Deny inbound rule",
-            "name": "rule1",
-            "protocols": [{
-                "port": 443,
-                "protocolType": "Https",
-            }],
-            "sourceAddresses": [
+    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="apprulecoll",
+        priority=110,
+        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+            description="Deny inbound rule",
+            name="rule1",
+            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+                port=443,
+                protocol_type="Https",
+            )],
+            source_addresses=[
                 "216.58.216.164",
                 "10.0.0.0/24",
             ],
-            "targetFqdns": ["www.test.com"],
-        }],
-    }],
+            target_fqdns=["www.test.com"],
+        )],
+    )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[{
-        "name": "azureFirewallIpConfiguration",
-        "publicIPAddress": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
-        },
-        "subnet": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
-        },
-    }],
+    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+        name="azureFirewallIpConfiguration",
+        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        ),
+        subnet=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        ),
+    )],
     location="West US",
-    nat_rule_collections=[{
-        "action": {
-            "type": "Dnat",
-        },
-        "name": "natrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "D-NAT all outbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["443"],
-                "name": "DNAT-HTTPS-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedAddress": "1.2.3.5",
-                "translatedPort": "8443",
-            },
-            {
-                "description": "D-NAT all inbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["80"],
-                "name": "DNAT-HTTP-traffic-With-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedFqdn": "internalhttpserver",
-                "translatedPort": "880",
-            },
+    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+            type="Dnat",
+        ),
+        name="natrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all outbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["443"],
+                name="DNAT-HTTPS-traffic",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_address="1.2.3.5",
+                translated_port="8443",
+            ),
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all inbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["80"],
+                name="DNAT-HTTP-traffic-With-FQDN",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_fqdn="internalhttpserver",
+                translated_port="880",
+            ),
         ],
-    }],
-    network_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "netrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "Block traffic based on source IPs and ports",
-                "destinationAddresses": ["*"],
-                "destinationPorts": [
+    )],
+    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="netrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports",
+                destination_addresses=["*"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": [
+                name="L4-traffic",
+                protocols=["TCP"],
+                source_addresses=[
                     "192.168.1.1-192.168.1.12",
                     "10.1.4.12-10.1.4.255",
                 ],
-            },
-            {
-                "description": "Block traffic based on source IPs and ports to amazon",
-                "destinationFqdns": ["www.amazon.com"],
-                "destinationPorts": [
+            ),
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports to amazon",
+                destination_fqdns=["www.amazon.com"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic-with-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
-            },
+                name="L4-traffic-with-FQDN",
+                protocols=["TCP"],
+                source_addresses=["10.2.4.12-10.2.4.255"],
+            ),
         ],
-    }],
+    )],
     resource_group_name="rg1",
-    sku={
-        "name": "AZFW_VNet",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+        name="AZFW_VNet",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     },
@@ -2256,105 +2256,105 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "apprulecoll",
-        "priority": 110,
-        "rules": [{
-            "description": "Deny inbound rule",
-            "name": "rule1",
-            "protocols": [{
-                "port": 443,
-                "protocolType": "Https",
-            }],
-            "sourceAddresses": [
+    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="apprulecoll",
+        priority=110,
+        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+            description="Deny inbound rule",
+            name="rule1",
+            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+                port=443,
+                protocol_type="Https",
+            )],
+            source_addresses=[
                 "216.58.216.164",
                 "10.0.0.0/24",
             ],
-            "targetFqdns": ["www.test.com"],
-        }],
-    }],
+            target_fqdns=["www.test.com"],
+        )],
+    )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[{
-        "name": "azureFirewallIpConfiguration",
-        "publicIPAddress": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
-        },
-        "subnet": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
-        },
-    }],
+    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+        name="azureFirewallIpConfiguration",
+        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        ),
+        subnet=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        ),
+    )],
     location="West US 2",
-    nat_rule_collections=[{
-        "action": {
-            "type": "Dnat",
-        },
-        "name": "natrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "D-NAT all outbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["443"],
-                "name": "DNAT-HTTPS-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedAddress": "1.2.3.5",
-                "translatedPort": "8443",
-            },
-            {
-                "description": "D-NAT all inbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["80"],
-                "name": "DNAT-HTTP-traffic-With-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedFqdn": "internalhttpserver",
-                "translatedPort": "880",
-            },
+    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+            type="Dnat",
+        ),
+        name="natrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all outbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["443"],
+                name="DNAT-HTTPS-traffic",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_address="1.2.3.5",
+                translated_port="8443",
+            ),
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all inbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["80"],
+                name="DNAT-HTTP-traffic-With-FQDN",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_fqdn="internalhttpserver",
+                translated_port="880",
+            ),
         ],
-    }],
-    network_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "netrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "Block traffic based on source IPs and ports",
-                "destinationAddresses": ["*"],
-                "destinationPorts": [
+    )],
+    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="netrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports",
+                destination_addresses=["*"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": [
+                name="L4-traffic",
+                protocols=["TCP"],
+                source_addresses=[
                     "192.168.1.1-192.168.1.12",
                     "10.1.4.12-10.1.4.255",
                 ],
-            },
-            {
-                "description": "Block traffic based on source IPs and ports to amazon",
-                "destinationFqdns": ["www.amazon.com"],
-                "destinationPorts": [
+            ),
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports to amazon",
+                destination_fqdns=["www.amazon.com"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic-with-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
-            },
+                name="L4-traffic-with-FQDN",
+                protocols=["TCP"],
+                source_addresses=["10.2.4.12-10.2.4.255"],
+            ),
         ],
-    }],
+    )],
     resource_group_name="rg1",
-    sku={
-        "name": "AZFW_VNet",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+        name="AZFW_VNet",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     },
@@ -2895,114 +2895,114 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
-    application_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "apprulecoll",
-        "priority": 110,
-        "rules": [{
-            "description": "Deny inbound rule",
-            "name": "rule1",
-            "protocols": [{
-                "port": 443,
-                "protocolType": "Https",
-            }],
-            "sourceAddresses": [
+    application_rule_collections=[azure_nextgen.network.latest.AzureFirewallApplicationRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="apprulecoll",
+        priority=110,
+        rules=[azure_nextgen.network.latest.AzureFirewallApplicationRuleArgs(
+            description="Deny inbound rule",
+            name="rule1",
+            protocols=[azure_nextgen.network.latest.AzureFirewallApplicationRuleProtocolArgs(
+                port=443,
+                protocol_type="Https",
+            )],
+            source_addresses=[
                 "216.58.216.164",
                 "10.0.0.0/24",
             ],
-            "targetFqdns": ["www.test.com"],
-        }],
-    }],
+            target_fqdns=["www.test.com"],
+        )],
+    )],
     azure_firewall_name="azurefirewall",
-    ip_configurations=[{
-        "name": "azureFirewallIpConfiguration",
-        "publicIPAddress": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
-        },
-        "subnet": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
-        },
-    }],
+    ip_configurations=[azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+        name="azureFirewallIpConfiguration",
+        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        ),
+        subnet=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        ),
+    )],
     location="West US",
-    management_ip_configuration={
-        "name": "azureFirewallMgmtIpConfiguration",
-        "publicIPAddress": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName",
-        },
-        "subnet": {
-            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet",
-        },
-    },
-    nat_rule_collections=[{
-        "action": {
-            "type": "Dnat",
-        },
-        "name": "natrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "D-NAT all outbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["443"],
-                "name": "DNAT-HTTPS-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedAddress": "1.2.3.5",
-                "translatedPort": "8443",
-            },
-            {
-                "description": "D-NAT all inbound web traffic for inspection",
-                "destinationAddresses": ["1.2.3.4"],
-                "destinationPorts": ["80"],
-                "name": "DNAT-HTTP-traffic-With-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["*"],
-                "translatedFqdn": "internalhttpserver",
-                "translatedPort": "880",
-            },
+    management_ip_configuration=azure_nextgen.network.latest.AzureFirewallIPConfigurationArgs(
+        name="azureFirewallMgmtIpConfiguration",
+        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName",
+        ),
+        subnet=azure_nextgen.network.latest.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet",
+        ),
+    ),
+    nat_rule_collections=[azure_nextgen.network.latest.AzureFirewallNatRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallNatRCActionArgs(
+            type="Dnat",
+        ),
+        name="natrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all outbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["443"],
+                name="DNAT-HTTPS-traffic",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_address="1.2.3.5",
+                translated_port="8443",
+            ),
+            azure_nextgen.network.latest.AzureFirewallNatRuleArgs(
+                description="D-NAT all inbound web traffic for inspection",
+                destination_addresses=["1.2.3.4"],
+                destination_ports=["80"],
+                name="DNAT-HTTP-traffic-With-FQDN",
+                protocols=["TCP"],
+                source_addresses=["*"],
+                translated_fqdn="internalhttpserver",
+                translated_port="880",
+            ),
         ],
-    }],
-    network_rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "netrulecoll",
-        "priority": 112,
-        "rules": [
-            {
-                "description": "Block traffic based on source IPs and ports",
-                "destinationAddresses": ["*"],
-                "destinationPorts": [
+    )],
+    network_rule_collections=[azure_nextgen.network.latest.AzureFirewallNetworkRuleCollectionArgs(
+        action=azure_nextgen.network.latest.AzureFirewallRCActionArgs(
+            type="Deny",
+        ),
+        name="netrulecoll",
+        priority=112,
+        rules=[
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports",
+                destination_addresses=["*"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic",
-                "protocols": ["TCP"],
-                "sourceAddresses": [
+                name="L4-traffic",
+                protocols=["TCP"],
+                source_addresses=[
                     "192.168.1.1-192.168.1.12",
                     "10.1.4.12-10.1.4.255",
                 ],
-            },
-            {
-                "description": "Block traffic based on source IPs and ports to amazon",
-                "destinationFqdns": ["www.amazon.com"],
-                "destinationPorts": [
+            ),
+            azure_nextgen.network.latest.AzureFirewallNetworkRuleArgs(
+                description="Block traffic based on source IPs and ports to amazon",
+                destination_fqdns=["www.amazon.com"],
+                destination_ports=[
                     "443-444",
                     "8443",
                 ],
-                "name": "L4-traffic-with-FQDN",
-                "protocols": ["TCP"],
-                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
-            },
+                name="L4-traffic-with-FQDN",
+                protocols=["TCP"],
+                source_addresses=["10.2.4.12-10.2.4.255"],
+            ),
         ],
-    }],
+    )],
     resource_group_name="rg1",
-    sku={
-        "name": "AZFW_VNet",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+        name="AZFW_VNet",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     },
@@ -3247,28 +3247,28 @@ import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     azure_firewall_name="azurefirewall",
-    firewall_policy={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",
-    },
-    hub_ip_addresses={
-        "publicIPs": {
-            "addresses": [],
-            "count": 1,
-        },
-    },
+    firewall_policy=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",
+    ),
+    hub_ip_addresses=azure_nextgen.network.latest.HubIPAddressesArgs(
+        public_ips=azure_nextgen.network.latest.HubPublicIPAddressesArgs(
+            addresses=[],
+            count=1,
+        ),
+    ),
     location="West US",
     resource_group_name="rg1",
-    sku={
-        "name": "AZFW_Hub",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.network.latest.AzureFirewallSkuArgs(
+        name="AZFW_Hub",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     },
     threat_intel_mode="Alert",
-    virtual_hub={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-    },
+    virtual_hub=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+    ),
     zones=[])
 
 ```
@@ -3324,7 +3324,7 @@ const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirew
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">application_rule_collections</span><span class="p">:</span> <span class="nx">Optional[List[AzureFirewallApplicationRuleCollection]]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">hub_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Dict[HubIPAddresses]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[AzureFirewallIPConfiguration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureFirewallIPConfiguration]]</span> = None<span class="p">, </span><span class="nx">nat_rule_collections</span><span class="p">:</span> <span class="nx">Optional[List[AzureFirewallNatRuleCollection]]</span> = None<span class="p">, </span><span class="nx">network_rule_collections</span><span class="p">:</span> <span class="nx">Optional[List[AzureFirewallNetworkRuleCollection]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureFirewallSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">application_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallApplicationRuleCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">hub_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[HubIPAddressesArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallIPConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[AzureFirewallIPConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">nat_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallNatRuleCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">network_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallNetworkRuleCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AzureFirewallSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4053,7 +4053,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The additional properties used to further config this azure firewall.{{% /md %}}</dd>
 
@@ -4063,7 +4063,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#application_rule_collections_python" style="color: inherit; text-decoration: inherit;">application_<wbr>rule_<wbr>collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">List[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of application rule collections used by Azure Firewall.{{% /md %}}</dd>
 
@@ -4073,7 +4073,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewallPolicy associated with this azure firewall.{{% /md %}}</dd>
 
@@ -4083,7 +4083,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hub_ip_addresses_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubipaddresses">Dict[Hub<wbr>IPAddresses]</a></span>
+        <span class="property-type"><a href="#hubipaddresses">Hub<wbr>IPAddresses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP addresses associated with AzureFirewall.{{% /md %}}</dd>
 
@@ -4103,7 +4103,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">List[Azure<wbr>Firewall<wbr>IPConfiguration]</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">Sequence[Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall resource.{{% /md %}}</dd>
 
@@ -4123,7 +4123,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#management_ip_configuration_python" style="color: inherit; text-decoration: inherit;">management_<wbr>ip_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">Dict[Azure<wbr>Firewall<wbr>IPConfiguration]</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall used for management traffic.{{% /md %}}</dd>
 
@@ -4133,7 +4133,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#nat_rule_collections_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>rule_<wbr>collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrulecollection">List[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrulecollection">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of NAT rule collections used by Azure Firewall.{{% /md %}}</dd>
 
@@ -4143,7 +4143,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#network_rule_collections_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">List[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of network rule collections used by Azure Firewall.{{% /md %}}</dd>
 
@@ -4153,7 +4153,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallsku">Dict[Azure<wbr>Firewall<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#azurefirewallsku">Azure<wbr>Firewall<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Firewall Resource SKU.{{% /md %}}</dd>
 
@@ -4163,7 +4163,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -4183,7 +4183,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtualHub to which the firewall belongs.{{% /md %}}</dd>
 
@@ -4193,7 +4193,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd>
 
@@ -4442,7 +4442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_groups_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipgroupsresponse">List[Azure<wbr>Firewall<wbr>Ip<wbr>Groups<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallipgroupsresponse">Sequence[Azure<wbr>Firewall<wbr>Ip<wbr>Groups<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}IpGroups associated with AzureFirewall.{{% /md %}}</dd>
 
@@ -4746,11 +4746,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fqdntags_python">
-<a href="#fqdntags_python" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
+        <span id="fqdn_tags_python">
+<a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
 
@@ -4770,37 +4770,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">List[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetfqdns_python">
-<a href="#targetfqdns_python" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
+        <span id="target_fqdns_python">
+<a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
 
@@ -4999,7 +4999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Dict[Azure<wbr>Firewall<wbr>RCAction]</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
 
@@ -5039,7 +5039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrule">List[Azure<wbr>Firewall<wbr>Application<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrule">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd>
 
@@ -5318,7 +5318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Dict[Azure<wbr>Firewall<wbr>RCAction<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
 
@@ -5358,7 +5358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">List[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd>
 
@@ -5473,8 +5473,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protocoltype_python">
-<a href="#protocoltype_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5592,8 +5592,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protocoltype_python">
-<a href="#protocoltype_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5861,11 +5861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fqdntags_python">
-<a href="#fqdntags_python" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
+        <span id="fqdn_tags_python">
+<a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
 
@@ -5885,37 +5885,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">List[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetfqdns_python">
-<a href="#targetfqdns_python" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
+        <span id="target_fqdns_python">
+<a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
 
@@ -6104,7 +6104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd>
 
@@ -6114,7 +6114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd>
 
@@ -6463,7 +6463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd>
 
@@ -6473,7 +6473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd>
 
@@ -6578,8 +6578,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="changenumber_python">
-<a href="#changenumber_python" style="color: inherit; text-decoration: inherit;">change<wbr>Number</a>
+        <span id="change_number_python">
+<a href="#change_number_python" style="color: inherit; text-decoration: inherit;">change_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7105,21 +7105,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
@@ -7139,34 +7139,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedaddress_python">
-<a href="#translatedaddress_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
+        <span id="translated_address_python">
+<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7175,8 +7175,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedfqdn_python">
-<a href="#translatedfqdn_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
+        <span id="translated_fqdn_python">
+<a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7185,8 +7185,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedport_python">
-<a href="#translatedport_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
+        <span id="translated_port_python">
+<a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7388,7 +7388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcaction">Dict[Azure<wbr>Firewall<wbr>Nat<wbr>RCAction]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcaction">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd>
 
@@ -7428,7 +7428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrule">List[Azure<wbr>Firewall<wbr>Nat<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrule">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd>
 
@@ -7707,7 +7707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Dict[Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd>
 
@@ -7747,7 +7747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">List[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd>
 
@@ -8102,21 +8102,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
@@ -8136,34 +8136,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedaddress_python">
-<a href="#translatedaddress_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
+        <span id="translated_address_python">
+<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8172,8 +8172,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedfqdn_python">
-<a href="#translatedfqdn_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
+        <span id="translated_fqdn_python">
+<a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8182,8 +8182,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedport_python">
-<a href="#translatedport_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
+        <span id="translated_port_python">
+<a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8511,41 +8511,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationfqdns_python">
-<a href="#destinationfqdns_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Fqdns</a>
+        <span id="destination_fqdns_python">
+<a href="#destination_fqdns_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationipgroups_python">
-<a href="#destinationipgroups_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
+        <span id="destination_ip_groups_python">
+<a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
@@ -8565,27 +8565,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
@@ -8784,7 +8784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Dict[Azure<wbr>Firewall<wbr>RCAction]</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
 
@@ -8824,7 +8824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrule">List[Azure<wbr>Firewall<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrule">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd>
 
@@ -9103,7 +9103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Dict[Azure<wbr>Firewall<wbr>RCAction<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd>
 
@@ -9143,7 +9143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">List[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd>
 
@@ -9468,41 +9468,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationfqdns_python">
-<a href="#destinationfqdns_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Fqdns</a>
+        <span id="destination_fqdns_python">
+<a href="#destination_fqdns_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationipgroups_python">
-<a href="#destinationipgroups_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
+        <span id="destination_ip_groups_python">
+<a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
@@ -9522,27 +9522,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of AzureFirewallNetworkRuleProtocols.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
@@ -10211,11 +10211,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_python">
-<a href="#public_i_ps_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddresses">Dict[Hub<wbr>Public<wbr>IPAddresses]</a></span>
+        <span class="property-type"><a href="#hubpublicipaddresses">Hub<wbr>Public<wbr>IPAddresses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd>
 
@@ -10330,11 +10330,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_python">
-<a href="#public_i_ps_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Dict[Hub<wbr>Public<wbr>IPAddresses<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd>
 
@@ -10443,7 +10443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddress">List[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddress">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd>
 
@@ -10562,7 +10562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">List[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd>
 

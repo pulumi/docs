@@ -80,9 +80,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment",
-    properties={
-        "registrationDefinitionId": "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
-    },
+    properties=azure_nextgen.managedservices.latest.RegistrationAssignmentPropertiesArgs(
+        registration_definition_id="/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
+    ),
     registration_assignment_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
 
@@ -120,7 +120,7 @@ const registrationAssignment = new azure_nextgen.managedservices.latest.Registra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegistrationAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[RegistrationAssignmentProperties]]</span> = None<span class="p">, </span><span class="nx">registration_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegistrationAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[RegistrationAssignmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">registration_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -429,7 +429,7 @@ The RegistrationAssignment resource accepts the following [input]({{< relref "/d
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentproperties">Dict[Registration<wbr>Assignment<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#registrationassignmentproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration assignment.{{% /md %}}</dd>
 
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_definition_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Dict[Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Registration definition inside registration assignment.{{% /md %}}</dd>
 
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List[Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
 
@@ -1741,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Dict[Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#planresponse">Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd>
 
@@ -1751,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Dict[Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd>
 

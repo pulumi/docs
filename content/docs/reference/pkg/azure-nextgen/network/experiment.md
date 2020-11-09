@@ -95,12 +95,12 @@ import pulumi_azure_nextgen as azure_nextgen
 experiment = azure_nextgen.network.latest.Experiment("experiment",
     description="this is my first experiment!",
     enabled_state="Enabled",
-    endpoint_a={
-        "name": "endpoint A",
-    },
-    endpoint_b={
-        "name": "endpoint B",
-    },
+    endpoint_a=azure_nextgen.network.latest.EndpointArgs(
+        name="endpoint A",
+    ),
+    endpoint_b=azure_nextgen.network.latest.EndpointArgs(
+        name="endpoint B",
+    ),
     experiment_name="MyExperiment",
     profile_name="MyProfile",
     resource_group_name="MyResourceGroup")
@@ -145,7 +145,7 @@ const experiment = new azure_nextgen.network.latest.Experiment("experiment", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Experiment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_a</span><span class="p">:</span> <span class="nx">Optional[Dict[Endpoint]]</span> = None<span class="p">, </span><span class="nx">endpoint_b</span><span class="p">:</span> <span class="nx">Optional[Dict[Endpoint]]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Experiment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_a</span><span class="p">:</span> <span class="nx">Optional[EndpointArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_b</span><span class="p">:</span> <span class="nx">Optional[EndpointArgs]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -664,7 +664,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpoint_a_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>a</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Dict[Endpoint]</a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint A of an experiment{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpoint_b_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Dict[Endpoint]</a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint B of an experiment{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1451,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">List[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -1491,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
 
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">List[Endpoint<wbr>Properties<wbr>Subnets]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
 
@@ -2606,7 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -2646,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
 
@@ -2696,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
 

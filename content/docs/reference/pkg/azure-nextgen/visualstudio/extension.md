@@ -39,6 +39,7 @@ class MyStack : Stack
                 Publisher = "ExampleExtensionPublisher",
                 Version = "1.0",
             },
+            Properties = ,
             ResourceGroupName = "VS-Example-Group",
             Tags = ,
         });
@@ -73,6 +74,7 @@ func main() {
 				Publisher:     pulumi.String("ExampleExtensionPublisher"),
 				Version:       pulumi.String("1.0"),
 			},
+			Properties:        nil,
 			ResourceGroupName: pulumi.String("VS-Example-Group"),
 			Tags:              nil,
 		})
@@ -97,13 +99,14 @@ extension = azure_nextgen.visualstudio.v20171101preview.Extension("extension",
     account_resource_name="ExampleAccount",
     extension_resource_name="ms.example",
     location="Central US",
-    plan={
-        "name": "ExamplePlan",
-        "product": "ExampleExtensionName",
-        "promotionCode": "",
-        "publisher": "ExampleExtensionPublisher",
-        "version": "1.0",
-    },
+    plan=azure_nextgen.visualstudio.v20171101preview.ExtensionResourcePlanArgs(
+        name="ExamplePlan",
+        product="ExampleExtensionName",
+        promotion_code="",
+        publisher="ExampleExtensionPublisher",
+        version="1.0",
+    ),
+    properties={},
     resource_group_name="VS-Example-Group",
     tags={})
 
@@ -128,6 +131,7 @@ const extension = new azure_nextgen.visualstudio.v20171101preview.Extension("ext
         publisher: "ExampleExtensionPublisher",
         version: "1.0",
     },
+    properties: {},
     resourceGroupName: "VS-Example-Group",
     tags: {},
 });
@@ -148,7 +152,7 @@ const extension = new azure_nextgen.visualstudio.v20171101preview.Extension("ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extension_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ExtensionResourcePlan]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extension_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ExtensionResourcePlanArgs]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -372,6 +376,16 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A dictionary of extended properties. This property is currently unused.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -436,6 +450,16 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#extensionresourceplan">Extension<wbr>Resource<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Extended information about the plan being purchased for this extension resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A dictionary of extended properties. This property is currently unused.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -506,6 +530,16 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A dictionary of extended properties. This property is currently unused.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -567,9 +601,19 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresourceplan">Dict[Extension<wbr>Resource<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#extensionresourceplan">Extension<wbr>Resource<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information about the plan being purchased for this extension resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A dictionary of extended properties. This property is currently unused.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -577,7 +621,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A dictionary of user-defined tags to be stored with the extension resource.{{% /md %}}</dd>
 
@@ -621,16 +665,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -665,16 +699,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -715,16 +739,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -759,16 +773,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

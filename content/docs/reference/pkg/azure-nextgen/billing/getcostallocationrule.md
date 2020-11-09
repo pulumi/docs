@@ -299,7 +299,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationrulepropertiesresponse">Dict[Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#costallocationrulepropertiesresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd>
 
@@ -543,7 +543,7 @@ The following output properties are available:
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
 
@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">List[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
 
@@ -762,7 +762,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Dict[Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
 
@@ -951,7 +951,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 
@@ -1150,7 +1150,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">List[Cost<wbr>Allocation<wbr>Proportion<wbr>Response]</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 

@@ -123,23 +123,23 @@ import pulumi_azure_nextgen as azure_nextgen
 replication_migration_item = azure_nextgen.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem",
     fabric_name="vmwarefabric1",
     migration_item_name="virtualmachine1",
-    properties={
-        "policyId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
-        "providerSpecificDetails": {
-            "dataMoverRunAsAccountId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
-            "disksToInclude": [{
-                "diskId": "disk1",
-                "isOSDisk": "true",
-                "logStorageAccountId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
-                "logStorageAccountSasSecretName": "logStorageSas",
-            }],
-            "instanceType": "VMwareCbt",
-            "snapshotRunAsAccountId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1",
-            "targetNetworkId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1",
-            "targetResourceGroupId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1",
-            "vmwareMachineId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1",
-        },
-    },
+    properties=azure_nextgen.recoveryservices.latest.EnableMigrationInputPropertiesArgs(
+        policy_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
+        provider_specific_details=azure_nextgen.recoveryservices.latest.VMwareCbtEnableMigrationInputArgs(
+            data_mover_run_as_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
+            disks_to_include=[azure_nextgen.recoveryservices.latest.VMwareCbtDiskInputArgs(
+                disk_id="disk1",
+                is_os_disk="true",
+                log_storage_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
+                log_storage_account_sas_secret_name="logStorageSas",
+            )],
+            instance_type="VMwareCbt",
+            snapshot_run_as_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1",
+            target_network_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1",
+            target_resource_group_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1",
+            vmware_machine_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1",
+        ),
+    ),
     protection_container_name="vmwareContainer1",
     resource_group_name="resourcegroup1",
     resource_name="migrationvault")
@@ -195,7 +195,7 @@ const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.Repli
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationMigrationItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migration_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[EnableMigrationInputProperties]]</span> = None<span class="p">, </span><span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationMigrationItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migration_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[EnableMigrationInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -594,7 +594,7 @@ The ReplicationMigrationItem resource accepts the following [input]({{< relref "
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enablemigrationinputproperties">Dict[Enable<wbr>Migration<wbr>Input<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#enablemigrationinputproperties">Enable<wbr>Migration<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable migration input properties.{{% /md %}}</dd>
 
@@ -1110,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">Dict[VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input]</a></span>
+        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The provider specific details.{{% /md %}}</dd>
 
@@ -1605,8 +1605,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1615,8 +1615,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customerresolvability_python">
-<a href="#customerresolvability_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
+        <span id="customer_resolvability_python">
+<a href="#customer_resolvability_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>resolvability</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1625,8 +1625,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1635,53 +1635,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorid_python">
-<a href="#errorid_python" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1695,6 +1655,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_id_python">
+<a href="#error_id_python" style="color: inherit; text-decoration: inherit;">error_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -1705,18 +1685,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innerhealtherrors_python">
-<a href="#innerhealtherrors_python" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inner_health_errors_python">
+<a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1725,8 +1725,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1735,8 +1735,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1745,8 +1745,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2154,8 +2154,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2164,8 +2164,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2174,43 +2174,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2224,6 +2194,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -2234,8 +2214,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2244,8 +2244,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2254,8 +2254,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2264,8 +2264,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2707,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_operations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>operations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The allowed operations on the migration item, based on the current migration state of the item.{{% /md %}}</dd>
 
@@ -2717,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_job_python" style="color: inherit; text-decoration: inherit;">current_<wbr>job</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentjobdetailsresponse">Dict[Current<wbr>Job<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#currentjobdetailsresponse">Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current job details.{{% /md %}}</dd>
 
@@ -2737,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of health errors.{{% /md %}}</dd>
 
@@ -2827,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">Dict[VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The migration provider custom settings.{{% /md %}}</dd>
 
@@ -3022,8 +3022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="diskid_python">
-<a href="#diskid_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+        <span id="disk_id_python">
+<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3032,8 +3032,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isosdisk_python">
-<a href="#isosdisk_python" style="color: inherit; text-decoration: inherit;">is<wbr>OSDisk</a>
+        <span id="is_os_disk_python">
+<a href="#is_os_disk_python" style="color: inherit; text-decoration: inherit;">is_<wbr>os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3042,8 +3042,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="logstorageaccountid_python">
-<a href="#logstorageaccountid_python" style="color: inherit; text-decoration: inherit;">log<wbr>Storage<wbr>Account<wbr>Id</a>
+        <span id="log_storage_account_id_python">
+<a href="#log_storage_account_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3052,8 +3052,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="logstorageaccountsassecretname_python">
-<a href="#logstorageaccountsassecretname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Storage<wbr>Account<wbr>Sas<wbr>Secret<wbr>Name</a>
+        <span id="log_storage_account_sas_secret_name_python">
+<a href="#log_storage_account_sas_secret_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage_<wbr>account_<wbr>sas_<wbr>secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3485,7 +3485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_to_include_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>to_<wbr>include</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtdiskinput">List[VMware<wbr>Cbt<wbr>Disk<wbr>Input]</a></span>
+        <span class="property-type"><a href="#vmwarecbtdiskinput">Sequence[VMware<wbr>Cbt<wbr>Disk<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd>
 
@@ -4194,7 +4194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">List[VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd>
 
@@ -4264,7 +4264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">List[VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd>
 
@@ -4579,8 +4579,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="nicid_python">
-<a href="#nicid_python" style="color: inherit; text-decoration: inherit;">nic<wbr>Id</a>
+        <span id="nic_id_python">
+<a href="#nic_id_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4589,8 +4589,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceipaddress_python">
-<a href="#sourceipaddress_python" style="color: inherit; text-decoration: inherit;">source<wbr>IPAddress</a>
+        <span id="source_ip_address_python">
+<a href="#source_ip_address_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4599,8 +4599,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceipaddresstype_python">
-<a href="#sourceipaddresstype_python" style="color: inherit; text-decoration: inherit;">source<wbr>IPAddress<wbr>Type</a>
+        <span id="source_ip_address_type_python">
+<a href="#source_ip_address_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>address_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4609,8 +4609,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcenetworkid_python">
-<a href="#sourcenetworkid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Id</a>
+        <span id="source_network_id_python">
+<a href="#source_network_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4619,8 +4619,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isprimarynic_python">
-<a href="#isprimarynic_python" style="color: inherit; text-decoration: inherit;">is<wbr>Primary<wbr>Nic</a>
+        <span id="is_primary_nic_python">
+<a href="#is_primary_nic_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary_<wbr>nic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4629,8 +4629,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isselectedformigration_python">
-<a href="#isselectedformigration_python" style="color: inherit; text-decoration: inherit;">is<wbr>Selected<wbr>For<wbr>Migration</a>
+        <span id="is_selected_for_migration_python">
+<a href="#is_selected_for_migration_python" style="color: inherit; text-decoration: inherit;">is_<wbr>selected_<wbr>for_<wbr>migration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4639,8 +4639,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetipaddress_python">
-<a href="#targetipaddress_python" style="color: inherit; text-decoration: inherit;">target<wbr>IPAddress</a>
+        <span id="target_ip_address_python">
+<a href="#target_ip_address_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4649,8 +4649,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetipaddresstype_python">
-<a href="#targetipaddresstype_python" style="color: inherit; text-decoration: inherit;">target<wbr>IPAddress<wbr>Type</a>
+        <span id="target_ip_address_type_python">
+<a href="#target_ip_address_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ip_<wbr>address_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5008,8 +5008,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="capacityinbytes_python">
-<a href="#capacityinbytes_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>In<wbr>Bytes</a>
+        <span id="capacity_in_bytes_python">
+<a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5018,23 +5018,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="diskid_python">
-<a href="#diskid_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+        <span id="disk_id_python">
+<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The disk id.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="diskpath_python">
-<a href="#diskpath_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Path</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The disk path.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5048,8 +5038,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isosdisk_python">
-<a href="#isosdisk_python" style="color: inherit; text-decoration: inherit;">is<wbr>OSDisk</a>
+        <span id="disk_path_python">
+<a href="#disk_path_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The disk path.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="is_os_disk_python">
+<a href="#is_os_disk_python" style="color: inherit; text-decoration: inherit;">is_<wbr>os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5058,8 +5058,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="logstorageaccountid_python">
-<a href="#logstorageaccountid_python" style="color: inherit; text-decoration: inherit;">log<wbr>Storage<wbr>Account<wbr>Id</a>
+        <span id="log_storage_account_id_python">
+<a href="#log_storage_account_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5068,8 +5068,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="logstorageaccountsassecretname_python">
-<a href="#logstorageaccountsassecretname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Storage<wbr>Account<wbr>Sas<wbr>Secret<wbr>Name</a>
+        <span id="log_storage_account_sas_secret_name_python">
+<a href="#log_storage_account_sas_secret_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage_<wbr>account_<wbr>sas_<wbr>secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5078,8 +5078,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="seedmanageddiskid_python">
-<a href="#seedmanageddiskid_python" style="color: inherit; text-decoration: inherit;">seed<wbr>Managed<wbr>Disk<wbr>Id</a>
+        <span id="seed_managed_disk_id_python">
+<a href="#seed_managed_disk_id_python" style="color: inherit; text-decoration: inherit;">seed_<wbr>managed_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5088,8 +5088,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetmanageddiskid_python">
-<a href="#targetmanageddiskid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Managed<wbr>Disk<wbr>Id</a>
+        <span id="target_managed_disk_id_python">
+<a href="#target_managed_disk_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>managed_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

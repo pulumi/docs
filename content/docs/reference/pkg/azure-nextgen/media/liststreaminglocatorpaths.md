@@ -297,7 +297,7 @@ The following output properties are available:
 <a href="#download_paths_python" style="color: inherit; text-decoration: inherit;">download_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd>
 
@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#streaming_paths_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpathresponse">List[Streaming<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpathresponse">Sequence[Streaming<wbr>Path<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd>
 
@@ -448,8 +448,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="encryptionscheme_python">
-<a href="#encryptionscheme_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Scheme</a>
+        <span id="encryption_scheme_python">
+<a href="#encryption_scheme_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>scheme</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -472,7 +472,7 @@ The following output properties are available:
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd>
 

@@ -250,7 +250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -297,7 +297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -344,7 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyschemaresponse">Dict[Management<wbr>Policy<wbr>Schema<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyschemaresponse">Management<wbr>Policy<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 
@@ -391,7 +391,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -470,8 +470,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="daysaftercreationgreaterthan_python">
-<a href="#daysaftercreationgreaterthan_python" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
+        <span id="days_after_creation_greater_than_python">
+<a href="#days_after_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>creation_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -549,8 +549,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="daysaftermodificationgreaterthan_python">
-<a href="#daysaftermodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="days_after_modification_greater_than_python">
+<a href="#days_after_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -658,11 +658,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseblob_python">
-<a href="#baseblob_python" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
+        <span id="base_blob_python">
+<a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Dict[Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
 
@@ -672,7 +672,7 @@ The following output properties are available:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Dict[Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
 
@@ -811,27 +811,27 @@ The following output properties are available:
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Dict[Date<wbr>After<wbr>Modification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertoarchive_python">
-<a href="#tiertoarchive_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
+        <span id="tier_to_archive_python">
+<a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Dict[Date<wbr>After<wbr>Modification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertocool_python">
-<a href="#tiertocool_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
+        <span id="tier_to_cool_python">
+<a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Dict[Date<wbr>After<wbr>Modification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
 
@@ -940,7 +940,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Dict[Management<wbr>Policy<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
 
@@ -950,7 +950,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Dict[Management<wbr>Policy<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 
@@ -1085,31 +1085,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="blobtypes_python">
-<a href="#blobtypes_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
+        <span id="blob_types_python">
+<a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobindexmatch_python">
-<a href="#blobindexmatch_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Index<wbr>Match</a>
+        <span id="blob_index_match_python">
+<a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">List[Tag<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">Sequence[Tag<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
 
@@ -1278,7 +1278,7 @@ The following output properties are available:
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Dict[Management<wbr>Policy<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
 
@@ -1387,7 +1387,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">List[Management<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 
@@ -1466,7 +1466,7 @@ The following output properties are available:
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Dict[Date<wbr>After<wbr>Creation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
 

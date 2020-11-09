@@ -377,7 +377,7 @@ The following output properties are available:
 <a href="#app_insights_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightscredentialsresponse">Dict[App<wbr>Insights<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appinsightscredentialsresponse">App<wbr>Insights<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for Azure AppInsights.{{% /md %}}</dd>
 
@@ -387,7 +387,7 @@ The following output properties are available:
 <a href="#container_registry_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistrycredentialsresponse">Dict[Container<wbr>Registry<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerregistrycredentialsresponse">Container<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for Azure Container Registry.{{% /md %}}</dd>
 
@@ -397,7 +397,7 @@ The following output properties are available:
 <a href="#container_service_python" style="color: inherit; text-decoration: inherit;">container_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicecredentialsresponse">Dict[Container<wbr>Service<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicecredentialsresponse">Container<wbr>Service<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for Azure Container Service.{{% /md %}}</dd>
 
@@ -407,7 +407,7 @@ The following output properties are available:
 <a href="#service_auth_configuration_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Dict[Service<wbr>Auth<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd>
 
@@ -417,7 +417,7 @@ The following output properties are available:
 <a href="#ssl_configuration_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Dict[Ssl<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration for the services.{{% /md %}}</dd>
 
@@ -427,7 +427,7 @@ The following output properties are available:
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountcredentialsresponse">Dict[Storage<wbr>Account<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountcredentialsresponse">Storage<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for the Storage Account.{{% /md %}}</dd>
 
@@ -886,8 +886,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="acskubeconfig_python">
-<a href="#acskubeconfig_python" style="color: inherit; text-decoration: inherit;">acs<wbr>Kube<wbr>Config</a>
+        <span id="acs_kube_config_python">
+<a href="#acs_kube_config_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>kube_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -896,8 +896,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="imagepullsecretname_python">
-<a href="#imagepullsecretname_python" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Secret<wbr>Name</a>
+        <span id="image_pull_secret_name_python">
+<a href="#image_pull_secret_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -906,11 +906,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalconfiguration_python">
-<a href="#serviceprincipalconfiguration_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Configuration</a>
+        <span id="service_principal_configuration_python">
+<a href="#service_principal_configuration_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Dict[Service<wbr>Principal<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service principal configuration used by Kubernetes.{{% /md %}}</dd>
 

@@ -111,16 +111,16 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
     destination_account="dst112",
     object_replication_policy_id="default",
     resource_group_name="res7687",
-    rules=[{
-        "destinationContainer": "dcont139",
-        "filters": {
-            "prefixMatch": [
+    rules=[azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+        destination_container="dcont139",
+        filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+            prefix_match=[
                 "blobA",
                 "blobB",
             ],
-        },
-        "sourceContainer": "scont139",
-    }],
+        ),
+        source_container="scont139",
+    )],
     source_account="src1122")
 
 ```
@@ -254,18 +254,18 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
     destination_account="dst112",
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
     resource_group_name="res7687",
-    rules=[{
-        "destinationContainer": "dcont139",
-        "filters": {
-            "minCreationTime": "2020-02-19T16:05:00Z",
-            "prefixMatch": [
+    rules=[azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+        destination_container="dcont139",
+        filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+            min_creation_time="2020-02-19T16:05:00Z",
+            prefix_match=[
                 "blobA",
                 "blobB",
             ],
-        },
-        "ruleId": "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
-        "sourceContainer": "scont139",
-    }],
+        ),
+        rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+        source_container="scont139",
+    )],
     source_account="src1122")
 
 ```
@@ -409,21 +409,21 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
     resource_group_name="res7687",
     rules=[
-        {
-            "destinationContainer": "dcont139",
-            "filters": {
-                "prefixMatch": [
+        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont139",
+            filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+                prefix_match=[
                     "blobA",
                     "blobB",
                 ],
-            },
-            "ruleId": "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
-            "sourceContainer": "scont139",
-        },
-        {
-            "destinationContainer": "dcont179",
-            "sourceContainer": "scont179",
-        },
+            ),
+            rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            source_container="scont139",
+        ),
+        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont179",
+            source_container="scont179",
+        ),
     ],
     source_account="src1122")
 
@@ -575,22 +575,22 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
     resource_group_name="res7687",
     rules=[
-        {
-            "destinationContainer": "dcont139",
-            "filters": {
-                "prefixMatch": [
+        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont139",
+            filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+                prefix_match=[
                     "blobA",
                     "blobB",
                 ],
-            },
-            "ruleId": "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
-            "sourceContainer": "scont139",
-        },
-        {
-            "destinationContainer": "dcont179",
-            "ruleId": "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
-            "sourceContainer": "scont179",
-        },
+            ),
+            rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            source_container="scont139",
+        ),
+        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont179",
+            rule_id="cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
+            source_container="scont179",
+        ),
     ],
     source_account="src1122")
 
@@ -646,7 +646,7 @@ const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicati
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[ObjectReplicationPolicyRule]]</span> = None<span class="p">, </span><span class="nx">source_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ObjectReplicationPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">source_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1075,7 +1075,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyrule">List[Object<wbr>Replication<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyrule">Sequence[Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The storage account object replication rules.{{% /md %}}</dd>
 
@@ -1145,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1202,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1259,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1316,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1428,8 +1428,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mincreationtime_python">
-<a href="#mincreationtime_python" style="color: inherit; text-decoration: inherit;">min<wbr>Creation<wbr>Time</a>
+        <span id="min_creation_time_python">
+<a href="#min_creation_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1438,11 +1438,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.{{% /md %}}</dd>
 
@@ -1547,8 +1547,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mincreationtime_python">
-<a href="#mincreationtime_python" style="color: inherit; text-decoration: inherit;">min<wbr>Creation<wbr>Time</a>
+        <span id="min_creation_time_python">
+<a href="#min_creation_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1557,11 +1557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.{{% /md %}}</dd>
 
@@ -1726,8 +1726,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationcontainer_python">
-<a href="#destinationcontainer_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Container</a>
+        <span id="destination_container_python">
+<a href="#destination_container_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1736,8 +1736,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecontainer_python">
-<a href="#sourcecontainer_python" style="color: inherit; text-decoration: inherit;">source<wbr>Container</a>
+        <span id="source_container_python">
+<a href="#source_container_python" style="color: inherit; text-decoration: inherit;">source_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1750,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilter">Dict[Object<wbr>Replication<wbr>Policy<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilter">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd>
 
@@ -1925,8 +1925,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationcontainer_python">
-<a href="#destinationcontainer_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Container</a>
+        <span id="destination_container_python">
+<a href="#destination_container_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1935,8 +1935,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecontainer_python">
-<a href="#sourcecontainer_python" style="color: inherit; text-decoration: inherit;">source<wbr>Container</a>
+        <span id="source_container_python">
+<a href="#source_container_python" style="color: inherit; text-decoration: inherit;">source_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1949,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Dict[Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd>
 

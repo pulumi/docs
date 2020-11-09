@@ -112,13 +112,13 @@ dsc_configuration = azure_nextgen.automation.latest.DscConfiguration("dscConfigu
     location="East US 2",
     name="SetupServer",
     resource_group_name="rg",
-    source={
-        "hash": {
-            "algorithm": "sha256",
-            "value": "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
-        },
-        "type": "embeddedContent",
-        "value": """Configuration SetupServer {
+    source=azure_nextgen.automation.latest.ContentSourceArgs(
+        hash=azure_nextgen.automation.latest.ContentHashArgs(
+            algorithm="sha256",
+            value="A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
+        ),
+        type="embeddedContent",
+        value="""Configuration SetupServer {
     Node localhost {
                                WindowsFeature IIS {
                                Name = "Web-Server";
@@ -126,7 +126,7 @@ dsc_configuration = azure_nextgen.automation.latest.DscConfiguration("dscConfigu
         }
     }
 }""",
-    })
+    ))
 
 ```
 
@@ -178,7 +178,7 @@ const dscConfiguration = new azure_nextgen.automation.latest.DscConfiguration("d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DscConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, DscConfigurationParameter]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ContentSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DscConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_progress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_verbose</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, DscConfigurationParameterArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ContentSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -737,7 +737,7 @@ The DscConfiguration resource accepts the following [input]({{< relref "/docs/in
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentsource">Dict[Content<wbr>Source]</a></span>
+        <span class="property-type"><a href="#contentsource">Content<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source.{{% /md %}}</dd>
 
@@ -797,7 +797,7 @@ The DscConfiguration resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Dsc<wbr>Configuration<wbr>Parameter]</span>
+        <span class="property-type">Mapping[str, Dsc<wbr>Configuration<wbr>Parameter<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the configuration parameters.{{% /md %}}</dd>
 
@@ -807,7 +807,7 @@ The DscConfiguration resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags attached to the resource.{{% /md %}}</dd>
 
@@ -1622,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Dict[Content<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 
@@ -1821,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Dict[Content<wbr>Hash<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 
@@ -2026,8 +2026,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ismandatory_python">
-<a href="#ismandatory_python" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
+        <span id="is_mandatory_python">
+<a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2225,8 +2225,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ismandatory_python">
-<a href="#ismandatory_python" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
+        <span id="is_mandatory_python">
+<a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

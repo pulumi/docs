@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigresponse">Dict[Encryption<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption configuration.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallruleresponse">List[Firewall<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firewallruleresponse">Sequence[Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this Data Lake Store account.{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentityresponse">Dict[Encryption<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption identity, if any.{{% /md %}}</dd>
 
@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#trusted_id_providers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>id_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustedidproviderresponse">List[Trusted<wbr>Id<wbr>Provider<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trustedidproviderresponse">Sequence[Trusted<wbr>Id<wbr>Provider<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of trusted identity providers associated with this Data Lake Store account.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules associated with this Data Lake Store account.{{% /md %}}</dd>
 
@@ -1234,7 +1234,7 @@ The following output properties are available:
 <a href="#key_vault_meta_info_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>meta_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainforesponse">Dict[Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd>
 

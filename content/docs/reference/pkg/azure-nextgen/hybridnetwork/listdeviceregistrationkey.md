@@ -57,7 +57,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -67,7 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -84,7 +84,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -94,7 +94,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -111,7 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -121,7 +121,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -138,7 +138,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the device resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -148,7 +148,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -178,7 +178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The registration key for hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The registration key for the device.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -195,7 +195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The registration key for hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The registration key for the device.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -212,7 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The registration key for hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The registration key for the device.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -229,7 +229,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The registration key for hybrid network device.{{% /md %}}</dd>
+    <dd>{{% md %}}The registration key for the device.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

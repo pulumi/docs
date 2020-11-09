@@ -1039,7 +1039,7 @@ The following output properties are available:
 <a href="#creation_data_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdataresponse">Dict[Creation<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#creationdataresponse">Creation<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#managed_by_extended_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by_<wbr>extended</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.{{% /md %}}</dd>
 
@@ -1119,7 +1119,7 @@ The following output properties are available:
 <a href="#share_info_python" style="color: inherit; text-decoration: inherit;">share_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareinfoelementresponse">List[Share<wbr>Info<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shareinfoelementresponse">Sequence[Share<wbr>Info<wbr>Element<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ The following output properties are available:
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Dict[Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
 
@@ -1229,7 +1229,7 @@ The following output properties are available:
 <a href="#encryption_settings_collection_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollectionresponse">Dict[Encryption<wbr>Settings<wbr>Collection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollectionresponse">Encryption<wbr>Settings<wbr>Collection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
 
@@ -1279,7 +1279,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskskuresponse">Dict[Disk<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskskuresponse">Disk<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd>
 
@@ -1289,7 +1289,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1309,7 +1309,7 @@ The following output properties are available:
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Logical zone list for Disk.{{% /md %}}</dd>
 
@@ -1654,7 +1654,7 @@ The following output properties are available:
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Dict[Image<wbr>Disk<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
 
@@ -1664,7 +1664,7 @@ The following output properties are available:
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Dict[Image<wbr>Disk<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
 
@@ -2101,7 +2101,7 @@ The following output properties are available:
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">List[Encryption<wbr>Settings<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
 
@@ -2220,7 +2220,7 @@ The following output properties are available:
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
 
@@ -2230,7 +2230,7 @@ The following output properties are available:
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Dict[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
 
@@ -2468,7 +2468,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Dict[Source<wbr>Vault<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 
@@ -2587,7 +2587,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Dict[Source<wbr>Vault<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 
@@ -2662,8 +2662,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vmuri_python">
-<a href="#vmuri_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Uri</a>
+        <span id="vm_uri_python">
+<a href="#vm_uri_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

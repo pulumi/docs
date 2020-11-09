@@ -94,9 +94,9 @@ v_net_peering = azure_nextgen.databricks.latest.VNetPeering("vNetPeering",
     allow_gateway_transit=False,
     allow_virtual_network_access=True,
     peering_name="vNetPeeringTest",
-    remote_virtual_network={
-        "id": "/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
-    },
+    remote_virtual_network=azure_nextgen.databricks.latest.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs(
+        id="/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
+    ),
     resource_group_name="rg",
     use_remote_gateways=False,
     workspace_name="myWorkspace")
@@ -140,7 +140,7 @@ const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VNetPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_forwarded_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_gateway_transit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_virtual_network_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">databricks_address_space</span><span class="p">:</span> <span class="nx">Optional[Dict[AddressSpace]]</span> = None<span class="p">, </span><span class="nx">databricks_virtual_network</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetwork]]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_address_space</span><span class="p">:</span> <span class="nx">Optional[Dict[AddressSpace]]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetwork]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_remote_gateways</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VNetPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_forwarded_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_gateway_transit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_virtual_network_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">databricks_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">databricks_virtual_network</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_remote_gateways</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -679,7 +679,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#remote_virtual_network_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatremotevirtualnetwork">Dict[Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Remote<wbr>Virtual<wbr>Network]</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Remote<wbr>Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#databricks_address_space_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Dict[Address<wbr>Space]</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#databricks_virtual_network_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>virtual_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatdatabricksvirtualnetwork">Dict[Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Databricks<wbr>Virtual<wbr>Network]</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatdatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Databricks<wbr>Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#remote_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Dict[Address<wbr>Space]</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
 
@@ -1096,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 

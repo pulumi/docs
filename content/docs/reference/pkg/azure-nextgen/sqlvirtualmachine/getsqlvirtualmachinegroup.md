@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#wsfc_domain_profile_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomainprofileresponse">Dict[Wsfc<wbr>Domain<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#wsfcdomainprofileresponse">Wsfc<wbr>Domain<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
 

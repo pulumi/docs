@@ -129,24 +129,24 @@ import pulumi_azure_nextgen as azure_nextgen
 operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster",
     cluster_name="myCluster",
     cluster_type="ACS",
-    container_service={
-        "orchestratorProperties": {
-            "servicePrincipal": {
-                "clientId": "abcdefghijklmnopqrt",
-                "secret": "uiuiwueiwuewiue",
-            },
-        },
-        "orchestratorType": "Kubernetes",
-    },
+    container_service=azure_nextgen.machinelearningcompute.v20170801preview.AcsClusterPropertiesArgs(
+        orchestrator_properties=azure_nextgen.machinelearningcompute.v20170801preview.KubernetesClusterPropertiesArgs(
+            service_principal=azure_nextgen.machinelearningcompute.v20170801preview.ServicePrincipalPropertiesArgs(
+                client_id="abcdefghijklmnopqrt",
+                secret="uiuiwueiwuewiue",
+            ),
+        ),
+        orchestrator_type="Kubernetes",
+    ),
     description="My Operationalization Cluster",
-    global_service_configuration={
-        "ssl": {
-            "cert": "afjdklq2131casfakld=",
-            "cname": "foo.bar.com",
-            "key": "flksdafkldsajf=",
-            "status": "Enabled",
-        },
-    },
+    global_service_configuration=azure_nextgen.machinelearningcompute.v20170801preview.GlobalServiceConfigurationArgs(
+        ssl=azure_nextgen.machinelearningcompute.v20170801preview.SslConfigurationArgs(
+            cert="afjdklq2131casfakld=",
+            cname="foo.bar.com",
+            key="flksdafkldsajf=",
+            status="Enabled",
+        ),
+    ),
     location="West US",
     resource_group_name="myResourceGroup",
     tags={
@@ -209,7 +209,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_insights</span><span class="p">:</span> <span class="nx">Optional[Dict[AppInsightsProperties]]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerRegistryProperties]]</span> = None<span class="p">, </span><span class="nx">container_service</span><span class="p">:</span> <span class="nx">Optional[Dict[AcsClusterProperties]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_service_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[GlobalServiceConfiguration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[Dict[StorageAccountProperties]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_insights</span><span class="p">:</span> <span class="nx">Optional[AppInsightsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[ContainerRegistryPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">container_service</span><span class="p">:</span> <span class="nx">Optional[AcsClusterPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_service_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalServiceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[StorageAccountPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -778,7 +778,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#app_insights_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsproperties">Dict[App<wbr>Insights<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#appinsightsproperties">App<wbr>Insights<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AppInsights configuration.{{% /md %}}</dd>
 
@@ -788,7 +788,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#container_registry_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryproperties">Dict[Container<wbr>Registry<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#containerregistryproperties">Container<wbr>Registry<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container Registry properties.{{% /md %}}</dd>
 
@@ -798,7 +798,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#container_service_python" style="color: inherit; text-decoration: inherit;">container_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acsclusterproperties">Dict[Acs<wbr>Cluster<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#acsclusterproperties">Acs<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the Azure Container Service cluster.{{% /md %}}</dd>
 
@@ -818,7 +818,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#global_service_configuration_python" style="color: inherit; text-decoration: inherit;">global_<wbr>service_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalserviceconfiguration">Dict[Global<wbr>Service<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#globalserviceconfiguration">Global<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd>
 
@@ -828,7 +828,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">Dict[Storage<wbr>Account<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Account properties.{{% /md %}}</dd>
 
@@ -838,7 +838,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1137,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponsewrapperresponse">List[Error<wbr>Response<wbr>Wrapper<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponsewrapperresponse">Sequence[Error<wbr>Response<wbr>Wrapper<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of provisioning errors reported by the resource provider.{{% /md %}}</dd>
 
@@ -1435,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterproperties">Dict[Kubernetes<wbr>Cluster<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterproperties">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd>
 
@@ -1445,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemservice">List[System<wbr>Service]</a></span>
+        <span class="property-type"><a href="#systemservice">Sequence[System<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd>
 
@@ -1754,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Dict[Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd>
 
@@ -1764,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List[System<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd>
 
@@ -2836,7 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
 
@@ -2915,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Dict[Error<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd>
 
@@ -3084,7 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfiguration">Dict[Auto<wbr>Scale<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#autoscaleconfiguration">Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd>
 
@@ -3104,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfiguration">Dict[Service<wbr>Auth<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#serviceauthconfiguration">Service<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd>
 
@@ -3114,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Dict[Ssl<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd>
 
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Dict[Auto<wbr>Scale<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd>
 
@@ -3303,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Dict[Service<wbr>Auth<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd>
 
@@ -3313,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Dict[Ssl<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd>
 
@@ -3392,7 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Dict[Service<wbr>Principal<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd>
 
@@ -3471,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Dict[Service<wbr>Principal<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd>
 
@@ -4578,8 +4578,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="systemservicetype_python">
-<a href="#systemservicetype_python" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
+        <span id="system_service_type_python">
+<a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4727,8 +4727,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="systemservicetype_python">
-<a href="#systemservicetype_python" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
+        <span id="system_service_type_python">
+<a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

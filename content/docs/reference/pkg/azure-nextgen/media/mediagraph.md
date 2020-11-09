@@ -89,26 +89,26 @@ media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
     description="updated description",
     media_graph_name="SampleMediaGraph",
     resource_group_name="contoso",
-    sinks=[{
-        "assetName": "SampleAsset",
-        "inputs": ["rtspSource"],
-        "name": "AssetSink",
-        "odataType": "#Microsoft.Media.MediaGraphAssetSink",
-    }],
-    sources=[{
-        "endpoint": {
-            "credentials": {
-                "odataType": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
-                "password": "examplepassword",
-                "username": "exampleusername",
-            },
+    sinks=[azure_nextgen.media.v20200201preview.MediaGraphAssetSinkArgs(
+        asset_name="SampleAsset",
+        inputs=["rtspSource"],
+        name="AssetSink",
+        odata_type="#Microsoft.Media.MediaGraphAssetSink",
+    )],
+    sources=[azure_nextgen.media.v20200201preview.MediaGraphRtspSourceArgs(
+        endpoint={
+            "credentials": azure_nextgen.media.v20200201preview.MediaGraphUsernamePasswordCredentialsArgs(
+                odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                password="examplepassword",
+                username="exampleusername",
+            ),
             "odataType": "#Microsoft.Media.MediaGraphClearEndpoint",
             "url": "rtsp://contoso.com:554/stream1",
         },
-        "name": "rtspSource",
-        "odataType": "#Microsoft.Media.MediaGraphRtspSource",
-        "transport": "Http",
-    }])
+        name="rtspSource",
+        odata_type="#Microsoft.Media.MediaGraphRtspSource",
+        transport="Http",
+    )])
 
 ```
 
@@ -257,22 +257,22 @@ media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
     description="updated description",
     media_graph_name="SampleMediaGraph",
     resource_group_name="contoso",
-    sinks=[{
-        "assetName": "SampleAsset",
-        "inputs": ["rtspSource"],
-        "name": "AssetSink",
-        "odataType": "#Microsoft.Media.MediaGraphAssetSink",
-    }],
-    sources=[{
-        "endpoint": {
-            "credentials": {
-                "odataType": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
-                "password": "examplepassword",
-                "username": "exampleusername",
-            },
+    sinks=[azure_nextgen.media.v20200201preview.MediaGraphAssetSinkArgs(
+        asset_name="SampleAsset",
+        inputs=["rtspSource"],
+        name="AssetSink",
+        odata_type="#Microsoft.Media.MediaGraphAssetSink",
+    )],
+    sources=[azure_nextgen.media.v20200201preview.MediaGraphRtspSourceArgs(
+        endpoint={
+            "credentials": azure_nextgen.media.v20200201preview.MediaGraphUsernamePasswordCredentialsArgs(
+                odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                password="examplepassword",
+                username="exampleusername",
+            ),
             "odataType": "#Microsoft.Media.MediaGraphTlsEndpoint",
-            "trustedCertificates": {
-                "certificates": ["""-----BEGIN CERTIFICATE-----
+            "trustedCertificates": azure_nextgen.media.v20200201preview.MediaGraphPemCertificateListArgs(
+                certificates=["""-----BEGIN CERTIFICATE-----
 MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
 BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
 MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
@@ -293,18 +293,18 @@ PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
 oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
 nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 -----END CERTIFICATE-----"""],
-                "odataType": "#Microsoft.Media.MediaGraphPemCertificateList",
-            },
+                odata_type="#Microsoft.Media.MediaGraphPemCertificateList",
+            ),
             "url": "rtsps://contoso.com:443/stream1",
-            "validationOptions": {
-                "ignoreHostname": True,
-                "ignoreSignature": False,
-            },
+            "validationOptions": azure_nextgen.media.v20200201preview.MediaGraphTlsValidationOptionsArgs(
+                ignore_hostname=True,
+                ignore_signature=False,
+            ),
         },
-        "name": "rtspSource",
-        "odataType": "#Microsoft.Media.MediaGraphRtspSource",
-        "transport": "Http",
-    }])
+        name="rtspSource",
+        odata_type="#Microsoft.Media.MediaGraphRtspSource",
+        transport="Http",
+    )])
 
 ```
 
@@ -387,7 +387,7 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_graph_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sinks</span><span class="p">:</span> <span class="nx">Optional[List[MediaGraphAssetSink]]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[List[MediaGraphRtspSource]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_graph_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphAssetSinkArgs]]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphRtspSourceArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -796,7 +796,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphassetsink">List[Media<wbr>Graph<wbr>Asset<wbr>Sink]</a></span>
+        <span class="property-type"><a href="#mediagraphassetsink">Sequence[Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sinks.{{% /md %}}</dd>
 
@@ -806,7 +806,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphrtspsource">List[Media<wbr>Graph<wbr>Rtsp<wbr>Source]</a></span>
+        <span class="property-type"><a href="#mediagraphrtspsource">Sequence[Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sources.{{% /md %}}</dd>
 
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Sink inputs.{{% /md %}}</dd>
 
@@ -1412,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Sink inputs.{{% /md %}}</dd>
 
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 
@@ -1660,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 
@@ -1739,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd>
 
@@ -1818,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd>
 
@@ -1957,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Media<wbr>Graph<wbr>Clear<wbr>Endpoint] | Dict[Media<wbr>Graph<wbr>Tls<wbr>Endpoint]</span>
+        <span class="property-type">Union[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args, Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -2116,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response] | Dict[Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response]</span>
+        <span class="property-type">Union[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args, Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -2315,27 +2315,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertificates_python">
-<a href="#trustedcertificates_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
+        <span id="trusted_certificates_python">
+<a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">Dict[Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List]</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationoptions_python">
-<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+        <span id="validation_options_python">
+<a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Dict[Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options]</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
 
@@ -2514,27 +2514,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertificates_python">
-<a href="#trustedcertificates_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
+        <span id="trusted_certificates_python">
+<a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Dict[Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationoptions_python">
-<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+        <span id="validation_options_python">
+<a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Dict[Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
 
@@ -2639,8 +2639,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ignorehostname_python">
-<a href="#ignorehostname_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Hostname</a>
+        <span id="ignore_hostname_python">
+<a href="#ignore_hostname_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2649,8 +2649,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ignoresignature_python">
-<a href="#ignoresignature_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signature</a>
+        <span id="ignore_signature_python">
+<a href="#ignore_signature_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signature</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2758,8 +2758,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ignorehostname_python">
-<a href="#ignorehostname_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Hostname</a>
+        <span id="ignore_hostname_python">
+<a href="#ignore_hostname_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2768,8 +2768,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ignoresignature_python">
-<a href="#ignoresignature_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signature</a>
+        <span id="ignore_signature_python">
+<a href="#ignore_signature_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signature</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

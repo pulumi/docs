@@ -46,6 +46,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="cognitiveservices/" title="cognitiveservices"><span class="symbol module"></span>cognitiveservices</a></li>
     <li><a href="communication/" title="communication"><span class="symbol module"></span>communication</a></li>
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
+    <li><a href="confluent/" title="confluent"><span class="symbol module"></span>confluent</a></li>
     <li><a href="consumption/" title="consumption"><span class="symbol module"></span>consumption</a></li>
     <li><a href="containerinstance/" title="containerinstance"><span class="symbol module"></span>containerinstance</a></li>
     <li><a href="containerregistry/" title="containerregistry"><span class="symbol module"></span>containerregistry</a></li>
@@ -57,6 +58,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="databoxedge/" title="databoxedge"><span class="symbol module"></span>databoxedge</a></li>
     <li><a href="databricks/" title="databricks"><span class="symbol module"></span>databricks</a></li>
     <li><a href="datacatalog/" title="datacatalog"><span class="symbol module"></span>datacatalog</a></li>
+    <li><a href="datadog/" title="datadog"><span class="symbol module"></span>datadog</a></li>
     <li><a href="datafactory/" title="datafactory"><span class="symbol module"></span>datafactory</a></li>
     <li><a href="datalakeanalytics/" title="datalakeanalytics"><span class="symbol module"></span>datalakeanalytics</a></li>
     <li><a href="datalakestore/" title="datalakestore"><span class="symbol module"></span>datalakestore</a></li>
@@ -169,7 +171,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

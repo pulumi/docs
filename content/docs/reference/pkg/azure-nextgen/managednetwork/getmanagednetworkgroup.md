@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#management_groups_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 

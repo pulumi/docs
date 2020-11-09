@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labvhdresponse">List[Lab<wbr>Vhd<wbr>Response]</a></span>
+        <span class="property-type"><a href="#labvhdresponse">Sequence[Lab<wbr>Vhd<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Results of the list operation.{{% /md %}}</dd>
 

@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#load_balancer_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationresponse">List[Load<wbr>Balancer<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationresponse">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of load balancer configurations for an availability group listener.{{% /md %}}</dd>
 
@@ -710,8 +710,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerresourceid_python">
-<a href="#loadbalancerresourceid_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Resource<wbr>Id</a>
+        <span id="load_balancer_resource_id_python">
+<a href="#load_balancer_resource_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -724,14 +724,14 @@ The following output properties are available:
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Dict[Private<wbr>IPAddress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="probeport_python">
-<a href="#probeport_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Port</a>
+        <span id="probe_port_python">
+<a href="#probe_port_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -740,8 +740,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressresourceid_python">
-<a href="#publicipaddressresourceid_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Resource<wbr>Id</a>
+        <span id="public_ip_address_resource_id_python">
+<a href="#public_ip_address_resource_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -750,11 +750,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sqlvirtualmachineinstances_python">
-<a href="#sqlvirtualmachineinstances_python" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Instances</a>
+        <span id="sql_virtual_machine_instances_python">
+<a href="#sql_virtual_machine_instances_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.{{% /md %}}</dd>
 

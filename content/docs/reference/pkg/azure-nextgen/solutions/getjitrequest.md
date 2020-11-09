@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that created the JIT request.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#jit_authorization_policies_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>authorization_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitauthorizationpoliciesresponse">List[Jit<wbr>Authorization<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitauthorizationpoliciesresponse">Sequence[Jit<wbr>Authorization<wbr>Policies<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The JIT authorization policies.{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#jit_scheduling_policy_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>scheduling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitschedulingpolicyresponse">Dict[Jit<wbr>Scheduling<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitschedulingpolicyresponse">Jit<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The JIT request properties.{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that last updated the JIT request.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 

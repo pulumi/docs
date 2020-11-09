@@ -669,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepropertiesresponse">Dict[Api<wbr>Resource<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcepropertiesresponse">Api<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api resource properties.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_content_link_python" style="color: inherit; text-decoration: inherit;">package_<wbr>content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Dict[Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd>
 
@@ -1066,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redis_cache_connection_string_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>cache_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Dict[Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd>
 
@@ -1922,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_parameters_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Dict[Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector deployment parameters metadata.{{% /md %}}</dd>
 
@@ -1962,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags.{{% /md %}}</dd>
 
@@ -1982,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdl_service_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Dict[Wsdl<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WSDL service.{{% /md %}}</dd>
 
@@ -2550,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_definitions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Dict[Api<wbr>Resource<wbr>Definitions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api definitions.{{% /md %}}</dd>
 
@@ -2560,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Dict[Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The backend service.{{% /md %}}</dd>
 
@@ -2570,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities.{{% /md %}}</dd>
 
@@ -2590,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_parameters_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The connection parameters.{{% /md %}}</dd>
 
@@ -2600,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#general_information_python" style="color: inherit; text-decoration: inherit;">general_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Dict[Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api general information.{{% /md %}}</dd>
 
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integration_service_environment_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Dict[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment reference.{{% /md %}}</dd>
 
@@ -2620,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcemetadataresponse">Dict[Api<wbr>Resource<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2640,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepoliciesresponse">Dict[Api<wbr>Resource<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcepoliciesresponse">Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policies for the API.{{% /md %}}</dd>
 
@@ -2660,7 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_urls_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The runtime urls.{{% /md %}}</dd>
 
@@ -2928,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_qualified_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>qualified_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints' qualified names.{{% /md %}}</dd>
 

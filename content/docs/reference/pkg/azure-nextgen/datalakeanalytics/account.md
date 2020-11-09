@@ -167,24 +167,24 @@ import pulumi_azure_nextgen as azure_nextgen
 
 account = azure_nextgen.datalakeanalytics.latest.Account("account",
     account_name="contosoadla",
-    compute_policies=[{
-        "maxDegreeOfParallelismPerJob": 1,
-        "minPriorityPerJob": 1,
-        "name": "test_policy",
-        "objectId": "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
-        "objectType": "User",
-    }],
-    data_lake_store_accounts=[{
-        "name": "test_adls",
-        "suffix": "test_suffix",
-    }],
+    compute_policies=[azure_nextgen.datalakeanalytics.latest.CreateComputePolicyWithAccountParametersArgs(
+        max_degree_of_parallelism_per_job=1,
+        min_priority_per_job=1,
+        name="test_policy",
+        object_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+        object_type="User",
+    )],
+    data_lake_store_accounts=[azure_nextgen.datalakeanalytics.latest.AddDataLakeStoreWithAccountParametersArgs(
+        name="test_adls",
+        suffix="test_suffix",
+    )],
     default_data_lake_store_account="test_adls",
     firewall_allow_azure_ips="Enabled",
-    firewall_rules=[{
-        "endIpAddress": "2.2.2.2",
-        "name": "test_rule",
-        "startIpAddress": "1.1.1.1",
-    }],
+    firewall_rules=[azure_nextgen.datalakeanalytics.latest.CreateFirewallRuleWithAccountParametersArgs(
+        end_ip_address="2.2.2.2",
+        name="test_rule",
+        start_ip_address="1.1.1.1",
+    )],
     firewall_state="Enabled",
     location="eastus2",
     max_degree_of_parallelism=30,
@@ -194,11 +194,11 @@ account = azure_nextgen.datalakeanalytics.latest.Account("account",
     new_tier="Consumption",
     query_store_retention=30,
     resource_group_name="contosorg",
-    storage_accounts=[{
-        "accessKey": "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
-        "name": "test_storage",
-        "suffix": "test_suffix",
-    }],
+    storage_accounts=[azure_nextgen.datalakeanalytics.latest.AddStorageAccountWithAccountParametersArgs(
+        access_key="34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
+        name="test_storage",
+        suffix="test_suffix",
+    )],
     tags={
         "test_key": "test_value",
     })
@@ -268,7 +268,7 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policies</span><span class="p">:</span> <span class="nx">Optional[List[CreateComputePolicyWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">data_lake_store_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AddDataLakeStoreWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_store_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[List[CreateFirewallRuleWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_job_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_store_retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AddStorageAccountWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateComputePolicyWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">data_lake_store_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[AddDataLakeStoreWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_store_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateFirewallRuleWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_degree_of_parallelism_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_job_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_priority_per_job</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_store_retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[AddStorageAccountWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -987,7 +987,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#data_lake_store_accounts_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>store_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adddatalakestorewithaccountparameters">List[Add<wbr>Data<wbr>Lake<wbr>Store<wbr>With<wbr>Account<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#adddatalakestorewithaccountparameters">Sequence[Add<wbr>Data<wbr>Lake<wbr>Store<wbr>With<wbr>Account<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
 
@@ -1027,7 +1027,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#compute_policies_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createcomputepolicywithaccountparameters">List[Create<wbr>Compute<wbr>Policy<wbr>With<wbr>Account<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#createcomputepolicywithaccountparameters">Sequence[Create<wbr>Compute<wbr>Policy<wbr>With<wbr>Account<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
 
@@ -1047,7 +1047,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">List[Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">Sequence[Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
 
@@ -1127,7 +1127,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addstorageaccountwithaccountparameters">List[Add<wbr>Storage<wbr>Account<wbr>With<wbr>Account<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#addstorageaccountwithaccountparameters">Sequence[Add<wbr>Storage<wbr>Account<wbr>With<wbr>Account<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
 
@@ -1137,7 +1137,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 

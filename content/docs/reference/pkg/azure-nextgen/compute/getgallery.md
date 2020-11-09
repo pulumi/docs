@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryidentifierresponse">Dict[Gallery<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryidentifierresponse">Gallery<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery unique name.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#sharing_profile_python" style="color: inherit; text-decoration: inherit;">sharing_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofileresponse">Dict[Sharing<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharingprofileresponse">Sharing<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile for gallery sharing to subscription or tenant{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -743,7 +743,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of subscription/tenant ids the gallery is aimed to be shared to.{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofilegroupresponse">List[Sharing<wbr>Profile<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharingprofilegroupresponse">Sequence[Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of sharing profile groups.{{% /md %}}</dd>
 

@@ -457,7 +457,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#synchronizationdetailsresponse">List[Synchronization<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#synchronizationdetailsresponse">Sequence[Synchronization<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
 
@@ -968,8 +968,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datasetid_python">
-<a href="#datasetid_python" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>Id</a>
+        <span id="data_set_id_python">
+<a href="#data_set_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -978,8 +978,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datasettype_python">
-<a href="#datasettype_python" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>Type</a>
+        <span id="data_set_type_python">
+<a href="#data_set_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -988,8 +988,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="durationms_python">
-<a href="#durationms_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Ms</a>
+        <span id="duration_ms_python">
+<a href="#duration_ms_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1008,8 +1008,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="filesread_python">
-<a href="#filesread_python" style="color: inherit; text-decoration: inherit;">files<wbr>Read</a>
+        <span id="files_read_python">
+<a href="#files_read_python" style="color: inherit; text-decoration: inherit;">files_<wbr>read</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1018,8 +1018,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="fileswritten_python">
-<a href="#fileswritten_python" style="color: inherit; text-decoration: inherit;">files<wbr>Written</a>
+        <span id="files_written_python">
+<a href="#files_written_python" style="color: inherit; text-decoration: inherit;">files_<wbr>written</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1048,8 +1048,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rowscopied_python">
-<a href="#rowscopied_python" style="color: inherit; text-decoration: inherit;">rows<wbr>Copied</a>
+        <span id="rows_copied_python">
+<a href="#rows_copied_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>copied</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1058,8 +1058,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rowsread_python">
-<a href="#rowsread_python" style="color: inherit; text-decoration: inherit;">rows<wbr>Read</a>
+        <span id="rows_read_python">
+<a href="#rows_read_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>read</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1068,8 +1068,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizeread_python">
-<a href="#sizeread_python" style="color: inherit; text-decoration: inherit;">size<wbr>Read</a>
+        <span id="size_read_python">
+<a href="#size_read_python" style="color: inherit; text-decoration: inherit;">size_<wbr>read</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1078,8 +1078,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sizewritten_python">
-<a href="#sizewritten_python" style="color: inherit; text-decoration: inherit;">size<wbr>Written</a>
+        <span id="size_written_python">
+<a href="#size_written_python" style="color: inherit; text-decoration: inherit;">size_<wbr>written</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

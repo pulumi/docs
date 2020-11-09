@@ -122,22 +122,22 @@ build_task = azure_nextgen.containerregistry.v20180201preview.BuildTask("buildTa
     alias="myalias",
     build_task_name="myBuildTask",
     location="eastus",
-    platform={
-        "cpu": 2,
-        "osType": "Linux",
-    },
+    platform=azure_nextgen.containerregistry.v20180201preview.PlatformPropertiesArgs(
+        cpu=2,
+        os_type="Linux",
+    ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    source_repository={
-        "isCommitTriggerEnabled": True,
-        "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-        "sourceControlAuthProperties": {
-            "scope": "repo",
-            "token": "xxxxxx",
-            "tokenType": "OAuth",
-        },
-        "sourceControlType": "Github",
-    },
+    source_repository=azure_nextgen.containerregistry.v20180201preview.SourceRepositoryPropertiesArgs(
+        is_commit_trigger_enabled=True,
+        repository_url="https://github.com/Azure/azure-rest-api-specs",
+        source_control_auth_properties=azure_nextgen.containerregistry.v20180201preview.SourceControlAuthInfoArgs(
+            scope="repo",
+            token="xxxxxx",
+            token_type="OAuth",
+        ),
+        source_control_type="Github",
+    ),
     status="Enabled",
     tags={
         "testkey": "value",
@@ -195,7 +195,7 @@ const buildTask = new azure_nextgen.containerregistry.v20180201preview.BuildTask
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BuildTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[Dict[PlatformProperties]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[Dict[SourceRepositoryProperties]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BuildTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[PlatformPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[SourceRepositoryPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -724,7 +724,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Dict[Platform<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcerepositoryproperties">Dict[Source<wbr>Repository<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#sourcerepositoryproperties">Source<wbr>Repository<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd>
 
@@ -774,7 +774,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -1947,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolauthinfo">Dict[Source<wbr>Control<wbr>Auth<wbr>Info]</a></span>
+        <span class="property-type"><a href="#sourcecontrolauthinfo">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
 
@@ -2146,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Dict[Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
 

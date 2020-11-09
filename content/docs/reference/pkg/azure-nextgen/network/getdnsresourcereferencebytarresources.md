@@ -24,7 +24,7 @@ meta_desc: "Explore the GetDnsResourceReferenceByTarResources function of the ne
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_resource_reference_by_tar_resources(</span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[List[SubResource]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDnsResourceReferenceByTarResourcesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_resource_reference_by_tar_resources(</span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubResourceArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDnsResourceReferenceByTarResourcesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,7 +106,7 @@ The following arguments are supported:
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to azure resources for which referencing dns records need to be queried.{{% /md %}}</dd>
 
@@ -187,7 +187,7 @@ The following output properties are available:
 <a href="#dns_resource_references_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>resource_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsresourcereferenceresponse">List[Dns<wbr>Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dnsresourcereferenceresponse">Sequence[Dns<wbr>Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request{{% /md %}}</dd>
 
@@ -298,21 +298,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dnsresources_python">
-<a href="#dnsresources_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Resources</a>
+        <span id="dns_resources_python">
+<a href="#dns_resources_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of dns Records {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetresource_python">
-<a href="#targetresource_python" style="color: inherit; text-decoration: inherit;">target<wbr>Resource</a>
+        <span id="target_resource_python">
+<a href="#target_resource_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to an azure resource from where the dns resource value is taken.{{% /md %}}</dd>
 

@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">List[Workbook<wbr>Template<wbr>Gallery<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#template_data_python" style="color: inherit; text-decoration: inherit;">template_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#localized_python" style="color: inherit; text-decoration: inherit;">localized</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response>]</span>
+        <span class="property-type">Mapping[str, Sequence[Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -903,7 +903,7 @@ The following output properties are available:
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">List[Workbook<wbr>Template<wbr>Gallery<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
 
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#template_data_python" style="color: inherit; text-decoration: inherit;">template_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
 

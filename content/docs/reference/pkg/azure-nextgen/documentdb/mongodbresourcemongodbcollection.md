@@ -35,7 +35,6 @@ class MyStack : Stack
             Options = ,
             Resource = new AzureNextGen.DocumentDB.Latest.Inputs.MongoDBCollectionResourceArgs
             {
-                AnalyticalStorageTtl = 500,
                 Id = "collectionName",
                 Indexes = 
                 {
@@ -90,8 +89,7 @@ func main() {
 			Location:       pulumi.String("West US"),
 			Options:        nil,
 			Resource: &documentdb.MongoDBCollectionResourceArgs{
-				AnalyticalStorageTtl: pulumi.Int(500),
-				Id:                   pulumi.String("collectionName"),
+				Id: pulumi.String("collectionName"),
 				Indexes: documentdb.MongoIndexArray{
 					&documentdb.MongoIndexArgs{
 						Key: &documentdb.MongoIndexKeysArgs{
@@ -134,23 +132,22 @@ mongo_db_resource_mongo_db_collection = azure_nextgen.documentdb.latest.MongoDBR
     collection_name="collectionName",
     database_name="databaseName",
     location="West US",
-    options={},
-    resource={
-        "analyticalStorageTtl": 500,
-        "id": "collectionName",
-        "indexes": [{
-            "key": {
-                "keys": ["testKey"],
-            },
-            "options": {
-                "expireAfterSeconds": 100,
-                "unique": True,
-            },
-        }],
-        "shardKey": {
+    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.latest.MongoDBCollectionResourceArgs(
+        id="collectionName",
+        indexes=[azure_nextgen.documentdb.latest.MongoIndexArgs(
+            key=azure_nextgen.documentdb.latest.MongoIndexKeysArgs(
+                keys=["testKey"],
+            ),
+            options=azure_nextgen.documentdb.latest.MongoIndexOptionsArgs(
+                expire_after_seconds=100,
+                unique=True,
+            ),
+        )],
+        shard_key={
             "testKey": "Hash",
         },
-    },
+    ),
     resource_group_name="rg1",
     tags={})
 
@@ -171,7 +168,6 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
     location: "West US",
     options: {},
     resource: {
-        analyticalStorageTtl: 500,
         id: "collectionName",
         indexes: [{
             key: {
@@ -206,7 +202,7 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Dict[CreateUpdateOptions]]</span> = None<span class="p">, </span><span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[Dict[MongoDBCollectionResource]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[CreateUpdateOptionsArgs]</span> = None<span class="p">, </span><span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[MongoDBCollectionResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -410,16 +406,6 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span id="options_csharp">
-<a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span> 
@@ -447,6 +433,16 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_csharp">
+<a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -497,16 +493,6 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span id="options_go">
-<a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span> 
@@ -534,6 +520,16 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_go">
+<a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -584,16 +580,6 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span id="options_nodejs">
-<a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span> 
@@ -621,6 +607,16 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_nodejs">
+<a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -671,21 +667,11 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
 
     <dt class="property-required"
             title="Required">
-        <span id="options_python">
-<a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Dict[Create<wbr>Update<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcollectionresource">Dict[Mongo<wbr>DBCollection<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#mongodbcollectionresource">Mongo<wbr>DBCollection<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a MongoDB collection{{% /md %}}</dd>
 
@@ -711,11 +697,21 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
 
     <dt class="property-optional"
             title="Optional">
+        <span id="options_python">
+<a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
 
@@ -1150,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Dict[Autoscale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
 
@@ -1269,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Dict[Autoscale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
 
@@ -1337,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_csharp" style="color: inherit; text-decoration: inherit;">Ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -1414,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_go" style="color: inherit; text-decoration: inherit;">Ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -1491,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_nodejs" style="color: inherit; text-decoration: inherit;">ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -1568,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_python" style="color: inherit; text-decoration: inherit;">ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
 
@@ -1588,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">List[Mongo<wbr>Index<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">Sequence[Mongo<wbr>Index<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd>
 
@@ -1598,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_key_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of shard keys to be applied for the request.{{% /md %}}</dd>
 
@@ -1787,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindex">List[Mongo<wbr>Index]</a></span>
+        <span class="property-type"><a href="#mongoindex">Sequence[Mongo<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd>
 
@@ -1797,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_key_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of shard keys to be applied for the request.{{% /md %}}</dd>
 
@@ -1906,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeys">Dict[Mongo<wbr>Index<wbr>Keys]</a></span>
+        <span class="property-type"><a href="#mongoindexkeys">Mongo<wbr>Index<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
 
@@ -1916,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptions">Dict[Mongo<wbr>Index<wbr>Options]</a></span>
+        <span class="property-type"><a href="#mongoindexoptions">Mongo<wbr>Index<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
 
@@ -1995,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of keys for each MongoDB collection in the Azure Cosmos DB service{{% /md %}}</dd>
 
@@ -2074,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of keys for each MongoDB collection in the Azure Cosmos DB service{{% /md %}}</dd>
 
@@ -2179,8 +2175,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expireafterseconds_python">
-<a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
+        <span id="expire_after_seconds_python">
+<a href="#expire_after_seconds_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>after_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2298,8 +2294,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expireafterseconds_python">
-<a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
+        <span id="expire_after_seconds_python">
+<a href="#expire_after_seconds_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>after_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2421,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Dict[Mongo<wbr>Index<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
 
@@ -2431,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Dict[Mongo<wbr>Index<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
 

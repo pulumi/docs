@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Content type schema.{{% /md %}}</dd>
 

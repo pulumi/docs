@@ -97,16 +97,16 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 connected_cluster = azure_nextgen.kubernetes.v20200101preview.ConnectedCluster("connectedCluster",
-    aad_profile={
-        "clientAppId": "f8cd1fd9-154f-4da7-b348-595f283c13a3",
-        "serverAppId": "45c27b16-e262-4c55-b572-b3b8f7788eb8",
-        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-    },
+    aad_profile=azure_nextgen.kubernetes.v20200101preview.ConnectedClusterAADProfileArgs(
+        client_app_id="f8cd1fd9-154f-4da7-b348-595f283c13a3",
+        server_app_id="45c27b16-e262-4c55-b572-b3b8f7788eb8",
+        tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+    ),
     agent_public_key_certificate="MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO",
     cluster_name="testCluster",
-    identity={
-        "type": "SystemAssigned",
-    },
+    identity=azure_nextgen.kubernetes.v20200101preview.ConnectedClusterIdentityArgs(
+        type="SystemAssigned",
+    ),
     location="East US",
     resource_group_name="k8sc-rg",
     tags={})
@@ -153,7 +153,7 @@ const connectedCluster = new azure_nextgen.kubernetes.v20200101preview.Connected
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectedClusterAADProfile]]</span> = None<span class="p">, </span><span class="nx">agent_public_key_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectedClusterIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[ConnectedClusterAADProfileArgs]</span> = None<span class="p">, </span><span class="nx">agent_public_key_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ConnectedClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -333,7 +333,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectedclusteraadprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Inputs.<wbr>Connected<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -393,7 +393,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectedclusteraadprofile">Connected<wbr>Cluster<wbr>AADProfile</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -480,7 +480,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -507,7 +507,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectedclusteraadprofile">Connected<wbr>Cluster<wbr>AADProfile</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -567,7 +567,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -592,9 +592,9 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#aad_profile_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofile">Dict[Connected<wbr>Cluster<wbr>AADProfile]</a></span>
+        <span class="property-type"><a href="#connectedclusteraadprofile">Connected<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -622,7 +622,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteridentity">Dict[Connected<wbr>Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#connectedclusteridentity">Connected<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the connected cluster.{{% /md %}}</dd>
 
@@ -654,7 +654,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment state of connectedClusters.{{% /md %}}</dd>
+    <dd>{{% md %}}Provisioning state of the connected cluster resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -662,7 +662,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -742,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -809,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -943,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

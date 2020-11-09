@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachineresponse">List[Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachineresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestresponse">List[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -664,7 +664,7 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">List[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd>
 
@@ -869,8 +869,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxrequestaccessduration_python">
-<a href="#maxrequestaccessduration_python" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Access<wbr>Duration</a>
+        <span id="max_request_access_duration_python">
+<a href="#max_request_access_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>access_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -899,8 +899,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedsourceaddressprefix_python">
-<a href="#allowedsourceaddressprefix_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
+        <span id="allowed_source_address_prefix_python">
+<a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -909,11 +909,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedsourceaddressprefixes_python">
-<a href="#allowedsourceaddressprefixes_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
+        <span id="allowed_source_address_prefixes_python">
+<a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
 
@@ -1198,8 +1198,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="statusreason_python">
-<a href="#statusreason_python" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
+        <span id="status_reason_python">
+<a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1208,8 +1208,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedsourceaddressprefix_python">
-<a href="#allowedsourceaddressprefix_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
+        <span id="allowed_source_address_prefix_python">
+<a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1218,18 +1218,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedsourceaddressprefixes_python">
-<a href="#allowedsourceaddressprefixes_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
+        <span id="allowed_source_address_prefixes_python">
+<a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mappedport_python">
-<a href="#mappedport_python" style="color: inherit; text-decoration: inherit;">mapped<wbr>Port</a>
+        <span id="mapped_port_python">
+<a href="#mapped_port_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1421,7 +1421,7 @@ The following output properties are available:
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">List[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1550,7 +1550,7 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">List[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd>
 

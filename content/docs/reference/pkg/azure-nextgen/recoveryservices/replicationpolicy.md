@@ -59,11 +59,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 replication_policy = azure_nextgen.recoveryservices.latest.ReplicationPolicy("replicationPolicy",
     policy_name="protectionprofile1",
-    properties={
-        "providerSpecificInput": {
+    properties=azure_nextgen.recoveryservices.latest.CreatePolicyInputPropertiesArgs(
+        provider_specific_input={
             "instanceType": "HyperVReplicaAzure",
         },
-    },
+    ),
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
 
@@ -104,7 +104,7 @@ const replicationPolicy = new azure_nextgen.recoveryservices.latest.ReplicationP
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CreatePolicyInputProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreatePolicyInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +453,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createpolicyinputproperties">Dict[Create<wbr>Policy<wbr>Input<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#createpolicyinputproperties">Create<wbr>Policy<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy creation properties.{{% /md %}}</dd>
 
@@ -826,8 +826,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -836,8 +836,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -846,8 +846,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -856,8 +856,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1055,8 +1055,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1065,8 +1065,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1075,8 +1075,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1085,8 +1085,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1095,8 +1095,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointthresholdinminutes_python">
-<a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_threshold_in_minutes_python">
+<a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1178,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[A2APolicy<wbr>Creation<wbr>Input] | Dict[Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input] | Dict[Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input] | Dict[Hyper<wbr>VReplica<wbr>Policy<wbr>Input] | Dict[In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input] | Dict[In<wbr>Mage<wbr>Policy<wbr>Input] | Dict[In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input] | Dict[VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input]</span>
+        <span class="property-type">Union[A2APolicy<wbr>Creation<wbr>Input<wbr>Args, Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args, Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args, Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args, VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd>
 
@@ -1403,8 +1403,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activestorageaccountid_python">
-<a href="#activestorageaccountid_python" style="color: inherit; text-decoration: inherit;">active<wbr>Storage<wbr>Account<wbr>Id</a>
+        <span id="active_storage_account_id_python">
+<a href="#active_storage_account_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>storage_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1413,8 +1413,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationconsistentsnapshotfrequencyinhours_python">
-<a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
+        <span id="application_consistent_snapshot_frequency_in_hours_python">
+<a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1433,8 +1433,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onlinereplicationstarttime_python">
-<a href="#onlinereplicationstarttime_python" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
+        <span id="online_replication_start_time_python">
+<a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1443,8 +1443,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistorydurationinhours_python">
-<a href="#recoverypointhistorydurationinhours_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>Duration<wbr>In<wbr>Hours</a>
+        <span id="recovery_point_history_duration_in_hours_python">
+<a href="#recovery_point_history_duration_in_hours_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>duration_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1453,8 +1453,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationinterval_python">
-<a href="#replicationinterval_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Interval</a>
+        <span id="replication_interval_python">
+<a href="#replication_interval_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1652,8 +1652,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationconsistentsnapshotfrequencyinhours_python">
-<a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
+        <span id="application_consistent_snapshot_frequency_in_hours_python">
+<a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1662,8 +1662,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onlinereplicationstarttime_python">
-<a href="#onlinereplicationstarttime_python" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
+        <span id="online_replication_start_time_python">
+<a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1672,8 +1672,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistoryduration_python">
-<a href="#recoverypointhistoryduration_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>Duration</a>
+        <span id="recovery_point_history_duration_python">
+<a href="#recovery_point_history_duration_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1682,8 +1682,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationinterval_python">
-<a href="#replicationinterval_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Interval</a>
+        <span id="replication_interval_python">
+<a href="#replication_interval_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of storage accounts to which the VMs in the primary cloud can replicate to.{{% /md %}}</dd>
 
@@ -2041,8 +2041,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedauthenticationtype_python">
-<a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
+        <span id="allowed_authentication_type_python">
+<a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2051,8 +2051,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationconsistentsnapshotfrequencyinhours_python">
-<a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
+        <span id="application_consistent_snapshot_frequency_in_hours_python">
+<a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2071,8 +2071,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialreplicationmethod_python">
-<a href="#initialreplicationmethod_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
+        <span id="initial_replication_method_python">
+<a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2081,8 +2081,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationexportpath_python">
-<a href="#offlinereplicationexportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
+        <span id="offline_replication_export_path_python">
+<a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2091,8 +2091,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationimportpath_python">
-<a href="#offlinereplicationimportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
+        <span id="offline_replication_import_path_python">
+<a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2101,8 +2101,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onlinereplicationstarttime_python">
-<a href="#onlinereplicationstarttime_python" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
+        <span id="online_replication_start_time_python">
+<a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2111,8 +2111,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypoints_python">
-<a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
+        <span id="recovery_points_python">
+<a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2121,8 +2121,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicadeletionoption_python">
-<a href="#replicadeletionoption_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
+        <span id="replica_deletion_option_python">
+<a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2131,8 +2131,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationport_python">
-<a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
+        <span id="replication_port_python">
+<a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2510,8 +2510,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedauthenticationtype_python">
-<a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
+        <span id="allowed_authentication_type_python">
+<a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2520,8 +2520,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationconsistentsnapshotfrequencyinhours_python">
-<a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
+        <span id="application_consistent_snapshot_frequency_in_hours_python">
+<a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2540,8 +2540,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialreplicationmethod_python">
-<a href="#initialreplicationmethod_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
+        <span id="initial_replication_method_python">
+<a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2550,8 +2550,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationexportpath_python">
-<a href="#offlinereplicationexportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
+        <span id="offline_replication_export_path_python">
+<a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2560,8 +2560,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationimportpath_python">
-<a href="#offlinereplicationimportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
+        <span id="offline_replication_import_path_python">
+<a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2570,8 +2570,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onlinereplicationstarttime_python">
-<a href="#onlinereplicationstarttime_python" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
+        <span id="online_replication_start_time_python">
+<a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2580,8 +2580,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypoints_python">
-<a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
+        <span id="recovery_points_python">
+<a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2590,8 +2590,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicadeletionoption_python">
-<a href="#replicadeletionoption_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
+        <span id="replica_deletion_option_python">
+<a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2600,8 +2600,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationfrequencyinseconds_python">
-<a href="#replicationfrequencyinseconds_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
+        <span id="replication_frequency_in_seconds_python">
+<a href="#replication_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2610,8 +2610,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationport_python">
-<a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
+        <span id="replication_port_python">
+<a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2989,8 +2989,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedauthenticationtype_python">
-<a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
+        <span id="allowed_authentication_type_python">
+<a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2999,8 +2999,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationconsistentsnapshotfrequencyinhours_python">
-<a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
+        <span id="application_consistent_snapshot_frequency_in_hours_python">
+<a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3019,8 +3019,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialreplicationmethod_python">
-<a href="#initialreplicationmethod_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
+        <span id="initial_replication_method_python">
+<a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3029,8 +3029,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationexportpath_python">
-<a href="#offlinereplicationexportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
+        <span id="offline_replication_export_path_python">
+<a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3039,8 +3039,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationimportpath_python">
-<a href="#offlinereplicationimportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
+        <span id="offline_replication_import_path_python">
+<a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3049,8 +3049,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onlinereplicationstarttime_python">
-<a href="#onlinereplicationstarttime_python" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
+        <span id="online_replication_start_time_python">
+<a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3059,8 +3059,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypoints_python">
-<a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
+        <span id="recovery_points_python">
+<a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3069,8 +3069,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicadeletion_python">
-<a href="#replicadeletion_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion</a>
+        <span id="replica_deletion_python">
+<a href="#replica_deletion_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3079,8 +3079,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationfrequencyinseconds_python">
-<a href="#replicationfrequencyinseconds_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
+        <span id="replication_frequency_in_seconds_python">
+<a href="#replication_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3089,8 +3089,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationport_python">
-<a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
+        <span id="replication_port_python">
+<a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3438,8 +3438,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedauthenticationtype_python">
-<a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
+        <span id="allowed_authentication_type_python">
+<a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3448,8 +3448,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationconsistentsnapshotfrequencyinhours_python">
-<a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
+        <span id="application_consistent_snapshot_frequency_in_hours_python">
+<a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3468,8 +3468,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialreplicationmethod_python">
-<a href="#initialreplicationmethod_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
+        <span id="initial_replication_method_python">
+<a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3478,8 +3478,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationexportpath_python">
-<a href="#offlinereplicationexportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
+        <span id="offline_replication_export_path_python">
+<a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3488,8 +3488,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationimportpath_python">
-<a href="#offlinereplicationimportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
+        <span id="offline_replication_import_path_python">
+<a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3498,8 +3498,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onlinereplicationstarttime_python">
-<a href="#onlinereplicationstarttime_python" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
+        <span id="online_replication_start_time_python">
+<a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3508,8 +3508,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypoints_python">
-<a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
+        <span id="recovery_points_python">
+<a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3518,8 +3518,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicadeletionoption_python">
-<a href="#replicadeletionoption_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
+        <span id="replica_deletion_option_python">
+<a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3528,8 +3528,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationport_python">
-<a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
+        <span id="replication_port_python">
+<a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3877,8 +3877,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedauthenticationtype_python">
-<a href="#allowedauthenticationtype_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
+        <span id="allowed_authentication_type_python">
+<a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3887,8 +3887,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationconsistentsnapshotfrequencyinhours_python">
-<a href="#applicationconsistentsnapshotfrequencyinhours_python" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
+        <span id="application_consistent_snapshot_frequency_in_hours_python">
+<a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3907,8 +3907,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialreplicationmethod_python">
-<a href="#initialreplicationmethod_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
+        <span id="initial_replication_method_python">
+<a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3917,8 +3917,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationexportpath_python">
-<a href="#offlinereplicationexportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
+        <span id="offline_replication_export_path_python">
+<a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3927,8 +3927,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinereplicationimportpath_python">
-<a href="#offlinereplicationimportpath_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
+        <span id="offline_replication_import_path_python">
+<a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3937,8 +3937,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onlinereplicationstarttime_python">
-<a href="#onlinereplicationstarttime_python" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
+        <span id="online_replication_start_time_python">
+<a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3947,8 +3947,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypoints_python">
-<a href="#recoverypoints_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
+        <span id="recovery_points_python">
+<a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3957,8 +3957,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicadeletion_python">
-<a href="#replicadeletion_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion</a>
+        <span id="replica_deletion_python">
+<a href="#replica_deletion_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3967,8 +3967,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationport_python">
-<a href="#replicationport_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
+        <span id="replication_port_python">
+<a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4166,8 +4166,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4176,8 +4176,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4186,8 +4186,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4196,8 +4196,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4206,8 +4206,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointthresholdinminutes_python">
-<a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_threshold_in_minutes_python">
+<a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4405,8 +4405,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4415,8 +4415,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4425,8 +4425,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4435,8 +4435,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4445,8 +4445,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointthresholdinminutes_python">
-<a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_threshold_in_minutes_python">
+<a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4614,8 +4614,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4624,8 +4624,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4634,8 +4634,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4644,8 +4644,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointthresholdinminutes_python">
-<a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_threshold_in_minutes_python">
+<a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4813,8 +4813,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4823,8 +4823,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4833,8 +4833,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4843,8 +4843,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointthresholdinminutes_python">
-<a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_threshold_in_minutes_python">
+<a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5012,8 +5012,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5022,8 +5022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5032,8 +5032,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5042,8 +5042,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointthresholdinminutes_python">
-<a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_threshold_in_minutes_python">
+<a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5211,8 +5211,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5221,8 +5221,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5231,8 +5231,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablemultivmsync_python">
-<a href="#enablemultivmsync_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
+        <span id="enable_multi_vm_sync_python">
+<a href="#enable_multi_vm_sync_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multi_<wbr>vm_<wbr>sync</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5241,8 +5241,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistoryinminutes_python">
-<a href="#recoverypointhistoryinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_history_in_minutes_python">
+<a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5410,8 +5410,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5420,8 +5420,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5430,8 +5430,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="enablemultivmsync_python">
-<a href="#enablemultivmsync_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
+        <span id="enable_multi_vm_sync_python">
+<a href="#enable_multi_vm_sync_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multi_<wbr>vm_<wbr>sync</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5440,8 +5440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="recoverypointhistoryinminutes_python">
-<a href="#recoverypointhistoryinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_history_in_minutes_python">
+<a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5563,7 +5563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[A2APolicy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response] | Dict[Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response] | Dict[Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Union[A2APolicy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 
@@ -5758,8 +5758,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5768,8 +5768,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5778,8 +5778,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multivmsyncstatus_python">
-<a href="#multivmsyncstatus_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
+        <span id="multi_vm_sync_status_python">
+<a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5788,8 +5788,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistory_python">
-<a href="#recoverypointhistory_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
+        <span id="recovery_point_history_python">
+<a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5798,8 +5798,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointthresholdinminutes_python">
-<a href="#recoverypointthresholdinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_threshold_in_minutes_python">
+<a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5937,8 +5937,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5947,8 +5947,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5957,8 +5957,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistoryinminutes_python">
-<a href="#recoverypointhistoryinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_history_in_minutes_python">
+<a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6096,8 +6096,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appconsistentfrequencyinminutes_python">
-<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="app_consistent_frequency_in_minutes_python">
+<a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6106,8 +6106,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crashconsistentfrequencyinminutes_python">
-<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+        <span id="crash_consistent_frequency_in_minutes_python">
+<a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6116,8 +6116,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointhistoryinminutes_python">
-<a href="#recoverypointhistoryinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+        <span id="recovery_point_history_in_minutes_python">
+<a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

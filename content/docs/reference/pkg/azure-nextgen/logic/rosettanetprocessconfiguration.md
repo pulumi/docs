@@ -176,55 +176,55 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 rosetta_net_process_configuration = azure_nextgen.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration",
-    activity_settings={
-        "acknowledgmentOfReceiptSettings": {
-            "isNonRepudiationRequired": False,
-            "timeToAcknowledgeInSeconds": 600,
-        },
-        "activityBehavior": {
-            "actionType": "DoubleAction",
-            "isAuthorizationRequired": False,
-            "isSecuredTransportRequired": False,
-            "nonRepudiationOfOriginAndContent": False,
-            "persistentConfidentialityScope": "None",
-            "responseType": "Async",
-            "retryCount": 2,
-            "timeToPerformInSeconds": 7200,
-        },
-        "activityType": "RequestResponse",
-    },
+    activity_settings=azure_nextgen.logic.latest.RosettaNetPipActivitySettingsArgs(
+        acknowledgment_of_receipt_settings=azure_nextgen.logic.latest.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(
+            is_non_repudiation_required=False,
+            time_to_acknowledge_in_seconds=600,
+        ),
+        activity_behavior=azure_nextgen.logic.latest.RosettaNetPipActivityBehaviorArgs(
+            action_type="DoubleAction",
+            is_authorization_required=False,
+            is_secured_transport_required=False,
+            non_repudiation_of_origin_and_content=False,
+            persistent_confidentiality_scope="None",
+            response_type="Async",
+            retry_count=2,
+            time_to_perform_in_seconds=7200,
+        ),
+        activity_type="RequestResponse",
+    ),
     description="Test description",
-    initiator_role_settings={
-        "action": "Purchase Order Request",
-        "businessDocument": {
-            "description": "A request to accept a purchase order for fulfillment..",
-            "name": "Purchase Order Request",
-            "version": "V02.02.00",
-        },
-        "description": "This partner role creates a demand for a product or service.",
-        "role": "Buyer",
-        "roleType": "Functional",
-        "service": "Buyer Service",
-        "serviceClassification": "Business Service",
-    },
+    initiator_role_settings=azure_nextgen.logic.latest.RosettaNetPipRoleSettingsArgs(
+        action="Purchase Order Request",
+        business_document=azure_nextgen.logic.latest.RosettaNetPipBusinessDocumentArgs(
+            description="A request to accept a purchase order for fulfillment..",
+            name="Purchase Order Request",
+            version="V02.02.00",
+        ),
+        description="This partner role creates a demand for a product or service.",
+        role="Buyer",
+        role_type="Functional",
+        service="Buyer Service",
+        service_classification="Business Service",
+    ),
     integration_account_name="testia123",
     process_code="3A4",
     process_name="Request Purchase Order",
     process_version="V02.02.00",
     resource_group_name="testrg123",
-    responder_role_settings={
-        "action": "Purchase Order Confirmation Action",
-        "businessDocument": {
-            "description": "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
-            "name": "Purchase Order Confirmation",
-            "version": "V02.02.00",
-        },
-        "description": "An organization that sells products to partners in the supply chain.",
-        "role": "Seller",
-        "roleType": "Organizational",
-        "service": "Seller Service",
-        "serviceClassification": "Business Service",
-    },
+    responder_role_settings=azure_nextgen.logic.latest.RosettaNetPipRoleSettingsArgs(
+        action="Purchase Order Confirmation Action",
+        business_document=azure_nextgen.logic.latest.RosettaNetPipBusinessDocumentArgs(
+            description="Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
+            name="Purchase Order Confirmation",
+            version="V02.02.00",
+        ),
+        description="An organization that sells products to partners in the supply chain.",
+        role="Seller",
+        role_type="Organizational",
+        service="Seller Service",
+        service_classification="Business Service",
+    ),
     rosetta_net_process_configuration_name="3A4")
 
 ```
@@ -306,7 +306,7 @@ const rosettaNetProcessConfiguration = new azure_nextgen.logic.latest.RosettaNet
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activity_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[RosettaNetPipActivitySettings]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initiator_role_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[RosettaNetPipRoleSettings]]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">process_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">process_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">process_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responder_role_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[RosettaNetPipRoleSettings]]</span> = None<span class="p">, </span><span class="nx">rosetta_net_process_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RosettaNetProcessConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activity_settings</span><span class="p">:</span> <span class="nx">Optional[RosettaNetPipActivitySettingsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initiator_role_settings</span><span class="p">:</span> <span class="nx">Optional[RosettaNetPipRoleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">process_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">process_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">process_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responder_role_settings</span><span class="p">:</span> <span class="nx">Optional[RosettaNetPipRoleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">rosetta_net_process_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -895,7 +895,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#activity_settings_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitysettings">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitysettings">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
 
@@ -905,7 +905,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#initiator_role_settings_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>role_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
 
@@ -965,7 +965,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#responder_role_settings_python" style="color: inherit; text-decoration: inherit;">responder_<wbr>role_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
 
@@ -1005,7 +1005,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -1015,7 +1015,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -2358,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
 
@@ -2368,7 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
 
@@ -2517,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
 
@@ -2527,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
 
@@ -3124,7 +3124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document]</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
 
@@ -3443,7 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
 

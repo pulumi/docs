@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpropertiesresponse">Dict[Cluster<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterpropertiesresponse">Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties associated with a Stream Analytics cluster.{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterskuresponse">Dict[Cluster<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterskuresponse">Cluster<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

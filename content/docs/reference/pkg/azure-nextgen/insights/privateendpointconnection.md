@@ -85,10 +85,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 private_endpoint_connection = azure_nextgen.insights.v20191017preview.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="private-endpoint-connection-name",
-    private_link_service_connection_state={
-        "description": "Approved by johndoe@contoso.com",
-        "status": "Approved",
-    },
+    private_link_service_connection_state=azure_nextgen.insights.v20191017preview.PrivateLinkServiceConnectionStatePropertyArgs(
+        description="Approved by johndoe@contoso.com",
+        status="Approved",
+    ),
     resource_group_name="MyResourceGroup",
     scope_name="MyPrivateLinkScope")
 
@@ -128,7 +128,7 @@ const privateEndpointConnection = new azure_nextgen.insights.v20191017preview.Pr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">private_endpoint</span><span class="p">:</span> <span class="nx">Optional[Dict[PrivateEndpointProperty]]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[Dict[PrivateLinkServiceConnectionStateProperty]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">private_endpoint</span><span class="p">:</span> <span class="nx">Optional[PrivateEndpointPropertyArgs]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[PrivateLinkServiceConnectionStatePropertyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -507,7 +507,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointproperty">Dict[Private<wbr>Endpoint<wbr>Property]</a></span>
+        <span class="property-type"><a href="#privateendpointproperty">Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
 
@@ -517,7 +517,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
 

@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmpropertiesresponse">Dict[Managed<wbr>Hsm<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedhsmpropertiesresponse">Managed<wbr>Hsm<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd>
 
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmskuresponse">Dict[Managed<wbr>Hsm<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedhsmskuresponse">Managed<wbr>Hsm<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -814,7 +814,7 @@ The following output properties are available:
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
 

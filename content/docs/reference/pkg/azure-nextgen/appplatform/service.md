@@ -94,13 +94,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 service = azure_nextgen.appplatform.latest.Service("service",
     location="eastus",
-    properties={},
+    properties=azure_nextgen.appplatform.latest.ClusterResourcePropertiesArgs(),
     resource_group_name="myResourceGroup",
     service_name="myservice",
-    sku={
-        "name": "S0",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.appplatform.latest.SkuArgs(
+        name="S0",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     })
@@ -229,21 +229,21 @@ import pulumi_azure_nextgen as azure_nextgen
 
 service = azure_nextgen.appplatform.latest.Service("service",
     location="eastus",
-    properties={
-        "networkProfile": {
-            "appNetworkResourceGroup": "my-app-network-rg",
-            "appSubnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
-            "serviceCidr": "10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
-            "serviceRuntimeNetworkResourceGroup": "my-service-runtime-network-rg",
-            "serviceRuntimeSubnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
-        },
-    },
+    properties=azure_nextgen.appplatform.latest.ClusterResourcePropertiesArgs(
+        network_profile=azure_nextgen.appplatform.latest.NetworkProfileArgs(
+            app_network_resource_group="my-app-network-rg",
+            app_subnet_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
+            service_cidr="10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
+            service_runtime_network_resource_group="my-service-runtime-network-rg",
+            service_runtime_subnet_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
+        ),
+    ),
     resource_group_name="myResourceGroup",
     service_name="myservice",
-    sku={
-        "name": "S0",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.appplatform.latest.SkuArgs(
+        name="S0",
+        tier="Standard",
+    ),
     tags={
         "key1": "value1",
     })
@@ -296,7 +296,7 @@ const service = new azure_nextgen.appplatform.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterResourceProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ClusterResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +705,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceproperties">Dict[Cluster<wbr>Resource<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd>
 
@@ -715,7 +715,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd>
 
@@ -725,7 +725,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
 
@@ -972,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Dict[Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
 
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Dict[Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
 
@@ -1635,11 +1635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="outbound_i_ps_python">
-<a href="#outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>i_<wbr>ps</a>
+        <span id="outbound_ips_python">
+<a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponseoutboundips">Dict[Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs]</a></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
 
@@ -1764,11 +1764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="public_i_ps_python">
-<a href="#public_i_ps_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd>
 

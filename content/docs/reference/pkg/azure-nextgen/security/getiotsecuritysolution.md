@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#auto_discovered_resources_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>discovered_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of resources that were automatically discovered as relevant to the security solution.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#disabled_data_sources_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#recommendations_configuration_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendationconfigurationpropertiesresponse">List[Recommendation<wbr>Configuration<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recommendationconfigurationpropertiesresponse">Sequence[Recommendation<wbr>Configuration<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
 
@@ -719,7 +719,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#user_defined_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedresourcespropertiesresponse">Dict[User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userdefinedresourcespropertiesresponse">User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
 
@@ -900,8 +900,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="recommendationtype_python">
-<a href="#recommendationtype_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
+        <span id="recommendation_type_python">
+<a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1033,7 +1033,7 @@ The following output properties are available:
 <a href="#query_subscriptions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
 

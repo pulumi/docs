@@ -224,13 +224,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="firewallpolicies_csharp">
+<a href="#firewallpolicies_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_csharp">
 <a href="#firewalls_csharp" style="color: inherit; text-decoration: inherit;">Firewalls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -311,13 +321,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="firewallpolicies_go">
+<a href="#firewallpolicies_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_go">
 <a href="#firewalls_go" style="color: inherit; text-decoration: inherit;">Firewalls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -398,13 +418,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="firewallpolicies_nodejs">
+<a href="#firewallpolicies_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_nodejs">
 <a href="#firewalls_nodejs" style="color: inherit; text-decoration: inherit;">firewalls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -485,13 +515,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="firewall_policies_python">
+<a href="#firewall_policies_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_python">
 <a href="#firewalls_python" style="color: inherit; text-decoration: inherit;">firewalls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -529,7 +569,7 @@ The following output properties are available:
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IpAddresses/IpAddressPrefixes in the IpGroups resource.{{% /md %}}</dd>
 
@@ -549,7 +589,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

@@ -136,32 +136,32 @@ import pulumi_azure_nextgen as azure_nextgen
 integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     location="brazilsouth",
-    properties={
-        "networkConfiguration": {
-            "accessEndpoint": {
-                "type": "Internal",
-            },
-            "subnets": [
-                {
-                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
-                },
-                {
-                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
-                },
-                {
-                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
-                },
-                {
-                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
-                },
+    properties=azure_nextgen.logic.latest.IntegrationServiceEnvironmentPropertiesArgs(
+        network_configuration=azure_nextgen.logic.latest.NetworkConfigurationArgs(
+            access_endpoint=azure_nextgen.logic.latest.IntegrationServiceEnvironmentAccessEndpointArgs(
+                type="Internal",
+            ),
+            subnets=[
+                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
+                ),
+                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
+                ),
+                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
+                ),
+                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
+                ),
             ],
-        },
-    },
+        ),
+    ),
     resource_group="testResourceGroup",
-    sku={
-        "capacity": 2,
-        "name": "Premium",
-    })
+    sku=azure_nextgen.logic.latest.IntegrationServiceEnvironmentSkuArgs(
+        capacity=2,
+        name="Premium",
+    ))
 
 ```
 
@@ -220,7 +220,7 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">integration_service_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationServiceEnvironmentProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[IntegrationServiceEnvironmentSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">integration_service_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[IntegrationServiceEnvironmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IntegrationServiceEnvironmentSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,7 +629,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentproperties">Dict[Integration<wbr>Service<wbr>Environment<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentproperties">Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment properties.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentsku">Dict[Integration<wbr>Service<wbr>Environment<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentsku">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List[Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
 
@@ -936,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List[Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 
@@ -1045,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Dict[Flow<wbr>Endpoints]</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
 
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Dict[Flow<wbr>Endpoints]</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 
@@ -1164,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
 
@@ -1174,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
 
@@ -1293,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 
@@ -1650,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfiguration">Dict[Flow<wbr>Endpoints<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#flowendpointsconfiguration">Flow<wbr>Endpoints<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd>
 
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfiguration">Dict[Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#networkconfiguration">Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd>
 
@@ -1889,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Dict[Flow<wbr>Endpoints<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd>
 
@@ -1909,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Dict[Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd>
 
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">Dict[Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpoint">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd>
 
@@ -2474,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List[Resource<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd>
 
@@ -2623,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Dict[Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd>
 
@@ -2633,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd>
 

@@ -99,16 +99,16 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config={
-        "relativeName": "azsmnet6386",
-        "ttl": 35,
-    },
+    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+        relative_name="azsmnet6386",
+        ttl=35,
+    ),
     location="global",
-    monitor_config={
-        "path": "/testpath.aspx",
-        "port": 80,
-        "protocol": "HTTP",
-    },
+    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+        path="/testpath.aspx",
+        port=80,
+        protocol="HTTP",
+    ),
     profile_name="azsmnet6386",
     profile_status="Enabled",
     resource_group_name="azuresdkfornetautoresttrafficmanager1421",
@@ -316,50 +316,50 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config={
-        "relativeName": "azuresdkfornetautoresttrafficmanager6192",
-        "ttl": 35,
-    },
-    endpoints=[{
-        "customHeaders": [{
-            "name": "header-2",
-            "value": "value-2-overridden",
-        }],
-        "endpointLocation": "North Europe",
-        "endpointStatus": "Enabled",
-        "name": "My external endpoint",
-        "target": "foobar.contoso.com",
-        "type": "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-    }],
+    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+        relative_name="azuresdkfornetautoresttrafficmanager6192",
+        ttl=35,
+    ),
+    endpoints=[azure_nextgen.network.latest.EndpointArgs(
+        custom_headers=[azure_nextgen.network.latest.EndpointPropertiesCustomHeadersArgs(
+            name="header-2",
+            value="value-2-overridden",
+        )],
+        endpoint_location="North Europe",
+        endpoint_status="Enabled",
+        name="My external endpoint",
+        target="foobar.contoso.com",
+        type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+    )],
     location="global",
-    monitor_config={
-        "customHeaders": [
-            {
-                "name": "header-1",
-                "value": "value-1",
-            },
-            {
-                "name": "header-2",
-                "value": "value-2",
-            },
+    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+        custom_headers=[
+            azure_nextgen.network.latest.MonitorConfigCustomHeadersArgs(
+                name="header-1",
+                value="value-1",
+            ),
+            azure_nextgen.network.latest.MonitorConfigCustomHeadersArgs(
+                name="header-2",
+                value="value-2",
+            ),
         ],
-        "expectedStatusCodeRanges": [
-            {
-                "max": 205,
-                "min": 200,
-            },
-            {
-                "max": 410,
-                "min": 400,
-            },
+        expected_status_code_ranges=[
+            azure_nextgen.network.latest.MonitorConfigExpectedStatusCodeRangesArgs(
+                max=205,
+                min=200,
+            ),
+            azure_nextgen.network.latest.MonitorConfigExpectedStatusCodeRangesArgs(
+                max=410,
+                min=400,
+            ),
         ],
-        "intervalInSeconds": 10,
-        "path": "/testpath.aspx",
-        "port": 80,
-        "protocol": "HTTP",
-        "timeoutInSeconds": 5,
-        "toleratedNumberOfFailures": 2,
-    },
+        interval_in_seconds=10,
+        path="/testpath.aspx",
+        port=80,
+        protocol="HTTP",
+        timeout_in_seconds=5,
+        tolerated_number_of_failures=2,
+    ),
     profile_name="azuresdkfornetautoresttrafficmanager6192",
     profile_status="Enabled",
     resource_group_name="azuresdkfornetautoresttrafficmanager2583",
@@ -541,26 +541,26 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config={
-        "relativeName": "azuresdkfornetautoresttrafficmanager6192",
-        "ttl": 35,
-    },
-    endpoints=[{
-        "endpointLocation": "North Europe",
-        "endpointStatus": "Enabled",
-        "name": "My external endpoint",
-        "target": "foobar.contoso.com",
-        "type": "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-    }],
+    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+        relative_name="azuresdkfornetautoresttrafficmanager6192",
+        ttl=35,
+    ),
+    endpoints=[azure_nextgen.network.latest.EndpointArgs(
+        endpoint_location="North Europe",
+        endpoint_status="Enabled",
+        name="My external endpoint",
+        target="foobar.contoso.com",
+        type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+    )],
     location="global",
-    monitor_config={
-        "intervalInSeconds": 10,
-        "path": "/testpath.aspx",
-        "port": 80,
-        "protocol": "HTTP",
-        "timeoutInSeconds": 5,
-        "toleratedNumberOfFailures": 2,
-    },
+    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+        interval_in_seconds=10,
+        path="/testpath.aspx",
+        port=80,
+        protocol="HTTP",
+        timeout_in_seconds=5,
+        tolerated_number_of_failures=2,
+    ),
     profile_name="azuresdkfornetautoresttrafficmanager6192",
     profile_status="Enabled",
     resource_group_name="azuresdkfornetautoresttrafficmanager2583",
@@ -619,7 +619,7 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[Dict[DnsConfig]]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[Endpoint]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[Dict[MonitorConfig]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1258,7 +1258,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfig">Dict[Dns<wbr>Config]</a></span>
+        <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd>
 
@@ -1268,7 +1268,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">List[Endpoint]</a></span>
+        <span class="property-type"><a href="#endpoint">Sequence[Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd>
 
@@ -1308,7 +1308,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#monitor_config_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfig">Dict[Monitor<wbr>Config]</a></span>
+        <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd>
 
@@ -1338,7 +1338,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -2203,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">List[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -2243,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
 
@@ -2293,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">List[Endpoint<wbr>Properties<wbr>Subnets]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
 
@@ -3358,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -3398,7 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
 
@@ -3448,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
 
@@ -3807,7 +3807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">List[Monitor<wbr>Config<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">Sequence[Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -3817,7 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">List[Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges]</a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
 
@@ -4444,7 +4444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">List[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -4454,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">List[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
 

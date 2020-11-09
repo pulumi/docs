@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunresponseresponse">Dict[Pipeline<wbr>Run<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinerunresponseresponse">Pipeline<wbr>Run<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The response of a pipeline run.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunrequestresponse">Dict[Pipeline<wbr>Run<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinerunrequestresponse">Pipeline<wbr>Run<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for a pipeline run.{{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
@@ -1050,7 +1050,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Dict[Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd>
 
@@ -1060,7 +1060,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Dict[Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd>
 
@@ -1429,7 +1429,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#imported_artifacts_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts imported in the pipeline run.{{% /md %}}</dd>
 
@@ -1449,7 +1449,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">Dict[Progress<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Dict[Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd>
 
@@ -1489,7 +1489,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Dict[Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd>
 
@@ -1499,7 +1499,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Dict[Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd>
 
@@ -1895,7 +1895,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Dict[Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd>
 

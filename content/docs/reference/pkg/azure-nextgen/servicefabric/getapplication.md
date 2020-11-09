@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityresponse">Dict[Managed<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the managed identities for an Azure resource.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#managed_identities_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationuserassignedidentityresponse">List[Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationuserassignedidentityresponse">Sequence[Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of user assigned identities for the application, each mapped to a friendly name.{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmetricdescriptionresponse">List[Application<wbr>Metric<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationmetricdescriptionresponse">Sequence[Application<wbr>Metric<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of application capacity metric description.{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}List of application parameters with overridden values from their default values specified in the application manifest.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#upgrade_policy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationupgradepolicyresponse">Dict[Application<wbr>Upgrade<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationupgradepolicyresponse">Application<wbr>Upgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the policy for a monitored application upgrade.{{% /md %}}</dd>
 
@@ -1079,8 +1079,8 @@ When creating a new application with application capacity defined, the product o
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumcapacity_python">
-<a href="#maximumcapacity_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity</a>
+        <span id="maximum_capacity_python">
+<a href="#maximum_capacity_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1104,8 +1104,8 @@ When updating existing application with application capacity, the product of Max
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reservationcapacity_python">
-<a href="#reservationcapacity_python" style="color: inherit; text-decoration: inherit;">reservation<wbr>Capacity</a>
+        <span id="reservation_capacity_python">
+<a href="#reservation_capacity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1119,8 +1119,8 @@ When setting application capacity or when updating application capacity; this va
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalapplicationcapacity_python">
-<a href="#totalapplicationcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Application<wbr>Capacity</a>
+        <span id="total_application_capacity_python">
+<a href="#total_application_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>application_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1328,7 +1328,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#application_health_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Dict[Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd>
@@ -1349,7 +1349,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Dict[Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd>
 
@@ -1679,7 +1679,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Dict[Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
 
@@ -1703,7 +1703,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#service_type_health_policy_map_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policy_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 
@@ -2358,7 +2358,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.

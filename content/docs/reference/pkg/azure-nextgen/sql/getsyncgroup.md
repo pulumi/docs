@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschemaresponse">Dict[Sync<wbr>Group<wbr>Schema<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syncgroupschemaresponse">Sync<wbr>Group<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sync schema of the sync group.{{% /md %}}</dd>
 
@@ -874,7 +874,7 @@ The following output properties are available:
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">List[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
 
@@ -1009,8 +1009,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datasize_python">
-<a href="#datasize_python" style="color: inherit; text-decoration: inherit;">data<wbr>Size</a>
+        <span id="data_size_python">
+<a href="#data_size_python" style="color: inherit; text-decoration: inherit;">data_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1029,8 +1029,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="quotedname_python">
-<a href="#quotedname_python" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
+        <span id="quoted_name_python">
+<a href="#quoted_name_python" style="color: inherit; text-decoration: inherit;">quoted_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1142,14 +1142,14 @@ The following output properties are available:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="quotedname_python">
-<a href="#quotedname_python" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
+        <span id="quoted_name_python">
+<a href="#quoted_name_python" style="color: inherit; text-decoration: inherit;">quoted_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

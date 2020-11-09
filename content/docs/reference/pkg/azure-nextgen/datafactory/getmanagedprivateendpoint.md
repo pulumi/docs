@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedprivateendpointresponse">Dict[Managed<wbr>Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedprivateendpointresponse">Managed<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd>
 
@@ -843,7 +843,7 @@ The following output properties are available:
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatepropertiesresponse">Dict[Connection<wbr>State<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd>
 
@@ -853,7 +853,7 @@ The following output properties are available:
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
 

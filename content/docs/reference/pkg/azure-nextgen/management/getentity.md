@@ -575,7 +575,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityinforesponse">List[Entity<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#entityinforesponse">Sequence[Entity<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of entities.{{% /md %}}</dd>
 
@@ -1056,8 +1056,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inheritedpermissions_python">
-<a href="#inheritedpermissions_python" style="color: inherit; text-decoration: inherit;">inherited<wbr>Permissions</a>
+        <span id="inherited_permissions_python">
+<a href="#inherited_permissions_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1066,8 +1066,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberofchildgroups_python">
-<a href="#numberofchildgroups_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Child<wbr>Groups</a>
+        <span id="number_of_child_groups_python">
+<a href="#number_of_child_groups_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>child_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1076,8 +1076,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberofchildren_python">
-<a href="#numberofchildren_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Children</a>
+        <span id="number_of_children_python">
+<a href="#number_of_children_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>children</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1086,8 +1086,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberofdescendants_python">
-<a href="#numberofdescendants_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Descendants</a>
+        <span id="number_of_descendants_python">
+<a href="#number_of_descendants_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>descendants</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1100,27 +1100,27 @@ The following output properties are available:
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityparentgroupinforesponse">Dict[Entity<wbr>Parent<wbr>Group<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#entityparentgroupinforesponse">Entity<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parentdisplaynamechain_python">
-<a href="#parentdisplaynamechain_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Display<wbr>Name<wbr>Chain</a>
+        <span id="parent_display_name_chain_python">
+<a href="#parent_display_name_chain_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>display_<wbr>name_<wbr>chain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The parent display name chain from the root group to the immediate parent{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parentnamechain_python">
-<a href="#parentnamechain_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Name<wbr>Chain</a>
+        <span id="parent_name_chain_python">
+<a href="#parent_name_chain_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name_<wbr>chain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The parent name chain from the root group to the immediate parent{{% /md %}}</dd>
 

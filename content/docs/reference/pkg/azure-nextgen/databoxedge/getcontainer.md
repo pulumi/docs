@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#refresh_details_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetailsresponse">Dict[Refresh<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#refreshdetailsresponse">Refresh<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this container.{{% /md %}}</dd>
 

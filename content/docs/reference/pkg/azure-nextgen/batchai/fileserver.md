@@ -102,19 +102,19 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 file_server = azure_nextgen.batchai.latest.FileServer("fileServer",
-    data_disks={
-        "diskCount": 2,
-        "diskSizeInGB": 10,
-        "storageAccountType": "Standard_LRS",
-    },
+    data_disks=azure_nextgen.batchai.latest.DataDisksArgs(
+        disk_count=2,
+        disk_size_in_gb=10,
+        storage_account_type="Standard_LRS",
+    ),
     file_server_name="demo_nfs",
     resource_group_name="demo_resource_group",
-    ssh_configuration={
-        "userAccountSettings": {
-            "adminUserName": "admin_user_name",
-            "adminUserPassword": "admin_user_password",
-        },
-    },
+    ssh_configuration=azure_nextgen.batchai.latest.SshConfigurationArgs(
+        user_account_settings=azure_nextgen.batchai.latest.UserAccountSettingsArgs(
+            admin_user_name="admin_user_name",
+            admin_user_password="admin_user_password",
+        ),
+    ),
     vm_size="STANDARD_NC6",
     workspace_name="demo_workspace")
 
@@ -162,7 +162,7 @@ const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Dict[DataDisks]]</span> = None<span class="p">, </span><span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[SshConfiguration]]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceId]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[DataDisksArgs]</span> = None<span class="p">, </span><span class="nx">file_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_configuration</span><span class="p">:</span> <span class="nx">Optional[SshConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +571,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisks">Dict[Data<wbr>Disks]</a></span>
+        <span class="property-type"><a href="#datadisks">Data<wbr>Disks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the data disks which will be created for the File Server.{{% /md %}}</dd>
 
@@ -601,7 +601,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ssh_configuration_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Dict[Ssh<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for the File Server node.{{% /md %}}</dd>
 
@@ -631,7 +631,7 @@ The FileServer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifier of an existing virtual network subnet to put the File Server in. If not provided, a new virtual network and subnet will be created.{{% /md %}}</dd>
 
@@ -910,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_settings_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountsettingsresponse">Dict[Mount<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mountsettingsresponse">Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
 
@@ -1783,17 +1783,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettings">Dict[User<wbr>Account<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#useraccountsettings">User<wbr>Account<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_to_allow_python">
-<a href="#public_i_ps_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps_<wbr>to_<wbr>allow</a>
+        <span id="public_ips_to_allow_python">
+<a href="#public_ips_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips_<wbr>to_<wbr>allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd>
 
@@ -1902,17 +1902,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettingsresponse">Dict[User<wbr>Account<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_to_allow_python">
-<a href="#public_i_ps_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps_<wbr>to_<wbr>allow</a>
+        <span id="public_ips_to_allow_python">
+<a href="#public_ips_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips_<wbr>to_<wbr>allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd>
 

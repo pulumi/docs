@@ -102,12 +102,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server_trust_group = azure_nextgen.sql.v20200202preview.ServerTrustGroup("serverTrustGroup",
     group_members=[
-        {
-            "serverId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
-        },
-        {
-            "serverId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
-        },
+        azure_nextgen.sql.v20200202preview.ServerInfoArgs(
+            server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
+        ),
+        azure_nextgen.sql.v20200202preview.ServerInfoArgs(
+            server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
+        ),
     ],
     location_name="Japan East",
     resource_group_name="Default",
@@ -155,7 +155,7 @@ const serverTrustGroup = new azure_nextgen.sql.v20200202preview.ServerTrustGroup
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerTrustGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_members</span><span class="p">:</span> <span class="nx">Optional[List[ServerInfo]]</span> = None<span class="p">, </span><span class="nx">location_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_trust_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trust_scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerTrustGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_members</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServerInfoArgs]]</span> = None<span class="p">, </span><span class="nx">location_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_trust_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trust_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -504,7 +504,7 @@ The ServerTrustGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_members_python" style="color: inherit; text-decoration: inherit;">group_<wbr>members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverinfo">List[Server<wbr>Info]</a></span>
+        <span class="property-type"><a href="#serverinfo">Sequence[Server<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Group members information for the server trust group.{{% /md %}}</dd>
 
@@ -544,7 +544,7 @@ The ServerTrustGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#trust_scopes_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Trust scope of the server trust group.{{% /md %}}</dd>
 

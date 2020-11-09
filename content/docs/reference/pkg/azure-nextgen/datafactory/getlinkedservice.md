@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>MWSLinked<wbr>Service<wbr>Response] | Dict[Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response] | Dict[Amazon<wbr>S3Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>MLLinked<wbr>Service<wbr>Response] | Dict[Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response] | Dict[Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response] | Dict[Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response] | Dict[Cassandra<wbr>Linked<wbr>Service<wbr>Response] | Dict[Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response] | Dict[Concur<wbr>Linked<wbr>Service<wbr>Response] | Dict[Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response] | Dict[Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response] | Dict[Couchbase<wbr>Linked<wbr>Service<wbr>Response] | Dict[Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response] | Dict[Db2Linked<wbr>Service<wbr>Response] | Dict[Drill<wbr>Linked<wbr>Service<wbr>Response] | Dict[Dynamics<wbr>AXLinked<wbr>Service<wbr>Response] | Dict[Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response] | Dict[Dynamics<wbr>Linked<wbr>Service<wbr>Response] | Dict[Eloqua<wbr>Linked<wbr>Service<wbr>Response] | Dict[File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response] | Dict[Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response] | Dict[Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response] | Dict[Greenplum<wbr>Linked<wbr>Service<wbr>Response] | Dict[HBase<wbr>Linked<wbr>Service<wbr>Response] | Dict[HDInsight<wbr>Linked<wbr>Service<wbr>Response] | Dict[HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response] | Dict[Hdfs<wbr>Linked<wbr>Service<wbr>Response] | Dict[Hive<wbr>Linked<wbr>Service<wbr>Response] | Dict[Http<wbr>Linked<wbr>Service<wbr>Response] | Dict[Hubspot<wbr>Linked<wbr>Service<wbr>Response] | Dict[Impala<wbr>Linked<wbr>Service<wbr>Response] | Dict[Informix<wbr>Linked<wbr>Service<wbr>Response] | Dict[Jira<wbr>Linked<wbr>Service<wbr>Response] | Dict[Magento<wbr>Linked<wbr>Service<wbr>Response] | Dict[Maria<wbr>DBLinked<wbr>Service<wbr>Response] | Dict[Marketo<wbr>Linked<wbr>Service<wbr>Response] | Dict[Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response] | Dict[Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response] | Dict[Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response] | Dict[Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response] | Dict[My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response] | Dict[Netezza<wbr>Linked<wbr>Service<wbr>Response] | Dict[OData<wbr>Linked<wbr>Service<wbr>Response] | Dict[Odbc<wbr>Linked<wbr>Service<wbr>Response] | Dict[Office365Linked<wbr>Service<wbr>Response] | Dict[Oracle<wbr>Linked<wbr>Service<wbr>Response] | Dict[Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response] | Dict[Paypal<wbr>Linked<wbr>Service<wbr>Response] | Dict[Phoenix<wbr>Linked<wbr>Service<wbr>Response] | Dict[Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response] | Dict[Presto<wbr>Linked<wbr>Service<wbr>Response] | Dict[Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response] | Dict[Responsys<wbr>Linked<wbr>Service<wbr>Response] | Dict[Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response] | Dict[Salesforce<wbr>Linked<wbr>Service<wbr>Response] | Dict[Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response] | Dict[Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sap<wbr>BWLinked<wbr>Service<wbr>Response] | Dict[Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response] | Dict[Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response] | Dict[Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response] | Dict[Shopify<wbr>Linked<wbr>Service<wbr>Response] | Dict[Snowflake<wbr>Linked<wbr>Service<wbr>Response] | Dict[Spark<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response] | Dict[Square<wbr>Linked<wbr>Service<wbr>Response] | Dict[Sybase<wbr>Linked<wbr>Service<wbr>Response] | Dict[Teradata<wbr>Linked<wbr>Service<wbr>Response] | Dict[Vertica<wbr>Linked<wbr>Service<wbr>Response] | Dict[Web<wbr>Linked<wbr>Service<wbr>Response] | Dict[Xero<wbr>Linked<wbr>Service<wbr>Response] | Dict[Zoho<wbr>Linked<wbr>Service<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd>
 
@@ -860,11 +860,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskeyid_python">
-<a href="#accesskeyid_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The access key id used to access data.{{% /md %}}</dd>
 
@@ -874,27 +874,27 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com){{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="marketplaceid_python">
-<a href="#marketplaceid_python" style="color: inherit; text-decoration: inherit;">marketplace<wbr>ID</a>
+        <span id="marketplace_id_python">
+<a href="#marketplace_id_python" style="color: inherit; text-decoration: inherit;">marketplace_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2){{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sellerid_python">
-<a href="#sellerid_python" style="color: inherit; text-decoration: inherit;">seller<wbr>ID</a>
+        <span id="seller_id_python">
+<a href="#seller_id_python" style="color: inherit; text-decoration: inherit;">seller_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Amazon seller ID.{{% /md %}}</dd>
 
@@ -904,17 +904,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -930,21 +930,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mwsauthtoken_python">
-<a href="#mwsauthtoken_python" style="color: inherit; text-decoration: inherit;">mws<wbr>Auth<wbr>Token</a>
+        <span id="mws_auth_token_python">
+<a href="#mws_auth_token_python" style="color: inherit; text-decoration: inherit;">mws_<wbr>auth_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Amazon MWS authentication token.{{% /md %}}</dd>
 
@@ -954,7 +954,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -964,37 +964,37 @@ The following output properties are available:
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The secret key used to access data.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -1343,7 +1343,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1353,7 +1353,7 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon Redshift server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1363,17 +1363,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -1389,11 +1389,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1403,7 +1403,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -1413,7 +1413,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password of the Amazon Redshift source.{{% /md %}}</dd>
 
@@ -1423,7 +1423,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).{{% /md %}}</dd>
 
@@ -1433,7 +1433,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The username of the Amazon Redshift source. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1474,6 +1474,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationtype_csharp">
+<a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1535,6 +1545,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontoken_csharp">
+<a href="#sessiontoken_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1561,6 +1581,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationtype_go">
+<a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1622,6 +1652,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontoken_go">
+<a href="#sessiontoken_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1648,6 +1688,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationtype_nodejs">
+<a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1709,6 +1759,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontoken_nodejs">
+<a href="#sessiontoken_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response | Secure<wbr>String<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1718,11 +1778,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesskeyid_python">
-<a href="#accesskeyid_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The access key identifier of the Amazon S3 Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1732,17 +1792,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -1758,11 +1828,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1772,17 +1842,17 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretaccesskey_python">
-<a href="#secretaccesskey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -1792,9 +1862,19 @@ The following output properties are available:
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="session_token_python">
+<a href="#session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2141,17 +2221,17 @@ The following output properties are available:
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch account name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="batchuri_python">
-<a href="#batchuri_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Uri</a>
+        <span id="batch_uri_python">
+<a href="#batch_uri_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch URI. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2161,7 +2241,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
 
@@ -2171,7 +2251,7 @@ The following output properties are available:
 <a href="#pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch pool name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2181,7 +2261,7 @@ The following output properties are available:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Azure Batch account access key.{{% /md %}}</dd>
 
@@ -2191,17 +2271,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -2217,11 +2297,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2231,7 +2311,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -2610,7 +2690,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Endpoint for the Azure Data Lake Storage Gen2 service. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2620,7 +2700,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Account key for the Azure Data Lake Storage Gen2 service. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2630,27 +2710,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -2666,11 +2746,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2680,27 +2760,27 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the application used to authenticate against the Azure Data Lake Storage Gen2 account. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.{{% /md %}}</dd>
 
@@ -2710,7 +2790,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3179,7 +3259,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd>
 
@@ -3189,27 +3269,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -3219,7 +3299,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -3235,8 +3315,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3249,7 +3329,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -3259,7 +3339,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
 
@@ -3269,29 +3349,9 @@ The following output properties are available:
 <a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
-    </dt>
-    <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3305,11 +3365,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tenant_python">
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3628,7 +3708,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Database name for connection. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3638,27 +3718,27 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd>
 
@@ -3668,7 +3748,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3678,17 +3758,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -3708,7 +3788,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -4117,7 +4197,7 @@ The following output properties are available:
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4127,7 +4207,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4137,27 +4217,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datalakeanalyticsuri_python">
-<a href="#datalakeanalyticsuri_python" style="color: inherit; text-decoration: inherit;">data<wbr>Lake<wbr>Analytics<wbr>Uri</a>
+        <span id="data_lake_analytics_uri_python">
+<a href="#data_lake_analytics_uri_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>analytics_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Azure Data Lake Analytics URI Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4173,11 +4253,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4187,7 +4267,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -4197,27 +4277,27 @@ The following output properties are available:
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Analytics account.{{% /md %}}</dd>
 
@@ -4227,7 +4307,7 @@ The following output properties are available:
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4662,11 +4742,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datalakestoreuri_python">
-<a href="#datalakestoreuri_python" style="color: inherit; text-decoration: inherit;">data<wbr>Lake<wbr>Store<wbr>Uri</a>
+        <span id="data_lake_store_uri_python">
+<a href="#data_lake_store_uri_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>store_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Data Lake Store service URI. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4676,7 +4756,7 @@ The following output properties are available:
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Data Lake Store account name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4686,27 +4766,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -4722,11 +4802,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4736,7 +4816,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -4746,27 +4826,27 @@ The following output properties are available:
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Store account.{{% /md %}}</dd>
 
@@ -4776,7 +4856,7 @@ The following output properties are available:
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4786,7 +4866,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5075,7 +5155,7 @@ The following output properties are available:
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}<REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5085,7 +5165,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -5095,7 +5175,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -5105,17 +5185,17 @@ The following output properties are available:
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -5131,11 +5211,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5145,7 +5225,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -5764,7 +5844,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5774,7 +5854,7 @@ The following output properties are available:
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}<REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5784,17 +5864,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -5810,21 +5890,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="existingclusterid_python">
-<a href="#existingclusterid_python" style="color: inherit; text-decoration: inherit;">existing<wbr>Cluster<wbr>Id</a>
+        <span id="existing_cluster_id_python">
+<a href="#existing_cluster_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>cluster_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5834,107 +5914,107 @@ The following output properties are available:
 <a href="#instance_pool_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pool_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclustercustomtags_python">
-<a href="#newclustercustomtags_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Custom<wbr>Tags</a>
+        <span id="new_cluster_custom_tags_python">
+<a href="#new_cluster_custom_tags_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>custom_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional tags for cluster resources. This property is ignored in instance pool configurations.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclusterdrivernodetype_python">
-<a href="#newclusterdrivernodetype_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Driver<wbr>Node<wbr>Type</a>
+        <span id="new_cluster_driver_node_type_python">
+<a href="#new_cluster_driver_node_type_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>driver_<wbr>node_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclusterenableelasticdisk_python">
-<a href="#newclusterenableelasticdisk_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Enable<wbr>Elastic<wbr>Disk</a>
+        <span id="new_cluster_enable_elastic_disk_python">
+<a href="#new_cluster_enable_elastic_disk_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>enable_<wbr>elastic_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclusterinitscripts_python">
-<a href="#newclusterinitscripts_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Init<wbr>Scripts</a>
+        <span id="new_cluster_init_scripts_python">
+<a href="#new_cluster_init_scripts_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>init_<wbr>scripts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclusterlogdestination_python">
-<a href="#newclusterlogdestination_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Log<wbr>Destination</a>
+        <span id="new_cluster_log_destination_python">
+<a href="#new_cluster_log_destination_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>log_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclusternodetype_python">
-<a href="#newclusternodetype_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Node<wbr>Type</a>
+        <span id="new_cluster_node_type_python">
+<a href="#new_cluster_node_type_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>node_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclusternumofworker_python">
-<a href="#newclusternumofworker_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Num<wbr>Of<wbr>Worker</a>
+        <span id="new_cluster_num_of_worker_python">
+<a href="#new_cluster_num_of_worker_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>num_<wbr>of_<wbr>worker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like '1' means numOfWorker is 1 or '1:10' means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as '2'. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclustersparkconf_python">
-<a href="#newclustersparkconf_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Spark<wbr>Conf</a>
+        <span id="new_cluster_spark_conf_python">
+<a href="#new_cluster_spark_conf_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>spark_<wbr>conf</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of optional, user-specified Spark configuration key-value pairs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclustersparkenvvars_python">
-<a href="#newclustersparkenvvars_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Spark<wbr>Env<wbr>Vars</a>
+        <span id="new_cluster_spark_env_vars_python">
+<a href="#new_cluster_spark_env_vars_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>spark_<wbr>env_<wbr>vars</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of optional, user-specified Spark environment variables key-value pairs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="newclusterversion_python">
-<a href="#newclusterversion_python" style="color: inherit; text-decoration: inherit;">new<wbr>Cluster<wbr>Version</a>
+        <span id="new_cluster_version_python">
+<a href="#new_cluster_version_python" style="color: inherit; text-decoration: inherit;">new_<wbr>cluster_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5944,7 +6024,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -6413,7 +6493,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd>
 
@@ -6423,17 +6503,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -6443,7 +6523,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -6459,21 +6539,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fileshare_python">
-<a href="#fileshare_python" style="color: inherit; text-decoration: inherit;">file<wbr>Share</a>
+        <span id="file_share_python">
+<a href="#file_share_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6483,7 +6563,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name of the server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6493,7 +6573,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -6503,7 +6583,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -6513,7 +6593,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
 
@@ -6523,7 +6603,7 @@ The following output properties are available:
 <a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -6533,7 +6613,7 @@ The following output properties are available:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The azure file share snapshot version. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6543,7 +6623,7 @@ The following output properties are available:
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User ID to logon the server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6798,11 +6878,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="functionappurl_python">
-<a href="#functionappurl_python" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Url</a>
+        <span id="function_app_url_python">
+<a href="#function_app_url_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.{{% /md %}}</dd>
 
@@ -6812,17 +6892,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -6838,21 +6918,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="functionkey_python">
-<a href="#functionkey_python" style="color: inherit; text-decoration: inherit;">function<wbr>Key</a>
+        <span id="function_key_python">
+<a href="#function_key_python" style="color: inherit; text-decoration: inherit;">function_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Function or Host key for Azure Function App.{{% /md %}}</dd>
 
@@ -6862,7 +6942,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -7057,11 +7137,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="baseurl_python">
-<a href="#baseurl_python" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
+        <span id="base_url_python">
+<a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -7071,17 +7151,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -7101,7 +7181,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -7240,7 +7320,7 @@ The following output properties are available:
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -7250,17 +7330,17 @@ The following output properties are available:
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretversion_python">
-<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -7635,21 +7715,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="apikey_python">
-<a href="#apikey_python" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
+        <span id="api_key_python">
+<a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The API key for accessing the Azure ML model endpoint.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="mlendpoint_python">
-<a href="#mlendpoint_python" style="color: inherit; text-decoration: inherit;">ml<wbr>Endpoint</a>
+        <span id="ml_endpoint_python">
+<a href="#ml_endpoint_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -7659,17 +7739,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -7685,11 +7765,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -7699,27 +7779,27 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.{{% /md %}}</dd>
 
@@ -7729,17 +7809,17 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updateresourceendpoint_python">
-<a href="#updateresourceendpoint_python" style="color: inherit; text-decoration: inherit;">update<wbr>Resource<wbr>Endpoint</a>
+        <span id="update_resource_endpoint_python">
+<a href="#update_resource_endpoint_python" style="color: inherit; text-decoration: inherit;">update_<wbr>resource_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Update Resource REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8114,11 +8194,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mlworkspacename_python">
-<a href="#mlworkspacename_python" style="color: inherit; text-decoration: inherit;">ml<wbr>Workspace<wbr>Name</a>
+        <span id="ml_workspace_name_python">
+<a href="#ml_workspace_name_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>workspace_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Azure ML Service workspace name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8128,7 +8208,7 @@ The following output properties are available:
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8138,7 +8218,7 @@ The following output properties are available:
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Azure ML Service workspace subscription ID. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8148,17 +8228,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -8174,11 +8254,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8188,27 +8268,27 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.{{% /md %}}</dd>
 
@@ -8218,7 +8298,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8477,17 +8557,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -8497,7 +8577,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -8513,11 +8593,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8527,7 +8607,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -8537,7 +8617,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -8796,7 +8876,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -8806,17 +8886,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -8832,11 +8912,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8846,7 +8926,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -8856,7 +8936,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -9115,17 +9195,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -9135,7 +9215,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -9151,11 +9231,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -9165,7 +9245,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -9175,7 +9255,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -9434,7 +9514,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}URL for Azure Search service. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -9444,17 +9524,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -9470,11 +9550,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -9484,7 +9564,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Admin Key for Azure Search service{{% /md %}}</dd>
 
@@ -9494,7 +9574,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -9873,7 +9953,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -9883,27 +9963,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -9919,11 +9999,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -9933,7 +10013,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -9943,27 +10023,27 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd>
 
@@ -9973,7 +10053,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -10352,7 +10432,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -10362,27 +10442,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -10398,11 +10478,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -10412,7 +10492,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -10422,27 +10502,27 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service principal used to authenticate against Azure SQL Database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Database.{{% /md %}}</dd>
 
@@ -10452,7 +10532,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -10831,7 +10911,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -10841,27 +10921,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -10877,11 +10957,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -10891,7 +10971,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -10901,27 +10981,27 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service principal used to authenticate against Azure SQL Managed Instance. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Managed Instance.{{% /md %}}</dd>
 
@@ -10931,7 +11011,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -11250,7 +11330,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd>
 
@@ -11260,17 +11340,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -11280,7 +11360,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -11296,8 +11376,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11310,7 +11390,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -11320,7 +11400,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
 
@@ -11330,7 +11410,7 @@ The following output properties are available:
 <a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -11649,7 +11729,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd>
 
@@ -11659,17 +11739,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -11679,7 +11759,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -11695,8 +11775,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11709,7 +11789,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -11719,7 +11799,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd>
 
@@ -11729,7 +11809,7 @@ The following output properties are available:
 <a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -12078,7 +12158,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name for connection. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12088,27 +12168,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}AuthenticationType to be used for connection. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -12124,11 +12204,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12138,7 +12218,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -12148,7 +12228,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -12158,7 +12238,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The port for the connection. Type: integer (or Expression with resultType integer).{{% /md %}}</dd>
 
@@ -12168,7 +12248,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username for authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12693,8 +12773,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12703,8 +12783,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymenttype_python">
-<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12717,17 +12797,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -12743,11 +12823,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12757,17 +12837,17 @@ The following output properties are available:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The host name of the on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationname_python">
-<a href="#organizationname_python" style="color: inherit; text-decoration: inherit;">organization<wbr>Name</a>
+        <span id="organization_name_python">
+<a href="#organization_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The organization name of the Common Data Service for Apps instance. The property is required for on-prem and required for online when there are more than one Common Data Service for Apps instances associated with the user. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12777,7 +12857,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -12787,7 +12867,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to access the Common Data Service for Apps instance.{{% /md %}}</dd>
 
@@ -12797,24 +12877,24 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The port of on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalcredential_python">
-<a href="#serviceprincipalcredential_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential</a>
+        <span id="service_principal_credential_python">
+<a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalcredentialtype_python">
-<a href="#serviceprincipalcredentialtype_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential<wbr>Type</a>
+        <span id="service_principal_credential_type_python">
+<a href="#service_principal_credential_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12823,11 +12903,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12837,7 +12917,7 @@ The following output properties are available:
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL to the Microsoft Common Data Service for Apps server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12847,7 +12927,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name to access the Common Data Service for Apps instance. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12908,6 +12988,16 @@ The following output properties are available:
         <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionproperties_csharp">
+<a href="#connectionproperties_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+    </dt>
+    <dd>{{% md %}}Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -13028,6 +13118,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectionproperties_go">
+<a href="#connectionproperties_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+    </dt>
+    <dd>{{% md %}}Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -13145,6 +13245,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectionproperties_nodejs">
+<a href="#connectionproperties_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+    </dt>
+    <dd>{{% md %}}Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -13226,7 +13336,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Application client_id supplied by Concur App Management.{{% /md %}}</dd>
 
@@ -13236,7 +13346,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name that you use to access Concur Service.{{% /md %}}</dd>
 
@@ -13246,19 +13356,29 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_properties_python">
+<a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -13272,11 +13392,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -13286,7 +13406,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -13296,37 +13416,37 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -13645,7 +13765,7 @@ The following output properties are available:
 <a href="#account_endpoint_python" style="color: inherit; text-decoration: inherit;">account_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -13655,7 +13775,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -13665,17 +13785,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -13685,7 +13805,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -13695,7 +13815,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the database. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -13711,11 +13831,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -13725,7 +13845,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -13954,7 +14074,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -13964,7 +14084,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -13974,17 +14094,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -14004,7 +14124,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -14263,17 +14383,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -14283,17 +14403,17 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="credstring_python">
-<a href="#credstring_python" style="color: inherit; text-decoration: inherit;">cred<wbr>String</a>
+        <span id="cred_string_python">
+<a href="#cred_string_python" style="color: inherit; text-decoration: inherit;">cred_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of credString in connection string.{{% /md %}}</dd>
 
@@ -14309,11 +14429,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -14323,7 +14443,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -14492,17 +14612,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -14522,7 +14642,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -14961,14 +15081,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14977,21 +15097,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatecommonname_python">
-<a href="#certificatecommonname_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
+        <span id="certificate_common_name_python">
+<a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -15001,7 +15121,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -15011,7 +15131,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15027,21 +15147,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="packagecollection_python">
-<a href="#packagecollection_python" style="color: inherit; text-decoration: inherit;">package<wbr>Collection</a>
+        <span id="package_collection_python">
+<a href="#package_collection_python" style="color: inherit; text-decoration: inherit;">package_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15051,7 +15171,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -15061,7 +15181,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -15071,7 +15191,7 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15081,7 +15201,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15340,17 +15460,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -15360,7 +15480,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -15376,11 +15496,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15390,7 +15510,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -15400,7 +15520,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -15745,31 +15865,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="aadresourceid_python">
-<a href="#aadresourceid_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Resource<wbr>Id</a>
+        <span id="aad_resource_id_python">
+<a href="#aad_resource_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's client ID. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15779,7 +15899,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15789,7 +15909,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.{{% /md %}}</dd>
 
@@ -15799,17 +15919,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -15825,11 +15945,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15839,7 +15959,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -16364,8 +16484,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16374,8 +16494,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymenttype_python">
-<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16388,17 +16508,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -16414,11 +16534,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16428,17 +16548,17 @@ The following output properties are available:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationname_python">
-<a href="#organizationname_python" style="color: inherit; text-decoration: inherit;">organization<wbr>Name</a>
+        <span id="organization_name_python">
+<a href="#organization_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The organization name of the Dynamics CRM instance. The property is required for on-prem and required for online when there are more than one Dynamics CRM instances associated with the user. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16448,7 +16568,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -16458,7 +16578,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics CRM instance.{{% /md %}}</dd>
 
@@ -16468,24 +16588,24 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The port of on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalcredential_python">
-<a href="#serviceprincipalcredential_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential</a>
+        <span id="service_principal_credential_python">
+<a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalcredentialtype_python">
-<a href="#serviceprincipalcredentialtype_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential<wbr>Type</a>
+        <span id="service_principal_credential_type_python">
+<a href="#service_principal_credential_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16494,11 +16614,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16508,7 +16628,7 @@ The following output properties are available:
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL to the Microsoft Dynamics CRM server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16518,7 +16638,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name to access the Dynamics CRM instance. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17043,8 +17163,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17053,8 +17173,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymenttype_python">
-<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17067,17 +17187,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -17093,11 +17213,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17107,17 +17227,17 @@ The following output properties are available:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationname_python">
-<a href="#organizationname_python" style="color: inherit; text-decoration: inherit;">organization<wbr>Name</a>
+        <span id="organization_name_python">
+<a href="#organization_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17127,7 +17247,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -17137,7 +17257,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics instance.{{% /md %}}</dd>
 
@@ -17147,24 +17267,24 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalcredential_python">
-<a href="#serviceprincipalcredential_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential</a>
+        <span id="service_principal_credential_python">
+<a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalcredentialtype_python">
-<a href="#serviceprincipalcredentialtype_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential<wbr>Type</a>
+        <span id="service_principal_credential_type_python">
+<a href="#service_principal_credential_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17173,11 +17293,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17187,7 +17307,7 @@ The following output properties are available:
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17197,7 +17317,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name to access the Dynamics instance. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17576,7 +17696,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Eloqua server. (i.e. eloqua.example.com){{% /md %}}</dd>
 
@@ -17586,7 +17706,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The site name and user name of your Eloqua account in the form: sitename/username. (i.e. Eloqua/Alice){{% /md %}}</dd>
 
@@ -17596,17 +17716,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -17622,11 +17742,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17636,7 +17756,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -17646,37 +17766,37 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -17965,7 +18085,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name of the server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17975,17 +18095,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -18001,11 +18121,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -18015,7 +18135,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -18025,7 +18145,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd>
 
@@ -18035,7 +18155,7 @@ The following output properties are available:
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User ID to logon the server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -18444,7 +18564,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name of the FTP server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -18454,14 +18574,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18470,11 +18590,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -18490,11 +18610,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableservercertificatevalidation_python">
-<a href="#enableservercertificatevalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Server<wbr>Certificate<wbr>Validation</a>
+        <span id="enable_server_certificate_validation_python">
+<a href="#enable_server_certificate_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>server_<wbr>certificate_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -18504,17 +18624,17 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -18524,7 +18644,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -18534,7 +18654,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to logon the FTP server.{{% /md %}}</dd>
 
@@ -18544,7 +18664,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -18554,7 +18674,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username to logon the FTP server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -19049,8 +19169,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19059,21 +19179,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientcustomerid_python">
-<a href="#clientcustomerid_python" style="color: inherit; text-decoration: inherit;">client<wbr>Customer<wbr>ID</a>
+        <span id="client_customer_id_python">
+<a href="#client_customer_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>customer_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Client customer ID of the AdWords account that you want to fetch report data for.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="developertoken_python">
-<a href="#developertoken_python" style="color: inherit; text-decoration: inherit;">developer<wbr>Token</a>
+        <span id="developer_token_python">
+<a href="#developer_token_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The developer token associated with the manager account that you use to grant access to the AdWords API.{{% /md %}}</dd>
 
@@ -19083,7 +19203,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -19093,7 +19213,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -19103,17 +19223,17 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -19133,27 +19253,27 @@ The following output properties are available:
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyfilepath_python">
-<a href="#keyfilepath_python" style="color: inherit; text-decoration: inherit;">key<wbr>File<wbr>Path</a>
+        <span id="key_file_path_python">
+<a href="#key_file_path_python" style="color: inherit; text-decoration: inherit;">key_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.{{% /md %}}</dd>
 
@@ -19163,7 +19283,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -19173,27 +19293,27 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesystemtruststore_python">
-<a href="#usesystemtruststore_python" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Trust<wbr>Store</a>
+        <span id="use_system_trust_store_python">
+<a href="#use_system_trust_store_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>trust_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.{{% /md %}}</dd>
 
@@ -19718,8 +19838,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19732,17 +19852,17 @@ The following output properties are available:
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The default BigQuery project to query against.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalprojects_python">
-<a href="#additionalprojects_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Projects</a>
+        <span id="additional_projects_python">
+<a href="#additional_projects_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>projects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}A comma-separated list of public BigQuery projects to access.{{% /md %}}</dd>
 
@@ -19752,7 +19872,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -19762,7 +19882,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -19772,17 +19892,17 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -19802,27 +19922,27 @@ The following output properties are available:
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyfilepath_python">
-<a href="#keyfilepath_python" style="color: inherit; text-decoration: inherit;">key<wbr>File<wbr>Path</a>
+        <span id="key_file_path_python">
+<a href="#key_file_path_python" style="color: inherit; text-decoration: inherit;">key_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.{{% /md %}}</dd>
 
@@ -19832,7 +19952,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -19842,37 +19962,37 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestgoogledrivescope_python">
-<a href="#requestgoogledrivescope_python" style="color: inherit; text-decoration: inherit;">request<wbr>Google<wbr>Drive<wbr>Scope</a>
+        <span id="request_google_drive_scope_python">
+<a href="#request_google_drive_scope_python" style="color: inherit; text-decoration: inherit;">request_<wbr>google_<wbr>drive_<wbr>scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesystemtruststore_python">
-<a href="#usesystemtruststore_python" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Trust<wbr>Store</a>
+        <span id="use_system_trust_store_python">
+<a href="#use_system_trust_store_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>trust_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.{{% /md %}}</dd>
 
@@ -20157,11 +20277,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesskeyid_python">
-<a href="#accesskeyid_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The access key identifier of the Google Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -20171,17 +20291,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -20197,11 +20317,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -20211,17 +20331,17 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretaccesskey_python">
-<a href="#secretaccesskey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd>
 
@@ -20231,7 +20351,7 @@ The following output properties are available:
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This value specifies the endpoint to access with the Google Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -20490,17 +20610,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -20510,7 +20630,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -20526,11 +20646,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -20540,7 +20660,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -20550,7 +20670,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -21045,8 +21165,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21059,27 +21179,27 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The IP address or host name of the HBase server. (i.e. 192.168.222.160){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowhostnamecnmismatch_python">
-<a href="#allowhostnamecnmismatch_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Name<wbr>CNMismatch</a>
+        <span id="allow_host_name_cn_mismatch_python">
+<a href="#allow_host_name_cn_mismatch_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>name_<wbr>cn_<wbr>mismatch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowselfsignedservercert_python">
-<a href="#allowselfsignedservercert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert</a>
+        <span id="allow_self_signed_server_cert_python">
+<a href="#allow_self_signed_server_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>self_<wbr>signed_<wbr>server_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to allow self-signed certificates from the server. The default value is false.{{% /md %}}</dd>
 
@@ -21089,17 +21209,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -21119,27 +21239,27 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the connections to the server are encrypted using SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httppath_python">
-<a href="#httppath_python" style="color: inherit; text-decoration: inherit;">http<wbr>Path</a>
+        <span id="http_path_python">
+<a href="#http_path_python" style="color: inherit; text-decoration: inherit;">http_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The partial URL corresponding to the HBase server. (i.e. /gateway/sandbox/hbase/version){{% /md %}}</dd>
 
@@ -21149,7 +21269,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -21159,7 +21279,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -21169,17 +21289,17 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port that the HBase instance uses to listen for client connections. The default value is 9090.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
@@ -21189,7 +21309,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name used to connect to the HBase instance.{{% /md %}}</dd>
 
@@ -21594,11 +21714,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clusteruri_python">
-<a href="#clusteruri_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Uri</a>
+        <span id="cluster_uri_python">
+<a href="#cluster_uri_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster URI. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -21608,17 +21728,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -21634,11 +21754,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -21648,27 +21768,27 @@ The following output properties are available:
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hcataloglinkedservicename_python">
-<a href="#hcataloglinkedservicename_python" style="color: inherit; text-decoration: inherit;">hcatalog<wbr>Linked<wbr>Service<wbr>Name</a>
+        <span id="hcatalog_linked_service_name_python">
+<a href="#hcatalog_linked_service_name_python" style="color: inherit; text-decoration: inherit;">hcatalog_<wbr>linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the Azure SQL linked service that points to the HCatalog database.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isespenabled_python">
-<a href="#isespenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Esp<wbr>Enabled</a>
+        <span id="is_esp_enabled_python">
+<a href="#is_esp_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>esp_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.{{% /md %}}</dd>
 
@@ -21678,7 +21798,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
 
@@ -21688,7 +21808,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -21698,7 +21818,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}HDInsight cluster password.{{% /md %}}</dd>
 
@@ -21708,7 +21828,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster user name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -22863,11 +22983,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clusterresourcegroup_python">
-<a href="#clusterresourcegroup_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Group</a>
+        <span id="cluster_resource_group_python">
+<a href="#cluster_resource_group_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The resource group where the cluster belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -22877,17 +22997,17 @@ The following output properties are available:
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="hostsubscriptionid_python">
-<a href="#hostsubscriptionid_python" style="color: inherit; text-decoration: inherit;">host<wbr>Subscription<wbr>Id</a>
+        <span id="host_subscription_id_python">
+<a href="#host_subscription_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -22897,7 +23017,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Storage linked service to be used by the on-demand cluster for storing and processing data.{{% /md %}}</dd>
 
@@ -22907,7 +23027,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -22917,7 +23037,7 @@ The following output properties are available:
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -22927,17 +23047,17 @@ The following output properties are available:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Version of the HDInsight cluster.  Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionallinkedservicenames_python">
-<a href="#additionallinkedservicenames_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Linked<wbr>Service<wbr>Names</a>
+        <span id="additional_linked_service_names_python">
+<a href="#additional_linked_service_names_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>linked_<wbr>service_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.{{% /md %}}</dd>
 
@@ -22947,59 +23067,49 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusternameprefix_python">
-<a href="#clusternameprefix_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name<wbr>Prefix</a>
+        <span id="cluster_name_prefix_python">
+<a href="#cluster_name_prefix_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterpassword_python">
-<a href="#clusterpassword_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Password</a>
+        <span id="cluster_password_python">
+<a href="#cluster_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password to access the cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustersshpassword_python">
-<a href="#clustersshpassword_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ssh<wbr>Password</a>
+        <span id="cluster_ssh_password_python">
+<a href="#cluster_ssh_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ssh_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password to SSH remotely connect cluster’s node (for Linux).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustersshusername_python">
-<a href="#clustersshusername_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ssh<wbr>User<wbr>Name</a>
+        <span id="cluster_ssh_user_name_python">
+<a href="#cluster_ssh_user_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ssh_<wbr>user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterusername_python">
-<a href="#clusterusername_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>User<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
-    </dt>
-    <dd>{{% md %}}The username to access the cluster. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -23007,37 +23117,47 @@ The following output properties are available:
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The cluster type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="cluster_user_name_python">
+<a href="#cluster_user_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+    </dt>
+    <dd>{{% md %}}The username to access the cluster. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="coreconfiguration_python">
-<a href="#coreconfiguration_python" style="color: inherit; text-decoration: inherit;">core<wbr>Configuration</a>
+        <span id="core_configuration_python">
+<a href="#core_configuration_python" style="color: inherit; text-decoration: inherit;">core_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datanodesize_python">
-<a href="#datanodesize_python" style="color: inherit; text-decoration: inherit;">data<wbr>Node<wbr>Size</a>
+        <span id="data_node_size_python">
+<a href="#data_node_size_python" style="color: inherit; text-decoration: inherit;">data_<wbr>node_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the size of the data node for the HDInsight cluster.{{% /md %}}</dd>
 
@@ -23053,81 +23173,81 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hbaseconfiguration_python">
-<a href="#hbaseconfiguration_python" style="color: inherit; text-decoration: inherit;">h<wbr>Base<wbr>Configuration</a>
+        <span id="h_base_configuration_python">
+<a href="#h_base_configuration_python" style="color: inherit; text-decoration: inherit;">h_<wbr>base_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hcataloglinkedservicename_python">
-<a href="#hcataloglinkedservicename_python" style="color: inherit; text-decoration: inherit;">hcatalog<wbr>Linked<wbr>Service<wbr>Name</a>
+        <span id="hcatalog_linked_service_name_python">
+<a href="#hcatalog_linked_service_name_python" style="color: inherit; text-decoration: inherit;">hcatalog_<wbr>linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hdfsconfiguration_python">
-<a href="#hdfsconfiguration_python" style="color: inherit; text-decoration: inherit;">hdfs<wbr>Configuration</a>
+        <span id="hdfs_configuration_python">
+<a href="#hdfs_configuration_python" style="color: inherit; text-decoration: inherit;">hdfs_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="headnodesize_python">
-<a href="#headnodesize_python" style="color: inherit; text-decoration: inherit;">head<wbr>Node<wbr>Size</a>
+        <span id="head_node_size_python">
+<a href="#head_node_size_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the size of the head node for the HDInsight cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hiveconfiguration_python">
-<a href="#hiveconfiguration_python" style="color: inherit; text-decoration: inherit;">hive<wbr>Configuration</a>
+        <span id="hive_configuration_python">
+<a href="#hive_configuration_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mapreduceconfiguration_python">
-<a href="#mapreduceconfiguration_python" style="color: inherit; text-decoration: inherit;">map<wbr>Reduce<wbr>Configuration</a>
+        <span id="map_reduce_configuration_python">
+<a href="#map_reduce_configuration_python" style="color: inherit; text-decoration: inherit;">map_<wbr>reduce_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oozieconfiguration_python">
-<a href="#oozieconfiguration_python" style="color: inherit; text-decoration: inherit;">oozie<wbr>Configuration</a>
+        <span id="oozie_configuration_python">
+<a href="#oozie_configuration_python" style="color: inherit; text-decoration: inherit;">oozie_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.{{% /md %}}</dd>
 
@@ -23137,37 +23257,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scriptactions_python">
-<a href="#scriptactions_python" style="color: inherit; text-decoration: inherit;">script<wbr>Actions</a>
+        <span id="script_actions_python">
+<a href="#script_actions_python" style="color: inherit; text-decoration: inherit;">script_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptactionresponse">List[Script<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scriptactionresponse">Sequence[Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key for the service principal id.{{% /md %}}</dd>
 
@@ -23177,17 +23297,17 @@ The following output properties are available:
 <a href="#spark_version_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The version of spark if the cluster type is 'spark'. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stormconfiguration_python">
-<a href="#stormconfiguration_python" style="color: inherit; text-decoration: inherit;">storm<wbr>Configuration</a>
+        <span id="storm_configuration_python">
+<a href="#storm_configuration_python" style="color: inherit; text-decoration: inherit;">storm_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.{{% /md %}}</dd>
 
@@ -23197,7 +23317,7 @@ The following output properties are available:
 <a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -23207,27 +23327,27 @@ The following output properties are available:
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="yarnconfiguration_python">
-<a href="#yarnconfiguration_python" style="color: inherit; text-decoration: inherit;">yarn<wbr>Configuration</a>
+        <span id="yarn_configuration_python">
+<a href="#yarn_configuration_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zookeepernodesize_python">
-<a href="#zookeepernodesize_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node<wbr>Size</a>
+        <span id="zookeeper_node_size_python">
+<a href="#zookeeper_node_size_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the size of the Zoo Keeper node for the HDInsight cluster.{{% /md %}}</dd>
 
@@ -23546,7 +23666,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -23556,27 +23676,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -23592,11 +23712,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -23606,7 +23726,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -23616,7 +23736,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for Windows authentication.{{% /md %}}</dd>
 
@@ -23626,7 +23746,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name for Windows authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -24301,8 +24421,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24315,27 +24435,27 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowhostnamecnmismatch_python">
-<a href="#allowhostnamecnmismatch_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Name<wbr>CNMismatch</a>
+        <span id="allow_host_name_cn_mismatch_python">
+<a href="#allow_host_name_cn_mismatch_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>name_<wbr>cn_<wbr>mismatch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowselfsignedservercert_python">
-<a href="#allowselfsignedservercert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert</a>
+        <span id="allow_self_signed_server_cert_python">
+<a href="#allow_self_signed_server_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>self_<wbr>signed_<wbr>server_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to allow self-signed certificates from the server. The default value is false.{{% /md %}}</dd>
 
@@ -24345,17 +24465,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -24375,27 +24495,27 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the connections to the server are encrypted using SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httppath_python">
-<a href="#httppath_python" style="color: inherit; text-decoration: inherit;">http<wbr>Path</a>
+        <span id="http_path_python">
+<a href="#http_path_python" style="color: inherit; text-decoration: inherit;">http_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The partial URL corresponding to the Hive server.{{% /md %}}</dd>
 
@@ -24405,7 +24525,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -24415,7 +24535,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
@@ -24425,14 +24545,14 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port that the Hive server uses to listen for client connections.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servertype_python">
-<a href="#servertype_python" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
+        <span id="server_type_python">
+<a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24441,18 +24561,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicediscoverymode_python">
-<a href="#servicediscoverymode_python" style="color: inherit; text-decoration: inherit;">service<wbr>Discovery<wbr>Mode</a>
+        <span id="service_discovery_mode_python">
+<a href="#service_discovery_mode_python" style="color: inherit; text-decoration: inherit;">service_<wbr>discovery_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}true to indicate using the ZooKeeper service, false not.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thrifttransportprotocol_python">
-<a href="#thrifttransportprotocol_python" style="color: inherit; text-decoration: inherit;">thrift<wbr>Transport<wbr>Protocol</a>
+        <span id="thrift_transport_protocol_python">
+<a href="#thrift_transport_protocol_python" style="color: inherit; text-decoration: inherit;">thrift_<wbr>transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24461,31 +24581,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usenativequery_python">
-<a href="#usenativequery_python" style="color: inherit; text-decoration: inherit;">use<wbr>Native<wbr>Query</a>
+        <span id="use_native_query_python">
+<a href="#use_native_query_python" style="color: inherit; text-decoration: inherit;">use_<wbr>native_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesystemtruststore_python">
-<a href="#usesystemtruststore_python" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Trust<wbr>Store</a>
+        <span id="use_system_trust_store_python">
+<a href="#use_system_trust_store_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>trust_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.{{% /md %}}</dd>
 
@@ -24495,17 +24615,17 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name that you use to access Hive Server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zookeepernamespace_python">
-<a href="#zookeepernamespace_python" style="color: inherit; text-decoration: inherit;">zoo<wbr>Keeper<wbr>Name<wbr>Space</a>
+        <span id="zoo_keeper_name_space_python">
+<a href="#zoo_keeper_name_space_python" style="color: inherit; text-decoration: inherit;">zoo_<wbr>keeper_<wbr>name_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The namespace on ZooKeeper under which Hive Server 2 nodes are added.{{% /md %}}</dd>
 
@@ -24914,7 +25034,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -24924,14 +25044,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -24944,17 +25064,17 @@ The following output properties are available:
 <a href="#cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -24970,31 +25090,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="embeddedcertdata_python">
-<a href="#embeddedcertdata_python" style="color: inherit; text-decoration: inherit;">embedded<wbr>Cert<wbr>Data</a>
+        <span id="embedded_cert_data_python">
+<a href="#embedded_cert_data_python" style="color: inherit; text-decoration: inherit;">embedded_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableservercertificatevalidation_python">
-<a href="#enableservercertificatevalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Server<wbr>Certificate<wbr>Validation</a>
+        <span id="enable_server_certificate_validation_python">
+<a href="#enable_server_certificate_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>server_<wbr>certificate_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -25004,7 +25124,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -25014,7 +25134,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.{{% /md %}}</dd>
 
@@ -25024,7 +25144,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -25433,7 +25553,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID associated with your Hubspot application.{{% /md %}}</dd>
 
@@ -25443,7 +25563,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The access token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
@@ -25453,7 +25573,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -25463,17 +25583,17 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Hubspot application.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -25489,11 +25609,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -25503,7 +25623,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -25513,37 +25633,37 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The refresh token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -26038,8 +26158,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -26052,27 +26172,27 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The IP address or host name of the Impala server. (i.e. 192.168.222.160){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowhostnamecnmismatch_python">
-<a href="#allowhostnamecnmismatch_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Name<wbr>CNMismatch</a>
+        <span id="allow_host_name_cn_mismatch_python">
+<a href="#allow_host_name_cn_mismatch_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>name_<wbr>cn_<wbr>mismatch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowselfsignedservercert_python">
-<a href="#allowselfsignedservercert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert</a>
+        <span id="allow_self_signed_server_cert_python">
+<a href="#allow_self_signed_server_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>self_<wbr>signed_<wbr>server_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to allow self-signed certificates from the server. The default value is false.{{% /md %}}</dd>
 
@@ -26082,17 +26202,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -26112,17 +26232,17 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the connections to the server are encrypted using SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -26132,7 +26252,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -26142,7 +26262,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name when using UsernameAndPassword.{{% /md %}}</dd>
 
@@ -26152,27 +26272,27 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port that the Impala server uses to listen for client connections. The default value is 21050.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesystemtruststore_python">
-<a href="#usesystemtruststore_python" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Trust<wbr>Store</a>
+        <span id="use_system_trust_store_python">
+<a href="#use_system_trust_store_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>trust_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.{{% /md %}}</dd>
 
@@ -26182,7 +26302,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name used to access the Impala server. The default value is anonymous when using SASLUsername.{{% /md %}}</dd>
 
@@ -26531,7 +26651,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -26541,27 +26661,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication used to connect to the Informix as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -26571,7 +26691,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -26587,11 +26707,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -26601,7 +26721,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -26611,7 +26731,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -26621,7 +26741,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name for Basic authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -26756,8 +26876,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -26780,7 +26900,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for integration runtime.{{% /md %}}</dd>
 
@@ -27189,7 +27309,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The IP address or host name of the Jira service. (e.g. jira.example.com){{% /md %}}</dd>
 
@@ -27199,7 +27319,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name that you use to access Jira Service.{{% /md %}}</dd>
 
@@ -27209,17 +27329,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -27235,11 +27355,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -27249,7 +27369,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -27259,7 +27379,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd>
 
@@ -27269,37 +27389,37 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port that the Jira server uses to listen for client connections. The default value is 443 if connecting through HTTPS, or 8080 if connecting through HTTP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -27434,8 +27554,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -27458,7 +27578,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -27807,7 +27927,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Magento instance. (i.e. 192.168.222.110/magento3){{% /md %}}</dd>
 
@@ -27817,7 +27937,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The access token from Magento.{{% /md %}}</dd>
 
@@ -27827,17 +27947,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -27853,11 +27973,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -27867,37 +27987,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -28156,17 +28276,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -28176,7 +28296,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -28192,11 +28312,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -28206,7 +28326,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -28216,7 +28336,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -28595,7 +28715,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client Id of your Marketo service.{{% /md %}}</dd>
 
@@ -28605,7 +28725,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Marketo server. (i.e. 123-ABC-321.mktorest.com){{% /md %}}</dd>
 
@@ -28615,7 +28735,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -28625,17 +28745,17 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret of your Marketo service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -28651,11 +28771,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -28665,37 +28785,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -29044,7 +29164,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -29054,27 +29174,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication used to connect to the Microsoft Access as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -29084,7 +29204,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -29100,11 +29220,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29114,7 +29234,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -29124,7 +29244,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -29134,7 +29254,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name for Basic authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29363,7 +29483,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -29373,7 +29493,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29383,17 +29503,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -29413,7 +29533,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -29882,7 +30002,7 @@ The following output properties are available:
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29892,17 +30012,17 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowselfsignedservercert_python">
-<a href="#allowselfsignedservercert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert</a>
+        <span id="allow_self_signed_server_cert_python">
+<a href="#allow_self_signed_server_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>self_<wbr>signed_<wbr>server_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -29912,24 +30032,24 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authsource_python">
-<a href="#authsource_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Source</a>
+        <span id="auth_source_python">
+<a href="#auth_source_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Database to verify the username and password. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -29938,11 +30058,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -29962,17 +30082,17 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29982,7 +30102,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -29992,7 +30112,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -30002,7 +30122,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -30012,7 +30132,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username for authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -30241,7 +30361,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The MongoDB connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -30251,7 +30371,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -30261,17 +30381,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -30291,7 +30411,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -30550,7 +30670,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string.{{% /md %}}</dd>
 
@@ -30560,17 +30680,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -30586,11 +30706,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -30600,7 +30720,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -30610,7 +30730,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -30869,17 +30989,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -30889,7 +31009,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -30905,11 +31025,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -30919,7 +31039,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -30929,7 +31049,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -31488,24 +31608,24 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the OData service endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aadresourceid_python">
-<a href="#aadresourceid_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Resource<wbr>Id</a>
+        <span id="aad_resource_id_python">
+<a href="#aad_resource_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aadserviceprincipalcredentialtype_python">
-<a href="#aadserviceprincipalcredentialtype_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Service<wbr>Principal<wbr>Credential<wbr>Type</a>
+        <span id="aad_service_principal_credential_type_python">
+<a href="#aad_service_principal_credential_type_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>service_<wbr>principal_<wbr>credential_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -31518,14 +31638,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -31534,21 +31654,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -31564,11 +31684,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31578,7 +31698,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -31588,47 +31708,47 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password of the OData service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalembeddedcert_python">
-<a href="#serviceprincipalembeddedcert_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Embedded<wbr>Cert</a>
+        <span id="service_principal_embedded_cert_python">
+<a href="#service_principal_embedded_cert_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>embedded_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalembeddedcertpassword_python">
-<a href="#serviceprincipalembeddedcertpassword_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Embedded<wbr>Cert<wbr>Password</a>
+        <span id="service_principal_embedded_cert_password_python">
+<a href="#service_principal_embedded_cert_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>embedded_<wbr>cert_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31638,7 +31758,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the tenant information (domain name or tenant ID) under which your application resides. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31648,7 +31768,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name of the OData service. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31997,7 +32117,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -32007,27 +32127,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication used to connect to the ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -32037,7 +32157,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd>
 
@@ -32053,11 +32173,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32067,7 +32187,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -32077,7 +32197,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd>
 
@@ -32087,7 +32207,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name for Basic authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32402,41 +32522,41 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="office365tenantid_python">
-<a href="#office365tenantid_python" style="color: inherit; text-decoration: inherit;">office365Tenant<wbr>Id</a>
+        <span id="office365_tenant_id_python">
+<a href="#office365_tenant_id_python" style="color: inherit; text-decoration: inherit;">office365_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's client ID. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specify the application's key.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipaltenantid_python">
-<a href="#serviceprincipaltenantid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Tenant<wbr>Id</a>
+        <span id="service_principal_tenant_id_python">
+<a href="#service_principal_tenant_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32446,17 +32566,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -32472,11 +32592,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32486,7 +32606,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -32745,7 +32865,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -32755,17 +32875,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -32781,11 +32901,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32795,7 +32915,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -32805,7 +32925,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -33184,7 +33304,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Oracle Service Cloud instance.{{% /md %}}</dd>
 
@@ -33194,7 +33314,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username key.{{% /md %}}</dd>
 
@@ -33204,7 +33324,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name that you use to access Oracle Service Cloud server.{{% /md %}}</dd>
 
@@ -33214,17 +33334,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -33240,11 +33360,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -33254,37 +33374,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -33403,7 +33523,7 @@ The following output properties are available:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Default value of parameter.{{% /md %}}</dd>
 
@@ -33782,7 +33902,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID associated with your PayPal application.{{% /md %}}</dd>
 
@@ -33792,7 +33912,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the PayPal instance. (i.e. api.sandbox.paypal.com){{% /md %}}</dd>
 
@@ -33802,7 +33922,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -33812,17 +33932,17 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret associated with your PayPal application.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -33838,11 +33958,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -33852,37 +33972,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -34407,8 +34527,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -34421,27 +34541,27 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The IP address or host name of the Phoenix server. (i.e. 192.168.222.160){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowhostnamecnmismatch_python">
-<a href="#allowhostnamecnmismatch_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Name<wbr>CNMismatch</a>
+        <span id="allow_host_name_cn_mismatch_python">
+<a href="#allow_host_name_cn_mismatch_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>name_<wbr>cn_<wbr>mismatch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowselfsignedservercert_python">
-<a href="#allowselfsignedservercert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert</a>
+        <span id="allow_self_signed_server_cert_python">
+<a href="#allow_self_signed_server_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>self_<wbr>signed_<wbr>server_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to allow self-signed certificates from the server. The default value is false.{{% /md %}}</dd>
 
@@ -34451,17 +34571,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -34481,27 +34601,27 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the connections to the server are encrypted using SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httppath_python">
-<a href="#httppath_python" style="color: inherit; text-decoration: inherit;">http<wbr>Path</a>
+        <span id="http_path_python">
+<a href="#http_path_python" style="color: inherit; text-decoration: inherit;">http_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The partial URL corresponding to the Phoenix server. (i.e. /gateway/sandbox/phoenix/version). The default value is hbasephoenix if using WindowsAzureHDInsightService.{{% /md %}}</dd>
 
@@ -34511,7 +34631,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -34521,7 +34641,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -34531,27 +34651,27 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port that the Phoenix server uses to listen for client connections. The default value is 8765.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesystemtruststore_python">
-<a href="#usesystemtruststore_python" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Trust<wbr>Store</a>
+        <span id="use_system_trust_store_python">
+<a href="#use_system_trust_store_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>trust_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.{{% /md %}}</dd>
 
@@ -34561,7 +34681,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name used to connect to the Phoenix server.{{% /md %}}</dd>
 
@@ -34820,7 +34940,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string.{{% /md %}}</dd>
 
@@ -34830,17 +34950,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -34856,11 +34976,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -34870,7 +34990,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -34880,7 +35000,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -35465,8 +35585,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -35479,7 +35599,7 @@ The following output properties are available:
 <a href="#catalog_python" style="color: inherit; text-decoration: inherit;">catalog</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The catalog context for all request against the server.{{% /md %}}</dd>
 
@@ -35489,7 +35609,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The IP address or host name of the Presto server. (i.e. 192.168.222.160){{% /md %}}</dd>
 
@@ -35499,27 +35619,27 @@ The following output properties are available:
 <a href="#server_version_python" style="color: inherit; text-decoration: inherit;">server_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The version of the Presto server. (i.e. 0.148-t){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowhostnamecnmismatch_python">
-<a href="#allowhostnamecnmismatch_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Name<wbr>CNMismatch</a>
+        <span id="allow_host_name_cn_mismatch_python">
+<a href="#allow_host_name_cn_mismatch_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>name_<wbr>cn_<wbr>mismatch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowselfsignedservercert_python">
-<a href="#allowselfsignedservercert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert</a>
+        <span id="allow_self_signed_server_cert_python">
+<a href="#allow_self_signed_server_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>self_<wbr>signed_<wbr>server_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to allow self-signed certificates from the server. The default value is false.{{% /md %}}</dd>
 
@@ -35529,17 +35649,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -35559,17 +35679,17 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the connections to the server are encrypted using SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -35579,7 +35699,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -35589,7 +35709,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd>
 
@@ -35599,37 +35719,37 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port that the Presto server uses to listen for client connections. The default value is 8080.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timezoneid_python">
-<a href="#timezoneid_python" style="color: inherit; text-decoration: inherit;">time<wbr>Zone<wbr>Id</a>
+        <span id="time_zone_id_python">
+<a href="#time_zone_id_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesystemtruststore_python">
-<a href="#usesystemtruststore_python" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Trust<wbr>Store</a>
+        <span id="use_system_trust_store_python">
+<a href="#use_system_trust_store_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>trust_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.{{% /md %}}</dd>
 
@@ -35639,7 +35759,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name used to connect to the Presto server.{{% /md %}}</dd>
 
@@ -36074,23 +36194,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstokensecret_python">
-<a href="#accesstokensecret_python" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Secret</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
-    </dt>
-    <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The access token for OAuth 1.0 authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_token_secret_python">
+<a href="#access_token_secret_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -36098,57 +36218,57 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="companyid_python">
-<a href="#companyid_python" style="color: inherit; text-decoration: inherit;">company<wbr>Id</a>
+        <span id="company_id_python">
+<a href="#company_id_python" style="color: inherit; text-decoration: inherit;">company_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The company ID of the QuickBooks company to authorize.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionproperties_python">
-<a href="#connectionproperties_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
+        <span id="connection_properties_python">
+<a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerkey_python">
-<a href="#consumerkey_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Key</a>
+        <span id="consumer_key_python">
+<a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The consumer key for OAuth 1.0 authentication.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumersecret_python">
-<a href="#consumersecret_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Secret</a>
+        <span id="consumer_secret_python">
+<a href="#consumer_secret_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The consumer secret for OAuth 1.0 authentication.{{% /md %}}</dd>
 
@@ -36164,11 +36284,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36178,7 +36298,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com){{% /md %}}</dd>
 
@@ -36188,17 +36308,17 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
@@ -36577,7 +36697,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36587,7 +36707,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Responsys server.{{% /md %}}</dd>
 
@@ -36597,7 +36717,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -36607,17 +36727,17 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -36633,11 +36753,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36647,37 +36767,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -37172,8 +37292,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -37186,17 +37306,17 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The base URL of the REST service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aadresourceid_python">
-<a href="#aadresourceid_python" style="color: inherit; text-decoration: inherit;">aad<wbr>Resource<wbr>Id</a>
+        <span id="aad_resource_id_python">
+<a href="#aad_resource_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The resource you are requesting authorization to use.{{% /md %}}</dd>
 
@@ -37206,27 +37326,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurecloudtype_python">
-<a href="#azurecloudtype_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -37242,21 +37362,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableservercertificatevalidation_python">
-<a href="#enableservercertificatevalidation_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Server<wbr>Certificate<wbr>Validation</a>
+        <span id="enable_server_certificate_validation_python">
+<a href="#enable_server_certificate_validation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>server_<wbr>certificate_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -37266,7 +37386,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -37276,27 +37396,27 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password used in Basic authentication type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The application's client ID used in AadServicePrincipal authentication type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The application's key used in AadServicePrincipal authentication type.{{% /md %}}</dd>
 
@@ -37306,7 +37426,7 @@ The following output properties are available:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.{{% /md %}}</dd>
 
@@ -37316,7 +37436,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name used in Basic authentication type.{{% /md %}}</dd>
 
@@ -37665,7 +37785,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -37675,17 +37795,17 @@ The following output properties are available:
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Salesforce API version used in ADF. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -37701,21 +37821,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmenturl_python">
-<a href="#environmenturl_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Url</a>
+        <span id="environment_url_python">
+<a href="#environment_url_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of Salesforce instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -37725,7 +37845,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -37735,7 +37855,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -37745,7 +37865,7 @@ The following output properties are available:
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -37755,7 +37875,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38134,7 +38254,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -38144,7 +38264,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38154,27 +38274,27 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionproperties_python">
-<a href="#connectionproperties_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
+        <span id="connection_properties_python">
+<a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
 
@@ -38190,11 +38310,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38204,37 +38324,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -38613,7 +38733,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -38623,17 +38743,17 @@ The following output properties are available:
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Salesforce API version used in ADF. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -38649,21 +38769,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmenturl_python">
-<a href="#environmenturl_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Url</a>
+        <span id="environment_url_python">
+<a href="#environment_url_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38673,7 +38793,7 @@ The following output properties are available:
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Extended properties appended to the connection string. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38683,7 +38803,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -38693,7 +38813,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd>
 
@@ -38703,7 +38823,7 @@ The following output properties are available:
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd>
 
@@ -38713,7 +38833,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39062,7 +39182,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39072,17 +39192,17 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name of the SAP BW instance. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="systemnumber_python">
-<a href="#systemnumber_python" style="color: inherit; text-decoration: inherit;">system<wbr>Number</a>
+        <span id="system_number_python">
+<a href="#system_number_python" style="color: inherit; text-decoration: inherit;">system_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39092,17 +39212,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -39118,11 +39238,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39132,7 +39252,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -39142,7 +39262,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server.{{% /md %}}</dd>
 
@@ -39152,7 +39272,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username to access the SAP BW server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39441,7 +39561,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39451,17 +39571,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -39477,11 +39597,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39491,7 +39611,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -39501,7 +39621,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -39511,7 +39631,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The username for Basic authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39810,17 +39930,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -39836,8 +39956,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -39850,7 +39970,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -39860,7 +39980,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -40219,14 +40339,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -40235,11 +40355,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -40249,7 +40369,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -40265,11 +40385,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40279,7 +40399,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -40289,7 +40409,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to access the SAP HANA server.{{% /md %}}</dd>
 
@@ -40299,7 +40419,7 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name of the SAP HANA server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40309,7 +40429,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username to access the SAP HANA server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40808,7 +40928,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -40818,17 +40938,17 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -40844,11 +40964,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40858,37 +40978,37 @@ The following output properties are available:
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logongroup_python">
-<a href="#logongroup_python" style="color: inherit; text-decoration: inherit;">logon<wbr>Group</a>
+        <span id="logon_group_python">
+<a href="#logon_group_python" style="color: inherit; text-decoration: inherit;">logon_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Logon Group for the SAP System. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageserver_python">
-<a href="#messageserver_python" style="color: inherit; text-decoration: inherit;">message<wbr>Server</a>
+        <span id="message_server_python">
+<a href="#message_server_python" style="color: inherit; text-decoration: inherit;">message_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The hostname of the SAP Message Server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageserverservice_python">
-<a href="#messageserverservice_python" style="color: inherit; text-decoration: inherit;">message<wbr>Server<wbr>Service</a>
+        <span id="message_server_service_python">
+<a href="#message_server_service_python" style="color: inherit; text-decoration: inherit;">message_<wbr>server_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The service name or port number of the Message Server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40898,7 +41018,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -40908,7 +41028,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server where the open hub destination is located.{{% /md %}}</dd>
 
@@ -40918,27 +41038,27 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name of the SAP BW instance where the open hub destination is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemid_python">
-<a href="#systemid_python" style="color: inherit; text-decoration: inherit;">system<wbr>Id</a>
+        <span id="system_id_python">
+<a href="#system_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemnumber_python">
-<a href="#systemnumber_python" style="color: inherit; text-decoration: inherit;">system<wbr>Number</a>
+        <span id="system_number_python">
+<a href="#system_number_python" style="color: inherit; text-decoration: inherit;">system_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}System number of the BW system where the open hub destination is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40948,7 +41068,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -41597,7 +41717,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -41607,17 +41727,17 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -41633,11 +41753,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -41647,37 +41767,37 @@ The following output properties are available:
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logongroup_python">
-<a href="#logongroup_python" style="color: inherit; text-decoration: inherit;">logon<wbr>Group</a>
+        <span id="logon_group_python">
+<a href="#logon_group_python" style="color: inherit; text-decoration: inherit;">logon_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Logon Group for the SAP System. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageserver_python">
-<a href="#messageserver_python" style="color: inherit; text-decoration: inherit;">message<wbr>Server</a>
+        <span id="message_server_python">
+<a href="#message_server_python" style="color: inherit; text-decoration: inherit;">message_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The hostname of the SAP Message Server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageserverservice_python">
-<a href="#messageserverservice_python" style="color: inherit; text-decoration: inherit;">message<wbr>Server<wbr>Service</a>
+        <span id="message_server_service_python">
+<a href="#message_server_service_python" style="color: inherit; text-decoration: inherit;">message_<wbr>server_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The service name or port number of the Message Server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -41687,7 +41807,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -41697,7 +41817,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to access the SAP server where the table is located.{{% /md %}}</dd>
 
@@ -41707,77 +41827,77 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="snclibrarypath_python">
-<a href="#snclibrarypath_python" style="color: inherit; text-decoration: inherit;">snc<wbr>Library<wbr>Path</a>
+        <span id="snc_library_path_python">
+<a href="#snc_library_path_python" style="color: inherit; text-decoration: inherit;">snc_<wbr>library_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sncmode_python">
-<a href="#sncmode_python" style="color: inherit; text-decoration: inherit;">snc<wbr>Mode</a>
+        <span id="snc_mode_python">
+<a href="#snc_mode_python" style="color: inherit; text-decoration: inherit;">snc_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sncmyname_python">
-<a href="#sncmyname_python" style="color: inherit; text-decoration: inherit;">snc<wbr>My<wbr>Name</a>
+        <span id="snc_my_name_python">
+<a href="#snc_my_name_python" style="color: inherit; text-decoration: inherit;">snc_<wbr>my_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sncpartnername_python">
-<a href="#sncpartnername_python" style="color: inherit; text-decoration: inherit;">snc<wbr>Partner<wbr>Name</a>
+        <span id="snc_partner_name_python">
+<a href="#snc_partner_name_python" style="color: inherit; text-decoration: inherit;">snc_<wbr>partner_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sncqop_python">
-<a href="#sncqop_python" style="color: inherit; text-decoration: inherit;">snc<wbr>Qop</a>
+        <span id="snc_qop_python">
+<a href="#snc_qop_python" style="color: inherit; text-decoration: inherit;">snc_<wbr>qop</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemid_python">
-<a href="#systemid_python" style="color: inherit; text-decoration: inherit;">system<wbr>Id</a>
+        <span id="system_id_python">
+<a href="#system_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="systemnumber_python">
-<a href="#systemnumber_python" style="color: inherit; text-decoration: inherit;">system<wbr>Number</a>
+        <span id="system_number_python">
+<a href="#system_number_python" style="color: inherit; text-decoration: inherit;">system_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -41787,7 +41907,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -42530,8 +42650,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -42544,7 +42664,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com){{% /md %}}</dd>
 
@@ -42554,7 +42674,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -42564,7 +42684,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client id for OAuth2 authentication.{{% /md %}}</dd>
 
@@ -42574,17 +42694,17 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret for OAuth2 authentication.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -42600,11 +42720,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -42614,7 +42734,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -42624,37 +42744,37 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name for Basic and OAuth2 authentication.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -42664,7 +42784,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.{{% /md %}}</dd>
 
@@ -43163,7 +43283,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The SFTP server host name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43173,14 +43293,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -43189,11 +43309,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -43209,21 +43329,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostkeyfingerprint_python">
-<a href="#hostkeyfingerprint_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Fingerprint</a>
+        <span id="host_key_fingerprint_python">
+<a href="#host_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>fingerprint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43233,17 +43353,17 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passphrase_python">
-<a href="#passphrase_python" style="color: inherit; text-decoration: inherit;">pass<wbr>Phrase</a>
+        <span id="pass_phrase_python">
+<a href="#pass_phrase_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>phrase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password to decrypt the SSH private key if the SSH private key is encrypted.{{% /md %}}</dd>
 
@@ -43253,7 +43373,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password to logon the SFTP server for Basic authentication.{{% /md %}}</dd>
 
@@ -43263,37 +43383,37 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatekeycontent_python">
-<a href="#privatekeycontent_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Content</a>
+        <span id="private_key_content_python">
+<a href="#private_key_content_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatekeypath_python">
-<a href="#privatekeypath_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Path</a>
+        <span id="private_key_path_python">
+<a href="#private_key_path_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skiphostkeyvalidation_python">
-<a href="#skiphostkeyvalidation_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Host<wbr>Key<wbr>Validation</a>
+        <span id="skip_host_key_validation_python">
+<a href="#skip_host_key_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>host_<wbr>key_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -43303,7 +43423,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The username used to log on to the SFTP server. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43618,31 +43738,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalid_python">
-<a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalkey_python">
-<a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="siteurl_python">
-<a href="#siteurl_python" style="color: inherit; text-decoration: inherit;">site<wbr>Url</a>
+        <span id="site_url_python">
+<a href="#site_url_python" style="color: inherit; text-decoration: inherit;">site_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43652,7 +43772,7 @@ The following output properties are available:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The tenant ID under which your application resides. You can find it from Azure portal Active Directory overview page. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43662,17 +43782,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -43688,11 +43808,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -43702,7 +43822,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -44051,7 +44171,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Shopify server. (i.e. mystore.myshopify.com){{% /md %}}</dd>
 
@@ -44061,7 +44181,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.{{% /md %}}</dd>
 
@@ -44071,17 +44191,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -44097,11 +44217,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -44111,37 +44231,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -44400,7 +44520,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string of snowflake. Type: string, SecureString.{{% /md %}}</dd>
 
@@ -44410,17 +44530,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -44436,11 +44556,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -44450,7 +44570,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -44460,7 +44580,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -45045,8 +45165,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -45059,7 +45179,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}IP address or host name of the Spark server{{% /md %}}</dd>
 
@@ -45069,27 +45189,27 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The TCP port that the Spark server uses to listen for client connections.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowhostnamecnmismatch_python">
-<a href="#allowhostnamecnmismatch_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Name<wbr>CNMismatch</a>
+        <span id="allow_host_name_cn_mismatch_python">
+<a href="#allow_host_name_cn_mismatch_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>name_<wbr>cn_<wbr>mismatch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowselfsignedservercert_python">
-<a href="#allowselfsignedservercert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert</a>
+        <span id="allow_self_signed_server_cert_python">
+<a href="#allow_self_signed_server_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>self_<wbr>signed_<wbr>server_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to allow self-signed certificates from the server. The default value is false.{{% /md %}}</dd>
 
@@ -45099,17 +45219,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -45129,27 +45249,27 @@ The following output properties are available:
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the connections to the server are encrypted using SSL. The default value is false.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httppath_python">
-<a href="#httppath_python" style="color: inherit; text-decoration: inherit;">http<wbr>Path</a>
+        <span id="http_path_python">
+<a href="#http_path_python" style="color: inherit; text-decoration: inherit;">http_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The partial URL corresponding to the Spark server.{{% /md %}}</dd>
 
@@ -45159,7 +45279,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -45169,14 +45289,14 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servertype_python">
-<a href="#servertype_python" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
+        <span id="server_type_python">
+<a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -45185,8 +45305,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thrifttransportprotocol_python">
-<a href="#thrifttransportprotocol_python" style="color: inherit; text-decoration: inherit;">thrift<wbr>Transport<wbr>Protocol</a>
+        <span id="thrift_transport_protocol_python">
+<a href="#thrift_transport_protocol_python" style="color: inherit; text-decoration: inherit;">thrift_<wbr>transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -45195,21 +45315,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertpath_python">
-<a href="#trustedcertpath_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Cert<wbr>Path</a>
+        <span id="trusted_cert_path_python">
+<a href="#trusted_cert_path_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>cert_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesystemtruststore_python">
-<a href="#usesystemtruststore_python" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Trust<wbr>Store</a>
+        <span id="use_system_trust_store_python">
+<a href="#use_system_trust_store_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>trust_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.{{% /md %}}</dd>
 
@@ -45219,7 +45339,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name that you use to access Spark Server.{{% /md %}}</dd>
 
@@ -45508,7 +45628,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -45518,17 +45638,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -45544,11 +45664,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -45558,7 +45678,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -45568,7 +45688,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication password.{{% /md %}}</dd>
 
@@ -45578,7 +45698,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication user name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -46017,7 +46137,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
@@ -46027,7 +46147,7 @@ The following output properties are available:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The client ID associated with your Square application.{{% /md %}}</dd>
 
@@ -46037,27 +46157,27 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Square application.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionproperties_python">
-<a href="#connectionproperties_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
+        <span id="connection_properties_python">
+<a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Properties used to connect to Square. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
 
@@ -46073,11 +46193,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -46087,7 +46207,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Square instance. (i.e. mystore.mysquare.com){{% /md %}}</dd>
 
@@ -46097,47 +46217,47 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirecturi_python">
-<a href="#redirecturi_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uri</a>
+        <span id="redirect_uri_python">
+<a href="#redirect_uri_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The redirect URL assigned in the Square application dashboard. (i.e. http://localhost:2500){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -46516,7 +46636,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Database name for connection. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -46526,7 +46646,7 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Server name for connection. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -46536,14 +46656,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -46552,11 +46672,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -46572,11 +46692,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -46586,7 +46706,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -46596,7 +46716,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -46606,7 +46726,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Schema name for connection. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -46616,7 +46736,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username for authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -46965,14 +47085,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -46981,11 +47101,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -46995,7 +47115,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -47011,11 +47131,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47025,7 +47145,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -47035,7 +47155,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd>
 
@@ -47045,7 +47165,7 @@ The following output properties are available:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Server name for connection. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47055,7 +47175,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Username for authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47314,17 +47434,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -47334,7 +47454,7 @@ The following output properties are available:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd>
 
@@ -47350,11 +47470,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47364,7 +47484,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -47374,7 +47494,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd>
 
@@ -47453,7 +47573,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47592,7 +47712,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd>
 
@@ -47602,7 +47722,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47612,7 +47732,7 @@ The following output properties are available:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}User name for Basic authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47751,7 +47871,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Password for the PFX file.{{% /md %}}</dd>
 
@@ -47761,7 +47881,7 @@ The following output properties are available:
 <a href="#pfx_python" style="color: inherit; text-decoration: inherit;">pfx</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
 
@@ -47771,7 +47891,7 @@ The following output properties are available:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -47966,11 +48086,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="typeproperties_python">
-<a href="#typeproperties_python" style="color: inherit; text-decoration: inherit;">type<wbr>Properties</a>
+        <span id="type_properties_python">
+<a href="#type_properties_python" style="color: inherit; text-decoration: inherit;">type_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Web<wbr>Anonymous<wbr>Authentication<wbr>Response] | Dict[Web<wbr>Basic<wbr>Authentication<wbr>Response] | Dict[Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response]</span>
+        <span class="property-type">Union[Web<wbr>Anonymous<wbr>Authentication<wbr>Response<wbr>Args, Web<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args, Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Web linked service properties.{{% /md %}}</dd>
 
@@ -47980,17 +48100,17 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
@@ -48010,7 +48130,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
@@ -48422,37 +48542,37 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionproperties_python">
-<a href="#connectionproperties_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
+        <span id="connection_properties_python">
+<a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerkey_python">
-<a href="#consumerkey_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Key</a>
+        <span id="consumer_key_python">
+<a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The consumer key associated with the Xero application.{{% /md %}}</dd>
 
@@ -48468,11 +48588,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -48482,7 +48602,7 @@ The following output properties are available:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Xero server. (i.e. api.xero.com){{% /md %}}</dd>
 
@@ -48492,48 +48612,48 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatekey_python">
-<a href="#privatekey_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
@@ -48912,7 +49032,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The access token for Zoho authentication.{{% /md %}}</dd>
 
@@ -48922,27 +49042,27 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Dict[Integration<wbr>Runtime<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionproperties_python">
-<a href="#connectionproperties_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
+        <span id="connection_properties_python">
+<a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Properties used to connect to Zoho. It is mutually exclusive with any other properties in the linked service. Type: object.{{% /md %}}</dd>
 
@@ -48958,11 +49078,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptedcredential_python">
-<a href="#encryptedcredential_python" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -48972,7 +49092,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The endpoint of the Zoho server. (i.e. crm.zoho.com/crm/private){{% /md %}}</dd>
 
@@ -48982,37 +49102,37 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useencryptedendpoints_python">
-<a href="#useencryptedendpoints_python" style="color: inherit; text-decoration: inherit;">use<wbr>Encrypted<wbr>Endpoints</a>
+        <span id="use_encrypted_endpoints_python">
+<a href="#use_encrypted_endpoints_python" style="color: inherit; text-decoration: inherit;">use_<wbr>encrypted_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usehostverification_python">
-<a href="#usehostverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Host<wbr>Verification</a>
+        <span id="use_host_verification_python">
+<a href="#use_host_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>host_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepeerverification_python">
-<a href="#usepeerverification_python" style="color: inherit; text-decoration: inherit;">use<wbr>Peer<wbr>Verification</a>
+        <span id="use_peer_verification_python">
+<a href="#use_peer_verification_python" style="color: inherit; text-decoration: inherit;">use_<wbr>peer_<wbr>verification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.{{% /md %}}</dd>
 

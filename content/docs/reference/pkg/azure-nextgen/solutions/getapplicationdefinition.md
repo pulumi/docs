@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdefinitionartifactresponse">List[Application<wbr>Definition<wbr>Artifact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationdefinitionartifactresponse">Sequence[Application<wbr>Definition<wbr>Artifact<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorizationresponse">List[Application<wbr>Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationauthorizationresponse">Sequence[Application<wbr>Authorization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider authorizations.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#create_ui_definition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>ui_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#deployment_policy_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdeploymentpolicyresponse">Dict[Application<wbr>Deployment<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationdeploymentpolicyresponse">Application<wbr>Deployment<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment policy.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#locking_policy_python" style="color: inherit; text-decoration: inherit;">locking_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagelockingpolicydefinitionresponse">Dict[Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpackagelockingpolicydefinitionresponse">Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application locking policy.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#main_template_python" style="color: inherit; text-decoration: inherit;">main_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#management_policy_python" style="color: inherit; text-decoration: inherit;">management_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmanagementpolicyresponse">Dict[Application<wbr>Management<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationmanagementpolicyresponse">Application<wbr>Management<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application management policy that determines publisher's access to the managed resource group.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#notification_policy_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationpolicyresponse">Dict[Application<wbr>Notification<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationnotificationpolicyresponse">Application<wbr>Notification<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification policy.{{% /md %}}</dd>
 
@@ -969,7 +969,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpolicyresponse">List[Application<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpolicyresponse">Sequence[Application<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider policies.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1589,7 +1589,7 @@ The following output properties are available:
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">List[Application<wbr>Notification<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd>
 
@@ -1668,7 +1668,7 @@ The following output properties are available:
 <a href="#allowed_actions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The deny assignment excluded actions.{{% /md %}}</dd>
 

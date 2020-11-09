@@ -339,7 +339,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatepropertiesresponse">Dict[Certificate<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatepropertiesresponse">Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the certificate resource payload.{{% /md %}}</dd>
 
@@ -714,7 +714,7 @@ The following output properties are available:
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The domain list of certificate.{{% /md %}}</dd>
 

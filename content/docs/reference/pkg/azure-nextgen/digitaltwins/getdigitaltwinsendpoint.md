@@ -339,7 +339,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Event<wbr>Grid<wbr>Response] | Dict[Event<wbr>Hub<wbr>Response] | Dict[Service<wbr>Bus<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
@@ -580,8 +580,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey1_python">
-<a href="#accesskey1_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key1</a>
+        <span id="access_key1_python">
+<a href="#access_key1_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key1</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -610,8 +610,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="topicendpoint_python">
-<a href="#topicendpoint_python" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
+        <span id="topic_endpoint_python">
+<a href="#topic_endpoint_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -620,8 +620,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesskey2_python">
-<a href="#accesskey2_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
+        <span id="access_key2_python">
+<a href="#access_key2_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key2</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -630,8 +630,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -829,8 +829,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionstringprimarykey_python">
-<a href="#connectionstringprimarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Primary<wbr>Key</a>
+        <span id="connection_string_primary_key_python">
+<a href="#connection_string_primary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>primary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -859,8 +859,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionstringsecondarykey_python">
-<a href="#connectionstringsecondarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
+        <span id="connection_string_secondary_key_python">
+<a href="#connection_string_secondary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>secondary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -869,8 +869,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1078,8 +1078,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="primaryconnectionstring_python">
-<a href="#primaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
+        <span id="primary_connection_string_python">
+<a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1098,8 +1098,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettersecret_python">
-<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+        <span id="dead_letter_secret_python">
+<a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1108,8 +1108,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryconnectionstring_python">
-<a href="#secondaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
+        <span id="secondary_connection_string_python">
+<a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

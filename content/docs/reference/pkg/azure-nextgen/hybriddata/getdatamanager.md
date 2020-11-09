@@ -430,7 +430,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd>
 
@@ -440,7 +440,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
 (across resource groups).{{% /md %}}</dd>

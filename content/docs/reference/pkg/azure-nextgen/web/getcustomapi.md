@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customapipropertiesdefinitionresponse">Dict[Custom<wbr>Api<wbr>Properties<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customapipropertiesdefinitionresponse">Custom<wbr>Api<wbr>Properties<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom API properties{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -574,17 +574,17 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uidefinition_python">
-<a href="#uidefinition_python" style="color: inherit; text-decoration: inherit;">ui<wbr>Definition</a>
+        <span id="ui_definition_python">
+<a href="#ui_definition_python" style="color: inherit; text-decoration: inherit;">ui_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -869,18 +869,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customparameters_python">
-<a href="#customparameters_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Parameters</a>
+        <span id="custom_parameters_python">
+<a href="#custom_parameters_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityprovider_python">
-<a href="#identityprovider_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider</a>
+        <span id="identity_provider_python">
+<a href="#identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -893,14 +893,14 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirecturl_python">
-<a href="#redirecturl_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
+        <span id="redirect_url_python">
+<a href="#redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}OAuth scopes{{% /md %}}</dd>
 
@@ -1216,11 +1216,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthsettings_python">
-<a href="#oauthsettings_python" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Settings</a>
+        <span id="o_auth_settings_python">
+<a href="#o_auth_settings_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettingsresponse">Dict[Api<wbr>OAuth<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apioauthsettingsresponse">Api<wbr>OAuth<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd>
 
@@ -1639,7 +1639,7 @@ The following output properties are available:
 <a href="#api_definitions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Dict[Api<wbr>Resource<wbr>Definitions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd>
 
@@ -1659,7 +1659,7 @@ The following output properties are available:
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Dict[Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd>
 
@@ -1679,7 +1679,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The custom API capabilities{{% /md %}}</dd>
 
@@ -1689,7 +1689,7 @@ The following output properties are available:
 <a href="#connection_parameters_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Connection<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Connection<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd>
 
@@ -1729,7 +1729,7 @@ The following output properties are available:
 <a href="#runtime_urls_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Runtime URLs{{% /md %}}</dd>
 
@@ -1739,7 +1739,7 @@ The following output properties are available:
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -1749,7 +1749,7 @@ The following output properties are available:
 <a href="#wsdl_definition_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinitionresponse">Dict[Wsdl<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#wsdldefinitionresponse">Wsdl<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd>
 
@@ -1938,7 +1938,7 @@ The following output properties are available:
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Dict[Wsdl<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd>
 
@@ -2067,7 +2067,7 @@ The following output properties are available:
 <a href="#endpoint_qualified_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>qualified_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
 

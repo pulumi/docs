@@ -1014,6 +1014,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Server name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncstatus_csharp">
 <a href="#syncstatus_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Status</a>
 </span> 
@@ -1030,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1131,6 +1141,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Server name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncstatus_go">
 <a href="#syncstatus_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Status</a>
 </span> 
@@ -1147,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1248,6 +1268,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Server name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncstatus_nodejs">
 <a href="#syncstatus_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Status</a>
 </span> 
@@ -1264,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1279,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_tiering_status_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>tiering_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Dict[Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
 
@@ -1359,9 +1389,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recall_status_python" style="color: inherit; text-decoration: inherit;">recall_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallstatusresponse">Dict[Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallstatusresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="server_name_python">
+<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Server name{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1369,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_status_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncstatusresponse">Dict[Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointsyncstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd>
 
@@ -1381,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1845,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">List[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">Sequence[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd>
 
@@ -2418,13 +2458,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filecount_python">
-<a href="#filecount_python" style="color: inherit; text-decoration: inherit;">file<wbr>Count</a>
+        <span id="file_count_python">
+<a href="#file_count_python" style="color: inherit; text-decoration: inherit;">file_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serverendpointbackgrounddatadownloadactivityresponse">Server<wbr>Endpoint<wbr>Background<wbr>Data<wbr>Download<wbr>Activity<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="downloadedbytes_csharp">
+<a href="#downloadedbytes_csharp" style="color: inherit; text-decoration: inherit;">Downloaded<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Running count of bytes downloaded{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percentprogress_csharp">
+<a href="#percentprogress_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Progress percentage{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_csharp">
+<a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="downloadedbytes_go">
+<a href="#downloadedbytes_go" style="color: inherit; text-decoration: inherit;">Downloaded<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Running count of bytes downloaded{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percentprogress_go">
+<a href="#percentprogress_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Progress percentage{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_go">
+<a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="downloadedbytes_nodejs">
+<a href="#downloadedbytes_nodejs" style="color: inherit; text-decoration: inherit;">downloaded<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Running count of bytes downloaded{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percentprogress_nodejs">
+<a href="#percentprogress_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Progress percentage{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_nodejs">
+<a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="downloaded_bytes_python">
+<a href="#downloaded_bytes_python" style="color: inherit; text-decoration: inherit;">downloaded_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Running count of bytes downloaded{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percent_progress_python">
+<a href="#percent_progress_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Progress percentage{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_python">
+<a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2771,7 +2970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_performance_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>performance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Dict[Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd>
 
@@ -2781,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_policy_status_python" style="color: inherit; text-decoration: inherit;">date_<wbr>policy_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Dict[Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd>
 
@@ -2791,7 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_not_tiering_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>tiering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Dict[Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd>
 
@@ -2851,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Dict[Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd>
 
@@ -2861,7 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_free_space_policy_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>policy_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Dict[Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd>
 
@@ -3006,8 +3205,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="persistentcount_python">
-<a href="#persistentcount_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Count</a>
+        <span id="persistent_count_python">
+<a href="#persistent_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3016,8 +3215,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="transientcount_python">
-<a href="#transientcount_python" style="color: inherit; text-decoration: inherit;">transient<wbr>Count</a>
+        <span id="transient_count_python">
+<a href="#transient_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3288,7 +3487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recall_errors_python" style="color: inherit; text-decoration: inherit;">recall_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">List[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd>
 
@@ -3349,6 +3548,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3419,6 +3628,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
 </span> 
@@ -3483,6 +3702,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3553,6 +3782,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span> 
@@ -3608,6 +3847,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastsyncmode_csharp">
+<a href="#lastsyncmode_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3688,6 +3937,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="lastsyncmode_go">
+<a href="#lastsyncmode_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="lastsyncperitemerrorcount_go">
 <a href="#lastsyncperitemerrorcount_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span> 
@@ -3765,6 +4024,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="lastsyncmode_nodejs">
+<a href="#lastsyncmode_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="lastsyncperitemerrorcount_nodejs">
 <a href="#lastsyncperitemerrorcount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span> 
@@ -3836,9 +4105,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_not_syncing_errors_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>syncing_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_sync_mode_python">
+<a href="#last_sync_mode_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3917,6 +4196,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backgrounddatadownloadactivity_csharp">
+<a href="#backgrounddatadownloadactivity_csharp" style="color: inherit; text-decoration: inherit;">Background<wbr>Data<wbr>Download<wbr>Activity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverendpointbackgrounddatadownloadactivityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Background<wbr>Data<wbr>Download<wbr>Activity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Background data download activity{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4037,6 +4326,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="backgrounddatadownloadactivity_go">
+<a href="#backgrounddatadownloadactivity_go" style="color: inherit; text-decoration: inherit;">Background<wbr>Data<wbr>Download<wbr>Activity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverendpointbackgrounddatadownloadactivityresponse">Server<wbr>Endpoint<wbr>Background<wbr>Data<wbr>Download<wbr>Activity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Background data download activity{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="combinedhealth_go">
 <a href="#combinedhealth_go" style="color: inherit; text-decoration: inherit;">Combined<wbr>Health</a>
 </span> 
@@ -4151,6 +4450,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backgrounddatadownloadactivity_nodejs">
+<a href="#backgrounddatadownloadactivity_nodejs" style="color: inherit; text-decoration: inherit;">background<wbr>Data<wbr>Download<wbr>Activity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverendpointbackgrounddatadownloadactivityresponse">Server<wbr>Endpoint<wbr>Background<wbr>Data<wbr>Download<wbr>Activity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Background data download activity{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4271,6 +4580,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="background_data_download_activity_python">
+<a href="#background_data_download_activity_python" style="color: inherit; text-decoration: inherit;">background_<wbr>data_<wbr>download_<wbr>activity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serverendpointbackgrounddatadownloadactivityresponse">Server<wbr>Endpoint<wbr>Background<wbr>Data<wbr>Download<wbr>Activity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Background data download activity{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="combined_health_python">
 <a href="#combined_health_python" style="color: inherit; text-decoration: inherit;">combined_<wbr>health</a>
 </span> 
@@ -4285,7 +4604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_activity_python" style="color: inherit; text-decoration: inherit;">download_<wbr>activity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Dict[Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd>
 
@@ -4305,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_status_python" style="color: inherit; text-decoration: inherit;">download_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Dict[Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd>
 
@@ -4355,7 +4674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_activity_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>activity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Dict[Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd>
 
@@ -4375,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_status_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Dict[Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd>
 

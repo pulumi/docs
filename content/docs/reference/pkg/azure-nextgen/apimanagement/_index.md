@@ -30,6 +30,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="contentitem" title="ContentItem"><span class="symbol resource"></span>ContentItem</a></li>
     <li><a href="contenttype" title="ContentType"><span class="symbol resource"></span>ContentType</a></li>
+    <li><a href="contenttypecontentitem" title="ContentTypeContentItem"><span class="symbol resource"></span>ContentTypeContentItem</a></li>
     <li><a href="diagnostic" title="Diagnostic"><span class="symbol resource"></span>Diagnostic</a></li>
     <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
     <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
@@ -73,6 +74,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcontentitem" title="GetContentItem"><span class="symbol function"></span>GetContentItem</a></li>
     <li><a href="getcontenttype" title="GetContentType"><span class="symbol function"></span>GetContentType</a></li>
+    <li><a href="getcontenttypecontentitem" title="GetContentTypeContentItem"><span class="symbol function"></span>GetContentTypeContentItem</a></li>
     <li><a href="getdiagnostic" title="GetDiagnostic"><span class="symbol function"></span>GetDiagnostic</a></li>
     <li><a href="getemailtemplate" title="GetEmailTemplate"><span class="symbol function"></span>GetEmailTemplate</a></li>
     <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
@@ -110,7 +112,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

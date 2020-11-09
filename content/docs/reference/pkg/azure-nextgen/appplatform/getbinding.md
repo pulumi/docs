@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bindingresourcepropertiesresponse">Dict[Binding<wbr>Resource<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bindingresourcepropertiesresponse">Binding<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Binding resource{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The following output properties are available:
 <a href="#binding_parameters_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 

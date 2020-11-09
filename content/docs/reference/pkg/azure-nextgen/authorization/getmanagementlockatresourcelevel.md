@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementlockownerresponse">List[Management<wbr>Lock<wbr>Owner<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementlockownerresponse">Sequence[Management<wbr>Lock<wbr>Owner<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
 

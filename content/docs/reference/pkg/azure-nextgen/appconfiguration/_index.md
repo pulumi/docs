@@ -12,14 +12,17 @@ Explore the resources and functions of the appconfiguration module in the Azure 
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="configurationstore" title="ConfigurationStore"><span class="symbol resource"></span>ConfigurationStore</a></li>
+    <li><a href="keyvalue" title="KeyValue"><span class="symbol resource"></span>KeyValue</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getconfigurationstore" title="GetConfigurationStore"><span class="symbol function"></span>GetConfigurationStore</a></li>
+    <li><a href="getkeyvalue" title="GetKeyValue"><span class="symbol function"></span>GetKeyValue</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="listconfigurationstorekeyvalue" title="ListConfigurationStoreKeyValue"><span class="symbol function"></span>ListConfigurationStoreKeyValue</a></li>
+    <li><a href="listconfigurationstorekeys" title="ListConfigurationStoreKeys"><span class="symbol function"></span>ListConfigurationStoreKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,7 +32,7 @@ Explore the resources and functions of the appconfiguration module in the Azure 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

@@ -16,6 +16,153 @@ Rule Collection Group resource.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Create FirewallPolicyNatRuleCollectionGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 100,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                {
+                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    {
+                        Type = "DNAT",
+                    },
+                    Name = "Example-Nat-Rule-Collection",
+                    Priority = 100,
+                    RuleCollectionType = "FirewallPolicyNatRuleCollection",
+                    Rules = 
+                    {
+                        
+                        {
+                            { "destinationAddresses", 
+                            {
+                                "152.23.32.23",
+                            } },
+                            { "destinationPorts", 
+                            {
+                                "8080",
+                            } },
+                            { "ipProtocols", 
+                            {
+                                "TCP",
+                                "UDP",
+                            } },
+                            { "name", "nat-rule1" },
+                            { "ruleType", "NatRule" },
+                            { "sourceAddresses", 
+                            {
+                                "2.2.2.2",
+                            } },
+                            { "sourceIpGroups", {} },
+                            { "translatedFqdn", "internalhttp.server.net" },
+                            { "translatedPort", "8080" },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=100,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+            type="DNAT",
+        ),
+        name="Example-Nat-Rule-Collection",
+        priority=100,
+        rule_collection_type="FirewallPolicyNatRuleCollection",
+        rules=[{
+            "destinationAddresses": ["152.23.32.23"],
+            "destinationPorts": ["8080"],
+            "ipProtocols": [
+                "TCP",
+                "UDP",
+            ],
+            "name": "nat-rule1",
+            "ruleType": "NatRule",
+            "sourceAddresses": ["2.2.2.2"],
+            "sourceIpGroups": [],
+            "translatedFqdn": "internalhttp.server.net",
+            "translatedPort": "8080",
+        }],
+    )])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 100,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "DNAT",
+        },
+        name: "Example-Nat-Rule-Collection",
+        priority: 100,
+        ruleCollectionType: "FirewallPolicyNatRuleCollection",
+        rules: [{
+            destinationAddresses: ["152.23.32.23"],
+            destinationPorts: ["8080"],
+            ipProtocols: [
+                "TCP",
+                "UDP",
+            ],
+            name: "nat-rule1",
+            ruleType: "NatRule",
+            sourceAddresses: ["2.2.2.2"],
+            sourceIpGroups: [],
+            translatedFqdn: "internalhttp.server.net",
+            translatedPort: "8080",
+        }],
+    }],
+});
+
+```
+
+{{% /example %}}
+
 ### Create FirewallPolicyRuleCollectionGroup
 {{% example csharp %}}
 ```csharp
@@ -29,7 +176,7 @@ class MyStack : Stack
         var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
-            Priority = 110,
+            Priority = 100,
             ResourceGroupName = "rg1",
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
@@ -41,6 +188,7 @@ class MyStack : Stack
                         Type = "Deny",
                     },
                     Name = "Example-Filter-Rule-Collection",
+                    Priority = 100,
                     RuleCollectionType = "FirewallPolicyFilterRuleCollection",
                     Rules = 
                     {
@@ -89,16 +237,17 @@ import pulumi_azure_nextgen as azure_nextgen
 
 firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
-    priority=110,
+    priority=100,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "Example-Filter-Rule-Collection",
-        "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
-        "rules": [{
+    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+            type="Deny",
+        ),
+        name="Example-Filter-Rule-Collection",
+        priority=100,
+        rule_collection_type="FirewallPolicyFilterRuleCollection",
+        rules=[{
             "destinationAddresses": ["*"],
             "destinationPorts": ["*"],
             "ipProtocols": ["TCP"],
@@ -106,7 +255,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
             "ruleType": "NetworkRule",
             "sourceAddresses": ["10.1.25.0/24"],
         }],
-    }])
+    )])
 
 ```
 
@@ -120,7 +269,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
-    priority: 110,
+    priority: 100,
     resourceGroupName: "rg1",
     ruleCollectionGroupName: "ruleCollectionGroup1",
     ruleCollections: [{
@@ -128,6 +277,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
             type: "Deny",
         },
         name: "Example-Filter-Rule-Collection",
+        priority: 100,
         ruleCollectionType: "FirewallPolicyFilterRuleCollection",
         rules: [{
             destinationAddresses: ["*"],
@@ -220,13 +370,13 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
     priority=110,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[{
-        "action": {
-            "type": "Deny",
-        },
-        "name": "Example-Filter-Rule-Collection",
-        "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
-        "rules": [{
+    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+            type="Deny",
+        ),
+        name="Example-Filter-Rule-Collection",
+        rule_collection_type="FirewallPolicyFilterRuleCollection",
+        rules=[{
             "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
             "destinationPorts": ["*"],
             "ipProtocols": ["TCP"],
@@ -234,7 +384,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
             "ruleType": "NetworkRule",
             "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
         }],
-    }])
+    )])
 
 ```
 
@@ -272,6 +422,148 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
 
 {{% /example %}}
 
+### Create FirewallPolicyRuleCollectionGroup With Web Categories
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 110,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                {
+                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    {
+                        Type = "Deny",
+                    },
+                    Name = "Example-Filter-Rule-Collection",
+                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
+                    Rules = 
+                    {
+                        
+                        {
+                            { "description", "Deny inbound rule" },
+                            { "name", "rule1" },
+                            { "protocols", 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyRuleApplicationProtocolArgs
+                                {
+                                    Port = 443,
+                                    ProtocolType = "Https",
+                                },
+                            } },
+                            { "ruleType", "ApplicationRule" },
+                            { "sourceAddresses", 
+                            {
+                                "216.58.216.164",
+                                "10.0.0.0/24",
+                            } },
+                            { "webCategories", 
+                            {
+                                "Hacking",
+                            } },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=110,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+            type="Deny",
+        ),
+        name="Example-Filter-Rule-Collection",
+        rule_collection_type="FirewallPolicyFilterRuleCollection",
+        rules=[{
+            "description": "Deny inbound rule",
+            "name": "rule1",
+            "protocols": [azure_nextgen.network.latest.FirewallPolicyRuleApplicationProtocolArgs(
+                port=443,
+                protocol_type="Https",
+            )],
+            "ruleType": "ApplicationRule",
+            "sourceAddresses": [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            "webCategories": ["Hacking"],
+        }],
+    )])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 110,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule-Collection",
+        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
+        rules: [{
+            description: "Deny inbound rule",
+            name: "rule1",
+            protocols: [{
+                port: 443,
+                protocolType: "Https",
+            }],
+            ruleType: "ApplicationRule",
+            sourceAddresses: [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            webCategories: ["Hacking"],
+        }],
+    }],
+});
+
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -284,7 +576,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collection_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collections</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Network/Latest:FirewallPolicyFilterRuleCollection, Azure-Nextgen:Network/Latest:FirewallPolicyNatRuleCollection, Default=&gt;]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collection_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[FirewallPolicyFilterRuleCollectionArgs, FirewallPolicyNatRuleCollectionArgs]]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -753,7 +1045,7 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 <a href="#rule_collections_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>collections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Network/Latest:Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection, Azure-Nextgen:Network/Latest:Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection, Default=>]</span>
+        <span class="property-type">Sequence[Union[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Args, Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd>
 
@@ -1063,6 +1355,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targeturls_csharp">
+<a href="#targeturls_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_csharp">
+<a href="#terminatetls_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_csharp">
+<a href="#webcategories_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1149,6 +1471,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targeturls_go">
+<a href="#targeturls_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_go">
+<a href="#terminatetls_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_go">
+<a href="#webcategories_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1237,6 +1589,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targeturls_nodejs">
+<a href="#targeturls_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_nodejs">
+<a href="#terminatetls_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>TLS</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_nodejs">
+<a href="#webcategories_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1256,21 +1638,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fqdntags_python">
-<a href="#fqdntags_python" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
+        <span id="fqdn_tags_python">
+<a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
 
@@ -1290,39 +1672,69 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">List[Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetfqdns_python">
-<a href="#targetfqdns_python" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
+        <span id="target_fqdns_python">
+<a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_urls_python">
+<a href="#target_urls_python" style="color: inherit; text-decoration: inherit;">target_<wbr>urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminate_tls_python">
+<a href="#terminate_tls_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="web_categories_python">
+<a href="#web_categories_python" style="color: inherit; text-decoration: inherit;">web_<wbr>categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1422,6 +1834,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targeturls_csharp">
+<a href="#targeturls_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_csharp">
+<a href="#terminatetls_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_csharp">
+<a href="#webcategories_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1508,6 +1950,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targeturls_go">
+<a href="#targeturls_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_go">
+<a href="#terminatetls_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_go">
+<a href="#webcategories_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1596,6 +2068,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targeturls_nodejs">
+<a href="#targeturls_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminatetls_nodejs">
+<a href="#terminatetls_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>TLS</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webcategories_nodejs">
+<a href="#webcategories_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1615,21 +2117,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fqdntags_python">
-<a href="#fqdntags_python" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
+        <span id="fqdn_tags_python">
+<a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
 
@@ -1649,39 +2151,69 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">List[Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetfqdns_python">
-<a href="#targetfqdns_python" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
+        <span id="target_fqdns_python">
+<a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_urls_python">
+<a href="#target_urls_python" style="color: inherit; text-decoration: inherit;">target_<wbr>urls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="terminate_tls_python">
+<a href="#terminate_tls_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="web_categories_python">
+<a href="#web_categories_python" style="color: inherit; text-decoration: inherit;">web_<wbr>categories</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1848,7 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Dict[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
 
@@ -1878,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Network/Latest:Application<wbr>Rule, Azure-Nextgen:Network/Latest:Nat<wbr>Rule, Azure-Nextgen:Network/Latest:Network<wbr>Rule, Default=>]</span>
+        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Args, Nat<wbr>Rule<wbr>Args, Network<wbr>Rule<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
 
@@ -2205,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Dict[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
 
@@ -2235,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Network/Latest:Application<wbr>Rule<wbr>Response, Azure-Nextgen:Network/Latest:Nat<wbr>Rule<wbr>Response, Azure-Nextgen:Network/Latest:Network<wbr>Rule<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
 
@@ -2404,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Dict[Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action]</a></span>
+        <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
 
@@ -2434,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Network/Latest:Application<wbr>Rule, Azure-Nextgen:Network/Latest:Nat<wbr>Rule, Azure-Nextgen:Network/Latest:Network<wbr>Rule, Default=>]</span>
+        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Args, Nat<wbr>Rule<wbr>Args, Network<wbr>Rule<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
 
@@ -2761,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Dict[Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
 
@@ -2791,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Network/Latest:Application<wbr>Rule<wbr>Response, Azure-Nextgen:Network/Latest:Nat<wbr>Rule<wbr>Response, Azure-Nextgen:Network/Latest:Network<wbr>Rule<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
 
@@ -2906,8 +3438,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protocoltype_python">
-<a href="#protocoltype_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3025,8 +3557,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protocoltype_python">
-<a href="#protocoltype_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3133,6 +3665,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="translatedfqdn_csharp">
+<a href="#translatedfqdn_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="translatedport_csharp">
 <a href="#translatedport_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
 </span> 
@@ -3227,6 +3769,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedfqdn_go">
+<a href="#translatedfqdn_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3327,6 +3879,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="translatedfqdn_nodejs">
+<a href="#translatedfqdn_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="translatedport_nodejs">
 <a href="#translatedport_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
 </span> 
@@ -3354,31 +3916,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipprotocols_python">
-<a href="#ipprotocols_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
+        <span id="ip_protocols_python">
+<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
 
@@ -3394,28 +3956,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedaddress_python">
-<a href="#translatedaddress_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
+        <span id="translated_address_python">
+<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3424,8 +3986,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedport_python">
-<a href="#translatedport_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
+        <span id="translated_fqdn_python">
+<a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translated_port_python">
+<a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3532,6 +4104,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="translatedfqdn_csharp">
+<a href="#translatedfqdn_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="translatedport_csharp">
 <a href="#translatedport_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
 </span> 
@@ -3626,6 +4208,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedfqdn_go">
+<a href="#translatedfqdn_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3726,6 +4318,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="translatedfqdn_nodejs">
+<a href="#translatedfqdn_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="translatedport_nodejs">
 <a href="#translatedport_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
 </span> 
@@ -3753,31 +4355,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipprotocols_python">
-<a href="#ipprotocols_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
+        <span id="ip_protocols_python">
+<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
 
@@ -3793,28 +4395,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedaddress_python">
-<a href="#translatedaddress_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
+        <span id="translated_address_python">
+<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3823,8 +4425,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="translatedport_python">
-<a href="#translatedport_python" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
+        <span id="translated_fqdn_python">
+<a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translated_port_python">
+<a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4152,51 +4764,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationfqdns_python">
-<a href="#destinationfqdns_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Fqdns</a>
+        <span id="destination_fqdns_python">
+<a href="#destination_fqdns_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationipgroups_python">
-<a href="#destinationipgroups_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
+        <span id="destination_ip_groups_python">
+<a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipprotocols_python">
-<a href="#ipprotocols_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
+        <span id="ip_protocols_python">
+<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
 
@@ -4212,21 +4824,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 
@@ -4551,51 +5163,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationfqdns_python">
-<a href="#destinationfqdns_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Fqdns</a>
+        <span id="destination_fqdns_python">
+<a href="#destination_fqdns_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationipgroups_python">
-<a href="#destinationipgroups_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
+        <span id="destination_ip_groups_python">
+<a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipprotocols_python">
-<a href="#ipprotocols_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
+        <span id="ip_protocols_python">
+<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
 
@@ -4611,21 +5223,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceipgroups_python">
-<a href="#sourceipgroups_python" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 

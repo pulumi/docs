@@ -192,52 +192,52 @@ import pulumi_azure_nextgen as azure_nextgen
 
 open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster",
     agent_pool_profiles=[
-        {
-            "count": 2,
-            "name": "infra",
-            "osType": "Linux",
-            "role": "infra",
-            "subnetCidr": "10.0.0.0/24",
-            "vmSize": "Standard_D4s_v3",
-        },
-        {
-            "count": 4,
-            "name": "compute",
-            "osType": "Linux",
-            "role": "compute",
-            "subnetCidr": "10.0.0.0/24",
-            "vmSize": "Standard_D4s_v3",
-        },
+        azure_nextgen.containerservice.latest.OpenShiftManagedClusterAgentPoolProfileArgs(
+            count=2,
+            name="infra",
+            os_type="Linux",
+            role="infra",
+            subnet_cidr="10.0.0.0/24",
+            vm_size="Standard_D4s_v3",
+        ),
+        azure_nextgen.containerservice.latest.OpenShiftManagedClusterAgentPoolProfileArgs(
+            count=4,
+            name="compute",
+            os_type="Linux",
+            role="compute",
+            subnet_cidr="10.0.0.0/24",
+            vm_size="Standard_D4s_v3",
+        ),
     ],
-    auth_profile={
-        "identityProviders": [{
-            "name": "Azure AD",
-            "provider": {
-                "clientId": "clientId",
-                "customerAdminGroupId": "customerAdminGroupId",
-                "kind": "AADIdentityProvider",
-                "secret": "secret",
-                "tenantId": "tenantId",
-            },
-        }],
-    },
+    auth_profile=azure_nextgen.containerservice.latest.OpenShiftManagedClusterAuthProfileArgs(
+        identity_providers=[azure_nextgen.containerservice.latest.OpenShiftManagedClusterIdentityProviderArgs(
+            name="Azure AD",
+            provider=azure_nextgen.containerservice.latest.OpenShiftManagedClusterAADIdentityProviderArgs(
+                client_id="clientId",
+                customer_admin_group_id="customerAdminGroupId",
+                kind="AADIdentityProvider",
+                secret="secret",
+                tenant_id="tenantId",
+            ),
+        )],
+    ),
     location="location1",
-    master_pool_profile={
-        "count": 3,
-        "name": "master",
-        "osType": "Linux",
-        "subnetCidr": "10.0.0.0/24",
-        "vmSize": "Standard_D4s_v3",
-    },
-    network_profile={
-        "vnetCidr": "10.0.0.0/8",
-    },
+    master_pool_profile=azure_nextgen.containerservice.latest.OpenShiftManagedClusterMasterPoolProfileArgs(
+        count=3,
+        name="master",
+        os_type="Linux",
+        subnet_cidr="10.0.0.0/24",
+        vm_size="Standard_D4s_v3",
+    ),
+    network_profile=azure_nextgen.containerservice.latest.NetworkProfileArgs(
+        vnet_cidr="10.0.0.0/8",
+    ),
     open_shift_version="v3.11",
     resource_group_name="rg1",
     resource_name="clustername1",
-    router_profiles=[{
-        "name": "default",
-    }],
+    router_profiles=[azure_nextgen.containerservice.latest.OpenShiftRouterProfileArgs(
+        name="default",
+    )],
     tags={
         "archv2": "",
         "tier": "production",
@@ -323,7 +323,7 @@ const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenSh
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[List[OpenShiftManagedClusterAgentPoolProfile]]</span> = None<span class="p">, </span><span class="nx">auth_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[OpenShiftManagedClusterAuthProfile]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pool_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[OpenShiftManagedClusterMasterPoolProfile]]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkProfile]]</span> = None<span class="p">, </span><span class="nx">open_shift_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[PurchasePlan]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router_profiles</span><span class="p">:</span> <span class="nx">Optional[List[OpenShiftRouterProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftManagedClusterAgentPoolProfileArgs]]</span> = None<span class="p">, </span><span class="nx">auth_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterAuthProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pool_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterMasterPoolProfileArgs]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">open_shift_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftRouterProfileArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -892,7 +892,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">List[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd>
 
@@ -902,7 +902,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#auth_profile_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Dict[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#master_pool_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pool_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Dict[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd>
 
@@ -922,7 +922,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Dict[Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd>
 
@@ -932,7 +932,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Dict[Purchase<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd>
 
@@ -942,7 +942,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#router_profiles_python" style="color: inherit; text-decoration: inherit;">router_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftrouterprofile">List[Open<wbr>Shift<wbr>Router<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#openshiftrouterprofile">Sequence[Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd>
 
@@ -952,7 +952,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1773,8 +1773,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customeradmingroupid_python">
-<a href="#customeradmingroupid_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Admin<wbr>Group<wbr>Id</a>
+        <span id="customer_admin_group_id_python">
+<a href="#customer_admin_group_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>admin_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1972,8 +1972,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customeradmingroupid_python">
-<a href="#customeradmingroupid_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Admin<wbr>Group<wbr>Id</a>
+        <span id="customer_admin_group_id_python">
+<a href="#customer_admin_group_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>admin_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2633,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">List[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
 
@@ -2712,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">List[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
 
@@ -2831,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Dict[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
 
@@ -2950,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Dict[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
 
@@ -3652,8 +3652,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="publicsubdomain_python">
-<a href="#publicsubdomain_python" style="color: inherit; text-decoration: inherit;">public<wbr>Subdomain</a>
+        <span id="public_subdomain_python">
+<a href="#public_subdomain_python" style="color: inherit; text-decoration: inherit;">public_<wbr>subdomain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

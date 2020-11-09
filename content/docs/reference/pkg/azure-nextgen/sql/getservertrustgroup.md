@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#group_members_python" style="color: inherit; text-decoration: inherit;">group_<wbr>members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverinforesponse">List[Server<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverinforesponse">Sequence[Server<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Group members information for the server trust group.{{% /md %}}</dd>
 
@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#trust_scopes_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Trust scope of the server trust group.{{% /md %}}</dd>
 

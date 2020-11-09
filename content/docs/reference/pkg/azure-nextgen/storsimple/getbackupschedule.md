@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#schedule_recurrence_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerecurrenceresponse">Dict[Schedule<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#schedulerecurrenceresponse">Schedule<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
 
@@ -834,7 +834,7 @@ The following output properties are available:
 <a href="#weekly_days_list_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>days_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 

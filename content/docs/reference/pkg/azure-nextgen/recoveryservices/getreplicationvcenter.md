@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vcenterpropertiesresponse">Dict[VCenter<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vcenterpropertiesresponse">VCenter<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}VCenter related data.{{% /md %}}</dd>
 
@@ -930,8 +930,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -940,8 +940,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customerresolvability_python">
-<a href="#customerresolvability_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
+        <span id="customer_resolvability_python">
+<a href="#customer_resolvability_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>resolvability</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -950,8 +950,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -960,53 +960,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorid_python">
-<a href="#errorid_python" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1020,6 +980,26 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_id_python">
+<a href="#error_id_python" style="color: inherit; text-decoration: inherit;">error_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -1030,18 +1010,38 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innerhealtherrors_python">
-<a href="#innerhealtherrors_python" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inner_health_errors_python">
+<a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1050,8 +1050,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1060,8 +1060,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1070,8 +1070,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1479,8 +1479,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1489,8 +1489,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1499,43 +1499,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1549,6 +1519,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -1559,8 +1539,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1569,8 +1569,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1579,8 +1579,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1589,8 +1589,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2002,7 +2002,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
 

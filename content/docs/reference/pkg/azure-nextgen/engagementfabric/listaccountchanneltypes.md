@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channeltypedescriptionresponse">List[Channel<wbr>Type<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#channeltypedescriptionresponse">Sequence[Channel<wbr>Type<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Channel descriptions{{% /md %}}</dd>
 
@@ -368,8 +368,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="channeldescription_python">
-<a href="#channeldescription_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Description</a>
+        <span id="channel_description_python">
+<a href="#channel_description_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -382,7 +382,7 @@ The following output properties are available:
 <a href="#channel_functions_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd>
 

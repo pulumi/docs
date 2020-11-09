@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of event for which this notification is enabled.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -830,8 +830,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventname_python">
-<a href="#eventname_python" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
+        <span id="event_name_python">
+<a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

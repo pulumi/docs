@@ -101,9 +101,9 @@ virtual_hub = azure_nextgen.network.latest.VirtualHub("virtualHub",
         "key1": "value1",
     },
     virtual_hub_name="virtualHub2",
-    virtual_wan={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
-    })
+    virtual_wan=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
+    ))
 
 ```
 
@@ -145,7 +145,7 @@ const virtualHub = new azure_nextgen.network.latest.VirtualHub("virtualHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">enable_virtual_router_route_propogation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualHubRouteTable]]</span> = None<span class="p">, </span><span class="nx">security_partner_provider</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">security_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_route_table_v2s</span><span class="p">:</span> <span class="nx">Optional[List[VirtualHubRouteTableV2]]</span> = None<span class="p">, </span><span class="nx">virtual_router_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtual_router_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">virtual_wan</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_branch_to_branch_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_firewall</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">express_route_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table</span><span class="p">:</span> <span class="nx">Optional[VirtualHubRouteTableArgs]</span> = None<span class="p">, </span><span class="nx">security_partner_provider</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">security_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_route_table_v2s</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualHubRouteTableV2Args]]</span> = None<span class="p">, </span><span class="nx">virtual_router_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtual_router_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_wan</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -359,6 +359,16 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowbranchtobranchtraffic_csharp">
+<a href="#allowbranchtobranchtraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Branch<wbr>To<wbr>Branch<wbr>Traffic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to control transit for VirtualRouter hub.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azurefirewall_csharp">
 <a href="#azurefirewall_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Firewall</a>
 </span> 
@@ -366,16 +376,6 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azureFirewall associated with this VirtualHub.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablevirtualrouterroutepropogation_csharp">
-<a href="#enablevirtualrouterroutepropogation_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Virtual<wbr>Router<wbr>Route<wbr>Propogation</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Flag to control route propogation for VirtualRouter hub.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -556,6 +556,16 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowbranchtobranchtraffic_go">
+<a href="#allowbranchtobranchtraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Branch<wbr>To<wbr>Branch<wbr>Traffic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to control transit for VirtualRouter hub.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azurefirewall_go">
 <a href="#azurefirewall_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Firewall</a>
 </span> 
@@ -563,16 +573,6 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The azureFirewall associated with this VirtualHub.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablevirtualrouterroutepropogation_go">
-<a href="#enablevirtualrouterroutepropogation_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Virtual<wbr>Router<wbr>Route<wbr>Propogation</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Flag to control route propogation for VirtualRouter hub.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -753,6 +753,16 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowbranchtobranchtraffic_nodejs">
+<a href="#allowbranchtobranchtraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Branch<wbr>To<wbr>Branch<wbr>Traffic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to control transit for VirtualRouter hub.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="azurefirewall_nodejs">
 <a href="#azurefirewall_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Firewall</a>
 </span> 
@@ -760,16 +770,6 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The azureFirewall associated with this VirtualHub.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablevirtualrouterroutepropogation_nodejs">
-<a href="#enablevirtualrouterroutepropogation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Virtual<wbr>Router<wbr>Route<wbr>Propogation</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Flag to control route propogation for VirtualRouter hub.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -950,23 +950,23 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azure_firewall_python">
-<a href="#azure_firewall_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>firewall</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
-    </dt>
-    <dd>{{% md %}}The azureFirewall associated with this VirtualHub.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enable_virtual_router_route_propogation_python">
-<a href="#enable_virtual_router_route_propogation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>virtual_<wbr>router_<wbr>route_<wbr>propogation</a>
+        <span id="allow_branch_to_branch_traffic_python">
+<a href="#allow_branch_to_branch_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>branch_<wbr>to_<wbr>branch_<wbr>traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag to control route propogation for VirtualRouter hub.{{% /md %}}</dd>
+    <dd>{{% md %}}Flag to control transit for VirtualRouter hub.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azure_firewall_python">
+<a href="#azure_firewall_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>firewall</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The azureFirewall associated with this VirtualHub.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -974,7 +974,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#express_route_gateway_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expressRouteGateway associated with this VirtualHub.{{% /md %}}</dd>
 
@@ -994,7 +994,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#p2_s_vpn_gateway_python" style="color: inherit; text-decoration: inherit;">p2_<wbr>s_<wbr>vpn_<wbr>gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The P2SVpnGateway associated with this VirtualHub.{{% /md %}}</dd>
 
@@ -1004,7 +1004,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#route_table_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutetable">Dict[Virtual<wbr>Hub<wbr>Route<wbr>Table]</a></span>
+        <span class="property-type"><a href="#virtualhubroutetable">Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The routeTable associated with this virtual hub.{{% /md %}}</dd>
 
@@ -1014,7 +1014,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#security_partner_provider_python" style="color: inherit; text-decoration: inherit;">security_<wbr>partner_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The securityPartnerProvider associated with this VirtualHub.{{% /md %}}</dd>
 
@@ -1044,7 +1044,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1054,7 +1054,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtual_hub_route_table_v2s_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>route_<wbr>table_<wbr>v2s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutetablev2">List[Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>V2]</a></span>
+        <span class="property-type"><a href="#virtualhubroutetablev2">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>V2Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all virtual hub route table v2s associated with this VirtualHub.{{% /md %}}</dd>
 
@@ -1074,7 +1074,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtual_router_ips_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}VirtualRouter IPs.{{% /md %}}</dd>
 
@@ -1084,7 +1084,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtual_wan_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>wan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the VirtualHub belongs.{{% /md %}}</dd>
 
@@ -1094,7 +1094,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vpn_gateway_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VpnGateway associated with this VirtualHub.{{% /md %}}</dd>
 
@@ -1383,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_connections_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of references to Bgp Connections.{{% /md %}}</dd>
 
@@ -1413,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of references to IpConfigurations.{{% /md %}}</dd>
 
@@ -1729,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all addressPrefixes.{{% /md %}}</dd>
 
@@ -1848,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all addressPrefixes.{{% /md %}}</dd>
 
@@ -1937,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroute">List[Virtual<wbr>Hub<wbr>Route]</a></span>
+        <span class="property-type"><a href="#virtualhubroute">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 
@@ -2016,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubrouteresponse">List[Virtual<wbr>Hub<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualhubrouteresponse">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 
@@ -2185,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attached_connections_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
 
@@ -2215,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2">List[Virtual<wbr>Hub<wbr>Route<wbr>V2]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attached_connections_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
 
@@ -2494,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2response">List[Virtual<wbr>Hub<wbr>Route<wbr>V2Response]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2response">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 
@@ -2673,19 +2673,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nexthops_python">
-<a href="#nexthops_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2696,6 +2686,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="next_hops_python">
+<a href="#next_hops_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2872,19 +2872,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nexthops_python">
-<a href="#nexthops_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2895,6 +2885,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="next_hops_python">
+<a href="#next_hops_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -11,18 +11,25 @@ Explore the resources and functions of the cache module in the Azure NextGen pac
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="linkedserver" title="LinkedServer"><span class="symbol resource"></span>LinkedServer</a></li>
     <li><a href="patchschedule" title="PatchSchedule"><span class="symbol resource"></span>PatchSchedule</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="redis" title="Redis"><span class="symbol resource"></span>Redis</a></li>
+    <li><a href="redisenterprise" title="RedisEnterprise"><span class="symbol resource"></span>RedisEnterprise</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
     <li><a href="getlinkedserver" title="GetLinkedServer"><span class="symbol function"></span>GetLinkedServer</a></li>
     <li><a href="getpatchschedule" title="GetPatchSchedule"><span class="symbol function"></span>GetPatchSchedule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getredis" title="GetRedis"><span class="symbol function"></span>GetRedis</a></li>
+    <li><a href="getredisenterprise" title="GetRedisEnterprise"><span class="symbol function"></span>GetRedisEnterprise</a></li>
+    <li><a href="listredisenterprisedatabasekeys" title="ListRedisEnterpriseDatabaseKeys"><span class="symbol function"></span>ListRedisEnterpriseDatabaseKeys</a></li>
     <li><a href="listrediskeys" title="ListRedisKeys"><span class="symbol function"></span>ListRedisKeys</a></li>
 </ul>
 
@@ -33,7 +40,7 @@ Explore the resources and functions of the cache module in the Azure NextGen pac
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

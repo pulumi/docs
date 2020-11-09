@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#connectivity_python" style="color: inherit; text-decoration: inherit;">connectivity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitycollectionresponse">Dict[Connectivity<wbr>Collection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectivitycollectionresponse">Connectivity<wbr>Collection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Dict[Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -624,7 +624,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkgroupresponse">List[Managed<wbr>Network<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managednetworkgroupresponse">Sequence[Managed<wbr>Network<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#peerings_python" style="color: inherit; text-decoration: inherit;">peerings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">List[Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">Sequence[Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd>
 
@@ -1083,7 +1083,7 @@ The following output properties are available:
 <a href="#management_groups_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
 
@@ -1093,7 +1093,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
 
@@ -1103,7 +1103,7 @@ The following output properties are available:
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
 
@@ -1113,7 +1113,7 @@ The following output properties are available:
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 
@@ -1372,7 +1372,7 @@ The following output properties are available:
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
 
@@ -1382,7 +1382,7 @@ The following output properties are available:
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
 
@@ -1392,7 +1392,7 @@ The following output properties are available:
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
 
@@ -1631,7 +1631,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Dict[Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
 
@@ -1879,7 +1879,7 @@ The following output properties are available:
 <a href="#management_groups_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
 
@@ -1889,7 +1889,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
 
@@ -1899,7 +1899,7 @@ The following output properties are available:
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
 
@@ -1909,7 +1909,7 @@ The following output properties are available:
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 

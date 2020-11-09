@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencredentialspropertiesresponse">Dict[Token<wbr>Credentials<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tokencredentialspropertiesresponse">Token<wbr>Credentials<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credentials that can be used for authenticating the token.{{% /md %}}</dd>
 
@@ -799,8 +799,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodedpemcertificate_python">
-<a href="#encodedpemcertificate_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Pem<wbr>Certificate</a>
+        <span id="encoded_pem_certificate_python">
+<a href="#encoded_pem_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>pem_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -972,7 +972,7 @@ The following output properties are available:
 <a href="#active_directory_object_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>object</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryobjectresponse">Dict[Active<wbr>Directory<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activedirectoryobjectresponse">Active<wbr>Directory<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Active Directory Object that will be used for authenticating the token of a container registry.{{% /md %}}</dd>
 
@@ -982,7 +982,7 @@ The following output properties are available:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencertificateresponse">List[Token<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tokencertificateresponse">Sequence[Token<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -992,7 +992,7 @@ The following output properties are available:
 <a href="#passwords_python" style="color: inherit; text-decoration: inherit;">passwords</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenpasswordresponse">List[Token<wbr>Password<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tokenpasswordresponse">Sequence[Token<wbr>Password<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

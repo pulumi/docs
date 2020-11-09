@@ -100,23 +100,23 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[{
-        "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
-        "webHookProperties": {
+    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+        action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        web_hook_properties={
             "key11": "value11",
             "key12": "value12",
         },
-    }],
+    )],
     auto_mitigate=False,
     criteria={
         "allOf": [{
             "alertSensitivity": "Medium",
             "criterionType": "DynamicThresholdCriterion",
             "dimensions": [],
-            "failingPeriods": {
-                "minFailingPeriodsToAlert": 4,
-                "numberOfEvaluationPeriods": 4,
-            },
+            "failingPeriods": azure_nextgen.insights.latest.DynamicThresholdFailingPeriodsArgs(
+                min_failing_periods_to_alert=4,
+                number_of_evaluation_periods=4,
+            ),
             "metricName": "Percentage CPU",
             "metricNamespace": "microsoft.compute/virtualmachines",
             "name": "High_CPU_80",
@@ -282,23 +282,23 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[{
-        "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
-        "webHookProperties": {
+    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+        action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        web_hook_properties={
             "key11": "value11",
             "key12": "value12",
         },
-    }],
+    )],
     auto_mitigate=False,
     criteria={
         "allOf": [{
             "alertSensitivity": "Medium",
             "criterionType": "DynamicThresholdCriterion",
             "dimensions": [],
-            "failingPeriods": {
-                "minFailingPeriodsToAlert": 4,
-                "numberOfEvaluationPeriods": 4,
-            },
+            "failingPeriods": azure_nextgen.insights.latest.DynamicThresholdFailingPeriodsArgs(
+                min_failing_periods_to_alert=4,
+                number_of_evaluation_periods=4,
+            ),
             "ignoreDataBefore": "2019-04-04T21:00:00.000Z",
             "metricName": "Percentage CPU",
             "metricNamespace": "microsoft.compute/virtualmachines",
@@ -577,13 +577,13 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[{
-        "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
-        "webHookProperties": {
+    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        web_hook_properties={
             "key11": "value11",
             "key12": "value12",
         },
-    }],
+    )],
     auto_mitigate=False,
     criteria={
         "allOf": [{
@@ -742,13 +742,13 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[{
-        "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
-        "webHookProperties": {
+    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        web_hook_properties={
             "key11": "value11",
             "key12": "value12",
         },
-    }],
+    )],
     auto_mitigate=False,
     criteria={
         "allOf": [{
@@ -899,13 +899,13 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[{
-        "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
-        "webHookProperties": {
+    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        web_hook_properties={
             "key11": "value11",
             "key12": "value12",
         },
-    }],
+    )],
     auto_mitigate=False,
     criteria={
         "allOf": [{
@@ -1067,13 +1067,13 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[{
-        "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
-        "webHookProperties": {
+    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        web_hook_properties={
             "key11": "value11",
             "key12": "value12",
         },
-    }],
+    )],
     auto_mitigate=False,
     criteria={
         "allOf": [{
@@ -1163,7 +1163,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlertAction]]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[Dict[MetricAlertMultipleResourceMultipleMetricCriteria] | Dict[MetricAlertSingleResourceMultipleMetricCriteria] | Dict[WebtestLocationAvailabilityCriteria]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">evaluation_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criteria</span><span class="p">:</span> <span class="nx">Optional[Union[MetricAlertMultipleResourceMultipleMetricCriteriaArgs, MetricAlertSingleResourceMultipleMetricCriteriaArgs, WebtestLocationAvailabilityCriteriaArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">evaluation_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1812,7 +1812,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria] | Dict[Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria] | Dict[Webtest<wbr>Location<wbr>Availability<wbr>Criteria]</span>
+        <span class="property-type">Union[Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args, Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args, Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
 
@@ -1902,7 +1902,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">List[Metric<wbr>Alert<wbr>Action]</a></span>
+        <span class="property-type"><a href="#metricalertaction">Sequence[Metric<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
 
@@ -1922,7 +1922,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
 
@@ -1932,7 +1932,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -2505,8 +2505,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="alertsensitivity_python">
-<a href="#alertsensitivity_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Sensitivity</a>
+        <span id="alert_sensitivity_python">
+<a href="#alert_sensitivity_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>sensitivity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2515,18 +2515,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="failingperiods_python">
-<a href="#failingperiods_python" style="color: inherit; text-decoration: inherit;">failing<wbr>Periods</a>
+        <span id="failing_periods_python">
+<a href="#failing_periods_python" style="color: inherit; text-decoration: inherit;">failing_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Dict[Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods]</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2555,8 +2555,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2569,14 +2569,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List[Metric<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoredatabefore_python">
-<a href="#ignoredatabefore_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Data<wbr>Before</a>
+        <span id="ignore_data_before_python">
+<a href="#ignore_data_before_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>data_<wbr>before</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2585,8 +2585,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2595,8 +2595,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipmetricvalidation_python">
-<a href="#skipmetricvalidation_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
+        <span id="skip_metric_validation_python">
+<a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2944,8 +2944,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="alertsensitivity_python">
-<a href="#alertsensitivity_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Sensitivity</a>
+        <span id="alert_sensitivity_python">
+<a href="#alert_sensitivity_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>sensitivity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2954,18 +2954,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="failingperiods_python">
-<a href="#failingperiods_python" style="color: inherit; text-decoration: inherit;">failing<wbr>Periods</a>
+        <span id="failing_periods_python">
+<a href="#failing_periods_python" style="color: inherit; text-decoration: inherit;">failing_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dict[Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2994,8 +2994,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3008,14 +3008,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List[Metric<wbr>Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoredatabefore_python">
-<a href="#ignoredatabefore_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Data<wbr>Before</a>
+        <span id="ignore_data_before_python">
+<a href="#ignore_data_before_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>data_<wbr>before</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3024,8 +3024,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3034,8 +3034,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipmetricvalidation_python">
-<a href="#skipmetricvalidation_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
+        <span id="skip_metric_validation_python">
+<a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3143,8 +3143,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minfailingperiodstoalert_python">
-<a href="#minfailingperiodstoalert_python" style="color: inherit; text-decoration: inherit;">min<wbr>Failing<wbr>Periods<wbr>To<wbr>Alert</a>
+        <span id="min_failing_periods_to_alert_python">
+<a href="#min_failing_periods_to_alert_python" style="color: inherit; text-decoration: inherit;">min_<wbr>failing_<wbr>periods_<wbr>to_<wbr>alert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3153,8 +3153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="numberofevaluationperiods_python">
-<a href="#numberofevaluationperiods_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Evaluation<wbr>Periods</a>
+        <span id="number_of_evaluation_periods_python">
+<a href="#number_of_evaluation_periods_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3262,8 +3262,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minfailingperiodstoalert_python">
-<a href="#minfailingperiodstoalert_python" style="color: inherit; text-decoration: inherit;">min<wbr>Failing<wbr>Periods<wbr>To<wbr>Alert</a>
+        <span id="min_failing_periods_to_alert_python">
+<a href="#min_failing_periods_to_alert_python" style="color: inherit; text-decoration: inherit;">min_<wbr>failing_<wbr>periods_<wbr>to_<wbr>alert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3272,8 +3272,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="numberofevaluationperiods_python">
-<a href="#numberofevaluationperiods_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Evaluation<wbr>Periods</a>
+        <span id="number_of_evaluation_periods_python">
+<a href="#number_of_evaluation_periods_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3381,8 +3381,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3391,11 +3391,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
+        <span id="web_hook_properties_python">
+<a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
 
@@ -3500,8 +3500,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3510,11 +3510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
+        <span id="web_hook_properties_python">
+<a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
 
@@ -3593,7 +3593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Insights/Latest:Dynamic<wbr>Metric<wbr>Criteria, Azure-Nextgen:Insights/Latest:Metric<wbr>Criteria, Default=>]</span>
+        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria<wbr>Args, Metric<wbr>Criteria<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd>
 
@@ -3672,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Insights/Latest:Dynamic<wbr>Metric<wbr>Criteria<wbr>Response, Azure-Nextgen:Insights/Latest:Metric<wbr>Criteria<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args, Metric<wbr>Criteria<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd>
 
@@ -3751,7 +3751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteria">List[Metric<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#metriccriteria">Sequence[Metric<wbr>Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 
@@ -3830,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteriaresponse">List[Metric<wbr>Criteria<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metriccriteriaresponse">Sequence[Metric<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 
@@ -4115,8 +4115,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4155,8 +4155,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4169,14 +4169,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List[Metric<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4185,8 +4185,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipmetricvalidation_python">
-<a href="#skipmetricvalidation_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
+        <span id="skip_metric_validation_python">
+<a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4474,8 +4474,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4514,8 +4514,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4528,14 +4528,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List[Metric<wbr>Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4544,8 +4544,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipmetricvalidation_python">
-<a href="#skipmetricvalidation_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
+        <span id="skip_metric_validation_python">
+<a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4707,7 +4707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of dimension values.{{% /md %}}</dd>
 
@@ -4866,7 +4866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of dimension values.{{% /md %}}</dd>
 
@@ -5001,8 +5001,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="componentid_python">
-<a href="#componentid_python" style="color: inherit; text-decoration: inherit;">component<wbr>Id</a>
+        <span id="component_id_python">
+<a href="#component_id_python" style="color: inherit; text-decoration: inherit;">component_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5011,8 +5011,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="failedlocationcount_python">
-<a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+        <span id="failed_location_count_python">
+<a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5021,8 +5021,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="webtestid_python">
-<a href="#webtestid_python" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Id</a>
+        <span id="web_test_id_python">
+<a href="#web_test_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5160,8 +5160,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="componentid_python">
-<a href="#componentid_python" style="color: inherit; text-decoration: inherit;">component<wbr>Id</a>
+        <span id="component_id_python">
+<a href="#component_id_python" style="color: inherit; text-decoration: inherit;">component_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5170,8 +5170,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="failedlocationcount_python">
-<a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+        <span id="failed_location_count_python">
+<a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5180,8 +5180,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="webtestid_python">
-<a href="#webtestid_python" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Id</a>
+        <span id="web_test_id_python">
+<a href="#web_test_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

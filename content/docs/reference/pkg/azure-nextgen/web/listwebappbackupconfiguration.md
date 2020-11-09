@@ -477,7 +477,7 @@ The following output properties are available:
 <a href="#backup_schedule_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupscheduleresponse">Dict[Backup<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backupscheduleresponse">Backup<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd>
 
@@ -487,7 +487,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsettingresponse">List[Database<wbr>Backup<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databasebackupsettingresponse">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd>
 
@@ -738,8 +738,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyinterval_python">
-<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+        <span id="frequency_interval_python">
+<a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -748,8 +748,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyunit_python">
-<a href="#frequencyunit_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Unit</a>
+        <span id="frequency_unit_python">
+<a href="#frequency_unit_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -758,8 +758,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keepatleastonebackup_python">
-<a href="#keepatleastonebackup_python" style="color: inherit; text-decoration: inherit;">keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
+        <span id="keep_at_least_one_backup_python">
+<a href="#keep_at_least_one_backup_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>at_<wbr>least_<wbr>one_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -778,8 +778,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionperiodindays_python">
-<a href="#retentionperiodindays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
+        <span id="retention_period_in_days_python">
+<a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -970,17 +970,6 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionstringname_python">
-<a href="#connectionstringname_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
@@ -988,6 +977,17 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_name_python">
+<a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

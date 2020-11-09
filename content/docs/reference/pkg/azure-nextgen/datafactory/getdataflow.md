@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflowresponse">Dict[Mapping<wbr>Data<wbr>Flow<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mappingdataflowresponse">Mapping<wbr>Data<wbr>Flow<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd>
 
@@ -683,7 +683,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dict[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
 
@@ -699,21 +699,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkedservice_python">
-<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemalinkedservice_python">
-<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 
@@ -922,7 +922,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dict[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
 
@@ -938,21 +938,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkedservice_python">
-<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemalinkedservice_python">
-<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 
@@ -1087,8 +1087,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1111,7 +1111,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -1246,8 +1246,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1270,7 +1270,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -1529,7 +1529,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -1549,7 +1549,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Dict[Data<wbr>Flow<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
 
@@ -1569,7 +1569,7 @@ The following output properties are available:
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">List[Data<wbr>Flow<wbr>Sink<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
 
@@ -1579,7 +1579,7 @@ The following output properties are available:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">List[Data<wbr>Flow<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Sequence[Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
 
@@ -1589,7 +1589,7 @@ The following output properties are available:
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">List[Transformation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transformationresponse">Sequence[Transformation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
 

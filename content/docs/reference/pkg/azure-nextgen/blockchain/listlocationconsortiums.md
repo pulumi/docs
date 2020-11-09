@@ -187,7 +187,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consortiumresponse">List[Consortium<wbr>Response]</a></span>
+        <span class="property-type"><a href="#consortiumresponse">Sequence[Consortium<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of consortiums.{{% /md %}}</dd>
 

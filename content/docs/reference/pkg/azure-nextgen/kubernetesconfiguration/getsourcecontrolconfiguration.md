@@ -344,11 +344,21 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="configurationprotectedsettings_csharp">
+<a href="#configurationprotectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="enablehelmoperator_csharp">
 <a href="#enablehelmoperator_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Helm<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
 
@@ -422,6 +432,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="sshknownhostscontents_csharp">
+<a href="#sshknownhostscontents_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Known<wbr>Hosts<wbr>Contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -481,11 +511,21 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="configurationprotectedsettings_go">
+<a href="#configurationprotectedsettings_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="enablehelmoperator_go">
 <a href="#enablehelmoperator_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Helm<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
 
@@ -559,6 +599,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="sshknownhostscontents_go">
+<a href="#sshknownhostscontents_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Known<wbr>Hosts<wbr>Contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -618,11 +678,21 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="configurationprotectedsettings_nodejs">
+<a href="#configurationprotectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Protected<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="enablehelmoperator_nodejs">
 <a href="#enablehelmoperator_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Helm<wbr>Operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
 
@@ -696,6 +766,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="sshknownhostscontents_nodejs">
+<a href="#sshknownhostscontents_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts<wbr>Contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -709,7 +799,7 @@ The following output properties are available:
 <a href="#compliance_status_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compliancestatusresponse">Dict[Compliance<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#compliancestatusresponse">Compliance<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd>
 
@@ -755,11 +845,21 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="configuration_protected_settings_python">
+<a href="#configuration_protected_settings_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>protected_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="enable_helm_operator_python">
 <a href="#enable_helm_operator_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>helm_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
 
@@ -769,7 +869,7 @@ The following output properties are available:
 <a href="#helm_operator_properties_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>operator_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#helmoperatorpropertiesresponse">Dict[Helm<wbr>Operator<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#helmoperatorpropertiesresponse">Helm<wbr>Operator<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd>
 
@@ -832,6 +932,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssh_known_hosts_contents_python">
+<a href="#ssh_known_hosts_contents_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts_<wbr>contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1156,6 +1276,285 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity, key{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity, key{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity, key{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity, key{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

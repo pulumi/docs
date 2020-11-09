@@ -110,9 +110,9 @@ incident = azure_nextgen.operationalinsights.latest.Incident("incident",
     first_activity_time_utc="2019-01-01T13:00:30Z",
     incident_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     last_activity_time_utc="2019-01-01T13:05:30Z",
-    owner={
-        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
-    },
+    owner=azure_nextgen.operationalinsights.latest.IncidentOwnerInfoArgs(
+        object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
+    ),
     resource_group_name="myRg",
     severity="High",
     status="Closed",
@@ -164,7 +164,7 @@ const incident = new azure_nextgen.operationalinsights.latest.Incident("incident
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[IncidentLabel]]</span> = None<span class="p">, </span><span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[Dict[IncidentOwnerInfo]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[IncidentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[IncidentOwnerInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -933,7 +933,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">List[Incident<wbr>Label]</a></span>
+        <span class="property-type"><a href="#incidentlabel">Sequence[Incident<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Dict[Incident<wbr>Owner<wbr>Info]</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
 
@@ -1272,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentadditionaldataresponse">Dict[Incident<wbr>Additional<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#related_analytic_rule_ids_python" style="color: inherit; text-decoration: inherit;">related_<wbr>analytic_<wbr>rule_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
 
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alert_product_names_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>product_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
 
@@ -1600,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tactics_python" style="color: inherit; text-decoration: inherit;">tactics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
 
@@ -1784,16 +1784,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="labeltype_python">
-<a href="#labeltype_python" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="label_name_python">
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
 </span> 
@@ -1801,6 +1791,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="label_type_python">
+<a href="#label_type_python" style="color: inherit; text-decoration: inherit;">label_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

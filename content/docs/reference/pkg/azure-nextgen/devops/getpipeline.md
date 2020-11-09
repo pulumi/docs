@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#bootstrap_configuration_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootstrapconfigurationresponse">Dict[Bootstrap<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bootstrapconfigurationresponse">Bootstrap<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to bootstrap the Pipeline.{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationreferenceresponse">Dict[Organization<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#organizationreferenceresponse">Organization<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the Azure DevOps Organization containing the Pipeline.{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectreferenceresponse">Dict[Project<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#projectreferenceresponse">Project<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the Azure DevOps Project containing the Pipeline.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Authorization parameters corresponding to the authorization type.{{% /md %}}</dd>
 
@@ -743,7 +743,7 @@ The following output properties are available:
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Dict[Pipeline<wbr>Template<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd>
 
@@ -753,7 +753,7 @@ The following output properties are available:
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Dict[Code<wbr>Repository<wbr>Response]</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline.{{% /md %}}</dd>
 
@@ -815,6 +815,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -861,6 +871,16 @@ The following output properties are available:
         <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -909,6 +929,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -952,9 +982,19 @@ The following output properties are available:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Dict[Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1190,7 +1230,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of input parameters used in the pipeline template.{{% /md %}}</dd>
 

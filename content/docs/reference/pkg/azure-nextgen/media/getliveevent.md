@@ -290,7 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -467,7 +467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -644,7 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputresponse">Dict[Live<wbr>Event<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventinputresponse">Live<wbr>Event<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Live event input settings. It defines how the live event receives input from a contribution encoder.{{% /md %}}</dd>
 
@@ -821,7 +821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#cross_site_access_policies_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Dict[Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Live event cross site access policies.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencodingresponse">Dict[Live<wbr>Event<wbr>Encoding<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventencodingresponse">Live<wbr>Event<wbr>Encoding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewresponse">Dict[Live<wbr>Event<wbr>Preview<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewresponse">Live<wbr>Event<wbr>Preview<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.{{% /md %}}</dd>
 
@@ -879,7 +879,7 @@ The following output properties are available:
 <a href="#stream_options_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The following output properties are available:
 <a href="#transcriptions_python" style="color: inherit; text-decoration: inherit;">transcriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventtranscriptionresponse">List[Live<wbr>Event<wbr>Transcription<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventtranscriptionresponse">Sequence[Live<wbr>Event<wbr>Transcription<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.{{% /md %}}</dd>
 
@@ -1113,7 +1113,7 @@ The following output properties are available:
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List[IPRange<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 
@@ -1268,8 +1268,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetprefixlength_python">
-<a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
+        <span id="subnet_prefix_length_python">
+<a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1669,7 +1669,7 @@ The following output properties are available:
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Dict[IPAccess<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd>
 
@@ -1878,7 +1878,7 @@ The following output properties are available:
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Dict[Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd>
 
@@ -1898,7 +1898,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd>
 
@@ -2142,8 +2142,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="trackname_python">
-<a href="#trackname_python" style="color: inherit; text-decoration: inherit;">track<wbr>Name</a>
+        <span id="track_name_python">
+<a href="#track_name_python" style="color: inherit; text-decoration: inherit;">track_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2225,7 +2225,7 @@ The following output properties are available:
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Dict[IPAccess<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd>
 
@@ -2424,7 +2424,7 @@ The following output properties are available:
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Dict[Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd>
 
@@ -2444,7 +2444,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd>
 
@@ -2599,11 +2599,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputtrackselection_python">
-<a href="#inputtrackselection_python" style="color: inherit; text-decoration: inherit;">input<wbr>Track<wbr>Selection</a>
+        <span id="input_track_selection_python">
+<a href="#input_track_selection_python" style="color: inherit; text-decoration: inherit;">input_<wbr>track_<wbr>selection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Sequence[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
 
@@ -2619,11 +2619,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputtranscriptiontrack_python">
-<a href="#outputtranscriptiontrack_python" style="color: inherit; text-decoration: inherit;">output<wbr>Transcription<wbr>Track</a>
+        <span id="output_transcription_track_python">
+<a href="#output_transcription_track_python" style="color: inherit; text-decoration: inherit;">output_<wbr>transcription_<wbr>track</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Dict[Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response]</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
 

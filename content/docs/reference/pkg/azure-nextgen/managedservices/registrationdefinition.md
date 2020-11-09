@@ -111,21 +111,21 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 registration_definition = azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition",
-    plan={
-        "name": "addesai-plan",
-        "product": "test",
-        "publisher": "marketplace-test",
-        "version": "1.0.0",
-    },
-    properties={
-        "authorizations": [{
-            "principalId": "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
-            "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
-        }],
-        "description": "Tes1t",
-        "managedByTenantId": "83abe5cd-bcc3-441a-bd86-e6a75360cecc",
-        "registrationDefinitionName": "DefinitionName",
-    },
+    plan=azure_nextgen.managedservices.latest.PlanArgs(
+        name="addesai-plan",
+        product="test",
+        publisher="marketplace-test",
+        version="1.0.0",
+    ),
+    properties=azure_nextgen.managedservices.latest.RegistrationDefinitionPropertiesArgs(
+        authorizations=[azure_nextgen.managedservices.latest.AuthorizationArgs(
+            principal_id="f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+            role_definition_id="acdd72a7-3385-48ef-bd42-f606fba81ae7",
+        )],
+        description="Tes1t",
+        managed_by_tenant_id="83abe5cd-bcc3-441a-bd86-e6a75360cecc",
+        registration_definition_name="DefinitionName",
+    ),
     registration_definition_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
 
@@ -175,7 +175,7 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[Plan]]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[RegistrationDefinitionProperties]]</span> = None<span class="p">, </span><span class="nx">registration_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PlanArgs]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[RegistrationDefinitionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">registration_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -514,7 +514,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Dict[Plan]</a></span>
+        <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd>
 
@@ -524,7 +524,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationdefinitionproperties">Dict[Registration<wbr>Definition<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#registrationdefinitionproperties">Registration<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration definition.{{% /md %}}</dd>
 
@@ -1497,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">List[Authorization]</a></span>
+        <span class="property-type"><a href="#authorization">Sequence[Authorization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
 
@@ -1756,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List[Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
 

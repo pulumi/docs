@@ -293,88 +293,88 @@ adaptive_application_control = azure_nextgen.security.latest.AdaptiveApplication
     enforcement_mode="Audit",
     group_name="ERELGROUP1",
     path_recommendations=[
-        {
-            "action": "Recommended",
-            "common": True,
-            "configurationStatus": "Configured",
-            "fileType": "Exe",
-            "path": "[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0",
-            "publisherInfo": {
-                "binaryName": "*",
-                "productName": "*",
-                "publisherName": "O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US",
-                "version": "0.0.0.0",
-            },
-            "type": "PublisherSignature",
-            "userSids": ["S-1-1-0"],
-            "usernames": [{
-                "recommendationAction": "Recommended",
-                "username": "Everyone",
-            }],
-        },
-        {
-            "action": "Recommended",
-            "common": True,
-            "configurationStatus": "Configured",
-            "fileType": "Exe",
-            "path": "%OSDRIVE%\\WINDOWSAZURE\\SECAGENT\\WASECAGENTPROV.EXE",
-            "publisherInfo": {
-                "binaryName": "*",
-                "productName": "MICROSOFT® COREXT",
-                "publisherName": "CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                "version": "0.0.0.0",
-            },
-            "type": "ProductSignature",
-            "userSids": ["S-1-1-0"],
-            "usernames": [{
-                "recommendationAction": "Recommended",
-                "username": "NT AUTHORITY\\SYSTEM",
-            }],
-        },
-        {
-            "action": "Recommended",
-            "common": True,
-            "configurationStatus": "Configured",
-            "fileType": "Exe",
-            "path": "%OSDRIVE%\\WINDOWSAZURE\\PACKAGES_201973_7415\\COLLECTGUESTLOGS.EXE",
-            "publisherInfo": {
-                "binaryName": "*",
-                "productName": "*",
-                "publisherName": "CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                "version": "0.0.0.0",
-            },
-            "type": "PublisherSignature",
-            "userSids": ["S-1-1-0"],
-            "usernames": [{
-                "recommendationAction": "Recommended",
-                "username": "NT AUTHORITY\\SYSTEM",
-            }],
-        },
-        {
-            "action": "Add",
-            "common": True,
-            "path": "C:\\directory\\file.exe",
-            "type": "File",
-        },
+        azure_nextgen.security.latest.PathRecommendationArgs(
+            action="Recommended",
+            common=True,
+            configuration_status="Configured",
+            file_type="Exe",
+            path="[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0",
+            publisher_info=azure_nextgen.security.latest.PublisherInfoArgs(
+                binary_name="*",
+                product_name="*",
+                publisher_name="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US",
+                version="0.0.0.0",
+            ),
+            type="PublisherSignature",
+            user_sids=["S-1-1-0"],
+            usernames=[azure_nextgen.security.latest.UserRecommendationArgs(
+                recommendation_action="Recommended",
+                username="Everyone",
+            )],
+        ),
+        azure_nextgen.security.latest.PathRecommendationArgs(
+            action="Recommended",
+            common=True,
+            configuration_status="Configured",
+            file_type="Exe",
+            path="%OSDRIVE%\\WINDOWSAZURE\\SECAGENT\\WASECAGENTPROV.EXE",
+            publisher_info=azure_nextgen.security.latest.PublisherInfoArgs(
+                binary_name="*",
+                product_name="MICROSOFT® COREXT",
+                publisher_name="CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
+                version="0.0.0.0",
+            ),
+            type="ProductSignature",
+            user_sids=["S-1-1-0"],
+            usernames=[azure_nextgen.security.latest.UserRecommendationArgs(
+                recommendation_action="Recommended",
+                username="NT AUTHORITY\\SYSTEM",
+            )],
+        ),
+        azure_nextgen.security.latest.PathRecommendationArgs(
+            action="Recommended",
+            common=True,
+            configuration_status="Configured",
+            file_type="Exe",
+            path="%OSDRIVE%\\WINDOWSAZURE\\PACKAGES_201973_7415\\COLLECTGUESTLOGS.EXE",
+            publisher_info=azure_nextgen.security.latest.PublisherInfoArgs(
+                binary_name="*",
+                product_name="*",
+                publisher_name="CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
+                version="0.0.0.0",
+            ),
+            type="PublisherSignature",
+            user_sids=["S-1-1-0"],
+            usernames=[azure_nextgen.security.latest.UserRecommendationArgs(
+                recommendation_action="Recommended",
+                username="NT AUTHORITY\\SYSTEM",
+            )],
+        ),
+        azure_nextgen.security.latest.PathRecommendationArgs(
+            action="Add",
+            common=True,
+            path="C:\\directory\\file.exe",
+            type="File",
+        ),
     ],
-    protection_mode={
-        "exe": "Audit",
-        "msi": "None",
-        "script": "None",
-    },
+    protection_mode=azure_nextgen.security.latest.ProtectionModeArgs(
+        exe="Audit",
+        msi="None",
+        script="None",
+    ),
     vm_recommendations=[
-        {
-            "configurationStatus": "Configured",
-            "enforcementSupport": "Supported",
-            "recommendationAction": "Recommended",
-            "resourceId": "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090",
-        },
-        {
-            "configurationStatus": "Configured",
-            "enforcementSupport": "Supported",
-            "recommendationAction": "Recommended",
-            "resourceId": "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/matanvs/providers/microsoft.compute/virtualmachines/matanvs19",
-        },
+        azure_nextgen.security.latest.VmRecommendationArgs(
+            configuration_status="Configured",
+            enforcement_support="Supported",
+            recommendation_action="Recommended",
+            resource_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090",
+        ),
+        azure_nextgen.security.latest.VmRecommendationArgs(
+            configuration_status="Configured",
+            enforcement_support="Supported",
+            recommendation_action="Recommended",
+            resource_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/matanvs/providers/microsoft.compute/virtualmachines/matanvs19",
+        ),
     ])
 
 ```
@@ -493,7 +493,7 @@ const adaptiveApplicationControl = new azure_nextgen.security.latest.AdaptiveApp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asc_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforcement_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_recommendations</span><span class="p">:</span> <span class="nx">Optional[List[PathRecommendation]]</span> = None<span class="p">, </span><span class="nx">protection_mode</span><span class="p">:</span> <span class="nx">Optional[Dict[ProtectionMode]]</span> = None<span class="p">, </span><span class="nx">vm_recommendations</span><span class="p">:</span> <span class="nx">Optional[List[VmRecommendation]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asc_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforcement_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_recommendations</span><span class="p">:</span> <span class="nx">Optional[Sequence[PathRecommendationArgs]]</span> = None<span class="p">, </span><span class="nx">protection_mode</span><span class="p">:</span> <span class="nx">Optional[ProtectionModeArgs]</span> = None<span class="p">, </span><span class="nx">vm_recommendations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VmRecommendationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -902,7 +902,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#path_recommendations_python" style="color: inherit; text-decoration: inherit;">path_<wbr>recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrecommendation">List[Path<wbr>Recommendation]</a></span>
+        <span class="property-type"><a href="#pathrecommendation">Sequence[Path<wbr>Recommendation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#protection_mode_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionmode">Dict[Protection<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#protectionmode">Protection<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd>
 
@@ -922,7 +922,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#vm_recommendations_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmrecommendation">List[Vm<wbr>Recommendation]</a></span>
+        <span class="property-type"><a href="#vmrecommendation">Sequence[Vm<wbr>Recommendation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issues_python" style="color: inherit; text-decoration: inherit;">issues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">List[Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response]</a></span>
+        <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">Sequence[Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1405,8 +1405,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberofvms_python">
-<a href="#numberofvms_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Vms</a>
+        <span id="number_of_vms_python">
+<a href="#number_of_vms_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>vms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1774,11 +1774,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publisherinfo_python">
-<a href="#publisherinfo_python" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
+        <span id="publisher_info_python">
+<a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinfo">Dict[Publisher<wbr>Info]</a></span>
+        <span class="property-type"><a href="#publisherinfo">Publisher<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
 
@@ -1794,11 +1794,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usersids_python">
-<a href="#usersids_python" style="color: inherit; text-decoration: inherit;">user<wbr>Sids</a>
+        <span id="user_sids_python">
+<a href="#user_sids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>sids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1808,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendation">List[User<wbr>Recommendation]</a></span>
+        <span class="property-type"><a href="#userrecommendation">Sequence[User<wbr>Recommendation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2173,11 +2173,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publisherinfo_python">
-<a href="#publisherinfo_python" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
+        <span id="publisher_info_python">
+<a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Dict[Publisher<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
 
@@ -2193,11 +2193,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usersids_python">
-<a href="#usersids_python" style="color: inherit; text-decoration: inherit;">user<wbr>Sids</a>
+        <span id="user_sids_python">
+<a href="#user_sids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>sids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2207,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">List[User<wbr>Recommendation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">Sequence[User<wbr>Recommendation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2770,8 +2770,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="binaryname_python">
-<a href="#binaryname_python" style="color: inherit; text-decoration: inherit;">binary<wbr>Name</a>
+        <span id="binary_name_python">
+<a href="#binary_name_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2969,8 +2969,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="binaryname_python">
-<a href="#binaryname_python" style="color: inherit; text-decoration: inherit;">binary<wbr>Name</a>
+        <span id="binary_name_python">
+<a href="#binary_name_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3108,8 +3108,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationaction_python">
-<a href="#recommendationaction_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
+        <span id="recommendation_action_python">
+<a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3227,8 +3227,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationaction_python">
-<a href="#recommendationaction_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
+        <span id="recommendation_action_python">
+<a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3416,8 +3416,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcementsupport_python">
-<a href="#enforcementsupport_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Support</a>
+        <span id="enforcement_support_python">
+<a href="#enforcement_support_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>support</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3426,8 +3426,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationaction_python">
-<a href="#recommendationaction_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
+        <span id="recommendation_action_python">
+<a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3615,8 +3615,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcementsupport_python">
-<a href="#enforcementsupport_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Support</a>
+        <span id="enforcement_support_python">
+<a href="#enforcement_support_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>support</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3625,8 +3625,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationaction_python">
-<a href="#recommendationaction_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
+        <span id="recommendation_action_python">
+<a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

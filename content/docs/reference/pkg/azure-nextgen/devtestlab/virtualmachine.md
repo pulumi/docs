@@ -119,13 +119,13 @@ import pulumi_azure_nextgen as azure_nextgen
 virtual_machine = azure_nextgen.devtestlab.latest.VirtualMachine("virtualMachine",
     allow_claim=True,
     disallow_public_ip_address=True,
-    gallery_image_reference={
-        "offer": "UbuntuServer",
-        "osType": "Linux",
-        "publisher": "Canonical",
-        "sku": "16.04-LTS",
-        "version": "Latest",
-    },
+    gallery_image_reference=azure_nextgen.devtestlab.latest.GalleryImageReferenceArgs(
+        offer="UbuntuServer",
+        os_type="Linux",
+        publisher="Canonical",
+        sku="16.04-LTS",
+        version="Latest",
+    ),
     lab_name="{devtestlab-name}",
     lab_subnet_name="{virtualnetwork-name}Subnet",
     lab_virtual_network_id="/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
@@ -193,7 +193,7 @@ const virtualMachine = new azure_nextgen.devtestlab.latest.VirtualMachine("virtu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_claim</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">artifact_deployment_status</span><span class="p">:</span> <span class="nx">Optional[Dict[ArtifactDeploymentStatusProperties]]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[List[ArtifactInstallProperties]]</span> = None<span class="p">, </span><span class="nx">compute_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_parameters</span><span class="p">:</span> <span class="nx">Optional[List[DataDiskProperties]]</span> = None<span class="p">, </span><span class="nx">disallow_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[GalleryImageReference]]</span> = None<span class="p">, </span><span class="nx">is_authentication_with_ssh_key</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_known_power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkInterfaceProperties]]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ScheduleCreationParameter]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_creation_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_claim</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">artifact_deployment_status</span><span class="p">:</span> <span class="nx">Optional[ArtifactDeploymentStatusPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArtifactInstallPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">compute_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataDiskPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">disallow_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_reference</span><span class="p">:</span> <span class="nx">Optional[GalleryImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">is_authentication_with_ssh_key</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_known_power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[NetworkInterfacePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleCreationParameterArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_creation_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1512,7 +1512,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#artifact_deployment_status_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>deployment_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatusproperties">Dict[Artifact<wbr>Deployment<wbr>Status<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
 
@@ -1522,7 +1522,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallproperties">List[Artifact<wbr>Install<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#artifactinstallproperties">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
 
@@ -1582,7 +1582,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#data_disk_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskproperties">List[Data<wbr>Disk<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#datadiskproperties">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
 
@@ -1632,7 +1632,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereference">Dict[Gallery<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
 
@@ -1692,7 +1692,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceproperties">Dict[Network<wbr>Interface<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
 
@@ -1762,7 +1762,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedule_parameters_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameter">List[Schedule<wbr>Creation<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameter">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
 
@@ -1802,7 +1802,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicable_schedule_python" style="color: inherit; text-decoration: inherit;">applicable_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicablescheduleresponse">Dict[Applicable<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicablescheduleresponse">Applicable<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The applicable schedule for the virtual machine.{{% /md %}}</dd>
 
@@ -2061,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_vm_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computevmpropertiesresponse">Dict[Compute<wbr>Vm<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computevmpropertiesresponse">Compute<wbr>Vm<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute virtual machine properties.{{% /md %}}</dd>
 
@@ -2399,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lab_vms_shutdown_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>shutdown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Dict[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-shutdown schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd>
 
@@ -2409,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lab_vms_startup_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>startup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Dict[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-startup schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd>
 
@@ -2429,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -3002,8 +3002,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifactid_python">
-<a href="#artifactid_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
+        <span id="artifact_id_python">
+<a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3012,8 +3012,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttitle_python">
-<a href="#artifacttitle_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Title</a>
+        <span id="artifact_title_python">
+<a href="#artifact_title_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>title</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3022,8 +3022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymentstatusmessage_python">
-<a href="#deploymentstatusmessage_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status<wbr>Message</a>
+        <span id="deployment_status_message_python">
+<a href="#deployment_status_message_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3032,8 +3032,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="installtime_python">
-<a href="#installtime_python" style="color: inherit; text-decoration: inherit;">install<wbr>Time</a>
+        <span id="install_time_python">
+<a href="#install_time_python" style="color: inherit; text-decoration: inherit;">install_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3046,7 +3046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterproperties">List[Artifact<wbr>Parameter<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#artifactparameterproperties">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
 
@@ -3062,8 +3062,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmextensionstatusmessage_python">
-<a href="#vmextensionstatusmessage_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Extension<wbr>Status<wbr>Message</a>
+        <span id="vm_extension_status_message_python">
+<a href="#vm_extension_status_message_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extension_<wbr>status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3321,8 +3321,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifactid_python">
-<a href="#artifactid_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
+        <span id="artifact_id_python">
+<a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3331,8 +3331,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttitle_python">
-<a href="#artifacttitle_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Title</a>
+        <span id="artifact_title_python">
+<a href="#artifact_title_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>title</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3341,8 +3341,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymentstatusmessage_python">
-<a href="#deploymentstatusmessage_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status<wbr>Message</a>
+        <span id="deployment_status_message_python">
+<a href="#deployment_status_message_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3351,8 +3351,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="installtime_python">
-<a href="#installtime_python" style="color: inherit; text-decoration: inherit;">install<wbr>Time</a>
+        <span id="install_time_python">
+<a href="#install_time_python" style="color: inherit; text-decoration: inherit;">install_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3365,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">List[Artifact<wbr>Parameter<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
 
@@ -3381,8 +3381,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmextensionstatusmessage_python">
-<a href="#vmextensionstatusmessage_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Extension<wbr>Status<wbr>Message</a>
+        <span id="vm_extension_status_message_python">
+<a href="#vm_extension_status_message_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extension_<wbr>status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4558,7 +4558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_ids_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets data disks blob uri for the virtual machine.{{% /md %}}</dd>
 
@@ -4568,7 +4568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computedatadiskresponse">List[Compute<wbr>Data<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computedatadiskresponse">Sequence[Compute<wbr>Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets all data disks attached to the virtual machine.{{% /md %}}</dd>
 
@@ -4608,7 +4608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computevminstanceviewstatusresponse">List[Compute<wbr>Vm<wbr>Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computevminstanceviewstatusresponse">Sequence[Compute<wbr>Vm<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets the statuses of the virtual machine.{{% /md %}}</dd>
 
@@ -4753,18 +4753,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attachnewdatadiskoptions_python">
-<a href="#attachnewdatadiskoptions_python" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
+        <span id="attach_new_data_disk_options_python">
+<a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptions">Dict[Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options]</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="existinglabdiskid_python">
-<a href="#existinglabdiskid_python" style="color: inherit; text-decoration: inherit;">existing<wbr>Lab<wbr>Disk<wbr>Id</a>
+        <span id="existing_lab_disk_id_python">
+<a href="#existing_lab_disk_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>lab_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4912,18 +4912,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attachnewdatadiskoptions_python">
-<a href="#attachnewdatadiskoptions_python" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
+        <span id="attach_new_data_disk_options_python">
+<a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Dict[Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="existinglabdiskid_python">
-<a href="#existinglabdiskid_python" style="color: inherit; text-decoration: inherit;">existing<wbr>Lab<wbr>Disk<wbr>Id</a>
+        <span id="existing_lab_disk_id_python">
+<a href="#existing_lab_disk_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>lab_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5885,8 +5885,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transportprotocol_python">
-<a href="#transportprotocol_python" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
+        <span id="transport_protocol_python">
+<a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6044,8 +6044,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transportprotocol_python">
-<a href="#transportprotocol_python" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
+        <span id="transport_protocol_python">
+<a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6417,7 +6417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Dict[Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
 
@@ -6816,7 +6816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Dict[Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
 
@@ -7703,7 +7703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetails">Dict[Day<wbr>Details]</a></span>
+        <span class="property-type"><a href="#daydetails">Day<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
 
@@ -7713,7 +7713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetails">Dict[Hour<wbr>Details]</a></span>
+        <span class="property-type"><a href="#hourdetails">Hour<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
 
@@ -7743,7 +7743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Dict[Notification<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
 
@@ -7763,7 +7763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -7803,7 +7803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetails">Dict[Week<wbr>Details]</a></span>
+        <span class="property-type"><a href="#weekdetails">Week<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
 
@@ -8182,7 +8182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Dict[Day<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
 
@@ -8192,7 +8192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Dict[Hour<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
 
@@ -8222,7 +8222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Dict[Notification<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
 
@@ -8242,7 +8242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -8282,7 +8282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Dict[Week<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
 
@@ -8871,7 +8871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Dict[Day<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
 
@@ -8881,7 +8881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Dict[Hour<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
 
@@ -8901,7 +8901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Dict[Notification<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
 
@@ -8921,7 +8921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -8961,7 +8961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Dict[Week<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
 
@@ -9040,7 +9040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatrule">List[Inbound<wbr>Nat<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#inboundnatrule">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
 
@@ -9119,7 +9119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">List[Inbound<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
 
@@ -9238,7 +9238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
 
@@ -9357,7 +9357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
 

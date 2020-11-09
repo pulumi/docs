@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#a_records_python" style="color: inherit; text-decoration: inherit;">a_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#arecordresponse">List[ARecord<wbr>Response]</a></span>
+        <span class="property-type"><a href="#arecordresponse">Sequence[ARecord<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#aaaa_records_python" style="color: inherit; text-decoration: inherit;">aaaa_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaaarecordresponse">List[Aaaa<wbr>Record<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aaaarecordresponse">Sequence[Aaaa<wbr>Record<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#cname_record_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>record</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cnamerecordresponse">Dict[Cname<wbr>Record<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cnamerecordresponse">Cname<wbr>Record<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#mx_records_python" style="color: inherit; text-decoration: inherit;">mx_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mxrecordresponse">List[Mx<wbr>Record<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mxrecordresponse">Sequence[Mx<wbr>Record<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#ptr_records_python" style="color: inherit; text-decoration: inherit;">ptr_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ptrrecordresponse">List[Ptr<wbr>Record<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ptrrecordresponse">Sequence[Ptr<wbr>Record<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#soa_record_python" style="color: inherit; text-decoration: inherit;">soa_<wbr>record</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#soarecordresponse">Dict[Soa<wbr>Record<wbr>Response]</a></span>
+        <span class="property-type"><a href="#soarecordresponse">Soa<wbr>Record<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#srv_records_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#srvrecordresponse">List[Srv<wbr>Record<wbr>Response]</a></span>
+        <span class="property-type"><a href="#srvrecordresponse">Sequence[Srv<wbr>Record<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#txt_records_python" style="color: inherit; text-decoration: inherit;">txt_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#txtrecordresponse">List[Txt<wbr>Record<wbr>Response]</a></span>
+        <span class="property-type"><a href="#txtrecordresponse">Sequence[Txt<wbr>Record<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd>
 
@@ -950,8 +950,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4address_python">
-<a href="#ipv4address_python" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1029,8 +1029,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv6address_python">
-<a href="#ipv6address_python" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1907,7 +1907,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
 

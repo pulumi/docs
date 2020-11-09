@@ -35,10 +35,14 @@ class MyStack : Stack
             PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryApplicationVersionPublishingProfileArgs
             {
                 EndOfLifeDate = "2019-07-01T07:00:00Z",
+                ManageActions = new AzureNextGen.Compute.Latest.Inputs.UserArtifactManageArgs
+                {
+                    Install = "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
+                    Remove = "del C:\\package ",
+                },
                 ReplicaCount = 1,
                 Source = new AzureNextGen.Compute.Latest.Inputs.UserArtifactSourceArgs
                 {
-                    FileName = "package.zip",
                     MediaLink = "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
                 },
                 StorageAccountType = "Standard_LRS",
@@ -81,9 +85,12 @@ func main() {
 			Location:                      pulumi.String("West US"),
 			PublishingProfile: &compute.GalleryApplicationVersionPublishingProfileArgs{
 				EndOfLifeDate: pulumi.String("2019-07-01T07:00:00Z"),
-				ReplicaCount:  pulumi.Int(1),
+				ManageActions: &compute.UserArtifactManageArgs{
+					Install: pulumi.String("powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\""),
+					Remove:  pulumi.String("del C:\\package "),
+				},
+				ReplicaCount: pulumi.Int(1),
 				Source: &compute.UserArtifactSourceArgs{
-					FileName:  pulumi.String("package.zip"),
 					MediaLink: pulumi.String("https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}"),
 				},
 				StorageAccountType: pulumi.String("Standard_LRS"),
@@ -119,20 +126,23 @@ gallery_application_version = azure_nextgen.compute.latest.GalleryApplicationVer
     gallery_application_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile={
-        "endOfLifeDate": "2019-07-01T07:00:00Z",
-        "replicaCount": 1,
-        "source": {
-            "fileName": "package.zip",
-            "mediaLink": "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
-        },
-        "storageAccountType": "Standard_LRS",
-        "targetRegions": [{
-            "name": "West US",
-            "regionalReplicaCount": 1,
-            "storageAccountType": "Standard_LRS",
-        }],
-    },
+    publishing_profile=azure_nextgen.compute.latest.GalleryApplicationVersionPublishingProfileArgs(
+        end_of_life_date="2019-07-01T07:00:00Z",
+        manage_actions=azure_nextgen.compute.latest.UserArtifactManageArgs(
+            install="powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
+            remove="del C:\\package ",
+        ),
+        replica_count=1,
+        source=azure_nextgen.compute.latest.UserArtifactSourceArgs(
+            media_link="https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
+        ),
+        storage_account_type="Standard_LRS",
+        target_regions=[azure_nextgen.compute.latest.TargetRegionArgs(
+            name="West US",
+            regional_replica_count=1,
+            storage_account_type="Standard_LRS",
+        )],
+    ),
     resource_group_name="myResourceGroup")
 
 ```
@@ -152,9 +162,12 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
     location: "West US",
     publishingProfile: {
         endOfLifeDate: "2019-07-01T07:00:00Z",
+        manageActions: {
+            install: "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
+            remove: "del C:\\package ",
+        },
         replicaCount: 1,
         source: {
-            fileName: "package.zip",
             mediaLink: "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
         },
         storageAccountType: "Standard_LRS",
@@ -183,7 +196,7 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryApplicationVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">gallery_application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_application_version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[GalleryApplicationVersionPublishingProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryApplicationVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">gallery_application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_application_version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryApplicationVersionPublishingProfileArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -632,7 +645,7 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
 <a href="#publishing_profile_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryapplicationversionpublishingprofile">Dict[Gallery<wbr>Application<wbr>Version<wbr>Publishing<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#galleryapplicationversionpublishingprofile">Gallery<wbr>Application<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image version.{{% /md %}}</dd>
 
@@ -652,7 +665,7 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -881,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_status_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationstatusresponse">Dict[Replication<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#replicationstatusresponse">Replication<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
 
@@ -1247,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">List[Data<wbr>Disk<wbr>Image<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
 
@@ -1257,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">Dict[OSDisk<wbr>Image<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 
@@ -1366,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">List[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
 
@@ -1376,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Dict[OSDisk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 
@@ -1410,16 +1423,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_csharp">
-<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enablehealthcheck_csharp">
 <a href="#enablehealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Health<wbr>Check</a>
 </span> 
@@ -1447,6 +1450,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manageactions_csharp">
+<a href="#manageactions_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1497,16 +1510,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_go">
-<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enablehealthcheck_go">
 <a href="#enablehealthcheck_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Health<wbr>Check</a>
 </span> 
@@ -1534,6 +1537,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manageactions_go">
+<a href="#manageactions_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanage">User<wbr>Artifact<wbr>Manage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1584,16 +1597,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_nodejs">
-<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enablehealthcheck_nodejs">
 <a href="#enablehealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Health<wbr>Check</a>
 </span> 
@@ -1621,6 +1624,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manageactions_nodejs">
+<a href="#manageactions_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanage">User<wbr>Artifact<wbr>Manage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1665,19 +1678,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactsource">Dict[User<wbr>Artifact<wbr>Source]</a></span>
+        <span class="property-type"><a href="#userartifactsource">User<wbr>Artifact<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source image from which the Image Version is going to be created.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="content_type_python">
-<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1711,6 +1714,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="manage_actions_python">
+<a href="#manage_actions_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanage">User<wbr>Artifact<wbr>Manage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="replica_count_python">
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span> 
@@ -1735,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">List[Target<wbr>Region]</a></span>
+        <span class="property-type"><a href="#targetregion">Sequence[Target<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 
@@ -1779,16 +1792,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_csharp">
-<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enablehealthcheck_csharp">
 <a href="#enablehealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Health<wbr>Check</a>
 </span> 
@@ -1816,6 +1819,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manageactions_csharp">
+<a href="#manageactions_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>User<wbr>Artifact<wbr>Manage<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1876,16 +1889,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_go">
-<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enablehealthcheck_go">
 <a href="#enablehealthcheck_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Health<wbr>Check</a>
 </span> 
@@ -1913,6 +1916,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manageactions_go">
+<a href="#manageactions_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanageresponse">User<wbr>Artifact<wbr>Manage<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1973,16 +1986,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_nodejs">
-<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="enablehealthcheck_nodejs">
 <a href="#enablehealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Health<wbr>Check</a>
 </span> 
@@ -2010,6 +2013,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manageactions_nodejs">
+<a href="#manageactions_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanageresponse">User<wbr>Artifact<wbr>Manage<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2064,19 +2077,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userartifactsourceresponse">Dict[User<wbr>Artifact<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userartifactsourceresponse">User<wbr>Artifact<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source image from which the Image Version is going to be created.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="content_type_python">
-<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. May be used to help process this file. The type of file contained in the source, e.g. zip, json, etc.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2110,6 +2113,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="manage_actions_python">
+<a href="#manage_actions_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userartifactmanageresponse">User<wbr>Artifact<wbr>Manage<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="replica_count_python">
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span> 
@@ -2134,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">List[Target<wbr>Region<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetregionresponse">Sequence[Target<wbr>Region<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 
@@ -2610,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">List[Regional<wbr>Replication<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Sequence[Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
 
@@ -2789,14 +2802,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Dict[Encryption<wbr>Images]</a></span>
+        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionalreplicacount_python">
-<a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+        <span id="regional_replica_count_python">
+<a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2988,14 +3001,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Dict[Encryption<wbr>Images<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionalreplicacount_python">
-<a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+        <span id="regional_replica_count_python">
+<a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3019,6 +3032,324 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="userartifactmanage">User<wbr>Artifact<wbr>Manage</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_csharp">
+<a href="#install_csharp" style="color: inherit; text-decoration: inherit;">Install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_csharp">
+<a href="#remove_csharp" style="color: inherit; text-decoration: inherit;">Remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_csharp">
+<a href="#update_csharp" style="color: inherit; text-decoration: inherit;">Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_go">
+<a href="#install_go" style="color: inherit; text-decoration: inherit;">Install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_go">
+<a href="#remove_go" style="color: inherit; text-decoration: inherit;">Remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_go">
+<a href="#update_go" style="color: inherit; text-decoration: inherit;">Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_nodejs">
+<a href="#install_nodejs" style="color: inherit; text-decoration: inherit;">install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_nodejs">
+<a href="#remove_nodejs" style="color: inherit; text-decoration: inherit;">remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_nodejs">
+<a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_python">
+<a href="#install_python" style="color: inherit; text-decoration: inherit;">install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_python">
+<a href="#remove_python" style="color: inherit; text-decoration: inherit;">remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_python">
+<a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="userartifactmanageresponse">User<wbr>Artifact<wbr>Manage<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_csharp">
+<a href="#install_csharp" style="color: inherit; text-decoration: inherit;">Install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_csharp">
+<a href="#remove_csharp" style="color: inherit; text-decoration: inherit;">Remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_csharp">
+<a href="#update_csharp" style="color: inherit; text-decoration: inherit;">Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_go">
+<a href="#install_go" style="color: inherit; text-decoration: inherit;">Install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_go">
+<a href="#remove_go" style="color: inherit; text-decoration: inherit;">Remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_go">
+<a href="#update_go" style="color: inherit; text-decoration: inherit;">Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_nodejs">
+<a href="#install_nodejs" style="color: inherit; text-decoration: inherit;">install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_nodejs">
+<a href="#remove_nodejs" style="color: inherit; text-decoration: inherit;">remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_nodejs">
+<a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="install_python">
+<a href="#install_python" style="color: inherit; text-decoration: inherit;">install</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to install the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remove_python">
+<a href="#remove_python" style="color: inherit; text-decoration: inherit;">remove</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="update_python">
+<a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="userartifactsource">User<wbr>Artifact<wbr>Source</h4>
 
 
@@ -3032,23 +3363,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_csharp">
-<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="medialink_csharp">
 <a href="#medialink_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultconfigurationlink_csharp">
+<a href="#defaultconfigurationlink_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Configuration<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3059,23 +3390,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_go">
-<a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="medialink_go">
 <a href="#medialink_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultconfigurationlink_go">
+<a href="#defaultconfigurationlink_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Configuration<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3086,23 +3417,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_nodejs">
-<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="medialink_nodejs">
 <a href="#medialink_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultconfigurationlink_nodejs">
+<a href="#defaultconfigurationlink_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Configuration<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3113,23 +3444,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="file_name_python">
-<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="media_link_python">
 <a href="#media_link_python" style="color: inherit; text-decoration: inherit;">media_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_configuration_link_python">
+<a href="#default_configuration_link_python" style="color: inherit; text-decoration: inherit;">default_<wbr>configuration_<wbr>link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3151,23 +3482,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_csharp">
-<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="medialink_csharp">
 <a href="#medialink_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultconfigurationlink_csharp">
+<a href="#defaultconfigurationlink_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Configuration<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3178,23 +3509,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_go">
-<a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="medialink_go">
 <a href="#medialink_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultconfigurationlink_go">
+<a href="#defaultconfigurationlink_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Configuration<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3205,23 +3536,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_nodejs">
-<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="medialink_nodejs">
 <a href="#medialink_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultconfigurationlink_nodejs">
+<a href="#defaultconfigurationlink_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Configuration<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3232,23 +3563,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="file_name_python">
-<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Required. The fileName of the artifact.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="media_link_python">
 <a href="#media_link_python" style="color: inherit; text-decoration: inherit;">media_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage blob.{{% /md %}}</dd>
+    <dd>{{% md %}}Required. The mediaLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_configuration_link_python">
+<a href="#default_configuration_link_python" style="color: inherit; text-decoration: inherit;">default_<wbr>configuration_<wbr>link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

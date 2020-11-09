@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#adm_credential_python" style="color: inherit; text-decoration: inherit;">adm_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#admcredentialresponse">Dict[Adm<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#admcredentialresponse">Adm<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The AdmCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#apns_credential_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apnscredentialresponse">Dict[Apns<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apnscredentialresponse">Apns<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ApnsCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#authorization_rules_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationrulepropertiesresponse">List[Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationrulepropertiesresponse">Sequence[Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The AuthorizationRules of the created NotificationHub{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#baidu_credential_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baiducredentialresponse">Dict[Baidu<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baiducredentialresponse">Baidu<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BaiduCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#gcm_credential_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcmcredentialresponse">Dict[Gcm<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gcmcredentialresponse">Gcm<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The GcmCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#mpns_credential_python" style="color: inherit; text-decoration: inherit;">mpns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpnscredentialresponse">Dict[Mpns<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mpnscredentialresponse">Mpns<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The MpnsCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#wns_credential_python" style="color: inherit; text-decoration: inherit;">wns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wnscredentialresponse">Dict[Wns<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#wnscredentialresponse">Wns<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WnsCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -2109,7 +2109,7 @@ The following output properties are available:
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 

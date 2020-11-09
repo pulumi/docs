@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response] | Dict[Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -710,8 +710,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -720,8 +720,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="itemid_python">
-<a href="#itemid_python" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
+        <span id="item_id_python">
+<a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -979,8 +979,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -999,8 +999,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="itemid_python">
-<a href="#itemid_python" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
+        <span id="item_id_python">
+<a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

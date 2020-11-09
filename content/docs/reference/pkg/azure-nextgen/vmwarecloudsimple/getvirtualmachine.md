@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#controllers_python" style="color: inherit; text-decoration: inherit;">controllers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdiskcontrollerresponse">List[Virtual<wbr>Disk<wbr>Controller<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualdiskcontrollerresponse">Sequence[Virtual<wbr>Disk<wbr>Controller<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ The following output properties are available:
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestoscustomizationresponse">Dict[Guest<wbr>OSCustomization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#guestoscustomizationresponse">Guest<wbr>OSCustomization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
 
@@ -1149,7 +1149,7 @@ The following output properties are available:
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdiskresponse">List[Virtual<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualdiskresponse">Sequence[Virtual<wbr>Disk<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The following output properties are available:
 <a href="#nics_python" style="color: inherit; text-decoration: inherit;">nics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnicresponse">List[Virtual<wbr>Nic<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnicresponse">Sequence[Virtual<wbr>Nic<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
 
@@ -1189,7 +1189,7 @@ The following output properties are available:
 <a href="#resource_pool_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepoolresponse">Dict[Resource<wbr>Pool<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcepoolresponse">Resource<wbr>Pool<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
 
@@ -1199,7 +1199,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of tags{{% /md %}}</dd>
 
@@ -1229,7 +1229,7 @@ The following output properties are available:
 <a href="#v_sphere_networks_python" style="color: inherit; text-decoration: inherit;">v_<wbr>sphere_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd>
 
@@ -1434,7 +1434,7 @@ The following output properties are available:
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
 
@@ -1743,7 +1743,7 @@ The following output properties are available:
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
 
@@ -1753,7 +1753,7 @@ The following output properties are available:
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
 
@@ -1779,8 +1779,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarywinsserver_python">
-<a href="#primarywinsserver_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Wins<wbr>Server</a>
+        <span id="primary_wins_server_python">
+<a href="#primary_wins_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>wins_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1789,8 +1789,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondarywinsserver_python">
-<a href="#secondarywinsserver_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Wins<wbr>Server</a>
+        <span id="secondary_wins_server_python">
+<a href="#secondary_wins_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>wins_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2257,8 +2257,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="subtype_python">
-<a href="#subtype_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Type</a>
+        <span id="sub_type_python">
+<a href="#sub_type_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2466,8 +2466,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
+        <span id="controller_id_python">
+<a href="#controller_id_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2476,8 +2476,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="independencemode_python">
-<a href="#independencemode_python" style="color: inherit; text-decoration: inherit;">independence<wbr>Mode</a>
+        <span id="independence_mode_python">
+<a href="#independence_mode_python" style="color: inherit; text-decoration: inherit;">independence_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2486,8 +2486,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="totalsize_python">
-<a href="#totalsize_python" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
+        <span id="total_size_python">
+<a href="#total_size_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2496,8 +2496,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualdiskname_python">
-<a href="#virtualdiskname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Name</a>
+        <span id="virtual_disk_name_python">
+<a href="#virtual_disk_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2506,8 +2506,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualdiskid_python">
-<a href="#virtualdiskid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Id</a>
+        <span id="virtual_disk_id_python">
+<a href="#virtual_disk_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3078,14 +3078,14 @@ The following output properties are available:
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkresponse">Dict[Virtual<wbr>Network<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="nictype_python">
-<a href="#nictype_python" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3094,8 +3094,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnicname_python">
-<a href="#virtualnicname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Name</a>
+        <span id="virtual_nic_name_python">
+<a href="#virtual_nic_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3108,7 +3108,7 @@ The following output properties are available:
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomizationresponse">Dict[Guest<wbr>OSNICCustomization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ The following output properties are available:
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
 
@@ -3134,8 +3134,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="poweronboot_python">
-<a href="#poweronboot_python" style="color: inherit; text-decoration: inherit;">power<wbr>On<wbr>Boot</a>
+        <span id="power_on_boot_python">
+<a href="#power_on_boot_python" style="color: inherit; text-decoration: inherit;">power_<wbr>on_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3144,8 +3144,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnicid_python">
-<a href="#virtualnicid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Id</a>
+        <span id="virtual_nic_id_python">
+<a href="#virtual_nic_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorpropertiesresponse">Dict[Collector<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#collectorpropertiesresponse">Collector<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Dict[Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The following output properties are available:
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentpropertiesresponse">Dict[Collector<wbr>Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

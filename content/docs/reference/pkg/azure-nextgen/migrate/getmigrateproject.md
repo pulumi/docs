@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojectpropertiesresponse">Dict[Migrate<wbr>Project<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#migrateprojectpropertiesresponse">Migrate<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojectresponsetags">Dict[Migrate<wbr>Project<wbr>Response<wbr>Tags]</a></span>
+        <span class="property-type"><a href="#migrateprojectresponsetags">Migrate<wbr>Project<wbr>Response<wbr>Tags</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
 
@@ -570,11 +570,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedsummary_python">
-<a href="#extendedsummary_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Summary</a>
+        <span id="extended_summary_python">
+<a href="#extended_summary_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
 
@@ -813,7 +813,7 @@ The following output properties are available:
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Database<wbr>Project<wbr>Summary<wbr>Response] | Dict[Servers<wbr>Project<wbr>Summary<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Union[Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#registered_tools_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>tools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd>
 
@@ -1197,8 +1197,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="assessedcount_python">
-<a href="#assessedcount_python" style="color: inherit; text-decoration: inherit;">assessed<wbr>Count</a>
+        <span id="assessed_count_python">
+<a href="#assessed_count_python" style="color: inherit; text-decoration: inherit;">assessed_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1207,8 +1207,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="discoveredcount_python">
-<a href="#discoveredcount_python" style="color: inherit; text-decoration: inherit;">discovered<wbr>Count</a>
+        <span id="discovered_count_python">
+<a href="#discovered_count_python" style="color: inherit; text-decoration: inherit;">discovered_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1217,11 +1217,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedsummary_python">
-<a href="#extendedsummary_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Summary</a>
+        <span id="extended_summary_python">
+<a href="#extended_summary_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
 
@@ -1237,8 +1237,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migratedcount_python">
-<a href="#migratedcount_python" style="color: inherit; text-decoration: inherit;">migrated<wbr>Count</a>
+        <span id="migrated_count_python">
+<a href="#migrated_count_python" style="color: inherit; text-decoration: inherit;">migrated_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1257,8 +1257,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicatingcount_python">
-<a href="#replicatingcount_python" style="color: inherit; text-decoration: inherit;">replicating<wbr>Count</a>
+        <span id="replicating_count_python">
+<a href="#replicating_count_python" style="color: inherit; text-decoration: inherit;">replicating_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1267,8 +1267,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="testmigratedcount_python">
-<a href="#testmigratedcount_python" style="color: inherit; text-decoration: inherit;">test<wbr>Migrated<wbr>Count</a>
+        <span id="test_migrated_count_python">
+<a href="#test_migrated_count_python" style="color: inherit; text-decoration: inherit;">test_<wbr>migrated_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

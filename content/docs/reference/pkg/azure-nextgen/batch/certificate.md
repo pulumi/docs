@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_certificate_error_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>certificate_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">Dict[Delete<wbr>Certificate<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">Delete<wbr>Certificate<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is only returned when the certificate provisioningState is 'Failed'.{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">List[Delete<wbr>Certificate<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">Sequence[Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
 

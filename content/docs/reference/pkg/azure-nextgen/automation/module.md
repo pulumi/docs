@@ -94,14 +94,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 module = azure_nextgen.automation.latest.Module("module",
     automation_account_name="myAutomationAccount33",
-    content_link={
-        "contentHash": {
-            "algorithm": "sha265",
-            "value": "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
-        },
-        "uri": "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
-        "version": "1.0.0.0",
-    },
+    content_link=azure_nextgen.automation.latest.ContentLinkArgs(
+        content_hash=azure_nextgen.automation.latest.ContentHashArgs(
+            algorithm="sha265",
+            value="07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+        ),
+        uri="https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+        version="1.0.0.0",
+    ),
     module_name="OmsCompositeResources",
     resource_group_name="rg")
 
@@ -145,7 +145,7 @@ const module = new azure_nextgen.automation.latest.Module("module", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Module</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_link</span><span class="p">:</span> <span class="nx">Optional[Dict[ContentLink]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">module_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Module</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_link</span><span class="p">:</span> <span class="nx">Optional[ContentLinkArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">module_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -564,7 +564,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#content_link_python" style="color: inherit; text-decoration: inherit;">content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Dict[Content<wbr>Link]</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the module content link.{{% /md %}}</dd>
 
@@ -614,7 +614,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags attached to the resource.{{% /md %}}</dd>
 
@@ -1103,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleerrorinforesponse">Dict[Module<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#moduleerrorinforesponse">Module<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error info of the module.{{% /md %}}</dd>
 
@@ -1559,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Dict[Content<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 
@@ -1718,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Dict[Content<wbr>Hash<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 

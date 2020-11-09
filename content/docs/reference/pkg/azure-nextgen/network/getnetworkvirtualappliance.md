@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#inbound_security_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>security_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of references to InboundSecurityRules.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#virtual_appliance_nics_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>appliance_<wbr>nics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualappliancenicpropertiesresponse">List[Virtual<wbr>Appliance<wbr>Nic<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualappliancenicpropertiesresponse">Sequence[Virtual<wbr>Appliance<wbr>Nic<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Appliance Network Interfaces.{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#virtual_appliance_sites_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>appliance_<wbr>sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of references to VirtualApplianceSite.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#boot_strap_configuration_blobs_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>strap_<wbr>configuration_<wbr>blobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}BootStrapConfigurationBlobs storage URLs.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#cloud_init_configuration_blobs_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>init_<wbr>configuration_<wbr>blobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}CloudInitConfigurationBlob storage URLs.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Dict[Managed<wbr>Service<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The service principal that has read access to cloud-init and config blob.{{% /md %}}</dd>
 
@@ -879,7 +879,7 @@ The following output properties are available:
 <a href="#nva_sku_python" style="color: inherit; text-decoration: inherit;">nva_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplianceskupropertiesresponse">Dict[Virtual<wbr>Appliance<wbr>Sku<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualapplianceskupropertiesresponse">Virtual<wbr>Appliance<wbr>Sku<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network Virtual Appliance SKU.{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Virtual Hub where Network Virtual Appliance is being deployed.{{% /md %}}</dd>
 
@@ -1114,7 +1114,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 

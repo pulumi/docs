@@ -89,15 +89,15 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 delegated_subnet_service_details = azure_nextgen.delegatednetwork.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
-    controller_details={
-        "id": "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
-    },
+    controller_details=azure_nextgen.delegatednetwork.v20200808preview.ControllerDetailsArgs(
+        id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
+    ),
     location="West US",
     resource_group_name="TestRG",
     resource_name="delegated1",
-    subnet_details={
-        "id": "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
-    })
+    subnet_details=azure_nextgen.delegatednetwork.v20200808preview.SubnetDetailsArgs(
+        id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+    ))
 
 ```
 
@@ -137,7 +137,7 @@ const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v202008
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controller_details</span><span class="p">:</span> <span class="nx">Optional[Dict[ControllerDetails]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_details</span><span class="p">:</span> <span class="nx">Optional[Dict[SubnetDetails]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controller_details</span><span class="p">:</span> <span class="nx">Optional[ControllerDetailsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_details</span><span class="p">:</span> <span class="nx">Optional[SubnetDetailsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -536,7 +536,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
 <a href="#controller_details_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetails">Dict[Controller<wbr>Details]</a></span>
+        <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}controller details{{% /md %}}</dd>
 
@@ -556,7 +556,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
 <a href="#subnet_details_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdetails">Dict[Subnet<wbr>Details]</a></span>
+        <span class="property-type"><a href="#subnetdetails">Subnet<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}orchestrator details{{% /md %}}</dd>
 
@@ -566,7 +566,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 

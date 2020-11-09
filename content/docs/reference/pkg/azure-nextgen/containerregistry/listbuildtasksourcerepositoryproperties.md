@@ -387,7 +387,7 @@ The following output properties are available:
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Dict[Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcecontrolauthinforesponse">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
 

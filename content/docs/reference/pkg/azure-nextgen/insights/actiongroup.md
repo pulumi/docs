@@ -301,93 +301,93 @@ import pulumi_azure_nextgen as azure_nextgen
 
 action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
     action_group_name="SampleActionGroup",
-    arm_role_receivers=[{
-        "name": "Sample armRole",
-        "roleId": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
-        "useCommonAlertSchema": True,
-    }],
-    automation_runbook_receivers=[{
-        "automationAccountId": "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
-        "isGlobalRunbook": False,
-        "name": "testRunbook",
-        "runbookName": "Sample runbook",
-        "serviceUri": "https://s13events.azure-automation.net/webhooks?token=iimE%2fD19Eg%2bvDy22yUMecIZY6Uiz%2bHfuQ67r8r1wY%2fI%3d",
-        "useCommonAlertSchema": True,
-        "webhookResourceId": "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
-    }],
-    azure_app_push_receivers=[{
-        "emailAddress": "johndoe@email.com",
-        "name": "Sample azureAppPush",
-    }],
-    azure_function_receivers=[{
-        "functionAppResourceId": "/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
-        "functionName": "HttpTriggerCSharp1",
-        "httpTriggerUrl": "https://testfunctionapp.azurewebsites.net/api/HttpTriggerCSharp1?code=4CopFfiXqUQC8dvIM7F53J7tIU3Gy9QQIG/vKAXMe2avhHqK3/jVYw==",
-        "name": "Sample azureFunction",
-        "useCommonAlertSchema": True,
-    }],
+    arm_role_receivers=[azure_nextgen.insights.latest.ArmRoleReceiverArgs(
+        name="Sample armRole",
+        role_id="8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        use_common_alert_schema=True,
+    )],
+    automation_runbook_receivers=[azure_nextgen.insights.latest.AutomationRunbookReceiverArgs(
+        automation_account_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
+        is_global_runbook=False,
+        name="testRunbook",
+        runbook_name="Sample runbook",
+        service_uri="https://s13events.azure-automation.net/webhooks?token=iimE%2fD19Eg%2bvDy22yUMecIZY6Uiz%2bHfuQ67r8r1wY%2fI%3d",
+        use_common_alert_schema=True,
+        webhook_resource_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
+    )],
+    azure_app_push_receivers=[azure_nextgen.insights.latest.AzureAppPushReceiverArgs(
+        email_address="johndoe@email.com",
+        name="Sample azureAppPush",
+    )],
+    azure_function_receivers=[azure_nextgen.insights.latest.AzureFunctionReceiverArgs(
+        function_app_resource_id="/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
+        function_name="HttpTriggerCSharp1",
+        http_trigger_url="https://testfunctionapp.azurewebsites.net/api/HttpTriggerCSharp1?code=4CopFfiXqUQC8dvIM7F53J7tIU3Gy9QQIG/vKAXMe2avhHqK3/jVYw==",
+        name="Sample azureFunction",
+        use_common_alert_schema=True,
+    )],
     email_receivers=[
-        {
-            "emailAddress": "johndoe@email.com",
-            "name": "John Doe's email",
-            "useCommonAlertSchema": False,
-        },
-        {
-            "emailAddress": "janesmith@email.com",
-            "name": "Jane Smith's email",
-            "useCommonAlertSchema": True,
-        },
+        azure_nextgen.insights.latest.EmailReceiverArgs(
+            email_address="johndoe@email.com",
+            name="John Doe's email",
+            use_common_alert_schema=False,
+        ),
+        azure_nextgen.insights.latest.EmailReceiverArgs(
+            email_address="janesmith@email.com",
+            name="Jane Smith's email",
+            use_common_alert_schema=True,
+        ),
     ],
     enabled=True,
     group_short_name="sample",
-    itsm_receivers=[{
-        "connectionId": "a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
-        "name": "Sample itsm",
-        "region": "westcentralus",
-        "ticketConfiguration": "{\"PayloadRevision\":0,\"WorkItemType\":\"Incident\",\"UseTemplate\":false,\"WorkItemData\":\"{}\",\"CreateOneWIPerCI\":false}",
-        "workspaceId": "5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c",
-    }],
+    itsm_receivers=[azure_nextgen.insights.latest.ItsmReceiverArgs(
+        connection_id="a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
+        name="Sample itsm",
+        region="westcentralus",
+        ticket_configuration="{\"PayloadRevision\":0,\"WorkItemType\":\"Incident\",\"UseTemplate\":false,\"WorkItemData\":\"{}\",\"CreateOneWIPerCI\":false}",
+        workspace_id="5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c",
+    )],
     location="Global",
-    logic_app_receivers=[{
-        "callbackUrl": "https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w",
-        "name": "Sample logicApp",
-        "resourceId": "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp",
-        "useCommonAlertSchema": False,
-    }],
+    logic_app_receivers=[azure_nextgen.insights.latest.LogicAppReceiverArgs(
+        callback_url="https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w",
+        name="Sample logicApp",
+        resource_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp",
+        use_common_alert_schema=False,
+    )],
     resource_group_name="Default-NotificationRules",
     sms_receivers=[
-        {
-            "countryCode": "1",
-            "name": "John Doe's mobile",
-            "phoneNumber": "1234567890",
-        },
-        {
-            "countryCode": "1",
-            "name": "Jane Smith's mobile",
-            "phoneNumber": "0987654321",
-        },
+        azure_nextgen.insights.latest.SmsReceiverArgs(
+            country_code="1",
+            name="John Doe's mobile",
+            phone_number="1234567890",
+        ),
+        azure_nextgen.insights.latest.SmsReceiverArgs(
+            country_code="1",
+            name="Jane Smith's mobile",
+            phone_number="0987654321",
+        ),
     ],
     tags={},
-    voice_receivers=[{
-        "countryCode": "1",
-        "name": "Sample voice",
-        "phoneNumber": "1234567890",
-    }],
+    voice_receivers=[azure_nextgen.insights.latest.VoiceReceiverArgs(
+        country_code="1",
+        name="Sample voice",
+        phone_number="1234567890",
+    )],
     webhook_receivers=[
-        {
-            "name": "Sample webhook 1",
-            "serviceUri": "http://www.example.com/webhook1",
-            "useCommonAlertSchema": True,
-        },
-        {
-            "identifierUri": "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
-            "name": "Sample webhook 2",
-            "objectId": "d3bb868c-fe44-452c-aa26-769a6538c808",
-            "serviceUri": "http://www.example.com/webhook2",
-            "tenantId": "68a4459a-ccb8-493c-b9da-dd30457d1b84",
-            "useAadAuth": True,
-            "useCommonAlertSchema": True,
-        },
+        azure_nextgen.insights.latest.WebhookReceiverArgs(
+            name="Sample webhook 1",
+            service_uri="http://www.example.com/webhook1",
+            use_common_alert_schema=True,
+        ),
+        azure_nextgen.insights.latest.WebhookReceiverArgs(
+            identifier_uri="http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
+            name="Sample webhook 2",
+            object_id="d3bb868c-fe44-452c-aa26-769a6538c808",
+            service_uri="http://www.example.com/webhook2",
+            tenant_id="68a4459a-ccb8-493c-b9da-dd30457d1b84",
+            use_aad_auth=True,
+            use_common_alert_schema=True,
+        ),
     ])
 
 ```
@@ -508,7 +508,7 @@ const actionGroup = new azure_nextgen.insights.latest.ActionGroup("actionGroup",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ArmRoleReceiver]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[AutomationRunbookReceiver]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[List[AzureAppPushReceiver]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[List[AzureFunctionReceiver]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[List[EmailReceiver]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ItsmReceiver]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[List[LogicAppReceiver]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[List[SmsReceiver]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[List[VoiceReceiver]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[WebhookReceiver]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[SmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[VoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookReceiverArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1237,7 +1237,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiver">List[Arm<wbr>Role<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#armrolereceiver">Sequence[Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd>
 
@@ -1247,7 +1247,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiver">List[Automation<wbr>Runbook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiver">Sequence[Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1257,7 +1257,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiver">List[Azure<wbr>App<wbr>Push<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#azureapppushreceiver">Sequence[Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1267,7 +1267,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiver">List[Azure<wbr>Function<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiver">Sequence[Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1277,7 +1277,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiver">List[Email<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#emailreceiver">Sequence[Email<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1287,7 +1287,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiver">List[Itsm<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#itsmreceiver">Sequence[Itsm<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1297,7 +1297,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiver">List[Logic<wbr>App<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#logicappreceiver">Sequence[Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1307,7 +1307,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiver">List[Sms<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#smsreceiver">Sequence[Sms<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1317,7 +1317,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1327,7 +1327,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiver">List[Voice<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#voicereceiver">Sequence[Voice<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1337,7 +1337,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiver">List[Webhook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#webhookreceiver">Sequence[Webhook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -1650,8 +1650,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="roleid_python">
-<a href="#roleid_python" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1660,8 +1660,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1809,8 +1809,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="roleid_python">
-<a href="#roleid_python" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1819,8 +1819,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2078,8 +2078,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="automationaccountid_python">
-<a href="#automationaccountid_python" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
+        <span id="automation_account_id_python">
+<a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2088,8 +2088,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isglobalrunbook_python">
-<a href="#isglobalrunbook_python" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
+        <span id="is_global_runbook_python">
+<a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2108,8 +2108,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2118,8 +2118,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="webhookresourceid_python">
-<a href="#webhookresourceid_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
+        <span id="webhook_resource_id_python">
+<a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2397,8 +2397,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="automationaccountid_python">
-<a href="#automationaccountid_python" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
+        <span id="automation_account_id_python">
+<a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2407,8 +2407,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isglobalrunbook_python">
-<a href="#isglobalrunbook_python" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
+        <span id="is_global_runbook_python">
+<a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2427,8 +2427,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2437,8 +2437,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="webhookresourceid_python">
-<a href="#webhookresourceid_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
+        <span id="webhook_resource_id_python">
+<a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2566,8 +2566,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2685,8 +2685,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2894,8 +2894,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="functionappresourceid_python">
-<a href="#functionappresourceid_python" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
+        <span id="function_app_resource_id_python">
+<a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2914,8 +2914,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="httptriggerurl_python">
-<a href="#httptriggerurl_python" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
+        <span id="http_trigger_url_python">
+<a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2934,8 +2934,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3133,8 +3133,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="functionappresourceid_python">
-<a href="#functionappresourceid_python" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
+        <span id="function_app_resource_id_python">
+<a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3153,8 +3153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="httptriggerurl_python">
-<a href="#httptriggerurl_python" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
+        <span id="http_trigger_url_python">
+<a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3173,8 +3173,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3312,8 +3312,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3332,8 +3332,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3501,8 +3501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3531,8 +3531,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3730,8 +3730,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionid_python">
-<a href="#connectionid_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+        <span id="connection_id_python">
+<a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3760,8 +3760,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ticketconfiguration_python">
-<a href="#ticketconfiguration_python" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
+        <span id="ticket_configuration_python">
+<a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3969,8 +3969,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionid_python">
-<a href="#connectionid_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+        <span id="connection_id_python">
+<a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3999,8 +3999,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ticketconfiguration_python">
-<a href="#ticketconfiguration_python" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
+        <span id="ticket_configuration_python">
+<a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4178,8 +4178,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="callbackurl_python">
-<a href="#callbackurl_python" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+        <span id="callback_url_python">
+<a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4208,8 +4208,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4377,8 +4377,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="callbackurl_python">
-<a href="#callbackurl_python" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+        <span id="callback_url_python">
+<a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4407,8 +4407,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4546,8 +4546,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4566,8 +4566,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4735,8 +4735,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4755,8 +4755,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4904,8 +4904,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4924,8 +4924,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5063,8 +5063,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5083,8 +5083,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5362,8 +5362,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5372,8 +5372,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identifieruri_python">
-<a href="#identifieruri_python" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
+        <span id="identifier_uri_python">
+<a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5402,8 +5402,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useaadauth_python">
-<a href="#useaadauth_python" style="color: inherit; text-decoration: inherit;">use<wbr>Aad<wbr>Auth</a>
+        <span id="use_aad_auth_python">
+<a href="#use_aad_auth_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aad_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5681,8 +5681,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5691,8 +5691,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identifieruri_python">
-<a href="#identifieruri_python" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
+        <span id="identifier_uri_python">
+<a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5721,8 +5721,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useaadauth_python">
-<a href="#useaadauth_python" style="color: inherit; text-decoration: inherit;">use<wbr>Aad<wbr>Auth</a>
+        <span id="use_aad_auth_python">
+<a href="#use_aad_auth_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aad_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

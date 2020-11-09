@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#private_link_scoped_resources_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>scoped_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkscopedresourceresponse">List[Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkscopedresourceresponse">Sequence[Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1230,8 +1230,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scopeid_python">
-<a href="#scopeid_python" style="color: inherit; text-decoration: inherit;">scope<wbr>Id</a>
+        <span id="scope_id_python">
+<a href="#scope_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

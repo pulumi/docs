@@ -132,27 +132,27 @@ import pulumi_azure_nextgen as azure_nextgen
 
 virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtualMachine",
     amount_of_ram=4096,
-    disks=[{
-        "controllerId": "1000",
-        "independenceMode": "persistent",
-        "totalSize": 10485760,
-        "virtualDiskId": "2000",
-    }],
+    disks=[azure_nextgen.vmwarecloudsimple.latest.VirtualDiskArgs(
+        controller_id="1000",
+        independence_mode="persistent",
+        total_size=10485760,
+        virtual_disk_id="2000",
+    )],
     location="westus2",
-    nics=[{
-        "network": {
-            "id": "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
-        },
-        "nicType": "E1000",
-        "powerOnBoot": True,
-        "virtualNicId": "4000",
-    }],
+    nics=[azure_nextgen.vmwarecloudsimple.latest.VirtualNicArgs(
+        network=azure_nextgen.vmwarecloudsimple.latest.VirtualNetworkArgs(
+            id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
+        ),
+        nic_type="E1000",
+        power_on_boot=True,
+        virtual_nic_id="4000",
+    )],
     number_of_cores=2,
     private_cloud_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
     resource_group_name="myResourceGroup",
-    resource_pool={
-        "id": "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
-    },
+    resource_pool=azure_nextgen.vmwarecloudsimple.latest.ResourcePoolArgs(
+        id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
+    ),
     template_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
     virtual_machine_name="myVirtualMachine")
 
@@ -209,7 +209,7 @@ const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amount_of_ram</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customization</span><span class="p">:</span> <span class="nx">Optional[Dict[GuestOSCustomization]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualDisk]]</span> = None<span class="p">, </span><span class="nx">expose_to_guest_vm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nics</span><span class="p">:</span> <span class="nx">Optional[List[VirtualNic]]</span> = None<span class="p">, </span><span class="nx">number_of_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_pool</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourcePool]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_sphere_networks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amount_of_ram</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customization</span><span class="p">:</span> <span class="nx">Optional[GuestOSCustomizationArgs]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualDiskArgs]]</span> = None<span class="p">, </span><span class="nx">expose_to_guest_vm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nics</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNicArgs]]</span> = None<span class="p">, </span><span class="nx">number_of_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_pool</span><span class="p">:</span> <span class="nx">Optional[ResourcePoolArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_sphere_networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -948,7 +948,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestoscustomization">Dict[Guest<wbr>OSCustomization]</a></span>
+        <span class="property-type"><a href="#guestoscustomization">Guest<wbr>OSCustomization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
 
@@ -958,7 +958,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdisk">List[Virtual<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualdisk">Sequence[Virtual<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
 
@@ -978,7 +978,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nics_python" style="color: inherit; text-decoration: inherit;">nics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnic">List[Virtual<wbr>Nic]</a></span>
+        <span class="property-type"><a href="#virtualnic">Sequence[Virtual<wbr>Nic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
 
@@ -998,7 +998,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_pool_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepool">Dict[Resource<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#resourcepool">Resource<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
 
@@ -1008,7 +1008,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of tags{{% /md %}}</dd>
 
@@ -1038,7 +1038,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#v_sphere_networks_python" style="color: inherit; text-decoration: inherit;">v_<wbr>sphere_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd>
 
@@ -1477,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controllers_python" style="color: inherit; text-decoration: inherit;">controllers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdiskcontrollerresponse">List[Virtual<wbr>Disk<wbr>Controller<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualdiskcontrollerresponse">Sequence[Virtual<wbr>Disk<wbr>Controller<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
 
@@ -1805,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
 
@@ -2044,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
 
@@ -2353,7 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
 
@@ -2363,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
 
@@ -2389,8 +2389,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarywinsserver_python">
-<a href="#primarywinsserver_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Wins<wbr>Server</a>
+        <span id="primary_wins_server_python">
+<a href="#primary_wins_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>wins_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2399,8 +2399,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondarywinsserver_python">
-<a href="#secondarywinsserver_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Wins<wbr>Server</a>
+        <span id="secondary_wins_server_python">
+<a href="#secondary_wins_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>wins_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2672,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
 
@@ -2682,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
 
@@ -2708,8 +2708,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarywinsserver_python">
-<a href="#primarywinsserver_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Wins<wbr>Server</a>
+        <span id="primary_wins_server_python">
+<a href="#primary_wins_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>wins_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2718,8 +2718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondarywinsserver_python">
-<a href="#secondarywinsserver_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Wins<wbr>Server</a>
+        <span id="secondary_wins_server_python">
+<a href="#secondary_wins_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>wins_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3245,8 +3245,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
+        <span id="controller_id_python">
+<a href="#controller_id_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3255,8 +3255,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="independencemode_python">
-<a href="#independencemode_python" style="color: inherit; text-decoration: inherit;">independence<wbr>Mode</a>
+        <span id="independence_mode_python">
+<a href="#independence_mode_python" style="color: inherit; text-decoration: inherit;">independence_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3265,8 +3265,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totalsize_python">
-<a href="#totalsize_python" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
+        <span id="total_size_python">
+<a href="#total_size_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3275,8 +3275,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualdiskid_python">
-<a href="#virtualdiskid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Id</a>
+        <span id="virtual_disk_id_python">
+<a href="#virtual_disk_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3464,8 +3464,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="subtype_python">
-<a href="#subtype_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Type</a>
+        <span id="sub_type_python">
+<a href="#sub_type_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3673,8 +3673,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
+        <span id="controller_id_python">
+<a href="#controller_id_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3683,8 +3683,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="independencemode_python">
-<a href="#independencemode_python" style="color: inherit; text-decoration: inherit;">independence<wbr>Mode</a>
+        <span id="independence_mode_python">
+<a href="#independence_mode_python" style="color: inherit; text-decoration: inherit;">independence_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3693,8 +3693,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="totalsize_python">
-<a href="#totalsize_python" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
+        <span id="total_size_python">
+<a href="#total_size_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3703,8 +3703,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualdiskname_python">
-<a href="#virtualdiskname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Name</a>
+        <span id="virtual_disk_name_python">
+<a href="#virtual_disk_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3713,8 +3713,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualdiskid_python">
-<a href="#virtualdiskid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Id</a>
+        <span id="virtual_disk_id_python">
+<a href="#virtual_disk_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4334,14 +4334,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetwork">Dict[Virtual<wbr>Network]</a></span>
+        <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="nictype_python">
-<a href="#nictype_python" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4354,7 +4354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomization">Dict[Guest<wbr>OSNICCustomization]</a></span>
+        <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
 
@@ -4364,7 +4364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
 
@@ -4380,8 +4380,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="poweronboot_python">
-<a href="#poweronboot_python" style="color: inherit; text-decoration: inherit;">power<wbr>On<wbr>Boot</a>
+        <span id="power_on_boot_python">
+<a href="#power_on_boot_python" style="color: inherit; text-decoration: inherit;">power_<wbr>on_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4390,8 +4390,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnicid_python">
-<a href="#virtualnicid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Id</a>
+        <span id="virtual_nic_id_python">
+<a href="#virtual_nic_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4683,14 +4683,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkresponse">Dict[Virtual<wbr>Network<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="nictype_python">
-<a href="#nictype_python" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4699,8 +4699,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnicname_python">
-<a href="#virtualnicname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Name</a>
+        <span id="virtual_nic_name_python">
+<a href="#virtual_nic_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4713,7 +4713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomizationresponse">Dict[Guest<wbr>OSNICCustomization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
 
@@ -4723,7 +4723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
 
@@ -4739,8 +4739,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="poweronboot_python">
-<a href="#poweronboot_python" style="color: inherit; text-decoration: inherit;">power<wbr>On<wbr>Boot</a>
+        <span id="power_on_boot_python">
+<a href="#power_on_boot_python" style="color: inherit; text-decoration: inherit;">power_<wbr>on_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4749,8 +4749,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnicid_python">
-<a href="#virtualnicid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Id</a>
+        <span id="virtual_nic_id_python">
+<a href="#virtual_nic_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

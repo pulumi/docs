@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnercontentresponse">Dict[Partner<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#partnercontentresponse">Partner<wbr>Content<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The partner content.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The following output properties are available:
 <a href="#business_identities_python" style="color: inherit; text-decoration: inherit;">business_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">List[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Sequence[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
 
@@ -872,7 +872,7 @@ The following output properties are available:
 <a href="#b2b_python" style="color: inherit; text-decoration: inherit;">b2b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">Dict[B2BPartner<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
 

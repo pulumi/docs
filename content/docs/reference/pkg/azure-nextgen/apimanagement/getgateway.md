@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#location_data_python" style="color: inherit; text-decoration: inherit;">location_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelocationdatacontractresponse">Dict[Resource<wbr>Location<wbr>Data<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcelocationdatacontractresponse">Resource<wbr>Location<wbr>Data<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gateway location.{{% /md %}}</dd>
 

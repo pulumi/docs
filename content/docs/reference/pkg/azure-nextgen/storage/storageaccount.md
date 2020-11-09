@@ -144,33 +144,33 @@ import pulumi_azure_nextgen as azure_nextgen
 storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
     account_name="sto4445",
     allow_blob_public_access=False,
-    encryption={
-        "keySource": "Microsoft.Storage",
-        "requireInfrastructureEncryption": False,
-        "services": {
-            "blob": {
-                "enabled": True,
-                "keyType": "Account",
-            },
-            "file": {
-                "enabled": True,
-                "keyType": "Account",
-            },
-        },
-    },
+    encryption=azure_nextgen.storage.latest.EncryptionArgs(
+        key_source="Microsoft.Storage",
+        require_infrastructure_encryption=False,
+        services=azure_nextgen.storage.latest.EncryptionServicesArgs(
+            blob=azure_nextgen.storage.latest.EncryptionServiceArgs(
+                enabled=True,
+                key_type="Account",
+            ),
+            file=azure_nextgen.storage.latest.EncryptionServiceArgs(
+                enabled=True,
+                key_type="Account",
+            ),
+        ),
+    ),
     is_hns_enabled=True,
     kind="Storage",
     location="eastus",
     minimum_tls_version="TLS1_2",
     resource_group_name="res9101",
-    routing_preference={
-        "publishInternetEndpoints": True,
-        "publishMicrosoftEndpoints": True,
-        "routingChoice": "MicrosoftRouting",
-    },
-    sku={
-        "name": "Standard_GRS",
-    },
+    routing_preference=azure_nextgen.storage.latest.RoutingPreferenceArgs(
+        publish_internet_endpoints=True,
+        publish_microsoft_endpoints=True,
+        routing_choice="MicrosoftRouting",
+    ),
+    sku=azure_nextgen.storage.latest.SkuArgs(
+        name="Standard_GRS",
+    ),
     tags={
         "key1": "value1",
         "key2": "value2",
@@ -238,7 +238,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureFilesIdentityBasedAuthentication]]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomDomain]]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[Encryption]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkRuleSet]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[Dict[RoutingPreference]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1017,7 +1017,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the SKU name.{{% /md %}}</dd>
 
@@ -1047,7 +1047,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#azure_files_identity_based_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>files_<wbr>identity_<wbr>based_<wbr>authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Dict[Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication]</a></span>
+        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides the identity based authentication settings for Azure Files.{{% /md %}}</dd>
 
@@ -1057,7 +1057,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomain">Dict[Custom<wbr>Domain]</a></span>
+        <span class="property-type"><a href="#customdomain">Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.{{% /md %}}</dd>
 
@@ -1077,7 +1077,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Dict[Encryption]</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.{{% /md %}}</dd>
 
@@ -1087,7 +1087,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -1127,7 +1127,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#network_rule_set_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Dict[Network<wbr>Rule<wbr>Set]</a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network rule set{{% /md %}}</dd>
 
@@ -1137,7 +1137,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#routing_preference_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpreference">Dict[Routing<wbr>Preference]</a></span>
+        <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd>
 
@@ -1147,7 +1147,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.{{% /md %}}</dd>
 
@@ -1327,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1494,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1661,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1676,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_restore_status_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>restore_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorestatusresponse">Dict[Blob<wbr>Restore<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobrestorestatusresponse">Blob<wbr>Restore<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Blob restore status{{% /md %}}</dd>
 
@@ -1706,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_replication_stats_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>replication_<wbr>stats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#georeplicationstatsresponse">Dict[Geo<wbr>Replication<wbr>Stats<wbr>Response]</a></span>
+        <span class="property-type"><a href="#georeplicationstatsresponse">Geo<wbr>Replication<wbr>Stats<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Geo Replication Stats{{% /md %}}</dd>
 
@@ -1746,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_endpoints_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Dict[Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.{{% /md %}}</dd>
 
@@ -1766,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection associated with the specified storage account{{% /md %}}</dd>
 
@@ -1786,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_endpoints_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Dict[Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.{{% /md %}}</dd>
 
@@ -1828,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2512,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_properties_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryproperties">Dict[Active<wbr>Directory<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#activedirectoryproperties">Active<wbr>Directory<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
 
@@ -2631,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_properties_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Dict[Active<wbr>Directory<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
 
@@ -2740,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_ranges_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">List[Blob<wbr>Restore<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">Sequence[Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
 
@@ -2855,8 +2855,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="endrange_python">
-<a href="#endrange_python" style="color: inherit; text-decoration: inherit;">end<wbr>Range</a>
+        <span id="end_range_python">
+<a href="#end_range_python" style="color: inherit; text-decoration: inherit;">end_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2865,8 +2865,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="startrange_python">
-<a href="#startrange_python" style="color: inherit; text-decoration: inherit;">start<wbr>Range</a>
+        <span id="start_range_python">
+<a href="#start_range_python" style="color: inherit; text-decoration: inherit;">start_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3048,7 +3048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Dict[Blob<wbr>Restore<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
 
@@ -3485,7 +3485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Dict[Key<wbr>Vault<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
 
@@ -3505,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservices">Dict[Encryption<wbr>Services]</a></span>
+        <span class="property-type"><a href="#encryptionservices">Encryption<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
 
@@ -3684,7 +3684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
 
@@ -3704,7 +3704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Dict[Encryption<wbr>Services<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
 
@@ -4151,7 +4151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Dict[Encryption<wbr>Service]</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
 
@@ -4161,7 +4161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Dict[Encryption<wbr>Service]</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
 
@@ -4171,7 +4171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Dict[Encryption<wbr>Service]</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
 
@@ -4181,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Dict[Encryption<wbr>Service]</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
 
@@ -4350,7 +4350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
 
@@ -4360,7 +4360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
 
@@ -4370,7 +4370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
 
@@ -4380,7 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
 
@@ -4729,7 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internet_endpoints_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Dict[Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
 
@@ -4739,7 +4739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_endpoints_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Dict[Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
 
@@ -5003,8 +5003,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipaddressorrange_python">
-<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
+        <span id="i_p_address_or_range_python">
+<a href="#i_p_address_or_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>p_<wbr>address_<wbr>or_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5122,8 +5122,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipaddressorrange_python">
-<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
+        <span id="i_p_address_or_range_python">
+<a href="#i_p_address_or_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>p_<wbr>address_<wbr>or_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5961,7 +5961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List[IPRule]</a></span>
+        <span class="property-type"><a href="#iprule">Sequence[IPRule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
 
@@ -5971,7 +5971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List[Virtual<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
 
@@ -6160,7 +6160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List[IPRule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
 
@@ -6170,7 +6170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
 
@@ -6200,7 +6200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6240,7 +6240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6267,7 +6267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6307,7 +6307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6334,7 +6334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6374,7 +6374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6401,7 +6401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6419,7 +6419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
 
@@ -6441,7 +6441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6449,7 +6449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 
@@ -7816,8 +7816,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnetworkresourceid_python">
-<a href="#virtualnetworkresourceid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+        <span id="virtual_network_resource_id_python">
+<a href="#virtual_network_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7975,8 +7975,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnetworkresourceid_python">
-<a href="#virtualnetworkresourceid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+        <span id="virtual_network_resource_id_python">
+<a href="#virtual_network_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

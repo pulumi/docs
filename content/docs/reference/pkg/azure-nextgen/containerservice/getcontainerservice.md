@@ -174,13 +174,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="agentpoolprofiles_csharp">
+<a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="linuxprofile_csharp">
 <a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -200,7 +210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service master.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -214,23 +224,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="orchestratorprofile_csharp">
-<a href="#orchestratorprofile_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Profile for the container service orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -244,23 +244,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agentpoolprofiles_csharp">
-<a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="customprofile_csharp">
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to configure a custom container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -270,7 +260,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="orchestratorprofile_csharp">
+<a href="#orchestratorprofile_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -280,7 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs. Exact one of secret or keyVaultSecretRef need to be specified.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -300,7 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -311,13 +311,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="agentpoolprofiles_go">
+<a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">[]Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="linuxprofile_go">
 <a href="#linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -337,7 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service master.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -351,23 +361,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="orchestratorprofile_go">
-<a href="#orchestratorprofile_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Profile for the container service orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -381,23 +381,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agentpoolprofiles_go">
-<a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">[]Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="customprofile_go">
 <a href="#customprofile_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to configure a custom container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -407,7 +397,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="orchestratorprofile_go">
+<a href="#orchestratorprofile_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -417,7 +417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs. Exact one of secret or keyVaultSecretRef need to be specified.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -437,7 +437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -448,13 +448,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="agentpoolprofiles_nodejs">
+<a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="linuxprofile_nodejs">
 <a href="#linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -474,7 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service master.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -488,23 +498,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="orchestratorprofile_nodejs">
-<a href="#orchestratorprofile_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Profile for the container service orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -518,23 +518,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agentpoolprofiles_nodejs">
-<a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="customprofile_nodejs">
 <a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to configure a custom container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -544,7 +534,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="orchestratorprofile_nodejs">
+<a href="#orchestratorprofile_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -554,7 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs. Exact one of secret or keyVaultSecretRef need to be specified.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -574,7 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -585,13 +585,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="agent_pool_profiles_python">
+<a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">Sequence[Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="linux_profile_python">
 <a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofileresponse">Dict[Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -609,9 +619,9 @@ The following output properties are available:
 <a href="#master_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicemasterprofileresponse">Dict[Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service master.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -625,23 +635,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="orchestrator_profile_python">
-<a href="#orchestrator_profile_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Dict[Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Profile for the container service orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -655,23 +655,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agent_pool_profiles_python">
-<a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">List[Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="custom_profile_python">
 <a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicecustomprofileresponse">Dict[Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to configure a custom container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -679,9 +669,19 @@ The following output properties are available:
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Dict[Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="orchestrator_profile_python">
+<a href="#orchestrator_profile_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -689,9 +689,9 @@ The following output properties are available:
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Dict[Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs. Exact one of secret or keyVaultSecretRef need to be specified.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -709,9 +709,9 @@ The following output properties are available:
 <a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicewindowsprofileresponse">Dict[Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -736,6 +736,26 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dnsprefix_csharp">
+<a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -767,82 +787,32 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="count_csharp">
-<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dnsprefix_csharp">
-<a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osdisksizegb_csharp">
-<a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ports_csharp">
-<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Ports number array used to expose on this agent pool. The default opened ports are different based on your choice of orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_csharp">
-<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnetsubnetid_csharp">
-<a href="#vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dnsprefix_go">
+<a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -874,82 +844,32 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="count_go">
-<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dnsprefix_go">
-<a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osdisksizegb_go">
-<a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ports_go">
-<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
-    </dt>
-    <dd>{{% md %}}Ports number array used to expose on this agent pool. The default opened ports are different based on your choice of orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_go">
-<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnetsubnetid_go">
-<a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dnsprefix_nodejs">
+<a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -981,82 +901,32 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="count_nodejs">
-<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dnsprefix_nodejs">
-<a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osdisksizegb_nodejs">
-<a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>GB</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ports_nodejs">
-<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
-    </dt>
-    <dd>{{% md %}}Ports number array used to expose on this agent pool. The default opened ports are different based on your choice of orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_nodejs">
-<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnetsubnetid_nodejs">
-<a href="#vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dns_prefix_python">
+<a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1087,76 +957,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="count_python">
-<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dns_prefix_python">
-<a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="os_disk_size_gb_python">
-<a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ports_python">
-<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
-    </dt>
-    <dd>{{% md %}}Ports number array used to expose on this agent pool. The default opened ports are different based on your choice of orchestrator.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storage_profile_python">
-<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnet_subnet_id_python">
-<a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1263,7 +1063,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics on the container service VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1280,7 +1080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics on the container service VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1297,7 +1097,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics on the container service VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1312,9 +1112,9 @@ The following output properties are available:
 <a href="#vm_diagnostics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Dict[Container<wbr>Service<wbr>VMDiagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Profile for diagnostics on the container service VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1431,7 +1231,7 @@ The following output properties are available:
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Dict[Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 
@@ -1461,7 +1261,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the master pool.{{% /md %}}</dd>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1471,17 +1271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vmsize_csharp">
-<a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1492,46 +1282,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="firstconsecutivestaticip_csharp">
-<a href="#firstconsecutivestaticip_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Consecutive<wbr>Static<wbr>IP</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}FirstConsecutiveStaticIP used to specify the first static ip of masters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osdisksizegb_csharp">
-<a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_csharp">
-<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnetsubnetid_csharp">
-<a href="#vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1548,7 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the master pool.{{% /md %}}</dd>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1558,17 +1308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vmsize_go">
-<a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1579,46 +1319,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="firstconsecutivestaticip_go">
-<a href="#firstconsecutivestaticip_go" style="color: inherit; text-decoration: inherit;">First<wbr>Consecutive<wbr>Static<wbr>IP</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}FirstConsecutiveStaticIP used to specify the first static ip of masters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osdisksizegb_go">
-<a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_go">
-<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnetsubnetid_go">
-<a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1635,7 +1335,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the master pool.{{% /md %}}</dd>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1645,17 +1345,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vmsize_nodejs">
-<a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1666,46 +1356,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="firstconsecutivestaticip_nodejs">
-<a href="#firstconsecutivestaticip_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Consecutive<wbr>Static<wbr>IP</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}FirstConsecutiveStaticIP used to specify the first static ip of masters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="osdisksizegb_nodejs">
-<a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>GB</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_nodejs">
-<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnetsubnetid_nodejs">
-<a href="#vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1722,7 +1372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the master pool.{{% /md %}}</dd>
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1732,17 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vm_size_python">
-<a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1753,46 +1393,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="first_consecutive_static_ip_python">
-<a href="#first_consecutive_static_ip_python" style="color: inherit; text-decoration: inherit;">first_<wbr>consecutive_<wbr>static_<wbr>ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}FirstConsecutiveStaticIP used to specify the first static ip of masters.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="os_disk_size_gb_python">
-<a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storage_profile_python">
-<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vnet_subnet_id_python">
-<a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1820,17 +1420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Kubernetes, Swarm, DCOS, DockerCE and Custom.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="orchestratorversion_csharp">
-<a href="#orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The version of the orchestrator to use. You can specify the major.minor.patch part of the actual version.For example, you can specify version as "1.6.11".{{% /md %}}</dd>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1847,17 +1437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Kubernetes, Swarm, DCOS, DockerCE and Custom.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="orchestratorversion_go">
-<a href="#orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The version of the orchestrator to use. You can specify the major.minor.patch part of the actual version.For example, you can specify version as "1.6.11".{{% /md %}}</dd>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1874,17 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Kubernetes, Swarm, DCOS, DockerCE and Custom.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="orchestratorversion_nodejs">
-<a href="#orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The version of the orchestrator to use. You can specify the major.minor.patch part of the actual version.For example, you can specify version as "1.6.11".{{% /md %}}</dd>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1901,17 +1471,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Kubernetes, Swarm, DCOS, DockerCE and Custom.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="orchestrator_version_python">
-<a href="#orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The version of the orchestrator to use. You can specify the major.minor.patch part of the actual version.For example, you can specify version as "1.6.11".{{% /md %}}</dd>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1941,25 +1501,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultsecretref_csharp">
-<a href="#keyvaultsecretref_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Ref</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretrefresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Ref<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to a secret stored in Azure Key Vault.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1978,25 +1528,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultsecretref_go">
-<a href="#keyvaultsecretref_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Ref</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretrefresponse">Key<wbr>Vault<wbr>Secret<wbr>Ref<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to a secret stored in Azure Key Vault.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2015,25 +1555,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultsecretref_nodejs">
-<a href="#keyvaultsecretref_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Ref</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretrefresponse">Key<wbr>Vault<wbr>Secret<wbr>Ref<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to a secret stored in Azure Key Vault.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2052,25 +1582,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="key_vault_secret_ref_python">
-<a href="#key_vault_secret_ref_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>ref</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretrefresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Ref<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to a secret stored in Azure Key Vault.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2147,7 +1667,7 @@ The following output properties are available:
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 
@@ -2222,8 +1742,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2467,165 +1987,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="keyvaultsecretrefresponse">Key<wbr>Vault<wbr>Secret<wbr>Ref<wbr>Response</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="secretname_csharp">
-<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The secret name.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vaultid_csharp">
-<a href="#vaultid_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault identifier.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The secret version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="secretname_go">
-<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The secret name.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vaultid_go">
-<a href="#vaultid_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault identifier.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The secret version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="secretname_nodejs">
-<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The secret name.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vaultid_nodejs">
-<a href="#vaultid_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault identifier.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The secret version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="secret_name_python">
-<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The secret name.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vault_id_python">
-<a href="#vault_id_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault identifier.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The secret version.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -23,7 +23,7 @@ Represents a lab account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LabAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled_region_selection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">unique_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LabAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled_region_selection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">unique_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +482,7 @@ The LabAccount resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -701,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_operation_result_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Dict[Latest<wbr>Operation<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
 
@@ -721,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_configuration_python" style="color: inherit; text-decoration: inherit;">size_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconfigurationpropertiesresponse">Dict[Size<wbr>Configuration<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sizeconfigurationpropertiesresponse">Size<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the size configuration under the lab account{{% /md %}}</dd>
 
@@ -945,8 +945,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minmemory_python">
-<a href="#minmemory_python" style="color: inherit; text-decoration: inherit;">min<wbr>Memory</a>
+        <span id="min_memory_python">
+<a href="#min_memory_python" style="color: inherit; text-decoration: inherit;">min_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -955,8 +955,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minnumberofcores_python">
-<a href="#minnumberofcores_python" style="color: inherit; text-decoration: inherit;">min<wbr>Number<wbr>Of<wbr>Cores</a>
+        <span id="min_number_of_cores_python">
+<a href="#min_number_of_cores_python" style="color: inherit; text-decoration: inherit;">min_<wbr>number_<wbr>of_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -975,11 +975,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmsizes_python">
-<a href="#vmsizes_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Sizes</a>
+        <span id="vm_sizes_python">
+<a href="#vm_sizes_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>sizes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeinforesponse">List[Size<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sizeinforesponse">Sequence[Size<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Represents a set of compute sizes that can serve this given size type{{% /md %}}</dd>
 
@@ -1337,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_sizes_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>sizes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsizeresponse">List[Environment<wbr>Size<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentsizeresponse">Sequence[Environment<wbr>Size<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Represents a list of size categories supported by this Lab Account (Small, Medium, Large){{% /md %}}</dd>
 
@@ -1502,8 +1502,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computesize_python">
-<a href="#computesize_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Size</a>
+        <span id="compute_size_python">
+<a href="#compute_size_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

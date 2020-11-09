@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#hub_billing_info_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>billing_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubbillinginfoformatresponse">Dict[Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hubbillinginfoformatresponse">Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Billing settings of the hub.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

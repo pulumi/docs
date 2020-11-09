@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentresourcepropertiesresponse">Dict[Deployment<wbr>Resource<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deploymentresourcepropertiesresponse">Deployment<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Deployment resource{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Deployment resource{{% /md %}}</dd>
 
@@ -993,7 +993,7 @@ The following output properties are available:
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">List[Deployment<wbr>Instance<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">Sequence[Deployment<wbr>Instance<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd>
 
@@ -1023,7 +1023,7 @@ The following output properties are available:
 <a href="#deployment_settings_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">Dict[Deployment<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd>
 
@@ -1033,7 +1033,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">Dict[User<wbr>Source<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd>
 
@@ -1272,7 +1272,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Collection of environment variables{{% /md %}}</dd>
 

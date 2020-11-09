@@ -142,33 +142,33 @@ import pulumi_azure_nextgen as azure_nextgen
 job_target_group = azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup",
     job_agent_name="agent1",
     members=[
-        {
-            "databaseName": "database1",
-            "membershipType": "Exclude",
-            "serverName": "server1",
-            "type": "SqlDatabase",
-        },
-        {
-            "membershipType": "Include",
-            "refreshCredential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
-            "serverName": "server1",
-            "type": "SqlServer",
-        },
-        {
-            "elasticPoolName": "pool1",
-            "membershipType": "Include",
-            "refreshCredential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
-            "serverName": "server2",
-            "type": "SqlElasticPool",
-        },
-        {
-            "databaseName": "database1",
-            "membershipType": "Include",
-            "refreshCredential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
-            "serverName": "server3",
-            "shardMapName": "shardMap1",
-            "type": "SqlShardMap",
-        },
+        azure_nextgen.sql.v20170301preview.JobTargetArgs(
+            database_name="database1",
+            membership_type="Exclude",
+            server_name="server1",
+            type="SqlDatabase",
+        ),
+        azure_nextgen.sql.v20170301preview.JobTargetArgs(
+            membership_type="Include",
+            refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            server_name="server1",
+            type="SqlServer",
+        ),
+        azure_nextgen.sql.v20170301preview.JobTargetArgs(
+            elastic_pool_name="pool1",
+            membership_type="Include",
+            refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            server_name="server2",
+            type="SqlElasticPool",
+        ),
+        azure_nextgen.sql.v20170301preview.JobTargetArgs(
+            database_name="database1",
+            membership_type="Include",
+            refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            server_name="server3",
+            shard_map_name="shardMap1",
+            type="SqlShardMap",
+        ),
     ],
     resource_group_name="group1",
     server_name="server1",
@@ -327,7 +327,7 @@ const jobTargetGroup = new azure_nextgen.sql.v20170301preview.JobTargetGroup("jo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[List[JobTarget]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobTargetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -686,7 +686,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtarget">List[Job<wbr>Target]</a></span>
+        <span class="property-type"><a href="#jobtarget">Sequence[Job<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Members of the target group.{{% /md %}}</dd>
 
@@ -1169,8 +1169,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="membershiptype_python">
-<a href="#membershiptype_python" style="color: inherit; text-decoration: inherit;">membership<wbr>Type</a>
+        <span id="membership_type_python">
+<a href="#membership_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1179,8 +1179,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshcredential_python">
-<a href="#refreshcredential_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Credential</a>
+        <span id="refresh_credential_python">
+<a href="#refresh_credential_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1199,8 +1199,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shardmapname_python">
-<a href="#shardmapname_python" style="color: inherit; text-decoration: inherit;">shard<wbr>Map<wbr>Name</a>
+        <span id="shard_map_name_python">
+<a href="#shard_map_name_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>map_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1488,8 +1488,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="membershiptype_python">
-<a href="#membershiptype_python" style="color: inherit; text-decoration: inherit;">membership<wbr>Type</a>
+        <span id="membership_type_python">
+<a href="#membership_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1498,8 +1498,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshcredential_python">
-<a href="#refreshcredential_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Credential</a>
+        <span id="refresh_credential_python">
+<a href="#refresh_credential_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1518,8 +1518,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shardmapname_python">
-<a href="#shardmapname_python" style="color: inherit; text-decoration: inherit;">shard<wbr>Map<wbr>Name</a>
+        <span id="shard_map_name_python">
+<a href="#shard_map_name_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>map_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

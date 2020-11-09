@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#compute_policies_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computepolicyresponse">List[Compute<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computepolicyresponse">Sequence[Compute<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ The following output properties are available:
 <a href="#data_lake_store_accounts_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>store_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakestoreaccountinformationresponse">List[Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datalakestoreaccountinformationresponse">Sequence[Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
 
@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallruleresponse">List[Firewall<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firewallruleresponse">Sequence[Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
 
@@ -1189,7 +1189,7 @@ The following output properties are available:
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinformationresponse">List[Storage<wbr>Account<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountinformationresponse">Sequence[Storage<wbr>Account<wbr>Information<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 

@@ -101,16 +101,16 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "osDisk": {
-            "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-            "diskEncryptionSet": {
-                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
-            },
-            "osState": "Generalized",
-            "osType": "Linux",
-        },
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+                id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            ),
+            os_state="Generalized",
+            os_type="Linux",
+        ),
+    ))
 
 ```
 
@@ -222,14 +222,14 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "osDisk": {
-            "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-            "osState": "Generalized",
-            "osType": "Linux",
-        },
-        "zoneResilient": True,
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            os_state="Generalized",
+            os_type="Linux",
+        ),
+        zone_resilient=True,
+    ))
 
 ```
 
@@ -349,18 +349,18 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "osDisk": {
-            "diskEncryptionSet": {
-                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
-            },
-            "managedDisk": {
-                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
-            },
-            "osState": "Generalized",
-            "osType": "Linux",
-        },
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+                id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            ),
+            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            ),
+            os_state="Generalized",
+            os_type="Linux",
+        ),
+    ))
 
 ```
 
@@ -479,16 +479,16 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "osDisk": {
-            "managedDisk": {
-                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
-            },
-            "osState": "Generalized",
-            "osType": "Linux",
-        },
-        "zoneResilient": True,
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            ),
+            os_state="Generalized",
+            os_type="Linux",
+        ),
+        zone_resilient=True,
+    ))
 
 ```
 
@@ -610,18 +610,18 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "osDisk": {
-            "diskEncryptionSet": {
-                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
-            },
-            "osState": "Generalized",
-            "osType": "Linux",
-            "snapshot": {
-                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
-            },
-        },
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+                id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            ),
+            os_state="Generalized",
+            os_type="Linux",
+            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            ),
+        ),
+    ))
 
 ```
 
@@ -740,16 +740,16 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "osDisk": {
-            "osState": "Generalized",
-            "osType": "Linux",
-            "snapshot": {
-                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
-            },
-        },
-        "zoneResilient": False,
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            os_state="Generalized",
+            os_type="Linux",
+            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            ),
+        ),
+        zone_resilient=False,
+    ))
 
 ```
 
@@ -850,9 +850,9 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    source_virtual_machine={
-        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
-    })
+    source_virtual_machine=azure_nextgen.compute.latest.SubResourceArgs(
+        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+    ))
 
 ```
 
@@ -971,18 +971,18 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "dataDisks": [{
-            "blobUri": "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
-            "lun": 1,
-        }],
-        "osDisk": {
-            "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-            "osState": "Generalized",
-            "osType": "Linux",
-        },
-        "zoneResilient": False,
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        data_disks=[azure_nextgen.compute.latest.ImageDataDiskArgs(
+            blob_uri="https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
+            lun=1,
+        )],
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            os_state="Generalized",
+            os_type="Linux",
+        ),
+        zone_resilient=False,
+    ))
 
 ```
 
@@ -1120,22 +1120,22 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "dataDisks": [{
-            "lun": 1,
-            "managedDisk": {
-                "id": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
-            },
-        }],
-        "osDisk": {
-            "managedDisk": {
-                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
-            },
-            "osState": "Generalized",
-            "osType": "Linux",
-        },
-        "zoneResilient": False,
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        data_disks=[azure_nextgen.compute.latest.ImageDataDiskArgs(
+            lun=1,
+            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
+            ),
+        )],
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            managed_disk=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            ),
+            os_state="Generalized",
+            os_type="Linux",
+        ),
+        zone_resilient=False,
+    ))
 
 ```
 
@@ -1277,22 +1277,22 @@ image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "dataDisks": [{
-            "lun": 1,
-            "snapshot": {
-                "id": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
-            },
-        }],
-        "osDisk": {
-            "osState": "Generalized",
-            "osType": "Linux",
-            "snapshot": {
-                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
-            },
-        },
-        "zoneResilient": True,
-    })
+    storage_profile=azure_nextgen.compute.latest.ImageStorageProfileArgs(
+        data_disks=[azure_nextgen.compute.latest.ImageDataDiskArgs(
+            lun=1,
+            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
+            ),
+        )],
+        os_disk=azure_nextgen.compute.latest.ImageOSDiskArgs(
+            os_state="Generalized",
+            os_type="Linux",
+            snapshot=azure_nextgen.compute.latest.SubResourceArgs(
+                id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            ),
+        ),
+        zone_resilient=True,
+    ))
 
 ```
 
@@ -1342,7 +1342,7 @@ const image = new azure_nextgen.compute.latest.Image("image", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_virtual_machine</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageStorageProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_virtual_machine</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[ImageStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1791,7 +1791,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#source_virtual_machine_python" style="color: inherit; text-decoration: inherit;">source_<wbr>virtual_<wbr>machine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd>
 
@@ -1801,7 +1801,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagestorageprofile">Dict[Image<wbr>Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#imagestorageprofile">Image<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
 
@@ -1811,7 +1811,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -2496,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Dict[Disk<wbr>Encryption<wbr>Set<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
 
@@ -2516,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
 
@@ -2526,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
 
@@ -2855,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Dict[Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
 
@@ -2875,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
 
@@ -2885,7 +2885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
 
@@ -3254,7 +3254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Dict[Disk<wbr>Encryption<wbr>Set<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
 
@@ -3274,7 +3274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
 
@@ -3284,7 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
 
@@ -3653,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Dict[Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
 
@@ -3673,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
 
@@ -3683,7 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
 
@@ -3832,7 +3832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadisk">List[Image<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#imagedatadisk">Sequence[Image<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -3842,7 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdisk">Dict[Image<wbr>OSDisk]</a></span>
+        <span class="property-type"><a href="#imageosdisk">Image<wbr>OSDisk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -3991,7 +3991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadiskresponse">List[Image<wbr>Data<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagedatadiskresponse">Sequence[Image<wbr>Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -4001,7 +4001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdiskresponse">Dict[Image<wbr>OSDisk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imageosdiskresponse">Image<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 

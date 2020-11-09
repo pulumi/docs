@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewaydefinitionresponseproperties">Dict[Connection<wbr>Gateway<wbr>Definition<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#connectiongatewaydefinitionresponseproperties">Connection<wbr>Gateway<wbr>Definition<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#connection_gateway_installation_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>gateway_<wbr>installation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Dict[Connection<wbr>Gateway<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd>
 
@@ -714,7 +714,7 @@ The following output properties are available:
 <a href="#contact_information_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The gateway admin{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 

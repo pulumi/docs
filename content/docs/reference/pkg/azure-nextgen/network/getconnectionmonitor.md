@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitordestinationresponse">Dict[Connection<wbr>Monitor<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitordestinationresponse">Connection<wbr>Monitor<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointresponse">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoroutputresponse">List[Connection<wbr>Monitor<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitoroutputresponse">Sequence[Connection<wbr>Monitor<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsourceresponse">Dict[Connection<wbr>Monitor<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorsourceresponse">Connection<wbr>Monitor<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">List[Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">Sequence[Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#test_groups_python" style="color: inherit; text-decoration: inherit;">test_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestgroupresponse">List[Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitortestgroupresponse">Sequence[Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ The following output properties are available:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
 
@@ -1627,8 +1627,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="coveragelevel_python">
-<a href="#coveragelevel_python" style="color: inherit; text-decoration: inherit;">coverage<wbr>Level</a>
+        <span id="coverage_level_python">
+<a href="#coverage_level_python" style="color: inherit; text-decoration: inherit;">coverage_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1641,7 +1641,7 @@ The following output properties are available:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Dict[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
 
@@ -1661,7 +1661,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Dict[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
 
@@ -1859,7 +1859,7 @@ The following output properties are available:
 <a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
 
@@ -1869,7 +1869,7 @@ The following output properties are available:
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
 
@@ -2124,8 +2124,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferhttps_python">
-<a href="#preferhttps_python" style="color: inherit; text-decoration: inherit;">prefer<wbr>HTTPS</a>
+        <span id="prefer_https_python">
+<a href="#prefer_https_python" style="color: inherit; text-decoration: inherit;">prefer_<wbr>https</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2134,21 +2134,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaders_python">
-<a href="#requestheaders_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
+        <span id="request_headers_python">
+<a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">List[HTTPHeader<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">Sequence[HTTPHeader<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validstatuscoderanges_python">
-<a href="#validstatuscoderanges_python" style="color: inherit; text-decoration: inherit;">valid<wbr>Status<wbr>Code<wbr>Ranges</a>
+        <span id="valid_status_code_ranges_python">
+<a href="#valid_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd>
 
@@ -2223,8 +2223,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletraceroute_python">
-<a href="#disabletraceroute_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
+        <span id="disable_trace_route_python">
+<a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2342,11 +2342,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workspacesettings_python">
-<a href="#workspacesettings_python" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
+        <span id="workspace_settings_python">
+<a href="#workspace_settings_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Dict[Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
 
@@ -2570,8 +2570,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checksfailedpercent_python">
-<a href="#checksfailedpercent_python" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
+        <span id="checks_failed_percent_python">
+<a href="#checks_failed_percent_python" style="color: inherit; text-decoration: inherit;">checks_<wbr>failed_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2580,8 +2580,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="roundtriptimems_python">
-<a href="#roundtriptimems_python" style="color: inherit; text-decoration: inherit;">round<wbr>Trip<wbr>Time<wbr>Ms</a>
+        <span id="round_trip_time_ms_python">
+<a href="#round_trip_time_ms_python" style="color: inherit; text-decoration: inherit;">round_<wbr>trip_<wbr>time_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2719,8 +2719,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationportbehavior_python">
-<a href="#destinationportbehavior_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Behavior</a>
+        <span id="destination_port_behavior_python">
+<a href="#destination_port_behavior_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2729,8 +2729,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletraceroute_python">
-<a href="#disabletraceroute_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
+        <span id="disable_trace_route_python">
+<a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3048,28 +3048,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpconfiguration_python">
-<a href="#httpconfiguration_python" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
+        <span id="http_configuration_python">
+<a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Dict[Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="icmpconfiguration_python">
-<a href="#icmpconfiguration_python" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
+        <span id="icmp_configuration_python">
+<a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Dict[Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredipversion_python">
-<a href="#preferredipversion_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>IPVersion</a>
+        <span id="preferred_ip_version_python">
+<a href="#preferred_ip_version_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3078,28 +3078,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Dict[Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tcpconfiguration_python">
-<a href="#tcpconfiguration_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
+        <span id="tcp_configuration_python">
+<a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Dict[Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="testfrequencysec_python">
-<a href="#testfrequencysec_python" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>Sec</a>
+        <span id="test_frequency_sec_python">
+<a href="#test_frequency_sec_python" style="color: inherit; text-decoration: inherit;">test_<wbr>frequency_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3301,7 +3301,7 @@ The following output properties are available:
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd>
 
@@ -3321,7 +3321,7 @@ The following output properties are available:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd>
 
@@ -3331,7 +3331,7 @@ The following output properties are available:
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd>
 

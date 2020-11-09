@@ -161,12 +161,12 @@ application = azure_nextgen.servicefabric.latest.Application("application",
     application_name="myApp",
     cluster_name="myCluster",
     maximum_nodes=3,
-    metrics=[{
-        "maximumCapacity": 3,
-        "name": "metric1",
-        "reservationCapacity": 1,
-        "totalApplicationCapacity": 5,
-    }],
+    metrics=[azure_nextgen.servicefabric.latest.ApplicationMetricDescriptionArgs(
+        maximum_capacity=3,
+        name="metric1",
+        reservation_capacity=1,
+        total_application_capacity=5,
+    )],
     minimum_nodes=1,
     parameters={
         "param1": "value1",
@@ -175,28 +175,28 @@ application = azure_nextgen.servicefabric.latest.Application("application",
     resource_group_name="resRg",
     type_name="myAppType",
     type_version="1.0",
-    upgrade_policy={
-        "applicationHealthPolicy": {
-            "considerWarningAsError": True,
-            "defaultServiceTypeHealthPolicy": {
-                "maxPercentUnhealthyPartitionsPerService": 0,
-                "maxPercentUnhealthyReplicasPerPartition": 0,
-                "maxPercentUnhealthyServices": 0,
-            },
-            "maxPercentUnhealthyDeployedApplications": 0,
-        },
-        "forceRestart": False,
-        "rollingUpgradeMonitoringPolicy": {
-            "failureAction": "Rollback",
-            "healthCheckRetryTimeout": "00:10:00",
-            "healthCheckStableDuration": "00:05:00",
-            "healthCheckWaitDuration": "00:02:00",
-            "upgradeDomainTimeout": "1.06:00:00",
-            "upgradeTimeout": "01:00:00",
-        },
-        "upgradeMode": "Monitored",
-        "upgradeReplicaSetCheckTimeout": "01:00:00",
-    })
+    upgrade_policy=azure_nextgen.servicefabric.latest.ApplicationUpgradePolicyArgs(
+        application_health_policy=azure_nextgen.servicefabric.latest.ArmApplicationHealthPolicyArgs(
+            consider_warning_as_error=True,
+            default_service_type_health_policy=azure_nextgen.servicefabric.latest.ArmServiceTypeHealthPolicyArgs(
+                max_percent_unhealthy_partitions_per_service=0,
+                max_percent_unhealthy_replicas_per_partition=0,
+                max_percent_unhealthy_services=0,
+            ),
+            max_percent_unhealthy_deployed_applications=0,
+        ),
+        force_restart=False,
+        rolling_upgrade_monitoring_policy=azure_nextgen.servicefabric.latest.ArmRollingUpgradeMonitoringPolicyArgs(
+            failure_action="Rollback",
+            health_check_retry_timeout="00:10:00",
+            health_check_stable_duration="00:05:00",
+            health_check_wait_duration="00:02:00",
+            upgrade_domain_timeout="1.06:00:00",
+            upgrade_timeout="01:00:00",
+        ),
+        upgrade_mode="Monitored",
+        upgrade_replica_set_check_timeout="01:00:00",
+    ))
 
 ```
 
@@ -361,7 +361,7 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationUserAssignedIdentity]]</span> = None<span class="p">, </span><span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationMetricDescription]]</span> = None<span class="p">, </span><span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationUpgradePolicy]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationUserAssignedIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationUpgradePolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1040,7 +1040,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Dict[Managed<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the managed identities for an Azure resource.{{% /md %}}</dd>
 
@@ -1060,7 +1060,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managed_identities_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationuserassignedidentity">List[Application<wbr>User<wbr>Assigned<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#applicationuserassignedidentity">Sequence[Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user assigned identities for the application, each mapped to a friendly name.{{% /md %}}</dd>
 
@@ -1080,7 +1080,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmetricdescription">List[Application<wbr>Metric<wbr>Description]</a></span>
+        <span class="property-type"><a href="#applicationmetricdescription">Sequence[Application<wbr>Metric<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of application capacity metric description.{{% /md %}}</dd>
 
@@ -1100,7 +1100,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}List of application parameters with overridden values from their default values specified in the application manifest.{{% /md %}}</dd>
 
@@ -1120,7 +1120,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
 
@@ -1150,7 +1150,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#upgrade_policy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationupgradepolicy">Dict[Application<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationupgradepolicy">Application<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the policy for a monitored application upgrade.{{% /md %}}</dd>
 
@@ -1602,8 +1602,8 @@ When creating a new application with application capacity defined, the product o
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumcapacity_python">
-<a href="#maximumcapacity_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity</a>
+        <span id="maximum_capacity_python">
+<a href="#maximum_capacity_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1627,8 +1627,8 @@ When updating existing application with application capacity, the product of Max
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reservationcapacity_python">
-<a href="#reservationcapacity_python" style="color: inherit; text-decoration: inherit;">reservation<wbr>Capacity</a>
+        <span id="reservation_capacity_python">
+<a href="#reservation_capacity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1642,8 +1642,8 @@ When setting application capacity or when updating application capacity; this va
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalapplicationcapacity_python">
-<a href="#totalapplicationcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Application<wbr>Capacity</a>
+        <span id="total_application_capacity_python">
+<a href="#total_application_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>application_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1853,8 +1853,8 @@ When creating a new application with application capacity defined, the product o
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumcapacity_python">
-<a href="#maximumcapacity_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity</a>
+        <span id="maximum_capacity_python">
+<a href="#maximum_capacity_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1878,8 +1878,8 @@ When updating existing application with application capacity, the product of Max
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reservationcapacity_python">
-<a href="#reservationcapacity_python" style="color: inherit; text-decoration: inherit;">reservation<wbr>Capacity</a>
+        <span id="reservation_capacity_python">
+<a href="#reservation_capacity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1893,8 +1893,8 @@ When setting application capacity or when updating application capacity; this va
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalapplicationcapacity_python">
-<a href="#totalapplicationcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Application<wbr>Capacity</a>
+        <span id="total_application_capacity_python">
+<a href="#total_application_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>application_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2102,7 +2102,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#application_health_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicy">Dict[Arm<wbr>Application<wbr>Health<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicy">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd>
@@ -2123,7 +2123,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Dict[Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd>
 
@@ -2345,7 +2345,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#application_health_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Dict[Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd>
@@ -2366,7 +2366,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Dict[Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd>
 
@@ -2815,7 +2815,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicy">Dict[Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicy">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
 
@@ -2839,7 +2839,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#service_type_health_policy_map_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policy_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy]</span>
+        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 
@@ -3030,7 +3030,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Dict[Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
 
@@ -3054,7 +3054,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#service_type_health_policy_map_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policy_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 
@@ -4238,7 +4238,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.

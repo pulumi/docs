@@ -98,13 +98,13 @@ job = azure_nextgen.sql.v20170301preview.Job("job",
     job_agent_name="agent1",
     job_name="job1",
     resource_group_name="group1",
-    schedule={
-        "enabled": True,
-        "endTime": "2015-09-24T23:59:59Z",
-        "interval": "PT5M",
-        "startTime": "2015-09-24T18:30:01Z",
-        "type": "Recurring",
-    },
+    schedule=azure_nextgen.sql.v20170301preview.JobScheduleArgs(
+        enabled=True,
+        end_time="2015-09-24T23:59:59Z",
+        interval="PT5M",
+        start_time="2015-09-24T18:30:01Z",
+        type="Recurring",
+    ),
     server_name="server1")
 
 ```
@@ -235,7 +235,7 @@ const job = new azure_nextgen.sql.v20170301preview.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[JobSchedule]]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[JobScheduleArgs]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -664,7 +664,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobschedule">Dict[Job<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#jobschedule">Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule properties of the job.{{% /md %}}</dd>
 

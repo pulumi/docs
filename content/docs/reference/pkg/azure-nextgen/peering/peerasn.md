@@ -116,21 +116,21 @@ peer_asn = azure_nextgen.peering.latest.PeerAsn("peerAsn",
     peer_asn=65000,
     peer_asn_name="peerAsnName",
     peer_contact_detail=[
-        {
-            "email": "noc@contoso.com",
-            "phone": "+1 (234) 567-8999",
-            "role": "Noc",
-        },
-        {
-            "email": "abc@contoso.com",
-            "phone": "+1 (234) 567-8900",
-            "role": "Policy",
-        },
-        {
-            "email": "xyz@contoso.com",
-            "phone": "+1 (234) 567-8900",
-            "role": "Technical",
-        },
+        azure_nextgen.peering.latest.ContactDetailArgs(
+            email="noc@contoso.com",
+            phone="+1 (234) 567-8999",
+            role="Noc",
+        ),
+        azure_nextgen.peering.latest.ContactDetailArgs(
+            email="abc@contoso.com",
+            phone="+1 (234) 567-8900",
+            role="Policy",
+        ),
+        azure_nextgen.peering.latest.ContactDetailArgs(
+            email="xyz@contoso.com",
+            phone="+1 (234) 567-8900",
+            role="Technical",
+        ),
     ],
     peer_name="Contoso")
 
@@ -183,7 +183,7 @@ const peerAsn = new azure_nextgen.peering.latest.PeerAsn("peerAsn", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PeerAsn</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peer_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_contact_detail</span><span class="p">:</span> <span class="nx">Optional[List[ContactDetail]]</span> = None<span class="p">, </span><span class="nx">peer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PeerAsn</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peer_asn_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_contact_detail</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContactDetailArgs]]</span> = None<span class="p">, </span><span class="nx">peer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -552,7 +552,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peer_contact_detail_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>contact_<wbr>detail</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetail">List[Contact<wbr>Detail]</a></span>
+        <span class="property-type"><a href="#contactdetail">Sequence[Contact<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The contact details of the peer.{{% /md %}}</dd>
 

@@ -94,10 +94,10 @@ import pulumi_azure_nextgen as azure_nextgen
 flow_log = azure_nextgen.network.latest.FlowLog("flowLog",
     enabled=True,
     flow_log_name="fl",
-    format={
-        "type": "JSON",
-        "version": 1,
-    },
+    format=azure_nextgen.network.latest.FlowLogFormatParametersArgs(
+        type="JSON",
+        version=1,
+    ),
     location="centraluseuap",
     network_watcher_name="nw1",
     resource_group_name="rg1",
@@ -144,7 +144,7 @@ const flowLog = new azure_nextgen.network.latest.FlowLog("flowLog", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FlowLog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flow_analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[TrafficAnalyticsProperties]]</span> = None<span class="p">, </span><span class="nx">flow_log_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[Dict[FlowLogFormatParameters]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[RetentionPolicyParameters]]</span> = None<span class="p">, </span><span class="nx">storage_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FlowLog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flow_analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[TrafficAnalyticsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">flow_log_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[FlowLogFormatParametersArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RetentionPolicyParametersArgs]</span> = None<span class="p">, </span><span class="nx">storage_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -763,7 +763,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>analytics_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsproperties">Dict[Traffic<wbr>Analytics<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#trafficanalyticsproperties">Traffic<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
 
@@ -773,7 +773,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogformatparameters">Dict[Flow<wbr>Log<wbr>Format<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#flowlogformatparameters">Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd>
 
@@ -803,7 +803,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyparameters">Dict[Retention<wbr>Policy<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#retentionpolicyparameters">Retention<wbr>Policy<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd>
 
@@ -813,7 +813,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -2134,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_watcher_flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>flow_<wbr>analytics_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Dict[Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
 
@@ -2213,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_watcher_flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>flow_<wbr>analytics_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Dict[Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
 

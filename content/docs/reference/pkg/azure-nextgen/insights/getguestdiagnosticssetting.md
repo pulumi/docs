@@ -437,7 +437,7 @@ The following output properties are available:
 <a href="#data_sources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">List[Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasourceresponse">Sequence[Data<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}the array of data source object which are configured to collect and send data{{% /md %}}</dd>
 
@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -608,21 +608,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventlogs_python">
-<a href="#eventlogs_python" style="color: inherit; text-decoration: inherit;">event<wbr>Logs</a>
+        <span id="event_logs_python">
+<a href="#event_logs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfigurationresponse">List[Event<wbr>Log<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">Sequence[Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="perfcounters_python">
-<a href="#perfcounters_python" style="color: inherit; text-decoration: inherit;">perf<wbr>Counters</a>
+        <span id="perf_counters_python">
+<a href="#perf_counters_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>counters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfigurationresponse">List[Performance<wbr>Counter<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">Sequence[Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
 
@@ -632,7 +632,7 @@ The following output properties are available:
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfigurationresponse">List[Etw<wbr>Provider<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">Sequence[Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
 
@@ -771,7 +771,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfigurationresponse">Dict[Data<wbr>Source<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfigurationresponse">List[Sink<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">Sequence[Sink<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfigurationresponse">List[Etw<wbr>Event<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">Sequence[Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1174,8 +1174,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="logname_python">
-<a href="#logname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
+        <span id="log_name_python">
+<a href="#log_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1333,8 +1333,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="samplingperiod_python">
-<a href="#samplingperiod_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Period</a>
+        <span id="sampling_period_python">
+<a href="#sampling_period_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

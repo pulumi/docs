@@ -140,27 +140,27 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert",
-    actions={
-        "actionGroups": [{
-            "actionGroupId": "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
-            "webhookProperties": {
+    actions=azure_nextgen.insights.latest.ActivityLogAlertActionListArgs(
+        action_groups=[azure_nextgen.insights.latest.ActivityLogAlertActionGroupArgs(
+            action_group_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
+            webhook_properties={
                 "sampleWebhookProperty": "samplePropertyValue",
             },
-        }],
-    },
+        )],
+    ),
     activity_log_alert_name="SampleActivityLogAlert",
-    condition={
-        "allOf": [
-            {
-                "equals": "Administrative",
-                "field": "Category",
-            },
-            {
-                "equals": "Error",
-                "field": "Level",
-            },
+    condition=azure_nextgen.insights.latest.ActivityLogAlertAllOfConditionArgs(
+        all_of=[
+            azure_nextgen.insights.latest.ActivityLogAlertLeafConditionArgs(
+                equals="Administrative",
+                field="Category",
+            ),
+            azure_nextgen.insights.latest.ActivityLogAlertLeafConditionArgs(
+                equals="Error",
+                field="Level",
+            ),
         ],
-    },
+    ),
     description="Sample activity log alert description",
     enabled=True,
     location="Global",
@@ -224,7 +224,7 @@ const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("act
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Dict[ActivityLogAlertActionList]]</span> = None<span class="p">, </span><span class="nx">activity_log_alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[Dict[ActivityLogAlertAllOfCondition]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[ActivityLogAlertActionListArgs]</span> = None<span class="p">, </span><span class="nx">activity_log_alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActivityLogAlertAllOfConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -693,7 +693,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactionlist">Dict[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List]</a></span>
+        <span class="property-type"><a href="#activitylogalertactionlist">Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd>
 
@@ -713,7 +713,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertallofcondition">Dict[Activity<wbr>Log<wbr>Alert<wbr>All<wbr>Of<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#activitylogalertallofcondition">Activity<wbr>Log<wbr>Alert<wbr>All<wbr>Of<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd>
 
@@ -743,7 +743,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resourceIds that will be used as prefixes. The alert will only apply to activityLogs with resourceIds that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd>
 
@@ -773,7 +773,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1046,8 +1046,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1056,11 +1056,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
+        <span id="webhook_properties_python">
+<a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
 
@@ -1165,8 +1165,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1175,11 +1175,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
+        <span id="webhook_properties_python">
+<a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
 
@@ -1258,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactiongroup">List[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group]</a></span>
+        <span class="property-type"><a href="#activitylogalertactiongroup">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
 
@@ -1337,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertactiongroupresponse">List[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitylogalertactiongroupresponse">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
 
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertleafcondition">List[Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#activitylogalertleafcondition">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
 
@@ -1495,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertleafconditionresponse">List[Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitylogalertleafconditionresponse">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
 

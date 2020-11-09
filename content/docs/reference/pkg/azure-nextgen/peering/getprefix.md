@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringserviceprefixeventresponse">List[Peering<wbr>Service<wbr>Prefix<wbr>Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#peeringserviceprefixeventresponse">Sequence[Peering<wbr>Service<wbr>Prefix<wbr>Event<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of events for peering service prefix{{% /md %}}</dd>
 
@@ -830,8 +830,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventdescription_python">
-<a href="#eventdescription_python" style="color: inherit; text-decoration: inherit;">event<wbr>Description</a>
+        <span id="event_description_python">
+<a href="#event_description_python" style="color: inherit; text-decoration: inherit;">event_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -840,8 +840,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventlevel_python">
-<a href="#eventlevel_python" style="color: inherit; text-decoration: inherit;">event<wbr>Level</a>
+        <span id="event_level_python">
+<a href="#event_level_python" style="color: inherit; text-decoration: inherit;">event_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -850,8 +850,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsummary_python">
-<a href="#eventsummary_python" style="color: inherit; text-decoration: inherit;">event<wbr>Summary</a>
+        <span id="event_summary_python">
+<a href="#event_summary_python" style="color: inherit; text-decoration: inherit;">event_<wbr>summary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -860,8 +860,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventtimestamp_python">
-<a href="#eventtimestamp_python" style="color: inherit; text-decoration: inherit;">event<wbr>Timestamp</a>
+        <span id="event_timestamp_python">
+<a href="#event_timestamp_python" style="color: inherit; text-decoration: inherit;">event_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

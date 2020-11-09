@@ -110,14 +110,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 topic = azure_nextgen.eventgrid.latest.Topic("topic",
     inbound_ip_rules=[
-        {
-            "action": "Allow",
-            "ipMask": "12.18.30.15",
-        },
-        {
-            "action": "Allow",
-            "ipMask": "12.18.176.1",
-        },
+        azure_nextgen.eventgrid.latest.InboundIpRuleArgs(
+            action="Allow",
+            ip_mask="12.18.30.15",
+        ),
+        azure_nextgen.eventgrid.latest.InboundIpRuleArgs(
+            action="Allow",
+            ip_mask="12.18.176.1",
+        ),
     ],
     location="westus2",
     public_network_access="Enabled",
@@ -175,7 +175,7 @@ const topic = new azure_nextgen.eventgrid.latest.Topic("topic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[List[InboundIpRule]]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_schema_mapping</span><span class="p">:</span> <span class="nx">Optional[Dict[JsonInputSchemaMapping]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[List[PrivateEndpointConnection]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[InboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_schema_mapping</span><span class="p">:</span> <span class="nx">Optional[JsonInputSchemaMappingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -677,7 +677,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundiprule">List[Inbound<wbr>Ip<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#inboundiprule">Sequence[Inbound<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#input_schema_mapping_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsoninputschemamapping">Dict[Json<wbr>Input<wbr>Schema<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#jsoninputschemamapping">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd>
 
@@ -707,7 +707,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List[Private<wbr>Endpoint<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -728,7 +728,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
 
@@ -2197,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Dict[Json<wbr>Field<wbr>With<wbr>Default]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2207,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Dict[Json<wbr>Field]</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2217,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Dict[Json<wbr>Field<wbr>With<wbr>Default]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2227,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Dict[Json<wbr>Field]</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Dict[Json<wbr>Field<wbr>With<wbr>Default]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2247,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Dict[Json<wbr>Field]</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Dict[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2486,7 +2486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Dict[Json<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2496,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Dict[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2506,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Dict[Json<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2516,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Dict[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2526,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Dict[Json<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -2774,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd>
 
@@ -2784,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Dict[Private<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#privateendpoint">Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd>
 
@@ -2794,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstate">Dict[Connection<wbr>State]</a></span>
+        <span class="property-type"><a href="#connectionstate">Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd>
 
@@ -3093,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd>
 
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd>
 
@@ -3113,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Dict[Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd>
 

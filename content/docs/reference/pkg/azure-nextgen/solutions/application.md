@@ -123,7 +123,7 @@ const application = new azure_nextgen.solutions.latest.Application("application"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">jit_access_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationJitAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[Plan]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">jit_access_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationJitAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -752,7 +752,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -762,7 +762,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jit_access_policy_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>access_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationjitaccesspolicy">Dict[Application<wbr>Jit<wbr>Access<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationjitaccesspolicy">Application<wbr>Jit<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application Jit access policy.{{% /md %}}</dd>
 
@@ -802,7 +802,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Dict[Plan]</a></span>
+        <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The plan information.{{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1301,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationartifactresponse">List[Application<wbr>Artifact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationartifactresponse">Sequence[Application<wbr>Artifact<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts.{{% /md %}}</dd>
 
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorizationresponse">List[Application<wbr>Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationauthorizationresponse">Sequence[Application<wbr>Authorization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The  read-only authorizations property that is retrieved from the application package.{{% /md %}}</dd>
 
@@ -1321,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billing_details_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationbillingdetailsdefinitionresponse">Dict[Application<wbr>Billing<wbr>Details<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationbillingdetailsdefinitionresponse">Application<wbr>Billing<wbr>Details<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application billing details.{{% /md %}}</dd>
 
@@ -1331,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that created the JIT request.{{% /md %}}</dd>
 
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_support_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>support</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagecontactresponse">Dict[Application<wbr>Package<wbr>Contact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpackagecontactresponse">Application<wbr>Package<wbr>Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The read-only customer support property that is retrieved from the application package.{{% /md %}}</dd>
 
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the managed application outputs.{{% /md %}}</dd>
 
@@ -1411,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#support_urls_python" style="color: inherit; text-decoration: inherit;">support_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagesupporturlsresponse">Dict[Application<wbr>Package<wbr>Support<wbr>Urls<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpackagesupporturlsresponse">Application<wbr>Package<wbr>Support<wbr>Urls<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The read-only support URLs property that is retrieved from the application package.{{% /md %}}</dd>
 
@@ -1431,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that last updated the JIT request.{{% /md %}}</dd>
 
@@ -2145,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jit_approvers_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>approvers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinition">List[Jit<wbr>Approver<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#jitapproverdefinition">Sequence[Jit<wbr>Approver<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd>
 
@@ -2344,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jit_approvers_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>approvers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinitionresponse">List[Jit<wbr>Approver<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitapproverdefinitionresponse">Sequence[Jit<wbr>Approver<wbr>Definition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd>
 
@@ -2910,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 

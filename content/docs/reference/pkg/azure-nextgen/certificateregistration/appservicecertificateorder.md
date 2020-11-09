@@ -23,7 +23,7 @@ SSL certificate purchase order.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AppServiceCertificateOrder</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">certificate_order_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Dict[str, AppServiceCertificate]]</span> = None<span class="p">, </span><span class="nx">csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distinguished_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">validity_in_years</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AppServiceCertificateOrder</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">certificate_order_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, AppServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distinguished_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validity_in_years</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -632,7 +632,7 @@ The AppServiceCertificateOrder resource accepts the following [input]({{< relref
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, App<wbr>Service<wbr>Certificate]</span>
+        <span class="property-type">Mapping[str, App<wbr>Service<wbr>Certificate<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret.{{% /md %}}</dd>
 
@@ -682,7 +682,7 @@ The AppServiceCertificateOrder resource accepts the following [input]({{< relref
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1191,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_service_certificate_not_renewable_reasons_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service_<wbr>certificate_<wbr>not_<wbr>renewable_<wbr>reasons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intermediate_python" style="color: inherit; text-decoration: inherit;">intermediate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Dict[Certificate<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intermediate certificate.{{% /md %}}</dd>
 
@@ -1291,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_python" style="color: inherit; text-decoration: inherit;">root</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Dict[Certificate<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Root certificate.{{% /md %}}</dd>
 
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signed_certificate_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Dict[Certificate<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Signed certificate.{{% /md %}}</dd>
 

@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#mount_settings_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountsettingsresponse">Dict[Mount<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mountsettingsresponse">Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisksresponse">Dict[Data<wbr>Disks<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadisksresponse">Data<wbr>Disks<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#ssh_configuration_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Dict[Ssh<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd>
 
@@ -1181,17 +1181,17 @@ The following output properties are available:
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettingsresponse">Dict[User<wbr>Account<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_to_allow_python">
-<a href="#public_i_ps_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps_<wbr>to_<wbr>allow</a>
+        <span id="public_ips_to_allow_python">
+<a href="#public_ips_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips_<wbr>to_<wbr>allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd>
 

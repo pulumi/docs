@@ -879,7 +879,7 @@ The following output properties are available:
 <a href="#draft_python" style="color: inherit; text-decoration: inherit;">draft</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookdraftresponse">Dict[Runbook<wbr>Draft<wbr>Response]</a></span>
+        <span class="property-type"><a href="#runbookdraftresponse">Runbook<wbr>Draft<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook properties.{{% /md %}}</dd>
 
@@ -969,7 +969,7 @@ The following output properties are available:
 <a href="#output_types_python" style="color: inherit; text-decoration: inherit;">output_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Runbook<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook parameters.{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#publish_content_link_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Dict[Content<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the published runbook content link.{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1293,7 +1293,7 @@ The following output properties are available:
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Dict[Content<wbr>Hash<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 
@@ -1552,7 +1552,7 @@ The following output properties are available:
 <a href="#draft_content_link_python" style="color: inherit; text-decoration: inherit;">draft_<wbr>content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Dict[Content<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd>
 
@@ -1582,7 +1582,7 @@ The following output properties are available:
 <a href="#output_types_python" style="color: inherit; text-decoration: inherit;">output_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook output types.{{% /md %}}</dd>
 
@@ -1592,7 +1592,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Runbook<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd>
 
@@ -1767,8 +1767,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ismandatory_python">
-<a href="#ismandatory_python" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
+        <span id="is_mandatory_python">
+<a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

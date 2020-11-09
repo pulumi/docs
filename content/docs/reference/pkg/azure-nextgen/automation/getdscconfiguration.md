@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Dsc<wbr>Configuration<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Dsc<wbr>Configuration<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the configuration parameters.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentsourceresponse">Dict[Content<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentsourceresponse">Content<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1123,7 +1123,7 @@ The following output properties are available:
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Dict[Content<wbr>Hash<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 
@@ -1328,8 +1328,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ismandatory_python">
-<a href="#ismandatory_python" style="color: inherit; text-decoration: inherit;">is<wbr>Mandatory</a>
+        <span id="is_mandatory_python">
+<a href="#is_mandatory_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mandatory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

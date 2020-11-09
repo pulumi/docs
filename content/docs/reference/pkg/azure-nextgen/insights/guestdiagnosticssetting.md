@@ -224,58 +224,58 @@ import pulumi_azure_nextgen as azure_nextgen
 
 guest_diagnostics_setting = azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting",
     data_sources=[
-        {
-            "configuration": {
-                "perfCounters": [
-                    {
-                        "name": "\\Process(_Total)\\%Processor Time",
-                        "samplingPeriod": "PT1M",
-                    },
-                    {
-                        "name": "\\Process(_Total)\\Working Set",
-                        "samplingPeriod": "PT1M",
-                    },
+        azure_nextgen.insights.v20180601preview.DataSourceArgs(
+            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+                perf_counters=[
+                    azure_nextgen.insights.v20180601preview.PerformanceCounterConfigurationArgs(
+                        name="\\Process(_Total)\\%Processor Time",
+                        sampling_period="PT1M",
+                    ),
+                    azure_nextgen.insights.v20180601preview.PerformanceCounterConfigurationArgs(
+                        name="\\Process(_Total)\\Working Set",
+                        sampling_period="PT1M",
+                    ),
                 ],
-            },
-            "kind": "PerformanceCounter",
-            "sinks": [{
-                "kind": "LogAnalytics",
-            }],
-        },
-        {
-            "configuration": {
-                "providers": [
-                    {
-                        "id": "1",
-                    },
-                    {
-                        "id": "2",
-                    },
+            ),
+            kind="PerformanceCounter",
+            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+                kind="LogAnalytics",
+            )],
+        ),
+        azure_nextgen.insights.v20180601preview.DataSourceArgs(
+            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+                providers=[
+                    azure_nextgen.insights.v20180601preview.EtwProviderConfigurationArgs(
+                        id="1",
+                    ),
+                    azure_nextgen.insights.v20180601preview.EtwProviderConfigurationArgs(
+                        id="2",
+                    ),
                 ],
-            },
-            "kind": "ETWProviders",
-            "sinks": [{
-                "kind": "LogAnalytics",
-            }],
-        },
-        {
-            "configuration": {
-                "eventLogs": [
-                    {
-                        "filter": "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
-                        "logName": "Application",
-                    },
-                    {
-                        "filter": "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
-                        "logName": "Application",
-                    },
+            ),
+            kind="ETWProviders",
+            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+                kind="LogAnalytics",
+            )],
+        ),
+        azure_nextgen.insights.v20180601preview.DataSourceArgs(
+            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+                event_logs=[
+                    azure_nextgen.insights.v20180601preview.EventLogConfigurationArgs(
+                        filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
+                        log_name="Application",
+                    ),
+                    azure_nextgen.insights.v20180601preview.EventLogConfigurationArgs(
+                        filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
+                        log_name="Application",
+                    ),
                 ],
-            },
-            "kind": "WindowsEventLogs",
-            "sinks": [{
-                "kind": "LogAnalytics",
-            }],
-        },
+            ),
+            kind="WindowsEventLogs",
+            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+                kind="LogAnalytics",
+            )],
+        ),
     ],
     diagnostic_settings_name="SampleDiagSetting",
     location="Global",
@@ -371,7 +371,7 @@ const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.Gues
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_sources</span><span class="p">:</span> <span class="nx">Optional[List[DataSource]]</span> = None<span class="p">, </span><span class="nx">diagnostic_settings_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_setting</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataSourceArgs]]</span> = None<span class="p">, </span><span class="nx">diagnostic_settings_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_setting</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -810,7 +810,7 @@ The GuestDiagnosticsSetting resource accepts the following [input]({{< relref "/
 <a href="#data_sources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">List[Data<wbr>Source]</a></span>
+        <span class="property-type"><a href="#datasource">Sequence[Data<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the array of data source object which are configured to collect and send data{{% /md %}}</dd>
 
@@ -840,7 +840,7 @@ The GuestDiagnosticsSetting resource accepts the following [input]({{< relref "/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1147,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfiguration">Dict[Data<wbr>Source<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1167,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfiguration">List[Sink<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#sinkconfiguration">Sequence[Sink<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1302,21 +1302,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventlogs_python">
-<a href="#eventlogs_python" style="color: inherit; text-decoration: inherit;">event<wbr>Logs</a>
+        <span id="event_logs_python">
+<a href="#event_logs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfiguration">List[Event<wbr>Log<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#eventlogconfiguration">Sequence[Event<wbr>Log<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="perfcounters_python">
-<a href="#perfcounters_python" style="color: inherit; text-decoration: inherit;">perf<wbr>Counters</a>
+        <span id="perf_counters_python">
+<a href="#perf_counters_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>counters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfiguration">List[Performance<wbr>Counter<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#performancecounterconfiguration">Sequence[Performance<wbr>Counter<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
 
@@ -1326,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfiguration">List[Etw<wbr>Provider<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#etwproviderconfiguration">Sequence[Etw<wbr>Provider<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
 
@@ -1461,21 +1461,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventlogs_python">
-<a href="#eventlogs_python" style="color: inherit; text-decoration: inherit;">event<wbr>Logs</a>
+        <span id="event_logs_python">
+<a href="#event_logs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfigurationresponse">List[Event<wbr>Log<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">Sequence[Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="perfcounters_python">
-<a href="#perfcounters_python" style="color: inherit; text-decoration: inherit;">perf<wbr>Counters</a>
+        <span id="perf_counters_python">
+<a href="#perf_counters_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>counters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfigurationresponse">List[Performance<wbr>Counter<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">Sequence[Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
 
@@ -1485,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfigurationresponse">List[Etw<wbr>Provider<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">Sequence[Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
 
@@ -1624,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfigurationresponse">Dict[Data<wbr>Source<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1644,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfigurationresponse">List[Sink<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">Sequence[Sink<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2071,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfiguration">List[Etw<wbr>Event<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#etweventconfiguration">Sequence[Etw<wbr>Event<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2190,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfigurationresponse">List[Etw<wbr>Event<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">Sequence[Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2305,8 +2305,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="logname_python">
-<a href="#logname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
+        <span id="log_name_python">
+<a href="#log_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2424,8 +2424,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="logname_python">
-<a href="#logname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
+        <span id="log_name_python">
+<a href="#log_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2583,8 +2583,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="samplingperiod_python">
-<a href="#samplingperiod_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Period</a>
+        <span id="sampling_period_python">
+<a href="#sampling_period_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2742,8 +2742,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="samplingperiod_python">
-<a href="#samplingperiod_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Period</a>
+        <span id="sampling_period_python">
+<a href="#sampling_period_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

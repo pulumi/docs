@@ -135,15 +135,15 @@ link = azure_nextgen.customerinsights.latest.Link("link",
     },
     hub_name="sdkTestHub",
     link_name="linkTest4806",
-    mappings=[{
-        "linkType": "UpdateAlways",
-        "sourcePropertyName": "testInteraction1949",
-        "targetPropertyName": "testProfile1446",
-    }],
-    participant_property_references=[{
-        "sourcePropertyName": "testInteraction1949",
-        "targetPropertyName": "ProfileId",
-    }],
+    mappings=[azure_nextgen.customerinsights.latest.TypePropertiesMappingArgs(
+        link_type="UpdateAlways",
+        source_property_name="testInteraction1949",
+        target_property_name="testProfile1446",
+    )],
+    participant_property_references=[azure_nextgen.customerinsights.latest.ParticipantPropertyReferenceArgs(
+        source_property_name="testInteraction1949",
+        target_property_name="ProfileId",
+    )],
     resource_group_name="TestHubRG",
     source_entity_type="Interaction",
     source_entity_type_name="testInteraction1949",
@@ -201,7 +201,7 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Link</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[List[TypePropertiesMapping]]</span> = None<span class="p">, </span><span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">participant_property_references</span><span class="p">:</span> <span class="nx">Optional[List[ParticipantPropertyReference]]</span> = None<span class="p">, </span><span class="nx">reference_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Link</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[TypePropertiesMappingArgs]]</span> = None<span class="p">, </span><span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">participant_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantPropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">reference_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -810,7 +810,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#participant_property_references_python" style="color: inherit; text-decoration: inherit;">participant_<wbr>property_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantpropertyreference">List[Participant<wbr>Property<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#participantpropertyreference">Sequence[Participant<wbr>Property<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that represent the participating profile.{{% /md %}}</dd>
 
@@ -870,7 +870,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Link.{{% /md %}}</dd>
 
@@ -880,7 +880,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Link.{{% /md %}}</dd>
 
@@ -890,7 +890,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typepropertiesmapping">List[Type<wbr>Properties<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#typepropertiesmapping">Sequence[Type<wbr>Properties<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of properties mappings between the source and target Types.{{% /md %}}</dd>
 
@@ -1263,8 +1263,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepropertyname_python">
-<a href="#sourcepropertyname_python" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
+        <span id="source_property_name_python">
+<a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1273,8 +1273,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetpropertyname_python">
-<a href="#targetpropertyname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
+        <span id="target_property_name_python">
+<a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1382,8 +1382,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepropertyname_python">
-<a href="#sourcepropertyname_python" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
+        <span id="source_property_name_python">
+<a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1392,8 +1392,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetpropertyname_python">
-<a href="#targetpropertyname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
+        <span id="target_property_name_python">
+<a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1531,8 +1531,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepropertyname_python">
-<a href="#sourcepropertyname_python" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
+        <span id="source_property_name_python">
+<a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1541,8 +1541,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetpropertyname_python">
-<a href="#targetpropertyname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
+        <span id="target_property_name_python">
+<a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1690,8 +1690,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepropertyname_python">
-<a href="#sourcepropertyname_python" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
+        <span id="source_property_name_python">
+<a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1700,8 +1700,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="targetpropertyname_python">
-<a href="#targetpropertyname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
+        <span id="target_property_name_python">
+<a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

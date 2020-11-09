@@ -240,7 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -314,6 +314,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="ssoclientid_csharp">
+<a href="#ssoclientid_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssoclientsecretkeyvaultpath_csharp">
+<a href="#ssoclientsecretkeyvaultpath_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="ssocontext_csharp">
 <a href="#ssocontext_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
 </span> 
@@ -321,6 +341,36 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssosecrettype_csharp">
+<a href="#ssosecrettype_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssoadfsauthority_csharp">
+<a href="#ssoadfsauthority_csharp" style="color: inherit; text-decoration: inherit;">Ssoadfs<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="startvmonconnect_csharp">
+<a href="#startvmonconnect_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>VMOn<wbr>Connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -427,7 +477,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -501,6 +551,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="ssoclientid_go">
+<a href="#ssoclientid_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssoclientsecretkeyvaultpath_go">
+<a href="#ssoclientsecretkeyvaultpath_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="ssocontext_go">
 <a href="#ssocontext_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
 </span> 
@@ -508,6 +578,36 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssosecrettype_go">
+<a href="#ssosecrettype_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssoadfsauthority_go">
+<a href="#ssoadfsauthority_go" style="color: inherit; text-decoration: inherit;">Ssoadfs<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="startvmonconnect_go">
+<a href="#startvmonconnect_go" style="color: inherit; text-decoration: inherit;">Start<wbr>VMOn<wbr>Connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -614,7 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -688,6 +788,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="ssoclientid_nodejs">
+<a href="#ssoclientid_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssoclientsecretkeyvaultpath_nodejs">
+<a href="#ssoclientsecretkeyvaultpath_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="ssocontext_nodejs">
 <a href="#ssocontext_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Context</a>
 </span> 
@@ -695,6 +815,36 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssosecrettype_nodejs">
+<a href="#ssosecrettype_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Secret<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssoadfsauthority_nodejs">
+<a href="#ssoadfsauthority_nodejs" style="color: inherit; text-decoration: inherit;">ssoadfs<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="startvmonconnect_nodejs">
+<a href="#startvmonconnect_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>VMOn<wbr>Connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -739,7 +889,7 @@ The following output properties are available:
 <a href="#application_group_references_python" style="color: inherit; text-decoration: inherit;">application_<wbr>group_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd>
 
@@ -801,7 +951,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -859,7 +1009,7 @@ The following output properties are available:
 <a href="#registration_info_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationinforesponse">Dict[Registration<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#registrationinforesponse">Registration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd>
 
@@ -875,6 +1025,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sso_client_id_python">
+<a href="#sso_client_id_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sso_client_secret_key_vault_path_python">
+<a href="#sso_client_secret_key_vault_path_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>secret_<wbr>key_<wbr>vault_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sso_context_python">
 <a href="#sso_context_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>context</a>
 </span> 
@@ -885,11 +1055,41 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sso_secret_type_python">
+<a href="#sso_secret_type_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>secret_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ssoadfs_authority_python">
+<a href="#ssoadfs_authority_python" style="color: inherit; text-decoration: inherit;">ssoadfs_<wbr>authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="start_vm_on_connect_python">
+<a href="#start_vm_on_connect_python" style="color: inherit; text-decoration: inherit;">start_<wbr>vm_<wbr>on_<wbr>connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

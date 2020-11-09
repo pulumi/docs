@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Managed<wbr>Integration<wbr>Runtime<wbr>Response] | Dict[Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -613,7 +613,7 @@ The following output properties are available:
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -623,17 +623,17 @@ The following output properties are available:
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretversion_python">
-<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -772,17 +772,17 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="targetname_python">
-<a href="#targetname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
+        <span id="target_name_python">
+<a href="#target_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -792,7 +792,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -897,8 +897,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="componentname_python">
-<a href="#componentname_python" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
+        <span id="component_name_python">
+<a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -907,11 +907,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="licensekey_python">
-<a href="#licensekey_python" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
+        <span id="license_key_python">
+<a href="#license_key_python" style="color: inherit; text-decoration: inherit;">license_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response] | Dict[Secure<wbr>String<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args, Secure<wbr>String<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd>
 
@@ -1016,8 +1016,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1135,16 +1135,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="variablevalue_python">
-<a href="#variablevalue_python" style="color: inherit; text-decoration: inherit;">variable<wbr>Value</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="variable_name_python">
 <a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
 </span> 
@@ -1152,6 +1142,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="variable_value_python">
+<a href="#variable_value_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1374,11 +1374,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataflowproperties_python">
-<a href="#dataflowproperties_python" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
+        <span id="data_flow_properties_python">
+<a href="#data_flow_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Dict[Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd>
 
@@ -1394,8 +1394,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxparallelexecutionspernode_python">
-<a href="#maxparallelexecutionspernode_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
+        <span id="max_parallel_executions_per_node_python">
+<a href="#max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1414,8 +1414,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberofnodes_python">
-<a href="#numberofnodes_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
+        <span id="number_of_nodes_python">
+<a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1424,11 +1424,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vnetproperties_python">
-<a href="#vnetproperties_python" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
+        <span id="v_net_properties_python">
+<a href="#v_net_properties_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Dict[Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd>
 
@@ -1533,8 +1533,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobcontaineruri_python">
-<a href="#blobcontaineruri_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
+        <span id="blob_container_uri_python">
+<a href="#blob_container_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1547,7 +1547,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Dict[Secure<wbr>String<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd>
 
@@ -1692,8 +1692,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="corecount_python">
-<a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+        <span id="core_count_python">
+<a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1841,11 +1841,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectvia_python">
-<a href="#connectvia_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Dict[Entity<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd>
 
@@ -1861,11 +1861,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="staginglinkedservice_python">
-<a href="#staginglinkedservice_python" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
+        <span id="staging_linked_service_python">
+<a href="#staging_linked_service_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Dict[Entity<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd>
 
@@ -2030,18 +2030,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="catalogadminpassword_python">
-<a href="#catalogadminpassword_python" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
+        <span id="catalog_admin_password_python">
+<a href="#catalog_admin_password_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Dict[Secure<wbr>String<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="catalogadminusername_python">
-<a href="#catalogadminusername_python" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>User<wbr>Name</a>
+        <span id="catalog_admin_user_name_python">
+<a href="#catalog_admin_user_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2050,8 +2050,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="catalogpricingtier_python">
-<a href="#catalogpricingtier_python" style="color: inherit; text-decoration: inherit;">catalog<wbr>Pricing<wbr>Tier</a>
+        <span id="catalog_pricing_tier_python">
+<a href="#catalog_pricing_tier_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>pricing_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2060,8 +2060,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="catalogserverendpoint_python">
-<a href="#catalogserverendpoint_python" style="color: inherit; text-decoration: inherit;">catalog<wbr>Server<wbr>Endpoint</a>
+        <span id="catalog_server_endpoint_python">
+<a href="#catalog_server_endpoint_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>server_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2319,31 +2319,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cataloginfo_python">
-<a href="#cataloginfo_python" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
+        <span id="catalog_info_python">
+<a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Dict[Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customsetupscriptproperties_python">
-<a href="#customsetupscriptproperties_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
+        <span id="custom_setup_script_properties_python">
+<a href="#custom_setup_script_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Dict[Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataproxyproperties_python">
-<a href="#dataproxyproperties_python" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
+        <span id="data_proxy_properties_python">
+<a href="#data_proxy_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>proxy_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Dict[Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd>
 
@@ -2359,11 +2359,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expresscustomsetupproperties_python">
-<a href="#expresscustomsetupproperties_python" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
+        <span id="express_custom_setup_properties_python">
+<a href="#express_custom_setup_properties_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datafactory/Latest:Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response, Azure-Nextgen:Datafactory/Latest:Cmdkey<wbr>Setup<wbr>Response, Azure-Nextgen:Datafactory/Latest:Component<wbr>Setup<wbr>Response, Azure-Nextgen:Datafactory/Latest:Environment<wbr>Variable<wbr>Setup<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args, Cmdkey<wbr>Setup<wbr>Response<wbr>Args, Component<wbr>Setup<wbr>Response<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd>
 
@@ -2379,11 +2379,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="packagestores_python">
-<a href="#packagestores_python" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
+        <span id="package_stores_python">
+<a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">List[Package<wbr>Store<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">Sequence[Package<wbr>Store<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd>
 
@@ -2518,11 +2518,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_python">
-<a href="#public_i_ps_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd>
 
@@ -2538,8 +2538,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vnetid_python">
-<a href="#vnetid_python" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Id</a>
+        <span id="v_net_id_python">
+<a href="#v_net_id_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2621,7 +2621,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Dict[Secure<wbr>String<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd>
 
@@ -2835,8 +2835,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2859,7 +2859,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -3034,11 +3034,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computeproperties_python">
-<a href="#computeproperties_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
+        <span id="compute_properties_python">
+<a href="#compute_properties_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Dict[Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd>
 
@@ -3054,11 +3054,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssisproperties_python">
-<a href="#ssisproperties_python" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
+        <span id="ssis_properties_python">
+<a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Dict[Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
 
@@ -3173,11 +3173,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="packagestorelinkedservice_python">
-<a href="#packagestorelinkedservice_python" style="color: inherit; text-decoration: inherit;">package<wbr>Store<wbr>Linked<wbr>Service</a>
+        <span id="package_store_linked_service_python">
+<a href="#package_store_linked_service_python" style="color: inherit; text-decoration: inherit;">package_<wbr>store_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Dict[Entity<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd>
 
@@ -3375,7 +3375,7 @@ The following output properties are available:
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response] | Dict[Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response]</span>
+        <span class="property-type">Union[Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args, Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd>
 

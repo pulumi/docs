@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#share_mappings_python" style="color: inherit; text-decoration: inherit;">share_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmapresponse">List[Mount<wbr>Point<wbr>Map<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mountpointmapresponse">Sequence[Mount<wbr>Point<wbr>Map<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#azure_container_info_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>container_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecontainerinforesponse">Dict[Azure<wbr>Container<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurecontainerinforesponse">Azure<wbr>Container<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#client_access_rights_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaccessrightresponse">List[Client<wbr>Access<wbr>Right<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clientaccessrightresponse">Sequence[Client<wbr>Access<wbr>Right<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#refresh_details_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetailsresponse">Dict[Refresh<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#refreshdetailsresponse">Refresh<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#user_access_rights_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access_<wbr>rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccessrightresponse">List[User<wbr>Access<wbr>Right<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useraccessrightresponse">Sequence[User<wbr>Access<wbr>Right<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
 
@@ -979,8 +979,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesspermission_python">
-<a href="#accesspermission_python" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
+        <span id="access_permission_python">
+<a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1168,8 +1168,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="roleid_python">
-<a href="#roleid_python" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1188,8 +1188,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="shareid_python">
-<a href="#shareid_python" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+        <span id="share_id_python">
+<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1496,8 +1496,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -111,19 +111,19 @@ import pulumi_azure_nextgen as azure_nextgen
 
 packet_capture = azure_nextgen.network.latest.PacketCapture("packetCapture",
     bytes_to_capture_per_packet=10000,
-    filters=[{
-        "localIPAddress": "10.0.0.4",
-        "localPort": "80",
-        "protocol": "TCP",
-    }],
+    filters=[azure_nextgen.network.latest.PacketCaptureFilterArgs(
+        local_ip_address="10.0.0.4",
+        local_port="80",
+        protocol="TCP",
+    )],
     network_watcher_name="nw1",
     packet_capture_name="pc1",
     resource_group_name="rg1",
-    storage_location={
-        "filePath": "D:\\capture\\pc1.cap",
-        "storageId": "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
-        "storagePath": "https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
-    },
+    storage_location=azure_nextgen.network.latest.PacketCaptureStorageLocationArgs(
+        file_path="D:\\capture\\pc1.cap",
+        storage_id="/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
+        storage_path="https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
+    ),
     target="/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1",
     time_limit_in_seconds=100,
     total_bytes_per_session=100000)
@@ -174,7 +174,7 @@ const packetCapture = new azure_nextgen.network.latest.PacketCapture("packetCapt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[PacketCaptureFilter]]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[PacketCaptureStorageLocation]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PacketCaptureFilterArgs]]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[PacketCaptureStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -673,7 +673,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storage_location_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocation">Dict[Packet<wbr>Capture<wbr>Storage<wbr>Location]</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocation">Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage location for a packet capture session.{{% /md %}}</dd>
 
@@ -703,7 +703,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilter">List[Packet<wbr>Capture<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#packetcapturefilter">Sequence[Packet<wbr>Capture<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of packet capture filters.{{% /md %}}</dd>
 
@@ -1126,8 +1126,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localipaddress_python">
-<a href="#localipaddress_python" style="color: inherit; text-decoration: inherit;">local<wbr>IPAddress</a>
+        <span id="local_ip_address_python">
+<a href="#local_ip_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1136,8 +1136,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localport_python">
-<a href="#localport_python" style="color: inherit; text-decoration: inherit;">local<wbr>Port</a>
+        <span id="local_port_python">
+<a href="#local_port_python" style="color: inherit; text-decoration: inherit;">local_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1156,8 +1156,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteipaddress_python">
-<a href="#remoteipaddress_python" style="color: inherit; text-decoration: inherit;">remote<wbr>IPAddress</a>
+        <span id="remote_ip_address_python">
+<a href="#remote_ip_address_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1166,8 +1166,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteport_python">
-<a href="#remoteport_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Port</a>
+        <span id="remote_port_python">
+<a href="#remote_port_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1365,8 +1365,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localipaddress_python">
-<a href="#localipaddress_python" style="color: inherit; text-decoration: inherit;">local<wbr>IPAddress</a>
+        <span id="local_ip_address_python">
+<a href="#local_ip_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1375,8 +1375,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localport_python">
-<a href="#localport_python" style="color: inherit; text-decoration: inherit;">local<wbr>Port</a>
+        <span id="local_port_python">
+<a href="#local_port_python" style="color: inherit; text-decoration: inherit;">local_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1395,8 +1395,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteipaddress_python">
-<a href="#remoteipaddress_python" style="color: inherit; text-decoration: inherit;">remote<wbr>IPAddress</a>
+        <span id="remote_ip_address_python">
+<a href="#remote_ip_address_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1405,8 +1405,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteport_python">
-<a href="#remoteport_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Port</a>
+        <span id="remote_port_python">
+<a href="#remote_port_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

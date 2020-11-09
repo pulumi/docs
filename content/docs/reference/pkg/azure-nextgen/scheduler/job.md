@@ -22,7 +22,7 @@ meta_desc: "Explore the Job resource of the scheduler module, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[JobProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[JobPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -371,7 +371,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobproperties">Dict[Job<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#jobproperties">Job<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job properties.{{% /md %}}</dd>
 
@@ -972,8 +972,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateexpirationdate_python">
-<a href="#certificateexpirationdate_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Expiration<wbr>Date</a>
+        <span id="certificate_expiration_date_python">
+<a href="#certificate_expiration_date_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>expiration_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -982,8 +982,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatesubjectname_python">
-<a href="#certificatesubjectname_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Subject<wbr>Name</a>
+        <span id="certificate_subject_name_python">
+<a href="#certificate_subject_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>subject_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1211,8 +1211,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateexpirationdate_python">
-<a href="#certificateexpirationdate_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Expiration<wbr>Date</a>
+        <span id="certificate_expiration_date_python">
+<a href="#certificate_expiration_date_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>expiration_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1221,8 +1221,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatesubjectname_python">
-<a href="#certificatesubjectname_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Subject<wbr>Name</a>
+        <span id="certificate_subject_name_python">
+<a href="#certificate_subject_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>subject_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1454,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Basic<wbr>Authentication] | Dict[Client<wbr>Cert<wbr>Authentication] | Dict[OAuth<wbr>Authentication]</span>
+        <span class="property-type">Union[Basic<wbr>Authentication<wbr>Args, Client<wbr>Cert<wbr>Authentication<wbr>Args, OAuth<wbr>Authentication<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1474,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the headers.{{% /md %}}</dd>
 
@@ -1693,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Basic<wbr>Authentication<wbr>Response] | Dict[Client<wbr>Cert<wbr>Authentication<wbr>Response] | Dict[OAuth<wbr>Authentication<wbr>Response]</span>
+        <span class="property-type">Union[Basic<wbr>Authentication<wbr>Response<wbr>Args, Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args, OAuth<wbr>Authentication<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd>
 
@@ -1713,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the headers.{{% /md %}}</dd>
 
@@ -1992,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroraction">Dict[Job<wbr>Error<wbr>Action]</a></span>
+        <span class="property-type"><a href="#joberroraction">Job<wbr>Error<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd>
 
@@ -2002,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Dict[Storage<wbr>Queue<wbr>Message]</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
 
@@ -2012,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Dict[Http<wbr>Request]</a></span>
+        <span class="property-type"><a href="#httprequest">Http<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
 
@@ -2022,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Dict[Retry<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
 
@@ -2032,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Dict[Service<wbr>Bus<wbr>Queue<wbr>Message]</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
 
@@ -2042,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Dict[Service<wbr>Bus<wbr>Topic<wbr>Message]</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
 
@@ -2311,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Dict[Job<wbr>Error<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd>
 
@@ -2321,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Dict[Storage<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
 
@@ -2331,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Dict[Http<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
 
@@ -2341,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Dict[Retry<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
 
@@ -2351,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Dict[Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
 
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Dict[Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
 
@@ -2600,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Dict[Storage<wbr>Queue<wbr>Message]</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
 
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Dict[Http<wbr>Request]</a></span>
+        <span class="property-type"><a href="#httprequest">Http<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
 
@@ -2620,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Dict[Retry<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
 
@@ -2630,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Dict[Service<wbr>Bus<wbr>Queue<wbr>Message]</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
 
@@ -2640,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Dict[Service<wbr>Bus<wbr>Topic<wbr>Message]</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
 
@@ -2879,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Dict[Storage<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd>
 
@@ -2889,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Dict[Http<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd>
 
@@ -2899,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Dict[Retry<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd>
 
@@ -2909,7 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Dict[Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd>
 
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Dict[Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd>
 
@@ -3098,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobaction">Dict[Job<wbr>Action]</a></span>
+        <span class="property-type"><a href="#jobaction">Job<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd>
 
@@ -3108,7 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrence">Dict[Job<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#jobrecurrence">Job<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd>
 
@@ -3327,7 +3327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Dict[Job<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd>
 
@@ -3337,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Dict[Job<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd>
 
@@ -3347,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Dict[Job<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd>
 
@@ -3606,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedule">Dict[Job<wbr>Recurrence<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedule">Job<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3845,7 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Dict[Job<wbr>Recurrence<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4044,7 +4044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hours of the day that the job should execute at.{{% /md %}}</dd>
 
@@ -4054,7 +4054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the minutes of the hour that the job should execute at.{{% /md %}}</dd>
 
@@ -4064,7 +4064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
 
@@ -4074,7 +4074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">List[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd>
 
@@ -4084,7 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -4521,7 +4521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hours of the day that the job should execute at.{{% /md %}}</dd>
 
@@ -4531,7 +4531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the minutes of the hour that the job should execute at.{{% /md %}}</dd>
 
@@ -4541,7 +4541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
 
@@ -4551,7 +4551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd>
 
@@ -4561,7 +4561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -7211,7 +7211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Dict[Service<wbr>Bus<wbr>Authentication]</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
 
@@ -7221,7 +7221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Dict[Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
 
@@ -7231,7 +7231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_message_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the custom message properties.{{% /md %}}</dd>
 
@@ -7530,7 +7530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Dict[Service<wbr>Bus<wbr>Authentication<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
 
@@ -7540,7 +7540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Dict[Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
 
@@ -7550,7 +7550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_message_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the custom message properties.{{% /md %}}</dd>
 
@@ -7849,7 +7849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Dict[Service<wbr>Bus<wbr>Authentication]</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
 
@@ -7859,7 +7859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Dict[Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
 
@@ -7869,7 +7869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_message_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the custom message properties.{{% /md %}}</dd>
 
@@ -8168,7 +8168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Dict[Service<wbr>Bus<wbr>Authentication<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd>
 
@@ -8178,7 +8178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Dict[Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd>
 
@@ -8188,7 +8188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_message_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the custom message properties.{{% /md %}}</dd>
 

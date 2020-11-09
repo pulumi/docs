@@ -116,20 +116,20 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 replication_recovery_plan = azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan",
-    properties={
-        "failoverDeploymentModel": "ResourceManager",
-        "groups": [{
-            "endGroupActions": [],
-            "groupType": "Boot",
-            "replicationProtectedItems": [{
-                "id": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
-                "virtualMachineId": "f8491e4f-817a-40dd-a90c-af773978c75b",
-            }],
-            "startGroupActions": [],
-        }],
-        "primaryFabricId": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
-        "recoveryFabricId": "Microsoft Azure",
-    },
+    properties=azure_nextgen.recoveryservices.latest.CreateRecoveryPlanInputPropertiesArgs(
+        failover_deployment_model="ResourceManager",
+        groups=[azure_nextgen.recoveryservices.latest.RecoveryPlanGroupArgs(
+            end_group_actions=[],
+            group_type="Boot",
+            replication_protected_items=[azure_nextgen.recoveryservices.latest.RecoveryPlanProtectedItemArgs(
+                id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+                virtual_machine_id="f8491e4f-817a-40dd-a90c-af773978c75b",
+            )],
+            start_group_actions=[],
+        )],
+        primary_fabric_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
+        recovery_fabric_id="Microsoft Azure",
+    ),
     recovery_plan_name="RPtest1",
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
@@ -180,7 +180,7 @@ const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.Replic
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CreateRecoveryPlanInputProperties]]</span> = None<span class="p">, </span><span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreateRecoveryPlanInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -499,7 +499,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createrecoveryplaninputproperties">Dict[Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#createrecoveryplaninputproperties">Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recovery plan creation properties.{{% /md %}}</dd>
 
@@ -936,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">List[Recovery<wbr>Plan<wbr>Group]</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd>
 
@@ -976,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">List[Recovery<wbr>Plan<wbr>A2AInput]</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">Sequence[Recovery<wbr>Plan<wbr>A2AInput<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd>
 
@@ -1240,8 +1240,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryzone_python">
-<a href="#primaryzone_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Zone</a>
+        <span id="primary_zone_python">
+<a href="#primary_zone_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1250,8 +1250,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryzone_python">
-<a href="#recoveryzone_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Zone</a>
+        <span id="recovery_zone_python">
+<a href="#recovery_zone_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1359,8 +1359,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryzone_python">
-<a href="#primaryzone_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Zone</a>
+        <span id="primary_zone_python">
+<a href="#primary_zone_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1369,8 +1369,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryzone_python">
-<a href="#recoveryzone_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Zone</a>
+        <span id="recovery_zone_python">
+<a href="#recovery_zone_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1508,8 +1508,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="actionname_python">
-<a href="#actionname_python" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
+        <span id="action_name_python">
+<a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1518,21 +1518,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="failoverdirections_python">
-<a href="#failoverdirections_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Directions</a>
+        <span id="failover_directions_python">
+<a href="#failover_directions_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>directions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="failovertypes_python">
-<a href="#failovertypes_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Types</a>
+        <span id="failover_types_python">
+<a href="#failover_types_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd>
 
@@ -1697,8 +1697,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="actionname_python">
-<a href="#actionname_python" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
+        <span id="action_name_python">
+<a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1711,27 +1711,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response] | Dict[Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response] | Dict[Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Union[Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args, Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args, Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="failoverdirections_python">
-<a href="#failoverdirections_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Directions</a>
+        <span id="failover_directions_python">
+<a href="#failover_directions_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>directions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="failovertypes_python">
-<a href="#failovertypes_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Types</a>
+        <span id="failover_types_python">
+<a href="#failover_types_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd>
 
@@ -1866,8 +1866,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fabriclocation_python">
-<a href="#fabriclocation_python" style="color: inherit; text-decoration: inherit;">fabric<wbr>Location</a>
+        <span id="fabric_location_python">
+<a href="#fabric_location_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1876,8 +1876,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runbookid_python">
-<a href="#runbookid_python" style="color: inherit; text-decoration: inherit;">runbook<wbr>Id</a>
+        <span id="runbook_id_python">
+<a href="#runbook_id_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2065,31 +2065,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endgroupactions_python">
-<a href="#endgroupactions_python" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
+        <span id="end_group_actions_python">
+<a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">List[Recovery<wbr>Plan<wbr>Action]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationprotecteditems_python">
-<a href="#replicationprotecteditems_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
+        <span id="replication_protected_items_python">
+<a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">List[Recovery<wbr>Plan<wbr>Protected<wbr>Item]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startgroupactions_python">
-<a href="#startgroupactions_python" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
+        <span id="start_group_actions_python">
+<a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">List[Recovery<wbr>Plan<wbr>Action]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd>
 
@@ -2264,31 +2264,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endgroupactions_python">
-<a href="#endgroupactions_python" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
+        <span id="end_group_actions_python">
+<a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationprotecteditems_python">
-<a href="#replicationprotecteditems_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
+        <span id="replication_protected_items_python">
+<a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startgroupactions_python">
-<a href="#startgroupactions_python" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
+        <span id="start_group_actions_python">
+<a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd>
 
@@ -2896,7 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Sequence[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd>
 
@@ -2906,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_operations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>operations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of allowed operations.{{% /md %}}</dd>
 
@@ -2916,7 +2916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_scenario_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Dict[Current<wbr>Scenario<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd>
 
@@ -2966,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">List[Recovery<wbr>Plan<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd>
 
@@ -3046,7 +3046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_providers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of replication providers.{{% /md %}}</dd>
 
@@ -3161,8 +3161,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineid_python">
-<a href="#virtualmachineid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3280,8 +3280,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineid_python">
-<a href="#virtualmachineid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3419,8 +3419,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fabriclocation_python">
-<a href="#fabriclocation_python" style="color: inherit; text-decoration: inherit;">fabric<wbr>Location</a>
+        <span id="fabric_location_python">
+<a href="#fabric_location_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

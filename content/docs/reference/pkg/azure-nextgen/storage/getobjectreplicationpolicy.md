@@ -270,7 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -347,7 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -424,7 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -501,7 +501,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyruleresponse">List[Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyruleresponse">Sequence[Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The storage account object replication rules.{{% /md %}}</dd>
 
@@ -620,8 +620,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mincreationtime_python">
-<a href="#mincreationtime_python" style="color: inherit; text-decoration: inherit;">min<wbr>Creation<wbr>Time</a>
+        <span id="min_creation_time_python">
+<a href="#min_creation_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -630,11 +630,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.{{% /md %}}</dd>
 
@@ -799,8 +799,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationcontainer_python">
-<a href="#destinationcontainer_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Container</a>
+        <span id="destination_container_python">
+<a href="#destination_container_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -809,8 +809,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecontainer_python">
-<a href="#sourcecontainer_python" style="color: inherit; text-decoration: inherit;">source<wbr>Container</a>
+        <span id="source_container_python">
+<a href="#source_container_python" style="color: inherit; text-decoration: inherit;">source_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Dict[Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd>
 

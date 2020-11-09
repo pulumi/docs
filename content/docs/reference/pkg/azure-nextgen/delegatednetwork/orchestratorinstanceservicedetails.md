@@ -101,12 +101,12 @@ import pulumi_azure_nextgen as azure_nextgen
 orchestrator_instance_service_details = azure_nextgen.delegatednetwork.v20200808preview.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails",
     api_server_endpoint="https://testk8s.cloudapp.net",
     cluster_root_ca="ddsadsad344mfdsfdl",
-    controller_details={
-        "id": "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
-    },
-    identity={
-        "type": "SystemAssigned",
-    },
+    controller_details=azure_nextgen.delegatednetwork.v20200808preview.ControllerDetailsArgs(
+        id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
+    ),
+    identity=azure_nextgen.delegatednetwork.v20200808preview.OrchestratorIdentityArgs(
+        type="SystemAssigned",
+    ),
     kind="Kubernetes",
     location="West US",
     orchestrator_app_id="546192d7-503f-477a-9cfe-4efc3ee2b6e1",
@@ -157,7 +157,7 @@ const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v2
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_server_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_root_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">controller_details</span><span class="p">:</span> <span class="nx">Optional[Dict[ControllerDetails]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[OrchestratorIdentity]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_server_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_root_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">controller_details</span><span class="p">:</span> <span class="nx">Optional[ControllerDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[OrchestratorIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -686,7 +686,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#controller_details_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetails">Dict[Controller<wbr>Details]</a></span>
+        <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}controller details{{% /md %}}</dd>
 
@@ -746,7 +746,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orchestratoridentity">Dict[Orchestrator<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#orchestratoridentity">Orchestrator<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the orchestrator{{% /md %}}</dd>
 
@@ -786,7 +786,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 

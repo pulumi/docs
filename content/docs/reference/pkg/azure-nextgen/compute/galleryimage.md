@@ -97,11 +97,11 @@ gallery_image = azure_nextgen.compute.latest.GalleryImage("galleryImage",
     gallery_image_name="myGalleryImageName",
     gallery_name="myGalleryName",
     hyper_v_generation="V1",
-    identifier={
-        "offer": "myOfferName",
-        "publisher": "myPublisherName",
-        "sku": "mySkuName",
-    },
+    identifier=azure_nextgen.compute.latest.GalleryImageIdentifierArgs(
+        offer="myOfferName",
+        publisher="myPublisherName",
+        sku="mySkuName",
+    ),
     location="West US",
     os_state="Generalized",
     os_type="Windows",
@@ -148,7 +148,7 @@ const galleryImage = new azure_nextgen.compute.latest.GalleryImage("galleryImage
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[Dict[Disallowed]]</span> = None<span class="p">, </span><span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[List[GalleryImageFeature]]</span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[Dict[GalleryImageIdentifier]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ImagePurchasePlan]]</span> = None<span class="p">, </span><span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[Dict[RecommendedMachineConfiguration]]</span> = None<span class="p">, </span><span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[DisallowedArgs]</span> = None<span class="p">, </span><span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[GalleryImageFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[GalleryImageIdentifierArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[ImagePurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[RecommendedMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -907,7 +907,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifier">Dict[Gallery<wbr>Image<wbr>Identifier]</a></span>
+        <span class="property-type"><a href="#galleryimageidentifier">Gallery<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd>
 
@@ -967,7 +967,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#disallowed_python" style="color: inherit; text-decoration: inherit;">disallowed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowed">Dict[Disallowed]</a></span>
+        <span class="property-type"><a href="#disallowed">Disallowed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd>
 
@@ -997,7 +997,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeature">List[Gallery<wbr>Image<wbr>Feature]</a></span>
+        <span class="property-type"><a href="#galleryimagefeature">Sequence[Gallery<wbr>Image<wbr>Feature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd>
 
@@ -1027,7 +1027,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#purchase_plan_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplan">Dict[Image<wbr>Purchase<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#imagepurchaseplan">Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd>
 
@@ -1037,7 +1037,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recommended_python" style="color: inherit; text-decoration: inherit;">recommended</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfiguration">Dict[Recommended<wbr>Machine<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfiguration">Recommended<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd>
 
@@ -1057,7 +1057,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1344,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_types_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk types.{{% /md %}}</dd>
 
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_types_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk types.{{% /md %}}</dd>
 
@@ -2406,17 +2406,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Dict[Resource<wbr>Range]</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="v_cp_us_python">
-<a href="#v_cp_us_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cp_<wbr>us</a>
+        <span id="v_cpus_python">
+<a href="#v_cpus_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Dict[Resource<wbr>Range]</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 
@@ -2525,17 +2525,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Dict[Resource<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="v_cp_us_python">
-<a href="#v_cp_us_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cp_<wbr>us</a>
+        <span id="v_cpus_python">
+<a href="#v_cpus_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Dict[Resource<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 

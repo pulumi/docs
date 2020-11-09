@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpactionroutedefinitionresponse">List[Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customrpactionroutedefinitionresponse">Sequence[Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpresourcetyperoutedefinitionresponse">List[Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customrpresourcetyperoutedefinitionresponse">Sequence[Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#validations_python" style="color: inherit; text-decoration: inherit;">validations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpvalidationsresponse">List[Custom<wbr>RPValidations<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customrpvalidationsresponse">Sequence[Custom<wbr>RPValidations<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
 
@@ -670,8 +670,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingtype_python">
-<a href="#routingtype_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
+        <span id="routing_type_python">
+<a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -829,8 +829,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingtype_python">
-<a href="#routingtype_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
+        <span id="routing_type_python">
+<a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -948,8 +948,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationtype_python">
-<a href="#validationtype_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Type</a>
+        <span id="validation_type_python">
+<a href="#validation_type_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

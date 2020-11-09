@@ -94,13 +94,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage={
-        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
-    },
-    key_vault_reference={
-        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
-        "url": "http://sample.vault.azure.net/",
-    },
+    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+        storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    ),
+    key_vault_reference=azure_nextgen.batch.latest.KeyVaultReferenceArgs(
+        id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+        url="http://sample.vault.azure.net/",
+    ),
     location="japaneast",
     pool_allocation_mode="UserSubscription",
     resource_group_name="default-azurebatch-japaneast")
@@ -200,9 +200,9 @@ import pulumi_azure_nextgen as azure_nextgen
 
 batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage={
-        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
-    },
+    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+        storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    ),
     location="japaneast",
     resource_group_name="default-azurebatch-japaneast")
 
@@ -303,12 +303,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage={
-        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
-    },
-    identity={
-        "type": "SystemAssigned",
-    },
+    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+        storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    ),
+    identity=azure_nextgen.batch.latest.BatchAccountIdentityArgs(
+        type="SystemAssigned",
+    ),
     location="japaneast",
     resource_group_name="default-azurebatch-japaneast")
 
@@ -416,13 +416,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage={
-        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
-    },
-    key_vault_reference={
-        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
-        "url": "http://sample.vault.azure.net/",
-    },
+    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+        storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    ),
+    key_vault_reference=azure_nextgen.batch.latest.KeyVaultReferenceArgs(
+        id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+        url="http://sample.vault.azure.net/",
+    ),
     location="japaneast",
     public_network_access="Disabled",
     resource_group_name="default-azurebatch-japaneast")
@@ -467,7 +467,7 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_storage</span><span class="p">:</span> <span class="nx">Optional[Dict[AutoStorageBaseProperties]]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionProperties]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[BatchAccountIdentity]]</span> = None<span class="p">, </span><span class="nx">key_vault_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[KeyVaultReference]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_allocation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_storage</span><span class="p">:</span> <span class="nx">Optional[AutoStorageBasePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[BatchAccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_reference</span><span class="p">:</span> <span class="nx">Optional[KeyVaultReferenceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_allocation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -996,7 +996,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auto_storage_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autostoragebaseproperties">Dict[Auto<wbr>Storage<wbr>Base<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#autostoragebaseproperties">Auto<wbr>Storage<wbr>Base<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the auto-storage account.{{% /md %}}</dd>
 
@@ -1006,7 +1006,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperties">Dict[Encryption<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#encryptionproperties">Encryption<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd>
 
@@ -1016,7 +1016,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaccountidentity">Dict[Batch<wbr>Account<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#batchaccountidentity">Batch<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd>
 
@@ -1026,7 +1026,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#key_vault_reference_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Dict[Key<wbr>Vault<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the Azure key vault associated with the Batch account.{{% /md %}}</dd>
 
@@ -1056,7 +1056,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The user-specified tags associated with the account.{{% /md %}}</dd>
 
@@ -1495,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dedicated_core_quota_per_vm_family_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>core_<wbr>quota_<wbr>per_<wbr>vm_<wbr>family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">List[Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">Sequence[Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
 
@@ -1555,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd>
 
@@ -2139,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Dict[Key<wbr>Vault<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd>
 
@@ -2258,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd>
 
@@ -2995,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd>
 
@@ -3005,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd>
 
@@ -3348,8 +3348,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="corequota_python">
-<a href="#corequota_python" style="color: inherit; text-decoration: inherit;">core<wbr>Quota</a>
+        <span id="core_quota_python">
+<a href="#core_quota_python" style="color: inherit; text-decoration: inherit;">core_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#endpoint_a_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>a</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointresponse">Dict[Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointresponse">Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoint A of an experiment{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#endpoint_b_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointresponse">Dict[Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointresponse">Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoint B of an experiment{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1422,7 +1422,7 @@ The following output properties are available:
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -1462,7 +1462,7 @@ The following output properties are available:
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
 
@@ -1512,7 +1512,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
 

@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#integration_service_environment_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentresponse">Dict[Integration<wbr>Service<wbr>Environment<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentresponse">Integration<wbr>Service<wbr>Environment<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment.{{% /md %}}</dd>
 
@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationaccountskuresponse">Dict[Integration<wbr>Account<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationaccountskuresponse">Integration<wbr>Account<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -584,7 +584,7 @@ The following output properties are available:
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 
@@ -703,7 +703,7 @@ The following output properties are available:
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
 
@@ -713,7 +713,7 @@ The following output properties are available:
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 
@@ -1070,7 +1070,7 @@ The following output properties are available:
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Dict[Flow<wbr>Endpoints<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd>
 
@@ -1090,7 +1090,7 @@ The following output properties are available:
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Dict[Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd>
 
@@ -1409,7 +1409,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentpropertiesresponse">Dict[Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentpropertiesresponse">Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment properties.{{% /md %}}</dd>
 
@@ -1419,7 +1419,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentskuresponse">Dict[Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentskuresponse">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd>
 
@@ -1429,7 +1429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1766,7 +1766,7 @@ The following output properties are available:
 <a href="#access_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Dict[Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd>
 
@@ -1776,7 +1776,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd>
 

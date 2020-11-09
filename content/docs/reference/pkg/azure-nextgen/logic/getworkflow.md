@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration.{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The definition.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Dict[Flow<wbr>Endpoints<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#integration_account_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Dict[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration account.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#integration_service_environment_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Dict[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Workflow<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Workflow<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The parameters.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -984,7 +984,7 @@ The following output properties are available:
 <a href="#allowed_caller_ip_addresses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressrangeresponse">List[Ip<wbr>Address<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">Sequence[Ip<wbr>Address<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd>
 
@@ -994,7 +994,7 @@ The following output properties are available:
 <a href="#open_authentication_policies_python" style="color: inherit; text-decoration: inherit;">open_<wbr>authentication_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Dict[Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd>
 
@@ -1163,7 +1163,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd>
 
@@ -1173,7 +1173,7 @@ The following output properties are available:
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd>
 
@@ -1183,7 +1183,7 @@ The following output properties are available:
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd>
 
@@ -1193,7 +1193,7 @@ The following output properties are available:
 <a href="#workflow_management_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd>
 
@@ -1302,7 +1302,7 @@ The following output properties are available:
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
 
@@ -1312,7 +1312,7 @@ The following output properties are available:
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 
@@ -1421,7 +1421,7 @@ The following output properties are available:
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
 
@@ -1431,7 +1431,7 @@ The following output properties are available:
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 
@@ -1506,8 +1506,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="addressrange_python">
-<a href="#addressrange_python" style="color: inherit; text-decoration: inherit;">address<wbr>Range</a>
+        <span id="address_range_python">
+<a href="#address_range_python" style="color: inherit; text-decoration: inherit;">address_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1668,7 +1668,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
 
@@ -1787,7 +1787,7 @@ The following output properties are available:
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">List[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">Sequence[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access policy claims.{{% /md %}}</dd>
 
@@ -2184,7 +2184,7 @@ The following output properties are available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Dict[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to plan.{{% /md %}}</dd>
 
@@ -2363,7 +2363,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2383,7 +2383,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value.{{% /md %}}</dd>
 

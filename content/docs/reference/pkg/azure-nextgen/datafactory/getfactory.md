@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#global_parameters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Global<wbr>Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Global<wbr>Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentityresponse">Dict[Factory<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#factoryidentityresponse">Factory<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#repo_configuration_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response] | Dict[Factory<wbr>VSTSConfiguration<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -910,8 +910,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="collaborationbranch_python">
-<a href="#collaborationbranch_python" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -920,8 +920,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -930,8 +930,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -950,8 +950,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastcommitid_python">
-<a href="#lastcommitid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1378,8 +1378,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="collaborationbranch_python">
-<a href="#collaborationbranch_python" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1398,8 +1398,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1408,8 +1408,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1418,8 +1418,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastcommitid_python">
-<a href="#lastcommitid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1551,7 +1551,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 

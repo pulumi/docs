@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bastionactivesessionresponse">List[Bastion<wbr>Active<wbr>Session<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bastionactivesessionresponse">Sequence[Bastion<wbr>Active<wbr>Session<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd>
 
@@ -668,8 +668,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sessiondurationinmins_python">
-<a href="#sessiondurationinmins_python" style="color: inherit; text-decoration: inherit;">session<wbr>Duration<wbr>In<wbr>Mins</a>
+        <span id="session_duration_in_mins_python">
+<a href="#session_duration_in_mins_python" style="color: inherit; text-decoration: inherit;">session_<wbr>duration_<wbr>in_<wbr>mins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -692,14 +692,14 @@ The following output properties are available:
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The time when the session started.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="targethostname_python">
-<a href="#targethostname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Host<wbr>Name</a>
+        <span id="target_host_name_python">
+<a href="#target_host_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>host_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -708,8 +708,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetipaddress_python">
-<a href="#targetipaddress_python" style="color: inherit; text-decoration: inherit;">target<wbr>Ip<wbr>Address</a>
+        <span id="target_ip_address_python">
+<a href="#target_ip_address_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

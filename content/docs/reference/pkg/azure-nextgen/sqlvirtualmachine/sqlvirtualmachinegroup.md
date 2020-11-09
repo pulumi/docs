@@ -113,15 +113,15 @@ sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.v20170301preview.Sql
     tags={
         "mytag": "myval",
     },
-    wsfc_domain_profile={
-        "clusterBootstrapAccount": "testrpadmin",
-        "clusterOperatorAccount": "testrp@testdomain.com",
-        "domainFqdn": "testdomain.com",
-        "ouPath": "OU=WSCluster,DC=testdomain,DC=com",
-        "sqlServiceAccount": "sqlservice@testdomain.com",
-        "storageAccountPrimaryKey": "<primary storage access key>",
-        "storageAccountUrl": "https://storgact.blob.core.windows.net/",
-    })
+    wsfc_domain_profile=azure_nextgen.sqlvirtualmachine.v20170301preview.WsfcDomainProfileArgs(
+        cluster_bootstrap_account="testrpadmin",
+        cluster_operator_account="testrp@testdomain.com",
+        domain_fqdn="testdomain.com",
+        ou_path="OU=WSCluster,DC=testdomain,DC=com",
+        sql_service_account="sqlservice@testdomain.com",
+        storage_account_primary_key="<primary storage access key>",
+        storage_account_url="https://storgact.blob.core.windows.net/",
+    ))
 
 ```
 
@@ -169,7 +169,7 @@ const sqlVirtualMachineGroup = new azure_nextgen.sqlvirtualmachine.v20170301prev
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[WsfcDomainProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_profile</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -628,7 +628,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -638,7 +638,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#wsfc_domain_profile_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomainprofile">Dict[Wsfc<wbr>Domain<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
 

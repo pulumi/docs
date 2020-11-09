@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#customer_secrets_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecretresponse">List[Customer<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customersecretresponse">Sequence[Customer<wbr>Secret<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
 
@@ -660,16 +660,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyvalue_python">
-<a href="#keyvalue_python" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
 </span> 
@@ -677,6 +667,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_value_python">
+<a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

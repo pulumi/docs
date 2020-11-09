@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response] | Dict[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response] | Dict[Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response] | Dict[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response] | Dict[DPMProtected<wbr>Item<wbr>Response] | Dict[Generic<wbr>Protected<wbr>Item<wbr>Response] | Dict[Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -790,16 +790,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcestatesynctime_python">
-<a href="#resourcestatesynctime_python" style="color: inherit; text-decoration: inherit;">resource<wbr>State<wbr>Sync<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
 </span> 
@@ -808,10 +798,20 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_sync_time_python">
+<a href="#resource_state_sync_time_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state_<wbr>sync_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
-        <span id="oldestrecoverypoint_python">
-<a href="#oldestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
+        <span id="oldest_recovery_point_python">
+<a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -820,8 +820,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policystate_python">
-<a href="#policystate_python" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
+        <span id="policy_state_python">
+<a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -830,8 +830,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointcount_python">
-<a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
+        <span id="recovery_point_count_python">
+<a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1479,8 +1479,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1489,8 +1489,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetname_python">
-<a href="#backupsetname_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1519,8 +1519,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeinutc_python">
-<a href="#deferreddeletetimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1529,8 +1529,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeremaining_python">
-<a href="#deferreddeletetimeremaining_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1539,11 +1539,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Dict[Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
 
@@ -1559,8 +1559,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdeferreddeletescheduleupcoming_python">
-<a href="#isdeferreddeletescheduleupcoming_python" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1569,8 +1569,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrehydrate_python">
-<a href="#isrehydrate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1579,8 +1579,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isscheduledfordeferreddelete_python">
-<a href="#isscheduledfordeferreddelete_python" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1589,33 +1589,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kpishealths_python">
-<a href="#kpishealths_python" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackupstatus_python">
-<a href="#lastbackupstatus_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastrecoverypoint_python">
-<a href="#lastrecoverypoint_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1629,6 +1619,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span> 
@@ -1636,16 +1636,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="protectionstatus_python">
-<a href="#protectionstatus_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1659,6 +1649,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span> 
@@ -1669,8 +1669,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1862,7 +1862,7 @@ The following output properties are available:
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
 
@@ -2007,8 +2007,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oldestrecoverypoint_python">
-<a href="#oldestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
+        <span id="oldest_recovery_point_python">
+<a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2017,8 +2017,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyinconsistent_python">
-<a href="#policyinconsistent_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Inconsistent</a>
+        <span id="policy_inconsistent_python">
+<a href="#policy_inconsistent_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>inconsistent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2027,8 +2027,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointcount_python">
-<a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
+        <span id="recovery_point_count_python">
+<a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2826,8 +2826,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2836,8 +2836,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetname_python">
-<a href="#backupsetname_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2866,8 +2866,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeinutc_python">
-<a href="#deferreddeletetimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2876,8 +2876,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeremaining_python">
-<a href="#deferreddeletetimeremaining_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2886,11 +2886,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Dict[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
 
@@ -2900,7 +2900,7 @@ The following output properties are available:
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Dict[Extended<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
 
@@ -2916,18 +2916,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthdetails_python">
-<a href="#healthdetails_python" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
+        <span id="health_details_python">
+<a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2936,8 +2936,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdeferreddeletescheduleupcoming_python">
-<a href="#isdeferreddeletescheduleupcoming_python" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2946,8 +2946,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrehydrate_python">
-<a href="#isrehydrate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2956,8 +2956,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isscheduledfordeferreddelete_python">
-<a href="#isscheduledfordeferreddelete_python" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2966,33 +2966,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kpishealths_python">
-<a href="#kpishealths_python" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackupstatus_python">
-<a href="#lastbackupstatus_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastrecoverypoint_python">
-<a href="#lastrecoverypoint_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3006,6 +2996,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span> 
@@ -3016,23 +3016,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemdataid_python">
-<a href="#protecteditemdataid_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
+        <span id="protected_item_data_id_python">
+<a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="protectionstatus_python">
-<a href="#protectionstatus_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3046,6 +3036,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span> 
@@ -3056,8 +3056,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineid_python">
-<a href="#virtualmachineid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3066,8 +3066,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3205,8 +3205,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oldestrecoverypoint_python">
-<a href="#oldestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
+        <span id="oldest_recovery_point_python">
+<a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3215,8 +3215,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policystate_python">
-<a href="#policystate_python" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
+        <span id="policy_state_python">
+<a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3225,8 +3225,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointcount_python">
-<a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
+        <span id="recovery_point_count_python">
+<a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3754,8 +3754,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3764,8 +3764,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetname_python">
-<a href="#backupsetname_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3794,8 +3794,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeinutc_python">
-<a href="#deferreddeletetimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3804,8 +3804,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeremaining_python">
-<a href="#deferreddeletetimeremaining_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3814,18 +3814,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Dict[Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdeferreddeletescheduleupcoming_python">
-<a href="#isdeferreddeletescheduleupcoming_python" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3834,8 +3834,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrehydrate_python">
-<a href="#isrehydrate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3844,8 +3844,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isscheduledfordeferreddelete_python">
-<a href="#isscheduledfordeferreddelete_python" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3854,8 +3854,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrecoverypoint_python">
-<a href="#lastrecoverypoint_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3874,8 +3874,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemdataid_python">
-<a href="#protecteditemdataid_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
+        <span id="protected_item_data_id_python">
+<a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3904,8 +3904,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4043,8 +4043,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oldestrecoverypoint_python">
-<a href="#oldestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
+        <span id="oldest_recovery_point_python">
+<a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4053,8 +4053,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policystate_python">
-<a href="#policystate_python" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
+        <span id="policy_state_python">
+<a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4063,8 +4063,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointcount_python">
-<a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
+        <span id="recovery_point_count_python">
+<a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4892,8 +4892,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4902,8 +4902,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetname_python">
-<a href="#backupsetname_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4932,8 +4932,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeinutc_python">
-<a href="#deferreddeletetimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4942,8 +4942,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeremaining_python">
-<a href="#deferreddeletetimeremaining_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4952,11 +4952,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Dict[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
 
@@ -4972,8 +4972,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdeferreddeletescheduleupcoming_python">
-<a href="#isdeferreddeletescheduleupcoming_python" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4982,8 +4982,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrehydrate_python">
-<a href="#isrehydrate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4992,8 +4992,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isscheduledfordeferreddelete_python">
-<a href="#isscheduledfordeferreddelete_python" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5002,43 +5002,33 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kpishealths_python">
-<a href="#kpishealths_python" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackuperrordetail_python">
-<a href="#lastbackuperrordetail_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
+        <span id="last_backup_error_detail_python">
+<a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Dict[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackupstatus_python">
-<a href="#lastbackupstatus_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastrecoverypoint_python">
-<a href="#lastrecoverypoint_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5049,6 +5039,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5082,8 +5082,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemdatasourceid_python">
-<a href="#protecteditemdatasourceid_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+        <span id="protected_item_data_source_id_python">
+<a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5092,23 +5092,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemhealthstatus_python">
-<a href="#protecteditemhealthstatus_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
+        <span id="protected_item_health_status_python">
+<a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="protectionstatus_python">
-<a href="#protectionstatus_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5119,6 +5109,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5142,8 +5142,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5611,8 +5611,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskstorageusedinbytes_python">
-<a href="#diskstorageusedinbytes_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
+        <span id="disk_storage_used_in_bytes_python">
+<a href="#disk_storage_used_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>storage_<wbr>used_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5621,8 +5621,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iscollocated_python">
-<a href="#iscollocated_python" style="color: inherit; text-decoration: inherit;">is<wbr>Collocated</a>
+        <span id="is_collocated_python">
+<a href="#is_collocated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>collocated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5631,8 +5631,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ispresentoncloud_python">
-<a href="#ispresentoncloud_python" style="color: inherit; text-decoration: inherit;">is<wbr>Present<wbr>On<wbr>Cloud</a>
+        <span id="is_present_on_cloud_python">
+<a href="#is_present_on_cloud_python" style="color: inherit; text-decoration: inherit;">is_<wbr>present_<wbr>on_<wbr>cloud</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5641,8 +5641,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackupstatus_python">
-<a href="#lastbackupstatus_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5651,8 +5651,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrefreshedat_python">
-<a href="#lastrefreshedat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
+        <span id="last_refreshed_at_python">
+<a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5661,8 +5661,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oldestrecoverypoint_python">
-<a href="#oldestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
+        <span id="oldest_recovery_point_python">
+<a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5671,8 +5671,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onpremiselatestrecoverypoint_python">
-<a href="#onpremiselatestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
+        <span id="on_premise_latest_recovery_point_python">
+<a href="#on_premise_latest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>latest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5681,8 +5681,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onpremiseoldestrecoverypoint_python">
-<a href="#onpremiseoldestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
+        <span id="on_premise_oldest_recovery_point_python">
+<a href="#on_premise_oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>oldest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5691,8 +5691,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onpremiserecoverypointcount_python">
-<a href="#onpremiserecoverypointcount_python" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
+        <span id="on_premise_recovery_point_count_python">
+<a href="#on_premise_recovery_point_count_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>recovery_<wbr>point_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5701,11 +5701,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protectableobjectloadpath_python">
-<a href="#protectableobjectloadpath_python" style="color: inherit; text-decoration: inherit;">protectable<wbr>Object<wbr>Load<wbr>Path</a>
+        <span id="protectable_object_load_path_python">
+<a href="#protectable_object_load_path_python" style="color: inherit; text-decoration: inherit;">protectable_<wbr>object_<wbr>load_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
 
@@ -5721,8 +5721,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protectiongroupname_python">
-<a href="#protectiongroupname_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Group<wbr>Name</a>
+        <span id="protection_group_name_python">
+<a href="#protection_group_name_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5731,8 +5731,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointcount_python">
-<a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
+        <span id="recovery_point_count_python">
+<a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5741,8 +5741,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totaldiskstoragesizeinbytes_python">
-<a href="#totaldiskstoragesizeinbytes_python" style="color: inherit; text-decoration: inherit;">total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
+        <span id="total_disk_storage_size_in_bytes_python">
+<a href="#total_disk_storage_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>disk_<wbr>storage_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6300,8 +6300,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupenginename_python">
-<a href="#backupenginename_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Engine<wbr>Name</a>
+        <span id="backup_engine_name_python">
+<a href="#backup_engine_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>engine_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6310,8 +6310,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6320,8 +6320,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetname_python">
-<a href="#backupsetname_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6350,8 +6350,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeinutc_python">
-<a href="#deferreddeletetimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6360,8 +6360,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeremaining_python">
-<a href="#deferreddeletetimeremaining_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6370,11 +6370,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">Dict[DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
 
@@ -6390,8 +6390,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdeferreddeletescheduleupcoming_python">
-<a href="#isdeferreddeletescheduleupcoming_python" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6400,8 +6400,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrehydrate_python">
-<a href="#isrehydrate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6410,8 +6410,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isscheduledfordeferreddelete_python">
-<a href="#isscheduledfordeferreddelete_python" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6420,8 +6420,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrecoverypoint_python">
-<a href="#lastrecoverypoint_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6460,8 +6460,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6569,18 +6569,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disklunlist_python">
-<a href="#disklunlist_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Lun<wbr>List</a>
+        <span id="disk_lun_list_python">
+<a href="#disk_lun_list_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>lun_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isinclusionlist_python">
-<a href="#isinclusionlist_python" style="color: inherit; text-decoration: inherit;">is<wbr>Inclusion<wbr>List</a>
+        <span id="is_inclusion_list_python">
+<a href="#is_inclusion_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>inclusion_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6742,7 +6742,7 @@ The following output properties are available:
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd>
 
@@ -6817,11 +6817,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskexclusionproperties_python">
-<a href="#diskexclusionproperties_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Properties</a>
+        <span id="disk_exclusion_properties_python">
+<a href="#disk_exclusion_properties_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>exclusion_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Dict[Disk<wbr>Exclusion<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
 
@@ -7436,8 +7436,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7446,8 +7446,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetname_python">
-<a href="#backupsetname_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7476,8 +7476,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeinutc_python">
-<a href="#deferreddeletetimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7486,8 +7486,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeremaining_python">
-<a href="#deferreddeletetimeremaining_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7516,8 +7516,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdeferreddeletescheduleupcoming_python">
-<a href="#isdeferreddeletescheduleupcoming_python" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7526,8 +7526,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrehydrate_python">
-<a href="#isrehydrate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7536,8 +7536,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isscheduledfordeferreddelete_python">
-<a href="#isscheduledfordeferreddelete_python" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7546,23 +7546,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrecoverypoint_python">
-<a href="#lastrecoverypoint_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="policystate_python">
-<a href="#policystate_python" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7576,8 +7566,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemid_python">
-<a href="#protecteditemid_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
+        <span id="policy_state_python">
+<a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_id_python">
+<a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -7596,11 +7596,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceassociations_python">
-<a href="#sourceassociations_python" style="color: inherit; text-decoration: inherit;">source<wbr>Associations</a>
+        <span id="source_associations_python">
+<a href="#source_associations_python" style="color: inherit; text-decoration: inherit;">source_<wbr>associations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
 
@@ -7616,8 +7616,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7725,18 +7725,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcehealthdetails_python">
-<a href="#resourcehealthdetails_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Details</a>
+        <span id="resource_health_details_python">
+<a href="#resource_health_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcehealthdetailsresponse">List[Resource<wbr>Health<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcehealthdetailsresponse">Sequence[Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcehealthstatus_python">
-<a href="#resourcehealthstatus_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Status</a>
+        <span id="resource_health_status_python">
+<a href="#resource_health_status_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7874,8 +7874,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrefreshedat_python">
-<a href="#lastrefreshedat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
+        <span id="last_refreshed_at_python">
+<a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7884,8 +7884,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oldestrecoverypoint_python">
-<a href="#oldestrecoverypoint_python" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
+        <span id="oldest_recovery_point_python">
+<a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7894,8 +7894,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointcount_python">
-<a href="#recoverypointcount_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
+        <span id="recovery_point_count_python">
+<a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -8543,8 +8543,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8553,8 +8553,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupsetname_python">
-<a href="#backupsetname_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8593,8 +8593,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletesynctimeinutc_python">
-<a href="#deferreddeletesynctimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_sync_time_in_utc_python">
+<a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -8603,8 +8603,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeinutc_python">
-<a href="#deferreddeletetimeinutc_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8613,8 +8613,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deferreddeletetimeremaining_python">
-<a href="#deferreddeletetimeremaining_python" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8623,11 +8623,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Dict[Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
 
@@ -8643,8 +8643,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdeferreddeletescheduleupcoming_python">
-<a href="#isdeferreddeletescheduleupcoming_python" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8653,8 +8653,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrehydrate_python">
-<a href="#isrehydrate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8663,8 +8663,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isscheduledfordeferreddelete_python">
-<a href="#isscheduledfordeferreddelete_python" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8673,23 +8673,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackupstatus_python">
-<a href="#lastbackupstatus_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastrecoverypoint_python">
-<a href="#lastrecoverypoint_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8700,6 +8690,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8733,8 +8733,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8926,7 +8926,7 @@ The following output properties are available:
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
 

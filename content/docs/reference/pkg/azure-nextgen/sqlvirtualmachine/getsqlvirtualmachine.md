@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#auto_backup_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettingsresponse">Dict[Auto<wbr>Backup<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autobackupsettingsresponse">Auto<wbr>Backup<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#auto_patching_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettingsresponse">Dict[Auto<wbr>Patching<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autopatchingsettingsresponse">Auto<wbr>Patching<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Dict[Resource<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#key_vault_credential_settings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Dict[Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#server_configurations_management_settings_python" style="color: inherit; text-decoration: inherit;">server_<wbr>configurations_<wbr>management_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Dict[Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#storage_configuration_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettingsresponse">Dict[Storage<wbr>Configuration<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettingsresponse">Storage<wbr>Configuration<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#wsfc_domain_credentials_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Dict[Wsfc<wbr>Domain<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
 
@@ -2269,7 +2269,7 @@ The following output properties are available:
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
 
@@ -2438,7 +2438,7 @@ The following output properties are available:
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Dict[Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
 
@@ -2448,7 +2448,7 @@ The following output properties are available:
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Dict[Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
 
@@ -2458,7 +2458,7 @@ The following output properties are available:
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Dict[Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
 
@@ -2468,7 +2468,7 @@ The following output properties are available:
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Dict[Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
 
@@ -3114,7 +3114,7 @@ The following output properties are available:
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
 
@@ -3124,7 +3124,7 @@ The following output properties are available:
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
 
@@ -3134,7 +3134,7 @@ The following output properties are available:
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
 

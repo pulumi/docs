@@ -350,7 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -547,7 +547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -744,7 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#immutability_policy_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Dict[Immutability<wbr>Policy<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#legal_hold_python" style="color: inherit; text-decoration: inherit;">legal_<wbr>hold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legalholdpropertiesresponse">Dict[Legal<wbr>Hold<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#legalholdpropertiesresponse">Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
 
@@ -941,7 +941,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd>
 
@@ -1214,7 +1214,7 @@ The following output properties are available:
 <a href="#update_history_python" style="color: inherit; text-decoration: inherit;">update_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">List[Update<wbr>History<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">Sequence[Update<wbr>History<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
 
@@ -1353,7 +1353,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">List[Tag<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">Sequence[Tag<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
 
@@ -1548,8 +1548,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="objectidentifier_python">
-<a href="#objectidentifier_python" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+        <span id="object_identifier_python">
+<a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1827,8 +1827,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="objectidentifier_python">
-<a href="#objectidentifier_python" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+        <span id="object_identifier_python">
+<a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

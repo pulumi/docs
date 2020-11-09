@@ -310,7 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -447,7 +447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -584,7 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#operation_info_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutoperationinforesponse">Dict[Rollout<wbr>Operation<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rolloutoperationinforesponse">Rollout<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponse">List[Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceresponse">Sequence[Service<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#step_groups_python" style="color: inherit; text-decoration: inherit;">step_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepgroupresponse">List[Step<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#stepgroupresponse">Sequence[Step<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
 
@@ -721,7 +721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -944,7 +944,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">List[Cloud<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}More detailed error information.{{% /md %}}</dd>
 
@@ -1063,7 +1063,7 @@ The following output properties are available:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
 
@@ -1188,8 +1188,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="timestamp_python">
-<a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">time<wbr>Stamp</a>
+        <span id="time_stamp_python">
+<a href="#time_stamp_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1759,14 +1759,14 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Dict[Cloud<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="retryattempt_python">
-<a href="#retryattempt_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Attempt</a>
+        <span id="retry_attempt_python">
+<a href="#retry_attempt_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>attempt</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1775,8 +1775,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="skipsucceededonretry_python">
-<a href="#skipsucceededonretry_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Succeeded<wbr>On<wbr>Retry</a>
+        <span id="skip_succeeded_on_retry_python">
+<a href="#skip_succeeded_on_retry_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>succeeded_<wbr>on_<wbr>retry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2018,7 +2018,7 @@ The following output properties are available:
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messageresponse">List[Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#messageresponse">Sequence[Message<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd>
 
@@ -2034,21 +2034,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="operationinfo_python">
-<a href="#operationinfo_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Info</a>
+        <span id="operation_info_python">
+<a href="#operation_info_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepoperationinforesponse">Dict[Step<wbr>Operation<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="resourceoperations_python">
-<a href="#resourceoperations_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Operations</a>
+        <span id="resource_operations_python">
+<a href="#resource_operations_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>operations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoperationresponse">List[Resource<wbr>Operation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceoperationresponse">Sequence[Resource<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd>
 
@@ -2064,8 +2064,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stepgroup_python">
-<a href="#stepgroup_python" style="color: inherit; text-decoration: inherit;">step<wbr>Group</a>
+        <span id="step_group_python">
+<a href="#step_group_python" style="color: inherit; text-decoration: inherit;">step_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2263,11 +2263,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceunits_python">
-<a href="#serviceunits_python" style="color: inherit; text-decoration: inherit;">service<wbr>Units</a>
+        <span id="service_units_python">
+<a href="#service_units_python" style="color: inherit; text-decoration: inherit;">service_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitresponse">List[Service<wbr>Unit<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceunitresponse">Sequence[Service<wbr>Unit<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd>
 
@@ -2685,7 +2685,7 @@ The following output properties are available:
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifactsresponse">Dict[Service<wbr>Unit<wbr>Artifacts<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
 
@@ -2705,7 +2705,7 @@ The following output properties are available:
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutstepresponse">List[Rollout<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rolloutstepresponse">Sequence[Rollout<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd>
 
@@ -2900,8 +2900,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymenttargetid_python">
-<a href="#deploymenttargetid_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Target<wbr>Id</a>
+        <span id="deployment_target_id_python">
+<a href="#deployment_target_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>target_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2920,31 +2920,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependsonstepgroups_python">
-<a href="#dependsonstepgroups_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Step<wbr>Groups</a>
+        <span id="depends_on_step_groups_python">
+<a href="#depends_on_step_groups_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>step_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="postdeploymentsteps_python">
-<a href="#postdeploymentsteps_python" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
+        <span id="post_deployment_steps_python">
+<a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="predeploymentsteps_python">
-<a href="#predeploymentsteps_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
+        <span id="pre_deployment_steps_python">
+<a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
 
@@ -3223,7 +3223,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Dict[Cloud<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd>
 

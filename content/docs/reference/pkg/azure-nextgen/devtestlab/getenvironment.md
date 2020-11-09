@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#deployment_properties_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentdeploymentpropertiesresponse">Dict[Environment<wbr>Deployment<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentdeploymentpropertiesresponse">Environment<wbr>Deployment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties of the environment.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterpropertiesresponse">List[Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armtemplateparameterpropertiesresponse">Sequence[Arm<wbr>Template<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the Azure Resource Manager template.{{% /md %}}</dd>
 

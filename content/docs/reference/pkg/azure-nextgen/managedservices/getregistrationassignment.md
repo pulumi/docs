@@ -339,7 +339,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponse">Dict[Registration<wbr>Assignment<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponse">Registration<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration assignment.{{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ The following output properties are available:
 <a href="#registration_definition_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Dict[Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Registration definition inside registration assignment.{{% /md %}}</dd>
 
@@ -1121,7 +1121,7 @@ The following output properties are available:
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List[Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd>
 
@@ -1420,7 +1420,7 @@ The following output properties are available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Dict[Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#planresponse">Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd>
 
@@ -1430,7 +1430,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Dict[Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd>
 

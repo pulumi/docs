@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourcepropertiesresponse">Dict[App<wbr>Resource<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appresourcepropertiesresponse">App<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitypropertiesresponse">Dict[Managed<wbr>Identity<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedidentitypropertiesresponse">Managed<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The following output properties are available:
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Dict[Persistent<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
 
@@ -874,7 +874,7 @@ The following output properties are available:
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Dict[Temporary<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
 

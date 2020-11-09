@@ -89,13 +89,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 iot_dps_resource = azure_nextgen.devices.latest.IotDpsResource("iotDpsResource",
     location="East US",
-    properties={},
+    properties=azure_nextgen.devices.latest.IotDpsPropertiesDescriptionArgs(),
     provisioning_service_name="myFirstProvisioningService",
     resource_group_name="myResourceGroup",
-    sku={
-        "capacity": 1,
-        "name": "S1",
-    },
+    sku=azure_nextgen.devices.latest.IotDpsSkuInfoArgs(
+        capacity=1,
+        name="S1",
+    ),
     tags={})
 
 ```
@@ -136,7 +136,7 @@ const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsRe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotDpsResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[IotDpsPropertiesDescription]]</span> = None<span class="p">, </span><span class="nx">provisioning_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[IotDpsSkuInfo]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotDpsResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[IotDpsPropertiesDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IotDpsSkuInfoArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -555,7 +555,7 @@ The IotDpsResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdpspropertiesdescription">Dict[Iot<wbr>Dps<wbr>Properties<wbr>Description]</a></span>
+        <span class="property-type"><a href="#iotdpspropertiesdescription">Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd>
 
@@ -585,7 +585,7 @@ The IotDpsResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdpsskuinfo">Dict[Iot<wbr>Dps<wbr>Sku<wbr>Info]</a></span>
+        <span class="property-type"><a href="#iotdpsskuinfo">Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd>
 
@@ -605,7 +605,7 @@ The IotDpsResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1072,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">List[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd>
 
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescription">List[Iot<wbr>Hub<wbr>Definition<wbr>Description]</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescription">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd>
 
@@ -1092,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterrule">List[Ip<wbr>Filter<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#ipfilterrule">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
 
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List[Private<wbr>Endpoint<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
 
@@ -1551,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">List[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd>
 
@@ -1561,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">List[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd>
 
@@ -1571,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">List[Ip<wbr>Filter<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
 
@@ -1581,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
 
@@ -2074,8 +2074,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allocationweight_python">
-<a href="#allocationweight_python" style="color: inherit; text-decoration: inherit;">allocation<wbr>Weight</a>
+        <span id="allocation_weight_python">
+<a href="#allocation_weight_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2084,8 +2084,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applyallocationpolicy_python">
-<a href="#applyallocationpolicy_python" style="color: inherit; text-decoration: inherit;">apply<wbr>Allocation<wbr>Policy</a>
+        <span id="apply_allocation_policy_python">
+<a href="#apply_allocation_policy_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>allocation_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2313,8 +2313,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allocationweight_python">
-<a href="#allocationweight_python" style="color: inherit; text-decoration: inherit;">allocation<wbr>Weight</a>
+        <span id="allocation_weight_python">
+<a href="#allocation_weight_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2323,8 +2323,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applyallocationpolicy_python">
-<a href="#applyallocationpolicy_python" style="color: inherit; text-decoration: inherit;">apply<wbr>Allocation<wbr>Policy</a>
+        <span id="apply_allocation_policy_python">
+<a href="#apply_allocation_policy_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>allocation_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2724,7 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Dict[Private<wbr>Endpoint<wbr>Connection<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
 
@@ -2803,7 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
 
@@ -2912,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
 
@@ -2922,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
 
@@ -3111,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Dict[Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
 

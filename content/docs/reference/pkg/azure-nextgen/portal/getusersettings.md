@@ -189,7 +189,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertiesresponse">Dict[User<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertiesresponse">User<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
 
@@ -702,7 +702,7 @@ The following output properties are available:
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Dict[Storage<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
 
@@ -712,7 +712,7 @@ The following output properties are available:
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Dict[Terminal<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
 

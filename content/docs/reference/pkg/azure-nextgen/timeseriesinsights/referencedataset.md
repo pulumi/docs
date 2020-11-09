@@ -102,14 +102,14 @@ import pulumi_azure_nextgen as azure_nextgen
 reference_data_set = azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet",
     environment_name="env1",
     key_properties=[
-        {
-            "name": "DeviceId1",
-            "type": "String",
-        },
-        {
-            "name": "DeviceFloor",
-            "type": "Double",
-        },
+        azure_nextgen.timeseriesinsights.latest.ReferenceDataSetKeyPropertyArgs(
+            name="DeviceId1",
+            type="String",
+        ),
+        azure_nextgen.timeseriesinsights.latest.ReferenceDataSetKeyPropertyArgs(
+            name="DeviceFloor",
+            type="Double",
+        ),
     ],
     location="West US",
     reference_data_set_name="rds1",
@@ -158,7 +158,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[List[ReferenceDataSetKeyProperty]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_data_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_string_comparison_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReferenceDataSetKeyPropertyArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_data_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -577,7 +577,7 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencedatasetkeyproperty">List[Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property]</a></span>
+        <span class="property-type"><a href="#referencedatasetkeyproperty">Sequence[Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key properties for the reference data set.{{% /md %}}</dd>
 
@@ -627,7 +627,7 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd>
 

@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#clfs_python" style="color: inherit; text-decoration: inherit;">clfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clfstargetresponse">Dict[Clfs<wbr>Target<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clfstargetresponse">Clfs<wbr>Target<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is clfs.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#junctions_python" style="color: inherit; text-decoration: inherit;">junctions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacejunctionresponse">List[Namespace<wbr>Junction<wbr>Response]</a></span>
+        <span class="property-type"><a href="#namespacejunctionresponse">Sequence[Namespace<wbr>Junction<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Cache namespace junctions to target for namespace associations.{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#nfs3_python" style="color: inherit; text-decoration: inherit;">nfs3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfs3targetresponse">Dict[Nfs3Target<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nfs3targetresponse">Nfs3Target<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is nfs3.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unknowntargetresponse">Dict[Unknown<wbr>Target<wbr>Response]</a></span>
+        <span class="property-type"><a href="#unknowntargetresponse">Unknown<wbr>Target<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is unknown.{{% /md %}}</dd>
 
@@ -769,8 +769,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="namespacepath_python">
-<a href="#namespacepath_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
+        <span id="namespace_path_python">
+<a href="#namespace_path_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -779,8 +779,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nfsexport_python">
-<a href="#nfsexport_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
+        <span id="nfs_export_python">
+<a href="#nfs_export_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -789,8 +789,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetpath_python">
-<a href="#targetpath_python" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
+        <span id="target_path_python">
+<a href="#target_path_python" style="color: inherit; text-decoration: inherit;">target_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -991,7 +991,7 @@ The following output properties are available:
 <a href="#unknown_map_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd>
 

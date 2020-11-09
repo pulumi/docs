@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#suppression_alerts_scope_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>alerts_<wbr>scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionalertsscoperesponse">Dict[Suppression<wbr>Alerts<wbr>Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#suppressionalertsscoperesponse">Suppression<wbr>Alerts<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
 
@@ -673,7 +673,7 @@ The following output properties are available:
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelementresponse">List[Scope<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scopeelementresponse">Sequence[Scope<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
 

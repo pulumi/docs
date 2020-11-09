@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>MWSObject<wbr>Dataset<wbr>Response] | Dict[Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Amazon<wbr>S3Dataset<wbr>Response] | Dict[Avro<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSDataset<wbr>Response] | Dict[Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Azure<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Binary<wbr>Dataset<wbr>Response] | Dict[Cassandra<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Response] | Dict[Concur<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Response] | Dict[Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Response] | Dict[Couchbase<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Custom<wbr>Dataset<wbr>Response] | Dict[Db2Table<wbr>Dataset<wbr>Response] | Dict[Delimited<wbr>Text<wbr>Dataset<wbr>Response] | Dict[Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Response] | Dict[Drill<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Dynamics<wbr>AXResource<wbr>Dataset<wbr>Response] | Dict[Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Response] | Dict[Dynamics<wbr>Entity<wbr>Dataset<wbr>Response] | Dict[Eloqua<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Excel<wbr>Dataset<wbr>Response] | Dict[File<wbr>Share<wbr>Dataset<wbr>Response] | Dict[Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Greenplum<wbr>Table<wbr>Dataset<wbr>Response] | Dict[HBase<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Hive<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Http<wbr>Dataset<wbr>Response] | Dict[Hubspot<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Impala<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Informix<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Jira<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Json<wbr>Dataset<wbr>Response] | Dict[Magento<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Maria<wbr>DBTable<wbr>Dataset<wbr>Response] | Dict[Marketo<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Response] | Dict[Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Response] | Dict[Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Response] | Dict[My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Netezza<wbr>Table<wbr>Dataset<wbr>Response] | Dict[OData<wbr>Resource<wbr>Dataset<wbr>Response] | Dict[Odbc<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Office365Dataset<wbr>Response] | Dict[Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Oracle<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Orc<wbr>Dataset<wbr>Response] | Dict[Parquet<wbr>Dataset<wbr>Response] | Dict[Paypal<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Phoenix<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Presto<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Relational<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Responsys<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Rest<wbr>Resource<wbr>Dataset<wbr>Response] | Dict[Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Salesforce<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Response] | Dict[Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Response] | Dict[Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Response] | Dict[Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Response] | Dict[Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Response] | Dict[Shopify<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Snowflake<wbr>Dataset<wbr>Response] | Dict[Spark<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Square<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Sybase<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Teradata<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Vertica<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Web<wbr>Table<wbr>Dataset<wbr>Response] | Dict[Xero<wbr>Object<wbr>Dataset<wbr>Response] | Dict[Xml<wbr>Dataset<wbr>Response] | Dict[Zoho<wbr>Object<wbr>Dataset<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Dataset properties.{{% /md %}}</dd>
 
@@ -684,7 +684,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -714,7 +714,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -724,7 +724,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -744,7 +744,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -754,7 +754,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1073,7 +1073,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -1083,7 +1083,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -1103,7 +1103,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -1113,7 +1113,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -1123,7 +1123,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -1133,7 +1133,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -1143,7 +1143,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Redshift table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -1648,11 +1648,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1662,7 +1662,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -1672,7 +1672,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -1682,7 +1682,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd>
 
@@ -1702,7 +1702,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -1712,7 +1712,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Format<wbr>Response] | Dict[Json<wbr>Format<wbr>Response] | Dict[Orc<wbr>Format<wbr>Response] | Dict[Parquet<wbr>Format<wbr>Response] | Dict[Text<wbr>Format<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Format<wbr>Response<wbr>Args, Json<wbr>Format<wbr>Response<wbr>Args, Orc<wbr>Format<wbr>Response<wbr>Args, Parquet<wbr>Format<wbr>Response<wbr>Args, Text<wbr>Format<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd>
 
@@ -1722,27 +1722,27 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The key of the Amazon S3 object. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifieddatetimeend_python">
-<a href="#modifieddatetimeend_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>End</a>
+        <span id="modified_datetime_end_python">
+<a href="#modified_datetime_end_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The end of S3 object's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifieddatetimestart_python">
-<a href="#modifieddatetimestart_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>Start</a>
+        <span id="modified_datetime_start_python">
+<a href="#modified_datetime_start_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The start of S3 object's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1752,7 +1752,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -1762,7 +1762,7 @@ The following output properties are available:
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The prefix filter for the S3 object name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1772,7 +1772,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -1782,7 +1782,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -1792,7 +1792,7 @@ The following output properties are available:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The version for the S3 object. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1957,11 +1957,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the bucketName of amazon S3. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -1971,7 +1971,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -1981,7 +1981,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -1991,7 +1991,7 @@ The following output properties are available:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the version of amazon S3. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2340,7 +2340,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -2350,7 +2350,7 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd>
 
@@ -2360,14 +2360,14 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="avrocompressioncodec_python">
-<a href="#avrocompressioncodec_python" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Codec</a>
+        <span id="avro_compression_codec_python">
+<a href="#avro_compression_codec_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>codec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2376,8 +2376,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="avrocompressionlevel_python">
-<a href="#avrocompressionlevel_python" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Level</a>
+        <span id="avro_compression_level_python">
+<a href="#avro_compression_level_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2400,7 +2400,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -2410,7 +2410,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -2420,7 +2420,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -2430,7 +2430,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -2539,7 +2539,7 @@ The following output properties are available:
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Deserializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -2549,7 +2549,7 @@ The following output properties are available:
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Serializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3018,7 +3018,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -3028,7 +3028,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -3038,7 +3038,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd>
 
@@ -3058,7 +3058,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3068,7 +3068,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -3078,7 +3078,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The path of the Azure Blob storage. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3088,27 +3088,27 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Format<wbr>Response] | Dict[Json<wbr>Format<wbr>Response] | Dict[Orc<wbr>Format<wbr>Response] | Dict[Parquet<wbr>Format<wbr>Response] | Dict[Text<wbr>Format<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Format<wbr>Response<wbr>Args, Json<wbr>Format<wbr>Response<wbr>Args, Orc<wbr>Format<wbr>Response<wbr>Args, Parquet<wbr>Format<wbr>Response<wbr>Args, Text<wbr>Format<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The format of the Azure Blob storage.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifieddatetimeend_python">
-<a href="#modifieddatetimeend_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>End</a>
+        <span id="modified_datetime_end_python">
+<a href="#modified_datetime_end_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The end of Azure Blob's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifieddatetimestart_python">
-<a href="#modifieddatetimestart_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>Start</a>
+        <span id="modified_datetime_start_python">
+<a href="#modified_datetime_start_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The start of Azure Blob's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -3128,7 +3128,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -3138,17 +3138,17 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablerootlocation_python">
-<a href="#tablerootlocation_python" style="color: inherit; text-decoration: inherit;">table<wbr>Root<wbr>Location</a>
+        <span id="table_root_location_python">
+<a href="#table_root_location_python" style="color: inherit; text-decoration: inherit;">table_<wbr>root_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The root of blob path. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3527,7 +3527,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -3537,7 +3537,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -3547,7 +3547,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd>
 
@@ -3567,7 +3567,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Data Lake Storage Gen2. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3577,7 +3577,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -3587,7 +3587,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The path of the Azure Data Lake Storage Gen2 storage. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3597,7 +3597,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Format<wbr>Response] | Dict[Json<wbr>Format<wbr>Response] | Dict[Orc<wbr>Format<wbr>Response] | Dict[Parquet<wbr>Format<wbr>Response] | Dict[Text<wbr>Format<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Format<wbr>Response<wbr>Args, Json<wbr>Format<wbr>Response<wbr>Args, Orc<wbr>Format<wbr>Response<wbr>Args, Parquet<wbr>Format<wbr>Response<wbr>Args, Text<wbr>Format<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The format of the Azure Data Lake Storage Gen2 storage.{{% /md %}}</dd>
 
@@ -3607,7 +3607,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -3617,7 +3617,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -3627,7 +3627,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -3766,7 +3766,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3776,7 +3776,7 @@ The following output properties are available:
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3786,7 +3786,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -3925,7 +3925,7 @@ The following output properties are available:
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the container of azure blob. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3935,7 +3935,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -3945,7 +3945,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -4234,7 +4234,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -4244,7 +4244,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -4264,7 +4264,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -4274,7 +4274,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -4284,7 +4284,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -4294,7 +4294,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -4304,7 +4304,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Azure Data Explorer database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4683,7 +4683,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -4693,7 +4693,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -4703,7 +4703,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd>
 
@@ -4723,7 +4723,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the file in the Azure Data Lake Store. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4733,7 +4733,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -4743,7 +4743,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Path to the folder in the Azure Data Lake Store. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4753,7 +4753,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Format<wbr>Response] | Dict[Json<wbr>Format<wbr>Response] | Dict[Orc<wbr>Format<wbr>Response] | Dict[Parquet<wbr>Format<wbr>Response] | Dict[Text<wbr>Format<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Format<wbr>Response<wbr>Args, Json<wbr>Format<wbr>Response<wbr>Args, Orc<wbr>Format<wbr>Response<wbr>Args, Parquet<wbr>Format<wbr>Response<wbr>Args, Text<wbr>Format<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The format of the Data Lake Store.{{% /md %}}</dd>
 
@@ -4763,7 +4763,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -4773,7 +4773,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -4783,7 +4783,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -4892,7 +4892,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -4902,7 +4902,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -5221,7 +5221,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -5231,7 +5231,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -5241,7 +5241,7 @@ The following output properties are available:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The database name of delta table. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5261,7 +5261,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -5271,7 +5271,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -5281,7 +5281,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -5291,7 +5291,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -5301,7 +5301,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of delta table. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5410,7 +5410,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -5420,7 +5420,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -5709,7 +5709,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -5719,7 +5719,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -5739,7 +5739,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -5749,7 +5749,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -5759,7 +5759,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -5769,7 +5769,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -5779,7 +5779,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6098,7 +6098,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -6108,7 +6108,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -6128,7 +6128,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -6138,7 +6138,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -6148,7 +6148,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -6158,7 +6158,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -6168,7 +6168,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of Azure MySQL database table. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6178,7 +6178,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Azure MySQL database table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6497,7 +6497,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -6507,7 +6507,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -6527,7 +6527,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -6537,7 +6537,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -6547,7 +6547,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -6557,7 +6557,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -6567,7 +6567,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Azure PostgreSQL database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6577,7 +6577,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Azure PostgreSQL database which includes both schema and table. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6862,11 +6862,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="indexname_python">
-<a href="#indexname_python" style="color: inherit; text-decoration: inherit;">index<wbr>Name</a>
+        <span id="index_name_python">
+<a href="#index_name_python" style="color: inherit; text-decoration: inherit;">index_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Search Index. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -6876,7 +6876,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -6886,7 +6886,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -6906,7 +6906,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -6916,7 +6916,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -6926,7 +6926,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -6936,7 +6936,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -7255,7 +7255,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -7265,7 +7265,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -7285,7 +7285,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -7295,7 +7295,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -7305,7 +7305,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -7315,7 +7315,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -7325,7 +7325,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Azure SQL Data Warehouse. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -7335,7 +7335,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -7654,7 +7654,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -7664,7 +7664,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -7684,7 +7684,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -7694,7 +7694,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -7704,7 +7704,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -7714,7 +7714,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -7724,7 +7724,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Azure SQL Managed Instance dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -7734,7 +7734,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -8053,7 +8053,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -8063,7 +8063,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -8083,7 +8083,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -8093,7 +8093,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -8103,7 +8103,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -8113,7 +8113,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -8123,7 +8123,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Azure SQL database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8133,7 +8133,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -8422,7 +8422,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -8432,7 +8432,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Azure Table storage. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -8442,7 +8442,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -8462,7 +8462,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -8472,7 +8472,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -8482,7 +8482,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -8492,7 +8492,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -8811,7 +8811,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -8821,7 +8821,7 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd>
 
@@ -8831,7 +8831,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -8841,7 +8841,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd>
 
@@ -8861,7 +8861,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -8871,7 +8871,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -8881,7 +8881,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -8891,7 +8891,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -9210,7 +9210,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -9220,7 +9220,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -9240,7 +9240,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -9250,7 +9250,7 @@ The following output properties are available:
 <a href="#keyspace_python" style="color: inherit; text-decoration: inherit;">keyspace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The keyspace of the Cassandra database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -9260,7 +9260,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -9270,7 +9270,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -9280,7 +9280,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -9290,7 +9290,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Cassandra database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -9579,7 +9579,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -9589,7 +9589,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -9609,7 +9609,7 @@ The following output properties are available:
 <a href="#entity_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The logical name of the entity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -9619,7 +9619,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -9629,7 +9629,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -9639,7 +9639,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -9649,7 +9649,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -9938,7 +9938,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -9948,7 +9948,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -9968,7 +9968,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -9978,7 +9978,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -9988,7 +9988,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -9998,7 +9998,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -10008,7 +10008,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -10297,7 +10297,7 @@ The following output properties are available:
 <a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The collection name of the CosmosDB (MongoDB API) database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -10307,7 +10307,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -10317,7 +10317,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -10337,7 +10337,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -10347,7 +10347,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -10357,7 +10357,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -10367,7 +10367,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -10656,7 +10656,7 @@ The following output properties are available:
 <a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}CosmosDB (SQL API) collection name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -10666,7 +10666,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -10676,7 +10676,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -10696,7 +10696,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -10706,7 +10706,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -10716,7 +10716,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -10726,7 +10726,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -11015,7 +11015,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -11025,7 +11025,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -11045,7 +11045,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -11055,7 +11055,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -11065,7 +11065,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -11075,7 +11075,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -11085,7 +11085,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -11344,7 +11344,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -11354,7 +11354,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -11374,7 +11374,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -11384,7 +11384,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -11394,7 +11394,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -11404,7 +11404,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -12196,7 +12196,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -12206,7 +12206,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -12226,7 +12226,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -12236,7 +12236,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -12246,7 +12246,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -12256,7 +12256,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -12266,7 +12266,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Db2 table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12276,7 +12276,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -12835,7 +12835,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -12845,7 +12845,7 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd>
 
@@ -12855,7 +12855,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -12865,14 +12865,14 @@ The following output properties are available:
 <a href="#column_delimiter_python" style="color: inherit; text-decoration: inherit;">column_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The column delimiter. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressioncodec_python">
-<a href="#compressioncodec_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
+        <span id="compression_codec_python">
+<a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12881,8 +12881,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressionlevel_python">
-<a href="#compressionlevel_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
+        <span id="compression_level_python">
+<a href="#compression_level_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12901,31 +12901,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodingname_python">
-<a href="#encodingname_python" style="color: inherit; text-decoration: inherit;">encoding<wbr>Name</a>
+        <span id="encoding_name_python">
+<a href="#encoding_name_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="escapechar_python">
-<a href="#escapechar_python" style="color: inherit; text-decoration: inherit;">escape<wbr>Char</a>
+        <span id="escape_char_python">
+<a href="#escape_char_python" style="color: inherit; text-decoration: inherit;">escape_<wbr>char</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The escape character. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstrowasheader_python">
-<a href="#firstrowasheader_python" style="color: inherit; text-decoration: inherit;">first<wbr>Row<wbr>As<wbr>Header</a>
+        <span id="first_row_as_header_python">
+<a href="#first_row_as_header_python" style="color: inherit; text-decoration: inherit;">first_<wbr>row_<wbr>as_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -12935,17 +12935,17 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nullvalue_python">
-<a href="#nullvalue_python" style="color: inherit; text-decoration: inherit;">null<wbr>Value</a>
+        <span id="null_value_python">
+<a href="#null_value_python" style="color: inherit; text-decoration: inherit;">null_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The null value string. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12955,27 +12955,27 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="quotechar_python">
-<a href="#quotechar_python" style="color: inherit; text-decoration: inherit;">quote<wbr>Char</a>
+        <span id="quote_char_python">
+<a href="#quote_char_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>char</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The quote character. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rowdelimiter_python">
-<a href="#rowdelimiter_python" style="color: inherit; text-decoration: inherit;">row<wbr>Delimiter</a>
+        <span id="row_delimiter_python">
+<a href="#row_delimiter_python" style="color: inherit; text-decoration: inherit;">row_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The row delimiter. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -12985,7 +12985,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -12995,7 +12995,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -13284,7 +13284,7 @@ The following output properties are available:
 <a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Document Database collection name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -13294,7 +13294,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -13304,7 +13304,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -13324,7 +13324,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -13334,7 +13334,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -13344,7 +13344,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -13354,7 +13354,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -13673,7 +13673,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -13683,7 +13683,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -13703,7 +13703,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -13713,7 +13713,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -13723,7 +13723,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -13733,7 +13733,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -13743,7 +13743,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Drill. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -13753,7 +13753,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -14042,7 +14042,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -14052,7 +14052,7 @@ The following output properties are available:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The path of the Dynamics AX OData entity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -14062,7 +14062,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -14082,7 +14082,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -14092,7 +14092,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -14102,7 +14102,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -14112,7 +14112,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -14401,7 +14401,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -14411,7 +14411,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -14431,7 +14431,7 @@ The following output properties are available:
 <a href="#entity_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The logical name of the entity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -14441,7 +14441,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -14451,7 +14451,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -14461,7 +14461,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -14471,7 +14471,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -14760,7 +14760,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -14770,7 +14770,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -14790,7 +14790,7 @@ The following output properties are available:
 <a href="#entity_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The logical name of the entity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -14800,7 +14800,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -14810,7 +14810,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -14820,7 +14820,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -14830,7 +14830,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -15119,7 +15119,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -15129,7 +15129,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -15149,7 +15149,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -15159,7 +15159,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -15169,7 +15169,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -15179,7 +15179,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -15189,7 +15189,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15628,7 +15628,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -15638,17 +15638,17 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sheetname_python">
-<a href="#sheetname_python" style="color: inherit; text-decoration: inherit;">sheet<wbr>Name</a>
+        <span id="sheet_name_python">
+<a href="#sheet_name_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The sheet of excel file. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15658,7 +15658,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -15668,7 +15668,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd>
 
@@ -15684,11 +15684,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstrowasheader_python">
-<a href="#firstrowasheader_python" style="color: inherit; text-decoration: inherit;">first<wbr>Row<wbr>As<wbr>Header</a>
+        <span id="first_row_as_header_python">
+<a href="#first_row_as_header_python" style="color: inherit; text-decoration: inherit;">first_<wbr>row_<wbr>as_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -15698,17 +15698,17 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nullvalue_python">
-<a href="#nullvalue_python" style="color: inherit; text-decoration: inherit;">null<wbr>Value</a>
+        <span id="null_value_python">
+<a href="#null_value_python" style="color: inherit; text-decoration: inherit;">null_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The null value string. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15718,7 +15718,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -15728,7 +15728,7 @@ The following output properties are available:
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The partial data of one sheet. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15738,7 +15738,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -15748,7 +15748,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -15857,7 +15857,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -15867,7 +15867,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -16336,7 +16336,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -16346,7 +16346,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -16356,7 +16356,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd>
 
@@ -16376,7 +16376,7 @@ The following output properties are available:
 <a href="#file_filter_python" style="color: inherit; text-decoration: inherit;">file_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify a filter to be used to select a subset of files in the folderPath rather than all files. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16386,7 +16386,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the on-premises file system. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16396,7 +16396,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -16406,7 +16406,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The path of the on-premises file system. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16416,27 +16416,27 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Format<wbr>Response] | Dict[Json<wbr>Format<wbr>Response] | Dict[Orc<wbr>Format<wbr>Response] | Dict[Parquet<wbr>Format<wbr>Response] | Dict[Text<wbr>Format<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Format<wbr>Response<wbr>Args, Json<wbr>Format<wbr>Response<wbr>Args, Orc<wbr>Format<wbr>Response<wbr>Args, Parquet<wbr>Format<wbr>Response<wbr>Args, Text<wbr>Format<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The format of the files.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifieddatetimeend_python">
-<a href="#modifieddatetimeend_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>End</a>
+        <span id="modified_datetime_end_python">
+<a href="#modified_datetime_end_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modifieddatetimestart_python">
-<a href="#modifieddatetimestart_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>Start</a>
+        <span id="modified_datetime_start_python">
+<a href="#modified_datetime_start_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16446,7 +16446,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -16456,7 +16456,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -16466,7 +16466,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -16575,7 +16575,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -16585,7 +16585,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -16874,7 +16874,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -16884,7 +16884,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -16904,7 +16904,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -16914,7 +16914,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -16924,7 +16924,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -16934,7 +16934,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -16944,7 +16944,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17293,7 +17293,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -17303,7 +17303,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -17313,7 +17313,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The database name of the Google BigQuery. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17333,7 +17333,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -17343,7 +17343,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -17353,7 +17353,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -17363,7 +17363,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -17373,7 +17373,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Google BigQuery. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17383,7 +17383,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using database + table properties instead.{{% /md %}}</dd>
 
@@ -17548,11 +17548,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the bucketName of Google Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -17562,7 +17562,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17572,7 +17572,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -17582,7 +17582,7 @@ The following output properties are available:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the version of Google Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17901,7 +17901,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -17911,7 +17911,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -17931,7 +17931,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -17941,7 +17941,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -17951,7 +17951,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -17961,7 +17961,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -17971,7 +17971,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of Greenplum. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -17981,7 +17981,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -18270,7 +18270,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -18280,7 +18280,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -18300,7 +18300,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -18310,7 +18310,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -18320,7 +18320,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -18330,7 +18330,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -18340,7 +18340,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -18449,7 +18449,7 @@ The following output properties are available:
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -18459,7 +18459,7 @@ The following output properties are available:
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -18778,7 +18778,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -18788,7 +18788,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -18808,7 +18808,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -18818,7 +18818,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -18828,7 +18828,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -18838,7 +18838,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -18848,7 +18848,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Hive. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -18858,7 +18858,7 @@ The following output properties are available:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -19303,17 +19303,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalheaders_python">
-<a href="#additionalheaders_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Headers</a>
+        <span id="additional_headers_python">
+<a href="#additional_headers_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The headers for the HTTP Request. e.g. request-header-name-1:request-header-value-1
 ...
@@ -19325,7 +19325,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -19335,7 +19335,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd>
 
@@ -19355,7 +19355,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -19365,7 +19365,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Format<wbr>Response] | Dict[Json<wbr>Format<wbr>Response] | Dict[Orc<wbr>Format<wbr>Response] | Dict[Parquet<wbr>Format<wbr>Response] | Dict[Text<wbr>Format<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Format<wbr>Response<wbr>Args, Json<wbr>Format<wbr>Response<wbr>Args, Orc<wbr>Format<wbr>Response<wbr>Args, Parquet<wbr>Format<wbr>Response<wbr>Args, Text<wbr>Format<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd>
 
@@ -19375,37 +19375,37 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativeurl_python">
-<a href="#relativeurl_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Url</a>
+        <span id="relative_url_python">
+<a href="#relative_url_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestbody_python">
-<a href="#requestbody_python" style="color: inherit; text-decoration: inherit;">request<wbr>Body</a>
+        <span id="request_body_python">
+<a href="#request_body_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The body for the HTTP request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmethod_python">
-<a href="#requestmethod_python" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
+        <span id="request_method_python">
+<a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method for the HTTP request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -19415,7 +19415,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -19425,7 +19425,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -19564,7 +19564,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -19574,17 +19574,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativeurl_python">
-<a href="#relativeurl_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Url</a>
+        <span id="relative_url_python">
+<a href="#relative_url_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the relativeUrl of http server. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -19873,7 +19873,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -19883,7 +19883,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -19903,7 +19903,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -19913,7 +19913,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -19923,7 +19923,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -19933,7 +19933,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -19943,7 +19943,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -20262,7 +20262,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -20272,7 +20272,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -20292,7 +20292,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -20302,7 +20302,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -20312,7 +20312,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -20322,7 +20322,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -20332,7 +20332,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Impala. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -20342,7 +20342,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -20631,7 +20631,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -20641,7 +20641,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -20661,7 +20661,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -20671,7 +20671,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -20681,7 +20681,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -20691,7 +20691,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -20701,7 +20701,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Informix table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -20990,7 +20990,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -21000,7 +21000,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -21020,7 +21020,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -21030,7 +21030,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -21040,7 +21040,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -21050,7 +21050,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -21060,7 +21060,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -21409,7 +21409,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -21419,7 +21419,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd>
 
@@ -21429,7 +21429,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -21439,7 +21439,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd>
 
@@ -21455,11 +21455,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodingname_python">
-<a href="#encodingname_python" style="color: inherit; text-decoration: inherit;">encoding<wbr>Name</a>
+        <span id="encoding_name_python">
+<a href="#encoding_name_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -21469,7 +21469,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -21479,7 +21479,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -21489,7 +21489,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -21499,7 +21499,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -21758,24 +21758,24 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Deserializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodingname_python">
-<a href="#encodingname_python" style="color: inherit; text-decoration: inherit;">encoding<wbr>Name</a>
+        <span id="encoding_name_python">
+<a href="#encoding_name_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filepattern_python">
-<a href="#filepattern_python" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
+        <span id="file_pattern_python">
+<a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21784,31 +21784,31 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jsonnodereference_python">
-<a href="#jsonnodereference_python" style="color: inherit; text-decoration: inherit;">json<wbr>Node<wbr>Reference</a>
+        <span id="json_node_reference_python">
+<a href="#json_node_reference_python" style="color: inherit; text-decoration: inherit;">json_<wbr>node_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jsonpathdefinition_python">
-<a href="#jsonpathdefinition_python" style="color: inherit; text-decoration: inherit;">json<wbr>Path<wbr>Definition</a>
+        <span id="json_path_definition_python">
+<a href="#json_path_definition_python" style="color: inherit; text-decoration: inherit;">json_<wbr>path_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nestingseparator_python">
-<a href="#nestingseparator_python" style="color: inherit; text-decoration: inherit;">nesting<wbr>Separator</a>
+        <span id="nesting_separator_python">
+<a href="#nesting_separator_python" style="color: inherit; text-decoration: inherit;">nesting_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -21818,7 +21818,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Serializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -21953,8 +21953,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -21977,7 +21977,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -22266,7 +22266,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -22276,7 +22276,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -22296,7 +22296,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -22306,7 +22306,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -22316,7 +22316,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -22326,7 +22326,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -22336,7 +22336,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -22625,7 +22625,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -22635,7 +22635,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -22655,7 +22655,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -22665,7 +22665,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -22675,7 +22675,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -22685,7 +22685,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -22695,7 +22695,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -22984,7 +22984,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -22994,7 +22994,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -23014,7 +23014,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -23024,7 +23024,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -23034,7 +23034,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -23044,7 +23044,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -23054,7 +23054,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -23343,7 +23343,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -23353,7 +23353,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -23373,7 +23373,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -23383,7 +23383,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -23393,7 +23393,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -23403,7 +23403,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -23413,7 +23413,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Access table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -23702,7 +23702,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The collection name of the MongoDB Atlas database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -23712,7 +23712,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -23722,7 +23722,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -23742,7 +23742,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -23752,7 +23752,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -23762,7 +23762,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -23772,7 +23772,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -24061,7 +24061,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the MongoDB database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -24071,7 +24071,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -24081,7 +24081,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -24101,7 +24101,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -24111,7 +24111,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -24121,7 +24121,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -24131,7 +24131,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -24420,7 +24420,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The collection name of the MongoDB database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -24430,7 +24430,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -24440,7 +24440,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -24460,7 +24460,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -24470,7 +24470,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -24480,7 +24480,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -24490,7 +24490,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -24779,7 +24779,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -24789,7 +24789,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -24809,7 +24809,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -24819,7 +24819,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -24829,7 +24829,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -24839,7 +24839,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -24849,7 +24849,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The MySQL table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -25168,7 +25168,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -25178,7 +25178,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -25198,7 +25198,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -25208,7 +25208,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -25218,7 +25218,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -25228,7 +25228,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -25238,7 +25238,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Netezza. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -25248,7 +25248,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -25537,7 +25537,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -25547,7 +25547,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -25567,7 +25567,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -25577,7 +25577,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -25587,7 +25587,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The OData resource path. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -25597,7 +25597,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -25607,7 +25607,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -25896,7 +25896,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -25906,7 +25906,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -25926,7 +25926,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -25936,7 +25936,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -25946,7 +25946,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -25956,7 +25956,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -25966,7 +25966,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ODBC table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -26285,7 +26285,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -26295,7 +26295,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Name of the dataset to extract from Office 365. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -26305,7 +26305,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -26325,7 +26325,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -26335,7 +26335,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -26345,7 +26345,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#predicate_python" style="color: inherit; text-decoration: inherit;">predicate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}A predicate expression that can be used to filter the specific rows to extract from Office 365. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -26355,7 +26355,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -26365,7 +26365,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -26654,7 +26654,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -26664,7 +26664,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -26684,7 +26684,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -26694,7 +26694,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -26704,7 +26704,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -26714,7 +26714,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -26724,7 +26724,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -27043,7 +27043,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -27053,7 +27053,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -27073,7 +27073,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -27083,7 +27083,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -27093,7 +27093,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -27103,7 +27103,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -27113,7 +27113,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the on-premises Oracle database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -27123,7 +27123,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -27442,7 +27442,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -27452,7 +27452,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd>
 
@@ -27462,7 +27462,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -27482,14 +27482,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orccompressioncodec_python">
-<a href="#orccompressioncodec_python" style="color: inherit; text-decoration: inherit;">orc<wbr>Compression<wbr>Codec</a>
+        <span id="orc_compression_codec_python">
+<a href="#orc_compression_codec_python" style="color: inherit; text-decoration: inherit;">orc_<wbr>compression_<wbr>codec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -27502,7 +27502,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -27512,7 +27512,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -27522,7 +27522,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -27631,7 +27631,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Deserializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -27641,7 +27641,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Serializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -27760,7 +27760,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Default value of parameter.{{% /md %}}</dd>
 
@@ -28079,7 +28079,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -28089,7 +28089,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd>
 
@@ -28099,14 +28099,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressioncodec_python">
-<a href="#compressioncodec_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
+        <span id="compression_codec_python">
+<a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -28129,7 +28129,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -28139,7 +28139,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -28149,7 +28149,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -28159,7 +28159,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -28268,7 +28268,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Deserializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -28278,7 +28278,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Serializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -28567,7 +28567,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -28577,7 +28577,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -28597,7 +28597,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -28607,7 +28607,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -28617,7 +28617,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -28627,7 +28627,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -28637,7 +28637,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -28956,7 +28956,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -28966,7 +28966,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -28986,7 +28986,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -28996,7 +28996,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -29006,7 +29006,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -29016,7 +29016,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -29026,7 +29026,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Phoenix. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29036,7 +29036,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -29355,7 +29355,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -29365,7 +29365,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -29385,7 +29385,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -29395,7 +29395,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -29405,7 +29405,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -29415,7 +29415,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -29425,7 +29425,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The PostgreSQL table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29435,7 +29435,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -29754,7 +29754,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -29764,7 +29764,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -29784,7 +29784,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -29794,7 +29794,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -29804,7 +29804,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -29814,7 +29814,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -29824,7 +29824,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Presto. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -29834,7 +29834,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -30123,7 +30123,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -30133,7 +30133,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -30153,7 +30153,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -30163,7 +30163,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -30173,7 +30173,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -30183,7 +30183,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -30193,7 +30193,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -30482,7 +30482,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -30492,7 +30492,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -30512,7 +30512,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -30522,7 +30522,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -30532,7 +30532,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -30542,7 +30542,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -30552,7 +30552,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The relational table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -30841,7 +30841,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -30851,7 +30851,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -30871,7 +30871,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -30881,7 +30881,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -30891,7 +30891,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -30901,7 +30901,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -30911,7 +30911,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31320,17 +31320,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalheaders_python">
-<a href="#additionalheaders_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Headers</a>
+        <span id="additional_headers_python">
+<a href="#additional_headers_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31340,7 +31340,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -31360,17 +31360,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="paginationrules_python">
-<a href="#paginationrules_python" style="color: inherit; text-decoration: inherit;">pagination<wbr>Rules</a>
+        <span id="pagination_rules_python">
+<a href="#pagination_rules_python" style="color: inherit; text-decoration: inherit;">pagination_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The pagination rules to compose next page requests. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31380,37 +31380,37 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativeurl_python">
-<a href="#relativeurl_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Url</a>
+        <span id="relative_url_python">
+<a href="#relative_url_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestbody_python">
-<a href="#requestbody_python" style="color: inherit; text-decoration: inherit;">request<wbr>Body</a>
+        <span id="request_body_python">
+<a href="#request_body_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmethod_python">
-<a href="#requestmethod_python" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
+        <span id="request_method_python">
+<a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -31420,7 +31420,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -31430,7 +31430,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -31719,7 +31719,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -31729,7 +31729,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -31749,7 +31749,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -31759,7 +31759,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -31769,7 +31769,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -31779,7 +31779,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -31789,7 +31789,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32078,7 +32078,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -32088,7 +32088,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -32108,17 +32108,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="objectapiname_python">
-<a href="#objectapiname_python" style="color: inherit; text-decoration: inherit;">object<wbr>Api<wbr>Name</a>
+        <span id="object_api_name_python">
+<a href="#object_api_name_python" style="color: inherit; text-decoration: inherit;">object_<wbr>api_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Salesforce object API name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32128,7 +32128,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -32138,7 +32138,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -32148,7 +32148,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -32437,7 +32437,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -32447,7 +32447,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -32467,17 +32467,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="objectapiname_python">
-<a href="#objectapiname_python" style="color: inherit; text-decoration: inherit;">object<wbr>Api<wbr>Name</a>
+        <span id="object_api_name_python">
+<a href="#object_api_name_python" style="color: inherit; text-decoration: inherit;">object_<wbr>api_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Salesforce Service Cloud object API name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -32487,7 +32487,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -32497,7 +32497,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -32507,7 +32507,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -32766,7 +32766,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -32776,7 +32776,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -32796,7 +32796,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -32806,7 +32806,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -32816,7 +32816,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -32826,7 +32826,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -33115,7 +33115,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -33125,7 +33125,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The path of the SAP Cloud for Customer OData entity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -33135,7 +33135,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -33155,7 +33155,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -33165,7 +33165,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -33175,7 +33175,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -33185,7 +33185,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -33474,7 +33474,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -33484,7 +33484,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The path of the SAP ECC OData entity. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -33494,7 +33494,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -33514,7 +33514,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -33524,7 +33524,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -33534,7 +33534,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -33544,7 +33544,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -33833,7 +33833,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -33843,7 +33843,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -33863,7 +33863,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -33873,7 +33873,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -33883,7 +33883,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -33893,7 +33893,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -33903,7 +33903,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of SAP HANA. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -34252,17 +34252,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="openhubdestinationname_python">
-<a href="#openhubdestinationname_python" style="color: inherit; text-decoration: inherit;">open<wbr>Hub<wbr>Destination<wbr>Name</a>
+        <span id="open_hub_destination_name_python">
+<a href="#open_hub_destination_name_python" style="color: inherit; text-decoration: inherit;">open_<wbr>hub_<wbr>destination_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -34272,17 +34272,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baserequestid_python">
-<a href="#baserequestid_python" style="color: inherit; text-decoration: inherit;">base<wbr>Request<wbr>Id</a>
+        <span id="base_request_id_python">
+<a href="#base_request_id_python" style="color: inherit; text-decoration: inherit;">base_<wbr>request_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).{{% /md %}}</dd>
 
@@ -34298,11 +34298,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
     <dt class="property-optional"
             title="Optional">
-        <span id="excludelastrequest_python">
-<a href="#excludelastrequest_python" style="color: inherit; text-decoration: inherit;">exclude<wbr>Last<wbr>Request</a>
+        <span id="exclude_last_request_python">
+<a href="#exclude_last_request_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>last_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -34312,7 +34312,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -34322,7 +34322,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -34332,7 +34332,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -34342,7 +34342,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -34631,7 +34631,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -34641,7 +34641,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the SAP Table. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -34651,7 +34651,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -34671,7 +34671,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -34681,7 +34681,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -34691,7 +34691,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -34701,7 +34701,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -34990,7 +34990,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -35000,7 +35000,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -35020,7 +35020,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -35030,7 +35030,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -35040,7 +35040,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -35050,7 +35050,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -35060,7 +35060,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -35169,7 +35169,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -35179,7 +35179,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd>
 
@@ -35468,7 +35468,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -35478,7 +35478,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -35498,17 +35498,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="listname_python">
-<a href="#listname_python" style="color: inherit; text-decoration: inherit;">list<wbr>Name</a>
+        <span id="list_name_python">
+<a href="#list_name_python" style="color: inherit; text-decoration: inherit;">list_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The name of the SharePoint Online list. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -35518,7 +35518,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -35528,7 +35528,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -35538,7 +35538,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -35827,7 +35827,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -35837,7 +35837,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -35857,7 +35857,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -35867,7 +35867,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -35877,7 +35877,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -35887,7 +35887,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -35897,7 +35897,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36186,7 +36186,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -36196,7 +36196,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -36216,7 +36216,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -36226,7 +36226,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -36236,7 +36236,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -36246,7 +36246,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -36256,7 +36256,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Snowflake database. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36575,7 +36575,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -36585,7 +36585,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -36605,7 +36605,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -36615,7 +36615,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -36625,7 +36625,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -36635,7 +36635,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -36645,7 +36645,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Spark. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -36655,7 +36655,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -36974,7 +36974,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -36984,7 +36984,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -37004,7 +37004,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -37014,7 +37014,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -37024,7 +37024,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -37034,7 +37034,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -37044,7 +37044,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the SQL Server dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -37054,7 +37054,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -37343,7 +37343,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -37353,7 +37353,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -37373,7 +37373,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -37383,7 +37383,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -37393,7 +37393,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -37403,7 +37403,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -37413,7 +37413,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -37702,7 +37702,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -37712,7 +37712,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -37732,7 +37732,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -37742,7 +37742,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -37752,7 +37752,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -37762,7 +37762,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -37772,7 +37772,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Sybase table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38091,7 +38091,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -38101,7 +38101,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -38111,7 +38111,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The database name of Teradata. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38131,7 +38131,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -38141,7 +38141,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -38151,7 +38151,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -38161,7 +38161,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -38171,7 +38171,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of Teradata. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38550,7 +38550,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#column_delimiter_python" style="color: inherit; text-decoration: inherit;">column_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The column delimiter. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38560,67 +38560,67 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Deserializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodingname_python">
-<a href="#encodingname_python" style="color: inherit; text-decoration: inherit;">encoding<wbr>Name</a>
+        <span id="encoding_name_python">
+<a href="#encoding_name_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The code page name of the preferred encoding. If miss, the default value is ΓÇ£utf-8ΓÇ¥, unless BOM denotes another Unicode encoding. Refer to the ΓÇ£NameΓÇ¥ column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="escapechar_python">
-<a href="#escapechar_python" style="color: inherit; text-decoration: inherit;">escape<wbr>Char</a>
+        <span id="escape_char_python">
+<a href="#escape_char_python" style="color: inherit; text-decoration: inherit;">escape_<wbr>char</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The escape character. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstrowasheader_python">
-<a href="#firstrowasheader_python" style="color: inherit; text-decoration: inherit;">first<wbr>Row<wbr>As<wbr>Header</a>
+        <span id="first_row_as_header_python">
+<a href="#first_row_as_header_python" style="color: inherit; text-decoration: inherit;">first_<wbr>row_<wbr>as_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nullvalue_python">
-<a href="#nullvalue_python" style="color: inherit; text-decoration: inherit;">null<wbr>Value</a>
+        <span id="null_value_python">
+<a href="#null_value_python" style="color: inherit; text-decoration: inherit;">null_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The null value string. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="quotechar_python">
-<a href="#quotechar_python" style="color: inherit; text-decoration: inherit;">quote<wbr>Char</a>
+        <span id="quote_char_python">
+<a href="#quote_char_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>char</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The quote character. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rowdelimiter_python">
-<a href="#rowdelimiter_python" style="color: inherit; text-decoration: inherit;">row<wbr>Delimiter</a>
+        <span id="row_delimiter_python">
+<a href="#row_delimiter_python" style="color: inherit; text-decoration: inherit;">row_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The row delimiter. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -38630,27 +38630,27 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Serializer. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skiplinecount_python">
-<a href="#skiplinecount_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Line<wbr>Count</a>
+        <span id="skip_line_count_python">
+<a href="#skip_line_count_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>line_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The number of lines/rows to be skipped when parsing text files. The default value is 0. Type: integer (or Expression with resultType integer).{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="treatemptyasnull_python">
-<a href="#treatemptyasnull_python" style="color: inherit; text-decoration: inherit;">treat<wbr>Empty<wbr>As<wbr>Null</a>
+        <span id="treat_empty_as_null_python">
+<a href="#treat_empty_as_null_python" style="color: inherit; text-decoration: inherit;">treat_<wbr>empty_<wbr>as_<wbr>null</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Treat empty column values in the text file as null. The default value is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
 
@@ -38969,7 +38969,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -38979,7 +38979,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -38999,7 +38999,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -39009,7 +39009,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -39019,7 +39019,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -39029,7 +39029,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -39039,7 +39039,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name of the Vertica. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39049,7 +39049,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd>
 
@@ -39368,7 +39368,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The zero-based index of the table in the web page. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -39378,7 +39378,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -39388,7 +39388,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -39408,7 +39408,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -39418,7 +39418,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -39428,7 +39428,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The relative URL to the web page from the linked service URL. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -39438,7 +39438,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -39448,7 +39448,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -39737,7 +39737,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -39747,7 +39747,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -39767,7 +39767,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -39777,7 +39777,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -39787,7 +39787,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -39797,7 +39797,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -39807,7 +39807,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40186,7 +40186,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -40196,7 +40196,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Amazon<wbr>S3Location<wbr>Response] | Dict[Azure<wbr>Blob<wbr>FSLocation<wbr>Response] | Dict[Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response] | Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response] | Dict[Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response] | Dict[File<wbr>Server<wbr>Location<wbr>Response] | Dict[Ftp<wbr>Server<wbr>Location<wbr>Response] | Dict[Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response] | Dict[Hdfs<wbr>Location<wbr>Response] | Dict[Http<wbr>Server<wbr>Location<wbr>Response] | Dict[Sftp<wbr>Location<wbr>Response]</span>
+        <span class="property-type">Union[Amazon<wbr>S3Location<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args, Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args, Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, File<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args, Hdfs<wbr>Location<wbr>Response<wbr>Args, Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args, Sftp<wbr>Location<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd>
 
@@ -40206,7 +40206,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -40216,7 +40216,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Dataset<wbr>BZip2Compression<wbr>Response] | Dict[Dataset<wbr>Deflate<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response] | Dict[Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response]</span>
+        <span class="property-type">Union[Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args, Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args, Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd>
 
@@ -40232,11 +40232,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodingname_python">
-<a href="#encodingname_python" style="color: inherit; text-decoration: inherit;">encoding<wbr>Name</a>
+        <span id="encoding_name_python">
+<a href="#encoding_name_python" style="color: inherit; text-decoration: inherit;">encoding_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40246,17 +40246,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nullvalue_python">
-<a href="#nullvalue_python" style="color: inherit; text-decoration: inherit;">null<wbr>Value</a>
+        <span id="null_value_python">
+<a href="#null_value_python" style="color: inherit; text-decoration: inherit;">null_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The null value string. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 
@@ -40266,7 +40266,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -40276,7 +40276,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -40286,7 +40286,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -40575,7 +40575,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
@@ -40585,7 +40585,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Dataset.{{% /md %}}</dd>
 
@@ -40605,7 +40605,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dict[Dataset<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd>
 
@@ -40615,7 +40615,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd>
 
@@ -40625,7 +40625,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.{{% /md %}}</dd>
 
@@ -40635,7 +40635,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd>
 
@@ -40645,7 +40645,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 

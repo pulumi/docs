@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceproviderauthorizationresponse">List[Workspace<wbr>Provider<wbr>Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspaceproviderauthorizationresponse">Sequence[Workspace<wbr>Provider<wbr>Authorization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The workspace provider authorizations.{{% /md %}}</dd>
 
@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Dict[Created<wbr>By<wbr>Response]</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that created the workspace.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomparametersresponse">Dict[Workspace<wbr>Custom<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomparametersresponse">Workspace<wbr>Custom<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workspace's custom parameters.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#storage_account_identity_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityconfigurationresponse">Dict[Managed<wbr>Identity<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedidentityconfigurationresponse">Managed<wbr>Identity<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of Managed Identity of Storage Account{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createdbyresponse">Dict[Created<wbr>By<wbr>Response]</a></span>
+        <span class="property-type"><a href="#createdbyresponse">Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.{{% /md %}}</dd>
 
@@ -1879,7 +1879,7 @@ The following output properties are available:
 <a href="#aml_workspace_id_python" style="color: inherit; text-decoration: inherit;">aml_<wbr>workspace_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd>
 
@@ -1889,7 +1889,7 @@ The following output properties are available:
 <a href="#custom_private_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>private_<wbr>subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd>
 
@@ -1899,7 +1899,7 @@ The following output properties are available:
 <a href="#custom_public_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>public_<wbr>subnet_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd>
 
@@ -1909,7 +1909,7 @@ The following output properties are available:
 <a href="#custom_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>virtual_<wbr>network_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Dict[Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd>
 
@@ -1919,7 +1919,7 @@ The following output properties are available:
 <a href="#enable_no_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>no_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd>
 
@@ -1929,7 +1929,7 @@ The following output properties are available:
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Dict[Workspace<wbr>Encryption<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd>
 
@@ -1939,7 +1939,7 @@ The following output properties are available:
 <a href="#prepare_encryption_python" style="color: inherit; text-decoration: inherit;">prepare_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd>
 
@@ -1949,7 +1949,7 @@ The following output properties are available:
 <a href="#require_infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">require_<wbr>infrastructure_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Dict[Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
 
@@ -2187,7 +2187,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Dict[Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd>
 

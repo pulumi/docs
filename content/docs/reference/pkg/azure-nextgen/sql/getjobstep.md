@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepactionresponse">Dict[Job<wbr>Step<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstepactionresponse">Job<wbr>Step<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#execution_options_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepexecutionoptionsresponse">Dict[Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstepexecutionoptionsresponse">Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepoutputresponse">Dict[Job<wbr>Step<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobstepoutputresponse">Job<wbr>Step<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
 

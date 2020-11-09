@@ -87,11 +87,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 certificate = azure_nextgen.appplatform.latest.Certificate("certificate",
     certificate_name="mycertificate",
-    properties={
-        "certVersion": "08a219d06d874795a96db47e06fbb01e",
-        "keyVaultCertName": "mycert",
-        "vaultUri": "https://myvault.vault.azure.net",
-    },
+    properties=azure_nextgen.appplatform.latest.CertificatePropertiesArgs(
+        cert_version="08a219d06d874795a96db47e06fbb01e",
+        key_vault_cert_name="mycert",
+        vault_uri="https://myvault.vault.azure.net",
+    ),
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -132,7 +132,7 @@ const certificate = new azure_nextgen.appplatform.latest.Certificate("certificat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CertificateProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CertificatePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -481,7 +481,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateproperties">Dict[Certificate<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#certificateproperties">Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the certificate resource payload.{{% /md %}}</dd>
 
@@ -1167,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The domain list of certificate.{{% /md %}}</dd>
 

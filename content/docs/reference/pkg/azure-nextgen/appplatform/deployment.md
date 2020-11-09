@@ -117,23 +117,23 @@ import pulumi_azure_nextgen as azure_nextgen
 deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
     app_name="myapp",
     deployment_name="mydeployment",
-    properties={
-        "deploymentSettings": {
-            "cpu": 1,
-            "environmentVariables": {
+    properties=azure_nextgen.appplatform.latest.DeploymentResourcePropertiesArgs(
+        deployment_settings=azure_nextgen.appplatform.latest.DeploymentSettingsArgs(
+            cpu=1,
+            environment_variables={
                 "env": "test",
             },
-            "jvmOptions": "-Xms1G -Xmx3G",
-            "memoryInGB": 3,
-            "runtimeVersion": "Java_8",
-        },
-        "source": {
-            "artifactSelector": "sub-module-1",
-            "relativePath": "resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
-            "type": "Source",
-            "version": "1.0",
-        },
-    },
+            jvm_options="-Xms1G -Xmx3G",
+            memory_in_gb=3,
+            runtime_version="Java_8",
+        ),
+        source=azure_nextgen.appplatform.latest.UserSourceInfoArgs(
+            artifact_selector="sub-module-1",
+            relative_path="resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
+            type="Source",
+            version="1.0",
+        ),
+    ),
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -187,7 +187,7 @@ const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[DeploymentResourceProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[DeploymentResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -606,7 +606,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentresourceproperties">Dict[Deployment<wbr>Resource<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#deploymentresourceproperties">Deployment<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Deployment resource{{% /md %}}</dd>
 
@@ -616,7 +616,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Deployment resource{{% /md %}}</dd>
 
@@ -1132,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_settings_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettings">Dict[Deployment<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#deploymentsettings">Deployment<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd>
 
@@ -1142,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinfo">Dict[User<wbr>Source<wbr>Info]</a></span>
+        <span class="property-type"><a href="#usersourceinfo">User<wbr>Source<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd>
 
@@ -1461,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">List[Deployment<wbr>Instance<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">Sequence[Deployment<wbr>Instance<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd>
 
@@ -1491,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_settings_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">Dict[Deployment<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd>
 
@@ -1501,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">Dict[User<wbr>Source<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd>
 
@@ -1740,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Collection of environment variables{{% /md %}}</dd>
 
@@ -2019,7 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Collection of environment variables{{% /md %}}</dd>
 

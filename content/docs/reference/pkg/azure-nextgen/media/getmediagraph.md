@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphassetsinkresponse">List[Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphassetsinkresponse">Sequence[Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sinks.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphrtspsourceresponse">List[Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphrtspsourceresponse">Sequence[Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sources.{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Sink inputs.{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The following output properties are available:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd>
 
@@ -1051,7 +1051,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response] | Dict[Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response]</span>
+        <span class="property-type">Union[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args, Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
 
@@ -1250,27 +1250,27 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedcertificates_python">
-<a href="#trustedcertificates_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
+        <span id="trusted_certificates_python">
+<a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Dict[Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationoptions_python">
-<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+        <span id="validation_options_python">
+<a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Dict[Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
 
@@ -1375,8 +1375,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ignorehostname_python">
-<a href="#ignorehostname_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Hostname</a>
+        <span id="ignore_hostname_python">
+<a href="#ignore_hostname_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1385,8 +1385,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ignoresignature_python">
-<a href="#ignoresignature_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signature</a>
+        <span id="ignore_signature_python">
+<a href="#ignore_signature_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signature</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

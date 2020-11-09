@@ -103,14 +103,14 @@ import pulumi_azure_nextgen as azure_nextgen
 configuration_profile_preference = azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference",
     configuration_profile_preference_name="defaultProfilePreference",
     location="East US",
-    properties={
-        "antiMalware": {
-            "enableRealTimeProtection": "True",
-        },
-        "vmBackup": {
-            "timeZone": "Pacific Standard Time",
-        },
-    },
+    properties=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferencePropertiesArgs(
+        anti_malware=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferenceAntiMalwareArgs(
+            enable_real_time_protection="True",
+        ),
+        vm_backup=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferenceVmBackupArgs(
+            time_zone="Pacific Standard Time",
+        ),
+    ),
     resource_group_name="myResourceGroupName",
     tags={
         "Organization": "Administration",
@@ -159,7 +159,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_profile_preference_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ConfigurationProfilePreferenceProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_profile_preference_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConfigurationProfilePreferencePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -538,7 +538,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
 
@@ -548,7 +548,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -598,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -635,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -672,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -709,7 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -955,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -1234,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -1383,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
 
@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
 
@@ -1502,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
 
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
 

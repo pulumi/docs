@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionresponse">List[Language<wbr>Extension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#languageextensionresponse">Sequence[Language<wbr>Extension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of language extensions.{{% /md %}}</dd>
 
@@ -308,8 +308,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="languageextensionname_python">
-<a href="#languageextensionname_python" style="color: inherit; text-decoration: inherit;">language<wbr>Extension<wbr>Name</a>
+        <span id="language_extension_name_python">
+<a href="#language_extension_name_python" style="color: inherit; text-decoration: inherit;">language_<wbr>extension_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

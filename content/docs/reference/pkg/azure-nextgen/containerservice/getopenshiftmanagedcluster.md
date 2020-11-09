@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofileresponse">List[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofileresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#auth_profile_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusterauthprofileresponse">Dict[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusterauthprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#master_pool_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pool_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofileresponse">Dict[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Dict[Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd>
 
@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplanresponse">Dict[Purchase<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#router_profiles_python" style="color: inherit; text-decoration: inherit;">router_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftrouterprofileresponse">List[Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftrouterprofileresponse">Sequence[Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1129,8 +1129,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customeradmingroupid_python">
-<a href="#customeradmingroupid_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Admin<wbr>Group<wbr>Id</a>
+        <span id="customer_admin_group_id_python">
+<a href="#customer_admin_group_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>admin_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1511,7 +1511,7 @@ The following output properties are available:
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">List[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
 
@@ -1630,7 +1630,7 @@ The following output properties are available:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Dict[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
 
@@ -2014,8 +2014,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicsubdomain_python">
-<a href="#publicsubdomain_python" style="color: inherit; text-decoration: inherit;">public<wbr>Subdomain</a>
+        <span id="public_subdomain_python">
+<a href="#public_subdomain_python" style="color: inherit; text-decoration: inherit;">public_<wbr>subdomain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

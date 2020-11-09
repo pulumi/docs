@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentprincipalresponse">List[Assignment<wbr>Principal<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentprincipalresponse">Sequence[Assignment<wbr>Principal<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
 
@@ -969,7 +969,7 @@ The following output properties are available:
 <a href="#conflation_policies_python" style="color: inherit; text-decoration: inherit;">conflation_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#connectors_python" style="color: inherit; text-decoration: inherit;">connectors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ The following output properties are available:
 <a href="#interactions_python" style="color: inherit; text-decoration: inherit;">interactions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ The following output properties are available:
 <a href="#kpis_python" style="color: inherit; text-decoration: inherit;">kpis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
 
@@ -1039,7 +1039,7 @@ The following output properties are available:
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
 
@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#relationship_links_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
 
@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#relationships_python" style="color: inherit; text-decoration: inherit;">relationships</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
 
@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#role_assignments_python" style="color: inherit; text-decoration: inherit;">role_<wbr>assignments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
 
@@ -1079,7 +1079,7 @@ The following output properties are available:
 <a href="#sas_policies_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
 
@@ -1099,7 +1099,7 @@ The following output properties are available:
 <a href="#views_python" style="color: inherit; text-decoration: inherit;">views</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#widget_types_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescriptionresponse">Dict[Resource<wbr>Set<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
 
@@ -1270,11 +1270,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="principalmetadata_python">
-<a href="#principalmetadata_python" style="color: inherit; text-decoration: inherit;">principal<wbr>Metadata</a>
+        <span id="principal_metadata_python">
+<a href="#principal_metadata_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
 
@@ -1383,7 +1383,7 @@ The following output properties are available:
 <a href="#elements_python" style="color: inherit; text-decoration: inherit;">elements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
 
@@ -1393,7 +1393,7 @@ The following output properties are available:
 <a href="#exceptions_python" style="color: inherit; text-decoration: inherit;">exceptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
 

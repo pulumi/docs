@@ -141,29 +141,29 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 job = azure_nextgen.batchai.latest.Job("job",
-    cluster={
-        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
-    },
-    container_settings={
-        "imageSourceRegistry": {
-            "image": "ubuntu",
-        },
-    },
-    custom_toolkit_settings={
-        "commandLine": "echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
-    },
+    cluster=azure_nextgen.batchai.latest.ResourceIdArgs(
+        id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
+    ),
+    container_settings=azure_nextgen.batchai.latest.ContainerSettingsArgs(
+        image_source_registry=azure_nextgen.batchai.latest.ImageSourceRegistryArgs(
+            image="ubuntu",
+        ),
+    ),
+    custom_toolkit_settings=azure_nextgen.batchai.latest.CustomToolkitSettingsArgs(
+        command_line="echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
+    ),
     experiment_name="demo_experiment",
-    input_directories=[{
-        "id": "INPUT",
-        "path": "$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
-    }],
+    input_directories=[azure_nextgen.batchai.latest.InputDirectoryArgs(
+        id="INPUT",
+        path="$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
+    )],
     job_name="demo_job",
     node_count=1,
-    output_directories=[{
-        "id": "OUTPUTS",
-        "pathPrefix": "$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
-        "pathSuffix": "files",
-    }],
+    output_directories=[azure_nextgen.batchai.latest.OutputDirectoryArgs(
+        id="OUTPUTS",
+        path_prefix="$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
+        path_suffix="files",
+    )],
     resource_group_name="demo_resource_group",
     scheduling_priority="normal",
     std_out_err_path_prefix="$AZ_BATCHAI_MOUNT_ROOT/azfiles",
@@ -225,7 +225,7 @@ const job = new azure_nextgen.batchai.latest.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[Caffe2Settings]]</span> = None<span class="p">, </span><span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CaffeSettings]]</span> = None<span class="p">, </span><span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ChainerSettings]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceId]]</span> = None<span class="p">, </span><span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CNTKsettings]]</span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[Dict[JobBasePropertiesConstraints]]</span> = None<span class="p">, </span><span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerSettings]]</span> = None<span class="p">, </span><span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomMpiSettings]]</span> = None<span class="p">, </span><span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomToolkitSettings]]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentVariable]]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[HorovodSettings]]</span> = None<span class="p">, </span><span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[List[InputDirectory]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[Dict[JobPreparation]]</span> = None<span class="p">, </span><span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[Dict[MountVolumes]]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[List[OutputDirectory]]</span> = None<span class="p">, </span><span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[PyTorchSettings]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[EnvironmentVariableWithSecretValue]]</span> = None<span class="p">, </span><span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[TensorFlowSettings]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[Caffe2SettingsArgs]</span> = None<span class="p">, </span><span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[CaffeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[ChainerSettingsArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[CNTKsettingsArgs]</span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[JobBasePropertiesConstraintsArgs]</span> = None<span class="p">, </span><span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[ContainerSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[CustomMpiSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[CustomToolkitSettingsArgs]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableArgs]]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[HorovodSettingsArgs]</span> = None<span class="p">, </span><span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[InputDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[JobPreparationArgs]</span> = None<span class="p">, </span><span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[MountVolumesArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[OutputDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[PyTorchSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableWithSecretValueArgs]]</span> = None<span class="p">, </span><span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[TensorFlowSettingsArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1174,7 +1174,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster on which this job will run.{{% /md %}}</dd>
 
@@ -1244,7 +1244,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffe2_settings_python" style="color: inherit; text-decoration: inherit;">caffe2_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffe2settings">Dict[Caffe2Settings]</a></span>
+        <span class="property-type"><a href="#caffe2settings">Caffe2Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe2 job.{{% /md %}}</dd>
 
@@ -1254,7 +1254,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffe_settings_python" style="color: inherit; text-decoration: inherit;">caffe_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffesettings">Dict[Caffe<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#caffesettings">Caffe<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe job.{{% /md %}}</dd>
 
@@ -1264,7 +1264,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#chainer_settings_python" style="color: inherit; text-decoration: inherit;">chainer_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainersettings">Dict[Chainer<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#chainersettings">Chainer<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Chainer job.{{% /md %}}</dd>
 
@@ -1274,7 +1274,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cntk_settings_python" style="color: inherit; text-decoration: inherit;">cntk_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cntksettings">Dict[CNTKsettings]</a></span>
+        <span class="property-type"><a href="#cntksettings">CNTKsettings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for CNTK (aka Microsoft Cognitive Toolkit) job.{{% /md %}}</dd>
 
@@ -1284,7 +1284,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobbasepropertiesconstraints">Dict[Job<wbr>Base<wbr>Properties<wbr>Constraints]</a></span>
+        <span class="property-type"><a href="#jobbasepropertiesconstraints">Job<wbr>Base<wbr>Properties<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd>
 
@@ -1294,7 +1294,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#container_settings_python" style="color: inherit; text-decoration: inherit;">container_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containersettings">Dict[Container<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#containersettings">Container<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Docker container settings for the job. If not provided, the job will run directly on the node.{{% /md %}}</dd>
 
@@ -1304,7 +1304,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#custom_mpi_settings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>mpi_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#custommpisettings">Dict[Custom<wbr>Mpi<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#custommpisettings">Custom<wbr>Mpi<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom MPI job.{{% /md %}}</dd>
 
@@ -1314,7 +1314,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#custom_toolkit_settings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>toolkit_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customtoolkitsettings">Dict[Custom<wbr>Toolkit<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#customtoolkitsettings">Custom<wbr>Toolkit<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom tool kit job.{{% /md %}}</dd>
 
@@ -1324,7 +1324,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List[Environment<wbr>Variable]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Sequence[Environment<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables which will be setup for the job.{{% /md %}}</dd>
 
@@ -1334,7 +1334,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#horovod_settings_python" style="color: inherit; text-decoration: inherit;">horovod_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horovodsettings">Dict[Horovod<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#horovodsettings">Horovod<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Horovod job.{{% /md %}}</dd>
 
@@ -1344,7 +1344,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#input_directories_python" style="color: inherit; text-decoration: inherit;">input_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputdirectory">List[Input<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#inputdirectory">Sequence[Input<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd>
 
@@ -1354,7 +1354,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_preparation_python" style="color: inherit; text-decoration: inherit;">job_<wbr>preparation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpreparation">Dict[Job<wbr>Preparation]</a></span>
+        <span class="property-type"><a href="#jobpreparation">Job<wbr>Preparation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A command line to be executed on each node allocated for the job before tool kit is launched.{{% /md %}}</dd>
 
@@ -1364,7 +1364,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#mount_volumes_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumes">Dict[Mount<wbr>Volumes]</a></span>
+        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on mount volumes to be used by the job. These volumes will be mounted before the job execution and will be unmounted after the job completion. The volumes will be mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd>
 
@@ -1374,7 +1374,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#output_directories_python" style="color: inherit; text-decoration: inherit;">output_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputdirectory">List[Output<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#outputdirectory">Sequence[Output<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd>
 
@@ -1384,7 +1384,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#py_torch_settings_python" style="color: inherit; text-decoration: inherit;">py_<wbr>torch_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pytorchsettings">Dict[Py<wbr>Torch<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#pytorchsettings">Py<wbr>Torch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for pyTorch job.{{% /md %}}</dd>
 
@@ -1404,7 +1404,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalue">List[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value]</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Sequence[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables with secret values which will be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd>
 
@@ -1414,7 +1414,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tensor_flow_settings_python" style="color: inherit; text-decoration: inherit;">tensor_<wbr>flow_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tensorflowsettings">Dict[Tensor<wbr>Flow<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#tensorflowsettings">Tensor<wbr>Flow<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Tensor Flow job.{{% /md %}}</dd>
 
@@ -1883,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_info_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Dict[Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info]</a></span>
+        <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the execution of a job.{{% /md %}}</dd>
 
@@ -2121,14 +2121,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2137,8 +2137,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2360,14 +2360,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2376,8 +2376,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2615,8 +2615,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azurefileurl_python">
-<a href="#azurefileurl_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
+        <span id="azure_file_url_python">
+<a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2629,14 +2629,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2645,8 +2645,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="directorymode_python">
-<a href="#directorymode_python" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
+        <span id="directory_mode_python">
+<a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2655,8 +2655,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2894,8 +2894,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azurefileurl_python">
-<a href="#azurefileurl_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
+        <span id="azure_file_url_python">
+<a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2908,14 +2908,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2924,8 +2924,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="directorymode_python">
-<a href="#directorymode_python" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
+        <span id="directory_mode_python">
+<a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2934,8 +2934,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3043,16 +3043,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accountkeysecretreference_python">
-<a href="#accountkeysecretreference_python" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference]</a></span>
-    </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
@@ -3060,6 +3050,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_key_secret_reference_python">
+<a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3162,16 +3162,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accountkeysecretreference_python">
-<a href="#accountkeysecretreference_python" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
@@ -3179,6 +3169,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_key_secret_reference_python">
+<a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3325,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List[Name<wbr>Value<wbr>Pair<wbr>Response]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
 
@@ -5196,7 +5196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_source_registry_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistry">Dict[Image<wbr>Source<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#imagesourceregistry">Image<wbr>Source<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd>
 
@@ -5315,7 +5315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_source_registry_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistryresponse">Dict[Image<wbr>Source<wbr>Registry<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd>
 
@@ -6114,11 +6114,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesecretreference_python">
-<a href="#valuesecretreference_python" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
+        <span id="value_secret_reference_python">
+<a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
 
@@ -6273,11 +6273,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesecretreference_python">
-<a href="#valuesecretreference_python" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
+        <span id="value_secret_reference_python">
+<a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
 
@@ -6442,18 +6442,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fileserver_python">
-<a href="#fileserver_python" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
+        <span id="file_server_python">
+<a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6462,8 +6462,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6472,8 +6472,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcedirectory_python">
-<a href="#sourcedirectory_python" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
+        <span id="source_directory_python">
+<a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6641,18 +6641,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fileserver_python">
-<a href="#fileserver_python" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
+        <span id="file_server_python">
+<a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6661,8 +6661,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6671,8 +6671,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcedirectory_python">
-<a href="#sourcedirectory_python" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
+        <span id="source_directory_python">
+<a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7222,7 +7222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentials">Dict[Private<wbr>Registry<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#privateregistrycredentials">Private<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd>
 
@@ -7381,7 +7381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentialsresponse">Dict[Private<wbr>Registry<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd>
 
@@ -8124,7 +8124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">List[Batch<wbr>AIError<wbr>Response]</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">Sequence[Batch<wbr>AIError<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd>
 
@@ -8263,7 +8263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
 
@@ -8382,7 +8382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
 
@@ -8551,7 +8551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreference">List[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreference">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -8561,7 +8561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereference">List[Azure<wbr>File<wbr>Share<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#azurefilesharereference">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -8571,7 +8571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreference">List[File<wbr>Server<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#fileserverreference">Sequence[File<wbr>Server<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -8581,7 +8581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreference">List[Unmanaged<wbr>File<wbr>System<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreference">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -8750,7 +8750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -8760,7 +8760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">List[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -8770,7 +8770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">List[File<wbr>Server<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">Sequence[File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -8780,7 +8780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -9044,8 +9044,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="pathprefix_python">
-<a href="#pathprefix_python" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
+        <span id="path_prefix_python">
+<a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9054,8 +9054,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathsuffix_python">
-<a href="#pathsuffix_python" style="color: inherit; text-decoration: inherit;">path<wbr>Suffix</a>
+        <span id="path_suffix_python">
+<a href="#path_suffix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9203,8 +9203,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="pathprefix_python">
-<a href="#pathprefix_python" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
+        <span id="path_prefix_python">
+<a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9213,8 +9213,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathsuffix_python">
-<a href="#pathsuffix_python" style="color: inherit; text-decoration: inherit;">path<wbr>Suffix</a>
+        <span id="path_suffix_python">
+<a href="#path_suffix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9376,7 +9376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_secret_reference_python" style="color: inherit; text-decoration: inherit;">password_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
 
@@ -9535,7 +9535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_secret_reference_python" style="color: inherit; text-decoration: inherit;">password_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
 
@@ -10914,8 +10914,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="mountcommand_python">
-<a href="#mountcommand_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
+        <span id="mount_command_python">
+<a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10924,8 +10924,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11033,8 +11033,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="mountcommand_python">
-<a href="#mountcommand_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
+        <span id="mount_command_python">
+<a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11043,8 +11043,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

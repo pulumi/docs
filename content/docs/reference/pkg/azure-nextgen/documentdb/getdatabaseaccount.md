@@ -294,6 +294,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="backuppolicy_csharp">
+<a href="#backuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response&gt;</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span> 
@@ -588,6 +598,16 @@ The following output properties are available:
         <span class="property-type"><a href="#apipropertiesresponse">Api<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}API specific properties.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="backuppolicy_go">
+<a href="#backuppolicy_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -888,6 +908,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="backuppolicy_nodejs">
+<a href="#backuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response | Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
@@ -1089,7 +1119,7 @@ The following output properties are available:
 <a href="#failover_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoverpolicyresponse">List[Failover<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#failoverpolicyresponse">Sequence[Failover<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the regions ordered by their failover priorities.{{% /md %}}</dd>
 
@@ -1099,7 +1129,7 @@ The following output properties are available:
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">List[Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#locationresponse">Sequence[Location<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains all of the locations enabled for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1119,7 +1149,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Private Endpoint Connections configured for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1149,7 +1179,7 @@ The following output properties are available:
 <a href="#read_locations_python" style="color: inherit; text-decoration: inherit;">read_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">List[Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#locationresponse">Sequence[Location<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains of the read locations enabled for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1169,7 +1199,7 @@ The following output properties are available:
 <a href="#write_locations_python" style="color: inherit; text-decoration: inherit;">write_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">List[Location<wbr>Response]</a></span>
+        <span class="property-type"><a href="#locationresponse">Sequence[Location<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the write location for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1179,9 +1209,19 @@ The following output properties are available:
 <a href="#api_properties_python" style="color: inherit; text-decoration: inherit;">api_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apipropertiesresponse">Dict[Api<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apipropertiesresponse">Api<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}API specific properties.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="backup_policy_python">
+<a href="#backup_policy_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1189,7 +1229,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List[Capability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Cosmos DB capabilities for the account{{% /md %}}</dd>
 
@@ -1209,7 +1249,7 @@ The following output properties are available:
 <a href="#consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistencypolicyresponse">Dict[Consistency<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#consistencypolicyresponse">Consistency<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consistency policy for the Cosmos DB database account.{{% /md %}}</dd>
 
@@ -1219,7 +1259,7 @@ The following output properties are available:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicyresponse">List[Cors<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#corspolicyresponse">Sequence[Cors<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd>
 
@@ -1289,7 +1329,7 @@ The following output properties are available:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressorrangeresponse">List[Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressorrangeresponse">Sequence[Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules.{{% /md %}}</dd>
 
@@ -1339,7 +1379,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
 
@@ -1349,7 +1389,7 @@ The following output properties are available:
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Network ACL rules configured for the Cosmos DB account.{{% /md %}}</dd>
 
@@ -1683,6 +1723,45 @@ The following output properties are available:
 
 
 
+<h4 id="continuousmodebackuppolicyresponse">Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="corspolicyresponse">Cors<wbr>Policy<wbr>Response</h4>
 
 
@@ -1877,8 +1956,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1887,8 +1966,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1897,8 +1976,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exposedheaders_python">
-<a href="#exposedheaders_python" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+        <span id="exposed_headers_python">
+<a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1907,8 +1986,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxageinseconds_python">
-<a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+        <span id="max_age_in_seconds_python">
+<a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2056,8 +2135,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2145,8 +2224,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipaddressorrange_python">
-<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Or<wbr>Range</a>
+        <span id="ip_address_or_range_python">
+<a href="#ip_address_or_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>or_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2404,8 +2483,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2414,8 +2493,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iszoneredundant_python">
-<a href="#iszoneredundant_python" style="color: inherit; text-decoration: inherit;">is<wbr>Zone<wbr>Redundant</a>
+        <span id="is_zone_redundant_python">
+<a href="#is_zone_redundant_python" style="color: inherit; text-decoration: inherit;">is_<wbr>zone_<wbr>redundant</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2431,6 +2510,204 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="periodicmodebackuppolicyresponse">Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_csharp">
+<a href="#periodicmodeproperties_csharp" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_go">
+<a href="#periodicmodeproperties_go" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodicmodeproperties_nodejs">
+<a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodic_mode_properties_python">
+<a href="#periodic_mode_properties_python" style="color: inherit; text-decoration: inherit;">periodic_<wbr>mode_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_csharp">
+<a href="#backupintervalinminutes_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_csharp">
+<a href="#backupretentionintervalinhours_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_go">
+<a href="#backupintervalinminutes_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_go">
+<a href="#backupretentionintervalinhours_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupintervalinminutes_nodejs">
+<a href="#backupintervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Interval<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupretentionintervalinhours_nodejs">
+<a href="#backupretentionintervalinhours_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_interval_in_minutes_python">
+<a href="#backup_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>interval_<wbr>in_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_retention_interval_in_hours_python">
+<a href="#backup_retention_interval_in_hours_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>interval_<wbr>in_<wbr>hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2458,7 +2735,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2478,7 +2755,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2515,7 +2792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2535,7 +2812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2572,7 +2849,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2592,7 +2869,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2629,7 +2906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2649,7 +2926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2657,7 +2934,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Dict[Private<wbr>Endpoint<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
 
@@ -2667,7 +2944,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
 
@@ -2980,8 +3257,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoremissingvnetserviceendpoint_python">
-<a href="#ignoremissingvnetserviceendpoint_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>VNet<wbr>Service<wbr>Endpoint</a>
+        <span id="ignore_missing_v_net_service_endpoint_python">
+<a href="#ignore_missing_v_net_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>v_<wbr>net_<wbr>service_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
