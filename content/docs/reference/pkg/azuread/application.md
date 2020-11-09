@@ -14,6 +14,14 @@ Manages an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write owned by applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
+## Import
+
+Azure Active Directory Applications can be imported using the `object id`, e.g.
+
+```sh
+ $ pulumi import azuread:index/application:Application test 00000000-0000-0000-0000-000000000000
+```
+
 {{% examples %}}
 ## Example Usage
 
@@ -4028,6 +4036,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+Azure Active Directory Applications can be imported using the `object id`, e.g.
+
+```sh
+ $ pulumi import azuread:index/application:Application test 00000000-0000-0000-0000-000000000000
+```
 
 
 

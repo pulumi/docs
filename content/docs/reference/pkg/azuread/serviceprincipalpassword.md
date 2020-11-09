@@ -14,6 +14,14 @@ Manages a Password associated with a Service Principal within Azure Active Direc
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
+## Import
+
+PPasswords can be imported using the `object id` of a Service Principal and the `key id` of the password, e.g.
+
+```sh
+ $ pulumi import azuread:index/servicePrincipalPassword:ServicePrincipalPassword test 00000000-0000-0000-0000-000000000000/11111111-1111-1111-1111-111111111111
+```
+
 {{% examples %}}
 ## Example Usage
 
@@ -1186,6 +1194,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+PPasswords can be imported using the `object id` of a Service Principal and the `key id` of the password, e.g.
+
+```sh
+ $ pulumi import azuread:index/servicePrincipalPassword:ServicePrincipalPassword test 00000000-0000-0000-0000-000000000000/11111111-1111-1111-1111-111111111111
+```
 
 
 

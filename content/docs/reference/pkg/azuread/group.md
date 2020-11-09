@@ -14,6 +14,14 @@ Manages a Group within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Read and write all groups` within the `Windows Azure Active Directory` API. In addition it must also have either the `Company Administrator` or `User Account Administrator` Azure Active Directory roles assigned in order to be able to delete groups. You can assign one of the required Azure Active Directory Roles with the **AzureAD PowerShell Module**, which is available for Windows PowerShell or in the Azure Cloud Shell. Please refer to [this documentation](https://docs.microsoft.com/en-us/powershell/module/azuread/add-azureaddirectoryrolemember) for more details.
 
+## Import
+
+Azure Active Directory Groups can be imported using the `object id`, e.g.
+
+```sh
+ $ pulumi import azuread:index/group:Group my_group 00000000-0000-0000-0000-000000000000
+```
+
 {{% examples %}}
 ## Example Usage
 
@@ -1049,6 +1057,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+Azure Active Directory Groups can be imported using the `object id`, e.g.
+
+```sh
+ $ pulumi import azuread:index/group:Group my_group 00000000-0000-0000-0000-000000000000
+```
 
 
 
