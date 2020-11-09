@@ -4,7 +4,7 @@ meta_desc: "Explore how to build accessible developer platforms with Pulumi and 
 featured: false
 pre_recorded: false
 pulumi_tv: false
-unlisted: false
+unlisted: true
 gated: false
 type: webinars
 external: true

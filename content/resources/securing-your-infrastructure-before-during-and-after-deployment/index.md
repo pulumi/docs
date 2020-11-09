@@ -8,7 +8,7 @@ featured: false
 pre_recorded: false
 pulumi_tv: false
 preview_image: /images/webinar/snyk-circleci-pulumi.png
-unlisted: false
+unlisted: true
 gated: false
 type: webinars
 external: true

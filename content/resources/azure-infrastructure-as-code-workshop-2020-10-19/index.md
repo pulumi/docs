@@ -10,7 +10,7 @@ featured: false
 pre_recorded: false
 pulumi_tv: false
 preview_image: /images/webinar/pulumi_workshop.jpg
-unlisted: false
+unlisted: true
 gated: true
 type: webinars
 external: false

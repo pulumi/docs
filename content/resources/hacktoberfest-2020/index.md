@@ -3,7 +3,7 @@ meta_desc: Join Pulumi for Hacktoberfest and help us build open source
   integrations, automation and libraries.
 title: Hacktoberfest 2020
 subtitle: Help us build new open source capabilities for Pulumi
-unlisted: false
+unlisted: true
 
 aliases:
   - /events/hacktoberfest-2020

@@ -10,6 +10,8 @@ aliases:
 # The layout of the landing page.
 type: events
 
+unlisted: true
+
 # The url slug for the even landing page.
 url_slug: "workshop-london-2020-09-23"
 

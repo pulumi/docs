@@ -7,7 +7,7 @@ meta_desc: "The Cloud Engineering Summit is a day-long experience filled with be
 featured: true
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
