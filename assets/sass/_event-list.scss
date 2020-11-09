@@ -5,10 +5,18 @@
                 ~ .event-list-filter li[data-filter-name="all"] a {
                     @apply text-gray-700;
                 }
+
+                ~ h3[data-filter-title="all"] {
+                    @apply hidden;
+                }
             }
 
             ~ .event-list-filter li[data-filter-name="#{$filter-name}"] a {
                 @apply text-blue-500;
+            }
+
+            ~ h3[data-filter-title="#{$filter-name}"] {
+                @apply block;
             }
 
             // To support intially loading all the items on the page we first need
