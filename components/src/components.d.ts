@@ -50,6 +50,11 @@ export namespace Components {
   }
   interface PulumiExample {}
   interface PulumiExamples {}
+  interface PulumiHubspotForm {
+    'class'?: string;
+    'formId': string;
+    'goToWebinarKey'?: string;
+  }
   interface PulumiRoot {}
   interface PulumiTooltip {
     'hide': () => Promise<unknown>;
@@ -97,6 +102,12 @@ declare global {
     new (): HTMLPulumiExamplesElement;
   };
 
+  interface HTMLPulumiHubspotFormElement extends Components.PulumiHubspotForm, HTMLStencilElement {}
+  var HTMLPulumiHubspotFormElement: {
+    prototype: HTMLPulumiHubspotFormElement;
+    new (): HTMLPulumiHubspotFormElement;
+  };
+
   interface HTMLPulumiRootElement extends Components.PulumiRoot, HTMLStencilElement {}
   var HTMLPulumiRootElement: {
     prototype: HTMLPulumiRootElement;
@@ -121,6 +132,7 @@ declare global {
     'pulumi-convert': HTMLPulumiConvertElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
+    'pulumi-hubspot-form': HTMLPulumiHubspotFormElement;
     'pulumi-root': HTMLPulumiRootElement;
     'pulumi-tooltip': HTMLPulumiTooltipElement;
     'pulumi-top-button': HTMLPulumiTopButtonElement;
@@ -155,6 +167,11 @@ declare namespace LocalJSX {
   }
   interface PulumiExample {}
   interface PulumiExamples {}
+  interface PulumiHubspotForm {
+    'class'?: string;
+    'formId'?: string;
+    'goToWebinarKey'?: string;
+  }
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
@@ -168,6 +185,7 @@ declare namespace LocalJSX {
     'pulumi-convert': PulumiConvert;
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
+    'pulumi-hubspot-form': PulumiHubspotForm;
     'pulumi-root': PulumiRoot;
     'pulumi-tooltip': PulumiTooltip;
     'pulumi-top-button': PulumiTopButton;
@@ -186,6 +204,7 @@ declare module "@stencil/core" {
       'pulumi-convert': LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
+      'pulumi-hubspot-form': LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
       'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
       'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
