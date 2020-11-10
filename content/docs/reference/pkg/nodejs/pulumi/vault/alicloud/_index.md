@@ -3,7 +3,7 @@ title: "Module alicloud"
 title_tag: "Module alicloud | Package @pulumi/vault | Node.js SDK"
 linktitle: "alicloud"
 meta_desc: "Explore members of the alicloud module in the @pulumi/vault package."
-git_sha: "9dcebd2061ea8c3777afa552aff86b3cc4aa6f14"
+git_sha: "7f3a154bc46dac6b757990292d938f6d391d33ae"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuthBackendRole" data-link-title="AuthBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L27">
         Resource <strong>AuthBackendRole</strong>
     </a>
 </h3>
@@ -57,7 +57,7 @@ const alicloudAuthBackendRole = new vault.alicloud.AuthBackendRole("alicloudAuth
 ```
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L122"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -71,7 +71,7 @@ Create a AuthBackendRole resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -82,14 +82,14 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -100,7 +100,7 @@ Returns true if the given object is an instance of AuthBackendRole.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -108,7 +108,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The role's arn.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L63">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L63">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ Path to the mounted AliCloud auth backend.
 Defaults to `alicloud`
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L68">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L68">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ Name of the role. Must correspond with the name of
 the role reflected in the arn.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L74">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L74">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBoundCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L81">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L81">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenExplicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L86">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L86">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L91">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L91">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNoDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L97">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L97">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNumUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L104">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L104">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L109">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L109">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L114">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L114">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L122">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L122">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -237,7 +237,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AuthBackendRoleArgs" data-link-title="AuthBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L257">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L257">
         interface <strong>AuthBackendRoleArgs</strong>
     </a>
 </h3>
@@ -247,7 +247,7 @@ deployments.
 The set of arguments for constructing a AuthBackendRole resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L261">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L261">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ The set of arguments for constructing a AuthBackendRole resource.
 The role's arn.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L266">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L266">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ Path to the mounted AliCloud auth backend.
 Defaults to `alicloud`
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L271">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L271">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ Name of the role. Must correspond with the name of
 the role reflected in the arn.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L277">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L277">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -283,7 +283,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L284">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L284">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L289">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L289">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -303,7 +303,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L294">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L294">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L300">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L300">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L307">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L307">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L312">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L312">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -342,7 +342,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L317">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L317">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L325">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L325">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h3 class="pdoc-module-header" id="AuthBackendRoleState" data-link-title="AuthBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L183">
         interface <strong>AuthBackendRoleState</strong>
     </a>
 </h3>
@@ -373,7 +373,7 @@ requests a different type at generation time.
 Input properties used for looking up and filtering AuthBackendRole resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L187">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L187">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ Input properties used for looking up and filtering AuthBackendRole resources.
 The role's arn.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L192">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L192">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +390,7 @@ Path to the mounted AliCloud auth backend.
 Defaults to `alicloud`
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L197">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L197">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ Name of the role. Must correspond with the name of
 the role reflected in the arn.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L203">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L203">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -409,7 +409,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L210">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L210">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L215">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L215">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L220">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L220">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L226">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L226">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L233">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L233">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -459,7 +459,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L238">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L238">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -468,7 +468,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L243">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L243">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -477,7 +477,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/alicloud/authBackendRole.ts#L251">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/alicloud/authBackendRole.ts#L251">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
