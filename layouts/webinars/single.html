@@ -26,6 +26,7 @@
                 {{ $buttonText := (cond (eq .Params.pre_recorded true) "WATCH NOW" "REGISTER NOW") }}
                 <div class="md:w-1/2 md:mx-8">
                     {{ $preRecorded := .Params.pre_recorded }}
+                    {{ $multipleSessions := isset .Params "multiple" }}
                     {{ with .Params.main }}
 
 
@@ -34,7 +35,11 @@
                         {{ if eq $preRecorded true }}
                             <span class="uppercase text-orange text-sm font-bold">On Demand | Recorded on:</span>
                         {{ end }}
-                        <pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime>
+                        {{ if $multipleSessions }}
+                            <span>Multiple sessions available. Check the registration form for dates and times.</span>
+                        {{ else }}
+                            <pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime>
+                        {{ end }}
                         <p class="uppercase text-orange text-sm font-bold mt-2">DURATION: {{ .duration }}</p>
                         <div class="text-gray-600">
                             {{ .description | markdownify }}
