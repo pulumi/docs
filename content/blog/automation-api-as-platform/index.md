@@ -12,19 +12,19 @@ tags:
 
 If you could create infrastructure without using a cloud provider's console, a CLI, or a templating engine, what would you build? Pulumi's Automation API lets you create declarative infrastructure defined by your best practices and expose it behind a REST, gRPC, or custom API.
 
-So just what is Automation API? Think of it as Pulumi's infrastructure as code engine as an SDK. Instead of writing code and using the CLI to declare infrastructure, you can directly tell the engine to build your infrastructure. Imagine building an application that creates infrastructure via a REST interface. Get ready, because that's what we're going to do.
+So just what is Automation API? Think of it as Pulumi's infrastructure as code engine as an SDK. Instead of writing code and using the CLI to declare infrastructure, you can directly tell the engine to build your infrastructure. This means that you're using the same declarative IaC tooling with the predictability, robustness, safety, and desired state management, except it has a new programmatic surface area. Imagine building an application that creates infrastructure via a REST interface. Get ready, because that's what we're going to do.
 
 <!--more-->
 
 ## Self-service Cloud Infrastructure
 
-Automation API is just another package that runs inside your favorite frameworks and works with other packages. You can create methods or functions to create infrastructure that you can call from other frameworks. One Automation API use case is self-service infrastructure. You can create declarative infrastructure and expose it behind a REST interface.
+Automation API is just another package that runs inside your favorite frameworks and works with other packages. You can create methods or functions to create infrastructure that you can call from other frameworks. One Automation API use case is a self-service infrastructure. You can create declarative infrastructure and expose it behind a REST interface. Your infrastructure is also backed by a JSON state file managed by the Pulumi SaaS that allows you to create and update them dynamically.
 
 This example demonstrates how to create infrastructure with Automation API and the [Express](https://expressjs.com/) Node.js  framework. To keep this example simple, we'll deploy the REST API locally. To deploy the code in the cloud, for example, in a virtual machine, we'll need to create an [instance profile](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) to store AWS credentials. Deploying Automation API is beyond this article's scope, so we'll use `localhost` as the server's endpoint. We'll cover deploying Automation API in the cloud in subsequent articles.
 
 ### Infrastructure as a function
 
-We use an `inline` Pulumi program that doesn't require a separate package with `index.ts` and `Pulumi.yaml` files. Inline programs are functions that can be authored in an `index.ts` file or be imported from another package. The example deploys an AWS S3 website with the context and deployment automation defined in a function.
+We use an `inline` Pulumi program that doesn't require a separate package with `index.ts` and `Pulumi.yaml` files, although they can be authored in an `index.ts` file or imported from another package. The example deploys an AWS S3 website with the context and deployment automation defined in a function. Functions can be [components]({{< relref "/docs/intro/concepts/programming-model#components" >}}), in this case, a static S3 website. However, they can be more complex, such as a Kubernetes cluster with accompanying containers and AWS resources.
 
 ```typescript
 const projectName = "pulumi_over_http";
@@ -87,7 +87,7 @@ To make the contents accessible, we create and set a policy for the S3 bucket.
 
 ### Building the REST API
 
-We use the Express `RequestHandler` callback to create the S3 static website buckets by creating the stack locally. Calling this handler creates a new bucket which represents an individual site.
+We use the Express `RequestHandler` callback to create the S3 static website buckets by creating the stack locally. Calling this handler creates a new bucket which represents an individual site. It's important to note that one of the advantages of using code is the ability to detect and handle error scenarios, which is necessary for online infrastructure or when embedding it in other complex software.
 
 ```typescript
 // creates new sites
@@ -231,7 +231,7 @@ app.listen(1337, () => console.info("server running on :1337"));
 
 ## Trying it out
 
-The complete example is available on [GitHub](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts). along with other examples in both Nodejs and go. To run the TypeScript example, run:
+The complete example is available on [GitHub](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts), along with other examples in both Nodejs and go. To run the TypeScript example, run:
 
 ```bash
 $ yarn install
@@ -268,6 +268,8 @@ $ curl --header "Content-Type: application/json"   --request DELETE http://local
 ## Pulling it all together
 
 So what can you do with this? We used a static website in this example so that results are immediately available. However, this application does basic [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations, which are the basis of many applications. For example, an application could send photos to a bucket or send data to a database application.
+
+Automation API enables building your custom cloud platforms. This example has shown us how to take our customized unit of infrastructure and expose it to our broader team via a REST interface that we define and control. This interface is familiar to developers and feels more comfortable than using IaC directly. Today, we expose a static website, but tomorrow it could be a Kubernetes application platform with all of our networking and security best practices.
 
 Automation API lets you build and explore new implementation patterns with cloud resources. Check out the other things you can build with Automation API.
 
