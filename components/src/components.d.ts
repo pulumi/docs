@@ -48,6 +48,10 @@ export namespace Components {
     'from': SourceKind;
     'theme': string;
   }
+  interface PulumiDatetime {
+    'class'?: string;
+    'date': string;
+  }
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiHubspotForm {
@@ -90,6 +94,12 @@ declare global {
     new (): HTMLPulumiConvertElement;
   };
 
+  interface HTMLPulumiDatetimeElement extends Components.PulumiDatetime, HTMLStencilElement {}
+  var HTMLPulumiDatetimeElement: {
+    prototype: HTMLPulumiDatetimeElement;
+    new (): HTMLPulumiDatetimeElement;
+  };
+
   interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {}
   var HTMLPulumiExampleElement: {
     prototype: HTMLPulumiExampleElement;
@@ -130,6 +140,7 @@ declare global {
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
     'pulumi-convert': HTMLPulumiConvertElement;
+    'pulumi-datetime': HTMLPulumiDatetimeElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-hubspot-form': HTMLPulumiHubspotFormElement;
@@ -165,6 +176,10 @@ declare namespace LocalJSX {
     'from'?: SourceKind;
     'theme'?: string;
   }
+  interface PulumiDatetime {
+    'class'?: string;
+    'date'?: string;
+  }
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiHubspotForm {
@@ -183,6 +198,7 @@ declare namespace LocalJSX {
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
     'pulumi-convert': PulumiConvert;
+    'pulumi-datetime': PulumiDatetime;
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
     'pulumi-hubspot-form': PulumiHubspotForm;
@@ -202,6 +218,7 @@ declare module "@stencil/core" {
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
       'pulumi-convert': LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
+      'pulumi-datetime': LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-hubspot-form': LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
