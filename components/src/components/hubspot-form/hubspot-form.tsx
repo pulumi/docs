@@ -28,6 +28,9 @@ export class HubspotForm {
     @State()
     didLoad: boolean = false;
 
+    // The window event listener used to handle submitting form data to Segment.
+    windowEventHandler: (this: Window, ev: MessageEvent) => any;
+
     // When the component loads we need to wait for the 'hbspt' property to
     // propogate up to the global window object. Then once it is available
     // we should create the HubSpot form.
@@ -49,16 +52,20 @@ export class HubspotForm {
             console.log(err);
         });
 
-        const handleFormSubmission = this.handleFormSubmission;
         // Listen for the HubSpot form to be loaded.
-        window.addEventListener('message', event => {
-            if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormReady') {
-                const form = document.querySelector("form.hs-form") as HTMLFormElement;
+        this.windowEventHandler = this.handleWindowMessage.bind(this);
+        window.addEventListener("message", this.windowEventHandler);
+    }
 
-                // Send an analytics event with the UTM values when the form is submitted.
-                form.addEventListener("submit", () => handleFormSubmission(form.attr("data-form-id")));
-            }
-        });
+    disconnectedCallback() {
+        window.removeEventListener("message", this.windowEventHandler);
+    }
+
+    private handleWindowMessage(event: MessageEvent) {
+        if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormReady") {
+            const form = document.querySelector("form.hs-form") as HTMLFormElement;
+            form.addEventListener("submit", () => this.handleFormSubmission(form.getAttribute("data-form-id")));
+        }
     }
 
     // When the form is submiited we also send an event to segment with the relevant UTM tags.

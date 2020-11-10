@@ -1,5 +1,4 @@
 import { Component, Prop, State, h } from '@stencil/core';
-import { waitForElementToExist } from "../../util/util";
 
 interface WebinarSessionItem {
     datetime: string;
@@ -37,6 +36,9 @@ export class WebinarFormSelect {
     @State()
     formSubmitted: boolean = false;
 
+    // The window event listener used to handle submitting form data to Segment.
+    private windowEventHandler: (this: Window, ev: MessageEvent) => any;
+
     // When the component loads we need to parse the session strings and turn the datetime
     // into a human friendly format.
     componentWillLoad() {
@@ -61,21 +63,29 @@ export class WebinarFormSelect {
 
     // After the form submits we should hide the session selector.
     componentDidLoad() {
-        const handleFormSubmit = () => {
-            this.formSubmitted = true;
-        };
-        const formSubmissionHandler = handleFormSubmit.bind(this);
+        this.windowEventHandler = this.handleWindowMessage.bind(this);
+        window.addEventListener("message", this.windowEventHandler);
+    }
 
-        waitForElementToExist("form.hs-form").then((form: HTMLFormElement) => {
-            // Add a listener to hide the form selector when the form is submitted.
-            form.addEventListener("submit", formSubmissionHandler);
-        }).catch((err) => {
-            console.log(err);
-        });
+    disconnectedCallback() {
+        window.removeEventListener("message", this.windowEventHandler);
+    }
+
+    // Handle an incoming window message.
+    private handleWindowMessage(event: MessageEvent) {
+        if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormReady") {
+            const form = document.querySelector("form.hs-form") as HTMLFormElement;
+            form.addEventListener("submit", this.handleFormSubmit.bind(this));
+        }
+    }
+
+    // Set the formSubmitted to true when the form has been submitted.
+    private handleFormSubmit() {
+        this.formSubmitted = true;
     }
 
     // When the select input changes we need to update the state accordingly.
-    handleSelectChange(hubspotFormID: string) {
+    private handleSelectChange(hubspotFormID: string) {
         this.selectedSession = this.webinarSessions.find((session) => session.hubspot_form_id === hubspotFormID);
     }
 
