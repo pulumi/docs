@@ -67,7 +67,7 @@
                         {{ with .Params.form }}
                             <h3 class="text-orange">{{ $formHeader }}</h3>
 
-                            {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id "goToWebinarKey" .gotowebinar_key) }}
+                            <pulumi-hubspot-form form-id="{{ .hubspot_form_id }}" go-to-webinar-key="{{ .gotowebinar_key }}"></pulumi-hubspot-form>
                         {{ end }}
                     {{ end }}
                 </div>
