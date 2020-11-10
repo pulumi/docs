@@ -66,6 +66,7 @@ export namespace Components {
   }
   interface PulumiTopButton {}
   interface PulumiWebinarFormSelect {
+    'labelClass'?: string;
     'selectClass'?: string;
     'sessions': string;
   }
@@ -204,6 +205,7 @@ declare namespace LocalJSX {
   interface PulumiTooltip {}
   interface PulumiTopButton {}
   interface PulumiWebinarFormSelect {
+    'labelClass'?: string;
     'selectClass'?: string;
     'sessions'?: string;
   }

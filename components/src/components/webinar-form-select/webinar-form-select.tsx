@@ -20,6 +20,10 @@ export class WebinarFormSelect {
     @Prop()
     selectClass?: string;
 
+    // The labelClass defines the class for the label.
+    @Prop()
+    labelClass?: string;
+
     // The parsed sessions string.
     @State()
     webinarSessions: WebinarSessionItem[];
@@ -58,7 +62,7 @@ export class WebinarFormSelect {
     render() {
         return (
             <div>
-                <span>Pick a Session</span>
+                <span class={this.labelClass || ""}>Pick a Session</span>
                 <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
                     {this.webinarSessions.map((session) => {
                         return <option value={session.hubspot_form_id}>{session.datetime}</option>;
