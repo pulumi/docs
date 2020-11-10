@@ -1,4 +1,5 @@
 import { Component, Prop, State, h } from '@stencil/core';
+import { waitForElementToExist } from "../../util/util";
 
 interface WebinarSessionItem {
     datetime: string;
@@ -32,6 +33,10 @@ export class WebinarFormSelect {
     @State()
     selectedSession: WebinarSessionItem;
 
+    // When the form has been submitted we need to hide the form selector.
+    @State()
+    formSubmitted: boolean = false;
+
     // When the component loads we need to parse the session strings and turn the datetime
     // into a human friendly format.
     componentWillLoad() {
@@ -54,6 +59,21 @@ export class WebinarFormSelect {
         this.selectedSession = parsedSessions[0];
     }
 
+    // After the form submits we should hide the session selector.
+    componentDidLoad() {
+        const handleFormSubmit = () => {
+            this.formSubmitted = true;
+        };
+        const formSubmissionHandler = handleFormSubmit.bind(this);
+
+        waitForElementToExist("form.hs-form").then((form: HTMLFormElement) => {
+            // Add a listener to hide the form selector when the form is submitted.
+            form.addEventListener("submit", formSubmissionHandler);
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
     // When the select input changes we need to update the state accordingly.
     handleSelectChange(hubspotFormID: string) {
         this.selectedSession = this.webinarSessions.find((session) => session.hubspot_form_id === hubspotFormID);
@@ -62,12 +82,16 @@ export class WebinarFormSelect {
     render() {
         return (
             <div>
-                <span class={this.labelClass || ""}>Pick a Session</span>
-                <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
-                    {this.webinarSessions.map((session) => {
-                        return <option value={session.hubspot_form_id}>{session.datetime}</option>;
-                    })}
-                </select>
+                { this.formSubmitted ? null :
+                    <span>
+                        <span class={this.labelClass || ""}>Pick a Session</span>
+                        <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
+                            {this.webinarSessions.map((session) => {
+                                return <option value={session.hubspot_form_id}>{session.datetime}</option>;
+                            })}
+                        </select>
+                    </span>
+                }
                 <pulumi-hubspot-form
                     key={this.selectedSession.hubspot_form_id}
                     form-id={this.selectedSession.hubspot_form_id}

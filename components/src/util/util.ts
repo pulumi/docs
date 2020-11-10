@@ -19,6 +19,35 @@ export function getUUID() {
     return uuid.v4();
 }
 
+// waitForElementToExist waits for an element to exists on the DOM and timesout
+// after a set amount of time.
+export function waitForElementToExist(selector: string, timeout: number = 3000) {
+    return new Promise((resolve, reject) => {
+        const element = document.querySelector(selector);
+
+        // If the element exists let's return it.
+        if (element) {
+            return resolve(element);
+        }
+
+        // Poll for the element to exist.
+        const interval = setInterval(() => {
+            const intervalElement = document.querySelector(selector);
+            // If the element exists return it.
+            if (intervalElement) {
+                clearInterval(interval);
+                return resolve(intervalElement);
+            }
+        }, 100);
+
+        // Timeout the function and clear the interval.
+        setTimeout(() => {
+            clearInterval(interval);
+            return reject(new Error(`The provided selector [${selector}] was not found on the DOM after ${timeout}ms.`));
+        }, timeout);
+    });
+}
+
 // waitForWindowPropertyToExist waits for a property to exist on the global window
 // variable.
 export function waitForWindowPropertyToExist(key: string, timeout: number = 3000) {
@@ -30,15 +59,15 @@ export function waitForWindowPropertyToExist(key: string, timeout: number = 3000
             return resolve(property);
         }
 
-        // Poll for the element to exist.
+        // Poll for the property to exist.
         const interval = setInterval(() => {
             const intervalProperty = window[key];
-            // If the element exists lets return it.
+            // If the property exists lets return it.
             if (intervalProperty) {
                 clearInterval(interval);
                 return resolve(intervalProperty);
             }
-        }, 50);
+        }, 100);
 
         // Timeout the function and clear the interval.
         setTimeout(() => {
