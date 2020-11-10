@@ -24,12 +24,10 @@
         <div class="container mx-auto max-w-6xl pt-16 pb-8 md:flex">
             {{ if .Params.gated }}
                 {{ $buttonText := (cond (eq .Params.pre_recorded true) "WATCH NOW" "REGISTER NOW") }}
+                {{ $multipleSessions := isset .Params "multiple" }}
                 <div class="md:w-1/2 md:mx-8">
                     {{ $preRecorded := .Params.pre_recorded }}
-                    {{ $multipleSessions := isset .Params "multiple" }}
                     {{ with .Params.main }}
-
-
                         <h2>{{ .title }}</h2>
                         <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
                         {{ if eq $preRecorded true }}
@@ -69,9 +67,14 @@
                         </p>
                     {{ else }}
                         {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
-                        {{ with .Params.form }}
-                            <h3 class="text-orange">{{ $formHeader }}</h3>
-                            <pulumi-hubspot-form form-id="{{ .hubspot_form_id }}" go-to-webinar-key="{{ .gotowebinar_key }}"></pulumi-hubspot-form>
+                        <h3 class="text-orange">{{ $formHeader }}</h3>
+                        {{ if $multipleSessions }}
+                            <pulumi-webinar-form-select
+                                select-class="w-full p-2 rounded block text-gray-700 border border-gray-300 rounded p-2 bg-white focus:outline-none focus:shadow-outline"
+                                sessions="{{ .Params.multiple | jsonify }}"
+                            ></pulumi-webinar-form-select>
+                        {{ else }}
+                            <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}" go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"></pulumi-hubspot-form>
                         {{ end }}
                     {{ end }}
                 </div>

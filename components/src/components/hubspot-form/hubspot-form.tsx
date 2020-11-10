@@ -52,7 +52,7 @@ export class HubspotForm {
         // Add an listener to send an event to Segment with the UTM
         // parameters when the form is submitted.
         const analytics = (window as any).analytics;
-        const analyticsAvailable = analytics.track && (typeof analytics.track === "function");
+        const analyticsAvailable = analytics && analytics.track && (typeof analytics.track === "function");
 
         var cookies = parseCookie();
         var utmCookie: any = parseUTMCookieString(cookies["__utmzz"]);

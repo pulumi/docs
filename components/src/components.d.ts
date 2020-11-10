@@ -65,6 +65,10 @@ export namespace Components {
     'show': () => Promise<unknown>;
   }
   interface PulumiTopButton {}
+  interface PulumiWebinarFormSelect {
+    'selectClass'?: string;
+    'sessions': string;
+  }
 }
 
 declare global {
@@ -135,6 +139,12 @@ declare global {
     prototype: HTMLPulumiTopButtonElement;
     new (): HTMLPulumiTopButtonElement;
   };
+
+  interface HTMLPulumiWebinarFormSelectElement extends Components.PulumiWebinarFormSelect, HTMLStencilElement {}
+  var HTMLPulumiWebinarFormSelectElement: {
+    prototype: HTMLPulumiWebinarFormSelectElement;
+    new (): HTMLPulumiWebinarFormSelectElement;
+  };
   interface HTMLElementTagNameMap {
     'pulumi-banner': HTMLPulumiBannerElement;
     'pulumi-choosable': HTMLPulumiChoosableElement;
@@ -147,6 +157,7 @@ declare global {
     'pulumi-root': HTMLPulumiRootElement;
     'pulumi-tooltip': HTMLPulumiTooltipElement;
     'pulumi-top-button': HTMLPulumiTopButtonElement;
+    'pulumi-webinar-form-select': HTMLPulumiWebinarFormSelectElement;
   }
 }
 
@@ -192,6 +203,10 @@ declare namespace LocalJSX {
   }
   interface PulumiTooltip {}
   interface PulumiTopButton {}
+  interface PulumiWebinarFormSelect {
+    'selectClass'?: string;
+    'sessions'?: string;
+  }
 
   interface IntrinsicElements {
     'pulumi-banner': PulumiBanner;
@@ -205,6 +220,7 @@ declare namespace LocalJSX {
     'pulumi-root': PulumiRoot;
     'pulumi-tooltip': PulumiTooltip;
     'pulumi-top-button': PulumiTopButton;
+    'pulumi-webinar-form-select': PulumiWebinarFormSelect;
   }
 }
 
@@ -225,6 +241,7 @@ declare module "@stencil/core" {
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
       'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
       'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
+      'pulumi-webinar-form-select': LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
     }
   }
 }
