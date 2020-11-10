@@ -54,35 +54,35 @@
 
             <!-- The event filter -->
             <div class="w-full mb-5 text-center event-list-filter">
-                <ul class="flex list-none sm:justify-center p-0">
-                    <li class="w-1/12 sm:w-1/6 lg:w-1/12 text-center mx-5" data-filter-name="all">
+                <ul class="flex flex-wrap items-center justify-center list-none p-0">
+                    <li class="mx-3 md:mx-6" data-filter-name="all">
                         <a href="#all" class="text-blue-500 hover:text-blue-500 flex flex-col">
-                            <i class="fas fa-asterisk text-4xl"></i>
-                            <p class="hidden sm:block m-0 pt-3">All</p>
+                            <i class="fas fa-asterisk text-3xl"></i>
+                            <p class="text-xs md:text-base m-0 pt-3">All</p>
                         </a>
                     </li>
-                    <li class="w-1/12 sm:w-1/6 lg:w-1/12 text-center mx-5" data-filter-name="featured">
+                    <li class="mx-3 md:mx-6" data-filter-name="featured">
                         <a href="#featured" class="text-gray-700 hover:text-blue-500 flex flex-col">
-                            <i class="fas fa-star text-4xl"></i>
-                            <p class="hidden sm:block m-0 pt-3">Featured</p>
+                            <i class="fas fa-star text-3xl"></i>
+                            <p class="text-xs md:text-base m-0 pt-3">Featured</p>
                         </a>
                     </li>
-                    <li class="w-1/12 sm:w-1/6 lg:w-1/12 text-center mx-5" data-filter-name="upcoming">
+                    <li class="mx-3 md:mx-6" data-filter-name="upcoming">
                         <a href="#upcoming" class="text-gray-700 hover:text-blue-500 flex flex-col">
-                            <i class="fas fa-users text-4xl"></i>
-                            <p class="hidden sm:block m-0 pt-3">Upcoming Sessions</p>
+                            <i class="fas fa-users text-3xl"></i>
+                            <p class="text-xs md:text-base m-0 pt-3">Upcoming</p>
                         </a>
                     </li>
-                    <li class="w-1/12 sm:w-1/6 lg:w-1/12 text-center mx-5" data-filter-name="videos">
+                    <li class="mx-3 md:mx-6" data-filter-name="videos">
                         <a href="#videos" class="text-gray-700 hover:text-blue-500 flex flex-col">
-                            <i class="fas fa-video text-4xl"></i>
-                            <p class="hidden sm:block m-0 pt-3">Videos</p>
+                            <i class="fas fa-video text-3xl"></i>
+                            <p class="text-xs md:text-base m-0 pt-3">Videos</p>
                         </a>
                     </li>
-                    <li class="w-1/12 sm:w-1/6 lg:w-1/12 text-center mx-5" data-filter-name="pulumitv">
+                    <li class="mx-3 md:mx-6" data-filter-name="pulumitv">
                         <a href="#pulumitv" class="text-gray-700 hover:text-blue-500 flex flex-col">
-                            <i class="fas fa-tv text-4xl"></i>
-                            <p class="hidden sm:block m-0 pt-3">PulumiTV</p>
+                            <i class="fas fa-tv text-3xl"></i>
+                            <p class="text-xs md:text-base m-0 pt-3">PulumiTV</p>
                         </a>
                     </li>
                 </ul>
@@ -165,9 +165,9 @@
                             {{ $target = "" }}
                         {{ end }}
 
-                        <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col mx-auto">
+                        <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col mx-2 md:mx-0">
                             <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="w-full h-full">
-                                <span class="block w-full h-full p-3 pl-6 relative">
+                                <span class="block w-full h-full p-4 relative">
                                     <span class="block flex border-solid border-b border-gray-200 pb-2">
                                         <span>
                                             <span class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-500 text-white mr-3">
