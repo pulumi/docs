@@ -47,3 +47,23 @@ export function waitForWindowPropertyToExist(key: string, timeout: number = 3000
         }, timeout);
     });
 }
+
+// parseUTMCookieString parses a UTM cookie string and returns an object of the values.
+export function parseUTMCookieString(utmCookieString: string) {
+    return (utmCookieString || "").split("|").reduce((obj, utm) => {
+        const parts = utm.split("=");
+        obj[parts[0]] = parts[1];
+        return obj;
+    }, {});
+}
+
+// parseCookie parses the document's cookie into an object.
+export function parseCookie() {
+    return document.cookie.split(";").reduce((obj, cookie) => {
+        const index = cookie.indexOf("=");
+        const key = cookie.substring(0, index).trim();
+        const value = cookie.substring(index + 1).trim();
+        obj[key] = value;
+        return obj;
+    }, {});
+}

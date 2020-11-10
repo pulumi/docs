@@ -1,5 +1,5 @@
 import { Component, Prop, h, State } from '@stencil/core';
-import { waitForWindowPropertyToExist } from "../../util/util";
+import { waitForWindowPropertyToExist, parseCookie, parseUTMCookieString } from "../../util/util";
 
 @Component({
     tag: 'pulumi-hubspot-form',
@@ -48,6 +48,37 @@ export class HubspotForm {
             console.log("Unable to load HubSpot form.");
             console.log(err);
         });
+
+        // Add an listener to send an event to Segment with the UTM
+        // parameters when the form is submitted.
+        const analytics = (window as any).analytics;
+        const analyticsAvailable = analytics.track && (typeof analytics.track === "function");
+
+        var cookies = parseCookie();
+        var utmCookie: any = parseUTMCookieString(cookies["__utmzz"]);
+
+        if (analyticsAvailable) {
+            // Listen for the HubSpot form to be loaded.
+            window.addEventListener('message', event => {
+                if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormReady') {
+                    const form = document.querySelector(".hbspt-form form") as HTMLFormElement;
+                    const email = document.querySelector(".hbspt-form form input[name='email']") as HTMLInputElement;
+
+                    // Send an analytics event with the UTM values when the form is submitted.
+                    form.on("submit", () => {
+                        const submissionData = {
+                            formId: form.attr("data-form-id"),
+                            email: email.value,
+                            utmCampaign: utmCookie.utmccn || "(not set)",
+                            utmSource: utmCookie.utmcsr || "(direct)",
+                            utmMedium: utmCookie.utmcmd || "(none)",
+                        };
+
+                        analytics.track("form-submission", submissionData);
+                    });
+                }
+            });
+        }
     }
 
     renderIsLoadingForm() {
