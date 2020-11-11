@@ -20,7 +20,7 @@ Having free access to resources frees you to experiment, try out new ideas, and 
 
 ## AWS
 
-Amazon offers a free tier composed of always free, 12 months free available to new customers, and short term trials. The following is a selection of always free resources with accompanying tutorials, examples, and blog posts to get you started.
+Amazon offers a [free tier](https://aws.amazon.com/free/) composed of always free, 12 months free available to new customers, and short term trials. The following is a selection of always free resources with accompanying tutorials, examples, and blog posts to get you started.
 
 [**Amazon DynamoDB**](https://aws.amazon.com/dynamodb/): Amazon’s NoSQL key-value and document database with 25 GB of storage and 25 units of read and write each month.
 
@@ -50,7 +50,7 @@ Amazon offers a free tier composed of always free, 12 months free available to n
 
 ## Azure
 
-Similar to Amazon, Azure offers both an always free tier and 12 months free to new users. Azure also includes a $200 credit for 30 days after signing up. A list of free services and their terms are [available](https://azure.microsoft.com/en-us/free/free-account-faq/). Let's take a look at how we can use some of these resources to build infrastructure.
+Similar to Amazon, Azure offers both an always [free tier](https://azure.microsoft.com/en-us/free/) and 12 months free to new users. Azure also includes a $200 credit for 30 days after signing up. A list of free services and their terms are [available](https://azure.microsoft.com/en-us/free/free-account-faq/). Let's take a look at how we can use some of these resources to build infrastructure.
 
 [**Azure Active Directory**](https://azure.microsoft.com/en-us/services/active-directory/): Azure AD identity service provides single sign-on and multi-factor authentication to protect your users. Up to 50,000 authentications per month are available free.
 
@@ -84,7 +84,7 @@ Similar to Amazon, Azure offers both an always free tier and 12 months free to n
 
 ## Google Cloud
 
-Google Cloud has over 20 free services with monthly limits and provides a $300 credit with a new account. Services offered by Google Cloud run on the same infrastructure as their public services. A complete listing of services available on the free tier is [available here](https://cloud.google.com/free).
+Google Cloud has a [free tier](https://cloud.google.com/free) with over 20 free services with monthly limits and provides a $300 credit with a new account. Services offered by Google Cloud run on the same infrastructure as their public services. The complete listing of services available on the free tier is [available](https://cloud.google.com/free).
 
 [**Google Compute Engine**](https://cloud.google.com/compute): Compute Engine provides predefined virtual machine configurations ranging from small general purpose instances to large memory-optimized or fast compute-optimized instances with up to 60 vCPUs. You can create a virtual machine that best fits your workloads.
 
