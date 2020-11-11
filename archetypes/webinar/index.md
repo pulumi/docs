@@ -56,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # URL for creating a listing in our podcast XML feed.
-    podcast_url: ""
+    podcast_file_name: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-02-05T10:00:00-07:00
     # Duration of the webinar.

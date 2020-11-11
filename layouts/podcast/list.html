@@ -28,7 +28,7 @@
     <!-- Create the resource data dicts for webinars. -->
     {{ range $webinars }}
         <!-- If the webinar is not marked as unlisted we will add it to the list. -->
-        {{ if and (eq .Params.unlisted false) (isset .Params.main "podcast_url") }}
+        {{ if and (eq .Params.unlisted false) (isset .Params.main "podcast_file_name") }}
             {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" .Params.main.sortable_date "data" .) }}
         {{ end }}
     {{ end }}

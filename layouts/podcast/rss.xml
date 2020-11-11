@@ -20,7 +20,7 @@
         <itunes:category text="Technology"></itunes:category>
         <itunes:explicit>false</itunes:explicit>
         {{ range where $.Site.Pages "Type" "webinars" }}
-            {{ if isset .Params.main "podcast_url" }}
+            {{ if isset .Params.main "podcast_file_name" }}
                 {{ $podcastGuid := md5 (printf "%s_%s" .Params.title .Params.main.sortable_date) }}
                 <item>
                     <itunes:episodeType>full</itunes:episodeType>
@@ -28,7 +28,7 @@
                     <description>{{ .Params.main.description }}</description>
                     <enclosure
                         type="audio/mpeg"
-                        url="{{ (printf "%s/%s/%s" "resources" .Params.url_slug .Params.main.podcast_url) | absURL }}"
+                        url="{{ (printf "%s/%s/%s" "resources" .Params.url_slug .Params.main.podcast_file_name) | absURL }}"
                     />
                     <guid>{{ $podcastGuid }}</guid>
                     <pubDate>{{ .Params.main.sortable_date }}</pubDate>
