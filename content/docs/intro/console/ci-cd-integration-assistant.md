@@ -1,26 +1,26 @@
 ---
-title: Workflow Guide
-meta_desc: Use the Workflow Guide available in the Pulumi Console to automate your stack.
+title: CI/CD Integration Assistant
+meta_desc: The CI/CD Integration Assistant helps you automate your Pulumi stack.
 ---
 
-The workflow guide is a guided experience in the Pulumi Console that offers customized CI/CD
-workflows for your stacks. The starter workflows use best-practices in configuring a pipeline
-to automate updating your stack.
+The CI/CD integration assistant contains a guided experience in the Pulumi Console that provides customized CI/CD
+workflows for Pulumi stacks. The starter workflows use best-practices in configuring a pipeline
+to automate updating a Pulumi stack.
 
 <!--more-->
 
-The guide offers two options to get started:
+The wizard has two options to help you to get started with integrations:
 
 * Use a service that provides both a version control system and a CI/CD service
 * Or, just get the starter workflow for a CI/CD service of your choice customized for your stack
-without going through the guide
+without going through the wizard
 
-![Start Workflow Guide](/images/docs/reference/console/start-workflow-guide.png)
+![Start Workflow Wizard](/images/docs/reference/console/start-workflow-wizard.png)
 
-In addition to the guided experience, the workflow guide also offers best practice hints for stacks that do not
+The CI/CD integration assistant also offers best practice hints for stacks that do not
 have a VCS configuration.
 
-Here's a look at the various ways the workflow guide helps your team members in the Console.
+Here's a look at the various ways the assistant helps your team members in the Console.
 
 The dashboard page will show you any recent stacks that were updated and if they have VCS configuration. If not, a quick navigation
 link is provided to help users configure VCS.
@@ -31,10 +31,15 @@ A quick look at the Activity page for a stack quickly reveals which of the updat
 
 ![Activity](/images/docs/reference/console/update-activity.png)
 
+In addition to the above two features, the assistant also recognizes any "production"-like stacks created in your organization and emails
+the creator to configure VCS and to automate the stack with a CI/CD pipeline, if the appropriate configuration is not found.
+
 ## Using The Same Service For VCS and CI/CD
 
 There are many benefits for a team to choose a single service for all of their team collaboration needs. This section reviews
-how the guide helps your teams configure VCS and CI/CD using the identity that you signed-up with.
+how the wizard helps your teams configure VCS and CI/CD using the identity that you signed-up with.
+
+![Workflow Assistant Email](/images/docs/reference/console/cicd-integration-assistant-email.png)
 
 ### Configuring a VCS
 
@@ -46,18 +51,18 @@ Some services such as Atlassian Bitbucket, GitHub, GitLab offer both a version c
 So this might be a convenient option if your team wishes to keep everything related to your
 Pulumi project on a single service.
 
-> For SAML and Email-based identity users, the guide will not be able to provide smart
+> For SAML and Email-based identity users, the wizard will not be able to provide smart
 > links to a specific service due to the nature of the identity itself. However, the
-> guide still provides a customized CI/CD workflow for your stack that you can use.
+> wizard still provides a customized CI/CD workflow for your stack that you can use.
 
-After you choose an identity, the guide will provide you with a quick link
+After you choose an identity, the wizard will provide you with a quick link
 to create a new repository in the target service as well as the instructions for
 ensuring that Pulumi correctly recognizes the VCS configuration.
 
 ![Configure VCS](/images/docs/reference/console/configure-vcs.png)
 
 Complete each step and check-off the appropriate step. When all steps under the
-**Configure VCS** step are complete click the **Next** button. The guide will confirm
+**Configure VCS** step are complete click the **Next** button. The wizard will confirm
 that your VCS configuration has been recognized and will automatically move you to the
 next step.
 
@@ -68,23 +73,23 @@ next step.
 Now that your Pulumi project is configured to use a VCS your team can collaborate with you easily.
 Most importantly, your Pulumi project is safe from accidents on your local machine!
 
-If you start the workflow guide having configured the VCS for your project already, the guide recognizes the state correctly
-and progress you to the next step automatically. You can see the repository that your project is integrated with by clicking
-on the Configure VCS step marker. Here's an example of how that looks:
+If you start the CI/CD integration wizard having configured the VCS for your project already,
+the wizard will skip to the next step automatically. You can see the repository that your project
+is integrated with by clicking on the Configure VCS step marker. Here's an example of how that looks:
 
 ![VCS configured](/images/docs/reference/console/vcs-configured.png)
 
 The Configure CI/CD step will help you configure secrets that will be used by your Pulumi stack.
-For supported services, the guide will provide a convenient link to the respective location
+For supported services, the wizard will provide a convenient link to the respective location
 where you can configure the secrets that will be used in the CI/CD pipeline that you will
 setup next. This includes configuring the [Pulumi Access Token]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#access-tokens" >}})
 that will be used by the Pulumi CLI to do a non-interactive login.
 
-The guide provides a convenient way to create a Pulumi Access Token without needing to leave the page.
+The wizard provides a convenient way to create a Pulumi Access Token without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)
 
-In the following example the guide is being used to configure a GitHub Actions workflow. So the guide provides a direct link to configure
+In the following example the wizard is being used to configure a GitHub Actions workflow. So the wizard provides a direct link to configure
 secrets for your workflow.
 
 ![Configure CI/CD Secrets](/images/docs/reference/console/configure-ci-cd-secrets.png)
@@ -107,15 +112,15 @@ pipelines. This way you can catch problems with changes to your infrastructure _
 ### Validation
 
 In the previous step you committed a new workflow configuration by creating a new Pull Request. This will trigger a new pipeline build
-that will run the `pulumi preview` command. Click the **Next** button to make the guide check for and validate the CI configuration.
+that will run the `pulumi preview` command. Click the **Next** button to make the wizard check for and validate the CI configuration.
 
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
-If your pull request build failed, don't worry we have a [troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}) for you!
+If your pull request build failed, don't worry we have a [troubleshooting wizard]({{< relref "/docs/wizards/continuous-delivery/troubleshooting-wizard" >}}) for you!
 
 ## Get the workflow only
 
-If instead of using the step-by-step guide, you want to access just the workflow for a specific CI/CD service and
+If instead of using the step-by-step wizard, you want to access just the workflow for a specific CI/CD service and
 configure VCS on your own, you can do that by simply selecting a service from the drop-down to get started. You will
 still be able to get a workflow template that is customized to your stack even if you choose this option.
 
