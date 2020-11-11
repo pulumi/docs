@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "The Future of Cloud Engineering: Architectures and Platforms"
-meta_desc: "Join Pulumi CTO and expert panelists Joe Beda, Al Sene, Jason Warner, and Corey Scobie as they discuss how architectures and platforms are evolving and how that will impact the role of Cloud Engineers in the future."
+meta_desc: "Join Pulumi CTO and expert panelists Joe Beda, Al Sene, Jason Warner, and Corey Scobie as they discuss how architectures and platforms are evolving."
 
 # A featured webinar will display first in the list.
 featured: false
