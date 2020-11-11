@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "The Future of Cloud Engineering: Culture, Process, & Tools"
-meta_desc: "Learn from industry experts how teams and workflows are evolving to address the challenges and opportunities of Cloud Engineering at organizations of every size."
+meta_desc: "Learn from industry experts how teams and workflows are evolving to address the challenges of Cloud Engineering at organizations of every size."
 
 # A featured webinar will display first in the list.
 featured: false
