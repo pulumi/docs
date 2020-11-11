@@ -274,4 +274,4 @@ Automation API enables building your custom cloud platforms. This example has sh
 Automation API lets you build and explore new implementation patterns with cloud resources. Check out the other things you can build with Automation API.
 
 - [The Pulumi Automation API - The Next Quantum Leap in IaC]({{< relref "/blog/automation-api" >}})
-- [Automation API Examples]("https://github.com/pulumi/automation-api-examples")
+- [Automation API Examples](https://github.com/pulumi/automation-api-examples)
