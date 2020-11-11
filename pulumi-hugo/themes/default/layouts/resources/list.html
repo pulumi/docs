@@ -30,7 +30,15 @@
     {{ range $webinars }}
         <!-- If the webinar is not marked as unlisted we will add it to the list. -->
         {{ if eq .Params.unlisted false }}
-            {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" .Params.main.sortable_date "data" .) }}
+
+            <!-- If the webinar has multiple sessions we will choose the earliest session -->
+            {{ if isset .Params "multiple" }}
+                {{ $sortedSessions := sort .Params.multiple "datetime" "asc" }}
+                {{ $earliestSession := index ($sortedSessions) 0 }}
+                {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" $earliestSession.datetime "data" .) }}
+            {{ else }}
+                {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ end }}
         {{ end }}
     {{ end }}
 
@@ -113,7 +121,12 @@
                     <!-- Set the values based on the type of the page. -->
                     {{ if eq $data.Type "webinars" }}
                         {{ $description = $data.Params.meta_desc }}
-                        {{ $displayDate = dateFormat "January 2, 2006" $data.Params.main.sortable_date }}
+
+                        {{ if isset $data.Params "multiple" }}
+                            {{ $displayDate = dateFormat "January 2, 2006" (index ($data.Params.multiple) 0).datetime }}
+                        {{ else }}
+                            {{ $displayDate = dateFormat "January 2, 2006" $data.Params.main.sortable_date }}
+                        {{ end }}
 
                         <!-- Set the url to link to. -->
                         {{ if $data.Params.external }}

@@ -24,6 +24,7 @@
         <div class="container mx-auto max-w-6xl pt-16 pb-8 md:flex">
             {{ if .Params.gated }}
                 {{ $buttonText := (cond (eq .Params.pre_recorded true) "WATCH NOW" "REGISTER NOW") }}
+                {{ $multipleSessions := isset .Params "multiple" }}
                 <div class="md:w-1/2 md:mx-8">
                     {{ $preRecorded := .Params.pre_recorded }}
                     {{ with .Params.main }}
@@ -32,9 +33,11 @@
                         {{ if eq $preRecorded true }}
                             <span class="uppercase text-orange text-sm font-bold">On Demand | Recorded on:</span>
                         {{ end }}
-                        <time class="webinar-datetime uppercase text-orange text-sm font-bold">
-                            <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
-                        </time>
+                        {{ if $multipleSessions }}
+                            <span>Multiple sessions available. Check the registration form for dates and times.</span>
+                        {{ else }}
+                            <pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime>
+                        {{ end }}
                         <p class="uppercase text-orange text-sm font-bold mt-2">DURATION: {{ .duration }}</p>
                         <div class="text-gray-600">
                             {{ .description | markdownify }}
@@ -64,10 +67,15 @@
                         </p>
                     {{ else }}
                         {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
-                        {{ with .Params.form }}
-                            <h3 class="text-orange">{{ $formHeader }}</h3>
-
-                            {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id "goToWebinarKey" .gotowebinar_key) }}
+                        <h3 class="text-orange">{{ $formHeader }}</h3>
+                        {{ if $multipleSessions }}
+                            <pulumi-webinar-form-select
+                                label-class="block mb-2 font-normal text-sm"
+                                select-class="w-full px-2 py-1 text-sm rounded block text-gray-700 border border-gray-300 rounded bg-white focus:outline-none focus:shadow-outline"
+                                sessions="{{ .Params.multiple | jsonify }}"
+                            ></pulumi-webinar-form-select>
+                        {{ else }}
+                            <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}" go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"></pulumi-hubspot-form>
                         {{ end }}
                     {{ end }}
                 </div>
