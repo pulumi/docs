@@ -221,7 +221,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -284,7 +284,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -347,7 +347,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -410,7 +410,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -911,7 +911,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1018,7 +1018,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1125,7 +1125,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1232,7 +1232,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
+    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3275,6 +3275,8 @@ is not provided, the provider project is used.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

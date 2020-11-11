@@ -1054,6 +1054,8 @@ If not set, defaults to an empty string.
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
