@@ -3,7 +3,7 @@ title: Workflow Guide
 meta_desc: Use the Workflow Guide available in the Pulumi Console to automate your stack.
 ---
 
-The workflow guide is a self-guided experience in the Pulumi Console that offers customized CI/CD
+The workflow guide is a guided experience in the Pulumi Console that offers customized CI/CD
 workflows for your stacks. The starter workflows use best-practices in configuring a pipeline
 to automate updating your stack.
 
@@ -17,7 +17,24 @@ without going through the guide
 
 ![Start Workflow Guide](/images/docs/reference/console/start-workflow-guide.png)
 
-## Setup a workflow using your Pulumi identity
+In addition to the guided experience, the workflow guide also offers best practice hints for stacks that do not
+have a VCS configuration.
+
+Here's a look at the various ways the workflow guide helps your team members in the Console.
+
+The dashboard page will show you any recent stacks that were updated and if they have VCS configuration. If not, a quick navigation
+link is provided to help users configure VCS.
+
+![Dashboard](/images/docs/reference/console/dashboard-page.png)
+
+A quick look at the Activity page for a stack quickly reveals which of the updates were run from a CI/CD pipeline and which ones were not.
+
+![Activity](/images/docs/reference/console/update-activity.png)
+
+## Using The Same Service For VCS and CI/CD
+
+There are many benefits for a team to choose a single service for all of their team collaboration needs. This section reviews
+how the guide helps your teams configure VCS and CI/CD using the identity that you signed-up with.
 
 ### Configuring a VCS
 
