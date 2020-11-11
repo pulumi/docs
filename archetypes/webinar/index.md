@@ -43,6 +43,12 @@ hero:
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
+# Webinar pages support multiple session via the 'multiple' property.
+# multiple:
+#   - datetime: 2020-02-05T10:00:00-07:00
+#     hubspot_form_id: ""
+#     gotowebinar_key: ""
+
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
@@ -50,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2019-02-05 10:00:00 -07:00
+    sortable_date: 2020-02-05T10:00:00-07:00
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.

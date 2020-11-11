@@ -363,7 +363,7 @@
                     <div class="mt-16 mx-auto md:w-1/2 md:ml-8 md:mt-0">
                         <h2 class="text-black text-center md:text-left">{{ .headline }}</h2>
                         <div class="hs-form hs-form-fg-light hs-demo-form text-black">
-                            {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id) }}
+                            <pulumi-hubspot-form form-id="{{ .hubspot_form_id }}"></pulumi-hubspot-form>
                         </div>
                         <p class="text-black text-right text-base">
                             ...or <a id="start-free-trial-text" href="https://app.pulumi.com/signup/" track-click>start a free trial</a>.
