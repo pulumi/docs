@@ -25,21 +25,15 @@ The CI/CD integration assistant also offers best practice hints for stacks that 
 have a VCS configuration. Here's a look at the various ways the assistant helps teams throughout
 the Console:
 
-The dashboard page shows recently updated stacks. The assistant alerts users by providing a quick navigation link to configure a VCS
+* The dashboard page shows recently updated stacks. The assistant alerts users by providing a quick navigation link to configure a VCS
 for any stacks that don't have it.
 
-![Dashboard](/images/docs/reference/console/dashboard-page.png)
-
-The **Activity** page for a stack allows users to scan the page quickly and tell which of the updates were run from a
+* The **Activity** page for a stack allows users to scan the page quickly and tell which of the updates were run from a
 CI/CD pipeline and which ones were not.
 
-![Activity](/images/docs/reference/console/update-activity.png)
-
-In addition to the above two features, the assistant also recognizes any "production" stacks created in your organization and emails
-the creator if a VCS configuration is not detected for it. Updating production stacks from a developer machines is not recommended,
+In addition to the above features, the assistant also recognizes any "production" stacks created in your organization and emails
+the creator if VCS configuration is not detected for it. Updating production stacks from a developer machines is not recommended,
 although there are some exceptions for doing so. The reasons for exceptions are beyond the scope of this document.
-
-![Workflow Assistant Email](/images/docs/reference/console/cicd-integration-assistant-email.png)
 
 ## Using The Same Service For VCS and CI/CD
 
@@ -64,14 +58,12 @@ After you choose an identity, the wizard will provide you with a quick link
 to create a new repository in the target service as well as the instructions for
 ensuring that Pulumi correctly recognizes the VCS configuration.
 
-![Configure VCS](/images/docs/reference/console/configure-vcs.png)
-
 Complete each step and check-off the appropriate step. When all steps under the
 **Configure VCS** step are complete click the **Next** button. The wizard will confirm
 that your VCS configuration has been recognized and will automatically move you to the
 next step.
 
-![Complete Configre VCS](/images/docs/reference/console/configure-vcs-complete.png)
+![Complete Configure VCS](/images/docs/reference/console/configure-vcs-complete.png)
 
 ### Configure CI/CD secrets
 
@@ -80,9 +72,7 @@ Most importantly, your Pulumi project is safe from accidents on your local machi
 
 If you start the CI/CD integration wizard having configured the VCS for your project already,
 the wizard will skip to the next step automatically. You can see the repository that your project
-is integrated with by clicking on the Configure VCS step marker. Here's an example of how that looks:
-
-![VCS configured](/images/docs/reference/console/vcs-configured.png)
+is integrated with by clicking on the Configure VCS step marker.
 
 The **Configure CI/CD** step will help you configure secrets that will be used by your Pulumi stack.
 For supported services, the wizard will provide a convenient link to the respective location
@@ -95,8 +85,6 @@ without needing to leave the page.
 
 In the following example the wizard is being used to configure a GitHub Actions workflow.
 So the wizard provides a direct link to configure secrets for your workflow.
-
-![Configure CI/CD Secrets](/images/docs/reference/console/configure-ci-cd-secrets.png)
 
 > See the [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) page to find the setup page for your cloud provider.
 
