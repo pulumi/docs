@@ -21,7 +21,7 @@ are the most common setups
 
 Once obtained, there are two ways to communicate your authorization tokens to Pulumi when talking to Venafi TPP:
 
-1. By setting the environment variables `VENAFI_URL`, `VENAFI_TOKEN` and `VENAFI_ZONE`:
+1. Setting the environment variables `VENAFI_URL`, `VENAFI_TOKEN` and `VENAFI_ZONE`:
 
     ```bash
     $ export VENAFI_URL=XXXXXXXXXXXXXX
