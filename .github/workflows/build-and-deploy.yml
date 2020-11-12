@@ -27,15 +27,12 @@ jobs:
           extended: true
 
       - name: Install Go
-        uses: actions/setup-go@v1
+        uses: actions/setup-go@v2
         with:
           go-version: 1.13.x
 
       - name: Install assume-role
         run: go get -u github.com/remind101/assume-role
-
-      - name: Add GOBIN to PATH
-        run: echo "::add-path::$(go env GOPATH)/bin"
 
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@releases/v1
