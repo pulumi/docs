@@ -1556,6 +1556,8 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

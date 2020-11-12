@@ -2088,6 +2088,8 @@ These can be either the names of Git repositories stored as resources in your ac
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -976,6 +976,8 @@ Only the primary key attributes are required; you can optionally provide other a
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

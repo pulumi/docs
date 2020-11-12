@@ -3,7 +3,7 @@ title: "Module types/enums/s3"
 title_tag: "Module types/enums/s3 | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/s3"
 meta_desc: "Explore members of the enums/s3 module in the @pulumi/aws package."
-git_sha: "9558abc0d823a6881528ac78b8908fb1ea24cffc"
+git_sha: "414cc1732ef52039e4e773e514df48dd16ed7aa6"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="CannedAcl" data-link-title="CannedAcl">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/9558abc0d823a6881528ac78b8908fb1ea24cffc/sdk/nodejs/types/enums/s3/index.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/types/enums/s3/index.ts#L19">
         type <strong>CannedAcl</strong>
     </a>
 </h3>
