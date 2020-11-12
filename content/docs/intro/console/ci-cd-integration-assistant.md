@@ -116,7 +116,7 @@ that will run the `pulumi preview` command. Click the **Next** button to make th
 
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
-If your pull request build failed, don't worry we have a [troubleshooting wizard]({{< relref "/docs/wizards/continuous-delivery/troubleshooting-wizard" >}}) for you!
+If your pull request build failed, don't worry we have a [troubleshooting wizard]({{< relref "/docs/wizards/continuous-delivery/troubleshooting-guide" >}}) for you!
 
 ## Get the workflow only
 
