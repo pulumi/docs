@@ -53,7 +53,7 @@ Each statement includes information about a single permission. If a policy inclu
 a logical OR across the statements when evaluating them. If multiple policies apply to a request, AWS applies a logical
 OR across all of those policies when evaluating them.
 
-For more extensive details about IAM policies and their contents, please [refer to the AWS documentation online](
+For more extensive details about IAM policies and their contents, refer to the [AWS access policies documentation](
 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html).
 
 ### Using the PolicyDocument Interface
@@ -108,7 +108,7 @@ const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("rpa", {
 });
 ```
 
-For a full list of available managed policy ARNs, please refer to the
+For a full list of available managed policy ARNs, refer to the
 [API documentation]({{< relref "/docs/reference/pkg/aws/iam" >}}).
 
 ## Creating IAM Users, Groups, and Roles
@@ -142,7 +142,7 @@ const userPolicy = new aws.iam.UserPolicy("webmasterPolicy", {
 });
 ```
 
-For more options available when configuring IAM users, please see the [API documentation](
+For more options available when configuring IAM users, see the [API documentation](
 {{< relref "/docs/reference/pkg/aws/iam/user" >}}).
 
 If you'd like to configure non-service account users that can login to the
@@ -152,7 +152,7 @@ and for creating access keys, see [`AccessKey`]({{< relref "/docs/reference/pkg/
 If you need to attach a managed policy ARN to your user, use the [`UserPolicyAttachment` resource](
 {{< relref "/docs/reference/pkg/aws/iam/userpolicyattachment" >}}).
 
-Finally, for detailed information about IAM Users, please refer to the [AWS documentation](
+Finally, for detailed information about IAM Users, refer to the [AWS documentation](
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
 
 ### IAM Groups
@@ -198,13 +198,13 @@ const devTeam = new aws.iam.GroupMembership("dev-team", {
 });
 ```
 
-For more information, please refer to the API documentation for [groups](
+For more information, refer to the API documentation for [groups](
 {{< relref "/docs/reference/pkg/aws/iam/group" >}}), [group membership](
 {{< relref "/docs/reference/pkg/aws/iam/groupmembership" >}}), and [group policies](
 {{< relref "/docs/reference/pkg/aws/iam/grouppolicy" >}}). If you need to attach a managed policy ARN to your group, use the
 [`GroupPolicyAttachment` resource]({{< relref "/docs/reference/pkg/aws/iam/grouppolicyattachment" >}}).
 
-Finally, for detailed information about IAM Groups, please refer to the
+Finally, for detailed information about IAM Groups, refer to the
 [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html).
 
 ### IAM Roles
@@ -250,13 +250,13 @@ Lambda, for example. To create one, use the [`InstanceProfile` resource](
 const profile = new aws.iam.InstanceProfile("instance-profile", { role });
 ```
 
-For specific information about configuring roles, please refer to [the API documentation](
-{{< relref "/docs/reference/pkg/aws/iam/role" >}}). For more general information about IAM Roles, please refer to the
+For specific information about configuring roles, refer to [the API documentation](
+{{< relref "/docs/reference/pkg/aws/iam/role" >}}). For more general information about IAM Roles, refer to the
 [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html).
 
 ## Additional IAM Resources
 
-For more information about AWS IAM, please see the following:
+For more information about AWS IAM, see the following:
 
 * [Pulumi AWS IAM API Documentation]({{< relref "/docs/reference/pkg/aws/iam" >}})
 * [Amazon Identity and Access Management (IAM) homepage](https://aws.amazon.com/iam/)

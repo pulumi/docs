@@ -50,8 +50,8 @@ If you are running `pulumi` from any branch other than the `master` branch,
 you are likely to hit an error that the `PULUMI_ACCESS_TOKEN`
 environment variable (introduced later in this document) cannot be accessed.
 You can fix this by specifying a wildcard regex to allow specific branches to
-be able to access the secret environment variables. Please refer to the GitLab
-documentation link above to learn how to do that.
+be able to access the secret environment variables. Refer to the [GitLab
+documentation](https://gitlab.com/help/user/project/protected_branches.md) to learn how to do that.
 
 ## Merge Request Builds
 
@@ -78,7 +78,7 @@ For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
 `AWS_SECRET_ACCESS_KEY`.
 
 **Note**: It is a good security practice to mark any sensitive variables as protected in GitLab.
-Please read the note about **Protected Branches** above.
+Read the note about **Protected Branches** above.
 
 ## Scripts
 

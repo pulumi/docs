@@ -22,7 +22,7 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 * Provide a persistent volume for the service to store checkpoint objects.
 * Provider a persistent volume for the MySQL data (optional if you are providing your own DB.)
 * If you are providing your own DB instance, ensure that it is accessible within the same Docker network that the service and the UI containers will be running in.
-    * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, please set `PULUMI_LOCAL_DATABASE_NAME` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
+    * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, set `PULUMI_LOCAL_DATABASE_NAME` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
     * If you do not create this network prior to running `run-ee.sh`, it will create only a bridged network on your local host. Ensure that the DB can be accessed by the API service container.
 * Provide an external load balancer with TLS termination.
 

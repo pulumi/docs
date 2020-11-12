@@ -200,7 +200,7 @@ class Program
 
 All we need to do is run `pulumi up` and the Pulumi runtime will know how to query the ARM deployment to retrieve its output values. In this case, the deployment and all of its resources are treated entirely as read-only, and Pulumi will never attempt to modify any of them.
 
-Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<DEPLOYMENT-RG-ID>/providers/Microsoft.Resources/deployments/<DEPLOYMENT-ID>`. Please consult the Azure CLI or portal to find this ID.
+Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<DEPLOYMENT-RG-ID>/providers/Microsoft.Resources/deployments/<DEPLOYMENT-ID>`. Consult the Azure CLI or portal to find this ID.
 
 > Although we've hard-coded the ARM deployment ID here, it's common to dynamically compute a name using unique per-stack information, like the stack name, Azure location, or other configuration variables.
 
@@ -750,6 +750,6 @@ class Program
 
 {{< /chooser >}}
 
-> Notice here that we've used the fully qualified resource ID for the import, `"/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage"`. If you're having trouble locating this, please consult the Azure CLI or console.
+> Notice here that we've used the fully qualified resource ID for the import, `"/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage"`. If you're having trouble locating this, consult the Azure CLI or console.
 
 After running `pulumi up`, your storage account will become under the control of Pulumi without any disruption, and you can then delete the import directives from your code. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.

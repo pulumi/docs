@@ -130,7 +130,7 @@ is what tells Node.js and NPM what packages you depend on, where to find your co
 }
 ```
 
-You can customize this however you'd like, such as adding test scripts, npm package dependencies, etc.  For more information on `package.json`, please refer to [the NPM documentation](https://docs.npmjs.com/files/package.json).
+You can customize this however you'd like, such as adding test scripts, npm package dependencies, etc.  For more information on `package.json`, refer to [the NPM documentation](https://docs.npmjs.com/files/package.json).
 
 ### 2. Install dependencies
 

@@ -414,7 +414,7 @@ The full list of available backends are as follows:
 * AWS S3 (`"s3"`)
 * Swift (`"swift"`)
 
-Please refer to the API documentation for these libraries for full details on configuration options for each backend type: [Node.js (JavaScript or TypeScript)]({{< relref "/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference" >}}) or [Python]({{< relref "/docs/reference/pkg/python/pulumi_terraform/state" >}}).
+Refer to the API documentation for these libraries for full details on configuration options for each backend type: [Node.js (JavaScript or TypeScript)]({{< relref "/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference" >}}) or [Python]({{< relref "/docs/reference/pkg/python/pulumi_terraform/state" >}}).
 
 ## Converting Terraform HCL to Pulumi
 
@@ -432,7 +432,7 @@ Next, `cd` into a Terraform project you'd like to convert. Create a new Pulumi p
 $ pulumi new typescript -f
 ```
 
-> At the moment, TypeScript and Python are the only language targets. Please let us know if your desired language isn't available.
+> At the moment, TypeScript and Python are the only language targets. Let us know if your desired language isn't available.
 
 Next, run `tf2pulumi`. It will convert the entire project whose directory you are in and put the resulting code in the local directory.
 
@@ -482,8 +482,8 @@ After doing this, the first `pulumi up` for a new stack with this configuration 
 
 ### Limitations
 
-While the majority of Terraform constructs are supported, there are some known gaps that we are working to address. If you run into a problem, please [let us know on GitHub](https://github.com/pulumi/tf2pulumi/issues/new) and we would be happy to work through it with you.
+While the majority of Terraform constructs are supported, there are some known gaps that we are working to address. If you run into a problem, [open an issue on GitHub](https://github.com/pulumi/tf2pulumi/issues/new) and we would be happy to work through it with you.
 
 ### Example Conversion
 
-For an example of a full end-to-end conversion, including some improvements made possible after the conversion is finished, please see the blog post, [From Terraform to Infrastructure as Software]({{< relref "/blog/from-terraform-to-infrastructure-as-software" >}}).
+For an example of a full end-to-end conversion, including some improvements made possible after the conversion is finished, see the blog post, [From Terraform to Infrastructure as Software]({{< relref "/blog/from-terraform-to-infrastructure-as-software" >}}).

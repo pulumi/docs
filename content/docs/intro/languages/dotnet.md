@@ -43,8 +43,8 @@ The fastest way to get up and running is to choose from one of the following Get
     </div>
 </div>
 
-> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
-> documentation below. They will work just fine &mdash; the guides simply aren't ready for them yet.
+> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic.
+> They will work just fine &mdash; the guides simply aren't ready for them yet.
 
 ## Prerequisites
 

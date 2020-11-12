@@ -243,7 +243,7 @@ const cluster = new eks.Cluster("my-cluster", {
 export const kubeconfig = cluster.kubeconfig;
 ```
 
-For a full list of options that you may set on your cluster, please [see the API documentation](
+For a full list of options that you may set on your cluster, see the [API documentation](
 {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions" >}}). Many common cases are described below.
 
 ## Configuring Your EKS Cluster's Networking
@@ -397,7 +397,7 @@ export const kubeconfig = cluster.kubeconfig;
 
 After configuring such a cluster, we would then want to ensure our workload's pods are scheduled correctly on the
 right nodes. To do so, you will use a combination of node selectors, taints, and/or tolerances. For more information,
-please see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and
+see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and
 [Taints and Tolerances](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/).
 
 ## Managing EKS Cluster Authentication with IAM
@@ -412,13 +412,13 @@ admins, automation accounts (for CI/CD), and production roles, and supply them t
 placing them in the `aws-auth` ConfigMap for your cluster automatically. Pulumi also lets you configure Kubernetes
 objects, so that can also then create the RBAC cluster role bindings in your cluster to tie everything together.
 
-For a complete example of this in action, please see
+For a complete example of this in action, see
 [Simplifying Kubernetes RBAC in Amazon EKS]({{< relref "simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages" >}}).
 
 ## Deploying Kubernetes Apps to Your EKS Cluster
 
 Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
-package. For more information on these object types, including Deployments, Services, and Pods, please see
+package. For more information on these object types, including Deployments, Services, and Pods, see
 [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 
 With Pulumi, you describe your desired Kubernetes configuration, and `pulumi up` will diff between the current
@@ -729,11 +729,11 @@ const service = new k8s.core.v1.Service(`${appName}-svc`, {
 export const url = service.status.loadBalancer.ingress[0].hostname;
 ```
 
-For more information about ECR, please see [the Pulumi Crosswalk for AWS ECR documentation]({{< relref "ecr" >}}).
+For more information about ECR, see [the Pulumi Crosswalk for AWS ECR documentation]({{< relref "ecr" >}}).
 
 ## Additional EKS Resources
 
-For more information about Kubernetes and EKS, please see the following:
+For more information about Kubernetes and EKS, see the following:
 
 * [Pulumi Kubernetes API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
 * [Pulumi EKS API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}})
