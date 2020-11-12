@@ -20,25 +20,17 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.13.x
+
+      - uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.55.4'
           extended: true
 
-      - name: Install Go
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.13.x
-
       - name: Install assume-role
         run: go get -u github.com/remind101/assume-role
-
-      - name: Add GOBIN to PATH
-        run: echo "::add-path::$(go env GOPATH)/bin"
-
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@releases/v1
 
       - name: Build and deploy
         run: make ci_${GITHUB_EVENT_NAME}
