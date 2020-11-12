@@ -19,7 +19,7 @@ address, in this example we are also able to use `curl` to reach the `nginx` ser
 
 ## Running the App
 
-Start by downloading the [example code](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/README.md)
+Start by downloading the [example code](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/README.md).
 
 If you haven't already, follow the steps in [Pulumi Installation and
 Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi

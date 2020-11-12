@@ -97,7 +97,7 @@ When managing the virtual environment on your own, you'll need to run any `pulum
 
 ### Adding a new dependency {#packages}
 
-There are many available [Pulumi Python packages]({{< relref "/docs/reference/pkg" >}}).
+There are many [Pulumi Python packages]({{< relref "/docs/reference/pkg" >}}) available.
 
 To install a new dependency in the virtual environment, add an entry to `requirements.txt`, and run the following in your project directory:
 
