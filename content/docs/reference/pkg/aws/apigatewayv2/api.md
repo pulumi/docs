@@ -2409,6 +2409,8 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

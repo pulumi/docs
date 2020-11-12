@@ -1615,6 +1615,8 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

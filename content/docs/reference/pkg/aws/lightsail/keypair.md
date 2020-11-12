@@ -67,40 +67,6 @@ func main() {
 	})
 }
 ```
-
-## Import an existing public key
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * from "fs";
-
-const lgKeyPair = new aws.lightsail.KeyPair("lgKeyPair", {publicKey: fs.readFileSync("~/.ssh/id_rsa.pub")});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
-```
-```csharp
-using System.IO;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
-        {
-            PublicKey = File.ReadAllText("~/.ssh/id_rsa.pub"),
-        });
-    }
-
-}
-```
-
 {{% examples %}}
 ## Example Usage
 
@@ -1459,6 +1425,43 @@ imported into Lightsail
 
 
 
+
+
+
+
+## Import
+ an existing public key
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const lgKeyPair = new aws.lightsail.KeyPair("lgKeyPair", {publicKey: fs.readFileSync("~/.ssh/id_rsa.pub")});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
+```
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
+        {
+            PublicKey = File.ReadAllText("~/.ssh/id_rsa.pub"),
+        });
+    }
+
+}
+```
 
 
 

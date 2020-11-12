@@ -1434,6 +1434,8 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

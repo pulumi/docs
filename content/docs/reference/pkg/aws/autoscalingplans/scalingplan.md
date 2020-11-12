@@ -2946,6 +2946,8 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
