@@ -244,8 +244,7 @@ $ curl $(pulumi stack output url)
 <h1>Hello, AWS API Gateway + S3!</h1>
 ```
 
-By default, any index documents will be automatically served by S3 when directories are retrieved over HTTP (in the
-manner [described here](https://docs.aws.amazon.com/AmazonS3/latest/dev/IndexDocumentSupport.html)). To suppress this
+By default, any index documents will be automatically served by S3 when directories are retrieved over HTTP (See [AWS configuring an index document](https://docs.aws.amazon.com/AmazonS3/latest/dev/IndexDocumentSupport.html)). To suppress this
 behavior, simply pass `index: false` as part of configuring your static route:
 
 ```typescript
@@ -686,8 +685,8 @@ const apiWithAuthorizer = new awsx.apigateway.API("authorizer-api", {
 });
 ```
 
-A complete example of defining the Lambda Authorizer elsewhere can be found [here](
-https://github.com/pulumi/pulumi-awsx/blob/61d2996b8bdb20ea625e66e17ebbaa7b62f9c163/nodejs/awsx/examples/api/index.ts#L94-L152).
+Complete [example of defining the Lambda Authorizer](
+https://github.com/pulumi/pulumi-awsx/blob/61d2996b8bdb20ea625e66e17ebbaa7b62f9c163/nodejs/awsx/examples/api/index.ts#L94-L152) elsewhere.
 
 #### Creating a Lambda-based Token Authorizer
 

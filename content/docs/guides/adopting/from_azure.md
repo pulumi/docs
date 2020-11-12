@@ -604,7 +604,7 @@ Note that you can always skip the intermediate step of deploying your ARM templa
 
 Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import]({{< relref "import" >}}) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
-> This requires that we are using ARM's "incremental" deployment mode. This is the default mode, however, if you've specified that your ARM deployment should use "complete" mode, the import flow below will be complicated because ARM prefers to delete any resources it doesn't recognize as belonging to the template. [Read more about ARM deployment modes here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-modes).
+> This requires that we are using ARM's "incremental" deployment mode. This is the default mode, however, if you've specified that your ARM deployment should use "complete" mode, the import flow below will be complicated because ARM prefers to delete any resources it doesn't recognize as belonging to the template. [More about ARM deployment modes](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-modes).
 
 To adopt the ARM resources under Pulumi's control, we will rewrite the ARM template in code, and use `import` IDs. For this example, recall that our Storage Account name was `"e9ejbnipspvecstorage"`. Also, in this example, there is just one resource, so we can simply delete the ARM template and deployment in its entirety and replace it with a Pulumi definition of the Storage Account. In cases where multiple resources exist, you can delete them one by one, until the ARM deployment is eventually empty.
 

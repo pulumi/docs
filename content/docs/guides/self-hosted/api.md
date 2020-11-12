@@ -60,9 +60,9 @@ This container runs an HTTP server which provides the APIs needed by the Console
 | Variable Name | Description |
 | ------------- | ----------- |
 | PULUMI_OBJECTS_BUCKET | S3 bucket name for persisting state for stacks.<br><br>**Note**: Only used if hosted on AWS. |
-| RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a site key and a secret key from Google [here](https://www.google.com/recaptcha/admin). |
-| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "../saml/sso#terminology" >}}) to sign SAML assertions. Learn how to set this value [here]({{< relref "saml-sso" >}}). |
-| SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to set this value [here]({{< relref "saml-sso" >}}). |
+| RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin). |
+| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "../saml/sso#terminology" >}}) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY]({{< relref "saml-sso" >}}). |
+| SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY]({{< relref "saml-sso" >}}). |
 | GITHUB_OAUTH_ENDPOINT | Used for GitHub API calls. |
 | GITLAB_OAUTH_ENDPOINT | Used for GitLab API calls. |
 

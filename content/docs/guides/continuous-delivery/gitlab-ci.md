@@ -25,7 +25,7 @@ altered to fit into any existing type of deployment setup.
 - An account on [https://app.pulumi.com](https://app.pulumi.com) and that you have created a new project.
     - This just means you will sign-in using your GitLab credentials.
     - However, pulumi can be run from anywhere and your infrastructure code itself can be hosted anywhere.
-- The latest CLI. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+- The [latest CLI]({{< relref "/docs/get-started/install" >}}).
 - A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
@@ -37,8 +37,7 @@ The source code for the stack is in a repository in GitLab and uses `TypeScript`
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
 
-Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< relref "/docs/reference/cli/pulumi_new" >}}).
+Alternatively, you can also run `pulumi new [template]` to create a [template project]({{< relref "/docs/reference/cli/pulumi_new" >}}).
 
 ## GitLab CI Runners
 
@@ -56,7 +55,7 @@ documentation link above to learn how to do that.
 
 ## Merge Request Builds
 
-GitLab has the ability to restrict jobs to _only_ run for merge requests. Learn more [here](https://docs.gitlab.com/ee/ci/merge_request_pipelines/). This is done by adding the following configuration to your GitLab pipeline config file:
+GitLab has the ability to restrict jobs to _only_ run for [merge requests](https://docs.gitlab.com/ee/ci/merge_request_pipelines/). This is done by adding the following configuration to your GitLab pipeline config file:
 
 ```
 only:

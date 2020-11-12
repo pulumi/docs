@@ -13,14 +13,14 @@ menu:
 
 - A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
 - An account on the [Pulumi Console](https://app.pulumi.com).
-- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+- The [latest version of Pulumi]({{< relref "/docs/get-started/install" >}}).
 - Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}})
 and choosing one of the many templates that are available.
 - Optionally, also create a CI pipeline from a source control repository of your choice to be the source of packages. You will learn more about packages and how to create them later in this guide.
 
 ## Sample Project
 
-For the sake of this walkthrough, we will try to deploy the simple AWS example located [here](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate). The example deploys a containerized Python Flask app on [AWS Fargate](https://aws.amazon.com/fargate/). This example also shows a pattern that is common with Pulumi -- keeping your infrastructure app (Pulumi) with your actual application code, but certainly not necessary. Regardless of how you decide to structure your project, you will need to provide the package to Octopus somehow.
+For the sake of this walkthrough, we will try to deploy a [AWS example](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate). The example deploys a containerized Python Flask app on [AWS Fargate](https://aws.amazon.com/fargate/). This example also shows a pattern that is common with Pulumi -- keeping your infrastructure app (Pulumi) with your actual application code, but certainly not necessary. Regardless of how you decide to structure your project, you will need to provide the package to Octopus somehow.
 
 ## Stack and Branch Mappings
 

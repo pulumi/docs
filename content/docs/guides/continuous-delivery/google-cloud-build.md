@@ -51,7 +51,7 @@ Set the appropriate `gcp:project` and `gcp:region` values. For example, if your 
 
 `pulumi config set gcp:project awesome-project` and `pulumi config set gcp:region us-central`
 
-**Note**: Not all resources are available in all regions. Please check that GCP supports the region and resource combination [here](https://cloud.google.com/about/locations/).
+**Note**: Not all resources are available in all regions. Please check that GCP supports the region and resource combination. [Cloud locations](https://cloud.google.com/about/locations/).
 
 ## Build Configuration
 
@@ -75,7 +75,7 @@ steps:
   - 'BUILD_TYPE=$_BUILD_TYPE'
 ```
 
-In the above configuration, both `_BUILD_TYPE` and `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` are substitutions configured in Cloud Build Triggers. You can read more about triggers [here](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
+In the above configuration, both `_BUILD_TYPE` and `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` are substitutions configured in Cloud Build Triggers. More about [triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
 
 - `_BUILD_TYPE` is used to indicate to the build environment about the type of build it is running. This allows us to run a `preview` or an `update` based on the build type. To configure the substitution, you need to setup build triggers for each type of branch builds you intend to support for your project.
 
@@ -131,7 +131,7 @@ esac
 ### Build Triggers
 
 Cloud Build supports triggers that can start a new instance of your cloud build using the configuration defined in your repo.
-To setup a build trigger, navigate to the Cloud Build service (or click [here](https://console.cloud.google.com/cloud-build/triggers) to go there now) in your GCP Console, making sure that you have the correct project selected.
+To setup a build trigger, navigate to the [Cloud Build service](https://console.cloud.google.com/cloud-build/triggers) in your GCP Console, making sure that you have the correct project selected.
 Click on **Add Trigger** and follow the prompts to setup a trigger for your repo. In the final step **Trigger settings**, select the following settings:
 
 - **Branch (regex)**: `[^master]`
@@ -145,7 +145,7 @@ Click on **Add Trigger** and follow the prompts to setup a trigger for your repo
 
 ### Use the Pulumi community builder image for Google Cloud Build
 
-We have created a builder image that will install the Pulumi CLI for you in a Node-based image. Since the builder is part of Google Cloud Build's community builders, you will need to make the builder available to your project by cloning the community builders' Git repo. See [this](https://github.com/GoogleCloudPlatform/cloud-builders-community/tree/master/pulumi) here for more information and an example for how to use the builder in your project.
+We have created a builder image that will install the Pulumi CLI for you in a Node-based image. Since the builder is part of Google Cloud Build's community builders, you will need to make the builder available to your project by cloning the community builders' Git repo. See [GCP Cloud Builders Community Repository](https://github.com/GoogleCloudPlatform/cloud-builders-community/tree/master/pulumi) for more information and an example for how to use the builder in your project.
 
 ### Encrypted Variables
 
