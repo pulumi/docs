@@ -110,17 +110,18 @@ the correct stack configuration.
 
 > Be sure to commit the new workflow file to a separate branch and not directly to your primary branch. This will create a new pull request for you.
 
-The workflow is configured to run a `pulumi preview` for Pull Request pipelines.
-Pull Request builds help you catch problems with changes to your infrastructure _before_ the changes are approved/merged.
+The workflow configuration provided by the wizard is configured to run a `pulumi preview` for pull request builds.
+Pull request builds help you catch problems _before_ the changes are merged -- a very important consideration for infrastructure
+that is likely hosting services critical to your business.
 
 ### Validation
 
-In the previous step you committed a new workflow configuration by creating a new Pull Request. This will trigger a new pipeline build
-that will run the `pulumi preview` command. Click the **Next** button to make the wizard check for and validate the CI configuration.
+In the previous step, you committed a new workflow configuration by creating a new pull request. This will trigger a new build
+that will run the `pulumi preview` command. Click the **Next** button to validate the CI configuration.
 
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
-If your pull request build failed, use the [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}) to diagnose the issue.
+> If your pull request build failed, use the [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}) to diagnose the issue.
 
 ## Skip the line and get the workflow directly
 
