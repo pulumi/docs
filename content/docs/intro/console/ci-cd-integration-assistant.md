@@ -79,35 +79,34 @@ is integrated with by clicking on the Configure VCS step marker. Here's an examp
 
 ![VCS configured](/images/docs/reference/console/vcs-configured.png)
 
-The Configure CI/CD step will help you configure secrets that will be used by your Pulumi stack.
+The **Configure CI/CD** step will help you configure secrets that will be used by your Pulumi stack.
 For supported services, the wizard will provide a convenient link to the respective location
-where you can configure the secrets that will be used in the CI/CD pipeline that you will
-setup next. This includes configuring the [Pulumi Access Token]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#access-tokens" >}})
-that will be used by the Pulumi CLI to do a non-interactive login.
+where you can configure the secrets.
 
-The wizard provides a convenient way to create a Pulumi Access Token without needing to leave the page.
+The wizard provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#access-tokens" >}})
+without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)
 
-In the following example the wizard is being used to configure a GitHub Actions workflow. So the wizard provides a direct link to configure
-secrets for your workflow.
+In the following example the wizard is being used to configure a GitHub Actions workflow.
+So the wizard provides a direct link to configure secrets for your workflow.
 
 ![Configure CI/CD Secrets](/images/docs/reference/console/configure-ci-cd-secrets.png)
 
-> Need help configuring your cloud provider? Find yours on the [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) page and view its setup page.
+> See the [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) page to find the setup page for your cloud provider.
 
 ### Add the workflow
 
-Once your secrets are configured, the next step gives you the relevant workflow to add to your repository.
+Once the secrets are configured, the next step gives you the relevant workflow to add to your repository.
 The workflow is customized for the current stack, so you can be sure that you are configuring a workflow that uses
-the correct stack configuration. This is especially useful if you are configuring CI/CD for a non-dev stack.
+the correct stack configuration.
 
 ![Add Workflow](/images/docs/reference/console/add-workflow.png)
 
 > Be sure to commit the new workflow file to a separate branch and not directly to your primary branch. This will create a new pull request for you.
 
-The workflow is configured to run a `pulumi preview` for Pull Request
-pipelines. This way you can catch problems with changes to your infrastructure _before_ the changes are approved/merged.
+The workflow is configured to run a `pulumi preview` for Pull Request pipelines.
+Pull Request builds help you catch problems with changes to your infrastructure _before_ the changes are approved/merged.
 
 ### Validation
 
@@ -116,13 +115,13 @@ that will run the `pulumi preview` command. Click the **Next** button to make th
 
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
-If your pull request build failed, don't worry we have a [troubleshooting wizard]({{< relref "/docs/wizards/continuous-delivery/troubleshooting-guide" >}}) for you!
+If your pull request build failed, use the [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}) to diagnose the issue.
 
-## Get the workflow only
+## Skip the line and get the workflow directly
 
-If instead of using the step-by-step wizard, you want to access just the workflow for a specific CI/CD service and
-configure VCS on your own, you can do that by simply selecting a service from the drop-down to get started. You will
-still be able to get a workflow template that is customized to your stack even if you choose this option.
+If you want to access the workflow for a specific CI/CD service and configure VCS on your own,
+you can do that by simply selecting a service from the drop-down to get started. You will
+still get a workflow template that is customized to your stack.
 
 > This option is more suitable for teams that want to use different services for their VCS repo and CI/CD needs. For example, you want
 > to be able to use Azure Pipelines with a GitHub repository and just want the workflow template for Azure Pipelines.
