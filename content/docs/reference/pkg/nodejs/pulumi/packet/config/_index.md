@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/packet | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/packet package."
-git_sha: "367519e0c7323e47ed16be02d19b469d05c2b5cf"
+git_sha: "bcddd58a60037851baa4fae263bd492f3ee0d2ee"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="authToken" data-link-title="authToken">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/367519e0c7323e47ed16be02d19b469d05c2b5cf/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/bcddd58a60037851baa4fae263bd492f3ee0d2ee/sdk/nodejs/config/vars.ts#L12">
         let <strong>authToken</strong>
     </a>
 </h3>
