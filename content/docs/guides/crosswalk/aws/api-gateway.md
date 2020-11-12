@@ -203,9 +203,7 @@ const api = new awsx.apigateway.API("example", {
 export const url = api.url;
 ```
 
-For more complete information about creating Lambda Functions, 
-[see the Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda" >}}). Any of the techniques described may be used
-in combination with the `awsx.apigateway.API` class.
+For more complete information about creating Lambda Functions, [see the Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda" >}}). Any of the techniques described may be used in combination with the `awsx.apigateway.API` class.
 
 ### Defining a Static Route Served by S3
 

@@ -236,7 +236,7 @@ $ curl http://$(pulumi stack output endpoint)
 </html>
 ```
 
-This load balancer uses reasonable targeting defaults and health checks. If you'd like to customize these, 
+This load balancer uses reasonable targeting defaults and health checks. If you'd like to customize these,
 see [Advanced NLB Target Group and Listener Configuration](#advanced-nlb-target-group-and-listener-configuration) below.
 
 Although ECS supports both NLB and ALB, ALB offer several features that make them more attractive for ECS:
