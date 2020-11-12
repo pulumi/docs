@@ -3,43 +3,48 @@ title: CI/CD Integration Assistant
 meta_desc: The CI/CD Integration Assistant helps you automate your Pulumi stack.
 ---
 
-The CI/CD integration assistant contains a guided experience in the Pulumi Console that provides customized CI/CD
-workflows for Pulumi stacks. The starter workflows use best-practices in configuring a pipeline
-to automate updating a Pulumi stack.
+The CI/CD integration assistant helps teams integrate their Pulumi stacks with both a version control system and CI/CD service.
 
 <!--more-->
 
+A version control system provides team collaboration capabilities and ensures the sources are not just on a developer's
+machine. Using a CI/CD service to update stacks ensures that no single person on your team is responsible for updating
+the stack.
+
+The assistant contains a guided experience to help teams configure a VCS as well as automate it with a
+CI/CD pipeline.
+
 The wizard has two options to help you to get started with integrations:
 
-* Use a service that provides both a version control system and a CI/CD service
+* Use a single service that provides both a version control system and CI/CD pipelines
 * Or, just get the starter workflow for a CI/CD service of your choice customized for your stack
-without going through the wizard
 
 ![Start Workflow Wizard](/images/docs/reference/console/start-workflow-wizard.png)
 
 The CI/CD integration assistant also offers best practice hints for stacks that do not
-have a VCS configuration.
+have a VCS configuration. Here's a look at the various ways the assistant helps teams throughout
+the Console:
 
-Here's a look at the various ways the assistant helps your team members in the Console.
-
-The dashboard page will show you any recent stacks that were updated and if they have VCS configuration. If not, a quick navigation
-link is provided to help users configure VCS.
+The dashboard page shows recently updated stacks. The assistant alerts users by providing a quick navigation link to configure a VCS
+for any stacks that don't have it.
 
 ![Dashboard](/images/docs/reference/console/dashboard-page.png)
 
-A quick look at the Activity page for a stack quickly reveals which of the updates were run from a CI/CD pipeline and which ones were not.
+The **Activity** page for a stack allows users to scan the page quickly and tell which of the updates were run from a
+CI/CD pipeline and which ones were not.
 
 ![Activity](/images/docs/reference/console/update-activity.png)
 
-In addition to the above two features, the assistant also recognizes any "production"-like stacks created in your organization and emails
-the creator to configure VCS and to automate the stack with a CI/CD pipeline, if the appropriate configuration is not found.
+In addition to the above two features, the assistant also recognizes any "production" stacks created in your organization and emails
+the creator if a VCS configuration is not detected for it. Updating production stacks from a developer machines is not recommended,
+although there are some exceptions for doing so. The reasons for exceptions are beyond the scope of this document.
+
+![Workflow Assistant Email](/images/docs/reference/console/cicd-integration-assistant-email.png)
 
 ## Using The Same Service For VCS and CI/CD
 
-There are many benefits for a team to choose a single service for all of their team collaboration needs. This section reviews
+There are several benefits for a team to choose a single service for all of their team collaboration needs. This section reviews
 how the wizard helps your teams configure VCS and CI/CD using the identity that you signed-up with.
-
-![Workflow Assistant Email](/images/docs/reference/console/cicd-integration-assistant-email.png)
 
 ### Configuring a VCS
 
