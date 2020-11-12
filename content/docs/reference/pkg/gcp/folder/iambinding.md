@@ -1140,6 +1140,8 @@ Each entry can have one of the following values:
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

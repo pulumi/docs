@@ -4524,8 +4524,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if mysqld should default to `REQUIRE X509`
-for users connecting over IP.
+    <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -4581,8 +4580,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if mysqld should default to `REQUIRE X509`
-for users connecting over IP.
+    <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -4638,8 +4636,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}True if mysqld should default to `REQUIRE X509`
-for users connecting over IP.
+    <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -4695,8 +4692,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if mysqld should default to `REQUIRE X509`
-for users connecting over IP.
+    <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -5215,6 +5211,8 @@ in. Must be in the same region as this instance.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

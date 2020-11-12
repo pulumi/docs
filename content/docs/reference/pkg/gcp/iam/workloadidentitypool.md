@@ -491,7 +491,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -502,11 +503,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
 </dl>
@@ -534,7 +535,8 @@ access resources. If the pool is undeleted, existing tokens grant access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -545,11 +547,11 @@ access resources. If the pool is undeleted, existing tokens grant access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
 </dl>
@@ -577,7 +579,8 @@ access resources. If the pool is undeleted, existing tokens grant access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -588,11 +591,11 @@ access resources. If the pool is undeleted, existing tokens grant access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
 </dl>
@@ -620,7 +623,8 @@ access resources. If the pool is undeleted, existing tokens grant access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -631,11 +635,11 @@ access resources. If the pool is undeleted, existing tokens grant access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
 </dl>
@@ -815,7 +819,8 @@ access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,11 +843,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -908,7 +913,8 @@ access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -931,11 +937,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1001,7 +1007,8 @@ access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1024,11 +1031,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1094,7 +1101,8 @@ access again.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+    <dd>{{% md %}}The resource name of the pool as
+'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1117,11 +1125,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
-policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
-can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
-it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
-access resources. If the pool is undeleted, existing tokens grant access again.
+    <dd>{{% md %}}The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+tokens to access resources. If the pool is undeleted, existing tokens grant access again.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1139,6 +1147,8 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
