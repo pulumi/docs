@@ -1,9 +1,9 @@
 ---
 title: CI/CD Integration Assistant
-meta_desc: The CI/CD Integration Assistant helps you automate your Pulumi stack.
+meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
 ---
 
-The CI/CD integration assistant helps teams integrate their Pulumi stacks with both a version control system and CI/CD service.
+The CI/CD integration assistant helps teams integrate their Pulumi stacks with both a version control system and a CI/CD service.
 
 <!--more-->
 
