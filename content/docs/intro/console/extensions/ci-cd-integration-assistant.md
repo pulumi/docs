@@ -3,13 +3,17 @@ title: CI/CD Integration Assistant
 meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
 ---
 
+> CI/CD integration assistant is a feature available on the Pulumi Team Pro and Enterprise editions.
+> If you would like to try this feature [start a trial](https://app.pulumi.com/site/organizations/add) now
+> or contact us at sales@pulumi.com.
+
 The CI/CD integration assistant helps teams integrate their Pulumi stacks with both a version control system and a CI/CD service.
 
 <!--more-->
 
-A version control system provides team collaboration capabilities and ensures the sources are not just on a developer's
-machine. Using a CI/CD service to update stacks ensures that no single person on your team is responsible for updating
-the stack.
+A version control system provides team collaboration capabilities and ensures that the source code for your Pulumi project is not
+just on a single developer's machine. Using a CI/CD service to update stacks ensures that no single person on your team is
+responsible for updating the stack and drastically reduces the risk of compromising the sensitive cloud provider credentials.
 
 The assistant contains a guided experience to help teams configure a VCS as well as automate it with a
 CI/CD pipeline.
