@@ -58,12 +58,10 @@ After you choose an identity, the wizard will provide you with a quick link
 to create a new repository in the target service as well as the instructions for
 ensuring that Pulumi correctly recognizes the VCS configuration.
 
-Complete each step and check-off the appropriate step. When all steps under the
+Complete each step and check-off the appropriate step. When all of the tasks under the
 **Configure VCS** step are complete click the **Next** button. The wizard will confirm
 that your VCS configuration has been recognized and will automatically move you to the
 next step.
-
-![Complete Configure VCS](/images/docs/reference/console/configure-vcs-complete.png)
 
 ### Configure CI/CD secrets
 
