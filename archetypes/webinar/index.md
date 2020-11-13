@@ -75,7 +75,7 @@ main:
 
 # This section contains the transcript for a video. It is optional.
 transcript: |
-    Here is where you would put the transcrip to a recorded video.
+    Here is where you would put the transcript for a recorded video.
 
 # The right hand side form section.
 form:
