@@ -51,12 +51,14 @@
                                 </li>
                             {{ end }}
                         </ul>
-                        <h3 class="text-orange">Join us to learn:</h3>
-                        <ul class="text-gray-600">
-                            {{ range .learn }}
-                                <li>{{ . }}</li>
-                            {{ end }}
-                        </ul>
+                        {{ if isset . "learn" }}
+                            <h3 class="text-orange">Join us to learn:</h3>
+                            <ul class="text-gray-600">
+                                {{ range .learn }}
+                                    <li>{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
                     {{ end }}
                 </div>
                 <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
@@ -107,12 +109,14 @@
                                 </li>
                             {{ end }}
                         </ul>
-                        <h3 class="text-orange">What you will learn:</h3>
-                        <ul class="text-gray-600">
-                            {{ range .learn }}
-                                <li>{{ . }}</li>
-                            {{ end }}
-                        </ul>
+                        {{ if isset . "learn" }}
+                            <h3 class="text-orange">What you will learn:</h3>
+                            <ul class="text-gray-600">
+                                {{ range .learn }}
+                                    <li>{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
                     {{ end }}
                     {{ if .Params.transcript }}
                         <div class="mt-10">
