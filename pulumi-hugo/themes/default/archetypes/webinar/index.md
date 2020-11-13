@@ -73,6 +73,10 @@ main:
     learn:
         - ""
 
+# This section contains the transcript for a video. It is optional.
+transcript: |
+    Here is where you would put the transcript for a recorded video.
+
 # The right hand side form section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
