@@ -7,7 +7,7 @@ meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
 > If you would like to try this feature, [start a trial](https://app.pulumi.com/site/organizations/add) now
 > or contact us at sales@pulumi.com.
 
-The CI/CD integration assistant helps teams integrate their Pulumi stacks with both a version control system and a CI/CD service.
+The CI/CD integration assistant helps teams integrate their Pulumi stacks with both version control systems and CI/CD services.
 
 <!--more-->
 

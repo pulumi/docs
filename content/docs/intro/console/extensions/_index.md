@@ -18,6 +18,11 @@ and integrations.
 > Some features are only found in the Pulumi Team and Enterprise editions. See
 > [product editions]({{< relref "../accounts-and-organizations/editions" >}}) for more information.
 
+## CI/CD Integration Assistant
+
+The [CI/CD integration assistant]({{< relref "ci-cd-integration-assistant" >}}) helps teams integrate their Pulumi stacks
+with version control systems and CI/CD services.
+
 ## Webhooks
 
 Pulumi [webhooks]({{< relref "webhooks" >}}) enable you to trigger custom workflows
