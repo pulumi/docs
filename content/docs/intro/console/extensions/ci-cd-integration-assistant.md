@@ -3,8 +3,8 @@ title: CI/CD Integration Assistant
 meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
 ---
 
-> CI/CD integration assistant is a feature available on the Pulumi Team Pro and Enterprise editions.
-> If you would like to try this feature [start a trial](https://app.pulumi.com/site/organizations/add) now
+> This feature is available on the Pulumi Team Pro and Enterprise editions.
+> If you would like to try this feature, [start a trial](https://app.pulumi.com/site/organizations/add) now
 > or contact us at sales@pulumi.com.
 
 The CI/CD integration assistant helps teams integrate their Pulumi stacks with both a version control system and a CI/CD service.
@@ -25,9 +25,8 @@ The wizard has two options to help you to get started with integrations:
 
 ![Start Workflow Wizard](/images/docs/reference/console/start-workflow-wizard.png)
 
-The CI/CD integration assistant also offers best practice hints for stacks that do not
-have a VCS configuration. Here's a look at the various ways the assistant helps teams throughout
-the Console:
+The assistant also offers best practice hints for stacks that do not have a VCS configuration.
+Here's how the assistant helps teams throughout the Console:
 
 * The dashboard page shows recently updated stacks. The assistant alerts users by providing a quick navigation link to configure a VCS
 for any stacks that don't have it.
