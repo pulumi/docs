@@ -83,7 +83,7 @@ The AWS provider is open source and available in the [pulumi/pulumi-aws](https:/
 The AWS provider accepts the following configuration settings.  These can be provided to the default AWS provider via `pulumi config set aws:<option>`, or passed to the constructor of `new aws.Provider` to construct a specific instance of the AWS provider.
 
 * `region`: (Required) The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
-* `allowedAccountIds`: (Optional) List of allowed AWS account IDs to prevent you from mistakenly using an incorrect one (and potentially end up destroying a live environment). Conflicts with `forbiddenAccountIds.
+* `allowedAccountIds`: (Optional) List of allowed AWS account IDs to prevent you from mistakenly using an incorrect one (and potentially end up destroying a live environment). Conflicts with `forbiddenAccountIds`.
 * `accessKey`: (Optional) The access key for API operations. You can retrieve this from the ‘Security & Credentials’ section of the AWS console.
 * `assumeRole`: (Optional) A JSON object representing an IAM role to assume.  To set these nested properties, see docs on  [structured configuration]({{< relref "/docs/intro/concepts/config#structured-configuration">}}), for example `pulumi config set --path aws:assumeRole.roleArn arn:aws:iam::058111598222:role/OrganizationAccountAccessRole`.  The object contains the followting properties:
   * `durationSeconds`: (Optional) Number of seconds to restrict the assume role session duration.
@@ -95,7 +95,7 @@ The AWS provider accepts the following configuration settings.  These can be pro
   * `tags`: (Optional) Map of assume role session tags.
   * `transitiveTagKeys`: (Optional) Set of assume role session tag keys to pass to any subsequent sessions.
 * `dynamodbEndpoint`: (Optional) Use this to override the default endpoint URL constructed from the `region`. It’s typically used to connect to dynamodb-local.
-* `forbiddenAccountIds`: (Optional) List of forbidden AWS account IDs to prevent you from mistakenly using the wrong one (and potentially end up destroying a live environment). Conflicts with `allowedAccountIds.
+* `forbiddenAccountIds`: (Optional) List of forbidden AWS account IDs to prevent you from mistakenly using the wrong one (and potentially end up destroying a live environment). Conflicts with `allowedAccountIds`.
 * `ignoreTags`: (Optional) A JSON block with resource tag settings to ignore across all resources handled by this provider (except any individual service tag resources such as `aws.ec2.Tag`) for situations where external systems are managing certain resource tags. The `ignoreTags` setting can have two nested properties
   * `keys`: A list of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` properties and displaying any diffs for the tag value. If any resource still has this tag key configured in the `tags` argument, it will display a perpetual diff until the tag is removed from the argument or `ignoreChanges` is also used.
   * `keyPrefixes`: A list of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` properties and displaying any diffs for the tag value. If any resource still has this tag key configured in the `tags` argument, it will display a perpetual diff until the tag is removed from the argument or `ignoreChanges` is also used.

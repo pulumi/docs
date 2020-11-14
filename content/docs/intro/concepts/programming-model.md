@@ -1900,7 +1900,7 @@ If you have multiple outputs and need to join them, the [all](#all) function act
 
 ##### All {#all}
 
-The {{< pulumi-all >}} function combines multiple `Output`s into a single `Output` whose value is a combination of the values of the individual outputs, and whose dependencies include all dependencies of each argument. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used along with {{< pulumi-apply >}} when it is necessary to combine multiple `Output`s to compute a new `Output` value,  such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with {{< pulumi-apply >}}, the result of {{< pulumi-all >}} is itself an {{< pulumi-output >}}.
+The {{< pulumi-all >}} function combines multiple `Output`s into a single `Output` whose value is a combination of the values of the individual outputs, and whose dependencies include all dependencies of each argument. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used along with {{< pulumi-apply >}} when it is necessary to combine multiple `Output`s to compute a new `Output` value, such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with {{< pulumi-apply >}}, the result of {{< pulumi-all >}} is itself an {{< pulumi-output >}}.
 
 For example, let's take a server and database name, and use them to create a database connection string:
 
@@ -2766,7 +2766,7 @@ Console.WriteLine($"Hello, {name} -- I see your lucky number is {lucky}!");
 
 In this example, we have created an instance of the {{< pulumi-config >}} class, which is a bag of key/value pairs. On that instance, a number of getter functions allow us to read the currently-set values.
 
-The above example uses the simple, empty constructor. If you are writing code that will be imported into a broader project, such as your own library of components, you should pass your library's name to the constructor. This string is used as a namespace for all configuration keys. Similarly, if you want to access the config of another library - such as the config for a standard library like `aws`, you should also pass the library's name to the constructor.  The default constructor automatically uses the current project for that namespace.
+The above example uses the simple, empty constructor. If you are writing code that will be imported into a broader project, such as your own library of components, you should pass your library's name to the constructor. This string is used as a namespace for all configuration keys. Similarly, if you want to access the config of another library, such as the config for a standard library like `aws`, you should also pass the library's name to the constructor.  The default constructor automatically uses the current project for that namespace.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -2817,7 +2817,7 @@ func main() {
         if err != nil {
             lucky = 42
         }
-        fmt.Printf("Hello, %v -- I see your lucky number is %v!", name, lucky)
+        fmt.Printf("Hello, %v -- I see your lucky number is %v!\n", name, lucky)
         return nil
     }
 }

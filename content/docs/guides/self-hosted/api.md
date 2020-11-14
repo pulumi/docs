@@ -105,9 +105,9 @@ The database migrations container is configurable to enable connections to the d
 | Variable Name            | Description                                                                                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. This must be set to the value of the certificate itself and _not_ a filepath to the location of the certificate file. |
-| MYSQL_ROOT_USERNAME      | The root username to login to the MySQL database. Defaults to `root`. |
-| MYSQL_ROOT_PASSWORD      | The root user password to login to the MySQL database. |
-| MYSQL_ALLOW_EMPTY_PASSWORD    | Set it to true to allow the container to be started with a blank password for the root user. |
+| MYSQL_ROOT_USERNAME      | The root username to log in to the MySQL database. Defaults to `root`. |
+| MYSQL_ROOT_PASSWORD      | The root user password to log in to the MySQL database. |
+| MYSQL_ALLOW_EMPTY_PASSWORD    | Set to `true` to allow the container to be started with a blank password for the root user. |
 | PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server. |
-| PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for avaialbility before login. |
+| PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for availability before login. |
 | RUN_MIGRATIONS_EXTERNALLY     | Request for migrations to be run against an external database. |

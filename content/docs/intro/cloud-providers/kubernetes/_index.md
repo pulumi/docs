@@ -46,13 +46,13 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/kubernetes" >}}
 
 ### Setup
 
-The Kubernetes provider supports several options for providing access to a Kubernetes cluster.  See the [Kubernetes setup page]({{< relref "setup" >}}) for details.
+The Kubernetes provider supports several options for providing access to a Kubernetes cluster.  See the [Kubernetes setup page]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}) for details.
 
 ### Getting Started
 
 The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/docs/get-started/kubernetes" >}}) guide.  
 
-Additional Kubernetes tutorials are availble covering:
+Additional Kubernetes tutorials are available covering:
 
 - [Clusters]({{< relref "/docs/tutorials/kubernetes#clusters" >}}) on AWS, Azure and GCP
 - [Workloads]({{< relref "/docs/tutorials/kubernetes#workloads" >}}) including Guestbook, Helm Charts, Stateless Apps, and more
@@ -61,7 +61,7 @@ Additional Kubernetes tutorials are availble covering:
 
 ### Libraries
 
-The following packages are available in packager managers:
+The following packages are available in package managers:
 
 - JavaScript/TypeScript: [`@pulumi/kubernetes`](https://www.npmjs.com/package/@pulumi/kubernetes)
 - Python: [`pulumi-kubernetes`](https://pypi.org/project/pulumi-kubernetes/)
@@ -77,12 +77,12 @@ The Kubernetes provider accepts the following configuration settings.  These can
 - `cluster`: (Optional) If present, the name of the kubeconfig cluster to use.
 - `context`: (Optional) If present, the name of the kubeconfig context to use.
 - `enableDryRun`: (Optional) BETA FEATURE - If present and set to true, enable server-side diff calculations. This feature is in developer preview, and is disabled by default. This config can be specified in the following ways, using this precedence: (1) this `enableDryRun` parameter or (2) the `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.
-- `kubeconfig`: (Optional) The contents of a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
-- `namespace`: (Optional) The contents of a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
+- `kubeconfig`: (Optional) The contents of a kubeconfig file. If this is set, this config will be used instead of `$KUBECONFIG`.
+- `namespace`: (Optional) The contents of a kubeconfig file. If this is set, this config will be used instead of `$KUBECONFIG`.
 - `renderYamlToDirectory`: (Optional) BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes to the Pulumi program. This feature is in developer preview, and is disabled by default. Note that some computed Outputs such as status fields will not be populated since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.
-- `suppressDeprecationWarnings`: (Optional) If present and set to true, suppress apiVersion deprecation warnings from the CLI. This config can be specified in the following ways, using this precedence: (1) this `suppressDeprecationWarnings` parameter or (2) the `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.
+used in these resources will be rendered in plain text to the resulting YAML.
+- `suppressDeprecationWarnings`: (Optional) If present and set to true, suppress `apiVersion` deprecation warnings from the CLI. This config can be specified in the following ways, using this precedence: (1) this `suppressDeprecationWarnings` parameter or (2) the `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.
 
 ### Annotations
 

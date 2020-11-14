@@ -40,4 +40,4 @@ templates, but the underlying model leaks through and carries forward all of the
 
 Finally, Pulumi is [open source](https://github.com/pulumi/pulumi) and community-driven. All of the other cloud systems — such as Azure Resource Manager or AWS CloudFormation — are proprietary closed source, lead to lock-in, and lack the ability for the community to contribute to them.
 
-To learn more about adopting Pulumi, please refer to the [AWS CloudFormation]({{< relref "/docs/guides/adopting/from_aws" >}}) or [Azure Resource Manager (ARM)]({{< relref "/docs/guides/adopting/from_azure" >}}) migration guides.  For ARM, the [arm2pulumi]({{ relref "/arm2pulumi" }}) tool can also help you directly convert your templates to Pulumi code.
+To learn more about adopting Pulumi, please refer to the [AWS CloudFormation]({{< relref "/docs/guides/adopting/from_aws" >}}) or [Azure Resource Manager (ARM)]({{< relref "/docs/guides/adopting/from_azure" >}}) migration guides.  For ARM, the [arm2pulumi]({{< relref "/arm2pulumi" >}}) tool can also help you directly convert your templates to Pulumi code.

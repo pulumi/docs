@@ -115,7 +115,7 @@ func main() {
         if err != nil {
             lucky = 42
         }
-        fmt.Printf("Hello, %v -- I see your lucky number is %v!", name, lucky)
+        fmt.Printf("Hello, %v -- I see your lucky number is %v!\n", name, lucky)
         return nil
     }
 }

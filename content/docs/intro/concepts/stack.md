@@ -14,7 +14,7 @@ instance of a Pulumi program. Stacks are commonly used to denote different phase
 
 ## Create a stack {#create-stack}
 
-To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack. The project that the stack is associated with is determined by finding the nearest `Pulumi.yaml` file.  
+To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack. The project that the stack is associated with is determined by finding the nearest `Pulumi.yaml` file.
 
 The stack name must be unique within a project. Stack names may only contain alphanumeric characters, hyphens, underscores, or periods.
 

@@ -25,7 +25,7 @@ to the closed source AWS CloudFormation servers to provision infrastructure on A
 
 AWS CDK and Troposphere support AWS only. Pulumi supports the entire capabilities of Azure, Google Cloud Platform,
 and cloud native technologies such as Kubernetes, _in addition_ to AWS. Projects like `cdktf` and `cdk8s` exist to bridge
-these gaps, but provide disjoint experiences across targets clouds.  There are several other points outlined below, but
+these gaps, but provide disjoint experiences across target clouds.  There are several other points outlined below, but
 these are the top-level key differences.
 
 ## Summary of Major Differences
