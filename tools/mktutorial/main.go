@@ -166,6 +166,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			warn("tutorial is missing an H1 title: %s", name)
 			continue
 		}
+		h1 = strings.TrimSpace(h1)
 
 		// Assign the parts of the tutorial name to variables.
 		cloud := parts[0]
