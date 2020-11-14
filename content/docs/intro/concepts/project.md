@@ -28,7 +28,7 @@ description: Basic example of an AWS web server accessible over HTTP.
 A project file contains the following attributes:
 
 * `name`: (required) a name for your project.  This shows up in the Pulumi dashboard and is used to aggregate the
-  associated stacks and their resources underneath the project, as a simple kind of hierarchy.
+  associated stacks and their resources underneath the project, as a simple kind of hierarchy.  Project names may only contain alphanumeric characters, hyphens, underscores, or periods.
 
 * `runtime`: (required) (`string`|`object`) the language runtime configuration to use for your program.  Possible string options are `nodejs`
   (for JavaScript and TypeScript), `python` (for Python),`go` (for Go), and `dotnet` (for .NET).  At the moment, Pulumi doesn't depend on specific versions

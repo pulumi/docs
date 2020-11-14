@@ -13,7 +13,7 @@ menu:
 
 The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) that allows you to express policies and using the local `--policy-pack` flag (as part of the Pulumi CLI) to enforce Policy Packs is also open source.
 
-Enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Console are part of Pulumi CrossGuard and are only available to preview for Team Pro and Enterprise organizations.
+Enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Console are part of Pulumi CrossGuard and are available to [Pulumi Enterprise](/pricing/) organizations.
 
 ## How do Policy Packs enforced by the service interact with Policy Packs specified by the local Policy Pack flag?
 
