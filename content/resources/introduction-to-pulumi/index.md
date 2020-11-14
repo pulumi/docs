@@ -45,11 +45,11 @@ hero:
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2020-11-17T09:30:00-07:00
+    - datetime: 2020-11-17T09:30:00-08:00
       hubspot_form_id: 98e735f4-055d-459d-a474-dff38c540bea
       gotowebinar_key: ""
 
-    - datetime: 2020-12-01T18:00:00-07:00
+    - datetime: 2020-12-01T17:00:00-08:00
       hubspot_form_id: 062d9849-0deb-4c26-a578-5d8f3c4fa8e6
       gotowebinar_key: ""
 
