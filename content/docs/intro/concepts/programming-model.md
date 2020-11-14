@@ -1900,7 +1900,7 @@ If you have multiple outputs and need to join them, the [all](#all) function act
 
 ##### All {#all}
 
-The {{< pulumi-all >}} function combines multiple `Output`s into a single `Output` whose value is a combination of the values of the individual outputs, and whose dependencies include all dependencies of each argument. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used along with {{< pulumi-apply >}} when it is necessary to combine multiple `Output`s to compute a new `Output` value, such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with {{< pulumi-apply >}}, the result of {{< pulumi-all >}} is itself an {{< pulumi-output >}}.
+The {{< pulumi-all >}} function combines multiple {{< pulumi-output >}} values into a single {{< pulumi-output >}} whose value is a combination of the values of the individual outputs, and whose dependencies include all dependencies of each argument. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used along with {{< pulumi-apply >}} when it is necessary to combine multiple {{< pulumi-output >}} values to compute a new {{< pulumi-output >}} value, such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with {{< pulumi-apply >}}, the result of {{< pulumi-all >}} is itself an {{< pulumi-output >}}.
 
 For example, let's take a server and database name, and use them to create a database connection string:
 
