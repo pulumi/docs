@@ -1541,7 +1541,7 @@ class MyStack : Stack
 
 Importantly, Pulumi will never attempt to modify the Security Group in this example. It simply reads back its state from your currently configured cloud account, and then uses it as input for the EC2 Instance.
 
-#### Component Resources {#components}
+### Components {#components}
 
 A component resource is a logical grouping of other resources. Components usually instantiate a set of other related resources in their constructor, aggregating them as children, and creating a larger, useful abstraction that encapsulates its implementation details.
 
@@ -1553,7 +1553,7 @@ Here are a few examples of components:
 
 The implicit `pulumi:pulumi:Stack` resource is itself a component that contains all top-level resources in a program.
 
-##### Authoring a New Component
+#### Authoring a New Component
 
 To author your own new component, either in a program or in a reusable library, create a subclass of {{< pulumi-componentresource >}}. Inside of its constructor, you will chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, you will allocate any child resources, passing the [`parent`](#parent) option as appropriate to ensure component children are parented correctly.
 
@@ -1639,7 +1639,7 @@ A component must register a unique type name, such as `pkg:index:MyComponent` in
 
 For more information about components, [see the Pulumi Components tutorial]({{< relref "/docs/tutorials/aws/s3-folder-component" >}}).
 
-##### Creating Child Resources
+#### Creating Child Resources
 
 Components will often contain child resources. This entails two things. First, the names are often derived from the component's name, to ensure uniqueness, such as by using the component's name as a prefix. Second, children must be registered as such, by passing the component itself as [the `parent` option](#parent) when constructing a resource.
 
@@ -1690,7 +1690,7 @@ var bucket = new Aws.S3.Bucket($"{name}-bucket",
 
 {{< /chooser >}}
 
-##### Registering Component Outputs
+#### Registering Component Outputs
 
 Components can define their own output properties using {{< pulumi-componentresource-registeroutputs >}}. The Pulumi engine uses this information to display the logical outputs of the component and any changes will be shown during an update.
 
@@ -1751,7 +1751,7 @@ The call to register outputs typically happens at the very end of the component'
 
 The call to `registerOutputs` also tells Pulumi that the resource is done registering children and should be considered fully constructed, so---although it's not enforced---the best practice is to call it in all components even if no outputs need to be registered.
 
-##### Inheriting Resource Providers
+#### Inheriting Resource Providers
 
 One option all resources have is the ability to pass an [explicit resource provider](#providers) to supply explicit configuration settings. For instance, you may want to ensure that all AWS resources are created in a different region than the globally configured region. In the case of components, the challenge is that these providers must flow from parent to children.
 
@@ -2474,213 +2474,6 @@ An {{< pulumi-apply >}}'s callback is given the plaintext value of the underlyin
 It is possible to mark resource outputs as containg secrets. In this case, Pulumi will automatically treat those outputs
 as secrets and encrypt them in the state file and anywhere they flow to. To do so,
 [use the "additional secret outputs" option, as described above]({{< relref "#additionalsecretoutputs" >}}).
-
-### Stack Outputs {#stack-outputs}
-
-A stack may export values as [stack outputs]({{< relref "stack#outputs" >}}). These outputs are shown during an update, can be easily retrieved from the Pulumi CLI, and are displayed in the Pulumi Console. They can be used for important values like resource IDs and computed IP addresses and DNS names. They can also be used for [inter-stack dependencies](#stack-references), such as when a lower layer of infrastructure needs to export values for consumption elsewhere.
-
-To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-exports.url = resource.url;
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-export let url = resource.url;
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-pulumi.export("url", resource.url)
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-ctx.Export("url", resource.Url)
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-public class MyStack : Stack
-{
-    public MyStack()
-    {
-        ...
-        this.Url = resource.Url;
-    }
-
-    // 'url' is the output name. By default, it would take the property name 'Url'.
-    [Output("url")] Output<string> Url { get; set; }
-}
- ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-From the CLI, you can then use [`pulumi stack output url`]({{< relref "/docs/reference/cli/pulumi_stack_output" >}}) to get the value and incorporate into other scripts or tools.
-
-The right-hand side of a stack export can be a regular value, an [Output](#outputs), or a `Promise` (effectively, the same as an [Input](#outputs)). The actual values are resolved at the end of `pulumi up`.
-
-Stack exports are effectively JSON serialized, though quotes are removed when exporting strings.
-
-For example, this program:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-exports.x = "hello"
-exports.o = {num: 42}
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-export let x = "hello";
-export let o = {num: 42};
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-pulumi.export("x", "hello")
-pulumi.export("o", {'num': 42})
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-ctx.Export("x", pulumi.String("hello"))
-ctx.Export("o", pulumi.Map(map[string]pulumi.Input{
-    "num": pulumi.Int(42),
-}))
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-class MyStack : Stack
-{
-    [Output] public Output<string> x { get; set; }
-    [Output] public Output<ImmutableDictionary<string, int>> o { get; set; }
-
-    public MyStack()
-    {
-        this.x = Output.Create("hello");
-        this.o = Output.Create(
-            new Dictionary<string, int> { { "num", 42 } }
-                .ToImmutableDictionary());
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-will lead to the following stack outputs:
-
-```bash
-$ pulumi stack output x
-hello
-$ pulumi stack output o
-{"num": 42}
-```
-
-The full set of outputs can be rendered as JSON using `pulumi stack output --json`:
-
-```bash
-$ pulumi stack output --json
-{
-  "x": "hello",
-  "o": {
-      "num": 42
-  }
-}
-```
-
-> **Note**: If you export a resource, it too will be JSON serialized. This usually isn't what you want, especially as some resources can be quite large. If you only wanted to export its ID or name, for example, just export those properties directly.
-
-Stack outputs respect secret annotations and will also be encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
-
-### Stack References {#stack-references}
-
-Stack references allow you to access the [outputs](#stack-outputs) of one stack from another stack.
-
-To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-const pulumi = require("@pulumi/pulumi");
-const other = new pulumi.StackReference("acmecorp/infra/other");
-const otherOutput = other.getOutput("x");
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-const other = new pulumi.StackReference("acmecorp/infra/other");
-const otherOutput = other.getOutput("x");
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-from pulumi import StackReference
-
-other = StackReference(f"acmecorp/infra/other")
-other_output = other.get_output("x");
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-other, err := pulumi.NewStackReference(ctx, "acmecorp/infra/other", nil)
-if err != nil {
-    return err
-}
-otherOutput := other.GetOutput(pulumi.String("x"))
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-var other = new StackReference("acmecorp/infra/other");
-var otherOutput = other.GetOutput("x");
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-Stack names must be fully qualified, including the organization, project, and stack name components, in the format `<organization>/<project>/<stack>`. For individual accounts, use your account name for the organization component.
 
 ### Config {#config}
 
@@ -3993,6 +3786,213 @@ export("label_url", label.url)
 * [Dynamic Providers as Provisioners](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners)
     * Provisioning a VM after it is created is a common problem. Developers have the option to run user-supplied scripts while creating the VM itself. For example, the AWS EC2 resource has a userData parameter, that allows you to specify an inline script, which EC2 will run at instance startup. However, this example of dynamic providers as provisioners allows you to copy/execute scripts on the target instance without replacing the instance itself.
 
+### Stack Outputs {#stack-outputs}
+
+A stack may export values as [stack outputs]({{< relref "stack#outputs" >}}). These outputs are shown during an update, can be easily retrieved from the Pulumi CLI, and are displayed in the Pulumi Console. They can be used for important values like resource IDs and computed IP addresses and DNS names. They can also be used for [inter-stack dependencies](#stack-references), such as when a lower layer of infrastructure needs to export values for consumption elsewhere.
+
+To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+exports.url = resource.url;
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+export let url = resource.url;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+pulumi.export("url", resource.url)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+ctx.Export("url", resource.Url)
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+public class MyStack : Stack
+{
+    public MyStack()
+    {
+        ...
+        this.Url = resource.Url;
+    }
+
+    // 'url' is the output name. By default, it would take the property name 'Url'.
+    [Output("url")] Output<string> Url { get; set; }
+}
+ ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+From the CLI, you can then use [`pulumi stack output url`]({{< relref "/docs/reference/cli/pulumi_stack_output" >}}) to get the value and incorporate into other scripts or tools.
+
+The right-hand side of a stack export can be a regular value, an [Output](#outputs), or a `Promise` (effectively, the same as an [Input](#outputs)). The actual values are resolved at the end of `pulumi up`.
+
+Stack exports are effectively JSON serialized, though quotes are removed when exporting strings.
+
+For example, this program:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+exports.x = "hello"
+exports.o = {num: 42}
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+export let x = "hello";
+export let o = {num: 42};
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+pulumi.export("x", "hello")
+pulumi.export("o", {'num': 42})
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+ctx.Export("x", pulumi.String("hello"))
+ctx.Export("o", pulumi.Map(map[string]pulumi.Input{
+    "num": pulumi.Int(42),
+}))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+class MyStack : Stack
+{
+    [Output] public Output<string> x { get; set; }
+    [Output] public Output<ImmutableDictionary<string, int>> o { get; set; }
+
+    public MyStack()
+    {
+        this.x = Output.Create("hello");
+        this.o = Output.Create(
+            new Dictionary<string, int> { { "num", 42 } }
+                .ToImmutableDictionary());
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+will lead to the following stack outputs:
+
+```bash
+$ pulumi stack output x
+hello
+$ pulumi stack output o
+{"num": 42}
+```
+
+The full set of outputs can be rendered as JSON using `pulumi stack output --json`:
+
+```bash
+$ pulumi stack output --json
+{
+  "x": "hello",
+  "o": {
+      "num": 42
+  }
+}
+```
+
+> **Note**: If you export a resource, it too will be JSON serialized. This usually isn't what you want, especially as some resources can be quite large. If you only wanted to export its ID or name, for example, just export those properties directly.
+
+Stack outputs respect secret annotations and will also be encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
+
+### Stack References {#stack-references}
+
+Stack references allow you to access the [outputs](#stack-outputs) of one stack from another stack.
+
+To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const pulumi = require("@pulumi/pulumi");
+const other = new pulumi.StackReference("acmecorp/infra/other");
+const otherOutput = other.getOutput("x");
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+const other = new pulumi.StackReference("acmecorp/infra/other");
+const otherOutput = other.getOutput("x");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+from pulumi import StackReference
+
+other = StackReference(f"acmecorp/infra/other")
+other_output = other.get_output("x");
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+other, err := pulumi.NewStackReference(ctx, "acmecorp/infra/other", nil)
+if err != nil {
+    return err
+}
+otherOutput := other.GetOutput(pulumi.String("x"))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var other = new StackReference("acmecorp/infra/other");
+var otherOutput = other.GetOutput("x");
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Stack names must be fully qualified, including the organization, project, and stack name components, in the format `<organization>/<project>/<stack>`. For individual accounts, use your account name for the organization component.
+
 ### Assets and Archives
 
 The Pulumi SDK provides two classes for working with files - `Asset` and `Archive`.  Some Pulumi Resource inputs accept either an `Asset` or an `Archive` as input, and Pulumi understands how to take the files referenced by the `Asset` or `Archive` and package them up for use by the resource.  There are several different concrete implementations of these two concepts, based on various ways the files might be provided - whether in memory, on disk, or in an archive.  Similarly, these can be consumed by resources that expect a variety of packaging formats.  The Pulumi `Asset` and `Archive` concepts provide a bridge between these two.
@@ -4186,7 +4186,7 @@ var fileArchive = new FileArchive("./file.zip");
 var remoteArchive = new RemoteArhcive("http://contoso.com/file.zip");
 var assetArchive = new AssetArchive(new Dictionary<string, string>
 {
-    { "file", new StringAsset("Hello, world!") }, 
+    { "file", new StringAsset("Hello, world!") },
     { "folder", new FileArchive("./folder") }
 });
 ```
