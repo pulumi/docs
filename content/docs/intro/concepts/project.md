@@ -50,6 +50,13 @@ A project file contains the following attributes:
 * `backend`: (optional) configuration for project state [backend]({{< relref "state#config-stack" >}}). Supports these options:
     * `url`: explicitly specify backend url like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
 
+* `template`: (optional) provides configuration settings that will be used when initializing a new stack from a project file using `pulumi new`. Currently these values are *only* used by `pulumi new`, and not by `pulumi stack init` or as default configuration for existing stacks.
+    * `description`: (optional) a description for the template itself.
+    * `config`: (required) the map of configuration values keyed by the name of the config setting - such as `aws:region`.  The value of each key includes:
+        * `description`: (optional) a description for the config setting.
+        * `default`: (optional) the default value of the config setting - which will be presented to the user as a default.
+        * `secret`: (optional) if `true` indicates that this configration value should be marked as secret.
+
 When using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a file `setup.py` that defines the entry point.
 
 A `Pulumi.yaml` file for a `nodejs` program that does not execute TypeScript natively via `ts-node`:
