@@ -297,6 +297,7 @@ These are the most essential concepts defined by the Pulumi SDK:
 * [Providers](#providers): classes to control resource provider configuration
 * [Stack Outputs](#stack-outputs): functions to export values from a stack
 * [Stack References](#stack-references): reference one stack's outputs from another
+* [Assets and Archives](#assets-and-archives): use files and folders as inputs to resources
 * [Runtime Functions](#runtime-functions): access important metadata and capabilities at runtime
 
 ### Resources {#resources}
