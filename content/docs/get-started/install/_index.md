@@ -176,7 +176,6 @@ v{{< latest-version >}}
 
 {{< /chooser >}}
 
-
 ### Pulumi Not Found Error
 
 If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your system's `$PATH` contains the directory containing the `pulumi` CLI installed earlier.
