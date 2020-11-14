@@ -62,6 +62,79 @@ If `[value]` is not specified when setting a configuration key, the CLI will pro
 $ cat my_key.pub | pulumi config set publicKey
 ```
 
+### Accessing Configuration from Code {#code}
+
+Configuration can be used from within Pulumi programs by constructing an instance of the `Config` class and using it to `get` or `require` the value of a given config key.  Additional details can be found in the [config]({{< relref "/docs/intro/concepts/programming-model#reading-configuration-values" >}}) section of the programming model documentation.
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let config = new pulumi.Config();
+let name = config.require("name");
+let lucky = config.getNumber("lucky") || 42;
+console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+let config = new pulumi.Config();
+let name = config.require("name");
+let lucky = config.getNumber("lucky") || 42;
+console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+config = pulumi.Config();
+name = config.require('name');
+lucky = config.get_number('lucky') or 42
+print(f'Hello, {name} -- I see your lucky number is {lucky}!')
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        conf := config.New(ctx, "")
+        name := conf.Require("name")
+        lucky, err := conf.TryInt("lucky")
+        if err != nil {
+            lucky = 42
+        }
+        fmt.Printf("Hello, %v -- I see your lucky number is %v!\n", name, lucky)
+        return nil
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var config = new Pulumi.Config();
+var name = config.Require("name");
+var lucky = config.GetInt32("lucky") ?? 42;
+Console.WriteLine($"Hello, {name} -- I see your lucky number is {lucky}!");
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Encrypted Secrets {#secrets}
 
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plaintext.

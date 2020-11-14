@@ -28,7 +28,7 @@ description: Basic example of an AWS web server accessible over HTTP.
 A project file contains the following attributes:
 
 * `name`: (required) a name for your project.  This shows up in the Pulumi dashboard and is used to aggregate the
-  associated stacks and their resources underneath the project, as a simple kind of hierarchy.
+  associated stacks and their resources underneath the project, as a simple kind of hierarchy.  Project names may only contain alphanumeric characters, hyphens, underscores, or periods.
 
 * `runtime`: (required) (`string`|`object`) the language runtime configuration to use for your program.  Possible string options are `nodejs`
   (for JavaScript and TypeScript), `python` (for Python),`go` (for Go), and `dotnet` (for .NET).  At the moment, Pulumi doesn't depend on specific versions
@@ -49,6 +49,13 @@ A project file contains the following attributes:
 
 * `backend`: (optional) configuration for project state [backend]({{< relref "state#config-stack" >}}). Supports these options:
     * `url`: explicitly specify backend url like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
+
+* `template`: (optional) provides configuration settings that will be used when initializing a new stack from a project file using `pulumi new`. Currently these values are *only* used by `pulumi new`, and not by `pulumi stack init` or as default configuration for existing stacks.
+    * `description`: (optional) a description for the template itself.
+    * `config`: (required) the map of configuration values keyed by the name of the config setting - such as `aws:region`.  The value of each key includes:
+        * `description`: (optional) a description for the config setting.
+        * `default`: (optional) the default value of the config setting - which will be presented to the user as a default.
+        * `secret`: (optional) if `true` indicates that this configration value should be marked as secret.
 
 When using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a file `setup.py` that defines the entry point.
 
