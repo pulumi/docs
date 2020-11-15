@@ -56,6 +56,18 @@ staging                                   n/a                      n/a
 test                                      2 weeks ago              121
 ```
 
+To select a stack that is part of an organization, use the fully-qualified stack name, either `orgName/stackName` or `orgName/projectName/stackName`:
+
+```bash
+$ pulumi stack select acmecorp/prod
+
+$ pulumi stack ls
+NAME                                      LAST UPDATE              RESOURCE COUNT
+acmecorp/prod*                            4 hours ago              97
+acmecorp/staging                          4 hours ago              97
+dev                                       n/a                      n/a
+```
+
 ## Deploy a project
 
 To deploy your project to the currently selected stack, run `pulumi up`. The operation uses the latest [configuration values]({{< relref "config" >}}) for the active stack.
