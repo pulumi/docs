@@ -261,9 +261,7 @@ const principalServer = new azuread.ServicePrincipal(`${name}-sp-server`, {
 });
 
 // Export outputs.
-export const resourceGroupName = resourceGroup.name;
 export const adServerAppId = applicationServer.applicationId;
-export const adServerAppSecret = spPasswordServer.value;
 ```
 
 ## Create an IAM Client Application and ServicePrincipal
@@ -307,7 +305,6 @@ const principalClient = new azuread.ServicePrincipal(`${name}-sp-client`, {
 
 // Export outputs.
 export const adClientAppId = applicationClient.applicationId;
-export const adClientAppSecret = spPasswordClient.value;
 ```
 
 [azure-ad-aks]: https://docs.microsoft.com/en-us/azure/aks/azure-ad-integration
