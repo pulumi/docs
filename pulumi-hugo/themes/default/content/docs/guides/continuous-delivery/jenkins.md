@@ -20,14 +20,14 @@ altered to fit into any existing type of deployment setup.
 
 - A working installation of a recent version of Jenkins.
 - An account on the [Pulumi Console](https://app.pulumi.com).
-- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+- The [latest version of Pulumi]({{< relref "/docs/get-started/install" >}}).
 - Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}})
 and choosing one of the many templates that are available.
 - A bare repo and set the remote URL to be your GitHub project.
 
 ## Sample Project
 
-An example project is located [here](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-springboot). You may download the project and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo into your Jenkins workspace.
+You can download an [example project](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-springboot) and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo into your Jenkins workspace.
 
 ## Stack and Branch Mappings
 
@@ -38,8 +38,7 @@ The source code for the stack is in a repository in GitHub and uses TypeScript a
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
 
-Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< relref "/docs/reference/cli/pulumi_new" >}}).
+Alternatively, you can also run `pulumi new [template]` to create a [template project]({{< relref "/docs/reference/cli/pulumi_new" >}}).
 
 ## PULUMI_ACCESS_TOKEN
 
@@ -137,7 +136,7 @@ You can get to the administration in one of two ways depending on which UI (Clas
 
 ### Using the withCredentials binding plugin
 
-Jenkins allows you to manage credentials in a global credentials store. Learn more [here](https://jenkins.io/doc/pipeline/steps/credentials-binding/). By using the `withCredentials` plugin, you could store your AWS, Azure or GCP credentials in the credentials store, and inject it into the pipeline easily. For example, in order to use the Azure CLI credentials, you will need the Azure CLI plugin additionally. Once added, you can add a new Service Principal credential and map its properties to the appropriate env variables needed by the Pulumi CLI.
+Jenkins allows you to [manage credentials in a global credentials store](https://jenkins.io/doc/pipeline/steps/credentials-binding/). By using the `withCredentials` plugin, you could store your AWS, Azure or GCP credentials in the credentials store, and inject it into the pipeline easily. For example, in order to use the Azure CLI credentials, you will need the Azure CLI plugin additionally. Once added, you can add a new Service Principal credential and map its properties to the appropriate env variables needed by the Pulumi CLI.
 
 ```groovy
 ...

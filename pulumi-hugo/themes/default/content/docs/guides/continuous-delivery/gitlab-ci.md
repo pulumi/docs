@@ -25,7 +25,7 @@ altered to fit into any existing type of deployment setup.
 - An account on [https://app.pulumi.com](https://app.pulumi.com) and that you have created a new project.
     - This just means you will sign-in using your GitLab credentials.
     - However, pulumi can be run from anywhere and your infrastructure code itself can be hosted anywhere.
-- The latest CLI. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+- The [latest CLI]({{< relref "/docs/get-started/install" >}}).
 - A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
@@ -37,8 +37,7 @@ The source code for the stack is in a repository in GitLab and uses `TypeScript`
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
 
-Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< relref "/docs/reference/cli/pulumi_new" >}}).
+Alternatively, you can also run `pulumi new [template]` to create a [template project]({{< relref "/docs/reference/cli/pulumi_new" >}}).
 
 ## GitLab CI Runners
 
@@ -51,12 +50,12 @@ If you are running `pulumi` from any branch other than the `master` branch,
 you are likely to hit an error that the `PULUMI_ACCESS_TOKEN`
 environment variable (introduced later in this document) cannot be accessed.
 You can fix this by specifying a wildcard regex to allow specific branches to
-be able to access the secret environment variables. Please refer to the GitLab
-documentation link above to learn how to do that.
+be able to access the secret environment variables. Refer to the [GitLab
+documentation](https://gitlab.com/help/user/project/protected_branches.md) to learn how to do that.
 
 ## Merge Request Builds
 
-GitLab has the ability to restrict jobs to _only_ run for merge requests. Learn more [here](https://docs.gitlab.com/ee/ci/merge_request_pipelines/). This is done by adding the following configuration to your GitLab pipeline config file:
+GitLab has the ability to restrict jobs to _only_ run for [merge requests](https://docs.gitlab.com/ee/ci/merge_request_pipelines/). This is done by adding the following configuration to your GitLab pipeline config file:
 
 ```
 only:
@@ -79,7 +78,7 @@ For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
 `AWS_SECRET_ACCESS_KEY`.
 
 **Note**: It is a good security practice to mark any sensitive variables as protected in GitLab.
-Please read the note about **Protected Branches** above.
+Read the note about **Protected Branches** above.
 
 ## Scripts
 

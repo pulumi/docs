@@ -31,7 +31,7 @@ Pulumi programs are structured as projects and stacks. The distinction between t
 
 Infrastructure and application artifacts can be managed together or separately. For instance, Pulumi can build and publish Docker container images containing application code when you do a `pulumi up`, alongside the private registry and container service infrastructure that consumes it. Equally as well, however, your infrastructure can reference independently deployed artifacts.
 
-A program becomes a project by virtue of a `Pulumi.yaml` manifest that describes it in the root directory. Each project can be instantiated multiple times. For instance, you can have distinct development, staging, and production stacks. Learn more about projects [here]({{< relref "project" >}}) and stacks [here]({{< relref "stack" >}}).
+A program becomes a project by virtue of a `Pulumi.yaml` manifest that describes it in the root directory. Each project can be instantiated multiple times. For instance, you can have distinct development, staging, and production stacks. Learn more about [projects]({{< relref "project" >}}) and [stacks]({{< relref "stack" >}}).
 
 ### Declaring Infrastructure
 
@@ -1101,7 +1101,7 @@ For this to work, your Pulumi stack must be configured correctly---e.g., in this
 
 If the resource's arguments differ from the imported state, the import will fail. This will result in a message, `warning: inputs to import do not match the existing resource; importing this resource will fail`; selecting "details" in the `pulumi up` preview will show you exactly what differs. Attempting to proceed will fail with a message, `error: inputs to import do not match the existing resource`. To fix these errors, ensure that your program computes state that matches the resource to be imported fully.
 
-> Because of auto-naming, it is common to run into this when importing a resource's name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, explicitly specify the resource's name [as described here](#autonaming). Notice that has been done in the above example for the EC2 security group, by passing `"web-sg-62a569b"` as its name property in its arguments.
+> Because of auto-naming, it is common to run into this when importing a resource's name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, [explicitly specify the resource's name](#autonaming). Notice that has been done in the above example for the EC2 security group, by passing `"web-sg-62a569b"` as its name property in its arguments.
 
 Once a resource has been successfully imported, remove the `import` option, and Pulumi will have adopted the resource fully.
 

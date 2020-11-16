@@ -94,7 +94,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 });
 ```
 
-For details on all the capabilities of CloudWatch log groups, please refer to the [Amazon CloudWatch Logs documentation](
+For details on all the capabilities of CloudWatch log groups, refer to the [Amazon CloudWatch Logs documentation](
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html), in addition to the
 [Pulumi CloudWatch API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch" >}}).
 
@@ -203,7 +203,7 @@ Here is a list of the AWS services that export metrics:
 * [AWS Simple Notification Service (SNS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/sns#metrics" >}})
 * [AWS Simple Queue Service (SQS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/sqs#metrics" >}})
 
-If certain metrics or services are missing from the list, please refer to [this list](
+If certain metrics or services are missing from the list, refer to [AWS services that publish CloudWatch metrics](
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html) for names
 and namespaces, and then [use the `Metric` constructor directly](#creating-a-metric-object) to create an object.
 
@@ -401,7 +401,7 @@ More complex widget customization is possible. See the individual types and argu
 
 ## Additional CloudWatch Resources
 
-For more information about Amazon CloudWatch, please see the following:
+For more information about Amazon CloudWatch, see the following:
 
 * [Amazon CloudWatch homepage](https://aws.amazon.com/cloudwatch/)
 

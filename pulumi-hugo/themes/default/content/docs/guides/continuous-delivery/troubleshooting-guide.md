@@ -16,7 +16,7 @@ The type of failure you experience is likely related to one of these steps.
 In order to run a Pulumi command, the following are required:
 
 * A [Pulumi access token]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#access-tokens" >}}) for the account you wish to use.
-Create one [here](https://app.pulumi.com/account/tokens) by logging in with the appropriate account.
+[Create a token](https://app.pulumi.com/account/tokens) by logging in with the appropriate account.
 * A stack that you would like to update the automated pipeline.
 * Pulumi CLI available in the system `PATH`.
 * Build tools (more on this below) based on the runtime of your Pulumi app.
@@ -64,21 +64,21 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 
   For example, for a stack named `production`, the `Pulumi.production.yaml` file must exist alongside the `Pulumi.yaml`.
   If your Pulumi app is in a different folder, you can use the `--cwd` flag with almost every `pulumi` command.
-  Learn more about the global flags [here]({{< relref "/docs/reference/cli#options" >}}).
+  Learn more about the [global flags]({{< relref "/docs/reference/cli#options" >}}).
 
 ### Installing the Pulumi CLI
 
 Depending on the CI service, there may be a few ways to install the Pulumi CLI. The following CI systems have native extensions that provide
 an easy-to-use mechanism for installing and running the various `pulumi` commands.
 
-* [Azure Pipelines Task Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) - Access the guide [here]({{< relref "azure-devops" >}})
-* GitHub Actions - [JavaScript Action](https://github.com/pulumi/action-install-pulumi-cli), [Docker Action](https://github.com/pulumi/actions) - Access the guide [here]({{< relref "github-actions" >}})
+* [Azure Pipelines Task Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) - [Azure Guide]({{< relref "azure-devops" >}})
+* GitHub Actions - [JavaScript Action](https://github.com/pulumi/action-install-pulumi-cli), [Docker Action](https://github.com/pulumi/actions) - [GitHub Actions Guide]({{< relref "github-actions" >}})
 
 > Pulumi CLI is now pre-installed on GitHub Actions runners. However, if you need to install a specific version, you can always use one of the aforementioned actions.
 
-* [CircleCI Orb](https://circleci.com/developer/orbs/orb/compute/pulumi) - Access the guide [here]({{< relref "circleci" >}})
-* [Octopus Deploy Step Template](https://library.octopus.com/step-templates/76296cd1-7d8c-47e8-b33f-027ecd3ff6b5/actiontemplate-run-pulumi-(linux)) - Access the guide [here]({{< relref "octopus-deploy" >}})
-* [Spinnaker Plugin](https://github.com/pulumi/spinnaker-preconfigured-job-plugin) - Access the guide [here]({{< relref "spinnaker" >}})
+* [CircleCI Orb](https://circleci.com/developer/orbs/orb/compute/pulumi) - [CircleCI Guide]({{< relref "circleci" >}})
+* [Octopus Deploy Step Template](https://library.octopus.com/step-templates/76296cd1-7d8c-47e8-b33f-027ecd3ff6b5/actiontemplate-run-pulumi-(linux)) - [Octopus Deploy Guide]({{< relref "octopus-deploy" >}})
+* [Spinnaker Plugin](https://github.com/pulumi/spinnaker-preconfigured-job-plugin) - [Spinnaker Guide]({{< relref "spinnaker" >}})
 
 If you are using a CI system that does not have a native extension for installing the CLI, you can always run an inline script step
 to [install the CLI manually]({{< relref "/docs/get-started/install" >}}).
@@ -121,7 +121,7 @@ when you run `pulumi preview` or `pulumi update --yes`.
 * For `nodejs` and `python` runtimes, add a step prior to running any `pulumi` commands to restore the dependencies.
 * For `dotnet` and `go` runtimes, the dependencies are restored for you automatically when you run `pulumi preview` or `pulumi update --yes`.
 * There is an exception to restoring dependencies automatically for `.NET` when you use a private package feed. You must ensure that the
-package(s) from the private feed are accessible or you can use a pre-built binary (see the `binary` option [here]({{< relref "/docs/intro/concepts/project" >}})) with Pulumi to avoid rebuilding your `.NET` solution again.
+package(s) from the private feed are accessible or you can use a [pre-built binary]({{< relref "/docs/intro/concepts/project" >}})) with Pulumi to avoid rebuilding your `.NET` solution again.
 
 > Note that if you do choose to use a pre-built binary, you will need to install the necessary Pulumi plugins manually using `pulumi plugin install`.
 

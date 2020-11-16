@@ -121,9 +121,9 @@ If your IdP does not support an emailAddress Name ID Format identifier but suppo
 
 ### The IdP signing certificate expired and I can't login to Pulumi anymore
 
-Please [contact us]({{< relref "/about#contact-us" >}}) for assistance with getting the IdP metadata XML updated.
+[Contact us]({{< relref "/about#contact-us" >}}) for assistance with getting the IdP metadata XML updated.
 
-### An SSO binding was not found in the XML. Please contact your SSO provider.
+### An SSO binding was not found in the XML. Contact your SSO provider.
 
 This error occurs when the metadata XML you are trying to save does not have any `<SingleSignOnService>` elements under the `<IDPSSODescriptor>`. The `<SingleSignOnService>` is used by the Pulumi Console to determine the authentication mechanism supported by the IDP. [Learn more](https://en.wikipedia.org/wiki/SAML_2.0#SAML_2.0_Bindings) about SAML 2.0 bindings. You must contact your IdP support or your system admin to fix the metadata XML.
 
