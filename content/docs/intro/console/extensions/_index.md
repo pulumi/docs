@@ -20,8 +20,8 @@ and integrations.
 
 ## CI/CD Integration Assistant
 
-The [CI/CD integration assistant]({{< relref "ci-cd-integration-assistant" >}}) helps teams integrate their Pulumi stacks
-with version control systems and CI/CD services.
+The [CI/CD integration assistant]({{< relref "ci-cd-integration-assistant" >}}) helps you integrate Pulumi into CI/CD
+systems for automatically deploying stacks.
 
 ## Webhooks
 

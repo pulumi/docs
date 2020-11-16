@@ -5,15 +5,15 @@ meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
 
 > This feature is available on the Pulumi Team Pro and Enterprise editions.
 > If you would like to try this feature, [start a trial](https://app.pulumi.com/site/organizations/add) now
-> or contact us at sales@pulumi.com.
+> or contact us at <a href="mailto:sales@pulumi.com">sales@pulumi.com</a>.
 
-The CI/CD integration assistant helps teams integrate their Pulumi stacks with both version control systems and CI/CD services.
+The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks.
 
 <!--more-->
 
-A version control system provides team collaboration capabilities and ensures that the source code for your Pulumi project is not
-just on a single developer's machine. Using a CI/CD service to update stacks ensures that no single person on your team is
-responsible for updating the stack and drastically reduces the risk of compromising the sensitive cloud provider credentials.
+A version control system (VCS) provides team collaboration capabilities and ensures that the source code for your Pulumi project is not
+just on a single developer's machine. Using a CI/CD system makes your team more productive, by automatically deploying your Pulumi stacks.
+So that code is delivered to production -- meaning less of a lag between commits and what your end users are seeing.
 
 The assistant contains a guided experience to help teams configure a VCS as well as automate it with a
 CI/CD pipeline.
@@ -40,8 +40,9 @@ although there are some exceptions for doing so. The reasons for exceptions are 
 
 ## Using The Same Service For VCS and CI/CD
 
-There are several benefits for a team to choose a single service for all of their team collaboration needs. This section reviews
-how the wizard helps your teams configure VCS and CI/CD using the identity that you signed-up with.
+There are several benefits for a team to choose a single service for all of their team collaboration needs.
+This section reviews how the wizard helps your team configure VCS and CI/CD regardless of the VCS or identity provider
+you use to connect to Pulumi.
 
 ### Configuring a VCS
 
@@ -49,13 +50,16 @@ how the wizard helps your teams configure VCS and CI/CD using the identity that 
 
 Select an identity you wish to use to setup VCS, as well as a CI/CD pipeline for the stack.
 
-Some services such as Atlassian Bitbucket, GitHub, GitLab offer both a version control system as well as a CI/CD service.
-So this might be a convenient option if your team wishes to keep everything related to your
-Pulumi project on a single service.
+Services such as Atlassian Bitbucket, GitHub, GitLab offer both a version control system as well as a CI/CD service.
 
-> For SAML and Email-based identity users, the wizard will not be able to provide smart
-> links to a specific service due to the nature of the identity itself. However, the
-> wizard still provides a customized CI/CD workflow for your stack that you can use.
+* Bitbucket offers [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
+* GitHub has [GitHub Actions](https://github.com/features/actions)
+* GitLab has [GitLab CI/CD](https://docs.gitlab.com/ce/ci/)
+
+This might be a convenient option if your team wishes to keep everything related to your Pulumi project on a single service.
+
+> If your identity isn't tied to a VCS service, like SAML or Email, you will still be able to get a customized CI/CD
+> workflow for your stack.
 
 After you choose an identity, the wizard will provide you with a quick link
 to create a new repository in the target service as well as the instructions for
