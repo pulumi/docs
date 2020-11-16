@@ -43,11 +43,11 @@ jobs:
           path: pulumi
           ref: v${{ github.event.client_payload.ref }}
       - name: Install pulumictl
-        uses: jaxxstorm/action-install-gh-release@d62853bc9e466834c74cefb34fad78535582e21a
+        uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
           repo: pulumi/pulumictl
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@b811287a6e06bb7e5d8b91132b839c67e3f9c6ed
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
         with:
           pulumi-version: ${{ env.PULUMI_VERSION }}
       - name: setup go
