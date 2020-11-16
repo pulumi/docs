@@ -1900,7 +1900,7 @@ If you have multiple outputs and need to join them, the [all](#all) function act
 
 ##### All {#all}
 
-The {{< pulumi-all >}} function acts like an {{< pulumi-apply >}} over multiple {{< pulumi-output >}}s. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used to compute an entirely new output value, such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with {{< pulumi-apply >}}, the result of {{< pulumi-all >}} is itself an {{< pulumi-output >}}.
+The {{< pulumi-all >}} function combines multiple {{< pulumi-output >}} values into a single {{< pulumi-output >}} whose value is a combination of the values of the individual outputs, and whose dependencies include all dependencies of each argument. This function joins over an entire list of outputs, waiting for all of them to become available, and then provides them to the supplied callback. This can be used along with {{< pulumi-apply >}} when it is necessary to combine multiple {{< pulumi-output >}} values to compute a new {{< pulumi-output >}} value, such as adding or concatenating outputs from two different resources together, or creating a new data structure that uses them. Just like with {{< pulumi-apply >}}, the result of {{< pulumi-all >}} is itself an {{< pulumi-output >}}.
 
 For example, let's take a server and database name, and use them to create a database connection string:
 
@@ -1952,9 +1952,12 @@ connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
 {{% choosable language csharp %}}
 
 ```csharp
-// In .NET 'Output.Tuple' is used so that each unwrapped value will preserve their distinct type.
-// 'Output.All' can be used when all input values have the same type (i.e. all are Output<string>)
-var connectionString = Output.Tuple(sqlServer.name, database.name)
+// When all the input values have the same type, Output.All can be used and produces an ImmutableArray.
+var connectionString = Output.All(sqlServer.name, database.name)
+    .Apply(t => `Server=tcp:${t[0]}.database.windows.net;initial catalog=${t[1]}...`);
+
+// For more flexibility, 'Output.Tuple' is used so that each unwrapped value will preserve their distinct type.
+var connectionString2 = Output.Tuple(sqlServer.name, database.name)
     .Apply(t => `Server=tcp:${t.Item1}.database.windows.net;initial catalog=${t.Item2}...`);
 ```
 
@@ -1963,6 +1966,8 @@ var connectionString = Output.Tuple(sqlServer.name, database.name)
 {{< /chooser >}}
 
 Notice that {{< pulumi-all >}} works by itself returning an output that represents the combination of multiple outputs, so that within the callback, the raw values are available inside of [a tuple](https://en.wikipedia.org/wiki/Tuple).
+
+As shown in the examples above, {{< pulumi-all >}} is almost always combined with a call to {{< pulumi-apply >}}.
 
 ##### Accessing Properties of an Output {#lifting}
 
@@ -2141,40 +2146,42 @@ let certValidation = new aws.route53.Record("cert_validation", {
 
 Outputs containing strings cannot be used directly in operations like string concatenation. _String interpolation_ lets you more easily build a string out of various output values, without needing {{< pulumi-apply >}} or {{< pulumi-all >}}. This can be used to export a stack output, provide a dynamically computed string as a new resource argument, or even just for diagnostic purposes.
 
-For example, say you want to create a URL from hostname and port output values:
+For example, say you want to create a URL from `hostname` and `port` output values.  It is possible to use [apply](#apply) and [all](#all) to do this, of course:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-let hostname = // get some Output
-let port = // get some Output
+let hostname = res.hostname;
+let port = res.port;
 
 // Would like to produce a string equivalent to: http://${hostname}:${port}/
-let url = // ?
+let url = pulumi.all([hostname, port]).
+    apply(([hostname, port]) => `http://${hostname}:${port}/`);
 ```
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-let hostname: Output<string> = // get some Output
-let port: Output<number> = // get some Output
+let hostname: Output<string>;
+let port: Output<number>;
 
 // Would like to produce a string equivalent to: http://${hostname}:${port}/
-let url = // ?
+let url = pulumi.all([hostname, port]).
+    apply(([hostname, port]) => `http://${hostname}:${port}/`);
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-hostname: Output[str] = # get some Output
-port: Output[int] = # get some Output
+hostname: Output[str]
+port: Output[int]
 
 # Would like to produce a string equivalent to: http://${hostname}:${port}/
-url = # ?
+url = Output.all(hostname, port).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 ```
 
 {{% /choosable %}}
@@ -2184,7 +2191,9 @@ url = # ?
 var hostname pulumi.StringOutput
 var port pulumi.NumberOutput
 
-url := // ?
+url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
+    return fmt.Sprintf("http://%s:%d/", args[0], args[1])
+})
 ```
 
 {{% /choosable %}}
@@ -2195,54 +2204,12 @@ Output<string> hostname = // get some Output
 Output<int> port = // get some Output
 
 // Would like to produce a string equivalent to: http://{hostname}:{port}/
-var url = // ?
+var url = Output.Tuple(hostname, port).Apply(t => $"http://{t.Item1}:{t.Item2}/");
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-It is possible to use [apply](#apply) and [all](#all) to do this, of course:
-
-{{% choosable language javascript %}}
-
-```javascript
-let url = pulumi.all([hostname, port]).
-    apply(([hostname, port]) => `http://${hostname}:${port}/`);
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-let url: Output<string> = pulumi.all([hostname, port]).
-    apply(([hostname, port]) => `http://${hostname}:${port}/`);
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-url = Output.all(hostname, port).apply(lambda l: f"http://{l[0]}:{l[1]}/")
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
-    return fmt.Sprintf("http://%s:%d/", args[0], args[1])
-})
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-var url = Output.Tuple(hostname, port).Apply(t => $"http://{t.Item1}:{t.Item2}/");
-```
-
-{{% /choosable %}}
 
 This is verbose and unwieldy, however. To make this common task easier, Pulumi exposes helpers that allow you to create strings that contain outputs---internally hiding all of the messiness required to join them together:
 
@@ -2799,7 +2766,76 @@ Console.WriteLine($"Hello, {name} -- I see your lucky number is {lucky}!");
 
 In this example, we have created an instance of the {{< pulumi-config >}} class, which is a bag of key/value pairs. On that instance, a number of getter functions allow us to read the currently-set values.
 
-> This code uses the simple, empty constructor. If you are writing code that will be imported into a broader project, such as your own library of components, you should pass your library's name to the constructor. This string is used as a namespace for all configuration keys. The default constructor automatically uses the current project for that namespace.
+The above example uses the simple, empty constructor. If you are writing code that will be imported into a broader project, such as your own library of components, you should pass your library's name to the constructor. This string is used as a namespace for all configuration keys. Similarly, if you want to access the config of another library, such as the config for a standard library like `aws`, you should also pass the library's name to the constructor.  The default constructor automatically uses the current project for that namespace.
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let config = new pulumi.Config("namespace");
+let name = config.require("name");
+let lucky = config.getNumber("lucky") || 42;
+console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+let config = new pulumi.Config("namespace");
+let name = config.require("name");
+let lucky = config.getNumber("lucky") || 42;
+console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+config = pulumi.Config("namespace");
+name = config.require('name');
+lucky = config.get_number('lucky') or 42
+print(f'Hello, {name} -- I see your lucky number is {lucky}!')
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        conf := config.New(ctx, "namespace")
+        name := conf.Require("name")
+        lucky, err := conf.TryInt("lucky")
+        if err != nil {
+            lucky = 42
+        }
+        fmt.Printf("Hello, %v -- I see your lucky number is %v!\n", name, lucky)
+        return nil
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var config = new Pulumi.Config("namespace");
+var name = config.Require("name");
+var lucky = config.GetInt32("lucky") ?? 42;
+Console.WriteLine($"Hello, {name} -- I see your lucky number is {lucky}!");
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 The {{< pulumi-config >}} object also provides getters that ensure a value is marked secret, ensuring the underlying raw value is encrypted no matter where it goes. Read more about this in the [Secrets documentation](#secrets).
 

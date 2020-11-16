@@ -12,6 +12,7 @@ Explore the resources and functions of the projects module in the GCP package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="accessapprovalsettings" title="AccessApprovalSettings"><span class="symbol resource"></span>AccessApprovalSettings</a></li>
+    <li><a href="defaultserviceaccounts" title="DefaultServiceAccounts"><span class="symbol resource"></span>DefaultServiceAccounts</a></li>
     <li><a href="iamauditconfig" title="IAMAuditConfig"><span class="symbol resource"></span>IAMAuditConfig</a></li>
     <li><a href="iambinding" title="IAMBinding"><span class="symbol resource"></span>IAMBinding</a></li>
     <li><a href="iamcustomrole" title="IAMCustomRole"><span class="symbol resource"></span>IAMCustomRole</a></li>
@@ -38,7 +39,7 @@ Explore the resources and functions of the projects module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 
 

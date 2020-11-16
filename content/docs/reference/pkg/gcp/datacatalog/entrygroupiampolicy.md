@@ -919,6 +919,8 @@ If it is not provided, the project will be parsed from the identifier of the par
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

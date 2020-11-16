@@ -145,10 +145,36 @@ Alternatively, you can install Pulumi manually.
 
 After installing Pulumi, verify everything is in working order by running the `pulumi` CLI:
 
+{{< chooser os "macos,windows,linux" >}}
+
+{{< choosable os macos >}}
+
 ```bash
 $ pulumi version
 v{{< latest-version >}}
 ```
+
+{{< /choosable >}}
+
+{{< choosable os linux >}}
+
+```bash
+$ pulumi version
+v{{< latest-version >}}
+```
+
+{{< /choosable >}}
+
+{{< choosable os windows >}}
+
+```bash
+> pulumi version
+v{{< latest-version >}}
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
 
 ### Pulumi Not Found Error
 
@@ -158,12 +184,42 @@ If you get an error that `pulumi` could not be found, it means your path has not
 
 If a new version of Pulumi is available, the CLI produces the following example warning when running any of the available commands:
 
+{{< chooser os "macos,windows,linux" >}}
+
+{{< choosable os macos >}}
+
 ```
 warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
    $ curl -sSL https://get.pulumi.com | sh
 
 or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
 ```
+
+{{< /choosable >}}
+
+{{< choosable os linux >}}
+
+```
+warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
+   $ curl -sSL https://get.pulumi.com | sh
+
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
+```
+
+{{< /choosable >}}
+
+{{< choosable os windows >}}
+
+```
+warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
+   > "%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))"
+
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
 
 {{< skip-version-check >}}
 
@@ -178,12 +234,6 @@ You can find the list of versions on the [Available Versions]({{< relref "/docs/
 {{< chooser os "macos,windows,linux" >}}
 
 {{< choosable os macos >}}
-
-### Homebrew
-
-```bash
-$ brew install pulumi@<version>
-```
 
 ### Installation Script
 

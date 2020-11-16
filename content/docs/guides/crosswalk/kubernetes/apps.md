@@ -464,7 +464,7 @@ Internet using a [load balanced Service][k8s-lb-svc].
 import * as k8s from "@pulumi/kubernetes";
 
 // Deploy the NGINX ingress controller using the Helm chart.
-const nginx = new k8s.helm.v2.Chart("nginx",
+const nginx = new k8s.helm.v3.Chart("nginx",
     {
         namespace: config.appSvcsNamespaceName,
         chart: "nginx-ingress",

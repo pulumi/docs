@@ -16,7 +16,7 @@ instance of a Pulumi program. Stacks are commonly used to denote different phase
 
 To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack. The project that the stack is associated with is determined by finding the nearest `Pulumi.yaml` file.
 
-The stack name must be unique within a project.
+The stack name must be unique within a project. Stack names may only contain alphanumeric characters, hyphens, underscores, or periods.
 
 ```bash
 $ pulumi stack init staging
@@ -54,6 +54,18 @@ NAME                                      LAST UPDATE              RESOURCE COUN
 jane-dev*                                 4 hours ago              97
 staging                                   n/a                      n/a
 test                                      2 weeks ago              121
+```
+
+To select a stack that is part of an organization, use the fully-qualified stack name, either `orgName/stackName` or `orgName/projectName/stackName`:
+
+```bash
+$ pulumi stack select acmecorp/prod
+
+$ pulumi stack ls
+NAME                                      LAST UPDATE              RESOURCE COUNT
+acmecorp/prod*                            4 hours ago              97
+acmecorp/staging                          4 hours ago              97
+dev                                       n/a                      n/a
 ```
 
 ## Deploy a project

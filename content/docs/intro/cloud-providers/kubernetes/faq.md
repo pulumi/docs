@@ -116,7 +116,7 @@ const myapp = new k8s.yaml.ConfigFile("app", {file: "app.yaml"});
 import * as k8s as "@pulumi/kubernetes";
 
 // Deploy a version of the stable/wordpress chart.
-const wordpress = new k8s.helm.v2.Chart("wpdev", {
+const wordpress = new k8s.helm.v3.Chart("wpdev", {
     repo: "stable",
     version: "2.1.3",
     chart: "wordpress"

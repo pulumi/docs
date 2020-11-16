@@ -99,7 +99,6 @@ class MyStack : Stack
         });
         var example = new Aws.Msk.Cluster("example", new Aws.Msk.ClusterArgs
         {
-            ClusterName = "example",
             KafkaVersion = "2.4.1",
             NumberOfBrokerNodes = 3,
             BrokerNodeGroupInfo = new Aws.Msk.Inputs.ClusterBrokerNodeGroupInfoArgs
@@ -274,7 +273,6 @@ func main() {
 			return err
 		}
 		example, err := msk.NewCluster(ctx, "example", &msk.ClusterArgs{
-			ClusterName:         pulumi.String("example"),
 			KafkaVersion:        pulumi.String("2.4.1"),
 			NumberOfBrokerNodes: pulumi.Int(3),
 			BrokerNodeGroupInfo: &msk.ClusterBrokerNodeGroupInfoArgs{
@@ -382,7 +380,6 @@ test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
         "LogDeliveryEnabled": "placeholder",
     })
 example = aws.msk.Cluster("example",
-    cluster_name="example",
     kafka_version="2.4.1",
     number_of_broker_nodes=3,
     broker_node_group_info=aws.msk.ClusterBrokerNodeGroupInfoArgs(
@@ -488,7 +485,6 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
     },
 });
 const example = new aws.msk.Cluster("example", {
-    clusterName: "example",
     kafkaVersion: "2.4.1",
     numberOfBrokerNodes: 3,
     brokerNodeGroupInfo: {
@@ -738,17 +734,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="clustername_csharp">
-<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the MSK cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="kafkaversion_csharp">
 <a href="#kafkaversion_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
 </span> 
@@ -778,6 +763,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -866,17 +862,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="clustername_go">
-<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the MSK cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="kafkaversion_go">
 <a href="#kafkaversion_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
 </span> 
@@ -906,6 +891,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -994,17 +990,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="clustername_nodejs">
-<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the MSK cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="kafkaversion_nodejs">
 <a href="#kafkaversion_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
 </span> 
@@ -1034,6 +1019,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1122,17 +1118,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="cluster_name_python">
-<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the MSK cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="kafka_version_python">
 <a href="#kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
 </span> 
@@ -1162,6 +1147,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4360,6 +4356,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

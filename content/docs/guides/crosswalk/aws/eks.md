@@ -626,7 +626,7 @@ import * as k8s from "@pulumi/kubernetes";
 const cluster = new eks.Cluster("my-cluster");
 
 // Deploy Wordpress into our cluster.
-const wordpress = new k8s.helm.v2.Chart("wordpress", {
+const wordpress = new k8s.helm.v3.Chart("wordpress", {
     repo: "stable",
     chart: "wordpress",
     values: {
@@ -654,7 +654,7 @@ depending on this, however, as it is an implementation detail of the chart and w
 As mentioned, there are other ways to fetch the chart's contents. For example, we can use a custom repo:
 
 ```typescript
-const chart = new k8s.helm.v2.Chart("empty", {
+const chart = new k8s.helm.v3.Chart("empty", {
     chart: "raw",
     version: "0.1.0",
     fetchOpts: {
@@ -666,7 +666,7 @@ const chart = new k8s.helm.v2.Chart("empty", {
 Or, we can use a tarball fetched from a web URL:
 
 ```typescript
-const chart = new k8s.helm.v2.Chart("empty1", {
+const chart = new k8s.helm.v3.Chart("empty1", {
     chart: "https://kubernetes-charts-incubator.storage.googleapis.com/raw-0.1.0.tgz",
 });
 ```

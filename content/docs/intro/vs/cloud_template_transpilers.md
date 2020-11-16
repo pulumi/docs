@@ -24,14 +24,15 @@ to the closed source AWS CloudFormation servers to provision infrastructure on A
 ## Pulumi Supports Many Clouds
 
 AWS CDK and Troposphere support AWS only. Pulumi supports the entire capabilities of Azure, Google Cloud Platform,
-and cloud native technologies such as Kubernetes, _in addition_ to AWS. There are several other points outlined below,
-but these are the top-level key differences.
+and cloud native technologies such as Kubernetes, _in addition_ to AWS. Projects like `cdktf` and `cdk8s` exist to bridge
+these gaps, but provide disjoint experiences across target clouds.  There are several other points outlined below, but
+these are the top-level key differences.
 
 ## Summary of Major Differences
 
 The transpiler approach gives you some of the benefits of Pulumi, with the following caveats:
 
-* Troposphere and CDK only support the AWS platform. Pulumi supports many clouds, including _major cloud platforms_
+* Troposphere and the AWS CDK only support the AWS platform. Pulumi supports many clouds, including _major cloud platforms_
   (such as Microsoft Azure, Google Cloud Platform, Kubernetes, and DigitalOcean), _on-premises and hybrid technologies_
   (such as VMWare vSphere and OpenStack), and _online SaaS offerings_ (like Cloudflare, Datadog, New Relic, and more).
   Furthermore, Pulumi is extensible, supports custom providers, and can bridge with any existing Terraform-based provider.
@@ -43,9 +44,6 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
   general-purpose language patterns, dependencies between objects, and therefore delivers a better overall experience.
   Pulumi also supports going beyond what you can express in YAML, such as building and publishing a Docker container image,
   authoring serverless functions in code, automating packaging and versioning of code, and so on.
-
-* [Pulumi's engine](https://github.com/pulumi/pulumi) is open source, whereas Troposphere and CDK depend on the closed
-  source CloudFormation engine. This means more of Pulumi is accessible to community contributions.
 
 * The Pulumi CLI and [Console]({{< relref "/docs/intro/console" >}}) are co-designed to make team collaboration simple,
   especially with organization-wide sharing of projects and stacks. This is closer to "GitHub for DevOps" and delivers

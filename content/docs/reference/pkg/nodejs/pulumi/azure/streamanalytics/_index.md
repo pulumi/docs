@@ -3,7 +3,7 @@ title: "Module streamanalytics"
 title_tag: "Module streamanalytics | Package @pulumi/azure | Node.js SDK"
 linktitle: "streamanalytics"
 meta_desc: "Explore members of the streamanalytics module in the @pulumi/azure package."
-git_sha: "fad3a198a9e41c94f026186b97bec6dc98104785"
+git_sha: "e017cf62df4615a9a84e768d6370e640838fc2bc"
 block_external_search_index: true
 ---
 
@@ -66,7 +66,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="FunctionJavaScriptUDF" data-link-title="FunctionJavaScriptUDF">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">
         Resource <strong>FunctionJavaScriptUDF</strong>
     </a>
 </h3>
@@ -105,7 +105,7 @@ const exampleFunctionJavaScriptUDF = new azure.streamanalytics.FunctionJavaScrip
 ```
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Create a FunctionJavaScriptUDF resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -130,14 +130,14 @@ Get an existing FunctionJavaScriptUDF resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -148,7 +148,7 @@ Returns true if the given object is an instance of FunctionJavaScriptUDF.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -157,7 +157,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L72">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L72">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>[]&gt;;</code></pre>
@@ -165,7 +165,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more `input` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -173,7 +173,7 @@ One or more `input` blocks as defined below.
 The name of the JavaScript UDF Function. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-output">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L80">property <b>output</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L80">property <b>output</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
@@ -181,7 +181,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 An `output` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ An `output` blocks as defined below.
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L88">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L88">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>script: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 The JavaScript of this UDF Function.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L92">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L92">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ The JavaScript of this UDF Function.
 The name of the Stream Analytics Job where this Function should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDF-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -214,7 +214,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Job" data-link-title="Job">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L37">
         Resource <strong>Job</strong>
     </a>
 </h3>
@@ -251,7 +251,7 @@ const exampleJob = new azure.streamanalytics.Job("exampleJob", {
 ```
 
 <h4 class="pdoc-member-header" id="Job-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -265,7 +265,7 @@ Create a Job resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Job-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -276,14 +276,14 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Job-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Job-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -294,7 +294,7 @@ Returns true if the given object is an instance of Job.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Job-compatibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L68">property <b>compatibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L68">property <b>compatibilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>compatibilityLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -302,7 +302,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the compatibility level for this job - which controls certain runtime behaviours of the streaming job. Possible values are `1.0` and `1.1`.
 
 <h4 class="pdoc-member-header" id="Job-dataLocale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L72">property <b>dataLocale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L72">property <b>dataLocale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataLocale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -310,7 +310,7 @@ Specifies the compatibility level for this job - which controls certain runtime 
 Specifies the Data Locale of the Job, which [should be a supported .NET Culture](https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx).
 
 <h4 class="pdoc-member-header" id="Job-eventsLateArrivalMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L76">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L76">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventsLateArrivalMaxDelayInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -318,7 +318,7 @@ Specifies the Data Locale of the Job, which [should be a supported .NET Culture]
 Specifies the maximum tolerable delay in seconds where events arriving late could be included. Supported range is `-1` (indefinite) to `1814399` (20d 23h 59m 59s).  Default is `0`.
 
 <h4 class="pdoc-member-header" id="Job-eventsOutOfOrderMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L80">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L80">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventsOutOfOrderMaxDelayInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ Specifies the maximum tolerable delay in seconds where events arriving late coul
 Specifies the maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order. Supported range is `0` to `599` (9m 59s). Default is `5`.
 
 <h4 class="pdoc-member-header" id="Job-eventsOutOfOrderPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L84">property <b>eventsOutOfOrderPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L84">property <b>eventsOutOfOrderPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventsOutOfOrderPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -334,7 +334,7 @@ Specifies the maximum tolerable delay in seconds where out-of-order events can b
 Specifies the policy which should be applied to events which arrive out of order in the input event stream. Possible values are `Adjust` and `Drop`.  Default is `Adjust`.
 
 <h4 class="pdoc-member-header" id="Job-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -343,7 +343,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Job-jobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L88">property <b>jobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L88">property <b>jobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jobId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ deployments and may be missing (undefined) during planning phases.
 The Job ID assigned by the Stream Analytics Job.
 
 <h4 class="pdoc-member-header" id="Job-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L92">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L92">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ The Job ID assigned by the Stream Analytics Job.
 The Azure Region in which the Resource Group exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Job-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ The Azure Region in which the Resource Group exists. Changing this forces a new 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Job-outputErrorPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L100">property <b>outputErrorPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L100">property <b>outputErrorPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputErrorPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -375,7 +375,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Specifies the policy which should be applied to events which arrive at the output and cannot be written to the external storage due to being malformed (such as missing column values, column values of wrong type or size). Possible values are `Drop` and `Stop`.  Default is `Drop`.
 
 <h4 class="pdoc-member-header" id="Job-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L104">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L104">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ Specifies the policy which should be applied to events which arrive at the outpu
 The name of the Resource Group where the Stream Analytics Job should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Job-streamingUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L108">property <b>streamingUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L108">property <b>streamingUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamingUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ The name of the Resource Group where the Stream Analytics Job should exist. Chan
 Specifies the number of streaming units that the streaming job uses. Supported values are `1`, `3`, `6` and multiples of `6` up to `120`.
 
 <h4 class="pdoc-member-header" id="Job-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L112">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L112">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ Specifies the number of streaming units that the streaming job uses. Supported v
 A mapping of tags assigned to the resource.
 
 <h4 class="pdoc-member-header" id="Job-transformationQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L116">property <b>transformationQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L116">property <b>transformationQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transformationQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ A mapping of tags assigned to the resource.
 Specifies the query that will be run in the streaming job, [written in Stream Analytics Query Language (SAQL)](https://msdn.microsoft.com/library/azure/dn834998).
 
 <h4 class="pdoc-member-header" id="Job-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -416,7 +416,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OutputBlob" data-link-title="OutputBlob">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L52">
         Resource <strong>OutputBlob</strong>
     </a>
 </h3>
@@ -466,7 +466,7 @@ const exampleOutputBlob = new azure.streamanalytics.OutputBlob("exampleOutputBlo
 ```
 
 <h4 class="pdoc-member-header" id="OutputBlob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L119"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L119"> <b>constructor</b></a>
 </h4>
 
 
@@ -480,7 +480,7 @@ Create a OutputBlob resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OutputBlob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -491,14 +491,14 @@ Get an existing OutputBlob resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OutputBlob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OutputBlob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -509,7 +509,7 @@ Returns true if the given object is an instance of OutputBlob.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OutputBlob-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L83">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L83">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="OutputBlob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -526,7 +526,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OutputBlob-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlob-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L91">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L91">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pathPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="OutputBlob-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L95">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L95">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlob-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L99">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L99">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</code></pre>
@@ -558,7 +558,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputBlob-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L103">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L103">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlob-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L107">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L107">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlob-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L111">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L111">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ The name of the Storage Account.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlob-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L115">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L115">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlob-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L119">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L119">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h4 class="pdoc-member-header" id="OutputBlob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -607,7 +607,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OutputEventHub" data-link-title="OutputEventHub">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">
         Resource <strong>OutputEventHub</strong>
     </a>
 </h3>
@@ -655,7 +655,7 @@ const exampleOutputEventHub = new azure.streamanalytics.OutputEventHub("exampleO
 ```
 
 <h4 class="pdoc-member-header" id="OutputEventHub-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -669,7 +669,7 @@ Create a OutputEventHub resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -680,14 +680,14 @@ Get an existing OutputEventHub resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OutputEventHub-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -698,7 +698,7 @@ Returns true if the given object is an instance of OutputEventHub.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L81">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L81">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the Event Hub.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -715,7 +715,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L89">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -731,7 +731,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L93">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L93">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</code></pre>
@@ -739,7 +739,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L97">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L97">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L101">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L101">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L105">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L105">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L109">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L109">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -771,7 +771,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputEventHub-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -780,7 +780,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OutputMssql" data-link-title="OutputMssql">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L50">
         Resource <strong>OutputMssql</strong>
     </a>
 </h3>
@@ -830,7 +830,7 @@ const exampleOutputMssql = new azure.streamanalytics.OutputMssql("exampleOutputM
 ```
 
 <h4 class="pdoc-member-header" id="OutputMssql-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -844,7 +844,7 @@ Create a OutputMssql resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OutputMssql-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -855,14 +855,14 @@ Get an existing OutputMssql resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OutputMssql-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OutputMssql-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -873,12 +873,12 @@ Returns true if the given object is an instance of OutputMssql.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OutputMssql-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L78">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L78">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputMssql-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -887,7 +887,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OutputMssql-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -895,7 +895,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssql-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L86">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L86">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -903,7 +903,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 Password used together with username, to login to the Microsoft SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssql-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L90">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L90">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -911,7 +911,7 @@ Password used together with username, to login to the Microsoft SQL Server. Chan
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssql-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L94">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L94">property <b>server</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>server: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 The SQL server url. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssql-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L98">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L98">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ The SQL server url. Changing this forces a new resource to be created.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssql-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L102">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L102">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>table: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Table in the database that the output points to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssql-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -944,7 +944,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="OutputMssql-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L106">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L106">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -952,7 +952,7 @@ deployments.
 Username used to login to the Microsoft SQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OutputServiceBusQueue" data-link-title="OutputServiceBusQueue">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">
         Resource <strong>OutputServiceBusQueue</strong>
     </a>
 </h3>
@@ -998,7 +998,7 @@ const exampleOutputServiceBusQueue = new azure.streamanalytics.OutputServiceBusQ
 ```
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -1012,7 +1012,7 @@ Create a OutputServiceBusQueue resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -1023,14 +1023,14 @@ Get an existing OutputServiceBusQueue resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1041,7 +1041,7 @@ Returns true if the given object is an instance of OutputServiceBusQueue.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1050,7 +1050,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1058,7 +1058,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L83">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L83">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1066,7 +1066,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Service Bus Queue.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L87">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L87">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1074,7 +1074,7 @@ The name of the Service Bus Queue.
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L91">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L91">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
@@ -1082,7 +1082,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L95">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L95">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L99">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L99">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1098,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L103">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L103">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L107">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L107">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1114,7 +1114,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OutputServicebusTopic" data-link-title="OutputServicebusTopic">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">
         Resource <strong>OutputServicebusTopic</strong>
     </a>
 </h3>
@@ -1169,7 +1169,7 @@ const exampleOutputServicebusTopic = new azure.streamanalytics.OutputServicebusT
 ```
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -1183,7 +1183,7 @@ Create a OutputServicebusTopic resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -1194,14 +1194,14 @@ Get an existing OutputServicebusTopic resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1212,7 +1212,7 @@ Returns true if the given object is an instance of OutputServicebusTopic.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L83">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L83">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L87">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L87">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputServicebusTopicSerialization'>OutputServicebusTopicSerialization</a>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L91">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L91">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1253,7 +1253,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Topic, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L95">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L95">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1261,7 +1261,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Topic, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L99">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L99">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1269,7 +1269,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L103">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L103">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1277,7 +1277,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L107">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L107">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1285,7 +1285,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The name of the Service Bus Topic.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1294,7 +1294,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReferenceInputBlob" data-link-title="ReferenceInputBlob">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">
         Resource <strong>ReferenceInputBlob</strong>
     </a>
 </h3>
@@ -1343,7 +1343,7 @@ const test = new azure.streamanalytics.ReferenceInputBlob("test", {
 ```
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -1357,7 +1357,7 @@ Create a ReferenceInputBlob resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -1368,14 +1368,14 @@ Get an existing ReferenceInputBlob resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1386,7 +1386,7 @@ Returns true if the given object is an instance of ReferenceInputBlob.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L82">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L82">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1394,7 +1394,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1403,7 +1403,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1411,7 +1411,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Reference Input Blob. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L90">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L90">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pathPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ The name of the Reference Input Blob. Changing this forces a new resource to be 
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L94">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L94">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L98">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L98">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ReferenceInputBlobSerialization'>ReferenceInputBlobSerialization</a>&gt;;</code></pre>
@@ -1435,7 +1435,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L102">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L102">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1443,7 +1443,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L106">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L106">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1451,7 +1451,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account that has the blob container with reference data.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L110">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L110">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1459,7 +1459,7 @@ The name of the Storage Account that has the blob container with reference data.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L114">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L114">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1467,7 +1467,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L118">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L118">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1475,7 +1475,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1484,7 +1484,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StreamInputBlob" data-link-title="StreamInputBlob">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">
         Resource <strong>StreamInputBlob</strong>
     </a>
 </h3>
@@ -1533,7 +1533,7 @@ const exampleStreamInputBlob = new azure.streamanalytics.StreamInputBlob("exampl
 ```
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -1547,7 +1547,7 @@ Create a StreamInputBlob resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -1558,14 +1558,14 @@ Get an existing StreamInputBlob resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1576,7 +1576,7 @@ Returns true if the given object is an instance of StreamInputBlob.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L82">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L82">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1584,7 +1584,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1593,7 +1593,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1601,7 +1601,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Stream Input Blob. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L90">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L90">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pathPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1609,7 +1609,7 @@ The name of the Stream Input Blob. Changing this forces a new resource to be cre
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L94">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L94">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1617,7 +1617,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L98">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L98">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</code></pre>
@@ -1625,7 +1625,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L102">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L102">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1633,7 +1633,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L106">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L106">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1641,7 +1641,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L110">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L110">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ The name of the Storage Account.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L114">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L114">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1657,7 +1657,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L118">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L118">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1665,7 +1665,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h4 class="pdoc-member-header" id="StreamInputBlob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1674,7 +1674,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StreamInputEventHub" data-link-title="StreamInputEventHub">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">
         Resource <strong>StreamInputEventHub</strong>
     </a>
 </h3>
@@ -1729,7 +1729,7 @@ const exampleStreamInputEventHub = new azure.streamanalytics.StreamInputEventHub
 ```
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L120"> <b>constructor</b></a>
 </h4>
 
 
@@ -1743,7 +1743,7 @@ Create a StreamInputEventHub resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -1754,14 +1754,14 @@ Get an existing StreamInputEventHub resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1772,7 +1772,7 @@ Returns true if the given object is an instance of StreamInputEventHub.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-eventhubConsumerGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L88">property <b>eventhubConsumerGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L88">property <b>eventhubConsumerGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubConsumerGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1780,7 +1780,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L92">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L92">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1788,7 +1788,7 @@ The name of an Event Hub Consumer Group that should be used to read events from 
 The name of the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1797,7 +1797,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1805,7 +1805,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Stream Input EventHub. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L100">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L100">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1813,7 @@ The name of the Stream Input EventHub. Changing this forces a new resource to be
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L104">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L104">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</code></pre>
@@ -1821,7 +1821,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L108">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L108">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1829,7 +1829,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L112">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L112">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1837,7 +1837,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L116">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L116">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1845,7 +1845,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L120">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L120">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1853,7 +1853,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHub-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1862,7 +1862,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StreamInputIotHub" data-link-title="StreamInputIotHub">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">
         Resource <strong>StreamInputIotHub</strong>
     </a>
 </h3>
@@ -1908,7 +1908,7 @@ const exampleStreamInputIotHub = new azure.streamanalytics.StreamInputIotHub("ex
 ```
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -1922,7 +1922,7 @@ Create a StreamInputIotHub resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -1933,14 +1933,14 @@ Get an existing StreamInputIotHub resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1951,7 +1951,7 @@ Returns true if the given object is an instance of StreamInputIotHub.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L79">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L79">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1959,7 +1959,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-eventhubConsumerGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L83">property <b>eventhubConsumerGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L83">property <b>eventhubConsumerGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubConsumerGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1967,7 +1967,7 @@ The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMoni
 The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1976,7 +1976,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-iothubNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L87">property <b>iothubNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L87">property <b>iothubNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iothubNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1984,7 +1984,7 @@ deployments and may be missing (undefined) during planning phases.
 The name or the URI of the IoT Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1992,7 +1992,7 @@ The name or the URI of the IoT Hub.
 The name of the Stream Input IoTHub. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L95">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L95">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2000,7 +2000,7 @@ The name of the Stream Input IoTHub. Changing this forces a new resource to be c
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L99">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L99">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</code></pre>
@@ -2008,7 +2008,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L103">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L103">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2016,7 +2016,7 @@ A `serialization` block as defined below.
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L107">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L107">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2024,7 +2024,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L111">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L111">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2032,7 +2032,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHub-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2043,7 +2043,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getJob" data-link-title="getJob">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L25">
         Function <strong>getJob</strong>
     </a>
 </h3>
@@ -2070,7 +2070,7 @@ export const jobId = example.then(example => example.jobId);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FunctionJavaScriptUDFArgs" data-link-title="FunctionJavaScriptUDFArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L180">
         interface <strong>FunctionJavaScriptUDFArgs</strong>
     </a>
 </h3>
@@ -2080,7 +2080,7 @@ export const jobId = example.then(example => example.jobId);
 The set of arguments for constructing a FunctionJavaScriptUDF resource.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L184">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L184">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</code></pre>
@@ -2088,7 +2088,7 @@ The set of arguments for constructing a FunctionJavaScriptUDF resource.
 One or more `input` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2096,7 +2096,7 @@ One or more `input` blocks as defined below.
 The name of the JavaScript UDF Function. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFArgs-output">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L192">property <b>output</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L192">property <b>output</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
@@ -2104,7 +2104,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 An `output` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L196">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2112,7 +2112,7 @@ An `output` blocks as defined below.
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFArgs-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L200">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L200">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>script: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2120,7 +2120,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 The JavaScript of this UDF Function.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L204">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L204">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2128,7 +2128,7 @@ The JavaScript of this UDF Function.
 The name of the Stream Analytics Job where this Function should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="FunctionJavaScriptUDFState" data-link-title="FunctionJavaScriptUDFState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L150">
         interface <strong>FunctionJavaScriptUDFState</strong>
     </a>
 </h3>
@@ -2138,7 +2138,7 @@ The name of the Stream Analytics Job where this Function should be created. Chan
 Input properties used for looking up and filtering FunctionJavaScriptUDF resources.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFState-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L154">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L154">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</code></pre>
@@ -2146,7 +2146,7 @@ Input properties used for looking up and filtering FunctionJavaScriptUDF resourc
 One or more `input` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2154,7 +2154,7 @@ One or more `input` blocks as defined below.
 The name of the JavaScript UDF Function. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFState-output">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L162">property <b>output</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L162">property <b>output</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>output?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</code></pre>
@@ -2162,7 +2162,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 An `output` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L166">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L166">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2170,7 +2170,7 @@ An `output` blocks as defined below.
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFState-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L170">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L170">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>script?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2178,7 +2178,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 The JavaScript of this UDF Function.
 
 <h4 class="pdoc-member-header" id="FunctionJavaScriptUDFState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L174">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L174">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2186,7 +2186,7 @@ The JavaScript of this UDF Function.
 The name of the Stream Analytics Job where this Function should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetJobArgs" data-link-title="GetJobArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L42">
         interface <strong>GetJobArgs</strong>
     </a>
 </h3>
@@ -2196,7 +2196,7 @@ The name of the Stream Analytics Job where this Function should be created. Chan
 A collection of arguments for invoking getJob.
 
 <h4 class="pdoc-member-header" id="GetJobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2204,7 +2204,7 @@ A collection of arguments for invoking getJob.
 Specifies the name of the Stream Analytics Job.
 
 <h4 class="pdoc-member-header" id="GetJobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2212,7 +2212,7 @@ Specifies the name of the Stream Analytics Job.
 Specifies the name of the resource group the Stream Analytics Job is located in.
 
 <h3 class="pdoc-module-header" id="GetJobResult" data-link-title="GetJobResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L56">
         interface <strong>GetJobResult</strong>
     </a>
 </h3>
@@ -2222,7 +2222,7 @@ Specifies the name of the resource group the Stream Analytics Job is located in.
 A collection of values returned by getJob.
 
 <h4 class="pdoc-member-header" id="GetJobResult-compatibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L60">property <b>compatibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L60">property <b>compatibilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibilityLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2230,7 +2230,7 @@ A collection of values returned by getJob.
 The compatibility level for this job.
 
 <h4 class="pdoc-member-header" id="GetJobResult-dataLocale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L64">property <b>dataLocale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L64">property <b>dataLocale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLocale: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2238,7 +2238,7 @@ The compatibility level for this job.
 The Data Locale of the Job.
 
 <h4 class="pdoc-member-header" id="GetJobResult-eventsLateArrivalMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L68">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L68">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsLateArrivalMaxDelayInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2246,7 +2246,7 @@ The Data Locale of the Job.
 The maximum tolerable delay in seconds where events arriving late could be included.
 
 <h4 class="pdoc-member-header" id="GetJobResult-eventsOutOfOrderMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L72">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L72">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsOutOfOrderMaxDelayInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2254,7 +2254,7 @@ The maximum tolerable delay in seconds where events arriving late could be inclu
 The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
 
 <h4 class="pdoc-member-header" id="GetJobResult-eventsOutOfOrderPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L76">property <b>eventsOutOfOrderPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L76">property <b>eventsOutOfOrderPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsOutOfOrderPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2262,7 +2262,7 @@ The maximum tolerable delay in seconds where out-of-order events can be adjusted
 The policy which should be applied to events which arrive out of order in the input event stream.
 
 <h4 class="pdoc-member-header" id="GetJobResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L80">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2270,7 +2270,7 @@ The policy which should be applied to events which arrive out of order in the in
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetJobResult-jobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L84">property <b>jobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L84">property <b>jobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2278,7 +2278,7 @@ The provider-assigned unique ID for this managed resource.
 The Job ID assigned by the Stream Analytics Job.
 
 <h4 class="pdoc-member-header" id="GetJobResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L88">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L88">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2286,12 +2286,12 @@ The Job ID assigned by the Stream Analytics Job.
 The Azure location where the Stream Analytics Job exists.
 
 <h4 class="pdoc-member-header" id="GetJobResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetJobResult-outputErrorPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L93">property <b>outputErrorPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L93">property <b>outputErrorPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputErrorPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2299,12 +2299,12 @@ The Azure location where the Stream Analytics Job exists.
 The policy which should be applied to events which arrive at the output and cannot be written to the external storage due to being malformed (such as missing column values, column values of wrong type or size).
 
 <h4 class="pdoc-member-header" id="GetJobResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L94">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L94">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetJobResult-streamingUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L98">property <b>streamingUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L98">property <b>streamingUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamingUnits: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2312,7 +2312,7 @@ The policy which should be applied to events which arrive at the output and cann
 The number of streaming units that the streaming job uses.
 
 <h4 class="pdoc-member-header" id="GetJobResult-transformationQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/getJob.ts#L102">property <b>transformationQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/getJob.ts#L102">property <b>transformationQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformationQuery: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2320,7 +2320,7 @@ The number of streaming units that the streaming job uses.
 The query that will be run in the streaming job, [written in Stream Analytics Query Language (SAQL)](https://msdn.microsoft.com/library/azure/dn834998).
 
 <h3 class="pdoc-module-header" id="JobArgs" data-link-title="JobArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L240">
         interface <strong>JobArgs</strong>
     </a>
 </h3>
@@ -2330,7 +2330,7 @@ The query that will be run in the streaming job, [written in Stream Analytics Qu
 The set of arguments for constructing a Job resource.
 
 <h4 class="pdoc-member-header" id="JobArgs-compatibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L244">property <b>compatibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L244">property <b>compatibilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2338,7 +2338,7 @@ The set of arguments for constructing a Job resource.
 Specifies the compatibility level for this job - which controls certain runtime behaviours of the streaming job. Possible values are `1.0` and `1.1`.
 
 <h4 class="pdoc-member-header" id="JobArgs-dataLocale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L248">property <b>dataLocale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L248">property <b>dataLocale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLocale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2346,7 +2346,7 @@ Specifies the compatibility level for this job - which controls certain runtime 
 Specifies the Data Locale of the Job, which [should be a supported .NET Culture](https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx).
 
 <h4 class="pdoc-member-header" id="JobArgs-eventsLateArrivalMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L252">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L252">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsLateArrivalMaxDelayInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2354,7 +2354,7 @@ Specifies the Data Locale of the Job, which [should be a supported .NET Culture]
 Specifies the maximum tolerable delay in seconds where events arriving late could be included. Supported range is `-1` (indefinite) to `1814399` (20d 23h 59m 59s).  Default is `0`.
 
 <h4 class="pdoc-member-header" id="JobArgs-eventsOutOfOrderMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L256">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L256">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsOutOfOrderMaxDelayInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2362,7 +2362,7 @@ Specifies the maximum tolerable delay in seconds where events arriving late coul
 Specifies the maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order. Supported range is `0` to `599` (9m 59s). Default is `5`.
 
 <h4 class="pdoc-member-header" id="JobArgs-eventsOutOfOrderPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L260">property <b>eventsOutOfOrderPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L260">property <b>eventsOutOfOrderPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsOutOfOrderPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2370,7 +2370,7 @@ Specifies the maximum tolerable delay in seconds where out-of-order events can b
 Specifies the policy which should be applied to events which arrive out of order in the input event stream. Possible values are `Adjust` and `Drop`.  Default is `Adjust`.
 
 <h4 class="pdoc-member-header" id="JobArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L264">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L264">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2378,7 +2378,7 @@ Specifies the policy which should be applied to events which arrive out of order
 The Azure Region in which the Resource Group exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L268">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L268">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2386,7 +2386,7 @@ The Azure Region in which the Resource Group exists. Changing this forces a new 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-outputErrorPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L272">property <b>outputErrorPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L272">property <b>outputErrorPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputErrorPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2394,7 +2394,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Specifies the policy which should be applied to events which arrive at the output and cannot be written to the external storage due to being malformed (such as missing column values, column values of wrong type or size). Possible values are `Drop` and `Stop`.  Default is `Drop`.
 
 <h4 class="pdoc-member-header" id="JobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L276">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L276">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2402,7 +2402,7 @@ Specifies the policy which should be applied to events which arrive at the outpu
 The name of the Resource Group where the Stream Analytics Job should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-streamingUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L280">property <b>streamingUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L280">property <b>streamingUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamingUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2410,7 +2410,7 @@ The name of the Resource Group where the Stream Analytics Job should exist. Chan
 Specifies the number of streaming units that the streaming job uses. Supported values are `1`, `3`, `6` and multiples of `6` up to `120`.
 
 <h4 class="pdoc-member-header" id="JobArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L284">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L284">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2418,7 +2418,7 @@ Specifies the number of streaming units that the streaming job uses. Supported v
 A mapping of tags assigned to the resource.
 
 <h4 class="pdoc-member-header" id="JobArgs-transformationQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L288">property <b>transformationQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L288">property <b>transformationQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformationQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2426,7 +2426,7 @@ A mapping of tags assigned to the resource.
 Specifies the query that will be run in the streaming job, [written in Stream Analytics Query Language (SAQL)](https://msdn.microsoft.com/library/azure/dn834998).
 
 <h3 class="pdoc-module-header" id="JobState" data-link-title="JobState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L182">
         interface <strong>JobState</strong>
     </a>
 </h3>
@@ -2436,7 +2436,7 @@ Specifies the query that will be run in the streaming job, [written in Stream An
 Input properties used for looking up and filtering Job resources.
 
 <h4 class="pdoc-member-header" id="JobState-compatibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L186">property <b>compatibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L186">property <b>compatibilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2444,7 +2444,7 @@ Input properties used for looking up and filtering Job resources.
 Specifies the compatibility level for this job - which controls certain runtime behaviours of the streaming job. Possible values are `1.0` and `1.1`.
 
 <h4 class="pdoc-member-header" id="JobState-dataLocale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L190">property <b>dataLocale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L190">property <b>dataLocale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLocale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2452,7 +2452,7 @@ Specifies the compatibility level for this job - which controls certain runtime 
 Specifies the Data Locale of the Job, which [should be a supported .NET Culture](https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx).
 
 <h4 class="pdoc-member-header" id="JobState-eventsLateArrivalMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L194">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L194">property <b>eventsLateArrivalMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsLateArrivalMaxDelayInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2460,7 +2460,7 @@ Specifies the Data Locale of the Job, which [should be a supported .NET Culture]
 Specifies the maximum tolerable delay in seconds where events arriving late could be included. Supported range is `-1` (indefinite) to `1814399` (20d 23h 59m 59s).  Default is `0`.
 
 <h4 class="pdoc-member-header" id="JobState-eventsOutOfOrderMaxDelayInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L198">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L198">property <b>eventsOutOfOrderMaxDelayInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsOutOfOrderMaxDelayInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2468,7 +2468,7 @@ Specifies the maximum tolerable delay in seconds where events arriving late coul
 Specifies the maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order. Supported range is `0` to `599` (9m 59s). Default is `5`.
 
 <h4 class="pdoc-member-header" id="JobState-eventsOutOfOrderPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L202">property <b>eventsOutOfOrderPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L202">property <b>eventsOutOfOrderPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventsOutOfOrderPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2476,7 +2476,7 @@ Specifies the maximum tolerable delay in seconds where out-of-order events can b
 Specifies the policy which should be applied to events which arrive out of order in the input event stream. Possible values are `Adjust` and `Drop`.  Default is `Adjust`.
 
 <h4 class="pdoc-member-header" id="JobState-jobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L206">property <b>jobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L206">property <b>jobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2484,7 +2484,7 @@ Specifies the policy which should be applied to events which arrive out of order
 The Job ID assigned by the Stream Analytics Job.
 
 <h4 class="pdoc-member-header" id="JobState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L210">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L210">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2492,7 +2492,7 @@ The Job ID assigned by the Stream Analytics Job.
 The Azure Region in which the Resource Group exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2500,7 +2500,7 @@ The Azure Region in which the Resource Group exists. Changing this forces a new 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobState-outputErrorPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L218">property <b>outputErrorPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L218">property <b>outputErrorPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputErrorPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2508,7 +2508,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Specifies the policy which should be applied to events which arrive at the output and cannot be written to the external storage due to being malformed (such as missing column values, column values of wrong type or size). Possible values are `Drop` and `Stop`.  Default is `Drop`.
 
 <h4 class="pdoc-member-header" id="JobState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L222">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L222">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2516,7 +2516,7 @@ Specifies the policy which should be applied to events which arrive at the outpu
 The name of the Resource Group where the Stream Analytics Job should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobState-streamingUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L226">property <b>streamingUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L226">property <b>streamingUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamingUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2524,7 +2524,7 @@ The name of the Resource Group where the Stream Analytics Job should exist. Chan
 Specifies the number of streaming units that the streaming job uses. Supported values are `1`, `3`, `6` and multiples of `6` up to `120`.
 
 <h4 class="pdoc-member-header" id="JobState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L230">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L230">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2532,7 +2532,7 @@ Specifies the number of streaming units that the streaming job uses. Supported v
 A mapping of tags assigned to the resource.
 
 <h4 class="pdoc-member-header" id="JobState-transformationQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/job.ts#L234">property <b>transformationQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/job.ts#L234">property <b>transformationQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformationQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2540,7 +2540,7 @@ A mapping of tags assigned to the resource.
 Specifies the query that will be run in the streaming job, [written in Stream Analytics Query Language (SAQL)](https://msdn.microsoft.com/library/azure/dn834998).
 
 <h3 class="pdoc-module-header" id="OutputBlobArgs" data-link-title="OutputBlobArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L243">
         interface <strong>OutputBlobArgs</strong>
     </a>
 </h3>
@@ -2550,7 +2550,7 @@ Specifies the query that will be run in the streaming job, [written in Stream An
 The set of arguments for constructing a OutputBlob resource.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L247">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L247">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2558,7 +2558,7 @@ The set of arguments for constructing a OutputBlob resource.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2566,7 +2566,7 @@ The date format. Wherever `{date}` appears in `pathPattern`, the value of this p
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L255">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L255">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2574,7 +2574,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L259">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L259">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2582,7 +2582,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L263">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L263">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</code></pre>
@@ -2590,7 +2590,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L267">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L267">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2598,7 +2598,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L271">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L271">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2606,7 +2606,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L275">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L275">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2614,7 +2614,7 @@ The name of the Storage Account.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L279">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L279">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2622,7 +2622,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlobArgs-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L283">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L283">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2630,7 +2630,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h3 class="pdoc-module-header" id="OutputBlobState" data-link-title="OutputBlobState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L197">
         interface <strong>OutputBlobState</strong>
     </a>
 </h3>
@@ -2640,7 +2640,7 @@ The time format. Wherever `{time}` appears in `pathPattern`, the value of this p
 Input properties used for looking up and filtering OutputBlob resources.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L201">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L201">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2648,7 +2648,7 @@ Input properties used for looking up and filtering OutputBlob resources.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2656,7 +2656,7 @@ The date format. Wherever `{date}` appears in `pathPattern`, the value of this p
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L209">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L209">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2664,7 +2664,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L213">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L213">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2672,7 +2672,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L217">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L217">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</code></pre>
@@ -2680,7 +2680,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L221">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L221">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2688,7 +2688,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L225">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L225">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2696,7 +2696,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L229">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L229">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2704,7 +2704,7 @@ The name of the Storage Account.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L233">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L233">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2712,7 +2712,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputBlobState-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputBlob.ts#L237">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputBlob.ts#L237">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2720,7 +2720,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h3 class="pdoc-module-header" id="OutputEventHubArgs" data-link-title="OutputEventHubArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L215">
         interface <strong>OutputEventHubArgs</strong>
     </a>
 </h3>
@@ -2730,7 +2730,7 @@ The time format. Wherever `{time}` appears in `pathPattern`, the value of this p
 The set of arguments for constructing a OutputEventHub resource.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L219">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L219">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2738,7 +2738,7 @@ The set of arguments for constructing a OutputEventHub resource.
 The name of the Event Hub.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L223">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L223">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2746,7 +2746,7 @@ The name of the Event Hub.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L227">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L227">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2754,7 +2754,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L231">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L231">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</code></pre>
@@ -2762,7 +2762,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L235">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L235">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2770,7 +2770,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L239">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L239">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2778,7 +2778,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L243">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L243">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2786,7 +2786,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputEventHubArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L247">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L247">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2794,7 +2794,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OutputEventHubState" data-link-title="OutputEventHubState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L177">
         interface <strong>OutputEventHubState</strong>
     </a>
 </h3>
@@ -2804,7 +2804,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Input properties used for looking up and filtering OutputEventHub resources.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L181">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L181">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2812,7 +2812,7 @@ Input properties used for looking up and filtering OutputEventHub resources.
 The name of the Event Hub.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2820,7 +2820,7 @@ The name of the Event Hub.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L189">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2828,7 +2828,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L193">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L193">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</code></pre>
@@ -2836,7 +2836,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L197">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L197">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2844,7 +2844,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L201">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L201">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2852,7 +2852,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L205">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L205">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2860,7 +2860,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputEventHubState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputEventHub.ts#L209">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputEventHub.ts#L209">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2868,7 +2868,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OutputMssqlArgs" data-link-title="OutputMssqlArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L209">
         interface <strong>OutputMssqlArgs</strong>
     </a>
 </h3>
@@ -2878,12 +2878,12 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The set of arguments for constructing a OutputMssql resource.
 
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L210">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L210">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2891,7 +2891,7 @@ The set of arguments for constructing a OutputMssql resource.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L218">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L218">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2899,7 +2899,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 Password used together with username, to login to the Microsoft SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L222">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L222">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2907,7 +2907,7 @@ Password used together with username, to login to the Microsoft SQL Server. Chan
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L226">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L226">property <b>server</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>server: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2915,7 +2915,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 The SQL server url. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L230">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L230">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2923,7 +2923,7 @@ The SQL server url. Changing this forces a new resource to be created.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L234">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L234">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2931,7 +2931,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Table in the database that the output points to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L238">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L238">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2939,7 +2939,7 @@ Table in the database that the output points to. Changing this forces a new reso
 Username used to login to the Microsoft SQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OutputMssqlState" data-link-title="OutputMssqlState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L174">
         interface <strong>OutputMssqlState</strong>
     </a>
 </h3>
@@ -2949,12 +2949,12 @@ Username used to login to the Microsoft SQL Server. Changing this forces a new r
 Input properties used for looking up and filtering OutputMssql resources.
 
 <h4 class="pdoc-member-header" id="OutputMssqlState-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L175">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L175">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputMssqlState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2962,7 +2962,7 @@ Input properties used for looking up and filtering OutputMssql resources.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L183">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L183">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2970,7 +2970,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 Password used together with username, to login to the Microsoft SQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L187">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L187">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2978,7 +2978,7 @@ Password used together with username, to login to the Microsoft SQL Server. Chan
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlState-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L191">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L191">property <b>server</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>server?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2986,7 +2986,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 The SQL server url. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L195">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L195">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2994,7 +2994,7 @@ The SQL server url. Changing this forces a new resource to be created.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlState-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L199">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L199">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3002,7 +3002,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Table in the database that the output points to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputMssqlState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputMssql.ts#L203">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputMssql.ts#L203">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3010,7 +3010,7 @@ Table in the database that the output points to. Changing this forces a new reso
 Username used to login to the Microsoft SQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OutputServiceBusQueueArgs" data-link-title="OutputServiceBusQueueArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L213">
         interface <strong>OutputServiceBusQueueArgs</strong>
     </a>
 </h3>
@@ -3020,7 +3020,7 @@ Username used to login to the Microsoft SQL Server. Changing this forces a new r
 The set of arguments for constructing a OutputServiceBusQueue resource.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3028,7 +3028,7 @@ The set of arguments for constructing a OutputServiceBusQueue resource.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L221">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L221">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3036,7 +3036,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Service Bus Queue.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L225">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L225">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3044,7 +3044,7 @@ The name of the Service Bus Queue.
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L229">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L229">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
@@ -3052,7 +3052,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L233">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L233">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3060,7 +3060,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L237">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L237">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3068,7 +3068,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L241">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L241">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3076,7 +3076,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L245">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L245">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3084,7 +3084,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OutputServiceBusQueueState" data-link-title="OutputServiceBusQueueState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L175">
         interface <strong>OutputServiceBusQueueState</strong>
     </a>
 </h3>
@@ -3094,7 +3094,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Input properties used for looking up and filtering OutputServiceBusQueue resources.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3102,7 +3102,7 @@ Input properties used for looking up and filtering OutputServiceBusQueue resourc
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L183">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L183">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3110,7 +3110,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Service Bus Queue.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L187">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L187">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3118,7 +3118,7 @@ The name of the Service Bus Queue.
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L191">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L191">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</code></pre>
@@ -3126,7 +3126,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L195">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L195">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3134,7 +3134,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L199">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L199">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3142,7 +3142,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L203">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L203">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3150,7 +3150,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServiceBusQueueState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L207">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L207">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3158,7 +3158,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OutputServicebusTopicArgs" data-link-title="OutputServicebusTopicArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L213">
         interface <strong>OutputServicebusTopicArgs</strong>
     </a>
 </h3>
@@ -3168,7 +3168,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The set of arguments for constructing a OutputServicebusTopic resource.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3176,7 +3176,7 @@ The set of arguments for constructing a OutputServicebusTopic resource.
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L221">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L221">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3184,7 +3184,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L225">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L225">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServicebusTopicSerialization'>OutputServicebusTopicSerialization</a>&gt;;</code></pre>
@@ -3192,7 +3192,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L229">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L229">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3200,7 +3200,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Topic, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L233">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L233">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3208,7 +3208,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Topic, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L237">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L237">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3216,7 +3216,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L241">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L241">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3224,7 +3224,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicArgs-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L245">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L245">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3232,7 +3232,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The name of the Service Bus Topic.
 
 <h3 class="pdoc-module-header" id="OutputServicebusTopicState" data-link-title="OutputServicebusTopicState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L175">
         interface <strong>OutputServicebusTopicState</strong>
     </a>
 </h3>
@@ -3242,7 +3242,7 @@ The name of the Service Bus Topic.
 Input properties used for looking up and filtering OutputServicebusTopic resources.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3250,7 +3250,7 @@ Input properties used for looking up and filtering OutputServicebusTopic resourc
 The name of the Stream Output. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L183">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L183">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3258,7 +3258,7 @@ The name of the Stream Output. Changing this forces a new resource to be created
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L187">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L187">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServicebusTopicSerialization'>OutputServicebusTopicSerialization</a>&gt;;</code></pre>
@@ -3266,7 +3266,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L191">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L191">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3274,7 +3274,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Topic, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L195">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L195">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3282,7 +3282,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Topic, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L199">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L199">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3290,7 +3290,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L203">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L203">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3298,7 +3298,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OutputServicebusTopicState-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L207">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/outputServicebusTopic.ts#L207">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3306,7 +3306,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The name of the Service Bus Topic.
 
 <h3 class="pdoc-module-header" id="ReferenceInputBlobArgs" data-link-title="ReferenceInputBlobArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L242">
         interface <strong>ReferenceInputBlobArgs</strong>
     </a>
 </h3>
@@ -3316,7 +3316,7 @@ The name of the Service Bus Topic.
 The set of arguments for constructing a ReferenceInputBlob resource.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L246">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L246">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3324,7 +3324,7 @@ The set of arguments for constructing a ReferenceInputBlob resource.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L250">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L250">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3332,7 +3332,7 @@ The date format. Wherever `{date}` appears in `pathPattern`, the value of this p
 The name of the Reference Input Blob. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L254">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L254">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3340,7 +3340,7 @@ The name of the Reference Input Blob. Changing this forces a new resource to be 
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L258">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L258">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3348,7 +3348,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L262">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L262">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReferenceInputBlobSerialization'>ReferenceInputBlobSerialization</a>&gt;;</code></pre>
@@ -3356,7 +3356,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L266">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L266">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3364,7 +3364,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L270">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L270">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3372,7 +3372,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account that has the blob container with reference data.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L274">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L274">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3380,7 +3380,7 @@ The name of the Storage Account that has the blob container with reference data.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L278">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L278">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3388,7 +3388,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobArgs-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L282">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L282">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3396,7 +3396,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h3 class="pdoc-module-header" id="ReferenceInputBlobState" data-link-title="ReferenceInputBlobState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L196">
         interface <strong>ReferenceInputBlobState</strong>
     </a>
 </h3>
@@ -3406,7 +3406,7 @@ The time format. Wherever `{time}` appears in `pathPattern`, the value of this p
 Input properties used for looking up and filtering ReferenceInputBlob resources.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L200">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L200">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3414,7 +3414,7 @@ Input properties used for looking up and filtering ReferenceInputBlob resources.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3422,7 +3422,7 @@ The date format. Wherever `{date}` appears in `pathPattern`, the value of this p
 The name of the Reference Input Blob. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L208">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L208">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3430,7 +3430,7 @@ The name of the Reference Input Blob. Changing this forces a new resource to be 
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L212">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L212">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3438,7 +3438,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L216">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L216">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReferenceInputBlobSerialization'>ReferenceInputBlobSerialization</a>&gt;;</code></pre>
@@ -3446,7 +3446,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L220">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L220">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3454,7 +3454,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L224">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L224">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3462,7 +3462,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account that has the blob container with reference data.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L228">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L228">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3470,7 +3470,7 @@ The name of the Storage Account that has the blob container with reference data.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L232">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L232">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3478,7 +3478,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ReferenceInputBlobState-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L236">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/referenceInputBlob.ts#L236">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3486,7 +3486,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h3 class="pdoc-module-header" id="StreamInputBlobArgs" data-link-title="StreamInputBlobArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L242">
         interface <strong>StreamInputBlobArgs</strong>
     </a>
 </h3>
@@ -3496,7 +3496,7 @@ The time format. Wherever `{time}` appears in `pathPattern`, the value of this p
 The set of arguments for constructing a StreamInputBlob resource.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L246">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L246">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3504,7 +3504,7 @@ The set of arguments for constructing a StreamInputBlob resource.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L250">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L250">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3512,7 +3512,7 @@ The date format. Wherever `{date}` appears in `pathPattern`, the value of this p
 The name of the Stream Input Blob. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L254">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L254">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3520,7 +3520,7 @@ The name of the Stream Input Blob. Changing this forces a new resource to be cre
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L258">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L258">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3528,7 +3528,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L262">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L262">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</code></pre>
@@ -3536,7 +3536,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L266">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L266">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3544,7 +3544,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L270">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L270">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3552,7 +3552,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L274">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L274">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3560,7 +3560,7 @@ The name of the Storage Account.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L278">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L278">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3568,7 +3568,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobArgs-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L282">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L282">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3576,7 +3576,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h3 class="pdoc-module-header" id="StreamInputBlobState" data-link-title="StreamInputBlobState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L196">
         interface <strong>StreamInputBlobState</strong>
     </a>
 </h3>
@@ -3586,7 +3586,7 @@ The time format. Wherever `{time}` appears in `pathPattern`, the value of this p
 Input properties used for looking up and filtering StreamInputBlob resources.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-dateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L200">property <b>dateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L200">property <b>dateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3594,7 +3594,7 @@ Input properties used for looking up and filtering StreamInputBlob resources.
 The date format. Wherever `{date}` appears in `pathPattern`, the value of this property is used as the date format instead.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3602,7 +3602,7 @@ The date format. Wherever `{date}` appears in `pathPattern`, the value of this p
 The name of the Stream Input Blob. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-pathPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L208">property <b>pathPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L208">property <b>pathPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3610,7 +3610,7 @@ The name of the Stream Input Blob. Changing this forces a new resource to be cre
 The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L212">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L212">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3618,7 +3618,7 @@ The blob path pattern. Not a regular expression. It represents a pattern against
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L216">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L216">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</code></pre>
@@ -3626,7 +3626,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-storageAccountKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L220">property <b>storageAccountKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L220">property <b>storageAccountKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3634,7 +3634,7 @@ A `serialization` block as defined below.
 The Access Key which should be used to connect to this Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L224">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L224">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3642,7 +3642,7 @@ The Access Key which should be used to connect to this Storage Account.
 The name of the Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-storageContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L228">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L228">property <b>storageContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3650,7 +3650,7 @@ The name of the Storage Account.
 The name of the Container within the Storage Account.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L232">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L232">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3658,7 +3658,7 @@ The name of the Container within the Storage Account.
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputBlobState-timeFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputBlob.ts#L236">property <b>timeFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputBlob.ts#L236">property <b>timeFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3666,7 +3666,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The time format. Wherever `{time}` appears in `pathPattern`, the value of this property is used as the time format instead.
 
 <h3 class="pdoc-module-header" id="StreamInputEventHubArgs" data-link-title="StreamInputEventHubArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L235">
         interface <strong>StreamInputEventHubArgs</strong>
     </a>
 </h3>
@@ -3676,7 +3676,7 @@ The time format. Wherever `{time}` appears in `pathPattern`, the value of this p
 The set of arguments for constructing a StreamInputEventHub resource.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-eventhubConsumerGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L239">property <b>eventhubConsumerGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L239">property <b>eventhubConsumerGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubConsumerGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3684,7 +3684,7 @@ The set of arguments for constructing a StreamInputEventHub resource.
 The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L243">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L243">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3692,7 +3692,7 @@ The name of an Event Hub Consumer Group that should be used to read events from 
 The name of the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L247">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L247">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3700,7 +3700,7 @@ The name of the Event Hub.
 The name of the Stream Input EventHub. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L251">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L251">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3708,7 +3708,7 @@ The name of the Stream Input EventHub. Changing this forces a new resource to be
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L255">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L255">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</code></pre>
@@ -3716,7 +3716,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L259">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L259">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3724,7 +3724,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L263">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L263">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3732,7 +3732,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L267">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L267">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3740,7 +3740,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L271">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L271">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3748,7 +3748,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="StreamInputEventHubState" data-link-title="StreamInputEventHubState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L193">
         interface <strong>StreamInputEventHubState</strong>
     </a>
 </h3>
@@ -3758,7 +3758,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Input properties used for looking up and filtering StreamInputEventHub resources.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-eventhubConsumerGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L197">property <b>eventhubConsumerGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L197">property <b>eventhubConsumerGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubConsumerGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3766,7 +3766,7 @@ Input properties used for looking up and filtering StreamInputEventHub resources
 The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L201">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L201">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3774,7 +3774,7 @@ The name of an Event Hub Consumer Group that should be used to read events from 
 The name of the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3782,7 +3782,7 @@ The name of the Event Hub.
 The name of the Stream Input EventHub. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L209">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L209">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3790,7 +3790,7 @@ The name of the Stream Input EventHub. Changing this forces a new resource to be
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L213">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L213">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</code></pre>
@@ -3798,7 +3798,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-servicebusNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L217">property <b>servicebusNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L217">property <b>servicebusNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3806,7 +3806,7 @@ A `serialization` block as defined below.
 The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L221">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L221">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3814,7 +3814,7 @@ The namespace that is associated with the desired Event Hub, Service Bus Queue, 
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L225">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L225">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3822,7 +3822,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputEventHubState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L229">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L229">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3830,7 +3830,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="StreamInputIotHubArgs" data-link-title="StreamInputIotHubArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L226">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L226">
         interface <strong>StreamInputIotHubArgs</strong>
     </a>
 </h3>
@@ -3840,7 +3840,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 The set of arguments for constructing a StreamInputIotHub resource.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L230">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L230">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3848,7 +3848,7 @@ The set of arguments for constructing a StreamInputIotHub resource.
 The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-eventhubConsumerGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L234">property <b>eventhubConsumerGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L234">property <b>eventhubConsumerGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubConsumerGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3856,7 +3856,7 @@ The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMoni
 The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-iothubNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L238">property <b>iothubNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L238">property <b>iothubNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iothubNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3864,7 +3864,7 @@ The name of an Event Hub Consumer Group that should be used to read events from 
 The name or the URI of the IoT Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L242">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L242">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3872,7 +3872,7 @@ The name or the URI of the IoT Hub.
 The name of the Stream Input IoTHub. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L246">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L246">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3880,7 +3880,7 @@ The name of the Stream Input IoTHub. Changing this forces a new resource to be c
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L250">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L250">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</code></pre>
@@ -3888,7 +3888,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L254">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L254">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3896,7 +3896,7 @@ A `serialization` block as defined below.
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L258">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L258">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3904,7 +3904,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubArgs-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L262">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L262">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3912,7 +3912,7 @@ The shared access policy name for the Event Hub, Service Bus Queue, Service Bus 
 The name of the Stream Analytics Job. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="StreamInputIotHubState" data-link-title="StreamInputIotHubState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L184">
         interface <strong>StreamInputIotHubState</strong>
     </a>
 </h3>
@@ -3922,7 +3922,7 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 Input properties used for looking up and filtering StreamInputIotHub resources.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L188">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L188">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3930,7 +3930,7 @@ Input properties used for looking up and filtering StreamInputIotHub resources.
 The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-eventhubConsumerGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L192">property <b>eventhubConsumerGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L192">property <b>eventhubConsumerGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubConsumerGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3938,7 +3938,7 @@ The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMoni
 The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-iothubNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L196">property <b>iothubNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L196">property <b>iothubNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iothubNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3946,7 +3946,7 @@ The name of an Event Hub Consumer Group that should be used to read events from 
 The name or the URI of the IoT Hub.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3954,7 +3954,7 @@ The name or the URI of the IoT Hub.
 The name of the Stream Input IoTHub. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L204">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L204">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3962,7 +3962,7 @@ The name of the Stream Input IoTHub. Changing this forces a new resource to be c
 The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-serialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L208">property <b>serialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L208">property <b>serialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</code></pre>
@@ -3970,7 +3970,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 A `serialization` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-sharedAccessPolicyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L212">property <b>sharedAccessPolicyKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L212">property <b>sharedAccessPolicyKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3978,7 +3978,7 @@ A `serialization` block as defined below.
 The shared access policy key for the specified shared access policy.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-sharedAccessPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L216">property <b>sharedAccessPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L216">property <b>sharedAccessPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedAccessPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3986,7 +3986,7 @@ The shared access policy key for the specified shared access policy.
 The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
 
 <h4 class="pdoc-member-header" id="StreamInputIotHubState-streamAnalyticsJobName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L220">property <b>streamAnalyticsJobName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L220">property <b>streamAnalyticsJobName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamAnalyticsJobName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

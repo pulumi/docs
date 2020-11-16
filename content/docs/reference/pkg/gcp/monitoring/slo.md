@@ -2414,7 +2414,7 @@ Structure is documented below.
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -2427,7 +2427,7 @@ will be set to "infinity", defining an open range
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -2447,7 +2447,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -2460,7 +2460,7 @@ will be set to "infinity", defining an open range
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -2480,7 +2480,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -2493,7 +2493,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -2513,7 +2513,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -2526,7 +2526,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4094,7 +4094,7 @@ Structure is documented below.
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4107,7 +4107,7 @@ will be set to "infinity", defining an open range
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4127,7 +4127,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4140,7 +4140,7 @@ will be set to "infinity", defining an open range
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4160,7 +4160,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4173,7 +4173,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4193,7 +4193,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4206,7 +4206,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4672,7 +4672,7 @@ Summed value `X` should satisfy
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4685,7 +4685,7 @@ will be set to "infinity", defining an open range
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4705,7 +4705,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4718,7 +4718,7 @@ will be set to "infinity", defining an open range
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4738,7 +4738,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4751,7 +4751,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4771,7 +4771,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4784,7 +4784,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -5004,7 +5004,7 @@ Summed value `X` should satisfy
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -5017,7 +5017,7 @@ will be set to "infinity", defining an open range
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -5037,7 +5037,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -5050,7 +5050,7 @@ will be set to "infinity", defining an open range
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -5070,7 +5070,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -5083,7 +5083,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -5103,7 +5103,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -5116,7 +5116,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -5125,6 +5125,8 @@ will be set to "-infinity", defining an open range
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

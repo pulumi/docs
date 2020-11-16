@@ -16,11 +16,11 @@ YAML-based templating solutions. This includes AWS CloudFormation and Azure Reso
 These markup-based configuration files are often uploaded to a hosted service in the target cloud, where a hosted
 service will then process the files to create, update, or delete resources as necessary.
 
-Pulumi offers a multi-cloud alternative to more restrictive infrastructure-as-code template solutions, like AWS CloudFormation. Pulumi allows you to streamline processes by managing resources from different platforms all in one place, using real code, in your favorite language.
+Pulumi offers a multi-cloud alternative to more restrictive infrastructure-as-code template solutions, like CloudFormation or ARM. Pulumi allows you to streamline processes by managing resources from different platforms all in one place, using real code, in your favorite language.
 
-Pulumi lets you use your favorite languages, instead of bespoke templating solutions such as CloudFormation. These
+Pulumi lets you use your favorite languages, instead of bespoke templating solutions built on YAML and/or JSON. These
 typically use syntaxes that are awkward, hard to learn, and even harder to remember. Pulumi programs are just real
-code. Thanks to basic things like functions and classes, we've seen 25,000 line CloudFormation templates shrink to
+code. Thanks to basic things like functions and classes, we've seen 25,000 line YAML templates shrink to
 just a few hundred lines of code. This approach also leads to far less copy and pasting between projects because you can share packages.
 
 Pulumi is also multi-cloud. So, you only need to learn one programming model, tool, and workflow. In fact, you can
@@ -39,5 +39,3 @@ configuration templates as a sort of "compilation" step. These offer nice syntac
 templates, but the underlying model leaks through and carries forward all of the other abovementioned shortcomings.
 
 Finally, Pulumi is [open source](https://github.com/pulumi/pulumi) and community-driven. All of the other cloud systems — such as Azure Resource Manager or AWS CloudFormation — are proprietary closed source, lead to lock-in, and lack the ability for the community to contribute to them.
-
-To learn more about adopting Pulumi, refer to the [AWS CloudFormation]({{< relref "/docs/guides/adopting/from_aws" >}}) or [Azure Resource Manager (ARM)]({{< relref "/docs/guides/adopting/from_azure" >}}) migration guides.

@@ -380,7 +380,7 @@ To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `stable
 let k8s = require("@pulumi/kubernetes");
 
 // Deploy the latest version of the stable/wordpress chart.
-let wordpress = new k8s.helm.v2.Chart("wpdev", {
+let wordpress = new k8s.helm.v3.Chart("wpdev", {
     repo: "stable",
     chart: "wordpress",
     version: "9.0.3",
@@ -400,7 +400,7 @@ module.exports = {
 import * as k8s from "@pulumi/kubernetes";
 
 // Deploy the latest version of the stable/wordpress chart.
-const wordpress = new k8s.helm.v2.Chart("wpdev", {
+const wordpress = new k8s.helm.v3.Chart("wpdev", {
     repo: "stable",
     chart: "wordpress",
     version: "9.0.3",
@@ -416,7 +416,7 @@ export const frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 
 ```python
 import pulumi
-from pulumi_kubernetes.helm.v2 import Chart, ChartOpts
+from pulumi_kubernetes.helm.v3 import Chart, ChartOpts
 
 # Deploy the latest version of the stable/wordpress chart.
 wordpress = Chart('wpdev', config=ChartOpts(

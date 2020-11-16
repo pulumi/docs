@@ -2949,7 +2949,7 @@ and format of the table.
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
 "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
-and "DATSTORE_BACKUP". To use "GOOGLE_SHEETS"
+and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
 {{% /md %}}</dd>
@@ -3095,7 +3095,7 @@ and format of the table.
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
 "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
-and "DATSTORE_BACKUP". To use "GOOGLE_SHEETS"
+and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
 {{% /md %}}</dd>
@@ -3241,7 +3241,7 @@ and format of the table.
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
 "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
-and "DATSTORE_BACKUP". To use "GOOGLE_SHEETS"
+and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
 {{% /md %}}</dd>
@@ -3387,7 +3387,7 @@ and format of the table.
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
 "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET",
-and "DATSTORE_BACKUP". To use "GOOGLE_SHEETS"
+and "DATASTORE_BACKUP". To use "GOOGLE_SHEETS"
 the `scopes` must include
 "https://www.googleapis.com/auth/drive.readonly".
 {{% /md %}}</dd>
@@ -5086,6 +5086,8 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

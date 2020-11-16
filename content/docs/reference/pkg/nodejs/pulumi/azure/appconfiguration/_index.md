@@ -3,7 +3,7 @@ title: "Module appconfiguration"
 title_tag: "Module appconfiguration | Package @pulumi/azure | Node.js SDK"
 linktitle: "appconfiguration"
 meta_desc: "Explore members of the appconfiguration module in the @pulumi/azure package."
-git_sha: "fad3a198a9e41c94f026186b97bec6dc98104785"
+git_sha: "e017cf62df4615a9a84e768d6370e640838fc2bc"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ConfigurationStore" data-link-title="ConfigurationStore">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L25">
         Resource <strong>ConfigurationStore</strong>
     </a>
 </h3>
@@ -59,7 +59,7 @@ const appconf = new azure.appconfiguration.ConfigurationStore("appconf", {
 ```
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -73,7 +73,7 @@ Create a ConfigurationStore resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -84,14 +84,14 @@ Get an existing ConfigurationStore resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Returns true if the given object is an instance of ConfigurationStore.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L56">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L56">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -110,7 +110,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The URL of the App Configuration.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -119,7 +119,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L60">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L60">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConfigurationStoreIdentity'>ConfigurationStoreIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L64">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L64">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the App Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-primaryReadKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L72">property <b>primaryReadKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L72">property <b>primaryReadKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryReadKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConfigurationStorePrimaryReadKey'>ConfigurationStorePrimaryReadKey</a>[]&gt;;</code></pre>
@@ -151,7 +151,7 @@ Specifies the name of the App Configuration. Changing this forces a new resource
 A `primaryReadKey` block as defined below containing the primary read access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-primaryWriteKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L76">property <b>primaryWriteKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L76">property <b>primaryWriteKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryWriteKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConfigurationStorePrimaryWriteKey'>ConfigurationStorePrimaryWriteKey</a>[]&gt;;</code></pre>
@@ -159,7 +159,7 @@ A `primaryReadKey` block as defined below containing the primary read access key
 A `primaryWriteKey` block as defined below containing the primary write access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ A `primaryWriteKey` block as defined below containing the primary write access k
 The name of the resource group in which to create the App Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-secondaryReadKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L84">property <b>secondaryReadKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L84">property <b>secondaryReadKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryReadKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConfigurationStoreSecondaryReadKey'>ConfigurationStoreSecondaryReadKey</a>[]&gt;;</code></pre>
@@ -175,7 +175,7 @@ The name of the resource group in which to create the App Configuration. Changin
 A `secondaryReadKey` block as defined below containing the secondary read access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-secondaryWriteKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L88">property <b>secondaryWriteKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L88">property <b>secondaryWriteKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryWriteKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ConfigurationStoreSecondaryWriteKey'>ConfigurationStoreSecondaryWriteKey</a>[]&gt;;</code></pre>
@@ -183,7 +183,7 @@ A `secondaryReadKey` block as defined below containing the secondary read access
 A `secondaryWriteKey` block as defined below containing the secondary write access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L92">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L92">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ A `secondaryWriteKey` block as defined below containing the secondary write acce
 The SKU name of the the App Configuration. Possible values are `free` and `standard`.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L96">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L96">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ The SKU name of the the App Configuration. Possible values are `free` and `stand
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationStore-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -210,7 +210,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getConfigurationStore" data-link-title="getConfigurationStore">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L25">
         Function <strong>getConfigurationStore</strong>
     </a>
 </h3>
@@ -237,7 +237,7 @@ export const id = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConfigurationStoreArgs" data-link-title="ConfigurationStoreArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L202">
         interface <strong>ConfigurationStoreArgs</strong>
     </a>
 </h3>
@@ -247,7 +247,7 @@ export const id = example.then(example => example.id);
 The set of arguments for constructing a ConfigurationStore resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L206">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L206">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConfigurationStoreIdentity'>ConfigurationStoreIdentity</a>&gt;;</code></pre>
@@ -255,7 +255,7 @@ The set of arguments for constructing a ConfigurationStore resource.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L210">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L210">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the App Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L218">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L218">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ Specifies the name of the App Configuration. Changing this forces a new resource
 The name of the resource group in which to create the App Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L222">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L222">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ The name of the resource group in which to create the App Configuration. Changin
 The SKU name of the the App Configuration. Possible values are `free` and `standard`.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L226">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L226">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -295,7 +295,7 @@ The SKU name of the the App Configuration. Possible values are `free` and `stand
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ConfigurationStoreState" data-link-title="ConfigurationStoreState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L152">
         interface <strong>ConfigurationStoreState</strong>
     </a>
 </h3>
@@ -305,7 +305,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ConfigurationStore resources.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L156">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L156">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -313,7 +313,7 @@ Input properties used for looking up and filtering ConfigurationStore resources.
 The URL of the App Configuration.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L160">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L160">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConfigurationStoreIdentity'>ConfigurationStoreIdentity</a>&gt;;</code></pre>
@@ -321,7 +321,7 @@ The URL of the App Configuration.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L164">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L164">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the App Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-primaryReadKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L172">property <b>primaryReadKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L172">property <b>primaryReadKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryReadKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConfigurationStorePrimaryReadKey'>ConfigurationStorePrimaryReadKey</a>&gt;[]&gt;;</code></pre>
@@ -345,7 +345,7 @@ Specifies the name of the App Configuration. Changing this forces a new resource
 A `primaryReadKey` block as defined below containing the primary read access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-primaryWriteKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L176">property <b>primaryWriteKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L176">property <b>primaryWriteKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryWriteKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConfigurationStorePrimaryWriteKey'>ConfigurationStorePrimaryWriteKey</a>&gt;[]&gt;;</code></pre>
@@ -353,7 +353,7 @@ A `primaryReadKey` block as defined below containing the primary read access key
 A `primaryWriteKey` block as defined below containing the primary write access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L180">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L180">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ A `primaryWriteKey` block as defined below containing the primary write access k
 The name of the resource group in which to create the App Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-secondaryReadKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L184">property <b>secondaryReadKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L184">property <b>secondaryReadKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryReadKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConfigurationStoreSecondaryReadKey'>ConfigurationStoreSecondaryReadKey</a>&gt;[]&gt;;</code></pre>
@@ -369,7 +369,7 @@ The name of the resource group in which to create the App Configuration. Changin
 A `secondaryReadKey` block as defined below containing the secondary read access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-secondaryWriteKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L188">property <b>secondaryWriteKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L188">property <b>secondaryWriteKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryWriteKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ConfigurationStoreSecondaryWriteKey'>ConfigurationStoreSecondaryWriteKey</a>&gt;[]&gt;;</code></pre>
@@ -377,7 +377,7 @@ A `secondaryReadKey` block as defined below containing the secondary read access
 A `secondaryWriteKey` block as defined below containing the secondary write access key.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L192">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L192">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ A `secondaryWriteKey` block as defined below containing the secondary write acce
 The SKU name of the the App Configuration. Possible values are `free` and `standard`.
 
 <h4 class="pdoc-member-header" id="ConfigurationStoreState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/configurationStore.ts#L196">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/configurationStore.ts#L196">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -393,7 +393,7 @@ The SKU name of the the App Configuration. Possible values are `free` and `stand
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetConfigurationStoreArgs" data-link-title="GetConfigurationStoreArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L42">
         interface <strong>GetConfigurationStoreArgs</strong>
     </a>
 </h3>
@@ -403,7 +403,7 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getConfigurationStore.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -411,7 +411,7 @@ A collection of arguments for invoking getConfigurationStore.
 The Name of this App Configuration.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -419,7 +419,7 @@ The Name of this App Configuration.
 The name of the Resource Group where the App Configuration exists.
 
 <h3 class="pdoc-module-header" id="GetConfigurationStoreResult" data-link-title="GetConfigurationStoreResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L56">
         interface <strong>GetConfigurationStoreResult</strong>
     </a>
 </h3>
@@ -429,7 +429,7 @@ The name of the Resource Group where the App Configuration exists.
 A collection of values returned by getConfigurationStore.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L60">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L60">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -437,7 +437,7 @@ A collection of values returned by getConfigurationStore.
 The Endpoint used to access this App Configuration.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -445,7 +445,7 @@ The Endpoint used to access this App Configuration.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L68">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L68">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -453,12 +453,12 @@ The provider-assigned unique ID for this managed resource.
 The Azure Region where the App Configuration exists.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-primaryReadKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L73">property <b>primaryReadKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L73">property <b>primaryReadKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryReadKeys: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStorePrimaryReadKey'>GetConfigurationStorePrimaryReadKey</a>[];</code></pre>
@@ -466,7 +466,7 @@ The Azure Region where the App Configuration exists.
 A `primaryReadKey` block as defined below containing the primary read access key.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-primaryWriteKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L77">property <b>primaryWriteKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L77">property <b>primaryWriteKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryWriteKeys: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStorePrimaryWriteKey'>GetConfigurationStorePrimaryWriteKey</a>[];</code></pre>
@@ -474,12 +474,12 @@ A `primaryReadKey` block as defined below containing the primary read access key
 A `primaryWriteKey` block as defined below containing the primary write access key.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L78">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L78">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-secondaryReadKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L82">property <b>secondaryReadKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L82">property <b>secondaryReadKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryReadKeys: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStoreSecondaryReadKey'>GetConfigurationStoreSecondaryReadKey</a>[];</code></pre>
@@ -487,7 +487,7 @@ A `primaryWriteKey` block as defined below containing the primary write access k
 A `secondaryReadKey` block as defined below containing the secondary read access key.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-secondaryWriteKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L86">property <b>secondaryWriteKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L86">property <b>secondaryWriteKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryWriteKeys: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStoreSecondaryWriteKey'>GetConfigurationStoreSecondaryWriteKey</a>[];</code></pre>
@@ -495,7 +495,7 @@ A `secondaryReadKey` block as defined below containing the secondary read access
 A `secondaryWriteKey` block as defined below containing the secondary write access key.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L90">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L90">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -503,7 +503,7 @@ A `secondaryWriteKey` block as defined below containing the secondary write acce
 The name of the SKU used for this App Configuration.
 
 <h4 class="pdoc-member-header" id="GetConfigurationStoreResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fad3a198a9e41c94f026186b97bec6dc98104785/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/appconfiguration/getConfigurationStore.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
