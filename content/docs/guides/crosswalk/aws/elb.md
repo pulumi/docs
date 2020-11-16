@@ -180,7 +180,7 @@ to configure the way that traffic is forwarded, health checks, and so on, see
 
 For more advanced cases, you will most likely want to use [EC2 Auto Scaling](
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html), rather than hard-coding
-the number of and placement of VMs. Please refer to the API docs for
+the number of and placement of VMs. Refer to the API docs for
 [LaunchConfiguration]({{< relref "/docs/reference/pkg/aws/ec2/launchconfiguration" >}}) and
 [AutoScalingGroup]({{< relref "/docs/reference/pkg/aws/autoscaling/group" >}}) for details on how to do so.
 
@@ -236,7 +236,7 @@ $ curl http://$(pulumi stack output endpoint)
 </html>
 ```
 
-This load balancer uses reasonable targeting defaults and health checks. If you'd like to customize these, please
+This load balancer uses reasonable targeting defaults and health checks. If you'd like to customize these,
 see [Advanced NLB Target Group and Listener Configuration](#advanced-nlb-target-group-and-listener-configuration) below.
 
 Although ECS supports both NLB and ALB, ALB offer several features that make them more attractive for ECS:
@@ -246,7 +246,7 @@ Although ECS supports both NLB and ALB, ALB offer several features that make the
 
 We recommend using ALBs for your ECS services unless it requires a feature that is only available with NLBs.
 
-For more extensive information about load balancing and ECS Services, please refer to AWS's
+For more extensive information about load balancing and ECS Services, refer to AWS's
 [Service Load Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
 documentation.
 
@@ -295,7 +295,7 @@ const listener = alb.createListener("web-listener", { port: 80 });
 export const endpoint = listener.endpoint;
 ```
 
-For more information on creating and configuring VPCs, please refer to [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}).
+For more information on creating and configuring VPCs, refer to [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}).
 
 ## Advanced Load Balancer Listener and Target Group Configuration
 
@@ -339,7 +339,7 @@ These options include:
   NLBs default to `TCP` and ALBs will select `HTTP` or `HTTPS` based on the port supplied.
 
 * `certificateArn` and `sslPolicy`: Enables SSL using the given certificate and policy. This policy controls how
-  SSL connections are terminated, among other things. Please refer to
+  SSL connections are terminated, among other things. Refer to
   [Create an HTTPS Listener for Your Application Load Balancer](
   https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html) for more information.
 
@@ -387,7 +387,7 @@ const httpsListener = target.createListener("http-listener", { port: 443, ... })
 export const endpoint = listener.endpoint;
 ```
 
-For more information on listener rules, please refer to the [AWS documentation about listeners](
+For more information on listener rules, refer to the [AWS documentation about listeners](
 https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#rule-action-types).
 
 ### Manually Configuring Target Groups
@@ -437,10 +437,10 @@ To create a target group manually, simply call `createTargetGroup` on the load b
 
 * `tags`: Can be used to tag your target group with metadata about its purpose, for reporting or compliance.
 
-For more extensive information on ELB target groups, please [refer to the AWS documentation](
+For more extensive information on ELB target groups, [refer to the AWS documentation](
 https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html).
 
 ## Additional ELB Resources
 
-For detailed reference documentation, please visit [the API docs](
+For detailed reference documentation, visit the [API docs](
 {{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/lb" >}}).

@@ -199,7 +199,7 @@ The following sections show how to explicitly manage any or all of these setting
 Although the default CIDR block of `10.0.0.0/16` is reasonable most of the time, it is easy to override.
 
 > Classless Inter-Domain Routing (CIDR) is an Internet standard for specifying ranges of
-> IP addresses. Please see [RFC 4632](https://tools.ietf.org/html/rfc4632) for more details.
+> IP addresses. See [RFC 4632](https://tools.ietf.org/html/rfc4632) for more details.
 
 To set our VPC's CIDR block, pass a custom `cidrBlock` argument to `awsx.ec2.Vpc`'s constructor:
 
@@ -227,7 +227,7 @@ In addition to configuring the CIDR block for your entire VPC, you can optionall
 VPC's subnets. These must reside entirely within your VPC's CIDR block. If you do not explicitly specify ranges,
 traffic will be evenly partitioned between availability zones within the VPC CIDR block range provided.
 
-Please see [IP Addressing in Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html)
+See [IP Addressing in Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html)
 for information about the full range of IP address and CIDR configuration available for your VPC.
 
 ## Configuring Availability Zones for an AWS VPC
@@ -350,7 +350,7 @@ a particular size for each zone can be requested by passing in an appropriate `c
 This value can be provided for specific subnets you know the number of instances you want IP addresses for. The
 remaining IP addresses in the availability zone, if any, will be split over the subnets without a defined size.
 
-Please refer to [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) for complete
+Refer to [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) for complete
 information about how VPCs and subnets relate in AWS and the configuration options available to you.
 
 ## Configuring Internet and NAT Gateways for Subnets in a VPC
@@ -471,7 +471,7 @@ sg.createEgressRule("outbound-access", {
 });
 ```
 
-For additional details about configuring security group rules, please see the
+For additional details about configuring security group rules, See the
 [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) documentation.
 
 ## Setting Up a New VPC the Hard Way
@@ -480,7 +480,7 @@ The `awsx.ec2.Vpc` component encapsulates a lot of details, including subnets, r
 the VPC resource itself. The `aws.ec2` package, on the other hand, out of which `Vpc` is built, provides all of these
 raw resource so that you can code directly to the underlying AWS resource types, exposing every underlying capability.
 
-For information about configuring each of these resources, please refer to each type's API documentation:
+For information about configuring each of these resources, refer to each type's API documentation:
 
 * [Vpc]({{< relref "/docs/reference/pkg/aws/ec2/vpc" >}})
 * [Subnet]({{< relref "/docs/reference/pkg/aws/ec2/subnet" >}})
@@ -491,11 +491,11 @@ For information about configuring each of these resources, please refer to each 
 These resources can be independently allocated, just as with the `Vpc` class shown above. They will need to be
 connected together manually, however, which can provide greater flexibility but at a greater implementation cost.
 
-Please note that the constituent parts, in the form of these raw resources, are available as properties on the
+Note that the constituent parts, in the form of these raw resources, are available as properties on the
 resulting `Vpc` class. For instance, `internetGateway` will return the Internet Gateway object for a VPC.
 
 ## Additional VPC Resources
 
-For more information about VPCs, please read the following:
+For more information about VPCs, read the following:
 
 * [Amazon Virtual Private Cloud homepage](https://aws.amazon.com/vpc/)

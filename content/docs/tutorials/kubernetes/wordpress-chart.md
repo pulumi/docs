@@ -11,8 +11,7 @@ Helm Chart to a Kubernetes cluster. Pulumi will expand the Helm Chart and submit
 
 ## Running the App
 
-Start by downloading the example code
-[here](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress).
+Start by downloading the [example code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress).
 
 If you haven't already, follow the steps in [Pulumi Installation and
 Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi

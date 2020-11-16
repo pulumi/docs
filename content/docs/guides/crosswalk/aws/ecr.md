@@ -116,7 +116,7 @@ $ $(aws ecr get-login --no-include-email)
 ```
 
 Notice the `$(...)` part, which executes the command returned by the AWS CLI (which is a `docker login ...` sequence).
-For more information on authentication, please see [Registry Authentication](
+For more information on authentication, see [Registry Authentication](
 https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth)
 
 Finally, after building, tagging, and logging in, we are ready to push to our repository:
@@ -252,7 +252,7 @@ export const url = lb.endpoint.hostname;
 ```
 
 For information about ECS, refer to the [Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs" >}}). For
-information about consuming ECR images from ECS services specifically, please see
+information about consuming ECR images from ECS services specifically, see
 [Using Amazon ECR Images with Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html).
 
 ### Consuming a Private Repository from EKS
@@ -589,6 +589,6 @@ The logic of this lifecycle policy would be:
 
 ## Additional ECR Resources
 
-For more information about Amazon ECR, please see the following:
+For more information about Amazon ECR, see the following:
 
 * [Amazon Elastic Container Registry homepage](https://aws.amazon.com/ecr/)

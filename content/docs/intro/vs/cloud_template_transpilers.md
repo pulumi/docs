@@ -45,12 +45,7 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
   Pulumi also supports going beyond what you can express in YAML, such as building and publishing a Docker container image,
   authoring serverless functions in code, automating packaging and versioning of code, and so on.
 
-* Pulumi's engine is [open source](https://github.com/pulumi/pulumi), whereas Troposphere and CDK depend on the closed
-  source CloudFormation engine. This means more of Pulumi is accessible to community contributions.  This also means that
-  Troposphere and the AWS CDK are limited by what CloudFormation can express.  For example, CloudFormation stacks cannot
-  have more than 500 resources.
-
-* The Pulumi CLI and Console are co-designed to [make team collaboration simple]({{< relref "/docs/intro/console" >}}),
+* The Pulumi CLI and [Console]({{< relref "/docs/intro/console" >}}) are co-designed to make team collaboration simple,
   especially with organization-wide sharing of projects and stacks. This is closer to "GitHub for DevOps" and delivers
   a rich experience including diffs and previews of updates before they are made. Troposphere and CDK rely on
   CloudFormation which is known to be more challenging in these areas.

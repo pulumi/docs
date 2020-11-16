@@ -43,8 +43,8 @@ The fastest way to get up and running is to choose from one of the following Get
     </div>
 </div>
 
-> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
-> documentation below. They will work just fine &mdash; the guides simply aren't ready for them yet.
+> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic,
+> they will work just fine &mdash; the guides simply aren't ready for them yet.
 
 ## Prerequisites
 
@@ -254,8 +254,8 @@ To learn more, [see the Pulumi Azure DevOps user guide]({{< relref "/docs/guides
 
 Pulumi can deploy infrastructure using GitHub Actions, making Git-driven deployments of your infrastructure as code straightforward. To learn more, [see the Pulumi GitHub Actions user guide]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}).
 
-There is also a Pulumi GitHub App that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate. [Read more here about how to install this app into your organization]({{< relref "/docs/guides/continuous-delivery/github-app" >}}).
+There is also a [Pulumi GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate.
 
 ### Other CI/CD Integrations
 
-If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other CI/CD integrations. For a complete list, [go here]({{< relref "/docs/guides/continuous-delivery" >}}).
+If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other [CI/CD integrations]({{< relref "/docs/guides/continuous-delivery" >}}).
