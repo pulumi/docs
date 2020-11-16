@@ -15,7 +15,7 @@ CI/CD system. So the steps described here can be altered to fit into any existin
 
 ### Spinnaker installation
 
-> Full overview of [Spinnaker Plugins](https://www.spinnaker.io/guides/developer/plugin-creators/overview/).
+> [Spinnaker Plugin Creator's Guide](https://www.spinnaker.io/guides/developer/plugin-creators/overview/).
 
 Plugins are a recent addition to Spinnaker and as such require a more recent version to use plugins as well as the Pulumi plugin for Spinnaker, which this guide will show you how to use.
 

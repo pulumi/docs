@@ -51,7 +51,7 @@ Set the appropriate `gcp:project` and `gcp:region` values. For example, if your 
 
 `pulumi config set gcp:project awesome-project` and `pulumi config set gcp:region us-central`
 
-**Note**: Not all resources are available in all regions. Check that GCP supports the region and resource combination. [Cloud locations](https://cloud.google.com/about/locations/).
+**Note**: Not all resources are available in all regions. Check that GCP supports [the region and resource combination](https://cloud.google.com/about/locations/).
 
 ## Build Configuration
 
