@@ -35,6 +35,10 @@ Although the template uses a very simple package structure, by placing `__main__
 Pulumi looks for a `python3` executable to use on `PATH`. If not found, it looks for a `python` executable. It expects the executable it finds to refer to Python 3.6 or above. This can be overridden by explicitly setting the `PULUMI_PYTHON_CMD` environment variable to the name of the Python executable to use.
 {{% /notes %}}
 
+## Pulumi Programming Model
+
+The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
+
 ## Using Pulumi PyPI Packages {#pypi-packages}
 
 ### Virtual Environments
