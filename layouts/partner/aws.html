@@ -1,14 +1,14 @@
 {{ define "hero" }}
     <header class="header-hero-home mb-8 relative px-4">
-        <div class="flex container mx-auto">
-            <div class="w-full md:w-1/2 px-5">
+        <div class="flex flex-wrap container mx-auto">
+            <div class="w-full lg:w-1/2 px-5">
                 <h1>{{ .Params.hero.title }}</h1>
                 <p class="mr-4">{{ .Params.hero.description }}</p>
                 <div class="mt-5">
                     <a class="btn btn-lg" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
                 </div>
             </div>
-            <div class="w-full md:w-1/2">
+            <div class="w-full mt-16 lg:w-1/2 lg:mt-0">
                 {{ partial "code-tabbed" (dict "tabs" .Params.hero.ide.tabs "chrome" "true" "mode" "dark") }}
             </div>
         </div>
@@ -27,17 +27,17 @@
                 <p class="text-3xl font-bold inline-block">CREATE</p>
             </div>
             <p class="w-10/12 mx-auto text-4xl mt-0">Begin with the Engineer and their experience.</p>
-            <p class="text-center w-1/2 mx-auto">
+            <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
                 Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
                 ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
                 ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
             </p>
-            <div class="flex flex-col md:flex-row mt-12">
-                <div class="w-full order-last md:w-1/2 md:order-first">
+            <div class="flex flex-col md:flex-row lg:mt-12">
+                <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
                     {{ partial "home/ide" . }}
                 </div>
 
-                <div class="w-full order-first md:w-1/2 md:order-last text-left px-10">
+                <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
                     <p class="text-lg font-bold">IDE Autocomplete</p>
                     <p>
                         In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
@@ -69,17 +69,17 @@
                 <p class="text-3xl font-bold inline-block">DEPLOY</p>
             </div>
             <p class="w-10/12 mx-auto text-4xl mt-0">Reduce obstacles and increase collaboration to ship faster.</p>
-            <p class="text-center w-1/2 mx-auto">
+            <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
                 Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
                 ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
                 ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
             </p>
-            <div class="flex flex-col md:flex-row mt-12">
-                <div class="w-full order-last md:w-1/2 md:order-first">
+            <div class="flex flex-col md:flex-row lg:mt-12">
+                <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
                     {{ partial "home/cli" . }}
                 </div>
 
-                <div class="w-full order-first md:w-1/2 md:order-last text-left px-10">
+                <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
                     <p class="text-lg font-bold">Architect for self-service</p>
                     <p>
                         In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
@@ -111,17 +111,17 @@
                 <p class="text-3xl font-bold inline-block">MANAGE</p>
             </div>
             <p class="w-10/12 mx-auto text-4xl mt-0">Full auditability and visibility into all environments to tame complexity and put security first.</p>
-            <p class="text-center w-1/2 mx-auto">
+            <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
                 Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
                 ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
                 ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
             </p>
-            <div class="flex flex-col md:flex-row mt-12">
-                <div class="w-full order-last md:w-1/2 md:order-first">
+            <div class="flex flex-col md:flex-row lg:mt-12">
+                <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
                     {{ partial "home/console" . }}
                 </div>
 
-                <div class="w-full order-first md:w-1/2 md:order-last text-left px-10">
+                <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
                     <p class="text-lg font-bold">Secrets management made easy</p>
                     <p>
                         In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
@@ -172,8 +172,8 @@
             </p>
         </section>
 
-        <section class="flex mt-16">
-            <div class="w-1/2 p-10">
+        <section class="flex flex-wrap mt-16">
+            <div class="w-full lg:w-1/2 p-10">
                 <p class="text-3xl font-bold inline-block">Feature Callout #1</p>
                 <p>
                     Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
@@ -184,17 +184,17 @@
                 </p>
             </div>
 
-            <div class="w-1/2">
+            <div class="w-full order-first lg:w-1/2 lg:order-last">
                 <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
             </div>
         </section>
 
-        <section class="flex mt-16">
-            <div class="w-1/2">
+        <section class="flex flex-wrap mt-16">
+            <div class="w-full lg:w-1/2">
                 <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
             </div>
 
-            <div class="w-1/2 p-10">
+            <div class="w-full lg:w-1/2 p-10">
                 <p class="text-3xl font-bold inline-block">Feature Callout #2</p>
                 <p>
                     Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
@@ -206,8 +206,8 @@
             </div>
         </section>
 
-        <section class="flex mt-16">
-            <div class="w-1/2 p-10">
+        <section class="flex flex-wrap mt-16">
+            <div class="w-full lg:w-1/2 p-10">
                 <p class="text-3xl font-bold inline-block">Feature Callout #3</p>
                 <p>
                     Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
@@ -218,7 +218,7 @@
                 </p>
             </div>
 
-            <div class="w-1/2">
+            <div class="w-full order-first lg:w-1/2 lg:order-last">
                 <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
             </div>
         </section>
@@ -229,13 +229,13 @@
                 Begin Your Pulumi Adventure
             </h3>
             <div class="w-full flex flex-wrap">
-                <div class="w-1/2 p-3">
-                    <div class="flex border rounded shadow-xl">
-                        <div class="w-1/2 p-3">
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded shadow-xl">
+                        <div class="w-full lg:w-1/2 p-3">
                             <img class="h-64 mx-auto" src="/images/mascot/babypus.svg" />
                         </div>
 
-                        <div class="w-1/2 p-3">
+                        <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Start from scratch</p>
                             <p>
                                 Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
@@ -248,13 +248,13 @@
                     </div>
                 </div>
 
-                <div class="w-1/2 p-3">
-                    <div class="flex border rounded">
-                        <div class="w-1/2 p-3">
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded">
+                        <div class="w-full lg:w-1/2 p-3">
                             <img class="h-64 mx-auto" src="/images/mascot/gandalfpus.svg" />
                         </div>
 
-                        <div class="w-1/2 p-3">
+                        <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Import an existing resource</p>
                             <p>
                                 Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
@@ -267,13 +267,13 @@
                     </div>
                 </div>
 
-                <div class="w-1/2 p-3">
-                    <div class="flex border rounded">
-                        <div class="w-1/2 p-3">
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded">
+                        <div class="w-full lg:w-1/2 p-3">
                             <img class="h-64 mx-auto" src="/images/mascot/rocketpus.svg" />
                         </div>
 
-                        <div class="w-1/2 p-3">
+                        <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Clone an example</p>
                             <p>
                                 Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
@@ -286,13 +286,13 @@
                     </div>
                 </div>
 
-                <div class="w-1/2 p-3">
-                    <div class="flex border rounded">
-                        <div class="w-1/2 p-3">
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded">
+                        <div class="w-full lg:w-1/2 p-3">
                             <img class="h-64 mx-auto" src="/images/mascot/eggpus.svg" />
                         </div>
 
-                        <div class="w-1/2 p-3">
+                        <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Convert Terraform</p>
                             <p>
                                 Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
