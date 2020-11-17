@@ -12,6 +12,7 @@ meta_desc: "Explore the GetQosBandwidthLimitRule function of the networking modu
 
 Use this data source to get the ID of an available OpenStack QoS bandwidth limit rule.
 
+
 {{% examples %}}
 ## Example Usage
 

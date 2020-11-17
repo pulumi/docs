@@ -27,6 +27,7 @@ properties.
 In addition, the `direct_url` property is also automatically reconciled if the
 Image Service set it.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2978,6 +2979,8 @@ Conflicts with `local_file_path`. Defaults to false.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

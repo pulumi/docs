@@ -12,6 +12,7 @@ meta_desc: "Explore the VolumeV2 resource of the blockstorage module, including 
 
 Manages a V2 volume resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2362,6 +2363,8 @@ scheduled on the same host as another volume specified in the list provided.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the RecordSet resource of the dns module, including examples
 
 Manages a DNS record set in the OpenStack DNS Service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1342,6 +1343,8 @@ Changing this creates a new DNS  record set.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

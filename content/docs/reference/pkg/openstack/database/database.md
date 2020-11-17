@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the database module, including exam
 
 Manages a V1 DB database resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -789,6 +790,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

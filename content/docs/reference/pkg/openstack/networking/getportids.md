@@ -13,6 +13,7 @@ meta_desc: "Explore the GetPortIds function of the networking module, including 
 Use this data source to get a list of Openstack Port IDs matching the
 specified criteria.
 
+
 {{% examples %}}
 ## Example Usage
 

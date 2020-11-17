@@ -21,6 +21,7 @@ project scope and is not visible by an admin or other accounts.
 The Application Credential visibility is similar to
 `openstack.compute.Keypair`.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1966,6 +1967,8 @@ another application credential can be provided.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

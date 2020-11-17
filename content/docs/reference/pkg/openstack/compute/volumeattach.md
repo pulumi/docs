@@ -13,6 +13,7 @@ meta_desc: "Explore the VolumeAttach resource of the compute module, including e
 Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1253,6 +1254,8 @@ new volume attachment.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

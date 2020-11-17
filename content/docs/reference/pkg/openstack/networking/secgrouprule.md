@@ -14,6 +14,7 @@ Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1830,6 +1831,8 @@ security group rule.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

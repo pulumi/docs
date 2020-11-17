@@ -111,6 +111,7 @@ The following attributes are exported:
   * `client_key` - The client's RSA key
   * `client_certificate` - The client's certificate
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3051,6 +3052,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

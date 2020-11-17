@@ -12,6 +12,7 @@ meta_desc: "Explore the QosDscpMarkingRule resource of the networking module, in
 
 Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -832,6 +833,8 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

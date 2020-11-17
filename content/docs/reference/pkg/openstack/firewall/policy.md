@@ -12,6 +12,7 @@ meta_desc: "Explore the Policy resource of the firewall module, including exampl
 
 Manages a v1 firewall policy resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1416,6 +1417,8 @@ can specify if the policy should be shared.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

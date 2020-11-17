@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFlavor function of the compute module, including exam
 
 Use this data source to get the ID of an available OpenStack flavor.
 
+
 {{% examples %}}
 ## Example Usage
 

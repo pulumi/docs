@@ -12,6 +12,7 @@ meta_desc: "Explore the Member resource of the loadbalancer module, including ex
 
 Manages a V2 member resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1422,6 +1423,8 @@ as a member with a weight of 2. Defaults to 1.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Service resource of the vpnaas module, including example
 
 Manages a V2 Neutron VPN service resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1554,6 +1555,8 @@ create a service for another project. Changing this creates a new service.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

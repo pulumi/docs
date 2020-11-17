@@ -19,6 +19,7 @@ There are some notes to consider when connecting Instances to networks using
 Ports. Please see the `openstack.compute.Instance` documentation for further
 documentation.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3928,6 +3929,8 @@ this port.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

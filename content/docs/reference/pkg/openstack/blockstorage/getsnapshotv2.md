@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSnapshotV2 function of the blockstorage module, inclu
 
 Use this data source to get information about an existing snapshot.
 
+
 {{% examples %}}
 ## Example Usage
 

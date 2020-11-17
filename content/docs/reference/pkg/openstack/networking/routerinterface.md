@@ -12,6 +12,7 @@ meta_desc: "Explore the RouterInterface resource of the networking module, inclu
 
 Manages a V2 router interface resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -981,6 +982,8 @@ this creates a new router interface.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Monitor resource of the loadbalancer module, including e
 
 Manages a V2 monitor resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1838,6 +1839,8 @@ accessed if monitor type is HTTP or HTTPS.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

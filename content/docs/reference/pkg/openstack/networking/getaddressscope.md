@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAddressScope function of the networking module, inclu
 
 Use this data source to get the ID of an available OpenStack address-scope.
 
+
 {{% examples %}}
 ## Example Usage
 

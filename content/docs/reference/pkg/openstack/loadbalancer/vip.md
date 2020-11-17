@@ -12,6 +12,7 @@ meta_desc: "Explore the Vip resource of the loadbalancer module, including examp
 
 Manages a V1 load balancer vip resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1930,6 +1931,8 @@ create a vip member for another tenant. Changing this creates a new vip.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

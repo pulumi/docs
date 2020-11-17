@@ -12,6 +12,7 @@ meta_desc: "Explore the QosMinimumBandwidthRule resource of the networking modul
 
 Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -928,6 +929,8 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

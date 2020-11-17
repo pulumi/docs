@@ -12,6 +12,7 @@ meta_desc: "Explore the Share resource of the sharedfilesystem module, including
 
 Use this resource to configure a share.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2445,6 +2446,8 @@ a new share.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

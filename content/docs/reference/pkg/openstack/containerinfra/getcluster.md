@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCluster function of the containerinfra module, includ
 
 Use this data source to get the ID of an available OpenStack Magnum cluster.
 
+
 {{% examples %}}
 ## Example Usage
 

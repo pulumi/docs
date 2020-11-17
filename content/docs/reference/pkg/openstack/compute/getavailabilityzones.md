@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAvailabilityZones function of the compute module, inc
 
 Use this data source to get a list of availability zones from OpenStack
 
+
 {{% examples %}}
 ## Example Usage
 

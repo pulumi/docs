@@ -14,6 +14,7 @@ Associates a floating IP to a port. This is useful for situations
 where you have a pre-allocated floating IP or are unable to use the
 `openstack.networking.FloatingIp` resource to create a floating IP.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -930,6 +931,8 @@ floating IP (which may or may not have a different address).
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

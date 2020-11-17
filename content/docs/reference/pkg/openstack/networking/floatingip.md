@@ -15,6 +15,7 @@ that can be used for load balancers.
 These are similar to Nova (compute) floating IP resources,
 but only compute floating IPs can be used with compute instances.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1840,6 +1841,8 @@ may or may not have a different address)
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

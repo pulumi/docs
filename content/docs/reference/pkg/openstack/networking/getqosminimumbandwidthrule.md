@@ -12,6 +12,7 @@ meta_desc: "Explore the GetQosMinimumBandwidthRule function of the networking mo
 
 Use this data source to get the ID of an available OpenStack QoS minimum bandwidth rule.
 
+
 {{% examples %}}
 ## Example Usage
 

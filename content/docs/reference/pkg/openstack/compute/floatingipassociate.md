@@ -13,6 +13,7 @@ meta_desc: "Explore the FloatingIpAssociate resource of the compute module, incl
 Associate a floating IP to an instance. This can be used instead of the
 `floating_ip` options in `openstack.compute.Instance`.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1195,6 +1196,8 @@ Changing this creates a new floatingip_associate.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

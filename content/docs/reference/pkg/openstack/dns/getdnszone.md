@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDnsZone function of the dns module, including example
 
 Use this data source to get the ID of an available OpenStack DNS zone.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -99,7 +100,7 @@ const zone1 = pulumi.output(openstack.dns.getDnsZone({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_zone(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">masters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serial</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transferred_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDnsZoneResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_zone(</span><span class="nx">all_projects</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">masters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serial</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transferred_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDnsZoneResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -123,6 +124,18 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allprojects_csharp">
+<a href="#allprojects_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Try to obtain zone ID by listing all projects
+(requires admin role by default, depends on your policy configuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -209,7 +222,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The project ID that owns the zone.
+    <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
+sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -311,6 +325,18 @@ A DNS client is needed to retrieve zone ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allprojects_go">
+<a href="#allprojects_go" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Try to obtain zone ID by listing all projects
+(requires admin role by default, depends on your policy configuration)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span> 
@@ -394,7 +420,8 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The project ID that owns the zone.
+    <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
+sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -496,6 +523,18 @@ A DNS client is needed to retrieve zone ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allprojects_nodejs">
+<a href="#allprojects_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Try to obtain zone ID by listing all projects
+(requires admin role by default, depends on your policy configuration)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
@@ -579,7 +618,8 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The project ID that owns the zone.
+    <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
+sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,6 +721,18 @@ A DNS client is needed to retrieve zone ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
+        <span id="all_projects_python">
+<a href="#all_projects_python" style="color: inherit; text-decoration: inherit;">all_<wbr>projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Try to obtain zone ID by listing all projects
+(requires admin role by default, depends on your policy configuration)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
@@ -764,7 +816,8 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The project ID that owns the zone.
+    <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
+sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1000,6 +1053,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="allprojects_csharp">
+<a href="#allprojects_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -1191,6 +1254,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The version of the zone.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="allprojects_go">
+<a href="#allprojects_go" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1388,6 +1461,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="allprojects_nodejs">
+<a href="#allprojects_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -1579,6 +1662,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The version of the zone.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="all_projects_python">
+<a href="#all_projects_python" style="color: inherit; text-decoration: inherit;">all_<wbr>projects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

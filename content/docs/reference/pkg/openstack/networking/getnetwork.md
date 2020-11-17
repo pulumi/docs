@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNetwork function of the networking module, including 
 
 Use this data source to get the ID of an available OpenStack network.
 
+
 {{% examples %}}
 ## Example Usage
 

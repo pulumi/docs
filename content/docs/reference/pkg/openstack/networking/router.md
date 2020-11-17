@@ -12,6 +12,7 @@ meta_desc: "Explore the Router resource of the networking module, including exam
 
 Manages a V2 router resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2302,6 +2303,8 @@ the Router gateway is assigned during creation or updated after creation.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

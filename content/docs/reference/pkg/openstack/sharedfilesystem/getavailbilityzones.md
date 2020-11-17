@@ -13,6 +13,7 @@ meta_desc: "Explore the GetAvailbilityZones function of the sharedfilesystem mod
 Use this data source to get a list of Shared File System availability zones
 from OpenStack
 
+
 {{% examples %}}
 ## Example Usage
 

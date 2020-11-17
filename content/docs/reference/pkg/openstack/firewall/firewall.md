@@ -12,6 +12,7 @@ meta_desc: "Explore the Firewall resource of the firewall module, including exam
 
 Manages a v1 firewall resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1518,6 +1519,8 @@ firewall.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -14,6 +14,7 @@ Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
 the username or project name currently in use.
 
+
 {{% examples %}}
 ## Example Usage
 

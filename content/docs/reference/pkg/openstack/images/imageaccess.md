@@ -13,6 +13,7 @@ meta_desc: "Explore the ImageAccess resource of the images module, including exa
 Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1336,6 +1337,8 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

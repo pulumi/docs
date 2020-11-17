@@ -12,6 +12,7 @@ meta_desc: "Explore the QosBandwidthLimitRule resource of the networking module,
 
 Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1032,6 +1033,8 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

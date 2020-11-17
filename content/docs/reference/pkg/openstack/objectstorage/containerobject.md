@@ -12,6 +12,7 @@ meta_desc: "Explore the ContainerObject resource of the objectstorage module, in
 
 Manages a V1 container object resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2658,6 +2659,8 @@ need this value if you report a problem.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
