@@ -19,6 +19,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="containerregistry" title="ContainerRegistry"><span class="symbol resource"></span>ContainerRegistry</a></li>
     <li><a href="containerregistrydockercredentials" title="ContainerRegistryDockerCredentials"><span class="symbol resource"></span>ContainerRegistryDockerCredentials</a></li>
+    <li><a href="customimage" title="CustomImage"><span class="symbol resource"></span>CustomImage</a></li>
     <li><a href="databasecluster" title="DatabaseCluster"><span class="symbol resource"></span>DatabaseCluster</a></li>
     <li><a href="databaseconnectionpool" title="DatabaseConnectionPool"><span class="symbol resource"></span>DatabaseConnectionPool</a></li>
     <li><a href="databasedb" title="DatabaseDb"><span class="symbol resource"></span>DatabaseDb</a></li>
@@ -78,6 +79,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="getspacesbucketobjects" title="GetSpacesBucketObjects"><span class="symbol function"></span>GetSpacesBucketObjects</a></li>
     <li><a href="getspacesbuckets" title="GetSpacesBuckets"><span class="symbol function"></span>GetSpacesBuckets</a></li>
     <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
+    <li><a href="getsshkeys" title="GetSshKeys"><span class="symbol function"></span>GetSshKeys</a></li>
     <li><a href="gettag" title="GetTag"><span class="symbol function"></span>GetTag</a></li>
     <li><a href="gettags" title="GetTags"><span class="symbol function"></span>GetTags</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
@@ -94,7 +96,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>3.0.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the App resource of the DigitalOcean package, including exam
 
 Provides a DigitalOcean App resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -282,6 +283,15 @@ class MyStack : Stack
         {
             Spec = new DigitalOcean.Inputs.AppSpecArgs
             {
+                Databases = 
+                {
+                    new DigitalOcean.Inputs.AppSpecDatabaseArgs
+                    {
+                        Engine = "PG",
+                        Name = "starter-db",
+                        Production = false,
+                    },
+                },
                 Domains = 
                 {
                     "foo.example.com",
@@ -351,6 +361,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := digitalocean.NewApp(ctx, "mono_repo_example", &digitalocean.AppArgs{
 			Spec: &digitalocean.AppSpecArgs{
+				Databases: digitalocean.AppSpecDatabaseArray{
+					&digitalocean.AppSpecDatabaseArgs{
+						Engine:     pulumi.String("PG"),
+						Name:       pulumi.String("starter-db"),
+						Production: pulumi.Bool(false),
+					},
+				},
 				Domains: pulumi.StringArray{
 					pulumi.String("foo.example.com"),
 				},
@@ -407,6 +424,11 @@ import pulumi
 import pulumi_digitalocean as digitalocean
 
 mono_repo_example = digitalocean.App("mono-repo-example", spec=digitalocean.AppSpecArgs(
+    databases=[digitalocean.AppSpecDatabaseArgs(
+        engine="PG",
+        name="starter-db",
+        production=False,
+    )],
     domains=["foo.example.com"],
     name="mono-repo-example",
     region="ams",
@@ -452,6 +474,11 @@ import * as digitalocean from "@pulumi/digitalocean";
 
 const mono_repo_example = new digitalocean.App("mono-repo-example", {
     spec: {
+        databases: [{
+            engine: "PG",
+            name: "starter-db",
+            production: false,
+        }],
         domains: ["foo.example.com"],
         name: "mono-repo-example",
         region: "ams",
@@ -1502,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1582,7 +1609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1662,7 +1689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1742,7 +1769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1840,7 +1867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if `cluster_name` is not set, a new cluster will be provisioned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1850,7 +1878,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL database to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1860,7 +1889,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL user to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1870,7 +1900,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The database engine to use (`MYSQL`, `PG`, or `REDIS`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1880,7 +1911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1891,7 +1922,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this is a production or dev database.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1901,7 +1933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The version of the database engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1918,7 +1951,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if `cluster_name` is not set, a new cluster will be provisioned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1928,7 +1962,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL database to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1938,7 +1973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL user to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1948,7 +1984,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The database engine to use (`MYSQL`, `PG`, or `REDIS`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1958,7 +1995,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1969,7 +2006,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this is a production or dev database.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1979,7 +2017,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The version of the database engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1996,7 +2035,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if `cluster_name` is not set, a new cluster will be provisioned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2006,7 +2046,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL database to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2016,7 +2057,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL user to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2026,7 +2068,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The database engine to use (`MYSQL`, `PG`, or `REDIS`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2036,7 +2079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2047,7 +2090,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this is a production or dev database.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2057,7 +2101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The version of the database engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2074,7 +2119,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if `cluster_name` is not set, a new cluster will be provisioned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2084,7 +2130,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL database to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2094,7 +2141,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the MySQL or PostgreSQL user to configure.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2104,7 +2152,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The database engine to use (`MYSQL`, `PG`, or `REDIS`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2114,7 +2163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2125,7 +2174,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this is a production or dev database.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2135,7 +2185,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The version of the database engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2170,7 +2221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2330,7 +2381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2490,7 +2541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2650,7 +2701,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3762,7 +3813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3900,7 +3951,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4038,7 +4089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4176,7 +4227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4956,7 +5007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5094,7 +5145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5232,7 +5283,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5370,7 +5421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the component
+    <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6119,6 +6170,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

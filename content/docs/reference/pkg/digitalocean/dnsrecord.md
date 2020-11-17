@@ -12,6 +12,7 @@ meta_desc: "Explore the DnsRecord resource of the DigitalOcean package, includin
 
 Provides a DigitalOcean DNS record resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1559,6 +1560,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

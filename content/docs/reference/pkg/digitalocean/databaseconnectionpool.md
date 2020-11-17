@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseConnectionPool resource of the DigitalOcean pack
 
 Provides a DigitalOcean database connection pool resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1628,6 +1629,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

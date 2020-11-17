@@ -15,6 +15,7 @@ Provides a [DigitalOcean VPC](https://developers.digitalocean.com/documentation/
 VPCs are virtual networks containing resources that can communicate with each
 other in full isolation, using private IP addresses.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1242,6 +1243,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

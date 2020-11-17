@@ -14,6 +14,7 @@ Returns a list of tags in your DigitalOcean account, with the ability to
 filter and sort the results. If no filters are specified, all tags will be
 returned.
 
+
 {{% examples %}}
 ## Example Usage
 

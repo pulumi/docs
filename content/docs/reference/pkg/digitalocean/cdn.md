@@ -12,6 +12,7 @@ meta_desc: "Explore the Cdn resource of the DigitalOcean package, including exam
 
 Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1299,6 +1300,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

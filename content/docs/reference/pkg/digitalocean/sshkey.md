@@ -15,6 +15,7 @@ keys for Droplet access. Keys created with this resource
 can be referenced in your Droplet configuration via their ID or
 fingerprint.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -807,6 +808,8 @@ can be read using the file interpolation function
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

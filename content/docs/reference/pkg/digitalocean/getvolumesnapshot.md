@@ -14,6 +14,7 @@ Volume snapshots are saved instances of a block storage volume. Use this data
 source to retrieve the ID of a DigitalOcean volume snapshot for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 

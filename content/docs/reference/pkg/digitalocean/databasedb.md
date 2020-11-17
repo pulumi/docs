@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseDb resource of the DigitalOcean package, includi
 
 Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name `defaultdb` will be created. Then, this resource can be used to provide additional database inside the cluster.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -729,6 +730,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -14,6 +14,7 @@ Provides a DigitalOcean Floating IP to represent a publicly-accessible static IP
 
 > **NOTE:** Floating IPs can be assigned to a Droplet either directly on the `digitalocean.FloatingIp` resource by setting a `droplet_id` or using the `digitalocean.FloatingIpAssignment` resource, but the two cannot be used together.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -915,6 +916,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

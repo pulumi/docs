@@ -15,6 +15,7 @@ If no filters are specified, all records will be returned.
 
 
 
+
 ## Using GetRecords {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

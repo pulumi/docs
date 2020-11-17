@@ -13,6 +13,7 @@ meta_desc: "Explore the LoadBalancer resource of the DigitalOcean package, inclu
 Provides a DigitalOcean Load Balancer resource. This can be used to create,
 modify, and delete Load Balancers.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2833,6 +2834,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

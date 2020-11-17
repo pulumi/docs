@@ -13,6 +13,7 @@ meta_desc: "Explore the Firewall resource of the DigitalOcean package, including
 Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2369,6 +2370,8 @@ This can be "waiting", "succeeded", or "failed".
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

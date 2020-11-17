@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseCluster resource of the DigitalOcean package, in
 
 Provides a DigitalOcean database cluster resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2611,6 +2612,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -14,6 +14,7 @@ Get Docker credentials for your DigitalOcean container registry.
 
 An error is triggered if the provided container registry name does not exist.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1031,6 +1032,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

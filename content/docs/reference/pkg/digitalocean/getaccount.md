@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the DigitalOcean package, includi
 
 Get information on your DigitalOcean account.
 
+
 {{% examples %}}
 ## Example Usage
 
