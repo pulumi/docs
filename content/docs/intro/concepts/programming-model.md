@@ -1962,6 +1962,13 @@ var connectionString = Output.All(sqlServer.name, database.name)
 // For more flexibility, 'Output.Tuple' is used so that each unwrapped value will preserve their distinct type.
 var connectionString2 = Output.Tuple(sqlServer.name, database.name)
     .Apply(t => `Server=tcp:${t.Item1}.database.windows.net;initial catalog=${t.Item2}...`);
+
+// Or using a more natural Tuple syntax and a statement lambda expression.
+var connectionString2 = Output.Tuple(sqlServer.name, database.name).Apply(t =>
+{
+    var (serverName, databaseName) = t;
+    return `Server=tcp:${serverName}.database.windows.net;initial catalog=${databaseName}...`;
+});
 ```
 
 {{% /choosable %}}
