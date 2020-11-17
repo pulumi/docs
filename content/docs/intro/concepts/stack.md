@@ -28,6 +28,8 @@ If you are using Pulumi in your organization, by default the stack will be creat
 $ pulumi stack init broomllc/staging
 ```
 
+Fully qualified stack names also include the project name, in the form `orgName/projectName/stackName`, and this fully-qualified format is required in some contexts.  In most contexts, the shorthands `orgName/stackName` or `stackName` are valid and use the default organization and the current project context.
+
 Note that while stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed [with `pulumi config`]({{< relref "/docs/reference/cli/pulumi_config" >}}).
 
 ## Listing stacks
