@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAlertChannel function of the New Relic package, inclu
 
 Use this data source to get information about a specific alert channel in New Relic that already exists.
 
+
 {{% examples %}}
 ## Example Usage
 

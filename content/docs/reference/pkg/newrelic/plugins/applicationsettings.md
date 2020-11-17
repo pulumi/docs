@@ -20,6 +20,7 @@ exists in New Relic.
 > **NOTE:** Applications that have reported data in the last twelve hours
 cannot be deleted.
 
+
 {{% examples %}}
 ## Example Usage
 

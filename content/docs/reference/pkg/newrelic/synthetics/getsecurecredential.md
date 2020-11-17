@@ -14,6 +14,7 @@ Use this data source to get information about a specific Synthetics secure crede
 
 Note that the secure credential's value is not returned as an attribute for security reasons.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -21,6 +21,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
   * `value` - (Optional) Threshold value, computed against the `comparison` operator. Supported by `infra_metric` and `infra_process_running` alert condition types.
   * `time_function` - (Optional) Indicates if the condition needs to be sustained or to just break the threshold once; `all` or `any`. Supported by the `infra_metric` alert condition type.
 
+
 {{% examples %}}
 ## Example Usage
 

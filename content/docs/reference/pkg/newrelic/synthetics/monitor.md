@@ -12,6 +12,7 @@ meta_desc: "Explore the Monitor resource of the synthetics module, including exa
 
 Use this resource to create, update, and delete a synthetics monitor in New Relic.
 
+
 {{% examples %}}
 ## Example Usage
 

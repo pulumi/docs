@@ -16,6 +16,7 @@ Use this resource to create, update, and delete a New Relic Synthetics Location 
 
 
 
+
 ## Create a MultiLocationAlertCondition Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

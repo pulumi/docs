@@ -14,6 +14,7 @@ Use this data source to get information about a single plugin component in New R
 
 Each plugin component reporting into to New Relic is assigned a unique ID. Once you have a plugin component reporting data into your account, its component ID can be used to create Plugins alert conditions.
 
+
 {{% examples %}}
 ## Example Usage
 

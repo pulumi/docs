@@ -12,6 +12,7 @@ meta_desc: "Explore the MonitorScript resource of the synthetics module, includi
 
 Use this resource to update a synthetics monitor script in New Relic.
 
+
 {{% examples %}}
 ## Example Usage
 

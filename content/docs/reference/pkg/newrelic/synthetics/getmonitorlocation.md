@@ -12,6 +12,7 @@ meta_desc: "Explore the GetMonitorLocation function of the synthetics module, in
 
 Use this data source to get information about a specific Synthetics monitor location in New Relic that already exists.
 
+
 {{% examples %}}
 ## Example Usage
 
