@@ -14,6 +14,7 @@ Provides a Rancher Catalog v2 resource. This can be used to create cluster helm 
 
 
 
+
 ## Create a CatalogV2 Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1772,6 +1773,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

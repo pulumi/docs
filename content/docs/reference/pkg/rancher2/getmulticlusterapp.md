@@ -12,6 +12,7 @@ meta_desc: "Explore the GetMultiClusterApp function of the Rancher 2 package, in
 
 Use this data source to retrieve information about a Rancher v2 multi cluster app.
 
+
 {{% examples %}}
 ## Example Usage
 

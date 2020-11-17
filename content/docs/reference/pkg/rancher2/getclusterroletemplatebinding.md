@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClusterRoleTemplateBinding function of the Rancher 2 
 
 Use this data source to retrieve information about a Rancher v2 cluster role template binding.
 
+
 {{% examples %}}
 ## Example Usage
 

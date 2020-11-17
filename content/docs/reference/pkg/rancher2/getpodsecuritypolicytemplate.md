@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPodSecurityPolicyTemplate function of the Rancher 2 p
 
 Use this data source to retrieve information about a Rancher v2 PodSecurityPolicyTemplate.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the PodSecurityPolicyTemplate resource of the Rancher 2 pack
 
 Provides a Rancher v2 PodSecurityPolicyTemplate resource. This can be used to create PodSecurityPolicyTemplates for Rancher v2 environments and retrieve their information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -5434,6 +5435,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

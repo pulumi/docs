@@ -18,6 +18,7 @@ There are 2 kind of tokens:
 
 Tokens can't be updated once created. Any diff in token data will recreate the token. If any token expire, Rancher2 provider will generate a diff to regenerate it.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1687,6 +1688,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetApp function of the Rancher 2 package, including exam
 
 Use this data source to retrieve information about a Rancher v2 app.
 
+
 {{% examples %}}
 ## Example Usage
 

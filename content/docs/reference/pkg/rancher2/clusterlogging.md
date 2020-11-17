@@ -12,6 +12,7 @@ meta_desc: "Explore the ClusterLogging resource of the Rancher 2 package, includ
 
 Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4452,6 +4453,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

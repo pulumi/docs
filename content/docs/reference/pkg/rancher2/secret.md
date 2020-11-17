@@ -18,6 +18,7 @@ Depending of the availability, there are 2 types of Rancher v2 secrets:
 
 
 
+
 ## Create a Secret Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1072,6 +1073,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

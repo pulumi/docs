@@ -14,6 +14,7 @@ Use this data source to retrieve information about a Rancher v2 Cluster CIS Scan
 
 
 
+
 ## Using GetClusterScan {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

@@ -14,6 +14,7 @@ Provides a Rancher v2 User resource. This can be used to create Users for Ranche
 
 When a Rancher User is created, it doesn't have a global role binding. At least, `user-base` global role binding in needed in order to enable user login.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1169,6 +1170,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -13,6 +13,1763 @@ meta_desc: "Explore the Cluster resource of the Rancher 2 package, including exa
 Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creating Rancher v2 RKE cluster enabling and customizing monitoring
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new rancher2 RKE Cluster
+        var foo_custom = new Rancher2.Cluster("foo-custom", new Rancher2.ClusterArgs
+        {
+            ClusterMonitoringInput = new Rancher2.Inputs.ClusterClusterMonitoringInputArgs
+            {
+                Answers = 
+                {
+                    { "exporter-kubelets.https", true },
+                    { "exporter-node.enabled", true },
+                    { "exporter-node.ports.metrics.port", 9796 },
+                    { "exporter-node.resources.limits.cpu", "200m" },
+                    { "exporter-node.resources.limits.memory", "200Mi" },
+                    { "grafana.persistence.enabled", false },
+                    { "grafana.persistence.size", "10Gi" },
+                    { "grafana.persistence.storageClass", "default" },
+                    { "operator.resources.limits.memory", "500Mi" },
+                    { "prometheus.persistence.enabled", "false" },
+                    { "prometheus.persistence.size", "50Gi" },
+                    { "prometheus.persistence.storageClass", "default" },
+                    { "prometheus.persistent.useReleaseName", "true" },
+                    { "prometheus.resources.core.limits.cpu", "1000m" },
+                    { "prometheus.resources.core.limits.memory", "1500Mi" },
+                    { "prometheus.resources.core.requests.cpu", "750m" },
+                    { "prometheus.resources.core.requests.memory", "750Mi" },
+                    { "prometheus.retention", "12h" },
+                },
+                Version = "0.1.0",
+            },
+            Description = "Foo rancher2 custom cluster",
+            EnableClusterMonitoring = true,
+            RkeConfig = new Rancher2.Inputs.ClusterRkeConfigArgs
+            {
+                Network = new Rancher2.Inputs.ClusterRkeConfigNetworkArgs
+                {
+                    Plugin = "canal",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewCluster(ctx, "foo_custom", &rancher2.ClusterArgs{
+			ClusterMonitoringInput: &rancher2.ClusterClusterMonitoringInputArgs{
+				Answers: pulumi.Map{
+					"exporter-kubelets.https":                   pulumi.Bool(true),
+					"exporter-node.enabled":                     pulumi.Bool(true),
+					"exporter-node.ports.metrics.port":          pulumi.Float64(9796),
+					"exporter-node.resources.limits.cpu":        pulumi.String("200m"),
+					"exporter-node.resources.limits.memory":     pulumi.String("200Mi"),
+					"grafana.persistence.enabled":               pulumi.Bool(false),
+					"grafana.persistence.size":                  pulumi.String("10Gi"),
+					"grafana.persistence.storageClass":          pulumi.String("default"),
+					"operator.resources.limits.memory":          pulumi.String("500Mi"),
+					"prometheus.persistence.enabled":            pulumi.String("false"),
+					"prometheus.persistence.size":               pulumi.String("50Gi"),
+					"prometheus.persistence.storageClass":       pulumi.String("default"),
+					"prometheus.persistent.useReleaseName":      pulumi.String("true"),
+					"prometheus.resources.core.limits.cpu":      pulumi.String("1000m"),
+					"prometheus.resources.core.limits.memory":   pulumi.String("1500Mi"),
+					"prometheus.resources.core.requests.cpu":    pulumi.String("750m"),
+					"prometheus.resources.core.requests.memory": pulumi.String("750Mi"),
+					"prometheus.retention":                      pulumi.String("12h"),
+				},
+				Version: pulumi.String("0.1.0"),
+			},
+			Description:             pulumi.String("Foo rancher2 custom cluster"),
+			EnableClusterMonitoring: pulumi.Bool(true),
+			RkeConfig: &rancher2.ClusterRkeConfigArgs{
+				Network: &rancher2.ClusterRkeConfigNetworkArgs{
+					Plugin: pulumi.String("canal"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 RKE Cluster
+foo_custom = rancher2.Cluster("foo-custom",
+    cluster_monitoring_input=rancher2.ClusterClusterMonitoringInputArgs(
+        answers={
+            "exporter-kubelets.https": True,
+            "exporter-node.enabled": True,
+            "exporter-node.ports.metrics.port": 9796,
+            "exporter-node.resources.limits.cpu": "200m",
+            "exporter-node.resources.limits.memory": "200Mi",
+            "grafana.persistence.enabled": False,
+            "grafana.persistence.size": "10Gi",
+            "grafana.persistence.storageClass": "default",
+            "operator.resources.limits.memory": "500Mi",
+            "prometheus.persistence.enabled": "false",
+            "prometheus.persistence.size": "50Gi",
+            "prometheus.persistence.storageClass": "default",
+            "prometheus.persistent.useReleaseName": "true",
+            "prometheus.resources.core.limits.cpu": "1000m",
+            "prometheus.resources.core.limits.memory": "1500Mi",
+            "prometheus.resources.core.requests.cpu": "750m",
+            "prometheus.resources.core.requests.memory": "750Mi",
+            "prometheus.retention": "12h",
+        },
+        version="0.1.0",
+    ),
+    description="Foo rancher2 custom cluster",
+    enable_cluster_monitoring=True,
+    rke_config=rancher2.ClusterRkeConfigArgs(
+        network=rancher2.ClusterRkeConfigNetworkArgs(
+            plugin="canal",
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 RKE Cluster
+const foo_custom = new rancher2.Cluster("foo-custom", {
+    clusterMonitoringInput: {
+        answers: {
+            "exporter-kubelets.https": true,
+            "exporter-node.enabled": true,
+            "exporter-node.ports.metrics.port": 9796,
+            "exporter-node.resources.limits.cpu": "200m",
+            "exporter-node.resources.limits.memory": "200Mi",
+            "grafana.persistence.enabled": false,
+            "grafana.persistence.size": "10Gi",
+            "grafana.persistence.storageClass": "default",
+            "operator.resources.limits.memory": "500Mi",
+            "prometheus.persistence.enabled": "false",
+            "prometheus.persistence.size": "50Gi",
+            "prometheus.persistence.storageClass": "default",
+            "prometheus.persistent.useReleaseName": "true",
+            "prometheus.resources.core.limits.cpu": "1000m",
+            "prometheus.resources.core.limits.memory": "1500Mi",
+            "prometheus.resources.core.requests.cpu": "750m",
+            "prometheus.resources.core.requests.memory": "750Mi",
+            "prometheus.retention": "12h",
+        },
+        version: "0.1.0",
+    },
+    description: "Foo rancher2 custom cluster",
+    enableClusterMonitoring: true,
+    rkeConfig: {
+        network: {
+            plugin: "canal",
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Creating Rancher v2 RKE cluster enabling/customizing monitoring and istio
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new rancher2 RKE Cluster
+        var foo_customCluster = new Rancher2.Cluster("foo-customCluster", new Rancher2.ClusterArgs
+        {
+            Description = "Foo rancher2 custom cluster",
+            RkeConfig = new Rancher2.Inputs.ClusterRkeConfigArgs
+            {
+                Network = new Rancher2.Inputs.ClusterRkeConfigNetworkArgs
+                {
+                    Plugin = "canal",
+                },
+            },
+            EnableClusterMonitoring = true,
+            ClusterMonitoringInput = new Rancher2.Inputs.ClusterClusterMonitoringInputArgs
+            {
+                Answers = 
+                {
+                    { "exporter-kubelets.https", true },
+                    { "exporter-node.enabled", true },
+                    { "exporter-node.ports.metrics.port", 9796 },
+                    { "exporter-node.resources.limits.cpu", "200m" },
+                    { "exporter-node.resources.limits.memory", "200Mi" },
+                    { "grafana.persistence.enabled", false },
+                    { "grafana.persistence.size", "10Gi" },
+                    { "grafana.persistence.storageClass", "default" },
+                    { "operator.resources.limits.memory", "500Mi" },
+                    { "prometheus.persistence.enabled", "false" },
+                    { "prometheus.persistence.size", "50Gi" },
+                    { "prometheus.persistence.storageClass", "default" },
+                    { "prometheus.persistent.useReleaseName", "true" },
+                    { "prometheus.resources.core.limits.cpu", "1000m" },
+                    { "prometheus.resources.core.limits.memory", "1500Mi" },
+                    { "prometheus.resources.core.requests.cpu", "750m" },
+                    { "prometheus.resources.core.requests.memory", "750Mi" },
+                    { "prometheus.retention", "12h" },
+                },
+                Version = "0.1.0",
+            },
+        });
+        // Create a new rancher2 Cluster Sync for foo-custom cluster
+        var foo_customClusterSync = new Rancher2.ClusterSync("foo-customClusterSync", new Rancher2.ClusterSyncArgs
+        {
+            ClusterId = foo_customCluster.Id,
+            WaitMonitoring = foo_customCluster.EnableClusterMonitoring,
+        });
+        // Create a new rancher2 Namespace
+        var foo_istio = new Rancher2.Namespace("foo-istio", new Rancher2.NamespaceArgs
+        {
+            ProjectId = foo_customClusterSync.SystemProjectId,
+            Description = "istio namespace",
+        });
+        // Create a new rancher2 App deploying istio (should wait until monitoring is up and running)
+        var istio = new Rancher2.App("istio", new Rancher2.AppArgs
+        {
+            CatalogName = "system-library",
+            Description = "Terraform app acceptance test",
+            ProjectId = foo_istio.ProjectId,
+            TemplateName = "rancher-istio",
+            TemplateVersion = "0.1.1",
+            TargetNamespace = foo_istio.Id,
+            Answers = 
+            {
+                { "certmanager.enabled", false },
+                { "enableCRDs", true },
+                { "galley.enabled", true },
+                { "gateways.enabled", false },
+                { "gateways.istio-ingressgateway.resources.limits.cpu", "2000m" },
+                { "gateways.istio-ingressgateway.resources.limits.memory", "1024Mi" },
+                { "gateways.istio-ingressgateway.resources.requests.cpu", "100m" },
+                { "gateways.istio-ingressgateway.resources.requests.memory", "128Mi" },
+                { "gateways.istio-ingressgateway.type", "NodePort" },
+                { "global.monitoring.type", "cluster-monitoring" },
+                { "global.rancher.clusterId", foo_customClusterSync.ClusterId },
+                { "istio_cni.enabled", "false" },
+                { "istiocoredns.enabled", "false" },
+                { "kiali.enabled", "true" },
+                { "mixer.enabled", "true" },
+                { "mixer.policy.enabled", "true" },
+                { "mixer.policy.resources.limits.cpu", "4800m" },
+                { "mixer.policy.resources.limits.memory", "4096Mi" },
+                { "mixer.policy.resources.requests.cpu", "1000m" },
+                { "mixer.policy.resources.requests.memory", "1024Mi" },
+                { "mixer.telemetry.resources.limits.cpu", "4800m" },
+                { "mixer.telemetry.resources.limits.memory", "4096Mi" },
+                { "mixer.telemetry.resources.requests.cpu", "1000m" },
+                { "mixer.telemetry.resources.requests.memory", "1024Mi" },
+                { "mtls.enabled", false },
+                { "nodeagent.enabled", false },
+                { "pilot.enabled", true },
+                { "pilot.resources.limits.cpu", "1000m" },
+                { "pilot.resources.limits.memory", "4096Mi" },
+                { "pilot.resources.requests.cpu", "500m" },
+                { "pilot.resources.requests.memory", "2048Mi" },
+                { "pilot.traceSampling", "1" },
+                { "security.enabled", true },
+                { "sidecarInjectorWebhook.enabled", true },
+                { "tracing.enabled", true },
+                { "tracing.jaeger.resources.limits.cpu", "500m" },
+                { "tracing.jaeger.resources.limits.memory", "1024Mi" },
+                { "tracing.jaeger.resources.requests.cpu", "100m" },
+                { "tracing.jaeger.resources.requests.memory", "100Mi" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewCluster(ctx, "foo_customCluster", &rancher2.ClusterArgs{
+			Description: pulumi.String("Foo rancher2 custom cluster"),
+			RkeConfig: &rancher2.ClusterRkeConfigArgs{
+				Network: &rancher2.ClusterRkeConfigNetworkArgs{
+					Plugin: pulumi.String("canal"),
+				},
+			},
+			EnableClusterMonitoring: pulumi.Bool(true),
+			ClusterMonitoringInput: &rancher2.ClusterClusterMonitoringInputArgs{
+				Answers: pulumi.Map{
+					"exporter-kubelets.https":                   pulumi.Bool(true),
+					"exporter-node.enabled":                     pulumi.Bool(true),
+					"exporter-node.ports.metrics.port":          pulumi.Float64(9796),
+					"exporter-node.resources.limits.cpu":        pulumi.String("200m"),
+					"exporter-node.resources.limits.memory":     pulumi.String("200Mi"),
+					"grafana.persistence.enabled":               pulumi.Bool(false),
+					"grafana.persistence.size":                  pulumi.String("10Gi"),
+					"grafana.persistence.storageClass":          pulumi.String("default"),
+					"operator.resources.limits.memory":          pulumi.String("500Mi"),
+					"prometheus.persistence.enabled":            pulumi.String("false"),
+					"prometheus.persistence.size":               pulumi.String("50Gi"),
+					"prometheus.persistence.storageClass":       pulumi.String("default"),
+					"prometheus.persistent.useReleaseName":      pulumi.String("true"),
+					"prometheus.resources.core.limits.cpu":      pulumi.String("1000m"),
+					"prometheus.resources.core.limits.memory":   pulumi.String("1500Mi"),
+					"prometheus.resources.core.requests.cpu":    pulumi.String("750m"),
+					"prometheus.resources.core.requests.memory": pulumi.String("750Mi"),
+					"prometheus.retention":                      pulumi.String("12h"),
+				},
+				Version: pulumi.String("0.1.0"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewClusterSync(ctx, "foo_customClusterSync", &rancher2.ClusterSyncArgs{
+			ClusterId:      foo_customCluster.ID(),
+			WaitMonitoring: foo_customCluster.EnableClusterMonitoring,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewNamespace(ctx, "foo_istio", &rancher2.NamespaceArgs{
+			ProjectId:   foo_customClusterSync.SystemProjectId,
+			Description: pulumi.String("istio namespace"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewApp(ctx, "istio", &rancher2.AppArgs{
+			CatalogName:     pulumi.String("system-library"),
+			Description:     pulumi.String("Terraform app acceptance test"),
+			ProjectId:       foo_istio.ProjectId,
+			TemplateName:    pulumi.String("rancher-istio"),
+			TemplateVersion: pulumi.String("0.1.1"),
+			TargetNamespace: foo_istio.ID(),
+			Answers: pulumi.Map{
+				"certmanager.enabled": pulumi.Bool(false),
+				"enableCRDs":          pulumi.Bool(true),
+				"galley.enabled":      pulumi.Bool(true),
+				"gateways.enabled":    pulumi.Bool(false),
+				"gateways.istio-ingressgateway.resources.limits.cpu":      pulumi.String("2000m"),
+				"gateways.istio-ingressgateway.resources.limits.memory":   pulumi.String("1024Mi"),
+				"gateways.istio-ingressgateway.resources.requests.cpu":    pulumi.String("100m"),
+				"gateways.istio-ingressgateway.resources.requests.memory": pulumi.String("128Mi"),
+				"gateways.istio-ingressgateway.type":                      pulumi.String("NodePort"),
+				"global.monitoring.type":                                  pulumi.String("cluster-monitoring"),
+				"global.rancher.clusterId":                                foo_customClusterSync.ClusterId,
+				"istio_cni.enabled":                                       pulumi.String("false"),
+				"istiocoredns.enabled":                                    pulumi.String("false"),
+				"kiali.enabled":                                           pulumi.String("true"),
+				"mixer.enabled":                                           pulumi.String("true"),
+				"mixer.policy.enabled":                                    pulumi.String("true"),
+				"mixer.policy.resources.limits.cpu":                       pulumi.String("4800m"),
+				"mixer.policy.resources.limits.memory":                    pulumi.String("4096Mi"),
+				"mixer.policy.resources.requests.cpu":                     pulumi.String("1000m"),
+				"mixer.policy.resources.requests.memory":                  pulumi.String("1024Mi"),
+				"mixer.telemetry.resources.limits.cpu":                    pulumi.String("4800m"),
+				"mixer.telemetry.resources.limits.memory":                 pulumi.String("4096Mi"),
+				"mixer.telemetry.resources.requests.cpu":                  pulumi.String("1000m"),
+				"mixer.telemetry.resources.requests.memory":               pulumi.String("1024Mi"),
+				"mtls.enabled":                                            pulumi.Bool(false),
+				"nodeagent.enabled":                                       pulumi.Bool(false),
+				"pilot.enabled":                                           pulumi.Bool(true),
+				"pilot.resources.limits.cpu":                              pulumi.String("1000m"),
+				"pilot.resources.limits.memory":                           pulumi.String("4096Mi"),
+				"pilot.resources.requests.cpu":                            pulumi.String("500m"),
+				"pilot.resources.requests.memory":                         pulumi.String("2048Mi"),
+				"pilot.traceSampling":                                     pulumi.String("1"),
+				"security.enabled":                                        pulumi.Bool(true),
+				"sidecarInjectorWebhook.enabled":                          pulumi.Bool(true),
+				"tracing.enabled":                                         pulumi.Bool(true),
+				"tracing.jaeger.resources.limits.cpu":                     pulumi.String("500m"),
+				"tracing.jaeger.resources.limits.memory":                  pulumi.String("1024Mi"),
+				"tracing.jaeger.resources.requests.cpu":                   pulumi.String("100m"),
+				"tracing.jaeger.resources.requests.memory":                pulumi.String("100Mi"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 RKE Cluster
+foo_custom_cluster = rancher2.Cluster("foo-customCluster",
+    description="Foo rancher2 custom cluster",
+    rke_config=rancher2.ClusterRkeConfigArgs(
+        network=rancher2.ClusterRkeConfigNetworkArgs(
+            plugin="canal",
+        ),
+    ),
+    enable_cluster_monitoring=True,
+    cluster_monitoring_input=rancher2.ClusterClusterMonitoringInputArgs(
+        answers={
+            "exporter-kubelets.https": True,
+            "exporter-node.enabled": True,
+            "exporter-node.ports.metrics.port": 9796,
+            "exporter-node.resources.limits.cpu": "200m",
+            "exporter-node.resources.limits.memory": "200Mi",
+            "grafana.persistence.enabled": False,
+            "grafana.persistence.size": "10Gi",
+            "grafana.persistence.storageClass": "default",
+            "operator.resources.limits.memory": "500Mi",
+            "prometheus.persistence.enabled": "false",
+            "prometheus.persistence.size": "50Gi",
+            "prometheus.persistence.storageClass": "default",
+            "prometheus.persistent.useReleaseName": "true",
+            "prometheus.resources.core.limits.cpu": "1000m",
+            "prometheus.resources.core.limits.memory": "1500Mi",
+            "prometheus.resources.core.requests.cpu": "750m",
+            "prometheus.resources.core.requests.memory": "750Mi",
+            "prometheus.retention": "12h",
+        },
+        version="0.1.0",
+    ))
+# Create a new rancher2 Cluster Sync for foo-custom cluster
+foo_custom_cluster_sync = rancher2.ClusterSync("foo-customClusterSync",
+    cluster_id=foo_custom_cluster.id,
+    wait_monitoring=foo_custom_cluster.enable_cluster_monitoring)
+# Create a new rancher2 Namespace
+foo_istio = rancher2.Namespace("foo-istio",
+    project_id=foo_custom_cluster_sync.system_project_id,
+    description="istio namespace")
+# Create a new rancher2 App deploying istio (should wait until monitoring is up and running)
+istio = rancher2.App("istio",
+    catalog_name="system-library",
+    description="Terraform app acceptance test",
+    project_id=foo_istio.project_id,
+    template_name="rancher-istio",
+    template_version="0.1.1",
+    target_namespace=foo_istio.id,
+    answers={
+        "certmanager.enabled": False,
+        "enableCRDs": True,
+        "galley.enabled": True,
+        "gateways.enabled": False,
+        "gateways.istio-ingressgateway.resources.limits.cpu": "2000m",
+        "gateways.istio-ingressgateway.resources.limits.memory": "1024Mi",
+        "gateways.istio-ingressgateway.resources.requests.cpu": "100m",
+        "gateways.istio-ingressgateway.resources.requests.memory": "128Mi",
+        "gateways.istio-ingressgateway.type": "NodePort",
+        "global.monitoring.type": "cluster-monitoring",
+        "global.rancher.clusterId": foo_custom_cluster_sync.cluster_id,
+        "istio_cni.enabled": "false",
+        "istiocoredns.enabled": "false",
+        "kiali.enabled": "true",
+        "mixer.enabled": "true",
+        "mixer.policy.enabled": "true",
+        "mixer.policy.resources.limits.cpu": "4800m",
+        "mixer.policy.resources.limits.memory": "4096Mi",
+        "mixer.policy.resources.requests.cpu": "1000m",
+        "mixer.policy.resources.requests.memory": "1024Mi",
+        "mixer.telemetry.resources.limits.cpu": "4800m",
+        "mixer.telemetry.resources.limits.memory": "4096Mi",
+        "mixer.telemetry.resources.requests.cpu": "1000m",
+        "mixer.telemetry.resources.requests.memory": "1024Mi",
+        "mtls.enabled": False,
+        "nodeagent.enabled": False,
+        "pilot.enabled": True,
+        "pilot.resources.limits.cpu": "1000m",
+        "pilot.resources.limits.memory": "4096Mi",
+        "pilot.resources.requests.cpu": "500m",
+        "pilot.resources.requests.memory": "2048Mi",
+        "pilot.traceSampling": "1",
+        "security.enabled": True,
+        "sidecarInjectorWebhook.enabled": True,
+        "tracing.enabled": True,
+        "tracing.jaeger.resources.limits.cpu": "500m",
+        "tracing.jaeger.resources.limits.memory": "1024Mi",
+        "tracing.jaeger.resources.requests.cpu": "100m",
+        "tracing.jaeger.resources.requests.memory": "100Mi",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 RKE Cluster
+const foo_customCluster = new rancher2.Cluster("foo-customCluster", {
+    description: "Foo rancher2 custom cluster",
+    rkeConfig: {
+        network: {
+            plugin: "canal",
+        },
+    },
+    enableClusterMonitoring: true,
+    clusterMonitoringInput: {
+        answers: {
+            "exporter-kubelets.https": true,
+            "exporter-node.enabled": true,
+            "exporter-node.ports.metrics.port": 9796,
+            "exporter-node.resources.limits.cpu": "200m",
+            "exporter-node.resources.limits.memory": "200Mi",
+            "grafana.persistence.enabled": false,
+            "grafana.persistence.size": "10Gi",
+            "grafana.persistence.storageClass": "default",
+            "operator.resources.limits.memory": "500Mi",
+            "prometheus.persistence.enabled": "false",
+            "prometheus.persistence.size": "50Gi",
+            "prometheus.persistence.storageClass": "default",
+            "prometheus.persistent.useReleaseName": "true",
+            "prometheus.resources.core.limits.cpu": "1000m",
+            "prometheus.resources.core.limits.memory": "1500Mi",
+            "prometheus.resources.core.requests.cpu": "750m",
+            "prometheus.resources.core.requests.memory": "750Mi",
+            "prometheus.retention": "12h",
+        },
+        version: "0.1.0",
+    },
+});
+// Create a new rancher2 Cluster Sync for foo-custom cluster
+const foo_customClusterSync = new rancher2.ClusterSync("foo-customClusterSync", {
+    clusterId: foo_customCluster.id,
+    waitMonitoring: foo_customCluster.enableClusterMonitoring,
+});
+// Create a new rancher2 Namespace
+const foo_istio = new rancher2.Namespace("foo-istio", {
+    projectId: foo_customClusterSync.systemProjectId,
+    description: "istio namespace",
+});
+// Create a new rancher2 App deploying istio (should wait until monitoring is up and running)
+const istio = new rancher2.App("istio", {
+    catalogName: "system-library",
+    description: "Terraform app acceptance test",
+    projectId: foo_istio.projectId,
+    templateName: "rancher-istio",
+    templateVersion: "0.1.1",
+    targetNamespace: foo_istio.id,
+    answers: {
+        "certmanager.enabled": false,
+        enableCRDs: true,
+        "galley.enabled": true,
+        "gateways.enabled": false,
+        "gateways.istio-ingressgateway.resources.limits.cpu": "2000m",
+        "gateways.istio-ingressgateway.resources.limits.memory": "1024Mi",
+        "gateways.istio-ingressgateway.resources.requests.cpu": "100m",
+        "gateways.istio-ingressgateway.resources.requests.memory": "128Mi",
+        "gateways.istio-ingressgateway.type": "NodePort",
+        "global.monitoring.type": "cluster-monitoring",
+        "global.rancher.clusterId": foo_customClusterSync.clusterId,
+        "istio_cni.enabled": "false",
+        "istiocoredns.enabled": "false",
+        "kiali.enabled": "true",
+        "mixer.enabled": "true",
+        "mixer.policy.enabled": "true",
+        "mixer.policy.resources.limits.cpu": "4800m",
+        "mixer.policy.resources.limits.memory": "4096Mi",
+        "mixer.policy.resources.requests.cpu": "1000m",
+        "mixer.policy.resources.requests.memory": "1024Mi",
+        "mixer.telemetry.resources.limits.cpu": "4800m",
+        "mixer.telemetry.resources.limits.memory": "4096Mi",
+        "mixer.telemetry.resources.requests.cpu": "1000m",
+        "mixer.telemetry.resources.requests.memory": "1024Mi",
+        "mtls.enabled": false,
+        "nodeagent.enabled": false,
+        "pilot.enabled": true,
+        "pilot.resources.limits.cpu": "1000m",
+        "pilot.resources.limits.memory": "4096Mi",
+        "pilot.resources.requests.cpu": "500m",
+        "pilot.resources.requests.memory": "2048Mi",
+        "pilot.traceSampling": "1",
+        "security.enabled": true,
+        "sidecarInjectorWebhook.enabled": true,
+        "tracing.enabled": true,
+        "tracing.jaeger.resources.limits.cpu": "500m",
+        "tracing.jaeger.resources.limits.memory": "1024Mi",
+        "tracing.jaeger.resources.requests.cpu": "100m",
+        "tracing.jaeger.resources.requests.memory": "100Mi",
+    },
+});
+```
+
+{{% /example %}}
+
+### Creating Rancher v2 RKE cluster assigning a node pool (overlapped planes)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new rancher2 RKE Cluster
+        var foo_custom = new Rancher2.Cluster("foo-custom", new Rancher2.ClusterArgs
+        {
+            Description = "Foo rancher2 custom cluster",
+            RkeConfig = new Rancher2.Inputs.ClusterRkeConfigArgs
+            {
+                Network = new Rancher2.Inputs.ClusterRkeConfigNetworkArgs
+                {
+                    Plugin = "canal",
+                },
+            },
+        });
+        // Create a new rancher2 Node Template
+        var fooNodeTemplate = new Rancher2.NodeTemplate("fooNodeTemplate", new Rancher2.NodeTemplateArgs
+        {
+            Description = "foo test",
+            Amazonec2Config = new Rancher2.Inputs.NodeTemplateAmazonec2ConfigArgs
+            {
+                AccessKey = "<AWS_ACCESS_KEY>",
+                SecretKey = "<AWS_SECRET_KEY>",
+                Ami = "<AMI_ID>",
+                Region = "<REGION>",
+                SecurityGroups = 
+                {
+                    "<AWS_SECURITY_GROUP>",
+                },
+                SubnetId = "<SUBNET_ID>",
+                VpcId = "<VPC_ID>",
+                Zone = "<ZONE>",
+            },
+        });
+        // Create a new rancher2 Node Pool
+        var fooNodePool = new Rancher2.NodePool("fooNodePool", new Rancher2.NodePoolArgs
+        {
+            ClusterId = foo_custom.Id,
+            HostnamePrefix = "foo-cluster-0",
+            NodeTemplateId = fooNodeTemplate.Id,
+            Quantity = 3,
+            ControlPlane = true,
+            Etcd = true,
+            Worker = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewCluster(ctx, "foo_custom", &rancher2.ClusterArgs{
+			Description: pulumi.String("Foo rancher2 custom cluster"),
+			RkeConfig: &rancher2.ClusterRkeConfigArgs{
+				Network: &rancher2.ClusterRkeConfigNetworkArgs{
+					Plugin: pulumi.String("canal"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		fooNodeTemplate, err := rancher2.NewNodeTemplate(ctx, "fooNodeTemplate", &rancher2.NodeTemplateArgs{
+			Description: pulumi.String("foo test"),
+			Amazonec2Config: &rancher2.NodeTemplateAmazonec2ConfigArgs{
+				AccessKey: pulumi.String("<AWS_ACCESS_KEY>"),
+				SecretKey: pulumi.String("<AWS_SECRET_KEY>"),
+				Ami:       pulumi.String("<AMI_ID>"),
+				Region:    pulumi.String("<REGION>"),
+				SecurityGroups: pulumi.StringArray{
+					pulumi.String("<AWS_SECURITY_GROUP>"),
+				},
+				SubnetId: pulumi.String("<SUBNET_ID>"),
+				VpcId:    pulumi.String("<VPC_ID>"),
+				Zone:     pulumi.String("<ZONE>"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewNodePool(ctx, "fooNodePool", &rancher2.NodePoolArgs{
+			ClusterId:      foo_custom.ID(),
+			HostnamePrefix: pulumi.String("foo-cluster-0"),
+			NodeTemplateId: fooNodeTemplate.ID(),
+			Quantity:       pulumi.Int(3),
+			ControlPlane:   pulumi.Bool(true),
+			Etcd:           pulumi.Bool(true),
+			Worker:         pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 RKE Cluster
+foo_custom = rancher2.Cluster("foo-custom",
+    description="Foo rancher2 custom cluster",
+    rke_config=rancher2.ClusterRkeConfigArgs(
+        network=rancher2.ClusterRkeConfigNetworkArgs(
+            plugin="canal",
+        ),
+    ))
+# Create a new rancher2 Node Template
+foo_node_template = rancher2.NodeTemplate("fooNodeTemplate",
+    description="foo test",
+    amazonec2_config=rancher2.NodeTemplateAmazonec2ConfigArgs(
+        access_key="<AWS_ACCESS_KEY>",
+        secret_key="<AWS_SECRET_KEY>",
+        ami="<AMI_ID>",
+        region="<REGION>",
+        security_groups=["<AWS_SECURITY_GROUP>"],
+        subnet_id="<SUBNET_ID>",
+        vpc_id="<VPC_ID>",
+        zone="<ZONE>",
+    ))
+# Create a new rancher2 Node Pool
+foo_node_pool = rancher2.NodePool("fooNodePool",
+    cluster_id=foo_custom.id,
+    hostname_prefix="foo-cluster-0",
+    node_template_id=foo_node_template.id,
+    quantity=3,
+    control_plane=True,
+    etcd=True,
+    worker=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 RKE Cluster
+const foo_custom = new rancher2.Cluster("foo-custom", {
+    description: "Foo rancher2 custom cluster",
+    rkeConfig: {
+        network: {
+            plugin: "canal",
+        },
+    },
+});
+// Create a new rancher2 Node Template
+const fooNodeTemplate = new rancher2.NodeTemplate("fooNodeTemplate", {
+    description: "foo test",
+    amazonec2Config: {
+        accessKey: "<AWS_ACCESS_KEY>",
+        secretKey: "<AWS_SECRET_KEY>",
+        ami: "<AMI_ID>",
+        region: "<REGION>",
+        securityGroups: ["<AWS_SECURITY_GROUP>"],
+        subnetId: "<SUBNET_ID>",
+        vpcId: "<VPC_ID>",
+        zone: "<ZONE>",
+    },
+});
+// Create a new rancher2 Node Pool
+const fooNodePool = new rancher2.NodePool("fooNodePool", {
+    clusterId: foo_custom.id,
+    hostnamePrefix: "foo-cluster-0",
+    nodeTemplateId: fooNodeTemplate.id,
+    quantity: 3,
+    controlPlane: true,
+    etcd: true,
+    worker: true,
+});
+```
+
+{{% /example %}}
+
+### Creating Rancher v2 RKE cluster from template. For Rancher v2.3.x or above.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new rancher2 cluster template
+        var fooClusterTemplate = new Rancher2.ClusterTemplate("fooClusterTemplate", new Rancher2.ClusterTemplateArgs
+        {
+            Members = 
+            {
+                new Rancher2.Inputs.ClusterTemplateMemberArgs
+                {
+                    AccessType = "owner",
+                    UserPrincipalId = "local://user-XXXXX",
+                },
+            },
+            TemplateRevisions = 
+            {
+                new Rancher2.Inputs.ClusterTemplateTemplateRevisionArgs
+                {
+                    Name = "V1",
+                    ClusterConfig = new Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigArgs
+                    {
+                        RkeConfig = new Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigArgs
+                        {
+                            Network = new Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkArgs
+                            {
+                                Plugin = "canal",
+                            },
+                            Services = new Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesArgs
+                            {
+                                Etcd = new Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdArgs
+                                {
+                                    Creation = "6h",
+                                    Retention = "24h",
+                                },
+                            },
+                        },
+                    },
+                    Default = true,
+                },
+            },
+            Description = "Test cluster template v2",
+        });
+        // Create a new rancher2 RKE Cluster from template
+        var fooCluster = new Rancher2.Cluster("fooCluster", new Rancher2.ClusterArgs
+        {
+            ClusterTemplateId = fooClusterTemplate.Id,
+            ClusterTemplateRevisionId = fooClusterTemplate.TemplateRevisions.Apply(templateRevisions => templateRevisions[0].Id),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooClusterTemplate, err := rancher2.NewClusterTemplate(ctx, "fooClusterTemplate", &rancher2.ClusterTemplateArgs{
+			Members: rancher2.ClusterTemplateMemberArray{
+				&rancher2.ClusterTemplateMemberArgs{
+					AccessType:      pulumi.String("owner"),
+					UserPrincipalId: pulumi.String("local://user-XXXXX"),
+				},
+			},
+			TemplateRevisions: rancher2.ClusterTemplateTemplateRevisionArray{
+				&rancher2.ClusterTemplateTemplateRevisionArgs{
+					Name: pulumi.String("V1"),
+					ClusterConfig: &rancher2.ClusterTemplateTemplateRevisionClusterConfigArgs{
+						RkeConfig: &rancher2.ClusterTemplateTemplateRevisionClusterConfigRkeConfigArgs{
+							Network: &rancher2.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkArgs{
+								Plugin: pulumi.String("canal"),
+							},
+							Services: &rancher2.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesArgs{
+								Etcd: &rancher2.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdArgs{
+									Creation:  pulumi.String("6h"),
+									Retention: pulumi.String("24h"),
+								},
+							},
+						},
+					},
+					Default: pulumi.Bool(true),
+				},
+			},
+			Description: pulumi.String("Test cluster template v2"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewCluster(ctx, "fooCluster", &rancher2.ClusterArgs{
+			ClusterTemplateId: fooClusterTemplate.ID(),
+			ClusterTemplateRevisionId: fooClusterTemplate.TemplateRevisions.ApplyT(func(templateRevisions []rancher2.ClusterTemplateTemplateRevision) (string, error) {
+				return templateRevisions[0].Id, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+# Create a new rancher2 cluster template
+foo_cluster_template = rancher2.ClusterTemplate("fooClusterTemplate",
+    members=[rancher2.ClusterTemplateMemberArgs(
+        access_type="owner",
+        user_principal_id="local://user-XXXXX",
+    )],
+    template_revisions=[rancher2.ClusterTemplateTemplateRevisionArgs(
+        name="V1",
+        cluster_config=rancher2.ClusterTemplateTemplateRevisionClusterConfigArgs(
+            rke_config={
+                "network": {
+                    "plugin": "canal",
+                },
+                "services": {
+                    "etcd": {
+                        "creation": "6h",
+                        "retention": "24h",
+                    },
+                },
+            },
+        ),
+        default=True,
+    )],
+    description="Test cluster template v2")
+# Create a new rancher2 RKE Cluster from template
+foo_cluster = rancher2.Cluster("fooCluster",
+    cluster_template_id=foo_cluster_template.id,
+    cluster_template_revision_id=foo_cluster_template.template_revisions[0].id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 cluster template
+const fooClusterTemplate = new rancher2.ClusterTemplate("fooClusterTemplate", {
+    members: [{
+        accessType: "owner",
+        userPrincipalId: "local://user-XXXXX",
+    }],
+    templateRevisions: [{
+        name: "V1",
+        clusterConfig: {
+            rkeConfig: {
+                network: {
+                    plugin: "canal",
+                },
+                services: {
+                    etcd: {
+                        creation: "6h",
+                        retention: "24h",
+                    },
+                },
+            },
+        },
+        "default": true,
+    }],
+    description: "Test cluster template v2",
+});
+// Create a new rancher2 RKE Cluster from template
+const fooCluster = new rancher2.Cluster("fooCluster", {
+    clusterTemplateId: fooClusterTemplate.id,
+    clusterTemplateRevisionId: fooClusterTemplate.templateRevisions.apply(templateRevisions => templateRevisions[0].id),
+});
+```
+
+{{% /example %}}
+
+### Creating Rancher v2 RKE cluster with upgrade strategy. For Rancher v2.4.x or above.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Rancher2.Cluster("foo", new Rancher2.ClusterArgs
+        {
+            Description = "Terraform custom cluster",
+            RkeConfig = new Rancher2.Inputs.ClusterRkeConfigArgs
+            {
+                Network = new Rancher2.Inputs.ClusterRkeConfigNetworkArgs
+                {
+                    Plugin = "canal",
+                },
+                Services = new Rancher2.Inputs.ClusterRkeConfigServicesArgs
+                {
+                    Etcd = new Rancher2.Inputs.ClusterRkeConfigServicesEtcdArgs
+                    {
+                        Creation = "6h",
+                        Retention = "24h",
+                    },
+                    KubeApi = new Rancher2.Inputs.ClusterRkeConfigServicesKubeApiArgs
+                    {
+                        AuditLog = new Rancher2.Inputs.ClusterRkeConfigServicesKubeApiAuditLogArgs
+                        {
+                            Configuration = new Rancher2.Inputs.ClusterRkeConfigServicesKubeApiAuditLogConfigurationArgs
+                            {
+                                Format = "json",
+                                MaxAge = 5,
+                                MaxBackup = 5,
+                                MaxSize = 100,
+                                Path = "-",
+                                Policy = @"apiVersion: audit.k8s.io/v1
+kind: Policy
+metadata:
+  creationTimestamp: null
+omitStages:
+- RequestReceived
+rules:
+- level: RequestResponse
+  resources:
+  - resources:
+    - pods
+
+",
+                            },
+                            Enabled = true,
+                        },
+                    },
+                },
+                UpgradeStrategy = new Rancher2.Inputs.ClusterRkeConfigUpgradeStrategyArgs
+                {
+                    Drain = true,
+                    MaxUnavailableWorker = "20%",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewCluster(ctx, "foo", &rancher2.ClusterArgs{
+			Description: pulumi.String("Terraform custom cluster"),
+			RkeConfig: &rancher2.ClusterRkeConfigArgs{
+				Network: &rancher2.ClusterRkeConfigNetworkArgs{
+					Plugin: pulumi.String("canal"),
+				},
+				Services: &rancher2.ClusterRkeConfigServicesArgs{
+					Etcd: &rancher2.ClusterRkeConfigServicesEtcdArgs{
+						Creation:  pulumi.String("6h"),
+						Retention: pulumi.String("24h"),
+					},
+					KubeApi: &rancher2.ClusterRkeConfigServicesKubeApiArgs{
+						AuditLog: &rancher2.ClusterRkeConfigServicesKubeApiAuditLogArgs{
+							Configuration: &rancher2.ClusterRkeConfigServicesKubeApiAuditLogConfigurationArgs{
+								Format:    pulumi.String("json"),
+								MaxAge:    pulumi.Int(5),
+								MaxBackup: pulumi.Int(5),
+								MaxSize:   pulumi.Int(100),
+								Path:      pulumi.String("-"),
+								Policy:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "apiVersion: audit.k8s.io/v1\n", "kind: Policy\n", "metadata:\n", "  creationTimestamp: null\n", "omitStages:\n", "- RequestReceived\n", "rules:\n", "- level: RequestResponse\n", "  resources:\n", "  - resources:\n", "    - pods\n", "\n")),
+							},
+							Enabled: pulumi.Bool(true),
+						},
+					},
+				},
+				UpgradeStrategy: &rancher2.ClusterRkeConfigUpgradeStrategyArgs{
+					Drain:                pulumi.Bool(true),
+					MaxUnavailableWorker: pulumi.String(fmt.Sprintf("%v%v", "20", "%")),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo = rancher2.Cluster("foo",
+    description="Terraform custom cluster",
+    rke_config=rancher2.ClusterRkeConfigArgs(
+        network=rancher2.ClusterRkeConfigNetworkArgs(
+            plugin="canal",
+        ),
+        services=rancher2.ClusterRkeConfigServicesArgs(
+            etcd=rancher2.ClusterRkeConfigServicesEtcdArgs(
+                creation="6h",
+                retention="24h",
+            ),
+            kube_api=rancher2.ClusterRkeConfigServicesKubeApiArgs(
+                audit_log=rancher2.ClusterRkeConfigServicesKubeApiAuditLogArgs(
+                    configuration=rancher2.ClusterRkeConfigServicesKubeApiAuditLogConfigurationArgs(
+                        format="json",
+                        max_age=5,
+                        max_backup=5,
+                        max_size=100,
+                        path="-",
+                        policy="""apiVersion: audit.k8s.io/v1
+kind: Policy
+metadata:
+  creationTimestamp: null
+omitStages:
+- RequestReceived
+rules:
+- level: RequestResponse
+  resources:
+  - resources:
+    - pods
+
+""",
+                    ),
+                    enabled=True,
+                ),
+            ),
+        ),
+        upgrade_strategy={
+            "drain": True,
+            "maxUnavailableWorker": "20%",
+        },
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const foo = new rancher2.Cluster("foo", {
+    description: "Terraform custom cluster",
+    rkeConfig: {
+        network: {
+            plugin: "canal",
+        },
+        services: {
+            etcd: {
+                creation: "6h",
+                retention: "24h",
+            },
+            kubeApi: {
+                auditLog: {
+                    configuration: {
+                        format: "json",
+                        maxAge: 5,
+                        maxBackup: 5,
+                        maxSize: 100,
+                        path: "-",
+                        policy: `apiVersion: audit.k8s.io/v1
+kind: Policy
+metadata:
+  creationTimestamp: null
+omitStages:
+- RequestReceived
+rules:
+- level: RequestResponse
+  resources:
+  - resources:
+    - pods
+`,
+                    },
+                    enabled: true,
+                },
+            },
+        },
+        upgradeStrategy: {
+            drain: true,
+            maxUnavailableWorker: "20%",
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Creating Rancher v2 RKE cluster with scheduled cluster scan. For Rancher v2.4.x or above.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Rancher2.Cluster("foo", new Rancher2.ClusterArgs
+        {
+            Description = "Terraform custom cluster",
+            RkeConfig = new Rancher2.Inputs.ClusterRkeConfigArgs
+            {
+                Network = new Rancher2.Inputs.ClusterRkeConfigNetworkArgs
+                {
+                    Plugin = "canal",
+                },
+                Services = new Rancher2.Inputs.ClusterRkeConfigServicesArgs
+                {
+                    Etcd = new Rancher2.Inputs.ClusterRkeConfigServicesEtcdArgs
+                    {
+                        Creation = "6h",
+                        Retention = "24h",
+                    },
+                },
+            },
+            ScheduledClusterScan = new Rancher2.Inputs.ClusterScheduledClusterScanArgs
+            {
+                Enabled = true,
+                ScanConfig = new Rancher2.Inputs.ClusterScheduledClusterScanScanConfigArgs
+                {
+                    CisScanConfig = new Rancher2.Inputs.ClusterScheduledClusterScanScanConfigCisScanConfigArgs
+                    {
+                        DebugMaster = true,
+                        DebugWorker = true,
+                    },
+                },
+                ScheduleConfig = new Rancher2.Inputs.ClusterScheduledClusterScanScheduleConfigArgs
+                {
+                    CronSchedule = "30 * * * *",
+                    Retention = 5,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewCluster(ctx, "foo", &rancher2.ClusterArgs{
+			Description: pulumi.String("Terraform custom cluster"),
+			RkeConfig: &rancher2.ClusterRkeConfigArgs{
+				Network: &rancher2.ClusterRkeConfigNetworkArgs{
+					Plugin: pulumi.String("canal"),
+				},
+				Services: &rancher2.ClusterRkeConfigServicesArgs{
+					Etcd: &rancher2.ClusterRkeConfigServicesEtcdArgs{
+						Creation:  pulumi.String("6h"),
+						Retention: pulumi.String("24h"),
+					},
+				},
+			},
+			ScheduledClusterScan: &rancher2.ClusterScheduledClusterScanArgs{
+				Enabled: pulumi.Bool(true),
+				ScanConfig: &rancher2.ClusterScheduledClusterScanScanConfigArgs{
+					CisScanConfig: &rancher2.ClusterScheduledClusterScanScanConfigCisScanConfigArgs{
+						DebugMaster: pulumi.Bool(true),
+						DebugWorker: pulumi.Bool(true),
+					},
+				},
+				ScheduleConfig: &rancher2.ClusterScheduledClusterScanScheduleConfigArgs{
+					CronSchedule: pulumi.String("30 * * * *"),
+					Retention:    pulumi.Int(5),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo = rancher2.Cluster("foo",
+    description="Terraform custom cluster",
+    rke_config=rancher2.ClusterRkeConfigArgs(
+        network=rancher2.ClusterRkeConfigNetworkArgs(
+            plugin="canal",
+        ),
+        services=rancher2.ClusterRkeConfigServicesArgs(
+            etcd=rancher2.ClusterRkeConfigServicesEtcdArgs(
+                creation="6h",
+                retention="24h",
+            ),
+        ),
+    ),
+    scheduled_cluster_scan=rancher2.ClusterScheduledClusterScanArgs(
+        enabled=True,
+        scan_config=rancher2.ClusterScheduledClusterScanScanConfigArgs(
+            cis_scan_config=rancher2.ClusterScheduledClusterScanScanConfigCisScanConfigArgs(
+                debug_master=True,
+                debug_worker=True,
+            ),
+        ),
+        schedule_config=rancher2.ClusterScheduledClusterScanScheduleConfigArgs(
+            cron_schedule="30 * * * *",
+            retention=5,
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const foo = new rancher2.Cluster("foo", {
+    description: "Terraform custom cluster",
+    rkeConfig: {
+        network: {
+            plugin: "canal",
+        },
+        services: {
+            etcd: {
+                creation: "6h",
+                retention: "24h",
+            },
+        },
+    },
+    scheduledClusterScan: {
+        enabled: true,
+        scanConfig: {
+            cisScanConfig: {
+                debugMaster: true,
+                debugWorker: true,
+            },
+        },
+        scheduleConfig: {
+            cronSchedule: "30 * * * *",
+            retention: 5,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Importing EKS cluster to Rancher v2, using `eks_config_v2`. For Rancher v2.5.x or above.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooCloudCredential = new Rancher2.CloudCredential("fooCloudCredential", new Rancher2.CloudCredentialArgs
+        {
+            Description = "foo test",
+            Amazonec2CredentialConfig = new Rancher2.Inputs.CloudCredentialAmazonec2CredentialConfigArgs
+            {
+                AccessKey = "<AWS_ACCESS_KEY>",
+                SecretKey = "<AWS_SECRET_KEY>",
+            },
+        });
+        var fooCluster = new Rancher2.Cluster("fooCluster", new Rancher2.ClusterArgs
+        {
+            Description = "Terraform EKS cluster",
+            EksConfigV2 = new Rancher2.Inputs.ClusterEksConfigV2Args
+            {
+                CloudCredentialId = fooCloudCredential.Id,
+                Name = "<CLUSTER_NAME>",
+                Region = "<EKS_REGION>",
+                Imported = true,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooCloudCredential, err := rancher2.NewCloudCredential(ctx, "fooCloudCredential", &rancher2.CloudCredentialArgs{
+			Description: pulumi.String("foo test"),
+			Amazonec2CredentialConfig: &rancher2.CloudCredentialAmazonec2CredentialConfigArgs{
+				AccessKey: pulumi.String("<AWS_ACCESS_KEY>"),
+				SecretKey: pulumi.String("<AWS_SECRET_KEY>"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewCluster(ctx, "fooCluster", &rancher2.ClusterArgs{
+			Description: pulumi.String("Terraform EKS cluster"),
+			EksConfigV2: &rancher2.ClusterEksConfigV2Args{
+				CloudCredentialId: fooCloudCredential.ID(),
+				Name:              pulumi.String("<CLUSTER_NAME>"),
+				Region:            pulumi.String("<EKS_REGION>"),
+				Imported:          pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo_cloud_credential = rancher2.CloudCredential("fooCloudCredential",
+    description="foo test",
+    amazonec2_credential_config=rancher2.CloudCredentialAmazonec2CredentialConfigArgs(
+        access_key="<AWS_ACCESS_KEY>",
+        secret_key="<AWS_SECRET_KEY>",
+    ))
+foo_cluster = rancher2.Cluster("fooCluster",
+    description="Terraform EKS cluster",
+    eks_config_v2=rancher2.ClusterEksConfigV2Args(
+        cloud_credential_id=foo_cloud_credential.id,
+        name="<CLUSTER_NAME>",
+        region="<EKS_REGION>",
+        imported=True,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const fooCloudCredential = new rancher2.CloudCredential("fooCloudCredential", {
+    description: "foo test",
+    amazonec2CredentialConfig: {
+        accessKey: "<AWS_ACCESS_KEY>",
+        secretKey: "<AWS_SECRET_KEY>",
+    },
+});
+const fooCluster = new rancher2.Cluster("fooCluster", {
+    description: "Terraform EKS cluster",
+    eksConfigV2: {
+        cloudCredentialId: fooCloudCredential.id,
+        name: "<CLUSTER_NAME>",
+        region: "<EKS_REGION>",
+        imported: true,
+    },
+});
+```
+
+{{% /example %}}
+
+### Creating EKS cluster from Rancher v2, using `eks_config_v2`. For Rancher v2.5.x or above.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooCloudCredential = new Rancher2.CloudCredential("fooCloudCredential", new Rancher2.CloudCredentialArgs
+        {
+            Description = "foo test",
+            Amazonec2CredentialConfig = new Rancher2.Inputs.CloudCredentialAmazonec2CredentialConfigArgs
+            {
+                AccessKey = "<AWS_ACCESS_KEY>",
+                SecretKey = "<AWS_SECRET_KEY>",
+            },
+        });
+        var fooCluster = new Rancher2.Cluster("fooCluster", new Rancher2.ClusterArgs
+        {
+            Description = "Terraform EKS cluster",
+            EksConfigV2 = new Rancher2.Inputs.ClusterEksConfigV2Args
+            {
+                CloudCredentialId = fooCloudCredential.Id,
+                Region = "<EKS_REGION>",
+                KubernetesVersion = "1.17",
+                LoggingTypes = 
+                {
+                    "audit",
+                    "api",
+                },
+                NodeGroups = 
+                {
+                    new Rancher2.Inputs.ClusterEksConfigV2NodeGroupArgs
+                    {
+                        Name = "node_group1",
+                        InstanceType = "t3.medium",
+                        DesiredSize = 3,
+                        MaxSize = 5,
+                    },
+                    new Rancher2.Inputs.ClusterEksConfigV2NodeGroupArgs
+                    {
+                        Name = "node_group2",
+                        InstanceType = "m5.xlarge",
+                        DesiredSize = 2,
+                        MaxSize = 3,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooCloudCredential, err := rancher2.NewCloudCredential(ctx, "fooCloudCredential", &rancher2.CloudCredentialArgs{
+			Description: pulumi.String("foo test"),
+			Amazonec2CredentialConfig: &rancher2.CloudCredentialAmazonec2CredentialConfigArgs{
+				AccessKey: pulumi.String("<AWS_ACCESS_KEY>"),
+				SecretKey: pulumi.String("<AWS_SECRET_KEY>"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewCluster(ctx, "fooCluster", &rancher2.ClusterArgs{
+			Description: pulumi.String("Terraform EKS cluster"),
+			EksConfigV2: &rancher2.ClusterEksConfigV2Args{
+				CloudCredentialId: fooCloudCredential.ID(),
+				Region:            pulumi.String("<EKS_REGION>"),
+				KubernetesVersion: pulumi.String("1.17"),
+				LoggingTypes: pulumi.StringArray{
+					pulumi.String("audit"),
+					pulumi.String("api"),
+				},
+				NodeGroups: rancher2.ClusterEksConfigV2NodeGroupArray{
+					&rancher2.ClusterEksConfigV2NodeGroupArgs{
+						Name:         pulumi.String("node_group1"),
+						InstanceType: pulumi.String("t3.medium"),
+						DesiredSize:  pulumi.Int(3),
+						MaxSize:      pulumi.Int(5),
+					},
+					&rancher2.ClusterEksConfigV2NodeGroupArgs{
+						Name:         pulumi.String("node_group2"),
+						InstanceType: pulumi.String("m5.xlarge"),
+						DesiredSize:  pulumi.Int(2),
+						MaxSize:      pulumi.Int(3),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo_cloud_credential = rancher2.CloudCredential("fooCloudCredential",
+    description="foo test",
+    amazonec2_credential_config=rancher2.CloudCredentialAmazonec2CredentialConfigArgs(
+        access_key="<AWS_ACCESS_KEY>",
+        secret_key="<AWS_SECRET_KEY>",
+    ))
+foo_cluster = rancher2.Cluster("fooCluster",
+    description="Terraform EKS cluster",
+    eks_config_v2=rancher2.ClusterEksConfigV2Args(
+        cloud_credential_id=foo_cloud_credential.id,
+        region="<EKS_REGION>",
+        kubernetes_version="1.17",
+        logging_types=[
+            "audit",
+            "api",
+        ],
+        node_groups=[
+            rancher2.ClusterEksConfigV2NodeGroupArgs(
+                name="node_group1",
+                instance_type="t3.medium",
+                desired_size=3,
+                max_size=5,
+            ),
+            rancher2.ClusterEksConfigV2NodeGroupArgs(
+                name="node_group2",
+                instance_type="m5.xlarge",
+                desired_size=2,
+                max_size=3,
+            ),
+        ],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const fooCloudCredential = new rancher2.CloudCredential("fooCloudCredential", {
+    description: "foo test",
+    amazonec2CredentialConfig: {
+        accessKey: "<AWS_ACCESS_KEY>",
+        secretKey: "<AWS_SECRET_KEY>",
+    },
+});
+const fooCluster = new rancher2.Cluster("fooCluster", {
+    description: "Terraform EKS cluster",
+    eksConfigV2: {
+        cloudCredentialId: fooCloudCredential.id,
+        region: "<EKS_REGION>",
+        kubernetesVersion: "1.17",
+        loggingTypes: [
+            "audit",
+            "api",
+        ],
+        nodeGroups: [
+            {
+                name: "node_group1",
+                instanceType: "t3.medium",
+                desiredSize: 3,
+                maxSize: 5,
+            },
+            {
+                name: "node_group2",
+                instanceType: "m5.xlarge",
+                desiredSize: 2,
+                maxSize: 3,
+            },
+        ],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Create a Cluster Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
@@ -23,7 +1780,7 @@ Provides a Rancher v2 Cluster resource. This can be used to create Clusters for 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">eks_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigV2Args]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -203,7 +1960,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -357,7 +2114,18 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eksconfigv2_csharp">
+<a href="#eksconfigv2_csharp" style="color: inherit; text-decoration: inherit;">Eks<wbr>Config<wbr>V2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -496,7 +2264,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +2418,18 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eksconfigv2_go">
+<a href="#eksconfigv2_go" style="color: inherit; text-decoration: inherit;">Eks<wbr>Config<wbr>V2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -789,7 +2568,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -943,7 +2722,18 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eksconfigv2_nodejs">
+<a href="#eksconfigv2_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Config<wbr>V2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1082,7 +2872,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,7 +3026,18 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eks_config_v2_python">
+<a href="#eks_config_v2_python" style="color: inherit; text-decoration: inherit;">eks_<wbr>config_<wbr>v2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1767,7 +3568,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_registration_token</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterRegistrationTokenArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_istio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">istio_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAksConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_auth_endpoint</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAuthEndpointArgs]</span> = None<span class="p">, </span><span class="nx">cluster_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">cluster_registration_token</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterRegistrationTokenArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_answers</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTemplateAnswersArgs]</span> = None<span class="p">, </span><span class="nx">cluster_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_template_questions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClusterTemplateQuestionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_template_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_agent_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_auth_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_root_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigArgs]</span> = None<span class="p">, </span><span class="nx">eks_config_v2</span><span class="p">:</span> <span class="nx">Optional[ClusterEksConfigV2Args]</span> = None<span class="p">, </span><span class="nx">enable_cluster_alerting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_istio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cluster_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_network_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterGkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">istio_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">k3s_config</span><span class="p">:</span> <span class="nx">Optional[ClusterK3sConfigArgs]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterOkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">rke_config</span><span class="p">:</span> <span class="nx">Optional[ClusterRkeConfigArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_cluster_scan</span><span class="p">:</span> <span class="nx">Optional[ClusterScheduledClusterScanArgs]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_prefered_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1889,7 +3690,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2076,7 +3877,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eksconfigv2_csharp">
+<a href="#state_eksconfigv2_csharp" style="color: inherit; text-decoration: inherit;">Eks<wbr>Config<wbr>V2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2259,7 +4071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2446,7 +4258,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eksconfigv2_go">
+<a href="#state_eksconfigv2_go" style="color: inherit; text-decoration: inherit;">Eks<wbr>Config<wbr>V2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2629,7 +4452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2816,7 +4639,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eksconfigv2_nodejs">
+<a href="#state_eksconfigv2_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Config<wbr>V2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2999,7 +4833,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraksconfig">Cluster<wbr>Aks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3186,7 +5020,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustereksconfig">Cluster<wbr>Eks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_import`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+    <dd>{{% md %}}The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `eks_config_v2`, `gke_config`, `oke_config` `k3s_config` and `rke_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eks_config_v2_python">
+<a href="#state_eks_config_v2_python" style="color: inherit; text-decoration: inherit;">eks_<wbr>config_<wbr>v2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon EKS configuration to create or import `eks` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config`, `oke_config` `k3s_config` and `rke_config`. For Rancher v2.5.x or above (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6387,7 +8232,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of machine to use for worker nodes. Default `t2.medium` (string)
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6453,7 +8298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of security groups to use for the cluster. If it's not specified Rancher will create a new security group (list)
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6464,7 +8309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service role to use to perform the cluster operations in AWS. If it's not specified Rancher will create a new service role (string)
+    <dd>{{% md %}}The AWS service role to use (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6486,7 +8331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use. If it's not specified Rancher will create 3 news subnets (list)
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6602,7 +8447,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of machine to use for worker nodes. Default `t2.medium` (string)
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6668,7 +8513,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of security groups to use for the cluster. If it's not specified Rancher will create a new security group (list)
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6679,7 +8524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service role to use to perform the cluster operations in AWS. If it's not specified Rancher will create a new service role (string)
+    <dd>{{% md %}}The AWS service role to use (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6701,7 +8546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use. If it's not specified Rancher will create 3 news subnets (list)
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6817,7 +8662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of machine to use for worker nodes. Default `t2.medium` (string)
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6883,7 +8728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of security groups to use for the cluster. If it's not specified Rancher will create a new security group (list)
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6894,7 +8739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service role to use to perform the cluster operations in AWS. If it's not specified Rancher will create a new service role (string)
+    <dd>{{% md %}}The AWS service role to use (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6916,7 +8761,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use. If it's not specified Rancher will create 3 news subnets (list)
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7032,7 +8877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of machine to use for worker nodes. Default `t2.medium` (string)
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7098,7 +8943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of security groups to use for the cluster. If it's not specified Rancher will create a new security group (list)
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7109,7 +8954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service role to use to perform the cluster operations in AWS. If it's not specified Rancher will create a new service role (string)
+    <dd>{{% md %}}The AWS service role to use (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7131,7 +8976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use. If it's not specified Rancher will create 3 news subnets (list)
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7154,6 +8999,1242 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network to use. If it's not specified Rancher will create a new VPC (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustereksconfigv2">Cluster<wbr>Eks<wbr>Config<wbr>V2</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterEksConfigV2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterEksConfigV2">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterEksConfigV2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterEksConfigV2Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterEksConfigV2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterEksConfigV2.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cloudcredentialid_csharp">
+<a href="#cloudcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cloud_credential id (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imported_csharp">
+<a href="#imported_csharp" style="color: inherit; text-decoration: inherit;">Imported</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_csharp">
+<a href="#kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS kms key to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_csharp">
+<a href="#kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingtypes_csharp">
+<a href="#loggingtypes_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS cloudwatch logging types. `audit`, `api`, `scheduler`, `controllerManager` and `authenticator` values are allowed (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodegroups_csharp">
+<a href="#nodegroups_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegroup">List&lt;Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster name to import. Required to create a new cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateaccess_csharp">
+<a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicaccess_csharp">
+<a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicaccesssources_csharp">
+<a href="#publicaccesssources_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster public access sources (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretsencryption_csharp">
+<a href="#secretsencryption_csharp" style="color: inherit; text-decoration: inherit;">Secrets<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_csharp">
+<a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicerole_csharp">
+<a href="#servicerole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS service role to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_csharp">
+<a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cloudcredentialid_go">
+<a href="#cloudcredentialid_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cloud_credential id (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imported_go">
+<a href="#imported_go" style="color: inherit; text-decoration: inherit;">Imported</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_go">
+<a href="#kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS kms key to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_go">
+<a href="#kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingtypes_go">
+<a href="#loggingtypes_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS cloudwatch logging types. `audit`, `api`, `scheduler`, `controllerManager` and `authenticator` values are allowed (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodegroups_go">
+<a href="#nodegroups_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegroup">[]Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster name to import. Required to create a new cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateaccess_go">
+<a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicaccess_go">
+<a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicaccesssources_go">
+<a href="#publicaccesssources_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster public access sources (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretsencryption_go">
+<a href="#secretsencryption_go" style="color: inherit; text-decoration: inherit;">Secrets<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_go">
+<a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicerole_go">
+<a href="#servicerole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS service role to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_go">
+<a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cloudcredentialid_nodejs">
+<a href="#cloudcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Credential<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cloud_credential id (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imported_nodejs">
+<a href="#imported_nodejs" style="color: inherit; text-decoration: inherit;">imported</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_nodejs">
+<a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS kms key to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_nodejs">
+<a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingtypes_nodejs">
+<a href="#loggingtypes_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS cloudwatch logging types. `audit`, `api`, `scheduler`, `controllerManager` and `authenticator` values are allowed (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodegroups_nodejs">
+<a href="#nodegroups_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegroup">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster name to import. Required to create a new cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateaccess_nodejs">
+<a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicaccess_nodejs">
+<a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicaccesssources_nodejs">
+<a href="#publicaccesssources_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access<wbr>Sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster public access sources (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretsencryption_nodejs">
+<a href="#secretsencryption_nodejs" style="color: inherit; text-decoration: inherit;">secrets<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_nodejs">
+<a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicerole_nodejs">
+<a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS service role to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_nodejs">
+<a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cloud_credential_id_python">
+<a href="#cloud_credential_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>credential_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cloud_credential id (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imported_python">
+<a href="#imported_python" style="color: inherit; text-decoration: inherit;">imported</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to import EKS cluster. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_python">
+<a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS kms key to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubernetes_version_python">
+<a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes version that will be used for your master *and* OKE worker nodes (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_types_python">
+<a href="#logging_types_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS cloudwatch logging types. `audit`, `api`, `scheduler`, `controllerManager` and `authenticator` values are allowed (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="node_groups_python">
+<a href="#node_groups_python" style="color: inherit; text-decoration: inherit;">node_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegroup">Sequence[Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster name to import. Required to create a new cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has private access. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster has public access. Default: `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_access_sources_python">
+<a href="#public_access_sources_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster public access sources (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The availability domain within the region to host the cluster. See [here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) for a list of region names. (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrets_encryption_python">
+<a href="#secrets_encryption_python" style="color: inherit; text-decoration: inherit;">secrets_<wbr>encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable EKS cluster secret encryption. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_groups_python">
+<a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of security groups to use for the cluster (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_role_python">
+<a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS service role to use (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_python">
+<a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustereksconfigv2nodegroup">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterEksConfigV2NodeGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterEksConfigV2NodeGroup">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterEksConfigV2NodeGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterEksConfigV2NodeGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterEksConfigV2NodeGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterEksConfigV2NodeGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desiredsize_csharp">
+<a href="#desiredsize_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group desired size. Default: `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksize_csharp">
+<a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group disk size (Gb). Default: `20` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ec2sshkey_csharp">
+<a href="#ec2sshkey_csharp" style="color: inherit; text-decoration: inherit;">Ec2Ssh<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group ssh key (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_csharp">
+<a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxsize_csharp">
+<a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minsize_csharp">
+<a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desiredsize_go">
+<a href="#desiredsize_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group desired size. Default: `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksize_go">
+<a href="#disksize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group disk size (Gb). Default: `20` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ec2sshkey_go">
+<a href="#ec2sshkey_go" style="color: inherit; text-decoration: inherit;">Ec2Ssh<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group ssh key (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_go">
+<a href="#gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxsize_go">
+<a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minsize_go">
+<a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desiredsize_nodejs">
+<a href="#desiredsize_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group desired size. Default: `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksize_nodejs">
+<a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group disk size (Gb). Default: `20` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ec2sshkey_nodejs">
+<a href="#ec2sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ec2Ssh<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group ssh key (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_nodejs">
+<a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxsize_nodejs">
+<a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minsize_nodejs">
+<a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desired_size_python">
+<a href="#desired_size_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group desired size. Default: `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_python">
+<a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group disk size (Gb). Default: `20` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ec2_ssh_key_python">
+<a href="#ec2_ssh_key_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>ssh_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group ssh key (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_python">
+<a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group instance type. Default: `t3.medium` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_size_python">
+<a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_size_python">
+<a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The EKS cluster tags (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -23234,7 +26315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Audit log max size. Default: `100` (int)
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -23307,7 +26388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Audit log max size. Default: `100` (int)
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -23380,7 +26461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Audit log max size. Default: `100` (int)
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -23453,7 +26534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Audit log max size. Default: `100` (int)
+    <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -26100,6 +29181,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
