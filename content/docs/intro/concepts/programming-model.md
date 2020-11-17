@@ -1993,7 +1993,8 @@ let certValidation = new aws.route53.Record("cert_validation", {
         certCertificate.domainValidationOptions.apply(
             domainValidationOptions => domainValidationOptions[0].resourceRecordValue),
     ],
-...
+    ...
+});
 ```
 
 {{% /choosable %}}
@@ -2010,7 +2011,8 @@ let certValidation = new aws.route53.Record("cert_validation", {
         certCertificate.domainValidationOptions.apply(
             domainValidationOptions => domainValidationOptions[0].resourceRecordValue),
     ],
-...
+    ...
+});
 ```
 
 {{% /choosable %}}
@@ -2029,14 +2031,33 @@ record = aws.route53.Record('validation',
             lambda domain_validation_options: domain_validation_options[0]['resourceRecordValue']
         )
     ],
-...
+    ...
+)
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-// Helpers for accessing properties are not yet available in Go.
+cert, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+    DomainName:       pulumi.String("example"),
+    ValidationMethod: pulumi.String("DNS"),
+})
+if err != nil {
+    return err
+}
+
+record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
+    Records: pulumi.StringArray{
+        cert.DomainValidationOptions.ApplyString(func(opts []acm.CertificateDomainValidationOption) string {
+            return *opts[0].ResourceRecordValue
+        }),
+    },
+    ...
+})
+if err != nil {
+    return err
+}
 ```
 
 {{% /choosable %}}
@@ -2103,7 +2124,27 @@ record = aws.route53.Record('validation',
 {{% choosable language go %}}
 
 ```go
-// Helpers for accessing properties are not yet available in Go.
+cert, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+    DomainName:       pulumi.String("example"),
+    ValidationMethod: pulumi.String("DNS"),
+})
+if err != nil {
+    return err
+}
+
+record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
+    Records: pulumi.StringArray{
+        // Notes:
+        // * `Index` looks up an index in an `ArrayOutput` and returns a new `Output`.
+        // * Accessor methods like `ResourceRecordValue` lookup properties of a custom struct `Output` and return a new `Output`.
+        // * `Elem` dereferences a `PtrOutput` to an `Output`, equivalent to `*`.
+        cert.DomainValidationOptions.Index(pulumi.Int(0)).ResourceRecordValue().Elem(),
+    },
+    ...
+})
+if err != nil {
+    return err
+}
 ```
 
 {{% /choosable %}}
