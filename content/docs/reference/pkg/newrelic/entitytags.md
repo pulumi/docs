@@ -12,6 +12,7 @@ meta_desc: "Explore the EntityTags resource of the New Relic package, including 
 
 Use this resource to create, update, and delete tags for a New Relic One entity.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the EventsToMetricsRule resource of the New Relic package, i
 
 Use this resource to create, update, and delete New Relic Events to Metrics rules.
 
+
 {{% examples %}}
 ## Example Usage
 

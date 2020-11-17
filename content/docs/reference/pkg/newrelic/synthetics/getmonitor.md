@@ -12,6 +12,7 @@ meta_desc: "Explore the GetMonitor function of the synthetics module, including 
 
 Use this data source to get information about a specific synthetics monitor in New Relic that already exists. This can be used to set up a Synthetics alert condition.
 
+
 {{% examples %}}
 ## Example Usage
 

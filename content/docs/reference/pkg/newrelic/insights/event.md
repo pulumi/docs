@@ -27,6 +27,7 @@ The `attribute` mapping supports the following arguments:
   * `value` - (Required) The value of the attribute.
   * `type` - (Optional) Specify the type for the attribute value. This is useful when passing integer or float values to Insights. Allowed values are `string`, `int`, or `float`. Defaults to `string`.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAlertPolicy function of the New Relic package, includ
 
 Use this data source to get information about a specific alert policy in New Relic that already exists.
 
+
 {{% examples %}}
 ## Example Usage
 

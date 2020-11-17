@@ -12,6 +12,7 @@ meta_desc: "Explore the AlertPolicyChannel resource of the New Relic package, in
 
 Use this resource to map alert policies to alert channels in New Relic.
 
+
 {{% examples %}}
 ## Example Usage
 

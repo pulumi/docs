@@ -14,6 +14,7 @@ Use this data source to get information about a specific account in New Relic.
 Accounts can be located by ID or name.  Exactly one of the two attributes is
 required.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetKeyTransaction function of the New Relic package, inc
 
 Use this data source to get information about a specific key transaction in New Relic that already exists.
 
+
 {{% examples %}}
 ## Example Usage
 

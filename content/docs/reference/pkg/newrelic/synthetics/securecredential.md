@@ -12,6 +12,7 @@ meta_desc: "Explore the SecureCredential resource of the synthetics module, incl
 
 Use this resource to create and manage New Relic Synthetic secure credentials.
 
+
 {{% examples %}}
 ## Example Usage
 

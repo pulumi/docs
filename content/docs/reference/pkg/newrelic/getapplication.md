@@ -14,6 +14,7 @@ meta_desc: "Explore the GetApplication function of the New Relic package, includ
 
 Use this data source to get information about a specific application in New Relic that already exists.
 
+
 {{% examples %}}
 ## Example Usage
 

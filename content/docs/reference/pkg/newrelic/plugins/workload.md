@@ -16,6 +16,7 @@ A New Relic Personal API key is required to provision this resource.  Set the `a
 attribute in the `provider` block or the `NEW_RELIC_API_KEY` environment
 variable with your Personal API key.
 
+
 {{% examples %}}
 ## Example Usage
 

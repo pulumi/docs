@@ -23,6 +23,7 @@ The `term` mapping supports the following arguments:
   * `threshold` - (Required) Must be 0 or greater.
   * `time_function` - (Required) `all` or `any`.
 
+
 {{% examples %}}
 ## Example Usage
 
