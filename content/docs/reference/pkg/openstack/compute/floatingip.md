@@ -18,6 +18,7 @@ been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the `openstack.networking.FloatingIp`
 resource instead, which uses the OpenStack Networking API.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1011,6 +1012,8 @@ have a different address).
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

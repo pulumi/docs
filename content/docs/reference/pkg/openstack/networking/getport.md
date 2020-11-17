@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPort function of the networking module, including exa
 
 Use this data source to get the ID of an available OpenStack port.
 
+
 {{% examples %}}
 ## Example Usage
 

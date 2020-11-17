@@ -12,6 +12,7 @@ meta_desc: "Explore the GetContainer function of the keymanager module, includin
 
 Use this data source to get the ID of an available Barbican container.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -4430,6 +4430,17 @@ will be placed on a compute node that is in the same subnet.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="differentcells_csharp">
+<a href="#differentcells_csharp" style="color: inherit; text-decoration: inherit;">Different<wbr>Cells</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The names of cells where not to build the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="differenthosts_csharp">
 <a href="#differenthosts_csharp" style="color: inherit; text-decoration: inherit;">Different<wbr>Hosts</a>
 </span> 
@@ -4520,6 +4531,17 @@ properties to pass to the scheduler.
     </dt>
     <dd>{{% md %}}An IP Address in CIDR form. The instance
 will be placed on a compute node that is in the same subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="differentcells_go">
+<a href="#differentcells_go" style="color: inherit; text-decoration: inherit;">Different<wbr>Cells</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The names of cells where not to build the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4618,6 +4640,17 @@ will be placed on a compute node that is in the same subnet.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="differentcells_nodejs">
+<a href="#differentcells_nodejs" style="color: inherit; text-decoration: inherit;">different<wbr>Cells</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The names of cells where not to build the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="differenthosts_nodejs">
 <a href="#differenthosts_nodejs" style="color: inherit; text-decoration: inherit;">different<wbr>Hosts</a>
 </span> 
@@ -4708,6 +4741,17 @@ properties to pass to the scheduler.
     </dt>
     <dd>{{% md %}}An IP Address in CIDR form. The instance
 will be placed on a compute node that is in the same subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="different_cells_python">
+<a href="#different_cells_python" style="color: inherit; text-decoration: inherit;">different_<wbr>cells</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The names of cells where not to build the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4929,6 +4973,8 @@ instances after some timeout.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

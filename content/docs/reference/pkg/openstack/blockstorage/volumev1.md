@@ -12,6 +12,7 @@ meta_desc: "Explore the VolumeV1 resource of the blockstorage module, including 
 
 Manages a V1 volume resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1780,6 +1781,8 @@ Changing this creates a new volume.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

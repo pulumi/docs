@@ -12,6 +12,7 @@ meta_desc: "Explore the Trunk resource of the networking module, including examp
 
 Manages a networking V2 trunk resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1754,6 +1755,8 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

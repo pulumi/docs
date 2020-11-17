@@ -12,6 +12,7 @@ meta_desc: "Explore the Rule resource of the firewall module, including examples
 
 Manages a v1 firewall rule resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1862,6 +1863,8 @@ new firewall rule.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

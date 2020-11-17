@@ -12,6 +12,7 @@ meta_desc: "Explore the GetImage function of the images module, including exampl
 
 Use this data source to get the ID of an available OpenStack image.
 
+
 {{% examples %}}
 ## Example Usage
 

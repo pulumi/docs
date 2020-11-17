@@ -12,6 +12,7 @@ meta_desc: "Explore the Subnet resource of the networking module, including exam
 
 Manages a V2 Neutron subnet resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3082,6 +3083,8 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

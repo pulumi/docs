@@ -12,6 +12,7 @@ meta_desc: "Explore the Instance resource of the database module, including exam
 
 Manages a V1 DB instance resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2245,6 +2246,8 @@ new instance.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

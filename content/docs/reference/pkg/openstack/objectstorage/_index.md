@@ -25,7 +25,7 @@ Explore the resources and functions of the objectstorage module in the Open Stac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.8.1</dd>
+	<dd>2.9.0</dd>
 </dl>
 
 

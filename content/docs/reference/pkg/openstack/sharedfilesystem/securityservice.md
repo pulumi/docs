@@ -19,6 +19,7 @@ Microsoft Active Directory.
 
 Minimum supported Manila microversion is 2.7.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1601,6 +1602,8 @@ tenant.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

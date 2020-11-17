@@ -12,6 +12,7 @@ meta_desc: "Explore the OrderV1 resource of the keymanager module, including exa
 
 Manages a V1 Barbican order resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2039,6 +2040,8 @@ V1 order.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Network resource of the networking module, including exa
 
 Manages a V2 Neutron network resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2588,6 +2589,8 @@ network.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

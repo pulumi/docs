@@ -16,6 +16,7 @@ Manages a V2 members resource within OpenStack (batch members update).
 legacy Neutron LBaaS v2 extension please use
 openstack.loadbalancer.Member resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1259,6 +1260,8 @@ as a member with a weight of 2. Defaults to 1.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

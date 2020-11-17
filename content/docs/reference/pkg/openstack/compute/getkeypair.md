@@ -12,6 +12,7 @@ meta_desc: "Explore the GetKeypair function of the compute module, including exa
 
 Use this data source to get the ID and public key of an OpenStack keypair.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetShareNetwork function of the sharedfilesystem module,
 
 Use this data source to get the ID of an available Shared File System share network.
 
+
 {{% examples %}}
 ## Example Usage
 

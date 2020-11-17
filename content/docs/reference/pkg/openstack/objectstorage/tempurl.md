@@ -18,6 +18,7 @@ will remain in place. If you wish to automatically regenerate a URL, set
 the `regenerate` argument to `true`. This will create a new resource with
 a new ID and URL.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1314,6 +1315,8 @@ be valid.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

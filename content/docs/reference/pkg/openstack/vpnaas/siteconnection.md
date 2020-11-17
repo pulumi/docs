@@ -12,6 +12,7 @@ meta_desc: "Explore the SiteConnection resource of the vpnaas module, including 
 
 Manages a V2 Neutron IPSec site connection resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2568,6 +2569,8 @@ Default is 120.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

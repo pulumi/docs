@@ -395,6 +395,7 @@ func main() {
 
 The `member` block is deprecated in favor of the `openstack.loadbalancer.MemberV1` resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1730,6 +1731,8 @@ create a pool member for another tenant. Changing this creates a new member.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

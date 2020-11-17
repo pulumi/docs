@@ -12,6 +12,7 @@ meta_desc: "Explore the GetProject function of the identity module, including ex
 
 Use this data source to get the ID of an OpenStack project.
 
+
 {{% examples %}}
 ## Example Usage
 

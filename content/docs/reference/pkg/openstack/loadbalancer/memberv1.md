@@ -12,6 +12,7 @@ meta_desc: "Explore the MemberV1 resource of the loadbalancer module, including 
 
 Manages a V1 load balancer member resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1214,6 +1215,8 @@ create a member for another tenant. Changing this creates a new member.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

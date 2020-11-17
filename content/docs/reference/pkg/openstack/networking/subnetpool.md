@@ -12,6 +12,7 @@ meta_desc: "Explore the SubnetPool resource of the networking module, including 
 
 Manages a V2 Neutron subnetpool resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2541,6 +2542,8 @@ subnetpool.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

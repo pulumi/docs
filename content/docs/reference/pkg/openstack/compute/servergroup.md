@@ -29,6 +29,7 @@ Manages a V2 Server Group resource within OpenStack.
   still will be scheduled instead of failure. To use this policy your
   OpenStack environment should support Compute service API 2.15 or above.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1027,6 +1028,8 @@ this creates a new server group.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

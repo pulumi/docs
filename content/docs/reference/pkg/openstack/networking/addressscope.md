@@ -12,6 +12,7 @@ meta_desc: "Explore the AddressScope resource of the networking module, includin
 
 Manages a V2 Neutron addressscope resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1137,6 +1138,8 @@ address-scope.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

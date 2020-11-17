@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPolicy function of the firewall module, including exa
 
 Use this data source to get firewall policy information of an available OpenStack firewall policy.
 
+
 {{% examples %}}
 ## Example Usage
 

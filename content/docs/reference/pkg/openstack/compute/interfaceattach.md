@@ -13,6 +13,7 @@ meta_desc: "Explore the InterfaceAttach resource of the compute module, includin
 Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1325,6 +1326,8 @@ creates a new attachment.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

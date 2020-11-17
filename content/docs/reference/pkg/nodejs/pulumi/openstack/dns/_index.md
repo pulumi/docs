@@ -3,7 +3,7 @@ title: "Module dns"
 title_tag: "Module dns | Package @pulumi/openstack | Node.js SDK"
 linktitle: "dns"
 meta_desc: "Explore members of the dns module in the @pulumi/openstack package."
-git_sha: "bd525d824cacefd2979000d2031407add927afd9"
+git_sha: "a64be7c20b1581f43a04f148995e0da07d4eb6c3"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="RecordSet" data-link-title="RecordSet">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L32">
         Resource <strong>RecordSet</strong>
     </a>
 </h3>
@@ -71,7 +71,7 @@ const rsExampleCom = new openstack.dns.RecordSet("rs_example_com", {
 ```
 
 <h4 class="pdoc-member-header" id="RecordSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -85,7 +85,7 @@ Create a RecordSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RecordSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -96,14 +96,14 @@ Get an existing RecordSet resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RecordSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RecordSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -114,7 +114,7 @@ Returns true if the given object is an instance of RecordSet.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RecordSet-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -122,7 +122,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the  record set.
 
 <h4 class="pdoc-member-header" id="RecordSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -131,7 +131,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RecordSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSet-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L74">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L74">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
 
 <h4 class="pdoc-member-header" id="RecordSet-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L80">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L80">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSet-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L84">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L84">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ Changing this creates a new DNS  record set.
 The time to live (TTL) of the record set.
 
 <h4 class="pdoc-member-header" id="RecordSet-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L89">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L89">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -186,7 +186,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="RecordSet-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L94">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L94">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ Map of additional options. Changing this creates a
 new record set.
 
 <h4 class="pdoc-member-header" id="RecordSet-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L99">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L99">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-module-header" id="Zone" data-link-title="Zone">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L25">
         Resource <strong>Zone</strong>
     </a>
 </h3>
@@ -229,7 +229,7 @@ const example_com = new openstack.dns.Zone("example.com", {
 ```
 
 <h4 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -243,7 +243,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -254,14 +254,14 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -272,7 +272,7 @@ Returns true if the given object is an instance of Zone.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Zone-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L57">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L57">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
 
 <h4 class="pdoc-member-header" id="Zone-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ Changing this creates a new zone.
 A description of the zone.
 
 <h4 class="pdoc-member-header" id="Zone-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L65">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L65">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ A description of the zone.
 The email contact for the zone record.
 
 <h4 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -306,7 +306,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Zone-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L70">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L70">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ An array of master DNS servers. For when `type` is
 `SECONDARY`.
 
 <h4 class="pdoc-member-header" id="Zone-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -323,8 +323,18 @@ An array of master DNS servers. For when `type` is
 The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
 
+<h4 class="pdoc-member-header" id="Zone-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L81">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project DNS zone is created
+for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
+user role in target project)
+
 <h4 class="pdoc-member-header" id="Zone-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L82">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L88">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -335,7 +345,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
 
 <h4 class="pdoc-member-header" id="Zone-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L86">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L92">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -343,7 +353,7 @@ Changing this creates a new DNS zone.
 The time to live (TTL) of the zone.
 
 <h4 class="pdoc-member-header" id="Zone-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L91">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L97">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -352,7 +362,7 @@ The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
 
 <h4 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -361,7 +371,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Zone-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L96">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L102">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -372,7 +382,7 @@ new zone.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDnsZone" data-link-title="getDnsZone">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L23">
         Function <strong>getDnsZone</strong>
     </a>
 </h3>
@@ -397,7 +407,7 @@ const zone1 = pulumi.output(openstack.dns.getDnsZone({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetDnsZoneArgs" data-link-title="GetDnsZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L56">
         interface <strong>GetDnsZoneArgs</strong>
     </a>
 </h3>
@@ -406,8 +416,17 @@ const zone1 = pulumi.output(openstack.dns.getDnsZone({
 
 A collection of arguments for invoking getDnsZone.
 
+<h4 class="pdoc-member-header" id="GetDnsZoneArgs-allProjects">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L61">property <b>allProjects</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allProjects?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Try to obtain zone ID by listing all projects
+(requires admin role by default, depends on your policy configuration)
+
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L59">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L65">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -415,7 +434,7 @@ A collection of arguments for invoking getDnsZone.
 Attributes of the DNS Service scheduler.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L63">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L69">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -423,7 +442,7 @@ Attributes of the DNS Service scheduler.
 The time the zone was created.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -431,7 +450,7 @@ The time the zone was created.
 A description of the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L71">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L77">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -439,7 +458,7 @@ A description of the zone.
 The email contact for the zone record.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L75">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L81">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -447,7 +466,7 @@ The email contact for the zone record.
 An array of master DNS servers. When `type` is  `SECONDARY`.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -455,7 +474,7 @@ An array of master DNS servers. When `type` is  `SECONDARY`.
 The name of the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L83">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L89">property <b>poolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>poolId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -463,15 +482,16 @@ The name of the zone.
 The ID of the pool hosting the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L87">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L94">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-The project ID that owns the zone.
+The ID of the project the DNS zone is obtained from,
+sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L93">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L100">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -481,7 +501,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
 `region` argument of the provider is used.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L97">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L104">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -489,7 +509,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
 The serial number of the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L101">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L108">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -497,7 +517,7 @@ The serial number of the zone.
 The zone's status.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-transferredAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L105">property <b>transferredAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L112">property <b>transferredAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transferredAt?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -505,7 +525,7 @@ The zone's status.
 The time the zone was transferred.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L109">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L116">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -513,7 +533,7 @@ The time the zone was transferred.
 The time to live (TTL) of the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L113">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L120">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -521,7 +541,7 @@ The time to live (TTL) of the zone.
 The type of the zone. Can either be `PRIMARY` or `SECONDARY`.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L117">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L124">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -529,7 +549,7 @@ The type of the zone. Can either be `PRIMARY` or `SECONDARY`.
 The time the zone was last updated.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L121">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L128">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -537,7 +557,7 @@ The time the zone was last updated.
 The version of the zone.
 
 <h3 class="pdoc-module-header" id="GetDnsZoneResult" data-link-title="GetDnsZoneResult">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L134">
         interface <strong>GetDnsZoneResult</strong>
     </a>
 </h3>
@@ -546,8 +566,13 @@ The version of the zone.
 
 A collection of values returned by getDnsZone.
 
+<h4 class="pdoc-member-header" id="GetDnsZoneResult-allProjects">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L135">property <b>allProjects</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allProjects?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L131">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L139">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -555,7 +580,7 @@ A collection of values returned by getDnsZone.
 Attributes of the DNS Service scheduler.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L135">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L143">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -563,7 +588,7 @@ Attributes of the DNS Service scheduler.
 The time the zone was created.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L139">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L147">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -571,7 +596,7 @@ The time the zone was created.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L143">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L151">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -579,7 +604,7 @@ See Argument Reference above.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L147">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L155">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -587,7 +612,7 @@ See Argument Reference above.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L151">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L159">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -595,7 +620,7 @@ The provider-assigned unique ID for this managed resource.
 An array of master DNS servers. When `type` is  `SECONDARY`.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -603,7 +628,7 @@ An array of master DNS servers. When `type` is  `SECONDARY`.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L159">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L167">property <b>poolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>poolId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -611,7 +636,7 @@ See Argument Reference above.
 The ID of the pool hosting the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L163">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L171">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -619,7 +644,7 @@ The ID of the pool hosting the zone.
 The project ID that owns the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L167">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L175">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -627,7 +652,7 @@ The project ID that owns the zone.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L171">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L179">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -635,7 +660,7 @@ See Argument Reference above.
 The serial number of the zone.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L175">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L183">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -643,7 +668,7 @@ The serial number of the zone.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-transferredAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L179">property <b>transferredAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L187">property <b>transferredAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transferredAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -651,7 +676,7 @@ See Argument Reference above.
 The time the zone was transferred.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L183">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L191">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -659,7 +684,7 @@ The time the zone was transferred.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L187">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L195">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -667,7 +692,7 @@ See Argument Reference above.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L191">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L199">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -675,7 +700,7 @@ See Argument Reference above.
 The time the zone was last updated.
 
 <h4 class="pdoc-member-header" id="GetDnsZoneResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/getDnsZone.ts#L195">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/getDnsZone.ts#L203">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -683,7 +708,7 @@ The time the zone was last updated.
 The version of the zone.
 
 <h3 class="pdoc-module-header" id="RecordSetArgs" data-link-title="RecordSetArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L195">
         interface <strong>RecordSetArgs</strong>
     </a>
 </h3>
@@ -693,7 +718,7 @@ The version of the zone.
 The set of arguments for constructing a RecordSet resource.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L199">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L199">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +726,7 @@ The set of arguments for constructing a RecordSet resource.
 A description of the  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -710,7 +735,7 @@ The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L210">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L210">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -720,7 +745,7 @@ contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L216">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L216">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -730,7 +755,7 @@ If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L220">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L220">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -738,7 +763,7 @@ Changing this creates a new DNS  record set.
 The time to live (TTL) of the record set.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L225">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L225">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +772,7 @@ The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L230">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L230">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -756,7 +781,7 @@ Map of additional options. Changing this creates a
 new record set.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L235">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L235">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -765,7 +790,7 @@ The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-module-header" id="RecordSetState" data-link-title="RecordSetState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L149">
         interface <strong>RecordSetState</strong>
     </a>
 </h3>
@@ -775,7 +800,7 @@ Changing this creates a new DNS  record set.
 Input properties used for looking up and filtering RecordSet resources.
 
 <h4 class="pdoc-member-header" id="RecordSetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L153">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L153">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -783,7 +808,7 @@ Input properties used for looking up and filtering RecordSet resources.
 A description of the  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -792,7 +817,7 @@ The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L164">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L164">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -802,7 +827,7 @@ contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
 
 <h4 class="pdoc-member-header" id="RecordSetState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L170">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L170">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +837,7 @@ If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L174">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L174">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -820,7 +845,7 @@ Changing this creates a new DNS  record set.
 The time to live (TTL) of the record set.
 
 <h4 class="pdoc-member-header" id="RecordSetState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L179">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L179">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -829,7 +854,7 @@ The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
 
 <h4 class="pdoc-member-header" id="RecordSetState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L184">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L184">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -838,7 +863,7 @@ Map of additional options. Changing this creates a
 new record set.
 
 <h4 class="pdoc-member-header" id="RecordSetState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/recordSet.ts#L189">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/recordSet.ts#L189">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +872,7 @@ The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-module-header" id="ZoneArgs" data-link-title="ZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L209">
         interface <strong>ZoneArgs</strong>
     </a>
 </h3>
@@ -857,7 +882,7 @@ Changing this creates a new DNS  record set.
 The set of arguments for constructing a Zone resource.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L200">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L214">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -866,7 +891,7 @@ Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L204">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L218">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -874,7 +899,7 @@ Changing this creates a new zone.
 A description of the zone.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L208">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L222">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +907,7 @@ A description of the zone.
 The email contact for the zone record.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L213">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L227">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -891,7 +916,7 @@ An array of master DNS servers. For when `type` is
 `SECONDARY`.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L218">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L232">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -899,8 +924,18 @@ An array of master DNS servers. For when `type` is
 The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
 
+<h4 class="pdoc-member-header" id="ZoneArgs-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L238">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project DNS zone is created
+for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
+user role in target project)
+
 <h4 class="pdoc-member-header" id="ZoneArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L225">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L245">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -911,7 +946,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L229">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L249">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -919,7 +954,7 @@ Changing this creates a new DNS zone.
 The time to live (TTL) of the zone.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L234">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L254">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -928,7 +963,7 @@ The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L239">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L259">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -937,7 +972,7 @@ Map of additional options. Changing this creates a
 new zone.
 
 <h3 class="pdoc-module-header" id="ZoneState" data-link-title="ZoneState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L153">
         interface <strong>ZoneState</strong>
     </a>
 </h3>
@@ -947,7 +982,7 @@ new zone.
 Input properties used for looking up and filtering Zone resources.
 
 <h4 class="pdoc-member-header" id="ZoneState-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L150">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L158">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -956,7 +991,7 @@ Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L154">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L162">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -964,7 +999,7 @@ Changing this creates a new zone.
 A description of the zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L158">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L166">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -972,7 +1007,7 @@ A description of the zone.
 The email contact for the zone record.
 
 <h4 class="pdoc-member-header" id="ZoneState-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L163">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L171">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -981,7 +1016,7 @@ An array of master DNS servers. For when `type` is
 `SECONDARY`.
 
 <h4 class="pdoc-member-header" id="ZoneState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -989,8 +1024,18 @@ An array of master DNS servers. For when `type` is
 The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
 
+<h4 class="pdoc-member-header" id="ZoneState-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L182">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project DNS zone is created
+for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
+user role in target project)
+
 <h4 class="pdoc-member-header" id="ZoneState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L175">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L189">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1001,7 +1046,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L179">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L193">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1009,7 +1054,7 @@ Changing this creates a new DNS zone.
 The time to live (TTL) of the zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L184">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L198">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1018,7 +1063,7 @@ The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bd525d824cacefd2979000d2031407add927afd9/sdk/nodejs/dns/zone.ts#L189">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/dns/zone.ts#L203">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>

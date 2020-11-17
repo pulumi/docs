@@ -12,6 +12,7 @@ meta_desc: "Explore the GetQosPolicy function of the networking module, includin
 
 Use this data source to get the ID of an available OpenStack QoS policy.
 
+
 {{% examples %}}
 ## Example Usage
 

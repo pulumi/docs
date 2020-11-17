@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAvailabilityZonesV3 function of the blockstorage modu
 
 Use this data source to get a list of Block Storage availability zones from OpenStack
 
+
 {{% examples %}}
 ## Example Usage
 

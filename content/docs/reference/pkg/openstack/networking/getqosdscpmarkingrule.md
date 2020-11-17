@@ -12,6 +12,7 @@ meta_desc: "Explore the GetQosDscpMarkingRule function of the networking module,
 
 Use this data source to get the ID of an available OpenStack QoS DSCP marking rule.
 
+
 {{% examples %}}
 ## Example Usage
 

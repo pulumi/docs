@@ -15,6 +15,7 @@ Manages a V3 Role assignment within OpenStack Keystone.
 Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1089,6 +1090,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

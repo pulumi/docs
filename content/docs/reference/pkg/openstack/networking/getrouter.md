@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRouter function of the networking module, including e
 
 Use this data source to get the ID of an available OpenStack router.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the GetClusterTemplate function of the containerinfra module
 Use this data source to get the ID of an available OpenStack Magnum cluster
 template.
 
+
 {{% examples %}}
 ## Example Usage
 

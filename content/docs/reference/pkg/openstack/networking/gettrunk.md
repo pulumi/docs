@@ -12,6 +12,7 @@ meta_desc: "Explore the GetTrunk function of the networking module, including ex
 
 Use this data source to get the ID of an available OpenStack trunk.
 
+
 {{% examples %}}
 ## Example Usage
 

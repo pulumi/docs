@@ -13,6 +13,7 @@ meta_desc: "Explore the ImageAccessAccept resource of the images module, includi
 Manages memberships status for the shared OpenStack Glance V2 Image within the
 destination project, which has a member proposal.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1212,6 +1213,8 @@ membership.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

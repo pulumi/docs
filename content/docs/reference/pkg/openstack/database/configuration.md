@@ -12,6 +12,7 @@ meta_desc: "Explore the Configuration resource of the database module, including
 
 Manages a V1 DB configuration resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1297,6 +1298,8 @@ creates a new instance.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

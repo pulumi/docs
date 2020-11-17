@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRole function of the identity module, including examp
 
 Use this data source to get the ID of an OpenStack role.
 
+
 {{% examples %}}
 ## Example Usage
 

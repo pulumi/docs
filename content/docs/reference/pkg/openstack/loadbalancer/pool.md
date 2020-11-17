@@ -12,6 +12,7 @@ meta_desc: "Explore the Pool resource of the loadbalancer module, including exam
 
 Manages a V2 pool resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1709,6 +1710,8 @@ appropriately. Required if `type = APP_COOKIE`.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

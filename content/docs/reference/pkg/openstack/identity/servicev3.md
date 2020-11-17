@@ -14,6 +14,7 @@ Manages a V3 Service resource within OpenStack Keystone.
 
 > **Note:** This usually requires admin privileges.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -975,6 +976,8 @@ If omitted, the `region` argument of the provider is used.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

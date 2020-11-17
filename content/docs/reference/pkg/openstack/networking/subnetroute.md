@@ -12,6 +12,7 @@ meta_desc: "Explore the SubnetRoute resource of the networking module, including
 
 Creates a routing entry on a OpenStack V2 subnet.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -985,6 +986,8 @@ this creates a new routing entry.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

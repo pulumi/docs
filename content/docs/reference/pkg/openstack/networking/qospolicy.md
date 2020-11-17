@@ -12,6 +12,7 @@ meta_desc: "Explore the QosPolicy resource of the networking module, including e
 
 Manages a V2 Neutron QoS policy resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1669,6 +1670,8 @@ QoS policy.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

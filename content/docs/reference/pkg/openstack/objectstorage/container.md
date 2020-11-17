@@ -12,6 +12,7 @@ meta_desc: "Explore the Container resource of the objectstorage module, includin
 
 Manages a V1 container resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1910,6 +1911,8 @@ creates a new container.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

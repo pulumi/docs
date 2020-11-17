@@ -15,6 +15,7 @@ Use this resource to configure a share network.
 A share network stores network information that share servers can use when
 shares are created.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1790,6 +1791,8 @@ the share network. The security service must be specified by ID and not name.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -18,6 +18,7 @@ endpoints or to authenticate against Keystone.
 will be stored in the raw state as plain-text. [Read more about sensitive data
 in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1154,6 +1155,8 @@ creates a new EC2 credential.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

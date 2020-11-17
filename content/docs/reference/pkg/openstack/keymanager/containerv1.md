@@ -12,6 +12,7 @@ meta_desc: "Explore the ContainerV1 resource of the keymanager module, including
 
 Manages a V1 Barbican container resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2409,6 +2410,8 @@ container, when `project_access` is set to `false`.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

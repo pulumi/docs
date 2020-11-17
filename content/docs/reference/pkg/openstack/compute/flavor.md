@@ -12,6 +12,7 @@ meta_desc: "Explore the Flavor resource of the compute module, including example
 
 Manages a V2 flavor resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1503,6 +1504,8 @@ a new flavor.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

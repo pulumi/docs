@@ -12,6 +12,7 @@ meta_desc: "Explore the EndpointGroup resource of the vpnaas module, including e
 
 Manages a V2 Neutron Endpoint Group resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1223,6 +1224,8 @@ Changing this creates a new group.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

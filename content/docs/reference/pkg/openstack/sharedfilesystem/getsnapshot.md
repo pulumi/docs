@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSnapshot function of the sharedfilesystem module, inc
 
 Use this data source to get the ID of an available Shared File System snapshot.
 
+
 {{% examples %}}
 ## Example Usage
 

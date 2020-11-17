@@ -12,6 +12,7 @@ meta_desc: "Explore the User resource of the database module, including examples
 
 Manages a V1 DB user resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -997,6 +998,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

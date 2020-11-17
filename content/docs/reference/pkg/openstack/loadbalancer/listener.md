@@ -12,6 +12,7 @@ meta_desc: "Explore the Listener resource of the loadbalancer module, including 
 
 Manages a V2 listener resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2323,6 +2324,8 @@ TCP packets for content inspection.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

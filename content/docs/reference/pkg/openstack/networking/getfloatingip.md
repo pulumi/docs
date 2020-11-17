@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFloatingIp function of the networking module, includi
 
 Use this data source to get the ID of an available OpenStack floating IP.
 
+
 {{% examples %}}
 ## Example Usage
 

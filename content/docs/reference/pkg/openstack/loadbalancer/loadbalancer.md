@@ -12,6 +12,7 @@ meta_desc: "Explore the LoadBalancer resource of the loadbalancer module, includ
 
 Manages a V2 loadbalancer resource within OpenStack.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1741,6 +1742,8 @@ It is required to Neutron LBaaS but optional for Octavia.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
