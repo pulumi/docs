@@ -1446,7 +1446,7 @@ This can be used to consume properties from a resource provisioned elsewhere. Fo
 ```javascript
 let aws = require("@pulumi/aws");
 
-let group = aws.ec2.SecurityGroup.get("sg-0dfd33cdac25b1ec9");
+let group = aws.ec2.SecurityGroup.get("group", "sg-0dfd33cdac25b1ec9");
 
 let server = new aws.ec2.Instance("web-server", {
     ami: "ami-6869aa05",
@@ -1461,7 +1461,7 @@ let server = new aws.ec2.Instance("web-server", {
 ```typescript
 import * as aws from "@pulumi/aws";
 
-let group = aws.ec2.SecurityGroup.get("sg-0dfd33cdac25b1ec9");
+let group = aws.ec2.SecurityGroup.get("group", "sg-0dfd33cdac25b1ec9");
 
 let server = new aws.ec2.Instance("web-server", {
     ami: "ami-6869aa05",
@@ -1476,7 +1476,7 @@ let server = new aws.ec2.Instance("web-server", {
 ```python
 import pulumi_aws as aws
 
-group = aws.ec2.SecurityGroup.get('sg-0dfd33cdac25b1ec9')
+group = aws.ec2.SecurityGroup.get('group', 'sg-0dfd33cdac25b1ec9')
 
 server = aws.ec2.Instance('web-server',
     ami='ami-6869aa05',
@@ -1524,7 +1524,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var group = SecurityGroup.Get("sg-0dfd33cdac25b1ec9");
+        var group = SecurityGroup.Get("group", "sg-0dfd33cdac25b1ec9");
 
         var server = new Instance("web-server", new InstanceArgs {
             Ami = "ami-6869aa05",
@@ -1538,6 +1538,8 @@ class MyStack : Stack
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+Note that two values are passed to the `get` function - the logical name Pulumi will use to refer to the resource, and the physical ID that the resource has in the target cloud.
 
 Importantly, Pulumi will never attempt to modify the Security Group in this example. It simply reads back its state from your currently configured cloud account, and then uses it as input for the EC2 Instance.
 
