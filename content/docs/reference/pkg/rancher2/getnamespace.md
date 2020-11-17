@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNamespace function of the Rancher 2 package, includin
 
 Use this data source to retrieve information about a Rancher v2 namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

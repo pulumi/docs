@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNodeDriver function of the Rancher 2 package, includi
 
 Use this data source to retrieve information about a Rancher v2 Node Driver resource.
 
+
 {{% examples %}}
 ## Example Usage
 

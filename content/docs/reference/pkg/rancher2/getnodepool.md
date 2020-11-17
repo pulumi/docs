@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNodePool function of the Rancher 2 package, including
 
 Use this data source to retrieve information about a Rancher v2 Node Pool resource.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRoleTemplate function of the Rancher 2 package, inclu
 
 Use this data source to retrieve information about a Rancher v2 role template resource.
 
+
 {{% examples %}}
 ## Example Usage
 

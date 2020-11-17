@@ -18,6 +18,7 @@ There are 2 types of Rancher v2 certificates:
 
 
 
+
 ## Create a Certificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1160,6 +1161,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

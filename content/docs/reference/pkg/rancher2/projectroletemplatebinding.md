@@ -12,6 +12,7 @@ meta_desc: "Explore the ProjectRoleTemplateBinding resource of the Rancher 2 pac
 
 Provides a Rancher v2 Project Role Template Binding resource. This can be used to create Project Role Template Bindings for Rancher v2 environments and retrieve their information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1329,6 +1330,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClusterLogging function of the Rancher 2 package, inc
 
 Use this data source to retrieve information about a Rancher v2 Cluster Logging.
 
+
 {{% examples %}}
 ## Example Usage
 

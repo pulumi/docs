@@ -14,6 +14,7 @@ Use this data source to retrieve information about a Rancher v2 cluster template
 
 Cluster Templates are available from Rancher v2.3.x and above.
 
+
 {{% examples %}}
 ## Example Usage
 

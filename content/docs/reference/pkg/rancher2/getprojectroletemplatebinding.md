@@ -12,6 +12,7 @@ meta_desc: "Explore the GetProjectRoleTemplateBinding function of the Rancher 2 
 
 Use this data source to retrieve information about a Rancher v2 project role template binding.
 
+
 {{% examples %}}
 ## Example Usage
 

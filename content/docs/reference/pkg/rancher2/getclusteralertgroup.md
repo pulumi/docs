@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClusterAlertGroup function of the Rancher 2 package, 
 
 Use this data source to retrieve information about a Rancher v2 cluster alert group.
 
+
 {{% examples %}}
 ## Example Usage
 

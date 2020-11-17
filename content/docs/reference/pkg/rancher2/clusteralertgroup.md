@@ -12,6 +12,7 @@ meta_desc: "Explore the ClusterAlertGroup resource of the Rancher 2 package, inc
 
 Provides a Rancher v2 Cluster Alert Group resource. This can be used to create Cluster Alert Group for Rancher v2 environments and retrieve their information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1563,6 +1564,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

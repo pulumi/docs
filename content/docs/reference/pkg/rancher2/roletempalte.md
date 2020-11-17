@@ -14,6 +14,7 @@ Provides a Rancher v2 Role Template resource. This can be used to create Role Te
 
 `cluster` and `project` scopes are supported for role templates.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1998,6 +1999,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Namespace resource of the Rancher 2 package, including e
 
 Provides a Rancher v2 Namespace resource. This can be used to create namespaces for Rancher v2 environments and retrieve their information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2226,6 +2227,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

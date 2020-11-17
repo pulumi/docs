@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGlobalRoleBinding function of the Rancher 2 package, 
 
 Use this data source to retrieve information about a Rancher v2 global role binding.
 
+
 {{% examples %}}
 ## Example Usage
 

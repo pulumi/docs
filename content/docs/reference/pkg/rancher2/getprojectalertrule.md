@@ -12,6 +12,7 @@ meta_desc: "Explore the GetProjectAlertRule function of the Rancher 2 package, i
 
 Use this data source to retrieve information about a Rancher v2 project alert rule.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -16,6 +16,7 @@ Depending of the availability, there are 2 types of Rancher v2 secrets:
 - Project secret: Available to all namespaces in the `project_id`
 - Namespaced secret: Available to just `namespace_id` in the `project_id`
 
+
 {{% examples %}}
 ## Example Usage
 

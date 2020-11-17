@@ -12,6 +12,7 @@ meta_desc: "Explore the ProjectAlertRule resource of the Rancher 2 package, incl
 
 Provides a Rancher v2 Project Alert Rule resource. This can be used to create Project Alert Rule for Rancher v2 environments and retrieve their information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2487,6 +2488,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

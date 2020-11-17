@@ -14,6 +14,7 @@ Provides a Rancher v2 Auth Config Github resource. This can be used to configure
 
 In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1503,6 +1504,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

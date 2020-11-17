@@ -14,6 +14,7 @@ Provides a Rancher v2 Cluster Template resource. This can be used to create Clus
 
 Cluster Templates are available from Rancher v2.3.x and above.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -16832,6 +16833,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

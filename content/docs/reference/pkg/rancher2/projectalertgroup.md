@@ -12,6 +12,7 @@ meta_desc: "Explore the ProjectAlertGroup resource of the Rancher 2 package, inc
 
 Provides a Rancher v2 Project Alert Group resource. This can be used to create Project Alert Group for Rancher v2 environments and retrieve their information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1559,6 +1560,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

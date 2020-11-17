@@ -16,6 +16,7 @@ In addition to the built-in local auth, only one external auth config provider c
 
 
 
+
 ## Create a ActiveDirectory Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -3446,6 +3447,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
