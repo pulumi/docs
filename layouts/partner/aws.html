@@ -16,7 +16,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="container mx-auto">
+    <div class="container mx-auto carousel-always-visible">
         <section class="w-full text-center">
             <div>
                 <div>
@@ -34,7 +34,9 @@
             </p>
             <div class="flex flex-col md:flex-row lg:mt-12">
                 <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
-                    {{ partial "home/ide" . }}
+                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/ide" . }}
+                    </div>
                 </div>
 
                 <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
@@ -76,7 +78,9 @@
             </p>
             <div class="flex flex-col md:flex-row lg:mt-12">
                 <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
-                    {{ partial "home/cli" . }}
+                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/cli" . }}
+                    </div>
                 </div>
 
                 <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
@@ -118,7 +122,9 @@
             </p>
             <div class="flex flex-col md:flex-row lg:mt-12">
                 <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
-                    {{ partial "home/console" . }}
+                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/console" . }}
+                    </div>
                 </div>
 
                 <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
