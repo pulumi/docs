@@ -1,282 +1,311 @@
 {{ define "hero" }}
-    <header class="header-hero header-hero-glow">
-        <div class="header-hero-items container mx-auto">
-            <div class="header-hero-item">
-                <h1>Modern Infrastructure as Code for AWS</h1>
-                <div class="flex flex-col md:flex-row">
-                    <p class="md:w-3/4 mr-4">
-                        Pulumi's infrastructure as code SDK helps create, deploy, and manage AWS containers, serverless functions, and infrastructure using modern programming languages.
-                    </p>
-                    <div class="top-0">
-                        <img class="object-scale-down w-48 md:mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
-                    </div>
-                </div>
-                <p>
-                    <strong>Now Available</strong>:
-                    <a href="{{ relref . "/crosswalk/aws" }}">
-                        Pulumi Crosswalk for AWS: Accelerate Delivery of Well-Architected AWS Infrastructure as Code
-                    </a>
-                </p>
-                <div class="header-hero-actions">
+    <header class="header-hero-home mb-8 relative px-4">
+        <div class="flex container mx-auto">
+            <div class="w-full md:w-1/2 px-5">
+                <h1>{{ .Params.hero.title }}</h1>
+                <p class="mr-4">{{ .Params.hero.description }}</p>
+                <div class="mt-5">
                     <a class="btn btn-lg" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
-                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "#benefits" }}">Learn More</a>
                 </div>
             </div>
-            <div class="header-hero-item">
-                {{ $code := `const aws = require("@pulumi/aws");
-
-let size = "t2.micro";
-let ami  = "ami-7172b611"
-
-let group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 22,
-          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-        { protocol: "tcp", fromPort: 80,
-          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
-});
-
-let server = new aws.ec2.Instance("web-server-www", {
-    tags: { "Name": "web-server-www" },
-    instanceType: size,
-    securityGroups: [ group.name ],
-    ami: ami,
-    userData: userData
-});` }}
-                {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
-
+            <div class="w-full md:w-1/2">
+                {{ partial "code-tabbed" (dict "tabs" .Params.hero.ide.tabs "chrome" "true" "mode" "dark") }}
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <nav class="nav-section-sticky">
-        <div class="container mx-auto uppercase">
-            <ul>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#code">Code</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#case-study">Case Study</a></li>
-                <li><a href="#get-started">Get Started</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    {{ partial "benefits-v1.html" . }}
-
-    <section id="code" class="bg-gray-200 py-16 px-4">
-        <div class="container mx-auto">
-
-            <!-- Example 1 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Creating a Serverless REST API</h2>
-                    <p>
-                        With Pulumi, you can combine infrastructure definitions and application code in one program. The
-                        <a href="{{ relref . "/crosswalk/aws" }}">
-                        Crosswalk for AWS Infrastructure Library</a> is a set of Pulumi components that provide a higher-level abstraction
-                        over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles,
-                        you can use this library and define application code at the same time as the infrastructure it depends on.
-                    </p>
-                    <p>
-                        This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
+    <div class="container mx-auto">
+        <section class="w-full text-center">
+            <div>
+                <div>
+                    <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-3" style="fill: #4387c7;">
+                        {{ partial "superpower-icon.html" (dict "type" "architecture")}}
+                    </div>
                 </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
+                <p class="text-3xl font-bold inline-block">CREATE</p>
+            </div>
+            <p class="w-10/12 mx-auto text-4xl mt-0">Begin with the Engineer and their experience.</p>
+            <p class="text-center w-1/2 mx-auto">
+                Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
+                ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
+                ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
+            </p>
+            <div class="flex flex-col md:flex-row mt-12">
+                <div class="w-full order-last md:w-1/2 md:order-first">
+                    {{ partial "home/ide" . }}
+                </div>
 
-// Create a mapping from 'route' to a count.
-let counterTable = new aws.dynamodb.Table("counterTable", {
-    attributes: [{ name: "id", type: "S" }],
-    hashKey: "id",
-    readCapacity: 5,
-    writeCapacity: 5,
-});
+                <div class="w-full order-first md:w-1/2 md:order-last text-left px-10">
+                    <p class="text-lg font-bold">IDE Autocomplete</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
 
-// Create an API endpoint.
-let endpoint = new awsx.apigateway.API("hello-world", {
-    routes: [{
-        path: "/{route+}",
-        method: "GET",
-        eventHandler: (req, res) => {
-            let route = event.pathParameters!["route"];
-            let client = new aws.sdk.DynamoDB.DocumentClient();
+                    <p class="text-lg font-bold">Native Testing Frameworks</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
 
-            // Get previous value and increment our table entry.
-            let tableData = await client.get({
-                TableName: counterTable.name.get(),
-                Key: { id: route },
-                ConsistentRead: true,
-            }).promise();
-
-            let value = tableData.Item;
-            let count = (value && value.count) || 0;
-            await client.put({
-                TableName: counterTable.name.get(),
-                Item: { id: route, count: ++count },
-            }).promise();
-
-            return {
-                statusCode: 200,
-                body: JSON.stringify({ route, count }),
-            };
-        },
-    }],
-});
-
-exports.endpoint = endpoint.url;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                    <p class="text-lg font-bold">Sharing and Reuse</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Example 2 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Build and deploy containers to AWS</h2>
-                    <p>
-                        Pulumi supports programming against container orchestrators – Amazon’s ECS, EKS, and AWS Fargate. Pulumi is entirely unopinionated about how containers are built, published, and deployed to your orchestrator.
-                    </p>
-                    <p>
-                        This code builds and deploys a custom Dockerfile to a private ECR repository, and spin up a load balanced ECS service listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
+        <section class="w-full text-center mt-16">
+            <div>
+                <div>
+                    <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-3" style="fill: #4387c7;">
+                        {{ partial "superpower-icon.html" (dict "type" "provisioning")}}
+                    </div>
                 </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `import * as awsx from "@pulumi/awsx";
+                <p class="text-3xl font-bold inline-block">DEPLOY</p>
+            </div>
+            <p class="w-10/12 mx-auto text-4xl mt-0">Reduce obstacles and increase collaboration to ship faster.</p>
+            <p class="text-center w-1/2 mx-auto">
+                Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
+                ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
+                ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
+            </p>
+            <div class="flex flex-col md:flex-row mt-12">
+                <div class="w-full order-last md:w-1/2 md:order-first">
+                    {{ partial "home/cli" . }}
+                </div>
 
-const cluster = new awsx.ecs.Cluster("cluster");
+                <div class="w-full order-first md:w-1/2 md:order-last text-left px-10">
+                    <p class="text-lg font-bold">Architect for self-service</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
 
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
-    "net-lb", { external: true, securityGroups: cluster.securityGroups });
-const web = alb.createListener("web", { port: 80, external: true });
+                    <p class="text-lg font-bold">Collaboration made easy</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
 
-const img = awsx.ecs.Image.fromPath("app-img", "./app");
-
-const appService = new awsx.ecs.FargateService("app-svc", {
-    cluster,
-    taskDefinitionArgs: {
-        container: {
-            image: img,
-            cpu: 102 /*10% of 1024*/,
-            memory: 50 /*MB*/,
-            portMappings: [ web ],
-        },
-    },
-    desiredCount: 5,
-});
-
-export const url = web.endpoint.hostname;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                    <p class="text-lg font-bold">Continuous Delivery from Day 1</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Example 3 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Build and deploy Kubernetes apps to AWS EKS</h2>
-                    <p>
-                        Pulumi supports programming against Kubernetes – Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Amazon EKS.
-                    </p>
-                    <p>
-                        This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
+        <section class="w-full text-center mt-16">
+            <div>
+                <div>
+                    <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-3" style="fill: #4387c7;">
+                        {{ partial "superpower-icon.html" (dict "type" "testing")}}
+                    </div>
                 </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `// Deploy a simple app to Kubernetes.
+                <p class="text-3xl font-bold inline-block">MANAGE</p>
+            </div>
+            <p class="w-10/12 mx-auto text-4xl mt-0">Full auditability and visibility into all environments to tame complexity and put security first.</p>
+            <p class="text-center w-1/2 mx-auto">
+                Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
+                ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
+                ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
+            </p>
+            <div class="flex flex-col md:flex-row mt-12">
+                <div class="w-full order-last md:w-1/2 md:order-first">
+                    {{ partial "home/console" . }}
+                </div>
 
-import * as k8sjs from "./k8sjs";
+                <div class="w-full order-first md:w-1/2 md:order-last text-left px-10">
+                    <p class="text-lg font-bold">Secrets management made easy</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
 
-let redisLeader = new k8sjs.ServiceDeployment("redis-leader", {
-    image: "redis",
-    ports: [ 6379 ]
-});
+                    <p class="text-lg font-bold">Keep your workflows secure</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
 
-let redisReplica = new k8sjs.ServiceDeployment("redis-replica", {
-    image: "pulumi/guestbook-redis-replica",
-    ports: [ 6379 ]
-});
-
-let frontend = new k8sjs.ServiceDeployment("frontend", {
-    replicas: 3,
-    image: "pulumi/guestbook-php-redis",
-    ports: [ 80 ],
-    loadBalancer: true,
-});
-
-export let frontendIp = frontend.ipAddress;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                    <p class="text-lg font-bold">Manage your complexity</p>
+                    <p>
+                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
+                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Example 4 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Creating a Simple Web Server</h2>
-                    <p>
-                        Pulumi gives you a way to express AWS infrastructure configuration using your favorite programming language.
-                    </p>
-                    <p>
-                        This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `const aws = require("@pulumi/aws");
-
-let size = "t2.micro";
-let ami  = "ami-7172b611"
-
-// Create a new security group for port 80.
-let group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 22,
-          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-        { protocol: "tcp", fromPort: 80,
-          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
-});
-
-// Create a simple web server.
-let userData =
-    "#!/bin/bash \n" +
-    "echo 'Hello, World!' > index.html \n" +
-    "nohup python -m SimpleHTTPServer 80 &";
-
-let server = new aws.ec2.Instance("web-server-www", {
-    tags: { "Name": "web-server-www" },
-    instanceType: size,
-    securityGroups: [ group.name ],
-    ami: ami,
-    userData: userData
-});
-
-exports.publicIp = server.publicIp;
-exports.publicHostName = server.publicDns;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+        <!-- Customer logos -->
+        <section class="my-16 px-4">
+            <h3 class="mt-12 mb-8 text-center">
+                Trusted by top engineering teams
+            </h3>
+            <div class="container mx-auto">
+                <div class="lg:flex items-center justify-center my-4">
+                    <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank" rel="noreferrer noopener">
+                        <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
+                    </a>
+                    <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank" rel="noreferrer noopener">
+                        <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                    </a>
+                    <a data-track="customer-logo" href="https://www.mbusa.com/"  target="_blank" rel="noreferrer noopener">
+                        <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                    </a>
+                    <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank" rel="noreferrer noopener">
+                        <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                    </a>
+                    <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank" rel="noreferrer noopener">
+                        <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                    </a>
                 </div>
             </div>
-        </div>
+            <p class="text-blue-500 text-center font-bold mt-10">
+                <a data-track="logos-case-study" href="{{ relref . "/case-studies" }}">Read our customer use cases</a> &rarr;
+            </p>
+        </section>
+
+        <section class="flex mt-16">
+            <div class="w-1/2 p-10">
+                <p class="text-3xl font-bold inline-block">Feature Callout #1</p>
+                <p>
+                    Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
+                    velit urna, non semper sem sagittis nec. Aliquam aliquet risus quis urna ornare
+                    volutpat. Vivamus vitae laoreet turpis, sed aliquam orci. Suspendisse et ultrices
+                    dui. Nunc lobortis fringilla erat a auctor. Aenean consequat erat quis nulla auctor
+                    condimentum. Donec sollicitudin bibendum tortor.
+                </p>
+            </div>
+
+            <div class="w-1/2">
+                <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
+            </div>
+        </section>
+
+        <section class="flex mt-16">
+            <div class="w-1/2">
+                <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
+            </div>
+
+            <div class="w-1/2 p-10">
+                <p class="text-3xl font-bold inline-block">Feature Callout #2</p>
+                <p>
+                    Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
+                    velit urna, non semper sem sagittis nec. Aliquam aliquet risus quis urna ornare
+                    volutpat. Vivamus vitae laoreet turpis, sed aliquam orci. Suspendisse et ultrices
+                    dui. Nunc lobortis fringilla erat a auctor. Aenean consequat erat quis nulla auctor
+                    condimentum. Donec sollicitudin bibendum tortor.
+                </p>
+            </div>
+        </section>
+
+        <section class="flex mt-16">
+            <div class="w-1/2 p-10">
+                <p class="text-3xl font-bold inline-block">Feature Callout #3</p>
+                <p>
+                    Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
+                    velit urna, non semper sem sagittis nec. Aliquam aliquet risus quis urna ornare
+                    volutpat. Vivamus vitae laoreet turpis, sed aliquam orci. Suspendisse et ultrices
+                    dui. Nunc lobortis fringilla erat a auctor. Aenean consequat erat quis nulla auctor
+                    condimentum. Donec sollicitudin bibendum tortor.
+                </p>
+            </div>
+
+            <div class="w-1/2">
+                <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
+            </div>
+        </section>
+    </div>
+
+    <section class="container mx-auto mb-16">
+            <h3 class="mt-12 mb-8 text-center text-4xl font-bold">
+                Begin Your Pulumi Adventure
+            </h3>
+            <div class="w-full flex flex-wrap">
+                <div class="w-1/2 p-3">
+                    <div class="flex border rounded shadow-xl">
+                        <div class="w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/babypus.svg" />
+                        </div>
+
+                        <div class="w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Start from scratch</p>
+                            <p>
+                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
+                                velit urna, non semper sem sagittis nec.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="{{ relref . "/docs/get-started/aws" }}" class="hover:mr-1 transition-all">Get started</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/2 p-3">
+                    <div class="flex border rounded">
+                        <div class="w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/gandalfpus.svg" />
+                        </div>
+
+                        <div class="w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Import an existing resource</p>
+                            <p>
+                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
+                                velit urna, non semper sem sagittis nec.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="{{ relref . "/docs/guides/adopting" }}" class="hover:mr-1 transition-all">Read the guide</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/2 p-3">
+                    <div class="flex border rounded">
+                        <div class="w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/rocketpus.svg" />
+                        </div>
+
+                        <div class="w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Clone an example</p>
+                            <p>
+                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
+                                velit urna, non semper sem sagittis nec.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="https://github.com/pulumi/examples" target="_blank" rel="noopener noreferrer" class="hover:mr-1 transition-all">View the examples</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/2 p-3">
+                    <div class="flex border rounded">
+                        <div class="w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/eggpus.svg" />
+                        </div>
+
+                        <div class="w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Convert Terraform</p>
+                            <p>
+                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
+                                velit urna, non semper sem sagittis nec.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="{{ relref . "/tf2pulumi" }}" class="hover:mr-1 transition-all">Try tf2pulumi</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
-
-    {{ partial "how-pulumi-works.html" . }}
-
-    {{ partial "learning-machine.html" . }}
-
-    {{ partial "get-started.html" . }}
 
     {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
 {{ end }}
