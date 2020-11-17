@@ -1446,7 +1446,7 @@ This can be used to consume properties from a resource provisioned elsewhere. Fo
 ```javascript
 let aws = require("@pulumi/aws");
 
-let group = aws.ec2.SecurityGroup.get("sg-0dfd33cdac25b1ec9");
+let group = aws.ec2.SecurityGroup.get("group", "sg-0dfd33cdac25b1ec9");
 
 let server = new aws.ec2.Instance("web-server", {
     ami: "ami-6869aa05",
@@ -1461,7 +1461,7 @@ let server = new aws.ec2.Instance("web-server", {
 ```typescript
 import * as aws from "@pulumi/aws";
 
-let group = aws.ec2.SecurityGroup.get("sg-0dfd33cdac25b1ec9");
+let group = aws.ec2.SecurityGroup.get("group", "sg-0dfd33cdac25b1ec9");
 
 let server = new aws.ec2.Instance("web-server", {
     ami: "ami-6869aa05",
@@ -1476,7 +1476,7 @@ let server = new aws.ec2.Instance("web-server", {
 ```python
 import pulumi_aws as aws
 
-group = aws.ec2.SecurityGroup.get('sg-0dfd33cdac25b1ec9')
+group = aws.ec2.SecurityGroup.get('group', 'sg-0dfd33cdac25b1ec9')
 
 server = aws.ec2.Instance('web-server',
     ami='ami-6869aa05',
@@ -1524,7 +1524,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var group = SecurityGroup.Get("sg-0dfd33cdac25b1ec9");
+        var group = SecurityGroup.Get("group", "sg-0dfd33cdac25b1ec9");
 
         var server = new Instance("web-server", new InstanceArgs {
             Ami = "ami-6869aa05",
@@ -1538,6 +1538,8 @@ class MyStack : Stack
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+Note that two values are passed to the `get` function - the logical name Pulumi will use to refer to the resource, and the physical ID that the resource has in the target cloud.
 
 Importantly, Pulumi will never attempt to modify the Security Group in this example. It simply reads back its state from your currently configured cloud account, and then uses it as input for the EC2 Instance.
 
@@ -1960,6 +1962,13 @@ var connectionString = Output.All(sqlServer.name, database.name)
 // For more flexibility, 'Output.Tuple' is used so that each unwrapped value will preserve their distinct type.
 var connectionString2 = Output.Tuple(sqlServer.name, database.name)
     .Apply(t => `Server=tcp:${t.Item1}.database.windows.net;initial catalog=${t.Item2}...`);
+
+// Or using a more natural Tuple syntax and a statement lambda expression.
+var connectionString2 = Output.Tuple(sqlServer.name, database.name).Apply(t =>
+{
+    var (serverName, databaseName) = t;
+    return `Server=tcp:${serverName}.database.windows.net;initial catalog=${databaseName}...`;
+});
 ```
 
 {{% /choosable %}}
@@ -1991,7 +2000,8 @@ let certValidation = new aws.route53.Record("cert_validation", {
         certCertificate.domainValidationOptions.apply(
             domainValidationOptions => domainValidationOptions[0].resourceRecordValue),
     ],
-...
+    ...
+});
 ```
 
 {{% /choosable %}}
@@ -2008,7 +2018,8 @@ let certValidation = new aws.route53.Record("cert_validation", {
         certCertificate.domainValidationOptions.apply(
             domainValidationOptions => domainValidationOptions[0].resourceRecordValue),
     ],
-...
+    ...
+});
 ```
 
 {{% /choosable %}}
@@ -2027,21 +2038,52 @@ record = aws.route53.Record('validation',
             lambda domain_validation_options: domain_validation_options[0]['resourceRecordValue']
         )
     ],
-...
+    ...
+)
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-// Helpers for accessing properties are not yet available in Go.
+cert, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+    DomainName:       pulumi.String("example"),
+    ValidationMethod: pulumi.String("DNS"),
+})
+if err != nil {
+    return err
+}
+
+record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
+    Records: pulumi.StringArray{
+        cert.DomainValidationOptions.ApplyString(func(opts []acm.CertificateDomainValidationOption) string {
+            return *opts[0].ResourceRecordValue
+        }),
+    },
+    ...
+})
+if err != nil {
+    return err
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-// Helpers for accessing properties are not yet available in .NET.
+var cert = new Certificate("cert", new CertificateArgs
+{
+    DomainName = "example",
+    ValidationMethod = "DNS",
+});
+
+var record = new Record("validation", new RecordArgs
+{
+    Records = {
+        cert.DomainValidationOptions.Apply(opts => opts[0].ResourceRecordValue!)
+    },  
+    ...
+});
 ```
 
 {{% /choosable %}}
@@ -2101,14 +2143,47 @@ record = aws.route53.Record('validation',
 {{% choosable language go %}}
 
 ```go
-// Helpers for accessing properties are not yet available in Go.
+cert, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+    DomainName:       pulumi.String("example"),
+    ValidationMethod: pulumi.String("DNS"),
+})
+if err != nil {
+    return err
+}
+
+record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
+    Records: pulumi.StringArray{
+        // Notes:
+        // * `Index` looks up an index in an `ArrayOutput` and returns a new `Output`.
+        // * Accessor methods like `ResourceRecordValue` lookup properties of a custom struct `Output` and return a new `Output`.
+        // * `Elem` dereferences a `PtrOutput` to an `Output`, equivalent to `*`.
+        cert.DomainValidationOptions.Index(pulumi.Int(0)).ResourceRecordValue().Elem(),
+    },
+    ...
+})
+if err != nil {
+    return err
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-// Helpers for accessing properties are not yet available in .NET.
+var cert = new Certificate("cert", new CertificateArgs
+{
+    DomainName = "example",
+    ValidationMethod = "DNS",
+});
+
+var record = new Record("validation", new RecordArgs
+{
+    // Notes:
+    // * `GetAt` looks up an index in an `Output<ImmutableArray<T>>` and returns a new `Output<T>`
+    // * There are not yet accessor methods for referencing properties like `ResourceRecordValue` on an `Output<T>` directly,
+    //   so the `Apply` is still needed for the property access.
+    Records = cert.DomainValidationOptions.GetAt(0).Apply(opt => opt.ResourceRecordValue!),
+});
 ```
 
 {{% /choosable %}}
@@ -2192,6 +2267,7 @@ url = Output.all(hostname, port).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 var hostname pulumi.StringOutput
 var port pulumi.NumberOutput
 
+// Would like to produce a string equivalent to: http://${hostname}:${port}/
 url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
     return fmt.Sprintf("http://%s:%d/", args[0], args[1])
 })
