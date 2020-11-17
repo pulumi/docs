@@ -2181,7 +2181,7 @@ var record = new Record("validation", new RecordArgs
     // Notes:
     // * `GetAt` looks up an index in an `Output<ImmutableArray<T>>` and returns a new `Output<T>`
     // * There are not yet accessor methods for referencing properties like `ResourceRecordValue` on an `Output<T>` directly,
-    //   so the `Apply` is still needed for the property access. 
+    //   so the `Apply` is still needed for the property access.
     Records = cert.DomainValidationOptions.GetAt(0).Apply(opt => opt.ResourceRecordValue!),
 });
 ```
