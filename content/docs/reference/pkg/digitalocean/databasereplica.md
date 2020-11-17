@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseReplica resource of the DigitalOcean package, in
 
 Provides a DigitalOcean database replica resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1780,6 +1781,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

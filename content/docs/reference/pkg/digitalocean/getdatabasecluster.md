@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDatabaseCluster function of the DigitalOcean package,
 
 Provides information on a DigitalOcean database cluster resource.
 
+
 {{% examples %}}
 ## Example Usage
 

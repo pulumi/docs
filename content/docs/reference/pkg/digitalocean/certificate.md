@@ -17,6 +17,7 @@ Load Balancer configuration via their ID. The certificate can either
 be a custom one provided by you or automatically generated one with
 Let's Encrypt.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1662,6 +1663,8 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

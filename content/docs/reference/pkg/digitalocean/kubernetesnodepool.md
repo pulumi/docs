@@ -12,6 +12,7 @@ meta_desc: "Explore the KubernetesNodePool resource of the DigitalOcean package,
 
 Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean.KubernetesCluster` resource, this resource can be used to add additional ones to a cluster.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -174,7 +175,7 @@ class MyStack : Stack
             ClusterId = digitalocean_kubernetes_cluster.Foo.Id,
             Size = "s-1vcpu-2gb",
             AutoScale = true,
-            MinNodes = 0,
+            MinNodes = 1,
             MaxNodes = 5,
         });
     }
@@ -199,7 +200,7 @@ func main() {
 			ClusterId: pulumi.Any(digitalocean_kubernetes_cluster.Foo.Id),
 			Size:      pulumi.String("s-1vcpu-2gb"),
 			AutoScale: pulumi.Bool(true),
-			MinNodes:  pulumi.Int(0),
+			MinNodes:  pulumi.Int(1),
 			MaxNodes:  pulumi.Int(5),
 		})
 		if err != nil {
@@ -221,7 +222,7 @@ autoscale_pool_01 = digitalocean.KubernetesNodePool("autoscale-pool-01",
     cluster_id=digitalocean_kubernetes_cluster["foo"]["id"],
     size="s-1vcpu-2gb",
     auto_scale=True,
-    min_nodes=0,
+    min_nodes=1,
     max_nodes=5)
 ```
 
@@ -237,7 +238,7 @@ const autoscale_pool_01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
     clusterId: digitalocean_kubernetes_cluster.foo.id,
     size: "s-1vcpu-2gb",
     autoScale: true,
-    minNodes: 0,
+    minNodes: 1,
     maxNodes: 5,
 });
 ```
@@ -1971,6 +1972,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

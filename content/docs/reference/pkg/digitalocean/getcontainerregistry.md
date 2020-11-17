@@ -166,8 +166,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the container registry
-* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
-* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -179,6 +177,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="subscriptiontierslug_csharp">
+<a href="#subscriptiontierslug_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Tier<wbr>Slug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The slug identifier for the subscription tier
+* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
+* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -217,8 +228,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the container registry
-* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
-* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -230,6 +239,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="subscriptiontierslug_go">
+<a href="#subscriptiontierslug_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Tier<wbr>Slug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The slug identifier for the subscription tier
+* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
+* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -268,8 +290,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the container registry
-* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
-* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -281,6 +301,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="subscriptiontierslug_nodejs">
+<a href="#subscriptiontierslug_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Tier<wbr>Slug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The slug identifier for the subscription tier
+* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
+* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -319,8 +352,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the container registry
-* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
-* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -332,6 +363,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="subscription_tier_slug_python">
+<a href="#subscription_tier_slug_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>tier_<wbr>slug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The slug identifier for the subscription tier
+* `endpoint`: The URL endpoint of the container registry. Ex: `registry.digitalocean.com/my_registry`
+* `server_url`: The domain of the container registry. Ex: `registry.digitalocean.com`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

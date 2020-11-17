@@ -12,6 +12,7 @@ meta_desc: "Explore the DropletSnapshot resource of the DigitalOcean package, in
 
 Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1074,6 +1075,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

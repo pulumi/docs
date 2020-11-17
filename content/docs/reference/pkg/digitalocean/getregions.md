@@ -16,6 +16,7 @@ filter and sort the results. If no filters are specified, all regions will be re
 Note: You can use the `digitalocean.getRegion` data source
 to obtain metadata about a single region if you already know the `slug` to retrieve.
 
+
 {{% examples %}}
 ## Example Usage
 

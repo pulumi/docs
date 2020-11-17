@@ -13,6 +13,7 @@ meta_desc: "Explore the GetProject function of the DigitalOcean package, includi
 Get information on a single DigitalOcean project. If neither the `id` nor `name` attributes are provided,
 then this data source returns the default project.
 
+
 {{% examples %}}
 ## Example Usage
 

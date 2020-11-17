@@ -12,6 +12,7 @@ meta_desc: "Explore the Domain resource of the DigitalOcean package, including e
 
 Provides a DigitalOcean domain resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -805,6 +806,8 @@ is used to created an initial A record for the domain.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

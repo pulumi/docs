@@ -12,6 +12,7 @@ meta_desc: "Explore the Volume resource of the DigitalOcean package, including e
 
 Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1636,6 +1637,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

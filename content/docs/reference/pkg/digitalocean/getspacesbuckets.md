@@ -16,6 +16,7 @@ If no filters are specified, all Spaces buckets will be returned.
 Note: You can use the `digitalocean.SpacesBucket` data source to
 obtain metadata about a single bucket if you already know its `name` and `region`.
 
+
 {{% examples %}}
 ## Example Usage
 

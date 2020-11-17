@@ -14,6 +14,7 @@ Droplet snapshots are saved instances of a Droplet. Use this data
 source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 

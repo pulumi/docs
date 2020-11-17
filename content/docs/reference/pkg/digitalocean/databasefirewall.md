@@ -14,6 +14,7 @@ Provides a DigitalOcean database firewall resource allowing you to restrict
 connections to your database to trusted sources. You may limit connections to
 specific Droplets, Kubernetes clusters, or IP addresses.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1153,6 +1154,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

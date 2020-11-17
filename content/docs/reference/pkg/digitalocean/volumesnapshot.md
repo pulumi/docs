@@ -12,6 +12,7 @@ meta_desc: "Explore the VolumeSnapshot resource of the DigitalOcean package, inc
 
 Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1162,6 +1163,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

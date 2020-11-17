@@ -14,6 +14,7 @@ Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 [provisioning](https://www.terraform.io/docs/provisioners/index.html).
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2907,6 +2908,8 @@ to retrieve them.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

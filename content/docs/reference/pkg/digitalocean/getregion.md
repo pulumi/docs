@@ -13,6 +13,7 @@ meta_desc: "Explore the GetRegion function of the DigitalOcean package, includin
 Get information on a single DigitalOcean region. This is useful to find out
 what Droplet sizes and features are supported within a region.
 
+
 {{% examples %}}
 ## Example Usage
 

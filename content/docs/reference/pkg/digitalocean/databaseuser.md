@@ -14,6 +14,7 @@ Provides a DigitalOcean database user resource. When creating a new database clu
 
 > **NOTE:** Any new users created will always have `normal` role, only the default user that comes with database cluster creation has `primary` role. Additional permissions must be managed manually.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -995,6 +996,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
