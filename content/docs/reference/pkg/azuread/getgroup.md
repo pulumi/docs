@@ -14,6 +14,7 @@ Gets information about an Azure Active Directory group.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Read directory data` within the `Windows Azure Active Directory` API.
 
+
 {{% examples %}}
 ## Example Usage
 

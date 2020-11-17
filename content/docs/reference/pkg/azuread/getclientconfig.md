@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClientConfig function of the Azure AD package, includ
 
 Use this data source to access the configuration of the AzureRM provider.
 
+
 {{% examples %}}
 ## Example Usage
 

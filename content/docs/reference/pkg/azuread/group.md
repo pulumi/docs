@@ -1053,6 +1053,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Azure Active Directory Groups can be imported using the `object id`, e.g.
+
+```sh
+ $ pulumi import azuread:index/group:Group my_group 00000000-0000-0000-0000-000000000000
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
