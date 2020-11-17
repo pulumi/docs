@@ -236,6 +236,10 @@ Although you can use any editor, [Visual Studio Code](https://code.visualstudio.
 
 ![VSCode](/images/docs/quickstart/vscode-dotnet.png)
 
+## Pulumi Programming Model
+
+The Pulumi programming model includes a core concept of `Output` and `Input` types, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with .NET and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
+
 ## Continuous Delivery
 
 In addition to the CLI-driven workflows shown above, you can continuously deploy your infrastructure using .NET by integrating with your CI/CD provider of choice. This ensures automated deployments triggered by events such as commits to your Git repo.

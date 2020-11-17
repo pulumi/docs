@@ -2071,7 +2071,19 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-// Helpers for accessing properties are not yet available in .NET.
+var cert = new Certificate("cert", new CertificateArgs
+{
+    DomainName = "example",
+    ValidationMethod = "DNS",
+});
+
+var record = new Record("validation", new RecordArgs
+{
+    Records = {
+        cert.DomainValidationOptions.Apply(opts => opts[0].ResourceRecordValue!)
+    },  
+    ...
+});
 ```
 
 {{% /choosable %}}
@@ -2158,7 +2170,20 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-// Helpers for accessing properties are not yet available in .NET.
+var cert = new Certificate("cert", new CertificateArgs
+{
+    DomainName = "example",
+    ValidationMethod = "DNS",
+});
+
+var record = new Record("validation", new RecordArgs
+{
+    // Notes:
+    // * `GetAt` looks up an index in an `Output<ImmutableArray<T>>` and returns a new `Output<T>`
+    // * There are not yet accessor methods for referencing properties like `ResourceRecordValue` on an `Output<T>` directly,
+    //   so the `Apply` is still needed for the property access. 
+    Records = cert.DomainValidationOptions.GetAt(0).Apply(opt => opt.ResourceRecordValue!),
+});
 ```
 
 {{% /choosable %}}
@@ -2242,6 +2267,7 @@ url = Output.all(hostname, port).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 var hostname pulumi.StringOutput
 var port pulumi.NumberOutput
 
+// Would like to produce a string equivalent to: http://${hostname}:${port}/
 url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
     return fmt.Sprintf("http://%s:%d/", args[0], args[1])
 })
