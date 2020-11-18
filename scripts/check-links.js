@@ -258,6 +258,7 @@ function getDefaultExcludedKeywords() {
         "https://gitlab.com/users/sign_in",
         "https://gitlab.com/profile/applications",
         "https://blog.coinbase.com/",
+        "https://www.netfilter.org/",
     ];
 }
 
