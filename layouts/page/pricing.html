@@ -22,7 +22,8 @@
                     <p class="pricing-plans-item-header">COMMUNITY</p>
                     <p class="pricing-plans-item-description">The basics of infrastructure as code for unlimited individual use.</p>
                     <p class="pricing-plans-item-price">FREE</p>
-                    <p class="text-xs mb-8 pb-1">Free for individuals</p>
+                    <p class="text-xs mb-0">Free for individuals</p>
+                    <p class="text-xs mt-1"><a href="#open-source">Open Source</a> for teams</p>
                     <p class="pricing-plans-item-info-title">Everything to get started:</p>
                     <div class="text-center">
                         <ul class="list-none text-left inline-block">
@@ -58,8 +59,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mt-6 lg:mt-12">
-                        <a href="{{ relref . "/docs/get-started" }}" class="btn btn-purple lg:btn-purple-transparent px-6 py-3">GET STARTED</a>
+                    <div class="mt-6 lg:mt-16 lg:pt-3">
+                        <a href="{{ relref . "/docs/get-started" }}" class="btn btn-purple px-6 py-3 inline-block lg:hidden">GET STARTED</a>
+                        <a href="{{ relref . "/docs/get-started" }}" class="btn btn-purple-transparent px-6 py-3 hidden lg:inline-block">GET STARTED</a>
                     </div>
                 </div>
             </div>
@@ -136,6 +138,12 @@
                                     <span>
                                         <i class="fa fa-check text-green-500 mr-2"></i>
                                         <span>APIs and webhooks</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <i class="fa fa-check text-green-500 mr-2"></i>
+                                        <span>CI/CD Assistant</span>
                                     </span>
                                 </li>
                                 <li>
@@ -428,6 +436,36 @@
 
             <div class="compare-plans-table-row-container">
                 <div class="compare-plans-table-row-item">
+                    <span>Timeline</span>
+                </div>
+                <div class="compare-plans-table-row-item">
+                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
+                </div>
+                <div class="compare-plans-table-row-item">
+                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
+                </div>
+                <div class="compare-plans-table-row-item">
+                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
+                </div>
+            </div>
+
+            <div class="compare-plans-table-row-container">
+                <div class="compare-plans-table-row-item">
+                    <span>GitOps workflows</span>
+                </div>
+                <div class="compare-plans-table-row-item">
+                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
+                </div>
+                <div class="compare-plans-table-row-item">
+                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
+                </div>
+                <div class="compare-plans-table-row-item">
+                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
+                </div>
+            </div>
+
+            <div class="compare-plans-table-row-container">
+                <div class="compare-plans-table-row-item">
                     <span><a class="text-blue-500 underline" href="{{ relref . "/docs/guides/continuous-delivery" }}">CI/CD integrations</a></span>
                 </div>
                 <div class="compare-plans-table-row-item">
@@ -461,25 +499,10 @@
 
             <div class="compare-plans-table-row-container">
                 <div class="compare-plans-table-row-item">
-                    <span>Timeline</span>
+                    <span><a class="text-blue-500 underline" href="{{ relref . "/docs/intro/console/extensions/ci-cd-integration-assistant" }}">CI/CD Assistant</a></span>
                 </div>
                 <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>GitOps workflows</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
+                    <span></span>
                 </div>
                 <div class="compare-plans-table-row-item">
                     <span><i class="fa fa-check text-green-500 mr-2"></i></span>
