@@ -8399,6 +8399,24 @@ Structure is documented below.
 
 
 
+## Import
+
+
+FlexibleAppVersion can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default apps/{{project}}/services/{{service}}/versions/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default {{project}}/{{service}}/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default {{service}}/{{version_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -14,6 +14,7 @@ Get a network within GCE from its name.
 
 
 
+
 ## Using GetNetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

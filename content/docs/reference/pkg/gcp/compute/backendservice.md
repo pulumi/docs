@@ -6706,6 +6706,24 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 
 
+## Import
+
+
+BackendService can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/backendService:BackendService default projects/{{project}}/global/backendServices/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/backendService:BackendService default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/backendService:BackendService default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

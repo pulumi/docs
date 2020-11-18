@@ -1021,6 +1021,16 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+EntryGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datacatalog/entryGroup:EntryGroup default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

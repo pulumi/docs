@@ -1668,6 +1668,24 @@ consecutive failures. The default value is 2.
 
 
 
+## Import
+
+
+HttpHealthCheck can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/httpHealthCheck:HttpHealthCheck default projects/{{project}}/global/httpHealthChecks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/httpHealthCheck:HttpHealthCheck default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/httpHealthCheck:HttpHealthCheck default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

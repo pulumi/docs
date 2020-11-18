@@ -1655,6 +1655,28 @@ CIDR-formatted string.
 
 
 
+## Import
+
+
+Router can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/router:Router default projects/{{project}}/regions/{{region}}/routers/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/router:Router default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/router:Router default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/router:Router default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

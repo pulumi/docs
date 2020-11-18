@@ -5134,6 +5134,16 @@ will be set to "-infinity", defining an open range
 
 
 
+## Import
+
+
+Slo can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/slo:Slo default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

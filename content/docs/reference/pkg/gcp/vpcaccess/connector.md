@@ -1269,6 +1269,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Connector can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default projects/{{project}}/locations/{{region}}/connectors/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:vpcaccess/connector:Connector default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -14,6 +14,7 @@ Get a global forwarding rule within GCE from its name.
 
 
 
+
 ## Using GetGlobalForwardingRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

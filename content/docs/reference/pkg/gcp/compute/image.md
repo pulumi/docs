@@ -2426,6 +2426,24 @@ This is provided by the client when the disk image is created.
 
 
 
+## Import
+
+
+Image can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/image:Image default projects/{{project}}/global/images/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/image:Image default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/image:Image default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

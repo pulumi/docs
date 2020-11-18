@@ -2247,6 +2247,16 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 
 
 
+## Import
+
+
+Applications can be imported using the ID of the project the application belongs to, e.g.
+
+```sh
+ $ pulumi import gcp:appengine/application:Application app your-project-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

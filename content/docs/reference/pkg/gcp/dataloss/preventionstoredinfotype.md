@@ -2395,6 +2395,20 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 
 
+## Import
+
+
+StoredInfoType can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType default {{parent}}/storedInfoTypes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType default {{parent}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

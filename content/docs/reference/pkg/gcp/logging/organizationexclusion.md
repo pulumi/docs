@@ -932,6 +932,16 @@ write a filter.
 
 
 
+## Import
+
+
+Organization-level logging exclusions can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:logging/organizationExclusion:OrganizationExclusion my_exclusion organizations/{{organization}}/exclusions/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

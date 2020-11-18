@@ -1386,6 +1386,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+TargetInstance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/targetInstance:TargetInstance default projects/{{project}}/zones/{{zone}}/targetInstances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetInstance:TargetInstance default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetInstance:TargetInstance default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetInstance:TargetInstance default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

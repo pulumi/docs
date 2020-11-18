@@ -1021,6 +1021,22 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 
 
 
+## Import
+
+
+DNS record sets can be imported using either of these accepted formats
+
+```sh
+ $ pulumi import gcp:dns/recordSet:RecordSet frontend {{project}}/{{zone}}/{{name}}/{{type}}
+```
+
+```sh
+ $ pulumi import gcp:dns/recordSet:RecordSet frontend {{zone}}/{{name}}/{{type}}
+```
+
+ NoteThe record name must include the trailing dot at the end.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

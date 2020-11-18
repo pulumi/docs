@@ -2442,6 +2442,16 @@ Structure is documented below.
 
 
 
+## Import
+
+
+AccessLevel can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/accessLevel:AccessLevel default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1149,6 +1149,20 @@ If unspecified, it defaults to the compute engine default service account.
 
 
 
+## Import
+
+
+Repository can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:sourcerepo/repository:Repository default projects/{{project}}/repos/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sourcerepo/repository:Repository default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

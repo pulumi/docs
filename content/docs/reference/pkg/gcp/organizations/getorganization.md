@@ -14,6 +14,7 @@ Get information about a Google Cloud Organization. Note that you must have the `
 
 
 
+
 ## Using GetOrganization {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

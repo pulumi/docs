@@ -1792,6 +1792,16 @@ Structure is documented below.
 
 
 
+## Import
+
+
+TagTemplate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datacatalog/tagTemplate:TagTemplate default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

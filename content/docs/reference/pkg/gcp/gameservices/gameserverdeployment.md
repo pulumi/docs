@@ -1029,6 +1029,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+GameServerDeployment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeployment:GameServerDeployment default projects/{{project}}/locations/{{location}}/gameServerDeployments/{{deployment_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeployment:GameServerDeployment default {{project}}/{{location}}/{{deployment_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeployment:GameServerDeployment default {{location}}/{{deployment_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

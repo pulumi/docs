@@ -4764,6 +4764,24 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 
 
+## Import
+
+
+StandardAppVersion can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/standardAppVersion:StandardAppVersion default apps/{{project}}/services/{{service}}/versions/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/standardAppVersion:StandardAppVersion default {{project}}/{{service}}/{{version_id}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/standardAppVersion:StandardAppVersion default {{service}}/{{version_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -660,6 +660,16 @@ is not provided, the provider project is used.
 
 
 
+## Import
+
+
+This resource can be imported using the project ID
+
+```sh
+ $ pulumi import gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier default project-id`
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

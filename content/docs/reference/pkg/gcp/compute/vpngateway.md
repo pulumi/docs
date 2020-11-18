@@ -1231,6 +1231,28 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+VpnGateway can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/vPNGateway:VPNGateway default projects/{{project}}/regions/{{region}}/targetVpnGateways/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/vPNGateway:VPNGateway default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/vPNGateway:VPNGateway default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/vPNGateway:VPNGateway default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

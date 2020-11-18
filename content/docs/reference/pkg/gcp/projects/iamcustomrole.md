@@ -1201,6 +1201,16 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
 
 
 
+## Import
+
+
+Customized IAM project role can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMCustomRole:IAMCustomRole my-custom-role projects/my-project/roles/myCustomRole
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

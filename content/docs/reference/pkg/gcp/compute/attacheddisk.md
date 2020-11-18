@@ -1091,6 +1091,20 @@ READ_WRITE mode.
 
 
 
+## Import
+
+
+Attached Disk can be imported the following ways
+
+```sh
+ $ pulumi import gcp:compute/attachedDisk:AttachedDisk default projects/{{project}}/zones/{{zone}}/instances/{{instance.name}}/{{disk.name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/attachedDisk:AttachedDisk default {{project}}/{{zone}}/{{instance.name}}/{{disk.name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

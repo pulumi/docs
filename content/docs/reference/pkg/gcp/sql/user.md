@@ -951,6 +951,22 @@ is not provided, the provider project is used.
 
 
 
+## Import
+
+
+SQL users for MySQL databases can be imported using the `project`, `instance`, `host` and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:sql/user:User users my-project/master-instance/my-domain.com/me
+```
+
+ SQL users for PostgreSQL databases can be imported using the `project`, `instance` and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:sql/user:User users my-project/master-instance/me
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

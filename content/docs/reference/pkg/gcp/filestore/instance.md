@@ -2147,6 +2147,28 @@ addresses reserved for this instance.
 
 
 
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default projects/{{project}}/locations/{{zone}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:filestore/instance:Instance default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

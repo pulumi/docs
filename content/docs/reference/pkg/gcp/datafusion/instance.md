@@ -2317,6 +2317,28 @@ project the network should specified in the form of projects/{host-project-id}/g
 
 
 
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datafusion/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:datafusion/instance:Instance default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:datafusion/instance:Instance default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:datafusion/instance:Instance default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

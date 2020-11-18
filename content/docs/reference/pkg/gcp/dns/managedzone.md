@@ -3157,6 +3157,24 @@ Ignored for `public` visibility zones.
 
 
 
+## Import
+
+
+ManagedZone can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:dns/managedZone:ManagedZone default projects/{{project}}/managedZones/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/managedZone:ManagedZone default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:dns/managedZone:ManagedZone default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

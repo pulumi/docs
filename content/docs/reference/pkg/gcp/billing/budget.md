@@ -2181,6 +2181,16 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 
 
 
+## Import
+
+
+Budget can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:billing/budget:Budget default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

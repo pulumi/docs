@@ -646,6 +646,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Google Compute Engine Shared VPC service project feature can be imported using the `host_project` and `service_project`, e.g.
+
+```sh
+ $ pulumi import gcp:compute/sharedVPCServiceProject:SharedVPCServiceProject service1 host-project-id/service-project-id-1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

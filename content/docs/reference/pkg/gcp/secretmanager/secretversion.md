@@ -1002,6 +1002,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SecretVersion can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:secretmanager/secretVersion:SecretVersion default {{name}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

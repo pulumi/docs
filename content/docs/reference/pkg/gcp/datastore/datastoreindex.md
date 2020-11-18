@@ -1085,6 +1085,24 @@ Possible values are `ASCENDING` and `DESCENDING`.
 
 
 
+## Import
+
+
+Index can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default projects/{{project}}/indexes/{{index_id}}
+```
+
+```sh
+ $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default {{project}}/{{index_id}}
+```
+
+```sh
+ $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default {{index_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

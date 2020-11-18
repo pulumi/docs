@@ -2421,6 +2421,16 @@ limited by this option.
 
 
 
+## Import
+
+
+Config can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigquery/dataTransferConfig:DataTransferConfig default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

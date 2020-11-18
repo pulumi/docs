@@ -1206,6 +1206,16 @@ you will need to use the project-level name.
 
 
 
+## Import
+
+
+Storage notifications can be imported using the notification `id` in the format `<bucket_name>/notificationConfigs/<id>` e.g.
+
+```sh
+ $ pulumi import gcp:storage/notification:Notification notification default_bucket/notificationConfigs/102
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

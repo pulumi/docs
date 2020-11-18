@@ -927,6 +927,16 @@ Format: organizations/{organization_id}
 
 
 
+## Import
+
+
+AccessPolicy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:accesscontextmanager/accessPolicy:AccessPolicy default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

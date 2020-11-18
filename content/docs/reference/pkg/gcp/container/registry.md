@@ -729,6 +729,12 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+This resource does not support import.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

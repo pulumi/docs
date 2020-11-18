@@ -2485,6 +2485,20 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
 
 
 
+## Import
+
+
+Metric can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:logging/metric:Metric default {{project}} {{name}}
+```
+
+```sh
+ $ pulumi import gcp:logging/metric:Metric default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

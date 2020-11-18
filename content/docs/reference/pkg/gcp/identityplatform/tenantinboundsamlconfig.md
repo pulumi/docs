@@ -1737,6 +1737,24 @@ The x509 certificate
 
 
 
+## Import
+
+
+TenantInboundSamlConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default projects/{{project}}/tenants/{{tenant}}/inboundSamlConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{project}}/{{tenant}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{tenant}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

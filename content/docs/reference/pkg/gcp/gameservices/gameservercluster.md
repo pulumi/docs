@@ -1491,6 +1491,24 @@ GKE cluster.
 
 
 
+## Import
+
+
+GameServerCluster can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default projects/{{project}}/locations/{{location}}/realms/{{realm_id}}/gameServerClusters/{{cluster_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default {{project}}/{{location}}/{{realm_id}}/{{cluster_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerCluster:GameServerCluster default {{location}}/{{realm_id}}/{{cluster_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

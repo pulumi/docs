@@ -1649,6 +1649,24 @@ The x509 certificate
 
 
 
+## Import
+
+
+InboundSamlConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default projects/{{project}}/inboundSamlConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

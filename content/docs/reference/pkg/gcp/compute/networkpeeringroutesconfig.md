@@ -920,6 +920,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+NetworkPeeringRoutesConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default projects/{{project}}/global/networks/{{network}}/networkPeerings/{{peering}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{project}}/{{network}}/{{peering}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{network}}/{{peering}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

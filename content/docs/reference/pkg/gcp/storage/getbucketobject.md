@@ -17,6 +17,7 @@ and
 
 
 
+
 ## Using GetBucketObject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

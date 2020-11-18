@@ -1846,6 +1846,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
 
 
 
+## Import
+
+
+Project organization policies can be imported using any of the follow formats
+
+```sh
+ $ pulumi import gcp:projects/organizationPolicy:OrganizationPolicy policy projects/test-project:constraints/serviceuser.services
+```
+
+```sh
+ $ pulumi import gcp:projects/organizationPolicy:OrganizationPolicy policy test-project:constraints/serviceuser.services
+```
+
+```sh
+ $ pulumi import gcp:projects/organizationPolicy:OrganizationPolicy policy test-project:serviceuser.services
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

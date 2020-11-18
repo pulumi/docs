@@ -1037,6 +1037,20 @@ Possible values are `FIREWALL`.
 
 
 
+## Import
+
+
+OrganizationSecurityPolicy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy default locations/global/securityPolicies/{{policy_id}}
+```
+
+```sh
+ $ pulumi import gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy default {{policy_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

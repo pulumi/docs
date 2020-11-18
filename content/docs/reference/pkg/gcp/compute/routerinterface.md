@@ -1170,6 +1170,16 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
 
 
 
+## Import
+
+
+Router interfaces can be imported using the `region`, `router`, and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:compute/routerInterface:RouterInterface foobar us-central1/router-1/interface-1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

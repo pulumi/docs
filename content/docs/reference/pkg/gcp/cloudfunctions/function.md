@@ -2840,6 +2840,20 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 
 
+## Import
+
+
+Functions can be imported using the `name` or `{{project}}/{{region}}/name`, e.g.
+
+```sh
+ $ pulumi import gcp:cloudfunctions/function:Function default function-test
+```
+
+```sh
+ $ pulumi import gcp:cloudfunctions/function:Function default {{project}}/{{region}}/function-test
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

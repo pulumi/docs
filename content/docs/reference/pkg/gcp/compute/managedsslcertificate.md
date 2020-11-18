@@ -1563,6 +1563,24 @@ there can be up to 100 domains in this list.
 
 
 
+## Import
+
+
+ManagedSslCertificate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default projects/{{project}}/global/sslCertificates/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

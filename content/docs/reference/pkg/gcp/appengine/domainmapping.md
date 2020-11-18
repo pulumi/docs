@@ -1443,6 +1443,24 @@ field will be left empty. To remove SSL support while there is still a pending m
 
 
 
+## Import
+
+
+DomainMapping can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:appengine/domainMapping:DomainMapping default apps/{{project}}/domainMappings/{{domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{project}}/{{domain_name}}
+```
+
+```sh
+ $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{domain_name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

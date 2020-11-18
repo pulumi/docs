@@ -1681,6 +1681,20 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
 
 
+## Import
+
+
+Policy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:binaryauthorization/policy:Policy default projects/{{project}}
+```
+
+```sh
+ $ pulumi import gcp:binaryauthorization/policy:Policy default {{project}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

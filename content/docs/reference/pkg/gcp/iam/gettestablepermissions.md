@@ -14,6 +14,7 @@ Retrieve a list of testable permissions for a resource. Testable permissions mea
 
 
 
+
 ## Using GetTestablePermissions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

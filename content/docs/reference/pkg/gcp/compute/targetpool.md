@@ -1443,6 +1443,28 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 
 
 
+## Import
+
+
+Target pools can be imported using any of the following formats
+
+```sh
+ $ pulumi import gcp:compute/targetPool:TargetPool default projects/{{project}}/regions/{{region}}/targetPools/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetPool:TargetPool default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetPool:TargetPool default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/targetPool:TargetPool default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

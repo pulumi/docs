@@ -2485,6 +2485,24 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
 
 
 
+## Import
+
+
+Snapshot can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/snapshot:Snapshot default projects/{{project}}/global/snapshots/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/snapshot:Snapshot default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/snapshot:Snapshot default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

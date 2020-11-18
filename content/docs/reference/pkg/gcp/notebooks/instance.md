@@ -3745,6 +3745,24 @@ Format: projects/{project_id}
 
 
 
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:notebooks/instance:Instance default projects/{{project}}/locations/{{location}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:notebooks/instance:Instance default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:notebooks/instance:Instance default {{location}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

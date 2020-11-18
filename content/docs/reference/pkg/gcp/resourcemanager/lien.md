@@ -1071,6 +1071,16 @@ e.g. ['resourcemanager.projects.delete']
 
 
 
+## Import
+
+
+Lien can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:resourcemanager/lien:Lien default {{parent}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1205,6 +1205,24 @@ https://www.iana.org/time-zones.
 
 
 
+## Import
+
+
+Realm can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/realm:Realm default projects/{{project}}/locations/{{location}}/realms/{{realm_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/realm:Realm default {{project}}/{{location}}/{{realm_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/realm:Realm default {{location}}/{{realm_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

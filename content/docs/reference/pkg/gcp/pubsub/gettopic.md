@@ -16,6 +16,7 @@ and [API](https://cloud.google.com/pubsub/docs/apis).
 
 
 
+
 ## Using GetTopic {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

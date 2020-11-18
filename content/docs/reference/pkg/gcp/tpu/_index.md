@@ -28,7 +28,7 @@ Explore the resources and functions of the tpu module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.3.0</dd>
+	<dd>4.4.0</dd>
 </dl>
 
 

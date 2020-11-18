@@ -14,6 +14,7 @@ Use this data source to access the configuration of the Google Cloud provider.
 
 
 
+
 ## Using GetClientConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

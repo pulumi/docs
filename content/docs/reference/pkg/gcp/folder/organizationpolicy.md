@@ -1854,6 +1854,20 @@ are inherited, meaning the values set in this Policy are added to the values inh
 
 
 
+## Import
+
+
+Folder organization policies can be imported using any of the follow formats
+
+```sh
+ $ pulumi import gcp:folder/organizationPolicy:OrganizationPolicy policy folders/folder-1234/constraints/serviceuser.services
+```
+
+```sh
+ $ pulumi import gcp:folder/organizationPolicy:OrganizationPolicy policy folder-1234/serviceuser.services
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

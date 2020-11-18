@@ -1471,6 +1471,24 @@ customer-supplied encryption key that protects this resource.
 
 
 
+## Import
+
+
+MachineImage can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/machineImage:MachineImage default projects/{{project}}/global/machineImages/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/machineImage:MachineImage default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/machineImage:MachineImage default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

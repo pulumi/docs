@@ -3,7 +3,7 @@ title: "Module cloudtasks"
 title_tag: "Module cloudtasks | Package @pulumi/gcp | Node.js SDK"
 linktitle: "cloudtasks"
 meta_desc: "Explore members of the cloudtasks module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "502f0aa78e18487c0b58dbc1406e5e47e3bed7c6"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Queue" data-link-title="Queue">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L68">
         Resource <strong>Queue</strong>
     </a>
 </h3>
@@ -40,9 +40,64 @@ block_external_search_index: true
 A named resource to which messages are sent by publishers.
 
 #### Example Usage
+##### Queue Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultQueue = new gcp.cloudtasks.Queue("default", {
+    location: "us-central1",
+});
+```
+##### Cloud Tasks Queue Advanced
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const advancedConfiguration = new gcp.cloudtasks.Queue("advanced_configuration", {
+    appEngineRoutingOverride: {
+        instance: "test",
+        service: "worker",
+        version: "1.0",
+    },
+    location: "us-central1",
+    rateLimits: {
+        maxConcurrentDispatches: 3,
+        maxDispatchesPerSecond: 2,
+    },
+    retryConfig: {
+        maxAttempts: 5,
+        maxBackoff: "3s",
+        maxDoublings: 1,
+        maxRetryDuration: "4s",
+        minBackoff: "2s",
+    },
+    stackdriverLoggingConfig: {
+        samplingRatio: 0.9,
+    },
+});
+```
+
+#### Import
+
+Queue can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default projects/{{project}}/locations/{{location}}/queues/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default {{location}}/{{name}}
+```
 
 <h4 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L135"> <b>constructor</b></a>
 </h4>
 
 
@@ -56,7 +111,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -67,14 +122,14 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Queue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -85,7 +140,7 @@ Returns true if the given object is an instance of Queue.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Queue-appEngineRoutingOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L47">property <b>appEngineRoutingOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L101">property <b>appEngineRoutingOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appEngineRoutingOverride: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueAppEngineRoutingOverride'>QueueAppEngineRoutingOverride</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -95,7 +150,7 @@ to App Engine tasks in this queue
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -104,7 +159,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Queue-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L51">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L105">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -112,7 +167,7 @@ deployments and may be missing (undefined) during planning phases.
 The location of the queue
 
 <h4 class="pdoc-member-header" id="Queue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +175,7 @@ The location of the queue
 The queue name.
 
 <h4 class="pdoc-member-header" id="Queue-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L60">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L114">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -129,7 +184,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Queue-rateLimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L71">property <b>rateLimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L125">property <b>rateLimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rateLimits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueRateLimits'>QueueRateLimits</a>&gt;;</code></pre>
@@ -144,7 +199,7 @@ smooth sudden large traffic spikes.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Queue-retryConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L76">property <b>retryConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L130">property <b>retryConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retryConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueRetryConfig'>QueueRetryConfig</a>&gt;;</code></pre>
@@ -153,7 +208,7 @@ Settings that determine the retry behavior.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Queue-stackdriverLoggingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L81">property <b>stackdriverLoggingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L135">property <b>stackdriverLoggingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackdriverLoggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueStackdriverLoggingConfig'>QueueStackdriverLoggingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +217,7 @@ Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Queue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -174,7 +229,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="QueueArgs" data-link-title="QueueArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L229">
         interface <strong>QueueArgs</strong>
     </a>
 </h3>
@@ -184,7 +239,7 @@ deployments.
 The set of arguments for constructing a Queue resource.
 
 <h4 class="pdoc-member-header" id="QueueArgs-appEngineRoutingOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L181">property <b>appEngineRoutingOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L235">property <b>appEngineRoutingOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appEngineRoutingOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueAppEngineRoutingOverride'>QueueAppEngineRoutingOverride</a>&gt;;</code></pre>
@@ -194,7 +249,7 @@ to App Engine tasks in this queue
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="QueueArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L185">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L239">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +257,7 @@ Structure is documented below.
 The location of the queue
 
 <h4 class="pdoc-member-header" id="QueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L243">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +265,7 @@ The location of the queue
 The queue name.
 
 <h4 class="pdoc-member-header" id="QueueArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L194">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L248">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -219,7 +274,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="QueueArgs-rateLimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L205">property <b>rateLimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L259">property <b>rateLimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rateLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueRateLimits'>QueueRateLimits</a>&gt;;</code></pre>
@@ -234,7 +289,7 @@ smooth sudden large traffic spikes.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="QueueArgs-retryConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L210">property <b>retryConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L264">property <b>retryConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueRetryConfig'>QueueRetryConfig</a>&gt;;</code></pre>
@@ -243,7 +298,7 @@ Settings that determine the retry behavior.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="QueueArgs-stackdriverLoggingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L215">property <b>stackdriverLoggingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L269">property <b>stackdriverLoggingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackdriverLoggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueStackdriverLoggingConfig'>QueueStackdriverLoggingConfig</a>&gt;;</code></pre>
@@ -252,7 +307,7 @@ Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="QueueState" data-link-title="QueueState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L183">
         interface <strong>QueueState</strong>
     </a>
 </h3>
@@ -262,7 +317,7 @@ Structure is documented below.
 Input properties used for looking up and filtering Queue resources.
 
 <h4 class="pdoc-member-header" id="QueueState-appEngineRoutingOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L135">property <b>appEngineRoutingOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L189">property <b>appEngineRoutingOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appEngineRoutingOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueAppEngineRoutingOverride'>QueueAppEngineRoutingOverride</a>&gt;;</code></pre>
@@ -272,7 +327,7 @@ to App Engine tasks in this queue
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="QueueState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L139">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L193">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +335,7 @@ Structure is documented below.
 The location of the queue
 
 <h4 class="pdoc-member-header" id="QueueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L143">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -288,7 +343,7 @@ The location of the queue
 The queue name.
 
 <h4 class="pdoc-member-header" id="QueueState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L148">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L202">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +352,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="QueueState-rateLimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L159">property <b>rateLimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L213">property <b>rateLimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rateLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueRateLimits'>QueueRateLimits</a>&gt;;</code></pre>
@@ -312,7 +367,7 @@ smooth sudden large traffic spikes.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="QueueState-retryConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L164">property <b>retryConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L218">property <b>retryConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueRetryConfig'>QueueRetryConfig</a>&gt;;</code></pre>
@@ -321,7 +376,7 @@ Settings that determine the retry behavior.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="QueueState-stackdriverLoggingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/cloudtasks/queue.ts#L169">property <b>stackdriverLoggingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/502f0aa78e18487c0b58dbc1406e5e47e3bed7c6/sdk/nodejs/cloudtasks/queue.ts#L223">property <b>stackdriverLoggingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackdriverLoggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueStackdriverLoggingConfig'>QueueStackdriverLoggingConfig</a>&gt;;</code></pre>

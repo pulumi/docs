@@ -2059,6 +2059,16 @@ Possible values are `STRING`, `BOOL`, and `INT64`.
 
 
 
+## Import
+
+
+MetricDescriptor can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:monitoring/metricDescriptor:MetricDescriptor default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

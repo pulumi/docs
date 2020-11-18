@@ -1968,6 +1968,28 @@ CIDR-formatted string.
 
 
 
+## Import
+
+
+RouterBgpPeer can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/routerPeer:RouterPeer default projects/{{project}}/regions/{{region}}/routers/{{router}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/routerPeer:RouterPeer default {{project}}/{{region}}/{{router}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/routerPeer:RouterPeer default {{region}}/{{router}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/routerPeer:RouterPeer default {{router}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

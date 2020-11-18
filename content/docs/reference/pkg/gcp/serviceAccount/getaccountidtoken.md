@@ -17,6 +17,7 @@ For more information see
 
 
 
+
 ## Using GetAccountIdToken {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

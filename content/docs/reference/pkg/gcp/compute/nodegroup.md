@@ -1594,6 +1594,28 @@ Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
 
 
 
+## Import
+
+
+NodeGroup can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default projects/{{project}}/zones/{{zone}}/nodeGroups/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

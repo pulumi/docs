@@ -2970,6 +2970,24 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 
 
+## Import
+
+
+Subscription can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default projects/{{project}}/subscriptions/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

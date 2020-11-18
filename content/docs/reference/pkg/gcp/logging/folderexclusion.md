@@ -940,6 +940,16 @@ accepted.
 
 
 
+## Import
+
+
+Folder-level logging exclusions can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:logging/folderExclusion:FolderExclusion my_exclusion folders/my-folder/exclusions/my-exclusion
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

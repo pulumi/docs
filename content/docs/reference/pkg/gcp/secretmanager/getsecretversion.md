@@ -14,6 +14,7 @@ Get a Secret Manager secret's version. For more information see the [official do
 
 
 
+
 ## Using GetSecretVersion {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

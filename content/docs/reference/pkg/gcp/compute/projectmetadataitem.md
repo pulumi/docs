@@ -738,6 +738,16 @@ is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Project metadata items can be imported using the `key`, e.g.
+
+```sh
+ $ pulumi import gcp:compute/projectMetadataItem:ProjectMetadataItem default my_metadata
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

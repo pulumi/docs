@@ -2477,6 +2477,28 @@ Possible values are `BASIC` and `STANDARD_HA`.
 
 
 
+## Import
+
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:redis/instance:Instance default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

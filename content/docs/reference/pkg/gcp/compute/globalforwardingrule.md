@@ -2571,6 +2571,24 @@ length of 1024 characters.
 
 
 
+## Import
+
+
+GlobalForwardingRule can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/globalForwardingRule:GlobalForwardingRule default projects/{{project}}/global/forwardingRules/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalForwardingRule:GlobalForwardingRule default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/globalForwardingRule:GlobalForwardingRule default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1279,6 +1279,16 @@ may belong to a different project.
 
 
 
+## Import
+
+
+VPC network peerings can be imported using the name and project of the primary network the peering exists in and the name of the network peering
+
+```sh
+ $ pulumi import gcp:compute/networkPeering:NetworkPeering peering_network project-name/network-name/peering-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

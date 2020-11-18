@@ -1997,6 +1997,24 @@ Possible values are `IN`, `OUT`, and `INOUT`.
 
 
 
+## Import
+
+
+Routine can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigquery/routine:Routine default projects/{{project}}/datasets/{{dataset_id}}/routines/{{routine_id}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/routine:Routine default {{project}}/{{dataset_id}}/{{routine_id}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/routine:Routine default {{dataset_id}}/{{routine_id}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

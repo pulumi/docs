@@ -14,6 +14,7 @@ Use this data source to retrieve Storage Transfer service account for this proje
 
 
 
+
 ## Using GetTransferProjectServieAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

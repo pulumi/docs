@@ -14,6 +14,7 @@ Get info about a Google Cloud Redis instance.
 
 
 
+
 ## Using GetInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

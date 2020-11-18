@@ -20534,6 +20534,24 @@ This field is required to ensure an empty block is not set. The normal default v
 
 
 
+## Import
+
+
+UrlMap can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/uRLMap:URLMap default projects/{{project}}/global/urlMaps/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/uRLMap:URLMap default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/uRLMap:URLMap default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -2641,6 +2641,28 @@ must be unique within the subnetwork.
 
 
 
+## Import
+
+
+Subnetwork can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default projects/{{project}}/regions/{{region}}/subnetworks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

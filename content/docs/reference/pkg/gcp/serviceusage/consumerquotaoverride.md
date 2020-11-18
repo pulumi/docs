@@ -1191,6 +1191,24 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+ConsumerQuotaOverride can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride default projects/{{project}}/services/{{service}}/consumerQuotaMetrics/{{metric}}/limits/{{limit}}/consumerOverrides/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride default {{project}}/{{service}}/{{metric}}/{{limit}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride default {{service}}/{{metric}}/{{limit}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

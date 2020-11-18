@@ -6182,6 +6182,28 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 
 
+## Import
+
+
+RegionBackendService can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionBackendService:RegionBackendService default projects/{{project}}/regions/{{region}}/backendServices/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionBackendService:RegionBackendService default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionBackendService:RegionBackendService default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionBackendService:RegionBackendService default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

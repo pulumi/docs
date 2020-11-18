@@ -14,6 +14,7 @@ Get a subnetwork within GCE from its name and region.
 
 
 
+
 ## Using GetSubnetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

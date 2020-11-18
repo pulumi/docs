@@ -16,6 +16,7 @@ The NEG may be found by providing either a `self_link`, or a `name` and a `zone`
 
 
 
+
 ## Using GetNetworkEndpointGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

@@ -1703,6 +1703,24 @@ The application context of the containing message determines which well-known fe
 
 
 
+## Import
+
+
+Security policies can be imported using any of the following formats
+
+```sh
+ $ pulumi import gcp:compute/securityPolicy:SecurityPolicy policy projects/{{project}}/global/securityPolicies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/securityPolicy:SecurityPolicy policy {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/securityPolicy:SecurityPolicy policy {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

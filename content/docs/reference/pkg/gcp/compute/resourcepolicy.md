@@ -2487,6 +2487,28 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
 
 
+## Import
+
+
+ResourcePolicy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default projects/{{project}}/regions/{{region}}/resourcePolicies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
