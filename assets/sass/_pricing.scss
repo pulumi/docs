@@ -1,6 +1,6 @@
 .pricing-plans {
     &-item-container {
-        @apply w-full px-4 text-center;
+        @apply px-4 text-center;
 
         @screen lg {
             @apply w-1/3;
@@ -12,11 +12,7 @@
     }
 
     &-item-description {
-        @apply text-sm text-gray-700 mt-0 mb-2;
-
-        @screen lg {
-            @apply px-12;
-        }
+        @apply text-sm text-gray-700 mt-0 mb-2 px-3;
     }
 
     &-item-price {
