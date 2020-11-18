@@ -52,14 +52,20 @@ jobs:
           pulumi-version: ${{ env.PULUMI_VERSION }}
       - name: setup go
         uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.goversion }}
       - name: setup node
         uses: actions/setup-node@v2-beta
       - name: setup python
         uses: actions/setup-python@v2
+        with:
+          python-version: ${{matrix.pythonversion}}
       - name: setup pipenv
         uses: dschep/install-pipenv-action@v1
       - name: setup dotnet
         uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{matrix.dotnetverson}}
       - run: make ensure ensure_tools
         working-directory: docs
       - name: Go based tool installs
@@ -101,3 +107,11 @@ jobs:
           author_name: pulumi-bot
           author_email: "bot@pulumi.com"
           cwd: docs
+    strategy:
+      matrix:
+        dotnetversion:
+          - 3.1.301
+        goversion:
+          - 1.15.x
+        pythonversion:
+          - "3.7"
