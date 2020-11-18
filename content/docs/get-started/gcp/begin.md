@@ -54,7 +54,18 @@ Next, we'll configure GCP.
 
 ### Configure GCP
 
-<a href="{{< relref "/docs/intro/cloud-providers/gcp/setup" >}}" target="_blank">Configure Google Cloud</a> so the Pulumi CLI can connect to Google Cloud. If you have previously configured the <a href="https://cloud.google.com/sdk/gcloud/" target="_blank">Google Cloud CLI</a>, `gcloud`, Pulumi will respect and use your configuration settings.
+The [Pulumi Google Cloud Platform Provider]({{< relref "/docs/intro/cloud-providers/gcp" >}}) needs to be configured with Google credentials
+before it can be used to create resources.
+
+When developing locally, we recommend that you use `gcloud login` to configure your account credentials. First, install the [Google Cloud SDK](https://cloud.google.com/sdk/install), which includes the `gcloud` command line tool. Then, execute the following:
+
+```bash
+$ gcloud auth login
+$ gcloud config set project <YOUR_GCP_PROJECT_HERE>
+$ gcloud auth application-default login
+```
+
+For more detailed setup information, please refer to our <a href="{{< relref "/docs/intro/cloud-providers/gcp/setup" >}}" target="_blank">GCP provider setup guide</a>
 
 Next, we'll create a new project.
 
