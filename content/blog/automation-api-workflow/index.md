@@ -341,6 +341,8 @@ We created the *hello_pulumi* table with the `createdb` function, but we can lea
 
 So what have we accomplished? Most importantly, we can turn a playbook into code. Encapsulating your workflow with code means that you have modern software tools such as an IDE with code completion, hints, type checking, debugging, and versioning available to you. In addition to declaring infrastructure, you can also provision it with applications and data. Because it's code, you can extend it as we have done by adding maintenance functions, something not possible with a markup language. Finally, you don't have to use a proprietary CLI to deploy infrastructure and apps. Automation API lets you do all these things and much more.
 
+You can download our improved program as a [gist](https://gist.github.com/pulumipus/61edcdd8ab3f50a42b4bd34a7e1f789b) to replace the one included in the example.
+
 Automation API is currently in alpha and available in Typescript and Go. Check out these resources to learn more.
 
 - [The Pulumi Automation API - The Next Quantum Leap in IaC]({{< relref "/blog/automation-api" >}})
