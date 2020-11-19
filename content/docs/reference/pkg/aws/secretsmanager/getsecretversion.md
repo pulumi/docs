@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSecretVersion function of the secretsmanager module, 
 
 Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source.
 
+
 {{% examples %}}
 ## Example Usage
 

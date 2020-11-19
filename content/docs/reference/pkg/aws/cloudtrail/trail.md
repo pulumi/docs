@@ -3073,6 +3073,16 @@ defined for notification of log file delivery.
 
 
 
+## Import
+
+
+Cloudtrails can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudtrail/trail:Trail sample my-sample-trail
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

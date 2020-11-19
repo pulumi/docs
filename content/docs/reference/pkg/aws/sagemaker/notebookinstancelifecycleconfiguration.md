@@ -815,6 +815,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Models can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:sagemaker/notebookInstanceLifecycleConfiguration:NotebookInstanceLifecycleConfiguration lc foo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

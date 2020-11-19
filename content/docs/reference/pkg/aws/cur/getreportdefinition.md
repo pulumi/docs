@@ -16,6 +16,7 @@ Use this data source to get information on an AWS Cost and Usage Report Definiti
 
 > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
 
+
 {{% examples %}}
 ## Example Usage
 

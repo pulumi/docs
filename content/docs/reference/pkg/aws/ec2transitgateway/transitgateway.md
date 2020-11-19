@@ -1592,6 +1592,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_ec2_transit_gateway` can be imported by using the EC2 Transit Gateway identifier, e.g.
+
+```sh
+ $ pulumi import aws:ec2transitgateway/transitGateway:TransitGateway example tgw-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

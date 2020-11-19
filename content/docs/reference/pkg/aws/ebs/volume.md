@@ -1522,6 +1522,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+EBS Volumes can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ebs/volume:Volume id vol-049df61146c4d7901
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

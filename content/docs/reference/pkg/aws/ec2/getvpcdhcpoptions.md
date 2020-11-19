@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVpcDhcpOptions function of the ec2 module, including 
 
 Retrieve information about an EC2 DHCP Options configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

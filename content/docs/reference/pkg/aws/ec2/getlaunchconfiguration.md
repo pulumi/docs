@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLaunchConfiguration function of the ec2 module, inclu
 
 Provides information about a Launch Configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

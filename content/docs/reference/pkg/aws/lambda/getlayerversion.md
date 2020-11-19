@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLayerVersion function of the lambda module, including
 
 Provides information about a Lambda Layer Version.
 
+
 {{% examples %}}
 ## Example Usage
 

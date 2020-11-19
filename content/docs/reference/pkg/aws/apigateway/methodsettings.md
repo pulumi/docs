@@ -1581,6 +1581,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_api_gateway_method_settings` can be imported using `REST-API-ID/STAGE-NAME/METHOD-PATH`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/methodSettings:MethodSettings example 12345abcde/example/test/GET
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

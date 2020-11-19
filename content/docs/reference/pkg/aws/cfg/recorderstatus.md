@@ -903,6 +903,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Configuration Recorder Status can be imported using the name of the Configuration Recorder, e.g.
+
+```sh
+ $ pulumi import aws:cfg/recorderStatus:RecorderStatus foo example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

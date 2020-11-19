@@ -1006,6 +1006,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ECR Lifecycle Policy can be imported using the name of the repository, e.g.
+
+```sh
+ $ pulumi import aws:ecr/lifecyclePolicy:LifecyclePolicy example tf-example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

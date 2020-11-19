@@ -1366,6 +1366,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ECS Capacity Providers can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:ecs/capacityProvider:CapacityProvider example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

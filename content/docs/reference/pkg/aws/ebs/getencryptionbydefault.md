@@ -12,6 +12,7 @@ meta_desc: "Explore the GetEncryptionByDefault function of the ebs module, inclu
 
 Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
 
+
 {{% examples %}}
 ## Example Usage
 

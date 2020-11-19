@@ -1600,6 +1600,16 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 
 
+## Import
+
+
+Global Accelerator accelerators can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:globalaccelerator/accelerator:Accelerator example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

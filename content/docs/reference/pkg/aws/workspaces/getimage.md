@@ -12,6 +12,7 @@ meta_desc: "Explore the GetImage function of the workspaces module, including ex
 
 Use this data source to get information about a Workspaces image.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetConfiguration function of the msk module, including e
 
 Get information on an Amazon MSK Configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -5353,6 +5353,16 @@ timeout of 10m is reached.
 
 
 
+## Import
+
+
+Spot Fleet Requests can be imported using `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/spotFleetRequest:SpotFleetRequest fleet sfr-005e9ec8-5546-4c31-b317-31a62325411e
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

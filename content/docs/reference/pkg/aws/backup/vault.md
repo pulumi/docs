@@ -974,6 +974,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Backup vault can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:backup/vault:Vault test-vault TestVault
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

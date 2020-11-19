@@ -813,6 +813,16 @@ Please note that a partner event bus is not supported at the moment.
 
 
 
+## Import
+
+
+EventBridge event buses can be imported using the `name`, e.g. console
+
+```sh
+ $ pulumi import aws:cloudwatch/eventBus:EventBus messenger chat-messages
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

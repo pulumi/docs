@@ -1828,6 +1828,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AWS API Gateway Usage Plan can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/usagePlan:UsagePlan myusageplan <usage_plan_id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1674,6 +1674,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SNS platform applications can be imported using the ARN, e.g.
+
+```sh
+ $ pulumi import aws:sns/platformApplication:PlatformApplication gcm_application arn:aws:sns:us-west-2:0123456789012:app/GCM/gcm_application
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

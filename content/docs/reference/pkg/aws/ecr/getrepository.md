@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRepository function of the ecr module, including exam
 
 The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.
 
+
 {{% examples %}}
 ## Example Usage
 

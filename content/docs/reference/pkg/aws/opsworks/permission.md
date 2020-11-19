@@ -12,6 +12,7 @@ meta_desc: "Explore the Permission resource of the opsworks module, including ex
 
 Provides an OpsWorks permission resource.
 
+
 {{% examples %}}
 ## Example Usage
 

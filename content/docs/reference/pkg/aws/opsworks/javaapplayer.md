@@ -12,6 +12,7 @@ meta_desc: "Explore the JavaAppLayer resource of the opsworks module, including 
 
 Provides an OpsWorks Java application layer resource.
 
+
 {{% examples %}}
 ## Example Usage
 

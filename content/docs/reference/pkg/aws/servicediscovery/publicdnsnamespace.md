@@ -976,6 +976,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Service Discovery Public DNS Namespace can be imported using the namespace ID, e.g.
+
+```sh
+ $ pulumi import aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace example 0123456789
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

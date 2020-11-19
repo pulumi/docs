@@ -1711,6 +1711,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Direct Connect hosted public virtual interfaces can be imported using the `vif id`, e.g.
+
+```sh
+ $ pulumi import aws:directconnect/hostedPublicVirtualInterface:HostedPublicVirtualInterface test dxvif-33cc44dd
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

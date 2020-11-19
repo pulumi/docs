@@ -1744,6 +1744,16 @@ a public IP address. Default is `false`.
 
 
 
+## Import
+
+
+Subnets can be imported using the `subnet id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/subnet:Subnet public_subnet subnet-9d4a7b6c
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

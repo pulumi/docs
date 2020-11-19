@@ -12,6 +12,7 @@ meta_desc: "Explore the MemcachedLayer resource of the opsworks module, includin
 
 Provides an OpsWorks memcached layer resource.
 
+
 {{% examples %}}
 ## Example Usage
 

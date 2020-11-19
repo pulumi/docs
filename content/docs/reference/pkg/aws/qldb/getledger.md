@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLedger function of the qldb module, including example
 
 Use this data source to fetch information about a Quantum Ledger Database.
 
+
 {{% examples %}}
 ## Example Usage
 

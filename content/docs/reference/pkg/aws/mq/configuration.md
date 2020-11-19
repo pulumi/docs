@@ -1299,6 +1299,16 @@ for supported parameters and format of the XML.
 
 
 
+## Import
+
+
+MQ Configurations can be imported using the configuration ID, e.g.
+
+```sh
+ $ pulumi import aws:mq/configuration:Configuration example c-0187d1eb-88c8-475a-9b79-16ef5a10c94f
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

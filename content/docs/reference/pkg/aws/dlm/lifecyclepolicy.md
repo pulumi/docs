@@ -2035,6 +2035,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DLM lifecyle policies can be imported by their policy ID
+
+```sh
+ $ pulumi import aws:dlm/lifecyclePolicy:LifecyclePolicy example policy-abcdef12345678901
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

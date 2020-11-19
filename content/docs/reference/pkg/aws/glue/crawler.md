@@ -3422,6 +3422,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glue Crawlers can be imported using `name`, e.g.
+
+```sh
+ $ pulumi import aws:glue/crawler:Crawler MyJob MyJob
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

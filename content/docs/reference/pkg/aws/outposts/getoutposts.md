@@ -12,6 +12,7 @@ meta_desc: "Explore the GetOutposts function of the outposts module, including e
 
 Provides details about multiple Outposts.
 
+
 {{% examples %}}
 ## Example Usage
 

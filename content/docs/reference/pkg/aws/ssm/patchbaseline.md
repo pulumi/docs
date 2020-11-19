@@ -1817,6 +1817,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SSM Patch Baselines can be imported by their baseline ID, e.g.
+
+```sh
+ $ pulumi import aws:ssm/patchBaseline:PatchBaseline example pb-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

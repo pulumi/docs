@@ -955,6 +955,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IAM User Policies can be imported using the `user_name:user_policy_name`, e.g.
+
+```sh
+ $ pulumi import aws:iam/userPolicy:UserPolicy mypolicy user_of_mypolicy_name:mypolicy_name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

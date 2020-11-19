@@ -13,6 +13,7 @@ meta_desc: "Explore the GetStack function of the cloudformation module, includin
 The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.
 
+
 {{% examples %}}
 ## Example Usage
 

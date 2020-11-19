@@ -1253,6 +1253,16 @@ a user with non-provider-managed access keys and login profile will fail to be d
 
 
 
+## Import
+
+
+IAM Users can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:iam/user:User lb loadbalancer
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

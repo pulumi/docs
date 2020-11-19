@@ -1341,6 +1341,12 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Importing is currently not supported on this resource.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSpotPrice function of the ec2 module, including examp
 
 Information about most recent Spot Price for a given EC2 instance.
 
+
 {{% examples %}}
 ## Example Usage
 

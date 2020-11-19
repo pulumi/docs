@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRegexPatternSet function of the wafv2 module, includi
 
 Retrieves the summary of a WAFv2 Regex Pattern Set.
 
+
 {{% examples %}}
 ## Example Usage
 

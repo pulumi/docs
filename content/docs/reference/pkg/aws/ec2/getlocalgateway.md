@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLocalGateway function of the ec2 module, including ex
 
 Provides details about an EC2 Local Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

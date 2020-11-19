@@ -1918,6 +1918,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Service Discovery Service can be imported using the service ID, e.g.
+
+```sh
+ $ pulumi import aws:servicediscovery/service:Service example 0123456789
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

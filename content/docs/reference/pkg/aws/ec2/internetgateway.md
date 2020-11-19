@@ -902,6 +902,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Internet Gateways can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/internetGateway:InternetGateway gw igw-c0a643a9
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

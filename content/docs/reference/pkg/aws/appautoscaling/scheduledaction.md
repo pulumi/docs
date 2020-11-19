@@ -12,6 +12,7 @@ meta_desc: "Explore the ScheduledAction resource of the appautoscaling module, i
 
 Provides an Application AutoScaling ScheduledAction resource.
 
+
 {{% examples %}}
 ## Example Usage
 

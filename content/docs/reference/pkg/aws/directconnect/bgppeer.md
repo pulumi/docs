@@ -12,6 +12,7 @@ meta_desc: "Explore the BgpPeer resource of the directconnect module, including 
 
 Provides a Direct Connect BGP peer resource.
 
+
 {{% examples %}}
 ## Example Usage
 

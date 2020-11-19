@@ -1178,6 +1178,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Gamelift Aliases can be imported using the ID, e.g.
+
+```sh
+ $ pulumi import aws:gamelift/alias:Alias example <alias-id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

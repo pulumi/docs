@@ -14,6 +14,7 @@ Use this data source to get the ARN of a certificate in AWS Certificate
 Manager (ACM), you can reference
 it by domain without having to hard code the ARNs as input.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1102,6 +1102,16 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
 
 
+## Import
+
+
+ Route 53 Resolver query logging configurations can be imported using the Route 53 Resolver query logging configuration ID, e.g.
+
+```sh
+ $ pulumi import aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig example rqlc-92edc3b1838248bf
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

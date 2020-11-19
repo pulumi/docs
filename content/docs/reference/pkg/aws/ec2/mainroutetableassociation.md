@@ -20,6 +20,7 @@ this original table as the Main Route Table for the VPC. You'll see this
 additional Route Table in the AWS console; it must remain intact in order for
 the `main_route_table_association` delete to work properly.
 
+
 {{% examples %}}
 ## Example Usage
 

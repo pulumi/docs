@@ -928,6 +928,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodeDeploy Applications can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:codedeploy/application:Application example my-application
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

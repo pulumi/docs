@@ -18,6 +18,7 @@ VPC.
 
 
 
+
 ## Using GetVpc {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

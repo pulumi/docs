@@ -888,6 +888,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IAM Groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:iam/group:Group developers developers
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

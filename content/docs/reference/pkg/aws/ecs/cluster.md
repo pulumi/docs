@@ -1377,6 +1377,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ECS clusters can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:ecs/cluster:Cluster stateless stateless-app
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

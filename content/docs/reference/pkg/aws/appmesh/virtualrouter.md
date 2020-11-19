@@ -1700,6 +1700,18 @@ Currently only one listener is supported per virtual router.
 
 
 
+## Import
+
+
+App Mesh virtual routers can be imported using `mesh_name` together with the virtual router's `name`, e.g.
+
+```sh
+ $ pulumi import aws:appmesh/virtualRouter:VirtualRouter serviceb simpleapp/serviceB
+```
+
+ [1]/docs/providers/aws/index.html
+
+
 
 
 <h2 id="package-details">Package Details</h2>

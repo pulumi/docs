@@ -1088,6 +1088,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Redshift subnet groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:redshift/subnetGroup:SubnetGroup testgroup1 test-cluster-subnet-group
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

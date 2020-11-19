@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCustomerGateway function of the ec2 module, including
 
 Get an existing AWS Customer Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

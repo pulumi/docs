@@ -1398,6 +1398,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Backup selection can be imported using the role plan_id and id separated by `|`.
+
+```sh
+ $ pulumi import aws:backup/selection:Selection example plan-id|selection-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

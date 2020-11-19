@@ -2088,6 +2088,16 @@ These can be either the names of Git repositories stored as resources in your ac
 
 
 
+## Import
+
+
+Sagemaker Notebook Instances can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:sagemaker/notebookInstance:NotebookInstance test_notebook_instance my-notebook-instance
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

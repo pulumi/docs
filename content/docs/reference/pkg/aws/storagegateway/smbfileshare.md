@@ -2670,6 +2670,16 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 
 
 
+## Import
+
+
+`aws_storagegateway_smb_file_share` can be imported by using the SMB File Share Amazon Resource Name (ARN), e.g.
+
+```sh
+ $ pulumi import aws:storagegateway/smbFileShare:SmbFileShare example arn:aws:storagegateway:us-east-1:123456789012:share/share-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

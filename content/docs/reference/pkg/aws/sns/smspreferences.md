@@ -12,6 +12,7 @@ meta_desc: "Explore the SmsPreferences resource of the sns module, including exa
 
 Provides a way to set SNS SMS preferences.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1820,6 +1820,18 @@ connection.
 
 
 
+## Import
+
+
+VPC Peering resources can be imported using the `vpc peering id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/vpcPeeringConnection:VpcPeeringConnection test_connection pcx-111aaa111
+```
+
+ [1]/docs/providers/aws/index.html
+
+
 
 
 <h2 id="package-details">Package Details</h2>

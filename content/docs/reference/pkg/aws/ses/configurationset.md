@@ -619,6 +619,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SES Configuration Sets can be imported using their `name`, e.g.
+
+```sh
+ $ pulumi import aws:ses/configurationSet:ConfigurationSet test some-configuration-set-test
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

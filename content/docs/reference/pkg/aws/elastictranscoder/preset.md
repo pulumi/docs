@@ -3702,6 +3702,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Elastic Transcoder presets can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:elastictranscoder/preset:Preset basic_preset 1407981661351-cttk8b
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

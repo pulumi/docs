@@ -13,6 +13,7 @@ meta_desc: "Explore the GetAmi function of the AWS package, including examples, 
 Use this data source to get the ID of a registered AMI for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 

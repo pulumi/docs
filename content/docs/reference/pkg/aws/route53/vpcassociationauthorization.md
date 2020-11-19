@@ -920,6 +920,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Route 53 VPC Association Authorizations can be imported via the Hosted Zone ID and VPC ID, separated by a colon (`:`), e.g.
+
+```sh
+ $ pulumi import aws:route53/vpcAssociationAuthorization:VpcAssociationAuthorization example Z123456ABCDEFG:vpc-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

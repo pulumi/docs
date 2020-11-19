@@ -1226,6 +1226,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_cognito_resource_server` can be imported using their User Pool ID and Identifier, e.g.
+
+```sh
+ $ pulumi import aws:cognito/resourceServer:ResourceServer example xxx_yyyyy|https://example.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,6 +13,7 @@ meta_desc: "Explore the GetVolume function of the ebs module, including examples
 Use this data source to get information about an EBS volume for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 

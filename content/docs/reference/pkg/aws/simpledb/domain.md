@@ -619,6 +619,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SimpleDB Domains can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:simpledb/domain:Domain users users
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

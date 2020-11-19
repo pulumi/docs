@@ -1484,6 +1484,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ECR Repositories can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:ecr/repository:Repository service test-service
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

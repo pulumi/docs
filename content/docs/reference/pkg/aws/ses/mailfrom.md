@@ -908,6 +908,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+MAIL FROM domain can be imported using the `domain` attribute, e.g.
+
+```sh
+ $ pulumi import aws:ses/mailFrom:MailFrom example example.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

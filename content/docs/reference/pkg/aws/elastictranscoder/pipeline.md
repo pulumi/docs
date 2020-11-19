@@ -2387,6 +2387,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Elastic Transcoder pipelines can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:elastictranscoder/pipeline:Pipeline basic_pipeline 1407981661351-cttk8b
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

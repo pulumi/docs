@@ -3255,6 +3255,16 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 
 
 
+## Import
+
+
+ELBs can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:elb/loadBalancer:LoadBalancer bar elb-production-12345
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

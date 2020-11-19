@@ -1050,6 +1050,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodeArtifact Domain Permissions Policies can be imported using the CodeArtifact Domain ARN, e.g.
+
+```sh
+ $ pulumi import aws:codeartifact/domainPermissions:DomainPermissions example arn:aws:codeartifact:us-west-2:012345678912:domain/tf-acc-test-1928056699409417367
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

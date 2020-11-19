@@ -977,6 +977,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Placement groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/placementGroup:PlacementGroup prod_pg production-placement-group
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

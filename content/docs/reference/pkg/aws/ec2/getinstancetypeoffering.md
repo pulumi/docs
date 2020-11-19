@@ -12,6 +12,7 @@ meta_desc: "Explore the GetInstanceTypeOffering function of the ec2 module, incl
 
 Information about single EC2 Instance Type Offering.
 
+
 {{% examples %}}
 ## Example Usage
 

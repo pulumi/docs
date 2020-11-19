@@ -5233,6 +5233,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodeDeploy Deployment Groups can be imported by their `app_name`, a colon, and `deployment_group_name`, e.g.
+
+```sh
+ $ pulumi import aws:codedeploy/deploymentGroup:DeploymentGroup example my-application:my-deployment-group
+```
+
+ [1]http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1542,6 +1542,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Config Organization Managed Rules can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:cfg/organizationManagedRule:OrganizationManagedRule example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

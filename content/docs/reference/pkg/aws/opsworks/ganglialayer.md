@@ -12,6 +12,7 @@ meta_desc: "Explore the GangliaLayer resource of the opsworks module, including 
 
 Provides an OpsWorks Ganglia layer resource.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1605,6 +1605,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SSM Parameters can be imported using the `parameter store name`, e.g.
+
+```sh
+ $ pulumi import aws:ssm/parameter:Parameter my_param /my_path/my_paramname
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

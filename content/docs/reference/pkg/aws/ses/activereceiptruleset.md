@@ -12,6 +12,7 @@ meta_desc: "Explore the ActiveReceiptRuleSet resource of the ses module, includi
 
 Provides a resource to designate the active SES receipt rule set
 
+
 {{% examples %}}
 ## Example Usage
 

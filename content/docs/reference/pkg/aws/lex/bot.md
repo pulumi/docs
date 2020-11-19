@@ -3374,6 +3374,16 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 
 
+## Import
+
+
+Bots can be imported using their name.
+
+```sh
+ $ pulumi import aws:lex/bot:Bot order_flowers_bot OrderFlowers
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

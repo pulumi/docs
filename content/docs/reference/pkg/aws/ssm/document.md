@@ -2848,6 +2848,42 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SSM Documents can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:ssm/document:Document example example
+```
+
+ The `attachments_source` argument does not have an SSM API method for reading the attachment information detail after creation. If the argument is set in the provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. hcl resource "aws_ssm_document" "test" {
+
+ name
+
+= "test_document"
+
+ document_type = "Package"
+
+ attachments_source {
+
+ key
+
+= "SourceUrl"
+
+ values = ["s3://${aws_s3_bucket.object_bucket.bucket}/test.zip"]
+
+ }
+
+# There is no AWS SSM API for reading attachments_source info directly
+
+ lifecycle {
+
+ ignore_changes = [attachments_source]
+
+ } }
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -2734,6 +2734,16 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 
 
+## Import
+
+
+`aws_neptune_cluster_instance` can be imported by using the instance identifier, e.g.
+
+```sh
+ $ pulumi import aws:neptune/clusterInstance:ClusterInstance example my-instance
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

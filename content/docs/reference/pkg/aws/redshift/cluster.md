@@ -4149,6 +4149,16 @@ For more information on the permissions required for the bucket, please read the
 
 
 
+## Import
+
+
+Redshift Clusters can be imported using the `cluster_identifier`, e.g.
+
+```sh
+ $ pulumi import aws:redshift/cluster:Cluster myprodcluster tf-redshift-cluster-12345
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -928,6 +928,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IoT policies can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:iot/policy:Policy pubsub PubSubToAnyTopic
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

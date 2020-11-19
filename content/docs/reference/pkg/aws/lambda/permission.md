@@ -1704,6 +1704,20 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 
 
 
+## Import
+
+
+Lambda permission statements can be imported using function_name/statement_id, with an optional qualifier, e.g.
+
+```sh
+ $ pulumi import aws:lambda/permission:Permission test_lambda_permission my_test_lambda_function/AllowExecutionFromCloudWatch
+```
+
+```sh
+ $ pulumi import aws:lambda/permission:Permission test_lambda_permission my_test_lambda_function:qualifier_name/AllowExecutionFromCloudWatch
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

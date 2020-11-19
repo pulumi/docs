@@ -1081,6 +1081,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Athena Named Query can be imported using the query ID, e.g.
+
+```sh
+ $ pulumi import aws:athena/namedQuery:NamedQuery example 0123456789
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

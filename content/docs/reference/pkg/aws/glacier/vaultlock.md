@@ -1042,6 +1042,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glacier Vault Locks can be imported using the Glacier Vault name, e.g.
+
+```sh
+ $ pulumi import aws:glacier/vaultLock:VaultLock example example-vault
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

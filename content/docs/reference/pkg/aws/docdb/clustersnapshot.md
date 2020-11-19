@@ -1669,6 +1669,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_docdb_cluster_snapshot` can be imported by using the cluster snapshot identifier, e.g.
+
+```sh
+ $ pulumi import aws:docdb/clusterSnapshot:ClusterSnapshot example my-cluster-snapshot
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

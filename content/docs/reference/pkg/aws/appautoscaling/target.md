@@ -1346,6 +1346,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Application AutoScaling Target can be imported using the `service-namespace` , `resource-id` and `scalable-dimension` separated by `/`.
+
+```sh
+ $ pulumi import aws:appautoscaling/target:Target test-target service-namespace/resource-id/scalable-dimension
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

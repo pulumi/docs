@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDomain function of the elasticsearch module, includin
 
 Use this data source to get information about an Elasticsearch Domain
 
+
 {{% examples %}}
 ## Example Usage
 

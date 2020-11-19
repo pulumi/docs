@@ -12,6 +12,7 @@ meta_desc: "Explore the GetWebAcl function of the wafv2 module, including exampl
 
 Retrieves the summary of a WAFv2 Web ACL.
 
+
 {{% examples %}}
 ## Example Usage
 

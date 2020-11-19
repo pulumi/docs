@@ -1561,6 +1561,16 @@ be for the same VPC as subnet specified) in effect for the mount target.
 
 
 
+## Import
+
+
+The EFS mount targets can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:efs/mountTarget:MountTarget alpha fsmt-52a643fb
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

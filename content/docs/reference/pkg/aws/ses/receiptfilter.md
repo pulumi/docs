@@ -893,6 +893,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SES Receipt Filter can be imported using their `name`, e.g.
+
+```sh
+ $ pulumi import aws:ses/receiptFilter:ReceiptFilter test some-filter
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -902,6 +902,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Endpoints can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:sagemaker/endpoint:Endpoint test_endpoint my-endpoint
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

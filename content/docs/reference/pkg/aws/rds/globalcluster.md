@@ -45,7 +45,6 @@ class MyStack : Stack
         });
         var primaryCluster = new Aws.Rds.Cluster("primaryCluster", new Aws.Rds.ClusterArgs
         {
-            EngineMode = "global",
             GlobalClusterIdentifier = example.Id,
         }, new CustomResourceOptions
         {
@@ -60,7 +59,6 @@ class MyStack : Stack
         });
         var secondaryCluster = new Aws.Rds.Cluster("secondaryCluster", new Aws.Rds.ClusterArgs
         {
-            EngineMode = "global",
             GlobalClusterIdentifier = example.Id,
         }, new CustomResourceOptions
         {
@@ -115,7 +113,6 @@ func main() {
 			return err
 		}
 		primaryCluster, err := rds.NewCluster(ctx, "primaryCluster", &rds.ClusterArgs{
-			EngineMode:              pulumi.String("global"),
 			GlobalClusterIdentifier: example.ID(),
 		}, pulumi.Provider(aws.Primary))
 		if err != nil {
@@ -128,7 +125,6 @@ func main() {
 			return err
 		}
 		secondaryCluster, err := rds.NewCluster(ctx, "secondaryCluster", &rds.ClusterArgs{
-			EngineMode:              pulumi.String("global"),
 			GlobalClusterIdentifier: example.ID(),
 		}, pulumi.Provider(aws.Secondary), pulumi.DependsOn([]pulumi.Resource{
 			primaryClusterInstance,
@@ -159,17 +155,13 @@ primary = pulumi.providers.Aws("primary", region="us-east-2")
 secondary = pulumi.providers.Aws("secondary", region="us-west-2")
 example = aws.rds.GlobalCluster("example", global_cluster_identifier="example",
 opts=ResourceOptions(provider=aws["primary"]))
-primary_cluster = aws.rds.Cluster("primaryCluster",
-    engine_mode="global",
-    global_cluster_identifier=example.id,
-    opts=ResourceOptions(provider=aws["primary"]))
+primary_cluster = aws.rds.Cluster("primaryCluster", global_cluster_identifier=example.id,
+opts=ResourceOptions(provider=aws["primary"]))
 primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance", cluster_identifier=primary_cluster.id,
 opts=ResourceOptions(provider=aws["primary"]))
-secondary_cluster = aws.rds.Cluster("secondaryCluster",
-    engine_mode="global",
-    global_cluster_identifier=example.id,
-    opts=ResourceOptions(provider=aws["secondary"],
-        depends_on=[primary_cluster_instance]))
+secondary_cluster = aws.rds.Cluster("secondaryCluster", global_cluster_identifier=example.id,
+opts=ResourceOptions(provider=aws["secondary"],
+    depends_on=[primary_cluster_instance]))
 secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance", cluster_identifier=secondary_cluster.id,
 opts=ResourceOptions(provider=aws["secondary"]))
 ```
@@ -187,19 +179,13 @@ const secondary = new aws.Provider("secondary", {region: "us-west-2"});
 const example = new aws.rds.GlobalCluster("example", {globalClusterIdentifier: "example"}, {
     provider: aws.primary,
 });
-const primaryCluster = new aws.rds.Cluster("primaryCluster", {
-    engineMode: "global",
-    globalClusterIdentifier: example.id,
-}, {
+const primaryCluster = new aws.rds.Cluster("primaryCluster", {globalClusterIdentifier: example.id}, {
     provider: aws.primary,
 });
 const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {clusterIdentifier: primaryCluster.id}, {
     provider: aws.primary,
 });
-const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {
-    engineMode: "global",
-    globalClusterIdentifier: example.id,
-}, {
+const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {globalClusterIdentifier: example.id}, {
     provider: aws.secondary,
     dependsOn: [primaryClusterInstance],
 });
@@ -1841,6 +1827,28 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+`aws_rds_global_cluster` can be imported by using the RDS Global Cluster identifier, e.g.
+
+```sh
+ $ pulumi import aws:rds/globalCluster:GlobalCluster example example
+```
+
+ Certain resource arguments, like `force_destroy`, only exist within Terraform. If the argument is set in the Terraform configuration on an imported resource, Terraform will show a difference on the first plan after import to update the state value. This change is safe to apply immediately so the state matches the desired configuration. Certain resource arguments, like `source_db_cluster_identifier`, do not have an API method for reading the information after creation. If the argument is set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](/docs/configuration/resources.html#ignore_changes) to hide the difference, e.g. hcl resource "aws_rds_global_cluster" "example" {
+
+# ... other configuration ...
+
+# There is no API for reading source_db_cluster_identifier
+
+ lifecycle {
+
+ ignore_changes = [source_db_cluster_identifier]
+
+ } }
 
 
 

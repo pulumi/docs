@@ -12,6 +12,7 @@ meta_desc: "Explore the GetBotAlias function of the lex module, including exampl
 
 Provides details about a specific Amazon Lex Bot Alias.
 
+
 {{% examples %}}
 ## Example Usage
 

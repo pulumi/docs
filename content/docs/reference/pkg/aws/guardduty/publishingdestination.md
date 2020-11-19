@@ -1245,6 +1245,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GuardDuty PublishingDestination can be imported using the the master GuardDuty detector ID and PublishingDestinationID, e.g.
+
+```sh
+ $ pulumi import aws:guardduty/publishingDestination:PublishingDestination test a4b86f26fa42e7e7cf0d1c333ea77777:a4b86f27a0e464e4a7e0516d242f1234
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

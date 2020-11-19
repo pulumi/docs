@@ -13,6 +13,7 @@ meta_desc: "Explore the GetAccountAlias function of the iam module, including ex
 The IAM Account Alias data source allows access to the account alias
 for the effective account in which this provider is working.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1857,6 +1857,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Workspaces can be imported using their ID, e.g.
+
+```sh
+ $ pulumi import aws:workspaces/workspace:Workspace example ws-9z9zmbkhv
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

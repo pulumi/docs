@@ -22,6 +22,7 @@ it available in another for a multi-region deployment.
 Copying an AMI can take several minutes. The creation of this resource will
 block until the new AMI is available for use on new instances.
 
+
 {{% examples %}}
 ## Example Usage
 

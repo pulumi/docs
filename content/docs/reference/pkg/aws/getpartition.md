@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPartition function of the AWS package, including exam
 
 Use this data source to lookup current AWS partition in which this provider is working
 
+
 {{% examples %}}
 ## Example Usage
 

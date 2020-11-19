@@ -1043,6 +1043,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AWS WAF Regional XSS Match can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:wafregional/xssMatchSet:XssMatchSet example 12345abcde
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

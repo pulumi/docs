@@ -1044,6 +1044,12 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Target Group Attachments cannot be imported.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

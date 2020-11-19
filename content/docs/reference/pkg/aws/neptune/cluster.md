@@ -3209,6 +3209,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_neptune_cluster` can be imported by using the cluster identifier, e.g.
+
+```sh
+ $ pulumi import aws:neptune/cluster:Cluster example my-cluster
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

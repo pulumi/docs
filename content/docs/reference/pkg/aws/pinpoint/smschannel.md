@@ -1071,6 +1071,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Pinpoint SMS Channel can be imported using the `application-id`, e.g.
+
+```sh
+ $ pulumi import aws:pinpoint/smsChannel:SmsChannel sms application-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

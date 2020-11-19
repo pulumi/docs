@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccessPoints function of the efs module, including ex
 
 Provides information about multiple Elastic File System (EFS) Access Points.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1096,6 +1096,34 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IAM User Login Profiles can be imported without password information support via the IAM User name, e.g.
+
+```sh
+ $ pulumi import aws:iam/userLoginProfile:UserLoginProfile example myusername
+```
+
+ Since this provider has no method to read the PGP or password information during import, use [`ignore_changes` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to ignore them unless password recreation is desired. e.g. hcl resource "aws_iam_user_login_profile" "example" {
+
+# ... other configuration ...
+
+ lifecycle {
+
+ ignore_changes = [
+
+ password_length,
+
+ password_reset_required,
+
+ pgp_key,
+
+ ]
+
+ } }
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -8956,6 +8956,18 @@ You can specify one or more targets and their relative weights with which to dis
 
 
 
+## Import
+
+
+App Mesh virtual routes can be imported using `mesh_name` and `virtual_router_name` together with the route's `name`, e.g.
+
+```sh
+ $ pulumi import aws:appmesh/route:Route serviceb simpleapp/serviceB/serviceB-route
+```
+
+ [1]/docs/providers/aws/index.html
+
+
 
 
 <h2 id="package-details">Package Details</h2>

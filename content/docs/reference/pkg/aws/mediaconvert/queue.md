@@ -1331,6 +1331,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Media Convert Queue can be imported via the queue name, e.g.
+
+```sh
+ $ pulumi import aws:mediaconvert/queue:Queue test tf-test-queue
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

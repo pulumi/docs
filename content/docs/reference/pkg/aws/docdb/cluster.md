@@ -3187,6 +3187,16 @@ with the Cluster
 
 
 
+## Import
+
+
+DocDB Clusters can be imported using the `cluster_identifier`, e.g.
+
+```sh
+ $ pulumi import aws:docdb/cluster:Cluster docdb_cluster docdb-prod-cluster
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

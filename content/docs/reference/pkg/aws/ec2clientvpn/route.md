@@ -1151,6 +1151,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AWS Client VPN routes can be imported using the endpoint ID, target subnet ID, and destination CIDR block. All values are separated by a `,`.
+
+```sh
+ $ pulumi import aws:ec2clientvpn/route:Route example cvpn-endpoint-1234567890abcdef,subnet-9876543210fedcba,10.1.0.0/24
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

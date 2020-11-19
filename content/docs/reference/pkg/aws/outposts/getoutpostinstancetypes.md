@@ -12,6 +12,7 @@ meta_desc: "Explore the GetOutpostInstanceTypes function of the outposts module,
 
 Information about Outposts Instance Types.
 
+
 {{% examples %}}
 ## Example Usage
 

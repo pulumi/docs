@@ -1110,6 +1110,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SSM resource data sync can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:ssm/resourceDataSync:ResourceDataSync example example-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

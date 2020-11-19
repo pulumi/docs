@@ -12,6 +12,7 @@ meta_desc: "Explore the AccessKey resource of the iam module, including examples
 
 Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
 
+
 {{% examples %}}
 ## Example Usage
 

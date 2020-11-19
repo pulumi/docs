@@ -1519,6 +1519,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodeBuild Webhooks can be imported using the CodeBuild Project name, e.g.
+
+```sh
+ $ pulumi import aws:codebuild/webhook:Webhook example MyProjectName
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

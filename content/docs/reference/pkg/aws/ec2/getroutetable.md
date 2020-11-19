@@ -16,6 +16,7 @@ This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1452,6 +1453,17 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="vpcendpointid_csharp">
+<a href="#vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Endpoint ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="vpcpeeringconnectionid_csharp">
 <a href="#vpcpeeringconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1565,6 +1577,17 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The EC2 Transit Gateway ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpcendpointid_go">
+<a href="#vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Endpoint ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1686,6 +1709,17 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="vpcendpointid_nodejs">
+<a href="#vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Endpoint ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="vpcpeeringconnectionid_nodejs">
 <a href="#vpcpeeringconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1799,6 +1833,17 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The EC2 Transit Gateway ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpc_endpoint_id_python">
+<a href="#vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Endpoint ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetInstance function of the rds module, including exampl
 
 Use this data source to get information about an RDS instance
 
+
 {{% examples %}}
 ## Example Usage
 

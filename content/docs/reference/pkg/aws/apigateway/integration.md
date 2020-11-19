@@ -2310,6 +2310,16 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 
 
 
+## Import
+
+
+`aws_api_gateway_integration` can be imported using `REST-API-ID/RESOURCE-ID/HTTP-METHOD`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/integration:Integration example 12345abcde/67890fghij/GET
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

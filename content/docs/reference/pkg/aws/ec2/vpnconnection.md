@@ -3313,6 +3313,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+VPN Connections can be imported using the `vpn connection id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/vpnConnection:VpnConnection testvpnconnection vpn-40f41529
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

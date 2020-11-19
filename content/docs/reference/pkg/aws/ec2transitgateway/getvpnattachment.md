@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVpnAttachment function of the ec2transitgateway modul
 
 Get information on an EC2 Transit Gateway VPN Attachment.
 
+
 {{% examples %}}
 ## Example Usage
 

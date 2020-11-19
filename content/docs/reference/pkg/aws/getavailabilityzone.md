@@ -24,6 +24,7 @@ which provides a list of the available zones.
 
 
 
+
 ## Using GetAvailabilityZone {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

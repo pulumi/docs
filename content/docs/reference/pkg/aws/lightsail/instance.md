@@ -33,37 +33,6 @@ Lightsail currently supports the following Availability Zones (e.g. `us-east-1a`
 - `us-east-2{a,b,c}`
 - `us-west-2{a,b,c}`
 
-## Blueprints
-
-Lightsail currently supports the following Blueprint IDs:
-
-### OS Only
-
-- `amazon_linux_2018_03_0_2`
-- `centos_7_1901_01`
-- `debian_8_7`
-- `debian_9_5`
-- `freebsd_11_1`
-- `opensuse_42_2`
-- `ubuntu_16_04_2`
-- `ubuntu_18_04`
-
-### Apps and OS
-
-- `drupal_8_5_6`
-- `gitlab_11_1_4_1`
-- `joomla_3_8_11`
-- `lamp_5_6_37_2`
-- `lamp_7_1_20_1`
-- `magento_2_2_5`
-- `mean_4_0_1`
-- `nginx_1_14_0_1`
-- `nodejs_10_8_0`
-- `plesk_ubuntu_17_8_11_1`
-- `redmine_3_4_6`
-- `wordpress_4_9_8`
-- `wordpress_multisite_4_9_8`
-
 ## Bundles
 
 Lightsail currently supports the following Bundle IDs (e.g. an instance in `ap-northeast-1` would use `small_2_0`):
@@ -403,8 +372,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -490,8 +458,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -577,8 +544,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -664,8 +630,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1356,8 +1321,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1540,8 +1504,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1724,8 +1687,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1908,8 +1870,7 @@ instance (see list below)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID for a virtual private server image
-(see list below)
+    <dd>{{% md %}}The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2065,6 +2026,16 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 
 
 
+
+
+## Import
+
+
+Lightsail Instances can be imported using their name, e.g.
+
+```sh
+ $ pulumi import aws:lightsail/instance:Instance gitlab_test 'custom gitlab'
+```
 
 
 

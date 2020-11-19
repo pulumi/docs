@@ -893,6 +893,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_ec2_transit_gateway_route_table_propagation` can be imported by using the EC2 Transit Gateway Route Table identifier, an underscore, and the EC2 Transit Gateway Attachment identifier, e.g.
+
+```sh
+ $ pulumi import aws:ec2transitgateway/routeTablePropagation:RouteTablePropagation example tgw-rtb-12345678_tgw-attach-87654321
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

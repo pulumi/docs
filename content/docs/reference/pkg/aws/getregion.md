@@ -17,6 +17,7 @@ discover the name of the region configured within the provider. The latter
 can be useful in a child module which is inheriting an AWS provider
 configuration from its parent module.
 
+
 {{% examples %}}
 ## Example Usage
 

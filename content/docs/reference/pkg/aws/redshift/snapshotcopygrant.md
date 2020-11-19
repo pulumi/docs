@@ -913,6 +913,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Redshift Snapshot Copy Grants support import by name, e.g. console
+
+```sh
+ $ pulumi import aws:redshift/snapshotCopyGrant:SnapshotCopyGrant test my-grant
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

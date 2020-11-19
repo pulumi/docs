@@ -1549,6 +1549,16 @@ Used for cross-account Direct Connect gateway associations.
 
 
 
+## Import
+
+
+Direct Connect gateway associations can be imported using `dx_gateway_id` together with `associated_gateway_id`, e.g.
+
+```sh
+ $ pulumi import aws:directconnect/gatewayAssociation:GatewayAssociation example dxgw-12345678/vgw-98765432
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

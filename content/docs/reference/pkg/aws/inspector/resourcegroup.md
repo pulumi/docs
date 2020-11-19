@@ -12,6 +12,7 @@ meta_desc: "Explore the ResourceGroup resource of the inspector module, includin
 
 Provides an Amazon Inspector resource group resource.
 
+
 {{% examples %}}
 ## Example Usage
 

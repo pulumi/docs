@@ -14,6 +14,7 @@ Provides information for multiple EC2 Local Gateway Route Tables, such as their 
 
 
 
+
 ## Using GetLocalGatewayRouteTables {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

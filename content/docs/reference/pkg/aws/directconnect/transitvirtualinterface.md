@@ -1886,6 +1886,16 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 
 
 
+## Import
+
+
+Direct Connect transit virtual interfaces can be imported using the `vif id`, e.g.
+
+```sh
+ $ pulumi import aws:directconnect/transitVirtualInterface:TransitVirtualInterface test dxvif-33cc44dd
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

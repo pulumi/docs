@@ -12,6 +12,7 @@ meta_desc: "Explore the GetReplicationGroup function of the elasticache module, 
 
 Use this data source to get information about an Elasticache Replication Group.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1977,6 +1977,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glue Classifiers can be imported using their name, e.g.
+
+```sh
+ $ pulumi import aws:glue/classifier:Classifier MyClassifier MyClassifier
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

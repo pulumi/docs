@@ -3241,6 +3241,16 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 
 
+## Import
+
+
+MQ Brokers can be imported using their broker id, e.g.
+
+```sh
+ $ pulumi import aws:mq/broker:Broker example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

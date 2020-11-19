@@ -12,6 +12,7 @@ meta_desc: "Explore the GetElasticIp function of the AWS package, including exam
 
 `aws.ec2.Eip` provides details about a specific Elastic IP.
 
+
 {{% examples %}}
 ## Example Usage
 

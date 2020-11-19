@@ -18,6 +18,7 @@ deploy the required DNS verification records, and wait for verification to compl
 
 > **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
+
 {{% examples %}}
 ## Example Usage
 

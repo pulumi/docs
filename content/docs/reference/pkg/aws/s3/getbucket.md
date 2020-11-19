@@ -15,6 +15,7 @@ Provides details about a specific S3 bucket.
 This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.
 
+
 {{% examples %}}
 ## Example Usage
 

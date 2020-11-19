@@ -1615,6 +1615,16 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
 
 
 
+## Import
+
+
+Slot types can be imported using their name.
+
+```sh
+ $ pulumi import aws:lex/slotType:SlotType flower_types FlowerTypes
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

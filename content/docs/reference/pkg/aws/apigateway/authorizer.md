@@ -1335,6 +1335,16 @@ Defaults to `TOKEN`.
 
 
 
+## Import
+
+
+AWS API Gateway Authorizer can be imported using the `REST-API-ID/AUTHORIZER-ID`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/authorizer:Authorizer authorizer 12345abcde/example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

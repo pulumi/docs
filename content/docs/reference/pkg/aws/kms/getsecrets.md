@@ -14,6 +14,7 @@ Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
 
 
+
 ## Using GetSecrets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

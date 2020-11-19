@@ -17,6 +17,7 @@ This resource is for additional certificates and does not replace the default ce
 
 > **Note:** `aws.alb.ListenerCertificate` is known as `aws.lb.ListenerCertificate`. The functionality is identical.
 
+
 {{% examples %}}
 ## Example Usage
 

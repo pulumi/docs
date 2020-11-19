@@ -1243,6 +1243,16 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
 
 
 
+## Import
+
+
+Delivery Channel can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:cfg/deliveryChannel:DeliveryChannel foo example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

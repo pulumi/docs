@@ -1957,6 +1957,16 @@ The MTU of a virtual private interface can be either `1500` or `9001` (jumbo fra
 
 
 
+## Import
+
+
+Direct Connect private virtual interfaces can be imported using the `vif id`, e.g.
+
+```sh
+ $ pulumi import aws:directconnect/privateVirtualInterface:PrivateVirtualInterface test dxvif-33cc44dd
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

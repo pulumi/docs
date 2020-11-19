@@ -15,6 +15,7 @@ resources.
 
 For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
 
+
 {{% examples %}}
 ## Example Usage
 

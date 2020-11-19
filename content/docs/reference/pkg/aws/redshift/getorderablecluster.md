@@ -12,6 +12,7 @@ meta_desc: "Explore the GetOrderableCluster function of the redshift module, inc
 
 Information about Redshift Orderable Clusters and valid parameter combinations.
 
+
 {{% examples %}}
 ## Example Usage
 

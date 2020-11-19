@@ -914,6 +914,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CloudWatch dashboards can be imported using the `dashboard_name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/dashboard:Dashboard sample <dashboard_name>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,6 +13,7 @@ meta_desc: "Explore the GetProduct function of the pricing module, including exa
 Use this data source to get the pricing information of all products in AWS.
 This data source is only available in a us-east-1 or ap-south-1 provider.
 
+
 {{% examples %}}
 ## Example Usage
 

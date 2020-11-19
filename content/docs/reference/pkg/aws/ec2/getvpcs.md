@@ -16,6 +16,7 @@ The following example retrieves a list of VPC Ids with a custom tag of `service`
 
 
 
+
 ## Using GetVpcs {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

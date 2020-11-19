@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCluster function of the elasticache module, including
 
 Use this data source to get information about an Elasticache Cluster
 
+
 {{% examples %}}
 ## Example Usage
 

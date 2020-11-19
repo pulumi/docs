@@ -950,6 +950,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CloudWatch log resource policies can be imported using the policy name, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logResourcePolicy:LogResourcePolicy MyPolicy MyPolicy
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

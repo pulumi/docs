@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGroup function of the autoscaling module, including e
 
 Use this data source to get information on an existing autoscaling group.
 
+
 {{% examples %}}
 ## Example Usage
 

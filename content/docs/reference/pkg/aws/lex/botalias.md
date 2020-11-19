@@ -1748,6 +1748,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Bot aliases can be imported using an ID with the format `bot_name:bot_alias_name`.
+
+```sh
+ $ pulumi import aws:lex/botAlias:BotAlias order_flowers_prod OrderFlowers:OrderFlowersProd
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

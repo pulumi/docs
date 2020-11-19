@@ -1894,6 +1894,16 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
 
 
+## Import
+
+
+CodeDeploy Deployment Configurations can be imported using the `deployment_config_name`, e.g.
+
+```sh
+ $ pulumi import aws:codedeploy/deploymentConfig:DeploymentConfig example my-deployment-config
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

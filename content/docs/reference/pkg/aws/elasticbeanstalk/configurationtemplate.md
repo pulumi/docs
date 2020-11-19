@@ -22,6 +22,7 @@ The `setting` field supports the following format:
 * `value` - value for the configuration option
 * `resource` - (Optional) resource name for [scheduled action](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction)
 
+
 {{% examples %}}
 ## Example Usage
 

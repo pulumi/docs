@@ -1605,6 +1605,16 @@ This argument should only be specified for `FORWARD` type rules.
 
 
 
+## Import
+
+
+Route53 Resolver rules can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:route53/resolverRule:ResolverRule sys rslvr-rr-0123456789abcdef0
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

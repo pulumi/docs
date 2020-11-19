@@ -2479,6 +2479,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodePipelines can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:codepipeline/pipeline:Pipeline foo example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

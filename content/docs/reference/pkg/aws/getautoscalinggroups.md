@@ -13,6 +13,7 @@ meta_desc: "Explore the GetAutoscalingGroups function of the AWS package, includ
 The Autoscaling Groups data source allows access to the list of AWS
 ASGs within a specific region. This will allow you to pass a list of AutoScaling Groups to other resources.
 
+
 {{% examples %}}
 ## Example Usage
 

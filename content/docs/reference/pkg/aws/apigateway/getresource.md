@@ -13,6 +13,7 @@ meta_desc: "Explore the GetResource function of the apigateway module, including
 Use this data source to get the id of a Resource in API Gateway.
 To fetch the Resource, you must provide the REST API id as well as the full path.
 
+
 {{% examples %}}
 ## Example Usage
 

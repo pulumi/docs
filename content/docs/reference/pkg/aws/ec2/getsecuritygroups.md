@@ -13,6 +13,7 @@ meta_desc: "Explore the GetSecurityGroups function of the ec2 module, including 
 Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -2946,6 +2946,16 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 
 
+## Import
+
+
+Auto Scaling scaling plans can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:autoscalingplans/scalingPlan:ScalingPlan example MyScale1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

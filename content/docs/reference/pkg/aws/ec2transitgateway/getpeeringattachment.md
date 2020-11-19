@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPeeringAttachment function of the ec2transitgateway m
 
 Get information on an EC2 Transit Gateway Peering Attachment.
 
+
 {{% examples %}}
 ## Example Usage
 

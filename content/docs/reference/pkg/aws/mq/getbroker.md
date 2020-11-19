@@ -12,6 +12,7 @@ meta_desc: "Explore the GetBroker function of the mq module, including examples,
 
 Provides information about a MQ Broker.
 
+
 {{% examples %}}
 ## Example Usage
 

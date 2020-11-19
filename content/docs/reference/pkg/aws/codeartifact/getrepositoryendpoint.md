@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRepositoryEndpoint function of the codeartifact modul
 
 The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format.
 
+
 {{% examples %}}
 ## Example Usage
 

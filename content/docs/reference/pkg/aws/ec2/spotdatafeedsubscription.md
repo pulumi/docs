@@ -730,6 +730,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A Spot Datafeed Subscription can be imported using the word `spot-datafeed-subscription`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/spotDatafeedSubscription:SpotDatafeedSubscription mysubscription spot-datafeed-subscription
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

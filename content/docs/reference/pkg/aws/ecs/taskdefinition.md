@@ -3457,6 +3457,16 @@ parameter of container definition in the `mountPoints` section.
 
 
 
+## Import
+
+
+ECS Task Definitions can be imported via their Amazon Resource Name (ARN)
+
+```sh
+ $ pulumi import aws:ecs/taskDefinition:TaskDefinition example arn:aws:ecs:us-east-1:012345678910:task-definition/mytaskfamily:123
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

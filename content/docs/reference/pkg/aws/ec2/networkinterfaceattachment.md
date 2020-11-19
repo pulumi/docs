@@ -12,6 +12,7 @@ meta_desc: "Explore the NetworkInterfaceAttachment resource of the ec2 module, i
 
 Attach an Elastic network interface (ENI) resource with EC2 instance.
 
+
 {{% examples %}}
 ## Example Usage
 

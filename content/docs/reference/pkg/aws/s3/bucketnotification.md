@@ -2560,6 +2560,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+S3 bucket notification can be imported using the `bucket`, e.g.
+
+```sh
+ $ pulumi import aws:s3/bucketNotification:BucketNotification bucket_notification bucket-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

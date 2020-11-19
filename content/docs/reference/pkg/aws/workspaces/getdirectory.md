@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDirectory function of the workspaces module, includin
 
 Retrieve information about an AWS WorkSpaces directory.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ Retrieve information about an EKS Cluster.
 
 
 
+
 ## Using GetCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

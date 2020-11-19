@@ -2409,6 +2409,16 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 
 
 
+## Import
+
+
+`aws_apigatewayv2_api` can be imported by using the API identifier, e.g.
+
+```sh
+ $ pulumi import aws:apigatewayv2/api:Api example aabbccddee
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

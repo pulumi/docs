@@ -2427,6 +2427,16 @@ Rules with a lower value are evaluated before rules with a higher value.
 
 
 
+## Import
+
+
+WAF Regional Web ACL can be imported using the id, e.g.
+
+```sh
+ $ pulumi import aws:wafregional/webAcl:WebAcl wafacl a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

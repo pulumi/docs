@@ -28,6 +28,7 @@ resource. Ongoing updates to the referenced instance will not be propagated into
 the generated AMI. Users may taint or otherwise recreate the resource in order
 to produce a fresh snapshot.
 
+
 {{% examples %}}
 ## Example Usage
 

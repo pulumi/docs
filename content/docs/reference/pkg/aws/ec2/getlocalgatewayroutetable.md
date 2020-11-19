@@ -15,6 +15,7 @@ Provides details about an EC2 Local Gateway Route Table.
 This data source can prove useful when a module accepts a local gateway route table id as
 an input variable and needs to, for example, find the associated Outpost or Local Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

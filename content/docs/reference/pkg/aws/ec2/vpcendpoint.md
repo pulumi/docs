@@ -246,6 +246,91 @@ const ec2 = new aws.ec2.VpcEndpoint("ec2", {
 
 {{% /example %}}
 
+### Gateway Load Balancer Endpoint Type
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+        var exampleVpcEndpointService = new Aws.Ec2.VpcEndpointService("exampleVpcEndpointService", new Aws.Ec2.VpcEndpointServiceArgs
+        {
+            AcceptanceRequired = false,
+            AllowedPrincipals = 
+            {
+                current.Apply(current => current.Arn),
+            },
+            GatewayLoadBalancerArns = 
+            {
+                aws_lb.Example.Arn,
+            },
+        });
+        var exampleVpcEndpoint = new Aws.Ec2.VpcEndpoint("exampleVpcEndpoint", new Aws.Ec2.VpcEndpointArgs
+        {
+            ServiceName = exampleVpcEndpointService.ServiceName,
+            SubnetIds = 
+            {
+                aws_subnet.Example.Id,
+            },
+            VpcEndpointType = exampleVpcEndpointService.ServiceType,
+            VpcId = aws_vpc.Example.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+current = aws.get_caller_identity()
+example_vpc_endpoint_service = aws.ec2.VpcEndpointService("exampleVpcEndpointService",
+    acceptance_required=False,
+    allowed_principals=[current.arn],
+    gateway_load_balancer_arns=[aws_lb["example"]["arn"]])
+example_vpc_endpoint = aws.ec2.VpcEndpoint("exampleVpcEndpoint",
+    service_name=example_vpc_endpoint_service.service_name,
+    subnet_ids=[aws_subnet["example"]["id"]],
+    vpc_endpoint_type=example_vpc_endpoint_service.service_type,
+    vpc_id=aws_vpc["example"]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const current = aws.getCallerIdentity({});
+const exampleVpcEndpointService = new aws.ec2.VpcEndpointService("exampleVpcEndpointService", {
+    acceptanceRequired: false,
+    allowedPrincipals: [current.then(current => current.arn)],
+    gatewayLoadBalancerArns: [aws_lb.example.arn],
+});
+const exampleVpcEndpoint = new aws.ec2.VpcEndpoint("exampleVpcEndpoint", {
+    serviceName: exampleVpcEndpointService.serviceName,
+    subnetIds: [aws_subnet.example.id],
+    vpcEndpointType: exampleVpcEndpointService.serviceType,
+    vpcId: aws_vpc.example.id,
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -516,7 +601,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -538,7 +623,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
 </dl>
@@ -634,7 +719,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -656,7 +741,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
 </dl>
@@ -752,7 +837,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -774,7 +859,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
 </dl>
@@ -870,7 +955,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -892,7 +977,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1623,7 +1708,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1645,7 +1730,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1829,7 +1914,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1851,7 +1936,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2035,7 +2120,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2057,7 +2142,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2241,7 +2326,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    <dd>{{% md %}}The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2263,7 +2348,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    <dd>{{% md %}}The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2428,6 +2513,16 @@ Defaults to `false`.
 
 
 
+
+
+## Import
+
+
+VPC Endpoints can be imported using the `vpc endpoint id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/vpcEndpoint:VpcEndpoint endpoint1 vpce-3ecf2a57
+```
 
 
 

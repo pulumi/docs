@@ -2511,6 +2511,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Budgets can be imported using `AccountID:BudgetName`, e.g.
+
+```sh
+ $ pulumi import aws:budgets/budget:Budget myBudget 123456789012:myBudget`
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -18,6 +18,7 @@ or to make it easier for an operator to connect through bastion host(s).
 instances (e.g. managed via autoscaling group), as the output may change at any time
 and you'd need to re-run `apply` every time an instance comes up or dies.
 
+
 {{% examples %}}
 ## Example Usage
 

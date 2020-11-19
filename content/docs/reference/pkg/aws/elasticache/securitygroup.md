@@ -826,6 +826,16 @@ authorized for ingress to the cache security group
 
 
 
+## Import
+
+
+ElastiCache Security Groups can be imported by name, e.g.
+
+```sh
+ $ pulumi import aws:elasticache/securityGroup:SecurityGroup my_ec_security_group ec-security-group-1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

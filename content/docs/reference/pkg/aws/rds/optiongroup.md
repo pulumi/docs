@@ -1796,6 +1796,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DB Option groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:rds/optionGroup:OptionGroup bar mysql-option-group
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

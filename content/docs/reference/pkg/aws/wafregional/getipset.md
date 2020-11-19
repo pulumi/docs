@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpset function of the wafregional module, including e
 
 `aws.wafregional.IpSet` Retrieves a WAF Regional IP Set Resource Id.
 
+
 {{% examples %}}
 ## Example Usage
 

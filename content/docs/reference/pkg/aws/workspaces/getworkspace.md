@@ -12,6 +12,7 @@ meta_desc: "Explore the GetWorkspace function of the workspaces module, includin
 
 Use this data source to get information about a workspace in [AWS Workspaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) Service.
 
+
 {{% examples %}}
 ## Example Usage
 

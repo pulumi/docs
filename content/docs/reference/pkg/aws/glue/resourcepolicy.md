@@ -722,6 +722,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glue Resource Policy can be imported using the account ID
+
+```sh
+ $ pulumi import aws:glue/resourcePolicy:ResourcePolicy Test 12356789012
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

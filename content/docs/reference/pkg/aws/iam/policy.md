@@ -1121,6 +1121,16 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
 
 
+## Import
+
+
+IAM Policies can be imported using the `arn`, e.g.
+
+```sh
+ $ pulumi import aws:iam/policy:Policy administrator arn:aws:iam::123456789012:policy/UsersManageOwnCredentials
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

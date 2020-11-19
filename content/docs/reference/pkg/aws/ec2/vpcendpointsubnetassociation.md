@@ -18,6 +18,7 @@ and a single `subnet_id`) and a VPC Endpoint resource with a `subnet_ids`
 attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
 Association resource. Doing so will cause a conflict of associations and will overwrite the association.
 
+
 {{% examples %}}
 ## Example Usage
 

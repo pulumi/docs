@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVpcAttachment function of the ec2transitgateway modul
 
 Get information on an EC2 Transit Gateway VPC Attachment.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -392,6 +393,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="appliancemodesupport_csharp">
+<a href="#appliancemodesupport_csharp" style="color: inherit; text-decoration: inherit;">Appliance<wbr>Mode<wbr>Support</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Whether Appliance Mode support is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dnssupport_csharp">
 <a href="#dnssupport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Support</a>
 </span> 
@@ -494,6 +506,17 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="appliancemodesupport_go">
+<a href="#appliancemodesupport_go" style="color: inherit; text-decoration: inherit;">Appliance<wbr>Mode<wbr>Support</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Whether Appliance Mode support is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -602,6 +625,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="appliancemodesupport_nodejs">
+<a href="#appliancemodesupport_nodejs" style="color: inherit; text-decoration: inherit;">appliance<wbr>Mode<wbr>Support</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Whether Appliance Mode support is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dnssupport_nodejs">
 <a href="#dnssupport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Support</a>
 </span> 
@@ -704,6 +738,17 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="appliance_mode_support_python">
+<a href="#appliance_mode_support_python" style="color: inherit; text-decoration: inherit;">appliance_<wbr>mode_<wbr>support</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Whether Appliance Mode support is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

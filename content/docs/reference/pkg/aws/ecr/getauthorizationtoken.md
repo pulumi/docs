@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAuthorizationToken function of the ecr module, includ
 
 The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.
 
+
 {{% examples %}}
 ## Example Usage
 

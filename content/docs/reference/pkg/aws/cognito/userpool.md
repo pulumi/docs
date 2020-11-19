@@ -5643,6 +5643,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Cognito User Pools can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:cognito/userPool:UserPool pool <id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

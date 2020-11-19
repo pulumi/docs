@@ -12,6 +12,7 @@ meta_desc: "Explore the Trigger resource of the codecommit module, including exa
 
 Provides a CodeCommit Trigger Resource.
 
+
 {{% examples %}}
 ## Example Usage
 

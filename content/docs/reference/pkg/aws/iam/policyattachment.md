@@ -16,6 +16,7 @@ Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)
 
 > **NOTE:** The usage of this resource conflicts with the `aws.iam.GroupPolicyAttachment`, `aws.iam.RolePolicyAttachment`, and `aws.iam.UserPolicyAttachment` resources and will permanently show a difference if both are defined.
 
+
 {{% examples %}}
 ## Example Usage
 

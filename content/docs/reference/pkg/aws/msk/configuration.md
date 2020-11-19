@@ -1084,6 +1084,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+MSK configurations can be imported using the configuration ARN, e.g.
+
+```sh
+ $ pulumi import aws:msk/configuration:Configuration example arn:aws:kafka:us-west-2:123456789012:configuration/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

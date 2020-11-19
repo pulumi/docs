@@ -1091,6 +1091,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_ec2_transit_gateway_peering_attachment` can be imported by using the EC2 Transit Gateway Attachment identifier, e.g.
+
+```sh
+ $ pulumi import aws:ec2transitgateway/peeringAttachment:PeeringAttachment example tgw-attach-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

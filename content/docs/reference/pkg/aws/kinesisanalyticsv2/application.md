@@ -8540,6 +8540,16 @@ An input processor transforms records as they are received from the stream, befo
 
 
 
+## Import
+
+
+`aws_kinesisanalyticsv2_application` can be imported by using the application ARN, e.g.
+
+```sh
+ $ pulumi import aws:kinesisanalyticsv2/application:Application example arn:aws:kinesisanalytics:us-west-2:123456789012:application/example-sql-application
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

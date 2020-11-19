@@ -1095,6 +1095,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DynamoDB Global Tables can be imported using the global table name, e.g.
+
+```sh
+ $ pulumi import aws:dynamodb/globalTable:GlobalTable MyTable MyTable
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

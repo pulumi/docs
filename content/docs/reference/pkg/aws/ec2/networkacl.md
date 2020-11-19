@@ -2155,6 +2155,16 @@ valid network mask.
 
 
 
+## Import
+
+
+Network ACLs can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/networkAcl:NetworkAcl main acl-7aaabd18
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

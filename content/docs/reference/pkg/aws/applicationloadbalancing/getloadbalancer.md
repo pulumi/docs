@@ -19,6 +19,7 @@ This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.
 
+
 {{% examples %}}
 ## Example Usage
 

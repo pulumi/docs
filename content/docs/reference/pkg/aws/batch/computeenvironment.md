@@ -2703,6 +2703,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AWS Batch compute can be imported using the `compute_environment_name`, e.g.
+
+```sh
+ $ pulumi import aws:batch/computeEnvironment:ComputeEnvironment sample sample
+```
+
+ [1]http://docs.aws.amazon.com/batch/latest/userguide/what-is-batch.html [2]http://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html [3]http://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html [4]https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html
+
+
 
 
 <h2 id="package-details">Package Details</h2>

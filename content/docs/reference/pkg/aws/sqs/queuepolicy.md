@@ -785,6 +785,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SQS Queue Policies can be imported using the queue URL, e.g.
+
+```sh
+ $ pulumi import aws:sqs/queuePolicy:QueuePolicy test https://queue.amazonaws.com/0123456789012/myqueue
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

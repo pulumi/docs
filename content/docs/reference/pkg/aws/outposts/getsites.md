@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSites function of the outposts module, including exam
 
 Provides details about multiple Outposts Sites.
 
+
 {{% examples %}}
 ## Example Usage
 

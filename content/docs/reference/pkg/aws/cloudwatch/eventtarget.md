@@ -3662,6 +3662,16 @@ that is used for extracting part of the matched event when passing it to the tar
 
 
 
+## Import
+
+
+EventBridge Targets can be imported using `event_bus_name/rule-name/target-id` (if you omit `event_bus_name`, the `default` event bus will be used).
+
+```sh
+ $ pulumi import aws:cloudwatch/eventTarget:EventTarget test-event-target rule-name/target-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

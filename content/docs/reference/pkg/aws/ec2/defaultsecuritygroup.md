@@ -287,6 +287,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 
 
 
+
 ## Create a DefaultSecurityGroup Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

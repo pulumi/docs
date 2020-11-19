@@ -2775,6 +2775,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Opsworks Application can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:opsworks/application:Application test <id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

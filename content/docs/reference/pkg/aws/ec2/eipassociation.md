@@ -1195,6 +1195,16 @@ address.
 
 
 
+## Import
+
+
+EIP Assocations can be imported using their association ID.
+
+```sh
+ $ pulumi import aws:ec2/eipAssociation:EipAssociation test eipassoc-ab12c345
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

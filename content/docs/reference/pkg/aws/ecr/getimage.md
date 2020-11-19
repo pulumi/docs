@@ -12,6 +12,7 @@ meta_desc: "Explore the GetImage function of the ecr module, including examples,
 
 The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
 
+
 {{% examples %}}
 ## Example Usage
 

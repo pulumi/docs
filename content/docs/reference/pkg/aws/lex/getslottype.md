@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSlotType function of the lex module, including exampl
 
 Provides details about a specific Amazon Lex Slot Type.
 
+
 {{% examples %}}
 ## Example Usage
 

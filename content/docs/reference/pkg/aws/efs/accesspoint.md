@@ -1638,6 +1638,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+The EFS access points can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:efs/accessPoint:AccessPoint test fsap-52a643fb
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

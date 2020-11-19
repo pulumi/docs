@@ -1860,6 +1860,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DB proxies can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:rds/proxy:Proxy example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

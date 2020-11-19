@@ -891,6 +891,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Route53 query logging configurations can be imported using their ID, e.g.
+
+```sh
+ $ pulumi import aws:route53/queryLog:QueryLog example_com xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

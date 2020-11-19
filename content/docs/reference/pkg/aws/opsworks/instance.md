@@ -5115,6 +5115,16 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 
 
+## Import
+
+
+Opsworks Instances can be imported using the `instance id`, e.g.
+
+```sh
+ $ pulumi import aws:opsworks/instance:Instance my_instance 4d6d1710-ded9-42a1-b08e-b043ad7af1e2
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

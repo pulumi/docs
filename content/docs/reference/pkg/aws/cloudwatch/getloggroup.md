@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLogGroup function of the cloudwatch module, including
 
 Use this data source to get information about an AWS Cloudwatch Log Group
 
+
 {{% examples %}}
 ## Example Usage
 

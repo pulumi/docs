@@ -2573,6 +2573,16 @@ default), "io1", "io2" or "gp2".
 
 
 
+## Import
+
+
+`aws_ami` can be imported using the ID of the AMI, e.g.
+
+```sh
+ $ pulumi import aws:ec2/ami:Ami example ami-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

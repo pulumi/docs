@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCluster function of the rds module, including example
 
 Provides information about an RDS cluster.
 
+
 {{% examples %}}
 ## Example Usage
 

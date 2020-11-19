@@ -2817,6 +2817,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+EKS Clusters can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:eks/cluster:Cluster my_cluster my_cluster
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
