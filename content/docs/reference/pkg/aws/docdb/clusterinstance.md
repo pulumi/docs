@@ -2701,6 +2701,16 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 
 
+## Import
+
+
+DocDB Cluster Instances can be imported using the `identifier`, e.g.
+
+```sh
+ $ pulumi import aws:docdb/clusterInstance:ClusterInstance prod_instance_1 aurora-cluster-instance-1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

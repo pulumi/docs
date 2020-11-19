@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVault function of the backup module, including exampl
 
 Use this data source to get information on an existing backup vault.
 
+
 {{% examples %}}
 ## Example Usage
 

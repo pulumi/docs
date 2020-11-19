@@ -1576,6 +1576,16 @@ backend and the Cognito service to communicate about the developer provider.
 
 
 
+## Import
+
+
+Cognito Identity Pool can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:cognito/identityPool:IdentityPool mypool <identity-pool-id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

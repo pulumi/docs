@@ -2943,6 +2943,22 @@ Alias record documented below.
 
 
 
+## Import
+
+
+Route53 Records can be imported using ID of the record, which is the zone identifier, record name, and record type, separated by underscores (`_`). e.g.
+
+```sh
+ $ pulumi import aws:route53/record:Record myrecord Z4KAPRWWNC7JR_dev.example.com_NS
+```
+
+ If the record also contains a delegated set identifier, it can be appended
+
+```sh
+ $ pulumi import aws:route53/record:Record myrecord Z4KAPRWWNC7JR_dev.example.com_NS_dev
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

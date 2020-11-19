@@ -12,6 +12,7 @@ meta_desc: "Explore the GetInstanceType function of the ec2 module, including ex
 
 Get characteristics for a single EC2 Instance Type.
 
+
 {{% examples %}}
 ## Example Usage
 

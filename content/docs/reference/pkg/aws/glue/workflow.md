@@ -1166,6 +1166,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glue Workflows can be imported using `name`, e.g.
+
+```sh
+ $ pulumi import aws:glue/workflow:Workflow MyWorkflow MyWorkflow
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

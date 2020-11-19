@@ -3,7 +3,7 @@ title: "Module servicecatalog"
 title_tag: "Module servicecatalog | Package @pulumi/aws | Node.js SDK"
 linktitle: "servicecatalog"
 meta_desc: "Explore members of the servicecatalog module in the @pulumi/aws package."
-git_sha: "414cc1732ef52039e4e773e514df48dd16ed7aa6"
+git_sha: "c12ed064d3e53d2839c8a83426d06dd01a6bdd8f"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Portfolio" data-link-title="Portfolio">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L30">
         Resource <strong>Portfolio</strong>
     </a>
 </h3>
@@ -51,8 +51,16 @@ const portfolio = new aws.servicecatalog.Portfolio("portfolio", {
 });
 ```
 
+#### Import
+
+Service Catalog Portfolios can be imported using the `service catalog portfolio id`, e.g.
+
+```sh
+ $ pulumi import aws:servicecatalog/portfolio:Portfolio testfolio port-12344321
+```
+
 <h4 class="pdoc-member-header" id="Portfolio-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -66,7 +74,7 @@ Create a Portfolio resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Portfolio-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -77,14 +85,14 @@ Get an existing Portfolio resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Portfolio-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Portfolio-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -95,17 +103,17 @@ Returns true if the given object is an instance of Portfolio.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Portfolio-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L50">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Portfolio-createdTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L51">property <b>createdTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L59">property <b>createdTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Portfolio-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L55">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -113,7 +121,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the portfolio
 
 <h4 class="pdoc-member-header" id="Portfolio-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -122,7 +130,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Portfolio-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -130,7 +138,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the portfolio.
 
 <h4 class="pdoc-member-header" id="Portfolio-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L63">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L71">property <b>providerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -138,7 +146,7 @@ The name of the portfolio.
 Name of the person or organization who owns the portfolio.
 
 <h4 class="pdoc-member-header" id="Portfolio-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L75">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +154,7 @@ Name of the person or organization who owns the portfolio.
 Tags to apply to the connection.
 
 <h4 class="pdoc-member-header" id="Portfolio-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -158,7 +166,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PortfolioArgs" data-link-title="PortfolioArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L142">
         interface <strong>PortfolioArgs</strong>
     </a>
 </h3>
@@ -168,7 +176,7 @@ deployments.
 The set of arguments for constructing a Portfolio resource.
 
 <h4 class="pdoc-member-header" id="PortfolioArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +184,7 @@ The set of arguments for constructing a Portfolio resource.
 Description of the portfolio
 
 <h4 class="pdoc-member-header" id="PortfolioArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +192,7 @@ Description of the portfolio
 The name of the portfolio.
 
 <h4 class="pdoc-member-header" id="PortfolioArgs-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L146">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L154">property <b>providerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +200,7 @@ The name of the portfolio.
 Name of the person or organization who owns the portfolio.
 
 <h4 class="pdoc-member-header" id="PortfolioArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L158">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -200,7 +208,7 @@ Name of the person or organization who owns the portfolio.
 Tags to apply to the connection.
 
 <h3 class="pdoc-module-header" id="PortfolioState" data-link-title="PortfolioState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L118">
         interface <strong>PortfolioState</strong>
     </a>
 </h3>
@@ -210,17 +218,17 @@ Tags to apply to the connection.
 Input properties used for looking up and filtering Portfolio resources.
 
 <h4 class="pdoc-member-header" id="PortfolioState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L111">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L119">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PortfolioState-createdTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L112">property <b>createdTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L120">property <b>createdTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PortfolioState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L116">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L124">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -228,7 +236,7 @@ Input properties used for looking up and filtering Portfolio resources.
 Description of the portfolio
 
 <h4 class="pdoc-member-header" id="PortfolioState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -236,7 +244,7 @@ Description of the portfolio
 The name of the portfolio.
 
 <h4 class="pdoc-member-header" id="PortfolioState-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L124">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L132">property <b>providerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +252,7 @@ The name of the portfolio.
 Name of the person or organization who owns the portfolio.
 
 <h4 class="pdoc-member-header" id="PortfolioState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/servicecatalog/portfolio.ts#L128">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/servicecatalog/portfolio.ts#L136">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

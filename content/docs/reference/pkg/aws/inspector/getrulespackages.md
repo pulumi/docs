@@ -14,6 +14,7 @@ The AWS Inspector Rules Packages data source allows access to the list of AWS
 Inspector Rules Packages which can be used by AWS Inspector within the region
 configured in the provider.
 
+
 {{% examples %}}
 ## Example Usage
 

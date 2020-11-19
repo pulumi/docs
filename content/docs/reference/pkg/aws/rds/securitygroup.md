@@ -1225,6 +1225,16 @@ by `security_group_name`.
 
 
 
+## Import
+
+
+DB Security groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:rds/securityGroup:SecurityGroup default aws_rds_sg-1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

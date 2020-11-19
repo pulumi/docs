@@ -885,6 +885,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+QLDB Ledgers can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:qldb/ledger:Ledger sample-ledger sample-ledger
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

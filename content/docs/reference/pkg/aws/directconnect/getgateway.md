@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGateway function of the directconnect module, includi
 
 Retrieve information about a Direct Connect Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

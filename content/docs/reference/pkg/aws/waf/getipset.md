@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpset function of the waf module, including examples,
 
 `aws.waf.IpSet` Retrieves a WAF IP Set Resource Id.
 
+
 {{% examples %}}
 ## Example Usage
 

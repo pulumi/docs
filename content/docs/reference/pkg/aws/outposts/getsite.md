@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSite function of the outposts module, including examp
 
 Provides details about an Outposts Site.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.
 
+
 {{% examples %}}
 ## Example Usage
 

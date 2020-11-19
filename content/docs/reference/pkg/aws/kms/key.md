@@ -1453,6 +1453,16 @@ Defaults to `ENCRYPT_DECRYPT`.
 
 
 
+## Import
+
+
+KMS Keys can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:kms/key:Key a 1234abcd-12ab-34cd-56ef-1234567890ab
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

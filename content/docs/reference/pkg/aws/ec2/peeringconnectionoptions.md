@@ -1584,6 +1584,16 @@ connection. This option is not supported for inter-region VPC peering.
 
 
 
+## Import
+
+
+VPC Peering Connection Options can be imported using the `vpc peering id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/peeringConnectionOptions:PeeringConnectionOptions foo pcx-111aaa111
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

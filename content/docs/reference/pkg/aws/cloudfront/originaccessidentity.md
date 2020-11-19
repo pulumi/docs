@@ -1300,6 +1300,16 @@ permission to an object in Amazon S3.
 
 
 
+## Import
+
+
+Cloudfront Origin Access Identities can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:cloudfront/originAccessIdentity:OriginAccessIdentity origin_access E74FTE3AEXAMPLE
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

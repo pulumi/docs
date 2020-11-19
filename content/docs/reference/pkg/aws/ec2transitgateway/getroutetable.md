@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRouteTable function of the ec2transitgateway module, 
 
 Get information on an EC2 Transit Gateway Route Table.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -418,6 +419,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultassociationroutetable_csharp">
 <a href="#defaultassociationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
 </span> 
@@ -487,6 +499,17 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -562,6 +585,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="defaultassociationroutetable_nodejs">
 <a href="#defaultassociationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Association<wbr>Route<wbr>Table</a>
 </span> 
@@ -631,6 +665,17 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

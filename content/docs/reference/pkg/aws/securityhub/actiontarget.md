@@ -913,6 +913,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Security Hub custom action can be imported using the action target ARN e.g.
+
+```sh
+ $ pulumi import aws:securityhub/actionTarget:ActionTarget example arn:aws:securityhub:eu-west-1:312940875350:action/custom/a
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

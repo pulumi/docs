@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNetworkInterface function of the ec2 module, includin
 
 Use this data source to get information about a Network Interface.
 
+
 {{% examples %}}
 ## Example Usage
 

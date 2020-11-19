@@ -1527,6 +1527,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DB Event Subscriptions can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:rds/eventSubscription:EventSubscription default rds-event-sub
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

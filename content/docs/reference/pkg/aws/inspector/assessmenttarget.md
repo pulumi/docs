@@ -823,6 +823,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Inspector Assessment Targets can be imported via their Amazon Resource Name (ARN), e.g.
+
+```sh
+ $ pulumi import aws:inspector/assessmentTarget:AssessmentTarget example arn:aws:inspector:us-east-1:123456789012:target/0-xxxxxxx
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

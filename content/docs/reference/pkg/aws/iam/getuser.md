@@ -14,6 +14,7 @@ This data source can be used to fetch information about a specific
 IAM user. By using this data source, you can reference IAM user
 properties without having to hard code ARNs or unique IDs as input.
 
+
 {{% examples %}}
 ## Example Usage
 

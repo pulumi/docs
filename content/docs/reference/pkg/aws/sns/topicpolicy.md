@@ -836,6 +836,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SNS Topic Policy can be imported using the topic ARN, e.g.
+
+```sh
+ $ pulumi import aws:sns/topicPolicy:TopicPolicy user_updates arn:aws:sns:us-west-2:0123456789012:my-topic
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

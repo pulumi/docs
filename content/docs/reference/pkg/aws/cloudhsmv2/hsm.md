@@ -1171,6 +1171,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+HSM modules can be imported using their HSM ID, e.g.
+
+```sh
+ $ pulumi import aws:cloudhsmv2/hsm:Hsm bar hsm-quo8dahtaca
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

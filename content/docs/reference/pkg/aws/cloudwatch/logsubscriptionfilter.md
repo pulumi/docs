@@ -1081,6 +1081,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CloudWatch Logs subscription filter can be imported using the log group name and subscription filter name separated by `|`.
+
+```sh
+ $ pulumi import aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter test_lambdafunction_logfilter /aws/lambda/example_lambda_name|test_lambdafunction_logfilter
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

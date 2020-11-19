@@ -1320,6 +1320,16 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
 
 
 
+## Import
+
+
+Glacier Vaults can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:glacier/vault:Vault archive my_archive
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

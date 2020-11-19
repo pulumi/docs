@@ -4365,6 +4365,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+MSK clusters can be imported using the cluster `arn`, e.g.
+
+```sh
+ $ pulumi import aws:msk/cluster:Cluster example arn:aws:kafka:us-west-2:123456789012:cluster/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

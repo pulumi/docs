@@ -3802,6 +3802,16 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 
 
 
+## Import
+
+
+Cloud Metric Alarms can be imported using the `alarm_name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/metricAlarm:MetricAlarm test alarm-12345
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

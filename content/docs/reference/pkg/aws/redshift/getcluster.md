@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCluster function of the redshift module, including ex
 
 Provides details about a specific redshift cluster.
 
+
 {{% examples %}}
 ## Example Usage
 

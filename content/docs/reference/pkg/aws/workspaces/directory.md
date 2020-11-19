@@ -2554,6 +2554,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Workspaces directory can be imported using the directory ID, e.g.
+
+```sh
+ $ pulumi import aws:workspaces/directory:Directory main d-4444444444
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

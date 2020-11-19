@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRule function of the waf module, including examples, 
 
 `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
 
+
 {{% examples %}}
 ## Example Usage
 

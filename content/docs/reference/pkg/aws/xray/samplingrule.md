@@ -1822,6 +1822,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+XRay Sampling Rules can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:xray/samplingRule:SamplingRule example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

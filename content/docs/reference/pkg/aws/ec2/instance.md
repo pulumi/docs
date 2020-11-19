@@ -6111,6 +6111,16 @@ using that type
 
 
 
+## Import
+
+
+Instances can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/instance:Instance web i-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

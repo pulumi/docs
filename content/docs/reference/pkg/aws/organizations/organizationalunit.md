@@ -1114,6 +1114,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AWS Organizations Organizational Units can be imported by using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:organizations/organizationalUnit:OrganizationalUnit example ou-1234567
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1605,6 +1605,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Capacity Reservations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/capacityReservation:CapacityReservation web cr-0123456789abcdef0
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificateAuthority function of the acmpca module, i
 
 Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).
 
+
 {{% examples %}}
 ## Example Usage
 

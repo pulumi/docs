@@ -13,6 +13,7 @@ meta_desc: "Explore the GetService function of the ecs module, including example
 The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.
 
+
 {{% examples %}}
 ## Example Usage
 

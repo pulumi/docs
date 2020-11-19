@@ -1064,6 +1064,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+API Gateway Client Certificates can be imported using the id, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/clientCertificate:ClientCertificate demo ab1cqe
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

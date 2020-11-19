@@ -2344,6 +2344,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Replication instances can be imported using the `replication_instance_id`, e.g.
+
+```sh
+ $ pulumi import aws:dms/replicationInstance:ReplicationInstance test test-dms-replication-instance-tf
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

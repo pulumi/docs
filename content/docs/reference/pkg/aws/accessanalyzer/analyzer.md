@@ -982,6 +982,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Access Analyzer Analyzers can be imported using the `analyzer_name`, e.g.
+
+```sh
+ $ pulumi import aws:accessanalyzer/analyzer:Analyzer example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

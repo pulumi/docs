@@ -14,6 +14,7 @@ Use this data source to get the ARN and URL of queue in AWS Simple Queue Service
 By using this data source, you can reference SQS queues without having to hardcode
 the ARNs as input.
 
+
 {{% examples %}}
 ## Example Usage
 

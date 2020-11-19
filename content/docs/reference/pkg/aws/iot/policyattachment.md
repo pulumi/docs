@@ -12,6 +12,7 @@ meta_desc: "Explore the PolicyAttachment resource of the iot module, including e
 
 Provides an IoT policy attachment.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1099,6 +1099,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Global Accelerator listeners can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:globalaccelerator/listener:Listener example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/listener/xxxxxxxx
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

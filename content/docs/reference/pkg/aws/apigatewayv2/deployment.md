@@ -896,6 +896,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_apigatewayv2_deployment` can be imported by using the API identifier and deployment identifier, e.g.
+
+```sh
+ $ pulumi import aws:apigatewayv2/deployment:Deployment example aabbccddee/1122334
+```
+
+ The `triggers` argument cannot be imported.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

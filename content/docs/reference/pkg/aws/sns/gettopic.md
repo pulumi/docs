@@ -14,6 +14,7 @@ Use this data source to get the ARN of a topic in AWS Simple Notification
 Service (SNS). By using this data source, you can reference SNS topics
 without having to hard code the ARNs as input.
 
+
 {{% examples %}}
 ## Example Usage
 

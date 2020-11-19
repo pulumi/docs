@@ -760,6 +760,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Shield protection resources can be imported by specifying their ID e.g.
+
+```sh
+ $ pulumi import aws:shield/protection:Protection example ff9592dc-22f3-4e88-afa1-7b29fde9669a
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

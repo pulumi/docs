@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIntent function of the lex module, including examples
 
 Provides details about a specific Amazon Lex Intent.
 
+
 {{% examples %}}
 ## Example Usage
 

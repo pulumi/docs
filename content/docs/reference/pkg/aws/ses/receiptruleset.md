@@ -624,6 +624,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SES receipt rule sets can be imported using the rule set name.
+
+```sh
+ $ pulumi import aws:ses/receiptRuleSet:ReceiptRuleSet my_rule_set my_rule_set_name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

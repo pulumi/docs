@@ -1521,6 +1521,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+EKS Fargate Profiles can be imported using the `cluster_name` and `fargate_profile_name` separated by a colon (`:`), e.g.
+
+```sh
+ $ pulumi import aws:eks/fargateProfile:FargateProfile my_fargate_profile my_cluster:my_fargate_profile
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

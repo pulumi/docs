@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRateBasedMod function of the wafregional module, incl
 
 `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
 
+
 {{% examples %}}
 ## Example Usage
 

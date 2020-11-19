@@ -1360,6 +1360,18 @@ AWS account and region the Stream is created in.
 
 
 
+## Import
+
+
+Kinesis Streams can be imported using the `arn`, e.g.
+
+```sh
+ $ pulumi import aws:kinesis/videoStream:VideoStream test_stream arn:aws:kinesisvideo:us-west-2:123456789012:stream/terraform-kinesis-test/1554978910975
+```
+
+ [1]https://aws.amazon.com/documentation/kinesis/ [2]http://www.iana.org/assignments/media-types/media-types.xhtml [3]https://tools.ietf.org/html/rfc6838#section-4.2
+
+
 
 
 <h2 id="package-details">Package Details</h2>

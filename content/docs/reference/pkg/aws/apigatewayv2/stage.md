@@ -2539,6 +2539,16 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
 
 
+## Import
+
+
+`aws_apigatewayv2_stage` can be imported by using the API identifier and stage name, e.g.
+
+```sh
+ $ pulumi import aws:apigatewayv2/stage:Stage example aabbccddee/example-stage
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

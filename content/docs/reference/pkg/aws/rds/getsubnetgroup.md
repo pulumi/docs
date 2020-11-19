@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSubnetGroup function of the rds module, including exa
 
 Use this data source to get information about an RDS subnet group.
 
+
 {{% examples %}}
 ## Example Usage
 

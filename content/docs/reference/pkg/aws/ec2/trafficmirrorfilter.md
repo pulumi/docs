@@ -811,6 +811,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Traffic mirror filter can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/trafficMirrorFilter:TrafficMirrorFilter foo tmf-0fbb93ddf38198f64
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

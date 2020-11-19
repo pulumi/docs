@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPatchBaseline function of the ssm module, including e
 
 Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
 
+
 {{% examples %}}
 ## Example Usage
 

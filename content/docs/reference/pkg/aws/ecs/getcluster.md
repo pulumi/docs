@@ -13,6 +13,7 @@ meta_desc: "Explore the GetCluster function of the ecs module, including example
 The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.
 
+
 {{% examples %}}
 ## Example Usage
 

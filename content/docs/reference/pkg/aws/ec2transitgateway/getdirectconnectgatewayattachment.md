@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDirectConnectGatewayAttachment function of the ec2tra
 
 Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

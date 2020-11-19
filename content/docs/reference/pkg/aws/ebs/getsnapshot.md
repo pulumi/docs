@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSnapshot function of the ebs module, including exampl
 
 Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
 
+
 {{% examples %}}
 ## Example Usage
 

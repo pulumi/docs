@@ -2686,6 +2686,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glue Triggers can be imported using `name`, e.g.
+
+```sh
+ $ pulumi import aws:glue/trigger:Trigger MyTrigger MyTrigger
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,6 +12,7 @@ meta_desc: "Explore the Certificate resource of the iot module, including exampl
 
 Creates and manages an AWS IoT certificate.
 
+
 {{% examples %}}
 ## Example Usage
 

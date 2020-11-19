@@ -1167,6 +1167,16 @@ for extracting metric data out of ingested log events.
 
 
 
+## Import
+
+
+CloudWatch Log Metric Filter can be imported using the `log_group_name:name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logMetricFilter:LogMetricFilter test /aws/lambda/function:test
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

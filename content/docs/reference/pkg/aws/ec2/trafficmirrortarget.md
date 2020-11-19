@@ -1001,6 +1001,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Traffic mirror targets can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/trafficMirrorTarget:TrafficMirrorTarget target tmt-0c13a005422b86606
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

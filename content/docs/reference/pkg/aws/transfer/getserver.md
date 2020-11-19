@@ -13,6 +13,7 @@ meta_desc: "Explore the GetServer function of the transfer module, including exa
 Use this data source to get the ARN of an AWS Transfer Server for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 

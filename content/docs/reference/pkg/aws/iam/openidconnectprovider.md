@@ -902,6 +902,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IAM OpenID Connect Providers can be imported using the `arn`, e.g.
+
+```sh
+ $ pulumi import aws:iam/openIdConnectProvider:OpenIdConnectProvider default arn:aws:iam::123456789012:oidc-provider/accounts.google.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

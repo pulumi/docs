@@ -1406,6 +1406,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AWS SSM Activation can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ssm/activation:Activation example e488f2f6-e686-4afb-8a04-ef6dfEXAMPLE
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

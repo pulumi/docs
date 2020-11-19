@@ -1578,6 +1578,16 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 
 
 
+## Import
+
+
+Route53 Zones can be imported using the `zone id`, e.g.
+
+```sh
+ $ pulumi import aws:route53/zone:Zone myzone Z1D633PJN98FT9
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

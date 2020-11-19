@@ -938,6 +938,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IOT Role Alias can be imported via the alias, e.g.
+
+```sh
+ $ pulumi import aws:iot/roleAlias:RoleAlias example myalias
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1320,6 +1320,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+WAF Regional Web ACL Association can be imported using their `web_acl_id:resource_arn`, e.g.
+
+```sh
+ $ pulumi import aws:wafregional/webAclAssociation:WebAclAssociation foo web_acl_id:resource_arn
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

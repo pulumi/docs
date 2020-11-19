@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDocument function of the ssm module, including exampl
 
 Gets the contents of the specified Systems Manager document.
 
+
 {{% examples %}}
 ## Example Usage
 

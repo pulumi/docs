@@ -1251,6 +1251,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Direct Connect LAGs can be imported using the `lag id`, e.g.
+
+```sh
+ $ pulumi import aws:directconnect/linkAggregationGroup:LinkAggregationGroup test_lag dxlag-fgnsp5rq
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

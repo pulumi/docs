@@ -995,6 +995,16 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 
 
 
+## Import
+
+
+API Gateway Accounts can be imported using the word `api-gateway-account`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/account:Account demo api-gateway-account
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

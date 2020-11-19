@@ -748,6 +748,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Egress-only Internet gateways can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/egressOnlyInternetGateway:EgressOnlyInternetGateway example eigw-015e0e244e24dfe8a
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

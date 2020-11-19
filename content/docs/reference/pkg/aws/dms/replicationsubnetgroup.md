@@ -1086,6 +1086,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Replication subnet groups can be imported using the `replication_subnet_group_id`, e.g.
+
+```sh
+ $ pulumi import aws:dms/replicationSubnetGroup:ReplicationSubnetGroup test test-dms-replication-subnet-group-tf
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

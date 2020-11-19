@@ -1915,6 +1915,16 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 
 
 
+## Import
+
+
+`aws_api_gateway_rest_api` can be imported by using the REST API ID, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/restApi:RestApi example 12345abcde
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

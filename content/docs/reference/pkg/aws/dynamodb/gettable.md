@@ -12,6 +12,7 @@ meta_desc: "Explore the GetTable function of the dynamodb module, including exam
 
 Provides information about a DynamoDB table.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1073,6 +1073,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Direct Connect Gateway Association Proposals can be imported using the proposal ID, e.g.
+
+```sh
+ $ pulumi import aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal example ac90e981-b718-4364-872d-65478c84fafe
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

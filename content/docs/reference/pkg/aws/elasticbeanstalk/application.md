@@ -1223,6 +1223,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Elastic Beanstalk Applications can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:elasticbeanstalk/application:Application tf_test tf-test-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

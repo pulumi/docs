@@ -12,6 +12,7 @@ meta_desc: "Explore the SnapshotCopy resource of the ebs module, including examp
 
 Creates a Snapshot of a snapshot.
 
+
 {{% examples %}}
 ## Example Usage
 

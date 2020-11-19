@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAuthorizationToken function of the codeartifact modul
 
 The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain.
 
+
 {{% examples %}}
 ## Example Usage
 

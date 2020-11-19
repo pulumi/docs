@@ -1440,6 +1440,16 @@ parameter. Each parameter block supports fields documented below.
 
 
 
+## Import
+
+
+Remediation Configurations can be imported using the name config_rule_name, e.g.
+
+```sh
+ $ pulumi import aws:cfg/remediationConfiguration:RemediationConfiguration this example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

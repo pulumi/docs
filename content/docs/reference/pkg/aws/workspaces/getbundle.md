@@ -12,11 +12,12 @@ meta_desc: "Explore the GetBundle function of the workspaces module, including e
 
 Retrieve information about an AWS WorkSpaces bundle.
 
+
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
+### By ID
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -26,14 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var byId = Output.Create(Aws.Workspaces.GetBundle.InvokeAsync(new Aws.Workspaces.GetBundleArgs
+        var example = Output.Create(Aws.Workspaces.GetBundle.InvokeAsync(new Aws.Workspaces.GetBundleArgs
         {
             BundleId = "wsb-b0s22j3d7",
-        }));
-        var byOwnerAndName = Output.Create(Aws.Workspaces.GetBundle.InvokeAsync(new Aws.Workspaces.GetBundleArgs
-        {
-            Name = "Value with Windows 10 and Office 2016",
-            Owner = "AMAZON",
         }));
     }
 
@@ -60,11 +56,74 @@ func main() {
 		if err != nil {
 			return err
 		}
-		opt1 := "Value with Windows 10 and Office 2016"
-		opt2 := "AMAZON"
-		_, err = workspaces.GetBundle(ctx, &workspaces.GetBundleArgs{
-			Name:  &opt1,
-			Owner: &opt2,
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.workspaces.get_bundle(bundle_id="wsb-b0s22j3d7")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.output(aws.workspaces.getBundle({
+    bundleId: "wsb-b0s22j3d7",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+### By Owner &amp; Name
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Workspaces.GetBundle.InvokeAsync(new Aws.Workspaces.GetBundleArgs
+        {
+            Name = "Value with Windows 10 and Office 2016",
+            Owner = "AMAZON",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Value with Windows 10 and Office 2016"
+		opt1 := "AMAZON"
+		_, err := workspaces.GetBundle(ctx, &workspaces.GetBundleArgs{
+			Name:  &opt0,
+			Owner: &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -81,8 +140,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-by_id = aws.workspaces.get_bundle(bundle_id="wsb-b0s22j3d7")
-by_owner_and_name = aws.workspaces.get_bundle(name="Value with Windows 10 and Office 2016",
+example = aws.workspaces.get_bundle(name="Value with Windows 10 and Office 2016",
     owner="AMAZON")
 ```
 
@@ -94,10 +152,7 @@ by_owner_and_name = aws.workspaces.get_bundle(name="Value with Windows 10 and Of
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byId = pulumi.output(aws.workspaces.getBundle({
-    bundleId: "wsb-b0s22j3d7",
-}, { async: true }));
-const byOwnerAndName = pulumi.output(aws.workspaces.getBundle({
+const example = pulumi.output(aws.workspaces.getBundle({
     name: "Value with Windows 10 and Office 2016",
     owner: "AMAZON",
 }, { async: true }));

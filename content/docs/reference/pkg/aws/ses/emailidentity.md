@@ -712,6 +712,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SES email identities can be imported using the email address.
+
+```sh
+ $ pulumi import aws:ses/emailIdentity:EmailIdentity example email@example.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

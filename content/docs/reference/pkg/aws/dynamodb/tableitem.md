@@ -976,6 +976,12 @@ Only the primary key attributes are required; you can optionally provide other a
 
 
 
+## Import
+
+
+DynamoDB table items cannot be imported.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -805,6 +805,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Route53 Resolver rule associations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:route53/resolverRuleAssociation:ResolverRuleAssociation example rslvr-rrassoc-97242eaf88example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

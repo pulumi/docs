@@ -2606,6 +2606,12 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Gamelift Fleets cannot be imported at this time.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

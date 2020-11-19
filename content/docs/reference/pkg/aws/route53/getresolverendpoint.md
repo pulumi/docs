@@ -14,6 +14,7 @@ meta_desc: "Explore the GetResolverEndpoint function of the route53 module, incl
 
 This data source allows to find a list of IPaddresses associated with a specific Route53 Resolver Endpoint.
 
+
 {{% examples %}}
 ## Example Usage
 

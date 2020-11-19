@@ -12,6 +12,7 @@ meta_desc: "Explore the LoadBalancerCookieStickinessPolicy resource of the elb m
 
 Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1716,6 +1716,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CloudFormation StackSets can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudformation/stackSet:StackSet example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

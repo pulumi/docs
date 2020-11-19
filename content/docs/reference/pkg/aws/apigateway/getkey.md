@@ -13,6 +13,7 @@ meta_desc: "Explore the GetKey function of the apigateway module, including exam
 Use this data source to get the name and value of a pre-existing API Key, for
 example to supply credentials for a dependency microservice.
 
+
 {{% examples %}}
 ## Example Usage
 

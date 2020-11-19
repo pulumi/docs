@@ -1348,6 +1348,16 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 
 
 
+## Import
+
+
+Pinpoint APNs VoIP Channel can be imported using the `application-id`, e.g.
+
+```sh
+ $ pulumi import aws:pinpoint/apnsVoipChannel:ApnsVoipChannel apns_voip application-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

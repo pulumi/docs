@@ -14,6 +14,7 @@ meta_desc: "Explore the GetDelegationSet function of the route53 module, includi
 
 This data source allows to find a list of name servers associated with a specific delegation set.
 
+
 {{% examples %}}
 ## Example Usage
 

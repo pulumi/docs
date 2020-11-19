@@ -4070,6 +4070,16 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
 
 
 
+## Import
+
+
+ECS services can be imported using the `name` together with ecs cluster `name`, e.g.
+
+```sh
+ $ pulumi import aws:ecs/service:Service imported cluster-name/service-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

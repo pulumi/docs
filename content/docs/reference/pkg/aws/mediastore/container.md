@@ -883,6 +883,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+MediaStore Container can be imported using the MediaStore Container Name, e.g.
+
+```sh
+ $ pulumi import aws:mediastore/container:Container example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

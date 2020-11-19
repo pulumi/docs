@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRepository function of the codecommit module, includi
 
 The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.
 
+
 {{% examples %}}
 ## Example Usage
 

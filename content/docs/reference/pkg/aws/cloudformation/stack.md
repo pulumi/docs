@@ -1886,6 +1886,16 @@ Conflicts w/ `policy_body`.
 
 
 
+## Import
+
+
+Cloudformation Stacks can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudformation/stack:Stack stack networking-stack
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

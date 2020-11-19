@@ -1566,6 +1566,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_neptune_event_subscription` can be imported by using the event subscription name, e.g.
+
+```sh
+ $ pulumi import aws:neptune/eventSubscription:EventSubscription example my-event-subscription
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

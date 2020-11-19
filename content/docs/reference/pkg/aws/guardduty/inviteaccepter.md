@@ -812,6 +812,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_guardduty_invite_accepter` can be imported using the the member GuardDuty detector ID, e.g.
+
+```sh
+ $ pulumi import aws:guardduty/inviteAccepter:InviteAccepter member 00b00fd5aecc0ab60a708659477e9617
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

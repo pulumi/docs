@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServerCertificate function of the iam module, includi
 
 Use this data source to lookup information about IAM Server Certificates.
 
+
 {{% examples %}}
 ## Example Usage
 

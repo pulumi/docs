@@ -993,6 +993,16 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
 
 
 
+## Import
+
+
+KMS aliases can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:kms/alias:Alias a alias/my-key-alias
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

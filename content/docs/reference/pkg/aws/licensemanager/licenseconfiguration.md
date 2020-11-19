@@ -1200,6 +1200,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+License configurations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:licensemanager/licenseConfiguration:LicenseConfiguration example arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

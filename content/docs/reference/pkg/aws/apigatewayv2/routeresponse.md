@@ -988,6 +988,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_apigatewayv2_route_response` can be imported by using the API identifier, route identifier and route response identifier, e.g.
+
+```sh
+ $ pulumi import aws:apigatewayv2/routeResponse:RouteResponse example aabbccddee/1122334/998877
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1181,6 +1181,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_secretsmanager_secret_version` can be imported by using the secret ID and version ID, e.g.
+
+```sh
+ $ pulumi import aws:secretsmanager/secretVersion:SecretVersion example 'arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456|xxxxx-xxxxxxx-xxxxxxx-xxxxx'
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

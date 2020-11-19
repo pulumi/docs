@@ -721,6 +721,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DHCP associations can be imported by providing the VPC ID associated with the options
+
+```sh
+ $ pulumi import aws:ec2/vpcDhcpOptionsAssociation:VpcDhcpOptionsAssociation imported vpc-0f001273ec18911b1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

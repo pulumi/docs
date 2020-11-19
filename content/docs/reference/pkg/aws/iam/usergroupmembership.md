@@ -795,6 +795,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IAM user group membership can be imported using the user name and group names separated by `/`.
+
+```sh
+ $ pulumi import aws:iam/userGroupMembership:UserGroupMembership example1 user1/group1/group2
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

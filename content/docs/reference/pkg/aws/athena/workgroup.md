@@ -1691,6 +1691,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Athena Workgroups can be imported using their name, e.g.
+
+```sh
+ $ pulumi import aws:athena/workgroup:Workgroup example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

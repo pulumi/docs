@@ -3,7 +3,7 @@ title: "Module cloudwatch"
 title_tag: "Module cloudwatch | Package @pulumi/aws | Node.js SDK"
 linktitle: "cloudwatch"
 meta_desc: "Explore members of the cloudwatch module in the @pulumi/aws package."
-git_sha: "414cc1732ef52039e4e773e514df48dd16ed7aa6"
+git_sha: "c12ed064d3e53d2839c8a83426d06dd01a6bdd8f"
 block_external_search_index: true
 ---
 
@@ -83,7 +83,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Dashboard" data-link-title="Dashboard">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L65">
         Resource <strong>Dashboard</strong>
     </a>
 </h3>
@@ -139,8 +139,16 @@ const main = new aws.cloudwatch.Dashboard("main", {
 });
 ```
 
+#### Import
+
+CloudWatch dashboards can be imported using the `dashboard_name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/dashboard:Dashboard sample <dashboard_name>
+```
+
 <h4 class="pdoc-member-header" id="Dashboard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -154,7 +162,7 @@ Create a Dashboard resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -165,14 +173,14 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L86">method <b>isInstance</b></a>
 </h4>
 
 
@@ -183,7 +191,7 @@ Returns true if the given object is an instance of Dashboard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L88">property <b>dashboardArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L96">property <b>dashboardArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -191,7 +199,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L92">property <b>dashboardBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L100">property <b>dashboardBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +207,7 @@ The Amazon Resource Name (ARN) of the dashboard.
 The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L96">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L104">property <b>dashboardName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +215,7 @@ The detailed information about the dashboard, including what widgets are include
 The name of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -216,7 +224,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -225,7 +233,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventBus" data-link-title="EventBus">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L29">
         Resource <strong>EventBus</strong>
     </a>
 </h3>
@@ -245,8 +253,16 @@ import * as aws from "@pulumi/aws";
 const messenger = new aws.cloudwatch.EventBus("messenger", {});
 ```
 
+#### Import
+
+EventBridge event buses can be imported using the `name`, e.g. console
+
+```sh
+ $ pulumi import aws:cloudwatch/eventBus:EventBus messenger chat-messages
+```
+
 <h4 class="pdoc-member-header" id="EventBus-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -260,7 +276,7 @@ Create a EventBus resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventBus-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -271,14 +287,14 @@ Get an existing EventBus resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventBus-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventBus-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -289,7 +305,7 @@ Returns true if the given object is an instance of EventBus.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventBus-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L52">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L60">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +313,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the event bus.
 
 <h4 class="pdoc-member-header" id="EventBus-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -306,7 +322,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventBus-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +332,7 @@ The names of custom event buses can't contain the / character.
 Please note that a partner event bus is not supported at the moment.
 
 <h4 class="pdoc-member-header" id="EventBus-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L62">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L70">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -324,7 +340,7 @@ Please note that a partner event bus is not supported at the moment.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EventBus-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -333,7 +349,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventPermission" data-link-title="EventPermission">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L50">
         Resource <strong>EventPermission</strong>
     </a>
 </h3>
@@ -373,8 +389,16 @@ const organizationAccess = new aws.cloudwatch.EventPermission("organizationAcces
 });
 ```
 
+#### Import
+
+EventBridge permissions can be imported using the `event_bus_name/statement_id` (if you omit `event_bus_name`, the `default` event bus will be used), e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/eventPermission:EventPermission DevAccountAccess example-event-bus/DevAccountAccess
+```
+
 <h4 class="pdoc-member-header" id="EventPermission-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -388,7 +412,7 @@ Create a EventPermission resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventPermission-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -399,14 +423,14 @@ Get an existing EventPermission resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventPermission-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventPermission-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -417,7 +441,7 @@ Returns true if the given object is an instance of EventPermission.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventPermission-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L75">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L81">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -425,7 +449,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
 
 <h4 class="pdoc-member-header" id="EventPermission-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L79">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L85">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventPermissionCondition'>EventPermissionCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -433,7 +457,7 @@ The action that you are enabling the other account to perform. Defaults to `even
 Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 
 <h4 class="pdoc-member-header" id="EventPermission-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L83">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L89">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventBusName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -441,7 +465,7 @@ Configuration block to limit the event bus permissions you are granting to only 
 The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
 
 <h4 class="pdoc-member-header" id="EventPermission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -450,7 +474,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventPermission-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L87">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L93">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +482,7 @@ deployments and may be missing (undefined) during planning phases.
 The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
 
 <h4 class="pdoc-member-header" id="EventPermission-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L91">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L97">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statementId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +490,7 @@ The 12-digit AWS account ID that you are permitting to put events to your defaul
 An identifier string for the external account that you are granting permissions to.
 
 <h4 class="pdoc-member-header" id="EventPermission-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -475,7 +499,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventRule" data-link-title="EventRule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L57">
         Resource <strong>EventRule</strong>
     </a>
 </h3>
@@ -523,8 +547,16 @@ const _default = new aws.sns.TopicPolicy("default", {
 });
 ```
 
+#### Import
+
+EventBridge Rules can be imported using the `event_bus_name/rule_name` (if you omit `event_bus_name`, the `default` event bus will be used), e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/eventRule:EventRule console example-event-bus/capture-console-sign-in
+```
+
 <h4 class="pdoc-member-header" id="EventRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -538,7 +570,7 @@ Create a EventRule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -549,14 +581,14 @@ Get an existing EventRule resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -567,7 +599,7 @@ Returns true if the given object is an instance of EventRule.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventRule-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L124">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L124">method <b>onEvent</b></a>
 </h4>
 
 
@@ -578,7 +610,7 @@ Creates a new subscription to events fired from this EventRule to the handler pr
 with options to control the behavior of the subscription.
 
 <h4 class="pdoc-member-header" id="EventRule-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L80">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L88">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -586,7 +618,7 @@ with options to control the behavior of the subscription.
 The Amazon Resource Name (ARN) of the rule.
 
 <h4 class="pdoc-member-header" id="EventRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L84">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L92">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +626,7 @@ The Amazon Resource Name (ARN) of the rule.
 The description of the rule.
 
 <h4 class="pdoc-member-header" id="EventRule-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L88">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L96">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventBusName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,7 +634,7 @@ The description of the rule.
 The event bus to associate with this rule. If you omit this, the `default` event bus is used.
 
 <h4 class="pdoc-member-header" id="EventRule-eventPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L93">property <b>eventPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L101">property <b>eventPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -611,7 +643,7 @@ The event pattern described a JSON object. At least one of `scheduleExpression` 
 See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 
 <h4 class="pdoc-member-header" id="EventRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -620,7 +652,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventRule-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L97">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L105">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -628,7 +660,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether the rule should be enabled (defaults to `true`).
 
 <h4 class="pdoc-member-header" id="EventRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +668,7 @@ Whether the rule should be enabled (defaults to `true`).
 The name of the rule. If omitted, this provider will assign a random, unique name. Conflicts with `namePrefix`.
 
 <h4 class="pdoc-member-header" id="EventRule-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L105">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L113">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -644,7 +676,7 @@ The name of the rule. If omitted, this provider will assign a random, unique nam
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventRule-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L109">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L117">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -652,7 +684,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 
 <h4 class="pdoc-member-header" id="EventRule-scheduleExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L114">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L122">property <b>scheduleExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -661,7 +693,7 @@ The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `scheduleExpression` or `eventPattern` is required. Can only be used on the default event bus.
 
 <h4 class="pdoc-member-header" id="EventRule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L126">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -669,7 +701,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EventRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -678,7 +710,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventTarget" data-link-title="EventTarget">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L198">
         Resource <strong>EventTarget</strong>
     </a>
 </h3>
@@ -866,8 +898,16 @@ const exampleEventTarget = new aws.cloudwatch.EventTarget("exampleEventTarget", 
 });
 ```
 
+#### Import
+
+EventBridge Targets can be imported using `event_bus_name/rule-name/target-id` (if you omit `event_bus_name`, the `default` event bus will be used).
+
+```sh
+ $ pulumi import aws:cloudwatch/eventTarget:EventTarget test-event-target rule-name/target-id
+```
+
 <h4 class="pdoc-member-header" id="EventTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L272"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L278"> <b>constructor</b></a>
 </h4>
 
 
@@ -881,7 +921,7 @@ Create a EventTarget resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L202">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L208">method <b>get</b></a>
 </h4>
 
 
@@ -892,14 +932,14 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L192">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L198">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L213">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L219">method <b>isInstance</b></a>
 </h4>
 
 
@@ -910,7 +950,7 @@ Returns true if the given object is an instance of EventTarget.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventTarget-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L223">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L229">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -918,7 +958,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) associated of the target.
 
 <h4 class="pdoc-member-header" id="EventTarget-batchTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L227">property <b>batchTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L233">property <b>batchTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>batchTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetBatchTarget'>EventTargetBatchTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -926,7 +966,7 @@ The Amazon Resource Name (ARN) associated of the target.
 Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTarget-ecsTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L231">property <b>ecsTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L237">property <b>ecsTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ecsTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetEcsTarget'>EventTargetEcsTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -934,7 +974,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
 Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTarget-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L235">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L241">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventBusName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -942,7 +982,7 @@ Parameters used when you are using the rule to invoke Amazon ECS Task. Documente
 The event bus to associate with the rule. If you omit this, the `default` event bus is used.
 
 <h4 class="pdoc-member-header" id="EventTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L192">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L198">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -951,7 +991,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventTarget-input">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L239">property <b>input</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L245">property <b>input</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>input: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,7 +999,7 @@ deployments and may be missing (undefined) during planning phases.
 Valid JSON text passed to the target. Conflicts with `inputPath` and `inputTransformer`.
 
 <h4 class="pdoc-member-header" id="EventTarget-inputPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L244">property <b>inputPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L250">property <b>inputPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -968,7 +1008,7 @@ The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `inputTransformer`.
 
 <h4 class="pdoc-member-header" id="EventTarget-inputTransformer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L248">property <b>inputTransformer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L254">property <b>inputTransformer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputTransformer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetInputTransformer'>EventTargetInputTransformer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -976,7 +1016,7 @@ that is used for extracting part of the matched event when passing it to the tar
 Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `inputPath`.
 
 <h4 class="pdoc-member-header" id="EventTarget-kinesisTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L252">property <b>kinesisTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L258">property <b>kinesisTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kinesisTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetKinesisTarget'>EventTargetKinesisTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -984,7 +1024,7 @@ Parameters used when you are providing a custom input to a target based on certa
 Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTarget-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L256">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L262">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -992,7 +1032,7 @@ Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. 
 The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecsTarget` is used.
 
 <h4 class="pdoc-member-header" id="EventTarget-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L260">property <b>rule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L266">property <b>rule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1000,7 +1040,7 @@ The Amazon Resource Name (ARN) of the IAM role to be used for this target when t
 The name of the rule you want to add targets to.
 
 <h4 class="pdoc-member-header" id="EventTarget-runCommandTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L264">property <b>runCommandTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L270">property <b>runCommandTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runCommandTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetRunCommandTarget'>EventTargetRunCommandTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1008,7 +1048,7 @@ The name of the rule you want to add targets to.
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTarget-sqsTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L268">property <b>sqsTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L274">property <b>sqsTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqsTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetSqsTarget'>EventTargetSqsTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1016,7 +1056,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
 Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTarget-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L272">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L278">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1064,7 @@ Parameters used when you are using the rule to invoke an Amazon SQS Queue. Docum
 The unique target assignment ID.  If missing, will generate a random, unique id.
 
 <h4 class="pdoc-member-header" id="EventTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L192">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L198">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1033,7 +1073,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogDestination" data-link-title="LogDestination">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L30">
         Resource <strong>LogDestination</strong>
     </a>
 </h3>
@@ -1054,8 +1094,16 @@ const testDestination = new aws.cloudwatch.LogDestination("testDestination", {
 });
 ```
 
+#### Import
+
+CloudWatch Logs destinations can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logDestination:LogDestination test_destination test_destination
+```
+
 <h4 class="pdoc-member-header" id="LogDestination-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -1069,7 +1117,7 @@ Create a LogDestination resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogDestination-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -1080,14 +1128,14 @@ Get an existing LogDestination resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogDestination-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogDestination-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1098,7 +1146,7 @@ Returns true if the given object is an instance of LogDestination.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogDestination-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1106,7 +1154,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) specifying the log destination.
 
 <h4 class="pdoc-member-header" id="LogDestination-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1115,7 +1163,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogDestination-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1123,7 +1171,7 @@ deployments and may be missing (undefined) during planning phases.
 A name for the log destination
 
 <h4 class="pdoc-member-header" id="LogDestination-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L61">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L69">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +1179,7 @@ A name for the log destination
 The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
 
 <h4 class="pdoc-member-header" id="LogDestination-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L65">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L73">property <b>targetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +1187,7 @@ The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put dat
 The ARN of the target Amazon Kinesis stream resource for the destination
 
 <h4 class="pdoc-member-header" id="LogDestination-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1148,7 +1196,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogDestinationPolicy" data-link-title="LogDestinationPolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L45">
         Resource <strong>LogDestinationPolicy</strong>
     </a>
 </h3>
@@ -1184,8 +1232,16 @@ const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinat
 });
 ```
 
+#### Import
+
+CloudWatch Logs destination policies can be imported using the `destination_name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logDestinationPolicy:LogDestinationPolicy test_destination_policy test_destination
+```
+
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -1199,7 +1255,7 @@ Create a LogDestinationPolicy resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -1210,14 +1266,14 @@ Get an existing LogDestinationPolicy resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1228,7 +1284,7 @@ Returns true if the given object is an instance of LogDestinationPolicy.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-accessPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L68">property <b>accessPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L76">property <b>accessPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1236,7 +1292,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The policy document. This is a JSON formatted string.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-destinationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L72">property <b>destinationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L80">property <b>destinationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,7 +1300,7 @@ The policy document. This is a JSON formatted string.
 A name for the subscription filter
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1253,7 +1309,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1262,7 +1318,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogGroup" data-link-title="LogGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L32">
         Resource <strong>LogGroup</strong>
     </a>
 </h3>
@@ -1285,8 +1341,16 @@ const yada = new aws.cloudwatch.LogGroup("yada", {
 });
 ```
 
+#### Import
+
+Cloudwatch Log Groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logGroup:LogGroup test_group yada
+```
+
 <h4 class="pdoc-member-header" id="LogGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -1300,7 +1364,7 @@ Create a LogGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1311,14 +1375,14 @@ Get an existing LogGroup resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1329,7 +1393,7 @@ Returns true if the given object is an instance of LogGroup.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogGroup-onDecodedEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L133">method <b>onDecodedEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L133">method <b>onDecodedEvent</b></a>
 </h4>
 
 
@@ -1344,7 +1408,7 @@ execute code to convert the raw messages, it can only be passed an [EntryPoint] 
 not a [lambda.Function] instance.
 
 <h4 class="pdoc-member-header" id="LogGroup-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L122">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L122">method <b>onEvent</b></a>
 </h4>
 
 
@@ -1357,7 +1421,7 @@ along with options to control the behavior of the subscription.
 The events will be produced in raw (gzipped + base64 encoded) form.
 
 <h4 class="pdoc-member-header" id="LogGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L63">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1365,7 +1429,7 @@ The events will be produced in raw (gzipped + base64 encoded) form.
 The Amazon Resource Name (ARN) specifying the log group. Any `:*` suffix added by the API, denoting all CloudWatch Log Streams under the CloudWatch Log Group, is removed for greater compatibility with other AWS services that do not accept the suffix.
 
 <h4 class="pdoc-member-header" id="LogGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1374,7 +1438,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogGroup-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L61">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L69">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1384,7 +1448,7 @@ AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All 
 permissions for the CMK whenever the encrypted data is requested.
 
 <h4 class="pdoc-member-header" id="LogGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1456,7 @@ permissions for the CMK whenever the encrypted data is requested.
 The name of the log group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="LogGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L69">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L77">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1400,7 +1464,7 @@ The name of the log group. If omitted, this provider will assign a random, uniqu
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="LogGroup-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L75">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L83">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1410,7 +1474,7 @@ you want to retain log events in the specified log group.  Possible values are: 
 If you select 0, the events in the log group are always retained and never expire.
 
 <h4 class="pdoc-member-header" id="LogGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1418,7 +1482,7 @@ If you select 0, the events in the log group are always retained and never expir
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="LogGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1427,7 +1491,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogMetricFilter" data-link-title="LogMetricFilter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L37">
         Resource <strong>LogMetricFilter</strong>
     </a>
 </h3>
@@ -1454,8 +1518,16 @@ const yada = new aws.cloudwatch.LogMetricFilter("yada", {
 });
 ```
 
+#### Import
+
+CloudWatch Log Metric Filter can be imported using the `log_group_name:name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logMetricFilter:LogMetricFilter test /aws/lambda/function:test
+```
+
 <h4 class="pdoc-member-header" id="LogMetricFilter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -1469,7 +1541,7 @@ Create a LogMetricFilter resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -1480,14 +1552,14 @@ Get an existing LogMetricFilter resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1498,7 +1570,7 @@ Returns true if the given object is an instance of LogMetricFilter.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1507,7 +1579,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L62">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L68">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1515,7 +1587,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the log group to associate the metric filter with.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-metricTransformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L67">property <b>metricTransformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L73">property <b>metricTransformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LogMetricFilterMetricTransformation'>LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
@@ -1524,7 +1596,7 @@ A block defining collection of information
 needed to define how metric data gets emitted. See below.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1532,7 +1604,7 @@ needed to define how metric data gets emitted. See below.
 A name for the metric filter.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L76">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L82">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1541,7 +1613,7 @@ A valid [CloudWatch Logs filter pattern](https://docs.aws.amazon.com/AmazonCloud
 for extracting metric data out of ingested log events.
 
 <h4 class="pdoc-member-header" id="LogMetricFilter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1550,7 +1622,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogResourcePolicy" data-link-title="LogResourcePolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L69">
         Resource <strong>LogResourcePolicy</strong>
     </a>
 </h3>
@@ -1610,8 +1682,16 @@ const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogReso
 });
 ```
 
+#### Import
+
+CloudWatch log resource policies can be imported using the policy name, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logResourcePolicy:LogResourcePolicy MyPolicy MyPolicy
+```
+
 <h4 class="pdoc-member-header" id="LogResourcePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -1625,7 +1705,7 @@ Create a LogResourcePolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L71">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L79">method <b>get</b></a>
 </h4>
 
 
@@ -1636,14 +1716,14 @@ Get an existing LogResourcePolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L61">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L69">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogResourcePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L82">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L90">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1654,7 +1734,7 @@ Returns true if the given object is an instance of LogResourcePolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1663,7 +1743,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicy-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L92">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L100">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1671,7 +1751,7 @@ deployments and may be missing (undefined) during planning phases.
 Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L96">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L104">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1679,7 +1759,7 @@ Details of the resource policy, including the identity of the principal that is 
 Name of the resource policy.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L61">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L69">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1688,7 +1768,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogStream" data-link-title="LogStream">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L28">
         Resource <strong>LogStream</strong>
     </a>
 </h3>
@@ -1707,8 +1787,16 @@ const yada = new aws.cloudwatch.LogGroup("yada", {});
 const foo = new aws.cloudwatch.LogStream("foo", {logGroupName: yada.name});
 ```
 
+#### Import
+
+Cloudwatch Log Stream can be imported using the stream's `log_group_name` and `name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logStream:LogStream foo Yada:SampleLogStream1234
+```
+
 <h4 class="pdoc-member-header" id="LogStream-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -1722,7 +1810,7 @@ Create a LogStream resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogStream-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -1733,14 +1821,14 @@ Get an existing LogStream resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogStream-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogStream-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1751,7 +1839,7 @@ Returns true if the given object is an instance of LogStream.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogStream-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L51">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1759,7 +1847,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) specifying the log stream.
 
 <h4 class="pdoc-member-header" id="LogStream-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1768,7 +1856,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogStream-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L55">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L63">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1776,7 +1864,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the log group under which the log stream is to be created.
 
 <h4 class="pdoc-member-header" id="LogStream-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1784,7 +1872,7 @@ The name of the log group under which the log stream is to be created.
 The name of the log stream. Must not be longer than 512 characters and must not contain `:`
 
 <h4 class="pdoc-member-header" id="LogStream-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1793,7 +1881,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogSubscriptionFilter" data-link-title="LogSubscriptionFilter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L35">
         Resource <strong>LogSubscriptionFilter</strong>
     </a>
 </h3>
@@ -1817,8 +1905,16 @@ const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("te
 });
 ```
 
+#### Import
+
+CloudWatch Logs subscription filter can be imported using the log group name and subscription filter name separated by `|`.
+
+```sh
+ $ pulumi import aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter test_lambdafunction_logfilter /aws/lambda/example_lambda_name|test_lambdafunction_logfilter
+```
+
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -1832,7 +1928,7 @@ Create a LogSubscriptionFilter resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1843,14 +1939,14 @@ Get an existing LogSubscriptionFilter resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1861,7 +1957,7 @@ Returns true if the given object is an instance of LogSubscriptionFilter.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-destinationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L58">property <b>destinationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L66">property <b>destinationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1869,7 +1965,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-distribution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L62">property <b>distribution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L70">property <b>distribution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>distribution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1877,7 +1973,7 @@ The ARN of the destination to deliver matching log events to. Kinesis stream or 
 The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are "Random" and "ByLogStream".
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-filterPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L66">property <b>filterPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L74">property <b>filterPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filterPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1885,7 +1981,7 @@ The method used to distribute log data to the destination. By default log data i
 A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1894,7 +1990,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L70">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L78">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1902,7 +1998,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the log group to associate the subscription filter with
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1910,7 +2006,7 @@ The name of the log group to associate the subscription filter with
 A name for the subscription filter
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L78">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L86">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1918,7 +2014,7 @@ A name for the subscription filter
 The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use `aws.lambda.Permission` resource for granting access from CloudWatch logs to the destination Lambda function.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1927,7 +2023,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MetricAlarm" data-link-title="MetricAlarm">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L179">
         Resource <strong>MetricAlarm</strong>
     </a>
 </h3>
@@ -2094,8 +2190,16 @@ const nlbHealthyhosts = new aws.cloudwatch.MetricAlarm("nlbHealthyhosts", {
 > **NOTE:**  You cannot create a metric alarm consisting of both `statistic` and `extendedStatistic` parameters.
 You must choose one or the other
 
+#### Import
+
+Cloud Metric Alarms can be imported using the `alarm_name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/metricAlarm:MetricAlarm test alarm-12345
+```
+
 <h4 class="pdoc-member-header" id="MetricAlarm-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L300"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L306"> <b>constructor</b></a>
 </h4>
 
 
@@ -2109,7 +2213,7 @@ Create a MetricAlarm resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L183">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L189">method <b>get</b></a>
 </h4>
 
 
@@ -2120,14 +2224,14 @@ Get an existing MetricAlarm resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L173">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L179">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MetricAlarm-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L194">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L200">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2138,7 +2242,7 @@ Returns true if the given object is an instance of MetricAlarm.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-actionsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L204">property <b>actionsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L210">property <b>actionsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actionsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2146,7 +2250,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-alarmActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L208">property <b>alarmActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L214">property <b>alarmActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alarmActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2154,7 +2258,7 @@ Indicates whether or not actions should be executed during any changes to the al
 The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarm-alarmDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L212">property <b>alarmDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L218">property <b>alarmDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alarmDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2162,7 +2266,7 @@ The list of actions to execute when this alarm transitions into an ALARM state f
 The description for the alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L216">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L222">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2170,7 +2274,7 @@ The description for the alarm.
 The ARN of the cloudwatch metric alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-comparisonOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L220">property <b>comparisonOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L226">property <b>comparisonOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comparisonOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2178,7 +2282,7 @@ The ARN of the cloudwatch metric alarm.
 The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: `GreaterThanOrEqualToThreshold`, `GreaterThanThreshold`, `LessThanThreshold`, `LessThanOrEqualToThreshold`. Additionally, the values  `LessThanLowerOrGreaterThanUpperThreshold`, `LessThanLowerThreshold`, and `GreaterThanUpperThreshold` are used only for alarms based on anomaly detection models.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-datapointsToAlarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L224">property <b>datapointsToAlarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L230">property <b>datapointsToAlarm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>datapointsToAlarm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2186,7 +2290,7 @@ The arithmetic operation to use when comparing the specified Statistic and Thres
 The number of datapoints that must be breaching to trigger the alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L228">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L234">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2194,7 +2298,7 @@ The number of datapoints that must be breaching to trigger the alarm.
 The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarm-evaluateLowSampleCountPercentiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L237">property <b>evaluateLowSampleCountPercentiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L243">property <b>evaluateLowSampleCountPercentiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>evaluateLowSampleCountPercentiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2311,7 @@ evaluated and possibly change state no matter how many data points are available
 The following values are supported: `ignore`, and `evaluate`.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L241">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L247">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>evaluationPeriods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2215,7 +2319,7 @@ The following values are supported: `ignore`, and `evaluate`.
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L245">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L251">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extendedStatistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2223,7 +2327,7 @@ The number of periods over which data is compared to the specified threshold.
 The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L173">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L179">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2232,7 +2336,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-insufficientDataActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L249">property <b>insufficientDataActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L255">property <b>insufficientDataActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>insufficientDataActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2240,7 +2344,7 @@ deployments and may be missing (undefined) during planning phases.
 The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarm-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L254">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L260">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2249,7 +2353,7 @@ The name for this metric.
 See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarm-metricQueries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L258">property <b>metricQueries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L264">property <b>metricQueries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricQueries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MetricAlarmMetricQuery'>MetricAlarmMetricQuery</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2257,7 +2361,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L262">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L268">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2265,7 +2369,7 @@ Enables you to create an alarm based on a metric math expression. You may specif
 The descriptive name for the alarm. This name must be unique within the user's AWS account
 
 <h4 class="pdoc-member-header" id="MetricAlarm-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L267">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L273">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2274,7 +2378,7 @@ The namespace for this metric. See docs for the [list of namespaces](https://doc
 See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarm-okActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L271">property <b>okActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L277">property <b>okActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>okActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2282,7 +2386,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarm-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L275">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L281">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2290,7 +2394,7 @@ The list of actions to execute when this alarm transitions into an OK state from
 The period in seconds over which the specified `stat` is applied.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L280">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L286">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2299,7 +2403,7 @@ The statistic to apply to the alarm's associated metric.
 Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
 
 <h4 class="pdoc-member-header" id="MetricAlarm-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L284">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L290">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2307,7 +2411,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L288">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L294">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2315,7 +2419,7 @@ A map of tags to assign to the resource.
 The value against which the specified statistic is compared. This parameter is required for alarms based on static thresholds, but should not be used for alarms based on anomaly detection models.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-thresholdMetricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L292">property <b>thresholdMetricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L298">property <b>thresholdMetricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thresholdMetricId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2323,7 +2427,7 @@ The value against which the specified statistic is compared. This parameter is r
 If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-treatMissingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L296">property <b>treatMissingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L302">property <b>treatMissingData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>treatMissingData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2331,7 +2435,7 @@ If this is an alarm based on an anomaly detection model, make this value match t
 Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L300">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L306">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2339,7 +2443,7 @@ Sets how this alarm is to handle missing data points. The following values are s
 The unit for this metric.
 
 <h4 class="pdoc-member-header" id="MetricAlarm-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L173">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L179">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2350,7 +2454,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getLogGroup" data-link-title="getLogGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L22">
         Function <strong>getLogGroup</strong>
     </a>
 </h3>
@@ -2375,7 +2479,7 @@ const example = pulumi.output(aws.cloudwatch.getLogGroup({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DashboardArgs" data-link-title="DashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L165">
         interface <strong>DashboardArgs</strong>
     </a>
 </h3>
@@ -2385,7 +2489,7 @@ const example = pulumi.output(aws.cloudwatch.getLogGroup({
 The set of arguments for constructing a Dashboard resource.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-dashboardBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L161">property <b>dashboardBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L169">property <b>dashboardBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2393,7 +2497,7 @@ The set of arguments for constructing a Dashboard resource.
 The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
 
 <h4 class="pdoc-member-header" id="DashboardArgs-dashboardName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L165">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L173">property <b>dashboardName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2401,7 +2505,7 @@ The detailed information about the dashboard, including what widgets are include
 The name of the dashboard.
 
 <h3 class="pdoc-module-header" id="DashboardState" data-link-title="DashboardState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L147">
         interface <strong>DashboardState</strong>
     </a>
 </h3>
@@ -2411,7 +2515,7 @@ The name of the dashboard.
 Input properties used for looking up and filtering Dashboard resources.
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L143">property <b>dashboardArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L151">property <b>dashboardArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2419,7 +2523,7 @@ Input properties used for looking up and filtering Dashboard resources.
 The Amazon Resource Name (ARN) of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L147">property <b>dashboardBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L155">property <b>dashboardBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2427,7 +2531,7 @@ The Amazon Resource Name (ARN) of the dashboard.
 The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/dashboard.ts#L151">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/dashboard.ts#L159">property <b>dashboardName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2435,44 +2539,44 @@ The detailed information about the dashboard, including what widgets are include
 The name of the dashboard.
 
 <h3 class="pdoc-module-header" id="DecodedLogGroupEvent" data-link-title="DecodedLogGroupEvent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L43">
         interface <strong>DecodedLogGroupEvent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DecodedLogGroupEvent</span></code></pre>
 <h4 class="pdoc-member-header" id="DecodedLogGroupEvent-logEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L62">property <b>logEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L62">property <b>logEvents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logEvents: <a href='#LogGroupEventRecord'>LogGroupEventRecord</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="DecodedLogGroupEvent-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L48">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L48">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="DecodedLogGroupEvent-logStream">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L51">property <b>logStream</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L51">property <b>logStream</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStream: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="DecodedLogGroupEvent-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L58">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L58">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="DecodedLogGroupEvent-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L45">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L45">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="DecodedLogGroupEvent-subscriptionFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L54">property <b>subscriptionFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L54">property <b>subscriptionFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionFilters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="EventBusArgs" data-link-title="EventBusArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L127">
         interface <strong>EventBusArgs</strong>
     </a>
 </h3>
@@ -2482,7 +2586,7 @@ The name of the dashboard.
 The set of arguments for constructing a EventBus resource.
 
 <h4 class="pdoc-member-header" id="EventBusArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2492,7 +2596,7 @@ The names of custom event buses can't contain the / character.
 Please note that a partner event bus is not supported at the moment.
 
 <h4 class="pdoc-member-header" id="EventBusArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L129">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2500,7 +2604,7 @@ Please note that a partner event bus is not supported at the moment.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EventBusState" data-link-title="EventBusState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L107">
         interface <strong>EventBusState</strong>
     </a>
 </h3>
@@ -2510,7 +2614,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering EventBus resources.
 
 <h4 class="pdoc-member-header" id="EventBusState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L103">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L111">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2518,7 +2622,7 @@ Input properties used for looking up and filtering EventBus resources.
 The Amazon Resource Name (ARN) of the event bus.
 
 <h4 class="pdoc-member-header" id="EventBusState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2528,7 +2632,7 @@ The names of custom event buses can't contain the / character.
 Please note that a partner event bus is not supported at the moment.
 
 <h4 class="pdoc-member-header" id="EventBusState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventBus.ts#L113">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventBus.ts#L121">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2536,7 +2640,7 @@ Please note that a partner event bus is not supported at the moment.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EventPermissionArgs" data-link-title="EventPermissionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L170">
         interface <strong>EventPermissionArgs</strong>
     </a>
 </h3>
@@ -2546,7 +2650,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a EventPermission resource.
 
 <h4 class="pdoc-member-header" id="EventPermissionArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L168">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L174">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2554,7 +2658,7 @@ The set of arguments for constructing a EventPermission resource.
 The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
 
 <h4 class="pdoc-member-header" id="EventPermissionArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L172">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L178">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventPermissionCondition'>EventPermissionCondition</a>&gt;;</code></pre>
@@ -2562,7 +2666,7 @@ The action that you are enabling the other account to perform. Defaults to `even
 Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 
 <h4 class="pdoc-member-header" id="EventPermissionArgs-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L176">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L182">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventBusName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2570,7 +2674,7 @@ Configuration block to limit the event bus permissions you are granting to only 
 The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
 
 <h4 class="pdoc-member-header" id="EventPermissionArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L180">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L186">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2578,7 +2682,7 @@ The event bus to set the permissions on. If you omit this, the permissions are s
 The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
 
 <h4 class="pdoc-member-header" id="EventPermissionArgs-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L184">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L190">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2586,7 +2690,7 @@ The 12-digit AWS account ID that you are permitting to put events to your defaul
 An identifier string for the external account that you are granting permissions to.
 
 <h3 class="pdoc-module-header" id="EventPermissionState" data-link-title="EventPermissionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L144">
         interface <strong>EventPermissionState</strong>
     </a>
 </h3>
@@ -2596,7 +2700,7 @@ An identifier string for the external account that you are granting permissions 
 Input properties used for looking up and filtering EventPermission resources.
 
 <h4 class="pdoc-member-header" id="EventPermissionState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L142">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L148">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2604,7 +2708,7 @@ Input properties used for looking up and filtering EventPermission resources.
 The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
 
 <h4 class="pdoc-member-header" id="EventPermissionState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L146">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L152">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventPermissionCondition'>EventPermissionCondition</a>&gt;;</code></pre>
@@ -2612,7 +2716,7 @@ The action that you are enabling the other account to perform. Defaults to `even
 Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 
 <h4 class="pdoc-member-header" id="EventPermissionState-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L150">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L156">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventBusName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2620,7 +2724,7 @@ Configuration block to limit the event bus permissions you are granting to only 
 The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
 
 <h4 class="pdoc-member-header" id="EventPermissionState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L154">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L160">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2628,7 +2732,7 @@ The event bus to set the permissions on. If you omit this, the permissions are s
 The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
 
 <h4 class="pdoc-member-header" id="EventPermissionState-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventPermission.ts#L158">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventPermission.ts#L164">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2636,7 +2740,7 @@ The 12-digit AWS account ID that you are permitting to put events to your defaul
 An identifier string for the external account that you are granting permissions to.
 
 <h3 class="pdoc-module-header" id="EventRuleArgs" data-link-title="EventRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L225">
         interface <strong>EventRuleArgs</strong>
     </a>
 </h3>
@@ -2646,7 +2750,7 @@ An identifier string for the external account that you are granting permissions 
 The set of arguments for constructing a EventRule resource.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L221">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L229">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2654,7 +2758,7 @@ The set of arguments for constructing a EventRule resource.
 The description of the rule.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L225">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L233">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventBusName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2662,7 +2766,7 @@ The description of the rule.
 The event bus to associate with this rule. If you omit this, the `default` event bus is used.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-eventPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L230">property <b>eventPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L238">property <b>eventPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2671,7 +2775,7 @@ The event pattern described a JSON object. At least one of `scheduleExpression` 
 See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L234">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L242">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2679,7 +2783,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
 Whether the rule should be enabled (defaults to `true`).
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L246">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2687,7 +2791,7 @@ Whether the rule should be enabled (defaults to `true`).
 The name of the rule. If omitted, this provider will assign a random, unique name. Conflicts with `namePrefix`.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L242">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L250">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2695,7 +2799,7 @@ The name of the rule. If omitted, this provider will assign a random, unique nam
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L246">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L254">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2703,7 +2807,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-scheduleExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L251">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L259">property <b>scheduleExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2712,7 +2816,7 @@ The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `scheduleExpression` or `eventPattern` is required. Can only be used on the default event bus.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L255">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L263">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2720,80 +2824,80 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EventRuleEvent" data-link-title="EventRuleEvent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L29">
         interface <strong>EventRuleEvent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventRuleEvent</span></code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L34">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L34">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-detail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L65">property <b>detail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L65">property <b>detail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detail: <a href='/docs/reference/pkg/nodejs/pulumi/aws/route53/#Record'>Record</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-detail-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L41">property <b>detail-type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L41">property <b>detail-type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detail-type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L37">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L37">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L62">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L62">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L46">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L46">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-time">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L51">property <b>time</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L51">property <b>time</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>time: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEvent-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L31">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L31">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="EventRuleEventHandler" data-link-title="EventRuleEventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L68">
         type <strong>EventRuleEventHandler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> EventRuleEventHandler = lambda.EventHandler&lt;<a href='#EventRuleEvent'>EventRuleEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EventRuleEventSubscription" data-link-title="EventRuleEventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">
         class <strong>EventRuleEventSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventRuleEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> EventRuleEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, eventRuleOrSchedule: EventRule | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#EventRuleEventHandler'>EventRuleEventHandler</a>, args?: <a href='#EventRuleEventSubscriptionArgs'>EventRuleEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>getData</b></a>
 </h4>
 
 
@@ -2804,14 +2908,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>initialize</b></a>
 </h4>
 
 
@@ -2823,7 +2927,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2834,7 +2938,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -2849,27 +2953,27 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-eventRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L71">property <b>eventRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L71">property <b>eventRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventRule: EventRule;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-func">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>func: LambdaFunction;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L72">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L72">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='#EventTarget'>EventTarget</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EventRuleEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2878,7 +2982,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventRuleEventSubscriptionArgs" data-link-title="EventRuleEventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L26">
         interface <strong>EventRuleEventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -2889,7 +2993,7 @@ Arguments to control the event rule subscription.  Currently empty, but still de
 future need.
 
 <h3 class="pdoc-module-header" id="EventRuleState" data-link-title="EventRuleState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L177">
         interface <strong>EventRuleState</strong>
     </a>
 </h3>
@@ -2899,7 +3003,7 @@ future need.
 Input properties used for looking up and filtering EventRule resources.
 
 <h4 class="pdoc-member-header" id="EventRuleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L173">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L181">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2907,7 +3011,7 @@ Input properties used for looking up and filtering EventRule resources.
 The Amazon Resource Name (ARN) of the rule.
 
 <h4 class="pdoc-member-header" id="EventRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L177">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L185">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2915,7 +3019,7 @@ The Amazon Resource Name (ARN) of the rule.
 The description of the rule.
 
 <h4 class="pdoc-member-header" id="EventRuleState-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L181">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L189">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventBusName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2923,7 +3027,7 @@ The description of the rule.
 The event bus to associate with this rule. If you omit this, the `default` event bus is used.
 
 <h4 class="pdoc-member-header" id="EventRuleState-eventPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L186">property <b>eventPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L194">property <b>eventPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2932,7 +3036,7 @@ The event pattern described a JSON object. At least one of `scheduleExpression` 
 See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 
 <h4 class="pdoc-member-header" id="EventRuleState-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L190">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L198">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2940,7 +3044,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
 Whether the rule should be enabled (defaults to `true`).
 
 <h4 class="pdoc-member-header" id="EventRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L202">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2948,7 +3052,7 @@ Whether the rule should be enabled (defaults to `true`).
 The name of the rule. If omitted, this provider will assign a random, unique name. Conflicts with `namePrefix`.
 
 <h4 class="pdoc-member-header" id="EventRuleState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L198">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L206">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2956,7 +3060,7 @@ The name of the rule. If omitted, this provider will assign a random, unique nam
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventRuleState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L202">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L210">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2964,7 +3068,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 
 <h4 class="pdoc-member-header" id="EventRuleState-scheduleExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L207">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L215">property <b>scheduleExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2973,7 +3077,7 @@ The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `scheduleExpression` or `eventPattern` is required. Can only be used on the default event bus.
 
 <h4 class="pdoc-member-header" id="EventRuleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventRule.ts#L211">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventRule.ts#L219">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2981,7 +3085,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EventTargetArgs" data-link-title="EventTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L394">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L400">
         interface <strong>EventTargetArgs</strong>
     </a>
 </h3>
@@ -2991,7 +3095,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a EventTarget resource.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L398">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L404">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2999,7 +3103,7 @@ The set of arguments for constructing a EventTarget resource.
 The Amazon Resource Name (ARN) associated of the target.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-batchTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L402">property <b>batchTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L408">property <b>batchTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetBatchTarget'>EventTargetBatchTarget</a>&gt;;</code></pre>
@@ -3007,7 +3111,7 @@ The Amazon Resource Name (ARN) associated of the target.
 Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-ecsTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L406">property <b>ecsTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L412">property <b>ecsTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTarget'>EventTargetEcsTarget</a>&gt;;</code></pre>
@@ -3015,7 +3119,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
 Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L410">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L416">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventBusName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3023,7 +3127,7 @@ Parameters used when you are using the rule to invoke Amazon ECS Task. Documente
 The event bus to associate with the rule. If you omit this, the `default` event bus is used.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-input">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L414">property <b>input</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L420">property <b>input</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>input?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3031,7 +3135,7 @@ The event bus to associate with the rule. If you omit this, the `default` event 
 Valid JSON text passed to the target. Conflicts with `inputPath` and `inputTransformer`.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-inputPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L419">property <b>inputPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L425">property <b>inputPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3040,7 +3144,7 @@ The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `inputTransformer`.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-inputTransformer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L423">property <b>inputTransformer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L429">property <b>inputTransformer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetInputTransformer'>EventTargetInputTransformer</a>&gt;;</code></pre>
@@ -3048,7 +3152,7 @@ that is used for extracting part of the matched event when passing it to the tar
 Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `inputPath`.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-kinesisTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L427">property <b>kinesisTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L433">property <b>kinesisTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetKinesisTarget'>EventTargetKinesisTarget</a>&gt;;</code></pre>
@@ -3056,7 +3160,7 @@ Parameters used when you are providing a custom input to a target based on certa
 Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L431">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L437">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3064,7 +3168,7 @@ Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. 
 The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecsTarget` is used.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L435">property <b>rule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L441">property <b>rule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3072,7 +3176,7 @@ The Amazon Resource Name (ARN) of the IAM role to be used for this target when t
 The name of the rule you want to add targets to.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-runCommandTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L439">property <b>runCommandTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L445">property <b>runCommandTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runCommandTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetRunCommandTarget'>EventTargetRunCommandTarget</a>&gt;[]&gt;;</code></pre>
@@ -3080,7 +3184,7 @@ The name of the rule you want to add targets to.
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-sqsTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L443">property <b>sqsTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L449">property <b>sqsTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetSqsTarget'>EventTargetSqsTarget</a>&gt;;</code></pre>
@@ -3088,7 +3192,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
 Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L447">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L453">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3096,7 +3200,7 @@ Parameters used when you are using the rule to invoke an Amazon SQS Queue. Docum
 The unique target assignment ID.  If missing, will generate a random, unique id.
 
 <h3 class="pdoc-module-header" id="EventTargetState" data-link-title="EventTargetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L335">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L341">
         interface <strong>EventTargetState</strong>
     </a>
 </h3>
@@ -3106,7 +3210,7 @@ The unique target assignment ID.  If missing, will generate a random, unique id.
 Input properties used for looking up and filtering EventTarget resources.
 
 <h4 class="pdoc-member-header" id="EventTargetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L339">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L345">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3114,7 +3218,7 @@ Input properties used for looking up and filtering EventTarget resources.
 The Amazon Resource Name (ARN) associated of the target.
 
 <h4 class="pdoc-member-header" id="EventTargetState-batchTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L343">property <b>batchTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L349">property <b>batchTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetBatchTarget'>EventTargetBatchTarget</a>&gt;;</code></pre>
@@ -3122,7 +3226,7 @@ The Amazon Resource Name (ARN) associated of the target.
 Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetState-ecsTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L347">property <b>ecsTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L353">property <b>ecsTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTarget'>EventTargetEcsTarget</a>&gt;;</code></pre>
@@ -3130,7 +3234,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
 Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetState-eventBusName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L351">property <b>eventBusName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L357">property <b>eventBusName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventBusName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3138,7 +3242,7 @@ Parameters used when you are using the rule to invoke Amazon ECS Task. Documente
 The event bus to associate with the rule. If you omit this, the `default` event bus is used.
 
 <h4 class="pdoc-member-header" id="EventTargetState-input">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L355">property <b>input</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L361">property <b>input</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>input?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3146,7 +3250,7 @@ The event bus to associate with the rule. If you omit this, the `default` event 
 Valid JSON text passed to the target. Conflicts with `inputPath` and `inputTransformer`.
 
 <h4 class="pdoc-member-header" id="EventTargetState-inputPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L360">property <b>inputPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L366">property <b>inputPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3155,7 +3259,7 @@ The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `inputTransformer`.
 
 <h4 class="pdoc-member-header" id="EventTargetState-inputTransformer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L364">property <b>inputTransformer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L370">property <b>inputTransformer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetInputTransformer'>EventTargetInputTransformer</a>&gt;;</code></pre>
@@ -3163,7 +3267,7 @@ that is used for extracting part of the matched event when passing it to the tar
 Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `inputPath`.
 
 <h4 class="pdoc-member-header" id="EventTargetState-kinesisTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L368">property <b>kinesisTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L374">property <b>kinesisTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetKinesisTarget'>EventTargetKinesisTarget</a>&gt;;</code></pre>
@@ -3171,7 +3275,7 @@ Parameters used when you are providing a custom input to a target based on certa
 Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L372">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L378">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3179,7 +3283,7 @@ Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. 
 The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecsTarget` is used.
 
 <h4 class="pdoc-member-header" id="EventTargetState-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L376">property <b>rule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L382">property <b>rule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3187,7 +3291,7 @@ The Amazon Resource Name (ARN) of the IAM role to be used for this target when t
 The name of the rule you want to add targets to.
 
 <h4 class="pdoc-member-header" id="EventTargetState-runCommandTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L380">property <b>runCommandTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L386">property <b>runCommandTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runCommandTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetRunCommandTarget'>EventTargetRunCommandTarget</a>&gt;[]&gt;;</code></pre>
@@ -3195,7 +3299,7 @@ The name of the rule you want to add targets to.
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetState-sqsTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L384">property <b>sqsTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L390">property <b>sqsTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetSqsTarget'>EventTargetSqsTarget</a>&gt;;</code></pre>
@@ -3203,7 +3307,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
 Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 
 <h4 class="pdoc-member-header" id="EventTargetState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/eventTarget.ts#L388">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/eventTarget.ts#L394">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3211,7 +3315,7 @@ Parameters used when you are using the rule to invoke an Amazon SQS Queue. Docum
 The unique target assignment ID.  If missing, will generate a random, unique id.
 
 <h3 class="pdoc-module-header" id="GetLogGroupArgs" data-link-title="GetLogGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L39">
         interface <strong>GetLogGroupArgs</strong>
     </a>
 </h3>
@@ -3221,7 +3325,7 @@ The unique target assignment ID.  If missing, will generate a random, unique id.
 A collection of arguments for invoking getLogGroup.
 
 <h4 class="pdoc-member-header" id="GetLogGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3229,7 +3333,7 @@ A collection of arguments for invoking getLogGroup.
 The name of the Cloudwatch log group
 
 <h4 class="pdoc-member-header" id="GetLogGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L49">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L47">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -3237,7 +3341,7 @@ The name of the Cloudwatch log group
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetLogGroupResult" data-link-title="GetLogGroupResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L53">
         interface <strong>GetLogGroupResult</strong>
     </a>
 </h3>
@@ -3247,7 +3351,7 @@ A map of tags to assign to the resource.
 A collection of values returned by getLogGroup.
 
 <h4 class="pdoc-member-header" id="GetLogGroupResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L57">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3255,7 +3359,7 @@ A collection of values returned by getLogGroup.
 The ARN of the Cloudwatch log group
 
 <h4 class="pdoc-member-header" id="GetLogGroupResult-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L63">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L61">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3263,7 +3367,7 @@ The ARN of the Cloudwatch log group
 The creation time of the log group, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
 
 <h4 class="pdoc-member-header" id="GetLogGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3271,7 +3375,7 @@ The creation time of the log group, expressed as the number of milliseconds afte
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetLogGroupResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L71">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L69">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3279,12 +3383,12 @@ The provider-assigned unique ID for this managed resource.
 The ARN of the KMS Key to use when encrypting log data.
 
 <h4 class="pdoc-member-header" id="GetLogGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLogGroupResult-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L76">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L74">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionInDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3292,7 +3396,7 @@ The ARN of the KMS Key to use when encrypting log data.
 The number of days log events retained in the specified log group.
 
 <h4 class="pdoc-member-header" id="GetLogGroupResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/getLogGroup.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/getLogGroup.ts#L78">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -3300,7 +3404,7 @@ The number of days log events retained in the specified log group.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="LogDestinationArgs" data-link-title="LogDestinationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L140">
         interface <strong>LogDestinationArgs</strong>
     </a>
 </h3>
@@ -3310,7 +3414,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a LogDestination resource.
 
 <h4 class="pdoc-member-header" id="LogDestinationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3318,7 +3422,7 @@ The set of arguments for constructing a LogDestination resource.
 A name for the log destination
 
 <h4 class="pdoc-member-header" id="LogDestinationArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L140">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L148">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3326,7 +3430,7 @@ A name for the log destination
 The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
 
 <h4 class="pdoc-member-header" id="LogDestinationArgs-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L144">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L152">property <b>targetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3334,7 +3438,7 @@ The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put dat
 The ARN of the target Amazon Kinesis stream resource for the destination
 
 <h3 class="pdoc-module-header" id="LogDestinationPolicyArgs" data-link-title="LogDestinationPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L135">
         interface <strong>LogDestinationPolicyArgs</strong>
     </a>
 </h3>
@@ -3344,7 +3448,7 @@ The ARN of the target Amazon Kinesis stream resource for the destination
 The set of arguments for constructing a LogDestinationPolicy resource.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicyArgs-accessPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L131">property <b>accessPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L139">property <b>accessPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3352,7 +3456,7 @@ The set of arguments for constructing a LogDestinationPolicy resource.
 The policy document. This is a JSON formatted string.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicyArgs-destinationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L135">property <b>destinationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L143">property <b>destinationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3360,7 +3464,7 @@ The policy document. This is a JSON formatted string.
 A name for the subscription filter
 
 <h3 class="pdoc-module-header" id="LogDestinationPolicyState" data-link-title="LogDestinationPolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L121">
         interface <strong>LogDestinationPolicyState</strong>
     </a>
 </h3>
@@ -3370,7 +3474,7 @@ A name for the subscription filter
 Input properties used for looking up and filtering LogDestinationPolicy resources.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicyState-accessPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L117">property <b>accessPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L125">property <b>accessPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3378,7 +3482,7 @@ Input properties used for looking up and filtering LogDestinationPolicy resource
 The policy document. This is a JSON formatted string.
 
 <h4 class="pdoc-member-header" id="LogDestinationPolicyState-destinationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L121">property <b>destinationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestinationPolicy.ts#L129">property <b>destinationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3386,7 +3490,7 @@ The policy document. This is a JSON formatted string.
 A name for the subscription filter
 
 <h3 class="pdoc-module-header" id="LogDestinationState" data-link-title="LogDestinationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L118">
         interface <strong>LogDestinationState</strong>
     </a>
 </h3>
@@ -3396,7 +3500,7 @@ A name for the subscription filter
 Input properties used for looking up and filtering LogDestination resources.
 
 <h4 class="pdoc-member-header" id="LogDestinationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L114">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L122">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3404,7 +3508,7 @@ Input properties used for looking up and filtering LogDestination resources.
 The Amazon Resource Name (ARN) specifying the log destination.
 
 <h4 class="pdoc-member-header" id="LogDestinationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3412,7 +3516,7 @@ The Amazon Resource Name (ARN) specifying the log destination.
 A name for the log destination
 
 <h4 class="pdoc-member-header" id="LogDestinationState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L122">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L130">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3420,7 +3524,7 @@ A name for the log destination
 The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
 
 <h4 class="pdoc-member-header" id="LogDestinationState-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logDestination.ts#L126">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logDestination.ts#L134">property <b>targetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3428,7 +3532,7 @@ The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put dat
 The ARN of the target Amazon Kinesis stream resource for the destination
 
 <h3 class="pdoc-module-header" id="LogGroupArgs" data-link-title="LogGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L164">
         interface <strong>LogGroupArgs</strong>
     </a>
 </h3>
@@ -3438,7 +3542,7 @@ The ARN of the target Amazon Kinesis stream resource for the destination
 The set of arguments for constructing a LogGroup resource.
 
 <h4 class="pdoc-member-header" id="LogGroupArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L162">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L170">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3448,7 +3552,7 @@ AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All 
 permissions for the CMK whenever the encrypted data is requested.
 
 <h4 class="pdoc-member-header" id="LogGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L174">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3456,7 +3560,7 @@ permissions for the CMK whenever the encrypted data is requested.
 The name of the log group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="LogGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L170">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L178">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3464,7 +3568,7 @@ The name of the log group. If omitted, this provider will assign a random, uniqu
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="LogGroupArgs-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L176">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L184">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3474,7 +3578,7 @@ you want to retain log events in the specified log group.  Possible values are: 
 If you select 0, the events in the log group are always retained and never expire.
 
 <h4 class="pdoc-member-header" id="LogGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L180">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L188">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3482,64 +3586,64 @@ If you select 0, the events in the log group are always retained and never expir
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="LogGroupEvent" data-link-title="LogGroupEvent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L35">
         interface <strong>LogGroupEvent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LogGroupEvent</span></code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEvent-awslogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L36">property <b>awslogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L36">property <b>awslogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awslogs: {
     data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</code></pre>
 <h3 class="pdoc-module-header" id="LogGroupEventHandler" data-link-title="LogGroupEventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L71">
         type <strong>LogGroupEventHandler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> LogGroupEventHandler = lambda.EventHandler&lt;<a href='#LogGroupEvent'>LogGroupEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="LogGroupEventRecord" data-link-title="LogGroupEventRecord">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L65">
         interface <strong>LogGroupEventRecord</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LogGroupEventRecord</span></code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventRecord-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L68">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L68">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventRecord-timestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L67">property <b>timestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L67">property <b>timestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="LogGroupEventSubscription" data-link-title="LogGroupEventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">
         class <strong>LogGroupEventSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>LogGroupEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> LogGroupEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, logGroup: LogGroup, handler: <a href='#LogGroupEventHandler'>LogGroupEventHandler</a>, args: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>getData</b></a>
 </h4>
 
 
@@ -3550,14 +3654,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>initialize</b></a>
 </h4>
 
 
@@ -3569,7 +3673,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3580,7 +3684,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -3595,27 +3699,27 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-func">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>func: LambdaFunction;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L74">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L74">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroup: LogGroup;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-logSubscriptionFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L75">property <b>logSubscriptionFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L75">property <b>logSubscriptionFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logSubscriptionFilter: <a href='#LogSubscriptionFilter'>LogSubscriptionFilter</a>;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="LogGroupEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3624,7 +3728,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogGroupEventSubscriptionArgs" data-link-title="LogGroupEventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L27">
         interface <strong>LogGroupEventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -3635,7 +3739,7 @@ Arguments to control the event rule subscription.  Currently empty, but still de
 future need.
 
 <h4 class="pdoc-member-header" id="LogGroupEventSubscriptionArgs-filterPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroupMixins.ts#L32">property <b>filterPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroupMixins.ts#L32">property <b>filterPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterPattern?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3644,7 +3748,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
 not provided, the empty-string pattern will be used.
 
 <h3 class="pdoc-module-header" id="LogGroupState" data-link-title="LogGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L130">
         interface <strong>LogGroupState</strong>
     </a>
 </h3>
@@ -3654,7 +3758,7 @@ not provided, the empty-string pattern will be used.
 Input properties used for looking up and filtering LogGroup resources.
 
 <h4 class="pdoc-member-header" id="LogGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L126">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L134">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3662,7 +3766,7 @@ Input properties used for looking up and filtering LogGroup resources.
 The Amazon Resource Name (ARN) specifying the log group. Any `:*` suffix added by the API, denoting all CloudWatch Log Streams under the CloudWatch Log Group, is removed for greater compatibility with other AWS services that do not accept the suffix.
 
 <h4 class="pdoc-member-header" id="LogGroupState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L132">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L140">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3672,7 +3776,7 @@ AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All 
 permissions for the CMK whenever the encrypted data is requested.
 
 <h4 class="pdoc-member-header" id="LogGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3680,7 +3784,7 @@ permissions for the CMK whenever the encrypted data is requested.
 The name of the log group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="LogGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L140">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L148">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3688,7 +3792,7 @@ The name of the log group. If omitted, this provider will assign a random, uniqu
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="LogGroupState-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L146">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L154">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3698,7 +3802,7 @@ you want to retain log events in the specified log group.  Possible values are: 
 If you select 0, the events in the log group are always retained and never expire.
 
 <h4 class="pdoc-member-header" id="LogGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logGroup.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logGroup.ts#L158">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3706,7 +3810,7 @@ If you select 0, the events in the log group are always retained and never expir
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="LogMetricFilterArgs" data-link-title="LogMetricFilterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L154">
         interface <strong>LogMetricFilterArgs</strong>
     </a>
 </h3>
@@ -3716,7 +3820,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a LogMetricFilter resource.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterArgs-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L152">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L158">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3724,7 +3828,7 @@ The set of arguments for constructing a LogMetricFilter resource.
 The name of the log group to associate the metric filter with.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterArgs-metricTransformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L157">property <b>metricTransformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L163">property <b>metricTransformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LogMetricFilterMetricTransformation'>LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
@@ -3733,7 +3837,7 @@ A block defining collection of information
 needed to define how metric data gets emitted. See below.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3741,7 +3845,7 @@ needed to define how metric data gets emitted. See below.
 A name for the metric filter.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterArgs-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L166">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L172">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3750,7 +3854,7 @@ A valid [CloudWatch Logs filter pattern](https://docs.aws.amazon.com/AmazonCloud
 for extracting metric data out of ingested log events.
 
 <h3 class="pdoc-module-header" id="LogMetricFilterState" data-link-title="LogMetricFilterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L130">
         interface <strong>LogMetricFilterState</strong>
     </a>
 </h3>
@@ -3760,7 +3864,7 @@ for extracting metric data out of ingested log events.
 Input properties used for looking up and filtering LogMetricFilter resources.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterState-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L128">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L134">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3768,7 +3872,7 @@ Input properties used for looking up and filtering LogMetricFilter resources.
 The name of the log group to associate the metric filter with.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterState-metricTransformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L133">property <b>metricTransformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L139">property <b>metricTransformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricTransformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LogMetricFilterMetricTransformation'>LogMetricFilterMetricTransformation</a>&gt;;</code></pre>
@@ -3777,7 +3881,7 @@ A block defining collection of information
 needed to define how metric data gets emitted. See below.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L143">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3785,7 +3889,7 @@ needed to define how metric data gets emitted. See below.
 A name for the metric filter.
 
 <h4 class="pdoc-member-header" id="LogMetricFilterState-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logMetricFilter.ts#L142">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logMetricFilter.ts#L148">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3794,7 +3898,7 @@ A valid [CloudWatch Logs filter pattern](https://docs.aws.amazon.com/AmazonCloud
 for extracting metric data out of ingested log events.
 
 <h3 class="pdoc-module-header" id="LogResourcePolicyArgs" data-link-title="LogResourcePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L159">
         interface <strong>LogResourcePolicyArgs</strong>
     </a>
 </h3>
@@ -3804,7 +3908,7 @@ for extracting metric data out of ingested log events.
 The set of arguments for constructing a LogResourcePolicy resource.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicyArgs-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L155">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L163">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3812,7 +3916,7 @@ The set of arguments for constructing a LogResourcePolicy resource.
 Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicyArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L159">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L167">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3820,7 +3924,7 @@ Details of the resource policy, including the identity of the principal that is 
 Name of the resource policy.
 
 <h3 class="pdoc-module-header" id="LogResourcePolicyState" data-link-title="LogResourcePolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L145">
         interface <strong>LogResourcePolicyState</strong>
     </a>
 </h3>
@@ -3830,7 +3934,7 @@ Name of the resource policy.
 Input properties used for looking up and filtering LogResourcePolicy resources.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicyState-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L141">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L149">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3838,7 +3942,7 @@ Input properties used for looking up and filtering LogResourcePolicy resources.
 Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
 
 <h4 class="pdoc-member-header" id="LogResourcePolicyState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L145">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logResourcePolicy.ts#L153">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3846,7 +3950,7 @@ Details of the resource policy, including the identity of the principal that is 
 Name of the resource policy.
 
 <h3 class="pdoc-module-header" id="LogStreamArgs" data-link-title="LogStreamArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L125">
         interface <strong>LogStreamArgs</strong>
     </a>
 </h3>
@@ -3856,7 +3960,7 @@ Name of the resource policy.
 The set of arguments for constructing a LogStream resource.
 
 <h4 class="pdoc-member-header" id="LogStreamArgs-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L121">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L129">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3864,7 +3968,7 @@ The set of arguments for constructing a LogStream resource.
 The name of the log group under which the log stream is to be created.
 
 <h4 class="pdoc-member-header" id="LogStreamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3872,7 +3976,7 @@ The name of the log group under which the log stream is to be created.
 The name of the log stream. Must not be longer than 512 characters and must not contain `:`
 
 <h3 class="pdoc-module-header" id="LogStreamState" data-link-title="LogStreamState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L107">
         interface <strong>LogStreamState</strong>
     </a>
 </h3>
@@ -3882,7 +3986,7 @@ The name of the log stream. Must not be longer than 512 characters and must not 
 Input properties used for looking up and filtering LogStream resources.
 
 <h4 class="pdoc-member-header" id="LogStreamState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L103">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L111">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3890,7 +3994,7 @@ Input properties used for looking up and filtering LogStream resources.
 The Amazon Resource Name (ARN) specifying the log stream.
 
 <h4 class="pdoc-member-header" id="LogStreamState-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L107">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L115">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3898,7 +4002,7 @@ The Amazon Resource Name (ARN) specifying the log stream.
 The name of the log group under which the log stream is to be created.
 
 <h4 class="pdoc-member-header" id="LogStreamState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logStream.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logStream.ts#L119">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3906,7 +4010,7 @@ The name of the log group under which the log stream is to be created.
 The name of the log stream. Must not be longer than 512 characters and must not contain `:`
 
 <h3 class="pdoc-module-header" id="LogSubscriptionFilterArgs" data-link-title="LogSubscriptionFilterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L168">
         interface <strong>LogSubscriptionFilterArgs</strong>
     </a>
 </h3>
@@ -3916,7 +4020,7 @@ The name of the log stream. Must not be longer than 512 characters and must not 
 The set of arguments for constructing a LogSubscriptionFilter resource.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterArgs-destinationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L164">property <b>destinationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L172">property <b>destinationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3924,7 +4028,7 @@ The set of arguments for constructing a LogSubscriptionFilter resource.
 The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterArgs-distribution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L168">property <b>distribution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L176">property <b>distribution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distribution?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3932,7 +4036,7 @@ The ARN of the destination to deliver matching log events to. Kinesis stream or 
 The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are "Random" and "ByLogStream".
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterArgs-filterPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L172">property <b>filterPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L180">property <b>filterPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3940,7 +4044,7 @@ The method used to distribute log data to the destination. By default log data i
 A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterArgs-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L176">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L184">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | LogGroup&gt;;</code></pre>
@@ -3948,7 +4052,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
 The name of the log group to associate the subscription filter with
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3956,7 +4060,7 @@ The name of the log group to associate the subscription filter with
 A name for the subscription filter
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L184">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L192">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3964,7 +4068,7 @@ A name for the subscription filter
 The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use `aws.lambda.Permission` resource for granting access from CloudWatch logs to the destination Lambda function.
 
 <h3 class="pdoc-module-header" id="LogSubscriptionFilterState" data-link-title="LogSubscriptionFilterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L138">
         interface <strong>LogSubscriptionFilterState</strong>
     </a>
 </h3>
@@ -3974,7 +4078,7 @@ The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver
 Input properties used for looking up and filtering LogSubscriptionFilter resources.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterState-destinationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L134">property <b>destinationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L142">property <b>destinationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3982,7 +4086,7 @@ Input properties used for looking up and filtering LogSubscriptionFilter resourc
 The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterState-distribution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L138">property <b>distribution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L146">property <b>distribution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distribution?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3990,7 +4094,7 @@ The ARN of the destination to deliver matching log events to. Kinesis stream or 
 The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are "Random" and "ByLogStream".
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterState-filterPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L142">property <b>filterPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L150">property <b>filterPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3998,7 +4102,7 @@ The method used to distribute log data to the destination. By default log data i
 A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterState-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L146">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L154">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | LogGroup&gt;;</code></pre>
@@ -4006,7 +4110,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
 The name of the log group to associate the subscription filter with
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4014,7 +4118,7 @@ The name of the log group to associate the subscription filter with
 A name for the subscription filter
 
 <h4 class="pdoc-member-header" id="LogSubscriptionFilterState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L154">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts#L162">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4022,7 +4126,7 @@ A name for the subscription filter
 The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use `aws.lambda.Permission` resource for granting access from CloudWatch logs to the destination Lambda function.
 
 <h3 class="pdoc-module-header" id="MetricAlarmArgs" data-link-title="MetricAlarmArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L489">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L495">
         interface <strong>MetricAlarmArgs</strong>
     </a>
 </h3>
@@ -4032,7 +4136,7 @@ The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver
 The set of arguments for constructing a MetricAlarm resource.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-actionsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L493">property <b>actionsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L499">property <b>actionsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4040,7 +4144,7 @@ The set of arguments for constructing a MetricAlarm resource.
 Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-alarmActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L497">property <b>alarmActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L503">property <b>alarmActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;[]&gt;;</code></pre>
@@ -4048,7 +4152,7 @@ Indicates whether or not actions should be executed during any changes to the al
 The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-alarmDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L501">property <b>alarmDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L507">property <b>alarmDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4056,7 +4160,7 @@ The list of actions to execute when this alarm transitions into an ALARM state f
 The description for the alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-comparisonOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L505">property <b>comparisonOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L511">property <b>comparisonOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparisonOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4064,7 +4168,7 @@ The description for the alarm.
 The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: `GreaterThanOrEqualToThreshold`, `GreaterThanThreshold`, `LessThanThreshold`, `LessThanOrEqualToThreshold`. Additionally, the values  `LessThanLowerOrGreaterThanUpperThreshold`, `LessThanLowerThreshold`, and `GreaterThanUpperThreshold` are used only for alarms based on anomaly detection models.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-datapointsToAlarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L509">property <b>datapointsToAlarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L515">property <b>datapointsToAlarm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datapointsToAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4072,7 +4176,7 @@ The arithmetic operation to use when comparing the specified Statistic and Thres
 The number of datapoints that must be breaching to trigger the alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L513">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L519">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4080,7 +4184,7 @@ The number of datapoints that must be breaching to trigger the alarm.
 The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-evaluateLowSampleCountPercentiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L522">property <b>evaluateLowSampleCountPercentiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L528">property <b>evaluateLowSampleCountPercentiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluateLowSampleCountPercentiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4093,7 +4197,7 @@ evaluated and possibly change state no matter how many data points are available
 The following values are supported: `ignore`, and `evaluate`.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L526">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L532">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4101,7 +4205,7 @@ The following values are supported: `ignore`, and `evaluate`.
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L530">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L536">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4109,7 +4213,7 @@ The number of periods over which data is compared to the specified threshold.
 The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-insufficientDataActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L534">property <b>insufficientDataActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L540">property <b>insufficientDataActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insufficientDataActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;[]&gt;;</code></pre>
@@ -4117,7 +4221,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L539">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L545">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4126,7 +4230,7 @@ The name for this metric.
 See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-metricQueries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L543">property <b>metricQueries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L549">property <b>metricQueries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MetricAlarmMetricQuery'>MetricAlarmMetricQuery</a>&gt;[]&gt;;</code></pre>
@@ -4134,7 +4238,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L547">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L553">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4142,7 +4246,7 @@ Enables you to create an alarm based on a metric math expression. You may specif
 The descriptive name for the alarm. This name must be unique within the user's AWS account
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L552">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L558">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4151,7 +4255,7 @@ The namespace for this metric. See docs for the [list of namespaces](https://doc
 See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-okActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L556">property <b>okActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L562">property <b>okActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>okActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;[]&gt;;</code></pre>
@@ -4159,7 +4263,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L560">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L566">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4167,7 +4271,7 @@ The list of actions to execute when this alarm transitions into an OK state from
 The period in seconds over which the specified `stat` is applied.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L565">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L571">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4176,7 +4280,7 @@ The statistic to apply to the alarm's associated metric.
 Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L569">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L575">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4184,7 +4288,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L573">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L579">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4192,7 +4296,7 @@ A map of tags to assign to the resource.
 The value against which the specified statistic is compared. This parameter is required for alarms based on static thresholds, but should not be used for alarms based on anomaly detection models.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-thresholdMetricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L577">property <b>thresholdMetricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L583">property <b>thresholdMetricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdMetricId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4200,7 +4304,7 @@ The value against which the specified statistic is compared. This parameter is r
 If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-treatMissingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L581">property <b>treatMissingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L587">property <b>treatMissingData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>treatMissingData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4208,7 +4312,7 @@ If this is an alarm based on an anomaly detection model, make this value match t
 Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
 
 <h4 class="pdoc-member-header" id="MetricAlarmArgs-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L585">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L591">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4216,7 +4320,7 @@ Sets how this alarm is to handle missing data points. The following values are s
 The unit for this metric.
 
 <h3 class="pdoc-module-header" id="MetricAlarmState" data-link-title="MetricAlarmState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L383">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L389">
         interface <strong>MetricAlarmState</strong>
     </a>
 </h3>
@@ -4226,7 +4330,7 @@ The unit for this metric.
 Input properties used for looking up and filtering MetricAlarm resources.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-actionsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L387">property <b>actionsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L393">property <b>actionsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4234,7 +4338,7 @@ Input properties used for looking up and filtering MetricAlarm resources.
 Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-alarmActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L391">property <b>alarmActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L397">property <b>alarmActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;[]&gt;;</code></pre>
@@ -4242,7 +4346,7 @@ Indicates whether or not actions should be executed during any changes to the al
 The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-alarmDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L395">property <b>alarmDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L401">property <b>alarmDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4250,7 +4354,7 @@ The list of actions to execute when this alarm transitions into an ALARM state f
 The description for the alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L399">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L405">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4258,7 +4362,7 @@ The description for the alarm.
 The ARN of the cloudwatch metric alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-comparisonOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L403">property <b>comparisonOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L409">property <b>comparisonOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparisonOperator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4266,7 +4370,7 @@ The ARN of the cloudwatch metric alarm.
 The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: `GreaterThanOrEqualToThreshold`, `GreaterThanThreshold`, `LessThanThreshold`, `LessThanOrEqualToThreshold`. Additionally, the values  `LessThanLowerOrGreaterThanUpperThreshold`, `LessThanLowerThreshold`, and `GreaterThanUpperThreshold` are used only for alarms based on anomaly detection models.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-datapointsToAlarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L407">property <b>datapointsToAlarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L413">property <b>datapointsToAlarm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datapointsToAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4274,7 +4378,7 @@ The arithmetic operation to use when comparing the specified Statistic and Thres
 The number of datapoints that must be breaching to trigger the alarm.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L411">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L417">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4282,7 +4386,7 @@ The number of datapoints that must be breaching to trigger the alarm.
 The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-evaluateLowSampleCountPercentiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L420">property <b>evaluateLowSampleCountPercentiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L426">property <b>evaluateLowSampleCountPercentiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluateLowSampleCountPercentiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4295,7 +4399,7 @@ evaluated and possibly change state no matter how many data points are available
 The following values are supported: `ignore`, and `evaluate`.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L424">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L430">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4303,7 +4407,7 @@ The following values are supported: `ignore`, and `evaluate`.
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L428">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L434">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4311,7 +4415,7 @@ The number of periods over which data is compared to the specified threshold.
 The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-insufficientDataActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L432">property <b>insufficientDataActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L438">property <b>insufficientDataActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insufficientDataActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;[]&gt;;</code></pre>
@@ -4319,7 +4423,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L437">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L443">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4328,7 +4432,7 @@ The name for this metric.
 See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-metricQueries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L441">property <b>metricQueries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L447">property <b>metricQueries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MetricAlarmMetricQuery'>MetricAlarmMetricQuery</a>&gt;[]&gt;;</code></pre>
@@ -4336,7 +4440,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L445">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L451">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4344,7 +4448,7 @@ Enables you to create an alarm based on a metric math expression. You may specif
 The descriptive name for the alarm. This name must be unique within the user's AWS account
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L450">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L456">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4353,7 +4457,7 @@ The namespace for this metric. See docs for the [list of namespaces](https://doc
 See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-okActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L454">property <b>okActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L460">property <b>okActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>okActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;[]&gt;;</code></pre>
@@ -4361,7 +4465,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L458">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L464">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4369,7 +4473,7 @@ The list of actions to execute when this alarm transitions into an OK state from
 The period in seconds over which the specified `stat` is applied.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L463">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L469">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4378,7 +4482,7 @@ The statistic to apply to the alarm's associated metric.
 Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L467">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L473">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4386,7 +4490,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L471">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L477">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4394,7 +4498,7 @@ A map of tags to assign to the resource.
 The value against which the specified statistic is compared. This parameter is required for alarms based on static thresholds, but should not be used for alarms based on anomaly detection models.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-thresholdMetricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L475">property <b>thresholdMetricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L481">property <b>thresholdMetricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdMetricId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4402,7 +4506,7 @@ The value against which the specified statistic is compared. This parameter is r
 If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-treatMissingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L479">property <b>treatMissingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L485">property <b>treatMissingData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>treatMissingData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4410,7 +4514,7 @@ If this is an alarm based on an anomaly detection model, make this value match t
 Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
 
 <h4 class="pdoc-member-header" id="MetricAlarmState-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/metricAlarm.ts#L483">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/metricAlarm.ts#L489">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4418,7 +4522,7 @@ Sets how this alarm is to handle missing data points. The following values are s
 The unit for this metric.
 
 <h3 class="pdoc-module-header" id="onSchedule" data-link-title="onSchedule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/cloudwatch/cloudwatchMixins.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/cloudwatch/cloudwatchMixins.ts#L22">
         function <strong>onSchedule</strong>
     </a>
 </h3>

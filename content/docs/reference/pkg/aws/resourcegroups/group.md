@@ -1162,6 +1162,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Resource groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:resourcegroups/group:Group foo resource-group-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

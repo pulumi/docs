@@ -2333,6 +2333,16 @@ For more information on configuring the log format rules visit the AWS [document
 
 
 
+## Import
+
+
+`aws_api_gateway_stage` can be imported using `REST-API-ID/STAGE-NAME`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/stage:Stage example 12345abcde/example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

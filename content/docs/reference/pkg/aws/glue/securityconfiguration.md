@@ -1336,6 +1336,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glue Security Configurations can be imported using `name`, e.g.
+
+```sh
+ $ pulumi import aws:glue/securityConfiguration:SecurityConfiguration example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

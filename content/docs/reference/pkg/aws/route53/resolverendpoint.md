@@ -1426,6 +1426,16 @@ to your network (for outbound endpoints) or on the way from your network to your
 
 
 
+## Import
+
+
+ Route 53 Resolver endpoints can be imported using the Route 53 Resolver endpoint ID, e.g.
+
+```sh
+ $ pulumi import aws:route53/resolverEndpoint:ResolverEndpoint foo rslvr-in-abcdef01234567890
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

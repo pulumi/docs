@@ -692,6 +692,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DeviceFarm Projects can be imported by their arn
+
+```sh
+ $ pulumi import aws:devicefarm/project:Project example arn:aws:devicefarm:us-west-2:123456789012:project:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

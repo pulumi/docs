@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFileSystem function of the efs module, including exam
 
 Provides information about an Elastic File System (EFS) File System.
 
+
 {{% examples %}}
 ## Example Usage
 

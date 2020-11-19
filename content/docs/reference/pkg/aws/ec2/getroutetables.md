@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRouteTables function of the ec2 module, including exa
 
 This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
 
+
 {{% examples %}}
 ## Example Usage
 

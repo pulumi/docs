@@ -3,7 +3,7 @@ title: "Module types/enums/alb"
 title_tag: "Module types/enums/alb | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/alb"
 meta_desc: "Explore members of the enums/alb module in the @pulumi/aws package."
-git_sha: "414cc1732ef52039e4e773e514df48dd16ed7aa6"
+git_sha: "c12ed064d3e53d2839c8a83426d06dd01a6bdd8f"
 block_external_search_index: true
 ---
 
@@ -28,14 +28,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="IpAddressType" data-link-title="IpAddressType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/types/enums/alb/index.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/types/enums/alb/index.ts#L10">
         type <strong>IpAddressType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> IpAddressType = <span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="LoadBalancerType" data-link-title="LoadBalancerType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/414cc1732ef52039e4e773e514df48dd16ed7aa6/sdk/nodejs/types/enums/alb/index.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/types/enums/alb/index.ts#L17">
         type <strong>LoadBalancerType</strong>
     </a>
 </h3>

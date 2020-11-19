@@ -990,6 +990,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+VPN Gateways can be imported using the `vpn gateway id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/vpnGateway:VpnGateway testvpngateway vgw-9a4cacf3
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

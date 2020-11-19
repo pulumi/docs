@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRule function of the wafregional module, including ex
 
 `aws.wafregional.Rule` Retrieves a WAF Regional Rule Resource Id.
 
+
 {{% examples %}}
 ## Example Usage
 

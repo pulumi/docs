@@ -1019,6 +1019,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+API Gateway VPC Link can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/vpcLink:VpcLink example <vpc_link_id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

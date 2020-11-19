@@ -696,7 +696,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -885,7 +885,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1074,7 +1074,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1263,7 +1263,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1911,7 +1911,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2155,7 +2155,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2399,7 +2399,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2643,7 +2643,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3151,6 +3151,16 @@ for load balancers of type `network` will force a recreation of the resource.
 
 
 
+
+
+## Import
+
+
+LBs can be imported using their ARN, e.g.
+
+```sh
+ $ pulumi import aws:elasticloadbalancingv2/loadBalancer:LoadBalancer bar arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/50dc6c495c0c9188
+```
 
 
 

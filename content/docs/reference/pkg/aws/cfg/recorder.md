@@ -1074,6 +1074,16 @@ See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIRefe
 
 
 
+## Import
+
+
+Configuration Recorder can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:cfg/recorder:Recorder foo example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

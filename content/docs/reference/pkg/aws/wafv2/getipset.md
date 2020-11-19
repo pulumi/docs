@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpSet function of the wafv2 module, including example
 
 Retrieves the summary of a WAFv2 IP Set.
 
+
 {{% examples %}}
 ## Example Usage
 

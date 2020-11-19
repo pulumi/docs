@@ -12,6 +12,7 @@ meta_desc: "Explore the PatchGroup resource of the ssm module, including example
 
 Provides an SSM Patch Group resource
 
+
 {{% examples %}}
 ## Example Usage
 

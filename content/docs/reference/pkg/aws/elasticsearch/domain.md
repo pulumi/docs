@@ -4190,7 +4190,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
+    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
 **Required** if `ebs_enabled` is set to `true`.
 {{% /md %}}</dd>
 
@@ -4243,7 +4243,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
+    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
 **Required** if `ebs_enabled` is set to `true`.
 {{% /md %}}</dd>
 
@@ -4296,7 +4296,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
+    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
 **Required** if `ebs_enabled` is set to `true`.
 {{% /md %}}</dd>
 
@@ -4349,7 +4349,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
+    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
 **Required** if `ebs_enabled` is set to `true`.
 {{% /md %}}</dd>
 
@@ -5083,6 +5083,16 @@ snapshot of the indices in the domain.
 
 
 
+
+
+## Import
+
+
+Elasticsearch domains can be imported using the `domain_name`, e.g.
+
+```sh
+ $ pulumi import aws:elasticsearch/domain:Domain example domain_name
+```
 
 
 

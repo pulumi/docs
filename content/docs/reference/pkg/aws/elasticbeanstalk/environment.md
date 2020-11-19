@@ -3284,6 +3284,16 @@ in the application URL
 
 
 
+## Import
+
+
+Elastic Beanstalk Environments can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:elasticbeanstalk/environment:Environment prodenv e-rpqsewtp2j
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

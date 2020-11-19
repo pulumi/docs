@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPlan function of the backup module, including example
 
 Use this data source to get information on an existing backup plan.
 
+
 {{% examples %}}
 ## Example Usage
 

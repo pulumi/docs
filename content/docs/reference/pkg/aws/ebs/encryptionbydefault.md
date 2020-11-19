@@ -14,6 +14,7 @@ Provides a resource to manage whether default EBS encryption is enabled for your
 
 > **NOTE:** Removing this resource disables default EBS encryption.
 
+
 {{% examples %}}
 ## Example Usage
 

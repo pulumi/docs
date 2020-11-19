@@ -1870,6 +1870,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+App Mesh virtual services can be imported using `mesh_name` together with the virtual service's `name`, e.g.
+
+```sh
+ $ pulumi import aws:appmesh/virtualService:VirtualService servicea simpleapp/servicea.simpleapp.local
+```
+
+ [1]/docs/providers/aws/index.html
+
+
 
 
 <h2 id="package-details">Package Details</h2>

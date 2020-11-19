@@ -13,6 +13,7 @@ meta_desc: "Explore the GetVpcEndpoint function of the ec2 module, including exa
 The VPC Endpoint data source provides details about
 a specific VPC endpoint.
 
+
 {{% examples %}}
 ## Example Usage
 

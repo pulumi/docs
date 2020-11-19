@@ -17,6 +17,7 @@ the `aws.kms.Ciphertext` data source.
 
 > **Note:** All arguments including the plaintext be stored in the raw state as plain-text.
 
+
 {{% examples %}}
 ## Example Usage
 

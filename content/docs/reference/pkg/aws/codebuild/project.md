@@ -6463,6 +6463,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodeBuild Project can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:codebuild/project:Project name project-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

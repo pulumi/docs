@@ -19,6 +19,7 @@ server configured.
 
 
 
+
 ## Using GetClusterAuth {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

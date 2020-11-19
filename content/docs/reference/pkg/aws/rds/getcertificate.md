@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificate function of the rds module, including exa
 
 Information about an RDS Certificate.
 
+
 {{% examples %}}
 ## Example Usage
 

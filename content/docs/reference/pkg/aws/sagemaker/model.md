@@ -2267,6 +2267,16 @@ A list of key value pairs.
 
 
 
+## Import
+
+
+Models can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:sagemaker/model:Model test_model model-foo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

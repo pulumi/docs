@@ -12,6 +12,7 @@ meta_desc: "Explore the ConnectionAssociation resource of the directconnect modu
 
 Associates a Direct Connect Connection with a LAG.
 
+
 {{% examples %}}
 ## Example Usage
 

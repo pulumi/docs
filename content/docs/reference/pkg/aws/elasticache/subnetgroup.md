@@ -872,6 +872,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ElastiCache Subnet Groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:elasticache/subnetGroup:SubnetGroup bar tf-test-cache-subnet
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

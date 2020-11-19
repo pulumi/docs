@@ -14,6 +14,7 @@ Information about single Outpost Instance Type.
 
 
 
+
 ## Using GetOutpostInstanceType {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

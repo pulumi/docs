@@ -1258,6 +1258,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodeArtifact Domain can be imported using the CodeArtifact Domain arn, e.g.
+
+```sh
+ $ pulumi import aws:codeartifact/domain:Domain example arn:aws:codeartifact:us-west-2:012345678912:domain/tf-acc-test-8593714120730241305
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

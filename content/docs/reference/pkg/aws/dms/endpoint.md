@@ -3563,6 +3563,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Endpoints can be imported using the `endpoint_id`, e.g.
+
+```sh
+ $ pulumi import aws:dms/endpoint:Endpoint test test-dms-endpoint-tf
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

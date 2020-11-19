@@ -3579,6 +3579,16 @@ device of the instance. See Block Devices below for details.
 
 
 
+## Import
+
+
+Launch configurations can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/launchConfiguration:LaunchConfiguration as_conf lg-123456
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

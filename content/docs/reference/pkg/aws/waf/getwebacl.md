@@ -12,6 +12,7 @@ meta_desc: "Explore the GetWebAcl function of the waf module, including examples
 
 `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1206,6 +1206,197 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 
 {{% /example %}}
 
+### HTTP Endpoint (e.g. New Relic) Destination
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testStream = new Aws.Kinesis.FirehoseDeliveryStream("testStream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+        {
+            Destination = "http_endpoint",
+            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+            {
+                RoleArn = aws_iam_role.Firehose.Arn,
+                BucketArn = aws_s3_bucket.Bucket.Arn,
+                BufferSize = 10,
+                BufferInterval = 400,
+                CompressionFormat = "GZIP",
+            },
+            HttpEndpointConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationArgs
+            {
+                Url = "https://aws-api.newrelic.com/firehose/v1",
+                Name = "New Relic",
+                AccessKey = "my-key",
+                BufferingSize = 15,
+                BufferingInterval = 600,
+                RoleArn = aws_iam_role.Firehose.Arn,
+                S3BackupMode = "FailedDataOnly",
+                RequestConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs
+                {
+                    ContentEncoding = "GZIP",
+                    CommonAttributes = 
+                    {
+                        new Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs
+                        {
+                            Name = "testname",
+                            Value = "testvalue",
+                        },
+                        new Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs
+                        {
+                            Name = "testname2",
+                            Value = "testvalue2",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
+			Destination: pulumi.String("http_endpoint"),
+			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
+				RoleArn:           pulumi.Any(aws_iam_role.Firehose.Arn),
+				BucketArn:         pulumi.Any(aws_s3_bucket.Bucket.Arn),
+				BufferSize:        pulumi.Int(10),
+				BufferInterval:    pulumi.Int(400),
+				CompressionFormat: pulumi.String("GZIP"),
+			},
+			HttpEndpointConfiguration: &kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationArgs{
+				Url:               pulumi.String("https://aws-api.newrelic.com/firehose/v1"),
+				Name:              pulumi.String("New Relic"),
+				AccessKey:         pulumi.String("my-key"),
+				BufferingSize:     pulumi.Int(15),
+				BufferingInterval: pulumi.Int(600),
+				RoleArn:           pulumi.Any(aws_iam_role.Firehose.Arn),
+				S3BackupMode:      pulumi.String("FailedDataOnly"),
+				RequestConfiguration: &kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs{
+					ContentEncoding: pulumi.String("GZIP"),
+					CommonAttributes: kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArray{
+						&kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs{
+							Name:  pulumi.String("testname"),
+							Value: pulumi.String("testvalue"),
+						},
+						&kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs{
+							Name:  pulumi.String("testname2"),
+							Value: pulumi.String("testvalue2"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
+    destination="http_endpoint",
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=aws_iam_role["firehose"]["arn"],
+        bucket_arn=aws_s3_bucket["bucket"]["arn"],
+        buffer_size=10,
+        buffer_interval=400,
+        compression_format="GZIP",
+    ),
+    http_endpoint_configuration=aws.kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationArgs(
+        url="https://aws-api.newrelic.com/firehose/v1",
+        name="New Relic",
+        access_key="my-key",
+        buffering_size=15,
+        buffering_interval=600,
+        role_arn=aws_iam_role["firehose"]["arn"],
+        s3_backup_mode="FailedDataOnly",
+        request_configuration=aws.kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs(
+            content_encoding="GZIP",
+            common_attributes=[
+                aws.kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs(
+                    name="testname",
+                    value="testvalue",
+                ),
+                aws.kinesis.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs(
+                    name="testname2",
+                    value="testvalue2",
+                ),
+            ],
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
+    destination: "http_endpoint",
+    s3Configuration: {
+        roleArn: aws_iam_role.firehose.arn,
+        bucketArn: aws_s3_bucket.bucket.arn,
+        bufferSize: 10,
+        bufferInterval: 400,
+        compressionFormat: "GZIP",
+    },
+    httpEndpointConfiguration: {
+        url: "https://aws-api.newrelic.com/firehose/v1",
+        name: "New Relic",
+        accessKey: "my-key",
+        bufferingSize: 15,
+        bufferingInterval: 600,
+        roleArn: aws_iam_role.firehose.arn,
+        s3BackupMode: "FailedDataOnly",
+        requestConfiguration: {
+            contentEncoding: "GZIP",
+            commonAttributes: [
+                {
+                    name: "testname",
+                    value: "testvalue",
+                },
+                {
+                    name: "testname2",
+                    value: "testvalue2",
+                },
+            ],
+        },
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -1218,7 +1409,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kinesis/#pulumi_aws.kinesis.FirehoseDeliveryStream">FirehoseDeliveryStream</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kinesis/#pulumi_aws.kinesis.FirehoseDeliveryStream">FirehoseDeliveryStream</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">http_endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamHttpEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1398,7 +1589,7 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1442,6 +1633,17 @@ The FirehoseDeliveryStream resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpendpointconfiguration_csharp">
+<a href="#httpendpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1512,7 +1714,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1551,7 +1754,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1595,6 +1798,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpendpointconfiguration_go">
+<a href="#httpendpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1665,7 +1879,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1704,7 +1919,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1748,6 +1963,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpendpointconfiguration_nodejs">
+<a href="#httpendpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1818,7 +2044,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1857,7 +2084,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1901,6 +2128,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_endpoint_configuration_python">
+<a href="#http_endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1971,7 +2209,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2094,7 +2333,7 @@ Get an existing FirehoseDeliveryStream resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FirehoseDeliveryStream</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">http_endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamHttpEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FirehoseDeliveryStream</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2227,7 +2466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2260,6 +2499,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_httpendpointconfiguration_csharp">
+<a href="#state_httpendpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2330,7 +2580,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2380,7 +2631,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2413,6 +2664,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_httpendpointconfiguration_go">
+<a href="#state_httpendpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2483,7 +2745,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2533,7 +2796,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2566,6 +2829,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_httpendpointconfiguration_nodejs">
+<a href="#state_httpendpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2636,7 +2910,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2686,7 +2961,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2719,6 +2994,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_http_endpoint_configuration_python">
+<a href="#state_http_endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2789,7 +3075,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8078,6 +8365,1384 @@ be used.
 
 
 
+<h4 id="firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamHttpEndpointConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamHttpEndpointConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamHttpEndpointConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint URL to which Kinesis Firehose sends your data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferinginterval_csharp">
+<a href="#bufferinginterval_csharp" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferingsize_csharp">
+<a href="#bufferingsize_csharp" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchloggingoptions_csharp">
+<a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processingconfiguration_csharp">
+<a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestconfiguration_csharp">
+<a href="#requestconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The request configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryduration_csharp">
+<a href="#retryduration_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Total amount of seconds Firehose spends on retries. This duration starts after the initial attempt fails, It does not include the time periods during which Firehose waits for acknowledgment from the specified destination after each attempt. Valid values between `0` and `7200`. Default is `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs. The pattern needs to be `arn:.*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3backupmode_csharp">
+<a href="#s3backupmode_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint URL to which Kinesis Firehose sends your data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferinginterval_go">
+<a href="#bufferinginterval_go" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferingsize_go">
+<a href="#bufferingsize_go" style="color: inherit; text-decoration: inherit;">Buffering<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchloggingoptions_go">
+<a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processingconfiguration_go">
+<a href="#processingconfiguration_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestconfiguration_go">
+<a href="#requestconfiguration_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The request configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryduration_go">
+<a href="#retryduration_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Total amount of seconds Firehose spends on retries. This duration starts after the initial attempt fails, It does not include the time periods during which Firehose waits for acknowledgment from the specified destination after each attempt. Valid values between `0` and `7200`. Default is `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs. The pattern needs to be `arn:.*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3backupmode_go">
+<a href="#s3backupmode_go" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint URL to which Kinesis Firehose sends your data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferinginterval_nodejs">
+<a href="#bufferinginterval_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferingsize_nodejs">
+<a href="#bufferingsize_nodejs" style="color: inherit; text-decoration: inherit;">buffering<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchloggingoptions_nodejs">
+<a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processingconfiguration_nodejs">
+<a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestconfiguration_nodejs">
+<a href="#requestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The request configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryduration_nodejs">
+<a href="#retryduration_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Total amount of seconds Firehose spends on retries. This duration starts after the initial attempt fails, It does not include the time periods during which Firehose waits for acknowledgment from the specified destination after each attempt. Valid values between `0` and `7200`. Default is `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs. The pattern needs to be `arn:.*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3backupmode_nodejs">
+<a href="#s3backupmode_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint URL to which Kinesis Firehose sends your data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="buffering_interval_python">
+<a href="#buffering_interval_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="buffering_size_python">
+<a href="#buffering_size_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatch_logging_options_python">
+<a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processing_configuration_python">
+<a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_configuration_python">
+<a href="#request_configuration_python" style="color: inherit; text-decoration: inherit;">request_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The request configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_duration_python">
+<a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Total amount of seconds Firehose spends on retries. This duration starts after the initial attempt fails, It does not include the time periods during which Firehose waits for acknowledgment from the specified destination after each attempt. Valid values between `0` and `7200`. Default is `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs. The pattern needs to be `arn:.*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3_backup_mode_python">
+<a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logstreamname_csharp">
+<a href="#logstreamname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logstreamname_go">
+<a href="#logstreamname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logstreamname_nodejs">
+<a href="#logstreamname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables data processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processors_csharp">
+<a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of data processors. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables data processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processors_go">
+<a href="#processors_go" style="color: inherit; text-decoration: inherit;">Processors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></span>
+    </dt>
+    <dd>{{% md %}}Array of data processors. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables data processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processors_nodejs">
+<a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of data processors. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables data processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processors_python">
+<a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of data processors. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parametername_csharp">
+<a href="#parametername_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parametervalue_csharp">
+<a href="#parametervalue_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parametername_go">
+<a href="#parametername_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parametervalue_go">
+<a href="#parametervalue_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parametername_nodejs">
+<a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parametervalue_nodejs">
+<a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameter_name_python">
+<a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameter_value_python">
+<a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commonattributes_csharp">
+<a href="#commonattributes_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contentencoding_csharp">
+<a href="#contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commonattributes_go">
+<a href="#commonattributes_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contentencoding_go">
+<a href="#contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commonattributes_nodejs">
+<a href="#commonattributes_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contentencoding_nodejs">
+<a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="common_attributes_python">
+<a href="#common_attributes_python" style="color: inherit; text-decoration: inherit;">common_<wbr>attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="content_encoding_python">
+<a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP endpoint common attribute.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamKinesisSourceConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamKinesisSourceConfiguration">output</a> API doc for this type.
@@ -11692,6 +13357,18 @@ be used.
 
 
 
+
+
+## Import
+
+
+Kinesis Firehose Delivery streams can be imported using the stream ARN, e.g.
+
+```sh
+ $ pulumi import aws:kinesis/firehoseDeliveryStream:FirehoseDeliveryStream foo arn:aws:firehose:us-east-1:XXX:deliverystream/example
+```
+
+ NoteImport does not work for stream destination `s3`. Consider using `extended_s3` since `s3` destination is deprecated.
 
 
 

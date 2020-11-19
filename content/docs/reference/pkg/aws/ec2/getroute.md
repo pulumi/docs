@@ -16,6 +16,7 @@ This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.
 
+
 {{% examples %}}
 ## Example Usage
 

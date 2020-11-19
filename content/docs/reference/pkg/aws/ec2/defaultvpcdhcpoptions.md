@@ -21,6 +21,7 @@ The `aws.ec2.DefaultVpcDhcpOptions` behaves differently from normal resources, i
 this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
+
 {{% examples %}}
 ## Example Usage
 

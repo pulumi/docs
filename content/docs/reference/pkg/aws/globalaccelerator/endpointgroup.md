@@ -1515,6 +1515,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Global Accelerator endpoint groups can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:globalaccelerator/endpointGroup:EndpointGroup example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/listener/xxxxxxx/endpoint-group/xxxxxxxx
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

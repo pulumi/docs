@@ -12,6 +12,7 @@ meta_desc: "Explore the GetResolverRule function of the route53 module, includin
 
 `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
 
+
 {{% examples %}}
 ## Example Usage
 

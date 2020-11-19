@@ -1317,6 +1317,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Cognito User Pool Domains can be imported using the `domain`, e.g.
+
+```sh
+ $ pulumi import aws:cognito/userPoolDomain:UserPoolDomain main <domain>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

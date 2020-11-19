@@ -1109,6 +1109,16 @@ If you select 0, the events in the log group are always retained and never expir
 
 
 
+## Import
+
+
+Cloudwatch Log Groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/logGroup:LogGroup test_group yada
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

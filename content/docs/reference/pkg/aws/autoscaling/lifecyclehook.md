@@ -1347,6 +1347,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AutoScaling Lifecycle Hooks can be imported using the role autoscaling_group_name and name separated by `/`.
+
+```sh
+ $ pulumi import aws:autoscaling/lifecycleHook:LifecycleHook test-lifecycle-hook asg-name/lifecycle-hook-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

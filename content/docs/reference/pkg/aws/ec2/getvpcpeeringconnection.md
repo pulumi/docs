@@ -13,6 +13,7 @@ meta_desc: "Explore the GetVpcPeeringConnection function of the ec2 module, incl
 The VPC Peering Connection data source provides details about
 a specific VPC peering connection.
 
+
 {{% examples %}}
 ## Example Usage
 

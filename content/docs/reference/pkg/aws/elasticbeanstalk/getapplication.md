@@ -12,6 +12,7 @@ meta_desc: "Explore the GetApplication function of the elasticbeanstalk module, 
 
 Retrieve information about an Elastic Beanstalk Application.
 
+
 {{% examples %}}
 ## Example Usage
 

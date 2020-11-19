@@ -13,6 +13,7 @@ meta_desc: "Explore the GetSnapshotIds function of the ebs module, including exa
 Use this data source to get a list of EBS Snapshot IDs matching the specified
 criteria.
 
+
 {{% examples %}}
 ## Example Usage
 

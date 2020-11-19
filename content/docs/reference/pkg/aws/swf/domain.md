@@ -1069,6 +1069,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SWF Domains can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:swf/domain:Domain foo test-domain
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

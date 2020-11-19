@@ -1211,6 +1211,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Pinpoint Email Channel can be imported using the `application-id`, e.g.
+
+```sh
+ $ pulumi import aws:pinpoint/emailChannel:EmailChannel email application-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

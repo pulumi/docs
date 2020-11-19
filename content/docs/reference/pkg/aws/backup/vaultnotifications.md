@@ -997,6 +997,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Backup vault notifications can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:backup/vaultNotifications:VaultNotifications test TestVault
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1555,6 +1555,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Report Definitions can be imported using the `report_name`, e.g.
+
+```sh
+ $ pulumi import aws:cur/reportDefinition:ReportDefinition example_cur_report_definition example-cur-report-definition
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

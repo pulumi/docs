@@ -978,6 +978,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GuardDuty detectors can be imported using the detector ID, e.g.
+
+```sh
+ $ pulumi import aws:guardduty/detector:Detector MyDetector 00b00fd5aecc0ab60a708659477e9617
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,6 +13,7 @@ meta_desc: "Explore the GetServiceAccount function of the cloudtrail module, inc
 Use this data source to get the Account ID of the [AWS CloudTrail Service Account](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html)
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.
 
+
 {{% examples %}}
 ## Example Usage
 

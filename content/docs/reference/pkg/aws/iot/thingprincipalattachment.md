@@ -12,6 +12,7 @@ meta_desc: "Explore the ThingPrincipalAttachment resource of the iot module, inc
 
 Attaches Principal to AWS IoT Thing.
 
+
 {{% examples %}}
 ## Example Usage
 

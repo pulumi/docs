@@ -991,6 +991,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CodeArtifact Repository Permissions Policies can be imported using the CodeArtifact Repository ARN, e.g.
+
+```sh
+ $ pulumi import aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy example arn:aws:codeartifact:us-west-2:012345678912:repository/tf-acc-test-6968272603913957763/tf-acc-test-6968272603913957763
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

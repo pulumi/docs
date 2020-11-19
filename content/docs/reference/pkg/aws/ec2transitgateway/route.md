@@ -974,6 +974,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_ec2_transit_gateway_route` can be imported by using the EC2 Transit Gateway Route Table, an underscore, and the destination, e.g.
+
+```sh
+ $ pulumi import aws:ec2transitgateway/route:Route example tgw-rtb-12345678_0.0.0.0/0
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

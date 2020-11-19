@@ -2574,6 +2574,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_ec2_fleet` can be imported by using the Fleet identifier, e.g.
+
+```sh
+ $ pulumi import aws:ec2/fleet:Fleet example fleet-b9b55d27-c5fc-41ac-a6f3-48fcc91f080c
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

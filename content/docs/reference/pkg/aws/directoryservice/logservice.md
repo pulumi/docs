@@ -770,6 +770,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Directory Service Log Subscriptions can be imported using the directory id, e.g.
+
+```sh
+ $ pulumi import aws:directoryservice/logService:LogService msad d-1234567890
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

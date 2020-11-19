@@ -12,6 +12,7 @@ meta_desc: "Explore the GetParameter function of the ssm module, including examp
 
 Provides an SSM Parameter data source.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -773,6 +773,16 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
 
 
+## Import
+
+
+DKIM tokens can be imported using the `domain` attribute, e.g.
+
+```sh
+ $ pulumi import aws:ses/domainDkim:DomainDkim example example.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1245,6 +1245,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Codecommit repository can be imported using repository name, e.g.
+
+```sh
+ $ pulumi import aws:codecommit/repository:Repository imported ExistingRepo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

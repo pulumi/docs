@@ -1374,6 +1374,18 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 
 
 
+## Import
+
+
+Kinesis Streams can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:kinesis/stream:Stream test_stream kinesis-test
+```
+
+ [1]https://aws.amazon.com/documentation/kinesis/ [2]https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html [3]https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html
+
+
 
 
 <h2 id="package-details">Package Details</h2>

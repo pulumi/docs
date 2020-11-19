@@ -13,6 +13,7 @@ meta_desc: "Explore the GetInstance function of the ec2 module, including exampl
 Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 

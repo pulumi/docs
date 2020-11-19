@@ -3441,6 +3441,16 @@ for the cache cluster.
 
 
 
+## Import
+
+
+ElastiCache Clusters can be imported using the `cluster_id`, e.g.
+
+```sh
+ $ pulumi import aws:elasticache/cluster:Cluster my_cluster my_cluster
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

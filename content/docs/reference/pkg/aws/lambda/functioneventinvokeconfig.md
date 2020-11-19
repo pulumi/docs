@@ -1639,6 +1639,34 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Lambda Function Event Invoke Configs can be imported using the fully qualified Function name or Amazon Resource Name (ARN), e.g. ARN without qualifier (all versions and aliases)
+
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example arn:aws:us-east-1:123456789012:function:my_function
+```
+
+ ARN with qualifier
+
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example arn:aws:us-east-1:123456789012:function:my_function:production
+```
+
+ Name without qualifier (all versions and aliases)
+
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example my_function
+```
+
+ Name with qualifier
+
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example my_function:production
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

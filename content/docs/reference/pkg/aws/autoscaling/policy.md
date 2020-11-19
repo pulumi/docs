@@ -2647,6 +2647,16 @@ must be greater than the lower bound.
 
 
 
+## Import
+
+
+AutoScaling scaling policy can be imported using the role autoscaling_group_name and name separated by `/`.
+
+```sh
+ $ pulumi import aws:autoscaling/policy:Policy test-policy asg-name/policy-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

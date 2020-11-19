@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the athena module, including exampl
 
 Provides an Athena database.
 
+
 {{% examples %}}
 ## Example Usage
 

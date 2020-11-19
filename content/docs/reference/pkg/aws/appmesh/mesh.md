@@ -1511,6 +1511,16 @@ Valid values are `ALLOW_ALL` and `DROP_ALL`.
 
 
 
+## Import
+
+
+App Mesh service meshes can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:appmesh/mesh:Mesh simple simpleapp
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,6 +12,7 @@ meta_desc: "Explore the EnvironmentEC2 resource of the cloud9 module, including 
 
 Provides a Cloud9 EC2 Development Environment.
 
+
 {{% examples %}}
 ## Example Usage
 

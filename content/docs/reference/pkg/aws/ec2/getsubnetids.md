@@ -14,6 +14,7 @@ meta_desc: "Explore the GetSubnetIds function of the ec2 module, including examp
 
 This resource can be useful for getting back a set of subnet ids for a vpc.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -2058,6 +2058,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Backup Plan can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:backup/plan:Plan test <id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

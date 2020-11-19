@@ -1363,6 +1363,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DocumentDB Cluster Parameter Groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:docdb/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1020,6 +1020,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+WorkSpaces IP groups can be imported using their GroupID, e.g.
+
+```sh
+ $ pulumi import aws:workspaces/ipGroup:IpGroup example wsipg-488lrtl3k
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

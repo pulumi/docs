@@ -983,6 +983,16 @@ e.g. `192.0.2.44/32` or `1111:0000:0000:0000:0000:0000:0000:0000/64`
 
 
 
+## Import
+
+
+WAF IPSets can be imported using their ID, e.g.
+
+```sh
+ $ pulumi import aws:waf/ipSet:IpSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

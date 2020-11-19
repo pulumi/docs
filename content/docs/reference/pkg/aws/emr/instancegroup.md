@@ -1730,6 +1730,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+EMR task instance group can be imported using their EMR Cluster id and Instance Group id separated by a forward-slash `/`, e.g.
+
+```sh
+ $ pulumi import aws:emr/instanceGroup:InstanceGroup task_greoup j-123456ABCDEF/ig-15EK4O09RZLNR
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

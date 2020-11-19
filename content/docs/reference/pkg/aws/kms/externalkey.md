@@ -1506,6 +1506,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+KMS External Keys can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:kms/externalKey:ExternalKey a arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

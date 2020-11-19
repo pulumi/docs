@@ -1023,6 +1023,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+IOT Thing Types can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:iot/thingType:ThingType example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

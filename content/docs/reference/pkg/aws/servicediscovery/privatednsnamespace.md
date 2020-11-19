@@ -1082,6 +1082,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Service Discovery Private DNS Namespace can be imported using the namespace ID and VPC ID, e.g.
+
+```sh
+ $ pulumi import aws:servicediscovery/privateDnsNamespace:PrivateDnsNamespace example 0123456789:vpc-123345
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

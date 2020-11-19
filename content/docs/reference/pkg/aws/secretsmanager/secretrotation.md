@@ -1082,6 +1082,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_secretsmanager_secret_rotation` can be imported by using the secret Amazon Resource Name (ARN), e.g.
+
+```sh
+ $ pulumi import aws:secretsmanager/secretRotation:SecretRotation example arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

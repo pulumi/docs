@@ -1245,6 +1245,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Direct Connect connections can be imported using the `connection id`, e.g.
+
+```sh
+ $ pulumi import aws:directconnect/connection:Connection test_connection dxcon-ffre0ec3
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

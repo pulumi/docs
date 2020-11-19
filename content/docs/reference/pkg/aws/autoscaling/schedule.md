@@ -1434,6 +1434,16 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 
 
 
+## Import
+
+
+AutoScaling ScheduledAction can be imported using the `auto-scaling-group-name` and `scheduled-action-name`, e.g.
+
+```sh
+ $ pulumi import aws:autoscaling/schedule:Schedule resource-name auto-scaling-group-name/scheduled-action-name
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

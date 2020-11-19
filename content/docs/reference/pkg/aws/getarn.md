@@ -12,6 +12,7 @@ meta_desc: "Explore the GetArn function of the AWS package, including examples, 
 
 Parses an Amazon Resource Name (ARN) into its constituent parts.
 
+
 {{% examples %}}
 ## Example Usage
 

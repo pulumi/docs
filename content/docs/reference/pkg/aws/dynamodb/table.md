@@ -3790,6 +3790,16 @@ This attribute should only be specified if the key is different from the default
 
 
 
+## Import
+
+
+DynamoDB tables can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:dynamodb/table:Table basic-dynamodb-table GameScores
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

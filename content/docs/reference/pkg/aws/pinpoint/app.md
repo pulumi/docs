@@ -1807,6 +1807,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Pinpoint App can be imported using the `application-id`, e.g.
+
+```sh
+ $ pulumi import aws:pinpoint/app:App name application-id
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

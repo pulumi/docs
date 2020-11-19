@@ -1124,6 +1124,16 @@ If `type` is any other value, omit this field.
 
 
 
+## Import
+
+
+WAF Regional Regex Match Set can be imported using the id, e.g.
+
+```sh
+ $ pulumi import aws:wafregional/regexMatchSet:RegexMatchSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -14,6 +14,7 @@ This data source can be used to fetch information about a specific
 IAM group. By using this data source, you can reference IAM group
 properties without having to hard code ARNs as input.
 
+
 {{% examples %}}
 ## Example Usage
 

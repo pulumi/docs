@@ -1069,6 +1069,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+NAT Gateways can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/natGateway:NatGateway private_gw nat-05dba92075d71c408
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

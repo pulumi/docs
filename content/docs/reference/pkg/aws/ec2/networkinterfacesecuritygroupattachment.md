@@ -27,6 +27,7 @@ one or the other.
 
 There are no outputs for this resource.
 
+
 {{% examples %}}
 ## Example Usage
 

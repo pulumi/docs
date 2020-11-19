@@ -13,6 +13,7 @@ meta_desc: "Explore the GetComputeEnvironment function of the batch module, incl
 The Batch Compute Environment data source allows access to details of a specific
 compute environment within AWS Batch.
 
+
 {{% examples %}}
 ## Example Usage
 

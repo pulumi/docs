@@ -1260,6 +1260,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+VPC DHCP Options can be imported using the `dhcp options id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/vpcDhcpOptions:VpcDhcpOptions my_options dopt-d9070ebb
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

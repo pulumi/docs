@@ -3554,6 +3554,16 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 
 
 
+## Import
+
+
+ElastiCache Replication Groups can be imported using the `replication_group_id`, e.g.
+
+```sh
+ $ pulumi import aws:elasticache/replicationGroup:ReplicationGroup my_replication_group replication-group-1
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

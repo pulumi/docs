@@ -1343,6 +1343,22 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RDS DB Proxy Targets can be imported using the `db_proxy_name`, `target_group_name`, target type (e.g. `RDS_INSTANCE` or `TRACKED_CLUSTER`), and resource identifier separated by forward slashes (`/`), e.g. Instances
+
+```sh
+ $ pulumi import aws:rds/proxyTarget:ProxyTarget example example-proxy/default/RDS_INSTANCE/example-instance
+```
+
+ Provisioned Clusters
+
+```sh
+ $ pulumi import aws:rds/proxyTarget:ProxyTarget example example-proxy/default/TRACKED_CLUSTER/example-cluster
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

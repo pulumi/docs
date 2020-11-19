@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSolutionStack function of the elasticbeanstalk module
 
 Use this data source to get the name of a elastic beanstalk solution stack.
 
+
 {{% examples %}}
 ## Example Usage
 

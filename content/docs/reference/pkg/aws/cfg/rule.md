@@ -2243,6 +2243,16 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 
 
 
+## Import
+
+
+Config Rule can be imported using the name, e.g.
+
+```sh
+ $ pulumi import aws:cfg/rule:Rule foo example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -626,6 +626,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+The current Account Alias can be imported using the `account_alias`, e.g.
+
+```sh
+ $ pulumi import aws:iam/accountAlias:AccountAlias alias my-account-alias
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

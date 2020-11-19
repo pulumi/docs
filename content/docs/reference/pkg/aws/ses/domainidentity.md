@@ -883,6 +883,16 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 
 
 
+## Import
+
+
+SES domain identities can be imported using the domain name.
+
+```sh
+ $ pulumi import aws:ses/domainIdentity:DomainIdentity example example.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -6813,6 +6813,16 @@ Otherwise, specify the default value of 2.
 
 
 
+## Import
+
+
+Launch Templates can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/launchTemplate:LaunchTemplate web lt-12345678
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

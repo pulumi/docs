@@ -12,6 +12,7 @@ meta_desc: "Explore the GetTransitGateway function of the ec2transitgateway modu
 
 Get information on an EC2 Transit Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

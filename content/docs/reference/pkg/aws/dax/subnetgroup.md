@@ -899,6 +899,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DAX Subnet Group can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:dax/subnetGroup:SubnetGroup example my_dax_sg
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

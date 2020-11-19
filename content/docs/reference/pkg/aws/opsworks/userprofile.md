@@ -12,6 +12,7 @@ meta_desc: "Explore the UserProfile resource of the opsworks module, including e
 
 Provides an OpsWorks User Profile resource.
 
+
 {{% examples %}}
 ## Example Usage
 

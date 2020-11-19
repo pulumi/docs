@@ -1005,6 +1005,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Security Hub members can be imported using their account ID, e.g.
+
+```sh
+ $ pulumi import aws:securityhub/member:Member example 123456789012
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

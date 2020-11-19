@@ -12,6 +12,7 @@ meta_desc: "Explore the VpnConnectionRoute resource of the ec2 module, including
 
 Provides a static route between a VPN connection and a customer gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

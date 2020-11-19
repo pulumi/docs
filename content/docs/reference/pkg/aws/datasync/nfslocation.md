@@ -1177,6 +1177,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_datasync_location_nfs` can be imported by using the DataSync Task Amazon Resource Name (ARN), e.g.
+
+```sh
+ $ pulumi import aws:datasync/nfsLocation:NfsLocation example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

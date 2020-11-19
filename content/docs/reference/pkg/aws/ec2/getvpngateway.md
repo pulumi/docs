@@ -13,6 +13,7 @@ meta_desc: "Explore the GetVpnGateway function of the ec2 module, including exam
 The VPN Gateway data source provides details about
 a specific VPN gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

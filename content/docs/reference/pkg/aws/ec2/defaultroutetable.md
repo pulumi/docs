@@ -1218,6 +1218,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="vpcendpointid_csharp">
+<a href="#vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC Endpoint. This route must be removed prior to VPC Endpoint deletion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="vpcpeeringconnectionid_csharp">
 <a href="#vpcpeeringconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1320,6 +1331,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpcendpointid_go">
+<a href="#vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC Endpoint. This route must be removed prior to VPC Endpoint deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1430,6 +1452,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="vpcendpointid_nodejs">
+<a href="#vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC Endpoint. This route must be removed prior to VPC Endpoint deletion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="vpcpeeringconnectionid_nodejs">
 <a href="#vpcpeeringconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1536,6 +1569,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="vpc_endpoint_id_python">
+<a href="#vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC Endpoint. This route must be removed prior to VPC Endpoint deletion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="vpc_peering_connection_id_python">
 <a href="#vpc_peering_connection_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>peering_<wbr>connection_<wbr>id</a>
 </span> 
@@ -1554,6 +1598,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Default VPC Routing tables can be imported using the `vpc_id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/defaultRouteTable:DefaultRouteTable example vpc-33cc44dd
+```
+
+ [aws-route-tables]http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html#Route_Replacing_Main_Table [tf-route-tables]/docs/providers/aws/r/route_table.html
 
 
 

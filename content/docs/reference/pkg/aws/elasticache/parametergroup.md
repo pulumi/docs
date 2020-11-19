@@ -1074,6 +1074,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ElastiCache Parameter Groups can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import aws:elasticache/parameterGroup:ParameterGroup default redis-params
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

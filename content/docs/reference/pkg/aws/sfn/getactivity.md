@@ -12,6 +12,7 @@ meta_desc: "Explore the GetActivity function of the sfn module, including exampl
 
 Provides a Step Functions Activity data source
 
+
 {{% examples %}}
 ## Example Usage
 

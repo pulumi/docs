@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRuleGroup function of the wafv2 module, including exa
 
 Retrieves the summary of a WAFv2 Rule Group.
 
+
 {{% examples %}}
 ## Example Usage
 

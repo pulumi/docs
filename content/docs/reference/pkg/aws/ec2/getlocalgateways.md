@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLocalGateways function of the ec2 module, including e
 
 Provides information for multiple EC2 Local Gateways, such as their identifiers.
 
+
 {{% examples %}}
 ## Example Usage
 

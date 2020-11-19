@@ -14,6 +14,7 @@ meta_desc: "Explore the GetBucketObjects function of the s3 module, including ex
 
 The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
 
+
 {{% examples %}}
 ## Example Usage
 

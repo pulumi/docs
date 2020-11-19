@@ -1278,6 +1278,16 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
 
 
 
+## Import
+
+
+`aws_apigatewayv2_domain_name` can be imported by using the domain name, e.g.
+
+```sh
+ $ pulumi import aws:apigatewayv2/domainName:DomainName example ws-api.example.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

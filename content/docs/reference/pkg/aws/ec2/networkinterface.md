@@ -1941,6 +1941,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Network Interfaces can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/networkInterface:NetworkInterface test eni-e5aa89a3
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -2074,6 +2074,16 @@ this VPC. Note that you can change a VPC's main route table by using an
 
 
 
+## Import
+
+
+Default VPCs can be imported using the `vpc id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/defaultVpc:DefaultVpc default vpc-a01106c2
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

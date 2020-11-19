@@ -904,6 +904,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SES templates can be imported using the template name, e.g.
+
+```sh
+ $ pulumi import aws:ses/template:Template MyTemplate MyTemplate
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

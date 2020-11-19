@@ -2670,6 +2670,16 @@ that can be used to create a Route53 alias record for the distribution.
 
 
 
+## Import
+
+
+API Gateway domain names can be imported using their `name`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/domainName:DomainName example dev.example.com
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

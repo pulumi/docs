@@ -1632,6 +1632,16 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
 
 
+## Import
+
+
+Batch Job Definition can be imported using the `arn`, e.g.
+
+```sh
+ $ pulumi import aws:batch/jobDefinition:JobDefinition test arn:aws:batch:us-east-1:123456789012:job-definition/sample
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

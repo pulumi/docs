@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDistribution function of the cloudfront module, inclu
 
 Use this data source to retrieve information about a CloudFront distribution.
 
+
 {{% examples %}}
 ## Example Usage
 

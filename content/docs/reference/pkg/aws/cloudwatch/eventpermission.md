@@ -1261,6 +1261,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+EventBridge permissions can be imported using the `event_bus_name/statement_id` (if you omit `event_bus_name`, the `default` event bus will be used), e.g.
+
+```sh
+ $ pulumi import aws:cloudwatch/eventPermission:EventPermission DevAccountAccess example-event-bus/DevAccountAccess
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

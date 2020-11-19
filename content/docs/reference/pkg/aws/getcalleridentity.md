@@ -13,6 +13,7 @@ meta_desc: "Explore the GetCallerIdentity function of the AWS package, including
 Use this data source to get the access to the effective Account ID, User ID, and ARN in
 which this provider is authorized.
 
+
 {{% examples %}}
 ## Example Usage
 

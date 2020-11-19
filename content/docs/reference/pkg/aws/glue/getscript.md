@@ -12,6 +12,7 @@ meta_desc: "Explore the GetScript function of the glue module, including example
 
 Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).
 
+
 {{% examples %}}
 ## Example Usage
 

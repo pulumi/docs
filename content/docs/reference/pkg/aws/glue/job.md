@@ -2702,6 +2702,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Glue Jobs can be imported using `name`, e.g.
+
+```sh
+ $ pulumi import aws:glue/job:Job MyJob MyJob
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

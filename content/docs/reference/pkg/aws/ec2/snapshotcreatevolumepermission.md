@@ -12,6 +12,7 @@ meta_desc: "Explore the SnapshotCreateVolumePermission resource of the ec2 modul
 
 Adds permission to create volumes off of a given EBS Snapshot.
 
+
 {{% examples %}}
 ## Example Usage
 

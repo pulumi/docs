@@ -19,6 +19,7 @@ This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.
 
+
 {{% examples %}}
 ## Example Usage
 

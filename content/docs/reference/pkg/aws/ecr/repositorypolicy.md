@@ -896,6 +896,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ECR Repository Policy can be imported using the repository name, e.g.
+
+```sh
+ $ pulumi import aws:ecr/repositoryPolicy:RepositoryPolicy example example
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

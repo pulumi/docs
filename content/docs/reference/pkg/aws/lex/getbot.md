@@ -12,6 +12,7 @@ meta_desc: "Explore the GetBot function of the lex module, including examples, i
 
 Provides details about a specific Amazon Lex Bot.
 
+
 {{% examples %}}
 ## Example Usage
 

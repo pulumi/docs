@@ -2885,6 +2885,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+OpsWorks Custom Layers can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:opsworks/customLayer:CustomLayer bar 00000000-0000-0000-0000-000000000000
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

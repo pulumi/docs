@@ -16,6 +16,7 @@ Associates an S3 resource with Amazon Macie for monitoring and data classificati
 
 > **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
 
+
 {{% examples %}}
 ## Example Usage
 

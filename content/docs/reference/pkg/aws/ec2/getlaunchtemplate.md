@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLaunchTemplate function of the ec2 module, including 
 
 Provides information about a Launch Template.
 
+
 {{% examples %}}
 ## Example Usage
 

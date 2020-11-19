@@ -2336,6 +2336,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`aws_db_snapshot` can be imported by using the snapshot identifier, e.g.
+
+```sh
+ $ pulumi import aws:rds/snapshot:Snapshot example my-snapshot
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1513,6 +1513,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+SSM
+
+Maintenance Windows can be imported using the `maintenance window id`, e.g.
+
+```sh
+ $ pulumi import aws:ssm/maintenanceWindow:MaintenanceWindow imported-window mw-0123456789
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

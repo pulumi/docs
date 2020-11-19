@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRateBasedRule function of the waf module, including e
 
 `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
 
+
 {{% examples %}}
 ## Example Usage
 
