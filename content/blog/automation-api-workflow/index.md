@@ -37,7 +37,7 @@ $ cd ./automation-api-examples/nodejs/databaseMigration-ts/
 
 ## Program overview
 
-TSeveral pieces comprise the program; the first is the program's main scope, where we can pass values from the functions that make up the script. The next part is the `pulumiProgram` function that declares the infrastructure.
+Several pieces comprise the program; the first is the program's main scope, where we can pass values from the functions that make up the script. The next part is the `pulumiProgram` function that declares the infrastructure.
 
 ```typescript
 const run = async () => {
@@ -88,7 +88,7 @@ if (args.length > 0 && args[0]) {
 
 ## Declare infrastructure
 
-The all the code used to create the infrastructure (a VPC, a security group, and an RDS, provision the database, and maintain the database is in an inline program, which is a function that we can call using [yarn](https://yarnpkg.com/) instead of the Pulumi CLI.
+The all the code used to create the infrastructure (a VPC, a security group, and an RDS, provision the database, and maintain the database is in an inline program, which is a function that we can call using Node.js instead of the Pulumi CLI.
 
 Let's break down the infrastructure piece by piece, starting with setting up configuration variables for the database. In the original code, the database name, admin name, and admin password were hardcoded into the program. We would never do that in practice and get the database, admin name, and secret name from a configuration file and a secrets provider's password. We’ll keep those properties in the program for simplicity, but in our improved program, we’ll retrieve the password from the [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/). We set the password using the aws CLI.
 
@@ -346,5 +346,5 @@ You can download our improved program as a [gist](https://gist.github.com/pulumi
 Automation API is currently in alpha and available in Typescript and Go. Check out these resources to learn more.
 
 - [The Pulumi Automation API - The Next Quantum Leap in IaC]({{< relref "/blog/automation-api" >}})
-- [Automation API Examples]("https://github.com/pulumi/automation-api-examples")
+- [Automation API Examples](https://github.com/pulumi/automation-api-examples)
 - [Build Self-Service Cloud Infrastructure with Automation API]({{< relref "/blog/automation-api-as-platform" >}})
