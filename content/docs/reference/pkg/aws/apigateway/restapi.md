@@ -432,7 +432,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -538,7 +538,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -644,7 +644,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,7 +750,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1281,7 +1281,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1433,7 +1433,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1585,7 +1585,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1737,7 +1737,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway.
+    <dd>{{% md %}}JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -610,9 +610,7 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -634,9 +632,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -724,9 +720,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -748,9 +742,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,9 +830,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -862,9 +852,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,9 +940,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -976,9 +962,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1283,9 +1267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1296,9 +1278,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1397,9 +1377,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1410,9 +1388,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1511,9 +1487,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1524,9 +1498,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1625,9 +1597,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission.
-e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1638,9 +1608,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name.
-The permission will then apply to the specific qualified ARN.
-e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd>
 
     <dt class="property-optional"

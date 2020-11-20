@@ -312,8 +312,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,8 +418,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -526,8 +524,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -633,8 +630,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -740,9 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -770,9 +764,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -800,9 +792,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -830,9 +820,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -998,9 +986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1011,8 +997,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1118,9 +1103,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1131,8 +1114,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1238,9 +1220,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1251,8 +1231,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1358,9 +1337,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether passwords in the account expire.
-Returns `true` if `max_password_age` contains a value greater than `0`.
-Returns `false` if it is `0` or _not present_.
+    <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1371,8 +1348,7 @@ Returns `false` if it is `0` or _not present_.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
-(i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
 {{% /md %}}</dd>
 
     <dt class="property-optional"

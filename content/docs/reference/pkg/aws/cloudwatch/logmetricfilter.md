@@ -322,8 +322,7 @@ The LogMetricFilter resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -375,8 +374,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -428,8 +426,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -481,8 +478,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -740,8 +736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -793,8 +788,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -846,8 +840,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,8 +892,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A block defining collection of information
-needed to define how metric data gets emitted. See below.
+    <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

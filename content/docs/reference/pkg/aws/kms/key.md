@@ -293,8 +293,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -316,8 +315,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,8 +390,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,8 +412,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,8 +487,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -514,8 +509,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -590,8 +584,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -613,8 +606,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -994,8 +986,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1017,8 +1008,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1115,8 +1105,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,8 +1127,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,8 +1224,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1259,8 +1246,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1357,8 +1343,7 @@ Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIS
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    <dd>{{% md %}}Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1380,8 +1365,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-is enabled. Defaults to false.
+    <dd>{{% md %}}Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -345,8 +345,7 @@ The RegexMatchSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -375,8 +374,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">[]Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -405,8 +403,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -435,8 +432,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Sequence[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -726,8 +722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -767,8 +762,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">[]Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -808,8 +802,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -849,8 +842,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Sequence[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
 
 </dl>

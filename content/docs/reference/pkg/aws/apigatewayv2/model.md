@@ -322,7 +322,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -333,7 +333,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,7 +344,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -355,7 +355,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -384,7 +384,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -395,7 +395,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,7 +406,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -417,7 +417,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -446,7 +446,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -457,7 +457,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,7 +468,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,7 +479,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -508,7 +508,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -519,7 +519,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -530,7 +530,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -541,7 +541,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -776,7 +776,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,7 +787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -798,7 +798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,7 +809,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -838,7 +838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -849,7 +849,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -860,7 +860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,7 +871,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -900,7 +900,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,7 +911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -922,7 +922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -933,7 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -962,7 +962,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The content-type for the model, for example, `application/json`.
+    <dd>{{% md %}}The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -973,7 +973,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the model.
+    <dd>{{% md %}}The description of the model. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -984,7 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the model. Must be alphanumeric.
+    <dd>{{% md %}}The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -995,7 +995,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    <dd>{{% md %}}The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 {{% /md %}}</dd>
 
 </dl>

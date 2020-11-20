@@ -324,7 +324,7 @@ The VpcLink resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -375,7 +375,7 @@ The VpcLink resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,7 +426,7 @@ The VpcLink resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -477,7 +477,7 @@ The VpcLink resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -767,7 +767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -891,7 +891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -953,7 +953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the VPC Link.
+    <dd>{{% md %}}The name of the VPC Link. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

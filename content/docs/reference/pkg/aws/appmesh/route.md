@@ -834,7 +834,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -856,7 +856,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -878,7 +878,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -907,7 +907,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -929,7 +929,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,7 +951,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -980,7 +980,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1002,7 +1002,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1024,7 +1024,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1053,7 +1053,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1075,7 +1075,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1097,7 +1097,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1541,7 +1541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1563,7 +1563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1607,7 +1607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1658,7 +1658,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1680,7 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1724,7 +1724,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1775,7 +1775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1797,7 +1797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1841,7 +1841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1892,7 +1892,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1914,7 +1914,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2588,7 +2588,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2617,7 +2617,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2646,7 +2646,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2675,7 +2675,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2744,7 +2744,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -2796,7 +2796,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -2848,7 +2848,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -2900,7 +2900,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -2948,7 +2948,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the route.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2988,7 +2988,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the route.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3028,7 +3028,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the route.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3068,7 +3068,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the route.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3126,7 +3126,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3137,7 +3137,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -3160,7 +3160,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3171,7 +3171,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3189,7 +3189,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3200,7 +3200,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -3223,7 +3223,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3234,7 +3234,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3252,7 +3252,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3263,7 +3263,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -3286,7 +3286,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3297,7 +3297,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3315,7 +3315,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3326,7 +3326,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -3349,7 +3349,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3360,7 +3360,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4660,7 +4660,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4689,7 +4689,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4718,7 +4718,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4747,7 +4747,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4794,7 +4794,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -4846,7 +4846,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -4898,7 +4898,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -4950,7 +4950,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -5198,7 +5198,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5209,7 +5209,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -5232,7 +5232,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5243,7 +5243,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -5261,7 +5261,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5272,7 +5272,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -5295,7 +5295,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5306,7 +5306,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -5324,7 +5324,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5335,7 +5335,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -5358,7 +5358,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5369,7 +5369,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -5387,7 +5387,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5398,7 +5398,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -5421,7 +5421,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5432,7 +5432,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6684,7 +6684,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6713,7 +6713,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6742,7 +6742,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6771,7 +6771,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6818,7 +6818,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -6870,7 +6870,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -6922,7 +6922,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -6974,7 +6974,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -7222,7 +7222,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7233,7 +7233,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -7256,7 +7256,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7267,7 +7267,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -7285,7 +7285,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7296,7 +7296,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -7319,7 +7319,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7330,7 +7330,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -7348,7 +7348,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7359,7 +7359,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -7382,7 +7382,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7393,7 +7393,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -7411,7 +7411,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7422,7 +7422,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
@@ -7445,7 +7445,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7456,7 +7456,7 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -8620,7 +8620,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8649,7 +8649,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8678,7 +8678,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8707,7 +8707,7 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"

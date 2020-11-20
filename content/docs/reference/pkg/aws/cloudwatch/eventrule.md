@@ -422,8 +422,7 @@ The EventRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -478,8 +477,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -530,8 +528,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,8 +583,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -638,8 +634,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -694,8 +689,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -746,8 +740,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,8 +795,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1115,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1171,8 +1162,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1234,8 +1224,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1290,8 +1279,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1353,8 +1341,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1409,8 +1396,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1472,8 +1458,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedul
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required.
-See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
+    <dd>{{% md %}}The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1528,8 +1513,7 @@ See full documentation of [Events and Event Patterns in EventBridge](https://doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
+    <dd>{{% md %}}The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

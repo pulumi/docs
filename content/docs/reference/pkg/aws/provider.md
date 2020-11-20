@@ -2503,6 +2503,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networkfirewall_csharp">
+<a href="#networkfirewall_csharp" style="color: inherit; text-decoration: inherit;">Networkfirewall</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkmanager_csharp">
 <a href="#networkmanager_csharp" style="color: inherit; text-decoration: inherit;">Networkmanager</a>
 </span> 
@@ -3952,6 +3962,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="neptune_go">
 <a href="#neptune_go" style="color: inherit; text-decoration: inherit;">Neptune</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfirewall_go">
+<a href="#networkfirewall_go" style="color: inherit; text-decoration: inherit;">Networkfirewall</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -5417,6 +5437,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networkfirewall_nodejs">
+<a href="#networkfirewall_nodejs" style="color: inherit; text-decoration: inherit;">networkfirewall</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkmanager_nodejs">
 <a href="#networkmanager_nodejs" style="color: inherit; text-decoration: inherit;">networkmanager</a>
 </span> 
@@ -6866,6 +6896,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="neptune_python">
 <a href="#neptune_python" style="color: inherit; text-decoration: inherit;">neptune</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkfirewall_python">
+<a href="#networkfirewall_python" style="color: inherit; text-decoration: inherit;">networkfirewall</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

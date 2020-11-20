@@ -598,7 +598,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -737,7 +737,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -876,7 +876,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,7 +1015,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1415,7 +1415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1565,7 +1565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1715,7 +1715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1865,7 +1865,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablepartitionkey">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2732,6 +2732,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -2768,6 +2779,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2812,6 +2834,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -2848,6 +2881,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

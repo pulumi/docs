@@ -214,8 +214,7 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -226,8 +225,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -238,8 +236,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -251,8 +248,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -263,10 +259,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -288,8 +281,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -300,8 +292,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>
@@ -330,8 +321,7 @@ Defaults to `TOKEN`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -342,8 +332,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -354,8 +343,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -367,8 +355,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,10 +366,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -404,8 +388,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -416,8 +399,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>
@@ -446,8 +428,7 @@ Defaults to `TOKEN`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -458,8 +439,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,8 +450,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -483,8 +462,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -495,10 +473,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,8 +495,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,8 +506,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>
@@ -562,8 +535,7 @@ Defaults to `TOKEN`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,8 +546,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,8 +557,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -599,8 +569,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -611,10 +580,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -636,8 +602,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,8 +613,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>
@@ -873,8 +837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -885,8 +848,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -897,8 +859,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -910,8 +871,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -922,10 +882,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -947,8 +904,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -970,8 +926,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>
@@ -989,8 +944,7 @@ Defaults to `TOKEN`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1001,8 +955,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1013,8 +966,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -1026,8 +978,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1038,10 +989,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1063,8 +1011,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1086,8 +1033,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1105,8 +1051,7 @@ Defaults to `TOKEN`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1117,8 +1062,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1129,8 +1073,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -1142,8 +1085,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,10 +1096,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1179,8 +1118,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1202,8 +1140,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1221,8 +1158,7 @@ Defaults to `TOKEN`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The credentials required for the authorizer.
-To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+    <dd>{{% md %}}The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1233,8 +1169,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The TTL of cached authorizer results in seconds.
-Defaults to `300`.
+    <dd>{{% md %}}The TTL of cached authorizer results in seconds. Defaults to `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1245,8 +1180,7 @@ Defaults to `300`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 {{% /md %}}</dd>
 
@@ -1258,8 +1192,7 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source of the identity in an incoming request.
-Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
+    <dd>{{% md %}}The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1270,10 +1203,7 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A validation expression for the incoming identity.
-For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched
-against this expression, and will proceed if the token matches. If the token doesn't match,
-the client receives a 401 Unauthorized response.
+    <dd>{{% md %}}A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1295,8 +1225,7 @@ the client receives a 401 Unauthorized response.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs.
-Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+    <dd>{{% md %}}A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1318,8 +1247,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
-Defaults to `TOKEN`.
+    <dd>{{% md %}}The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
 {{% /md %}}</dd>
 
 </dl>

@@ -1167,9 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
-e.g. `One_Hour` or `Three_Hours`.
-Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
+    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots. e.g. `One_Hour` or `Three_Hours`. Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
 {{% /md %}}</dd>
 
 </dl>
@@ -1187,9 +1185,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
-e.g. `One_Hour` or `Three_Hours`.
-Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
+    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots. e.g. `One_Hour` or `Three_Hours`. Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
 {{% /md %}}</dd>
 
 </dl>
@@ -1207,9 +1203,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
-e.g. `One_Hour` or `Three_Hours`.
-Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
+    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots. e.g. `One_Hour` or `Three_Hours`. Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
 {{% /md %}}</dd>
 
 </dl>
@@ -1227,9 +1221,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
-e.g. `One_Hour` or `Three_Hours`.
-Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
+    <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots. e.g. `One_Hour` or `Three_Hours`. Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
 {{% /md %}}</dd>
 
 </dl>

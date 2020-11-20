@@ -3,7 +3,7 @@ title: "Module appsync"
 title_tag: "Module appsync | Package @pulumi/aws | Node.js SDK"
 linktitle: "appsync"
 meta_desc: "Explore members of the appsync module in the @pulumi/aws package."
-git_sha: "c12ed064d3e53d2839c8a83426d06dd01a6bdd8f"
+git_sha: "8a8be2819c5dd987f03d94fb4fe439ca6be643bb"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ApiKey" data-link-title="ApiKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L31">
         Resource <strong>ApiKey</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ const exampleApiKey = new aws.appsync.ApiKey("exampleApiKey", {
 ```
 
 <h4 class="pdoc-member-header" id="ApiKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -87,7 +87,7 @@ Create a ApiKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -98,14 +98,14 @@ Get an existing ApiKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -116,7 +116,7 @@ Returns true if the given object is an instance of ApiKey.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiKey-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L62">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L62">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the associated AppSync API
 
 <h4 class="pdoc-member-header" id="ApiKey-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ The ID of the associated AppSync API
 The API key description. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ApiKey-expires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L70">property <b>expires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L70">property <b>expires</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expires: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ The API key description. Defaults to "Managed by Pulumi".
 RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
 
 <h4 class="pdoc-member-header" id="ApiKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -149,7 +149,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiKey-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L74">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L74">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ deployments and may be missing (undefined) during planning phases.
 The API key
 
 <h4 class="pdoc-member-header" id="ApiKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -166,7 +166,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DataSource" data-link-title="DataSource">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L77">
         Resource <strong>DataSource</strong>
     </a>
 </h3>
@@ -242,7 +242,7 @@ const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
 ```
 
 <h4 class="pdoc-member-header" id="DataSource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L144"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L144"> <b>constructor</b></a>
 </h4>
 
 
@@ -256,7 +256,7 @@ Create a DataSource resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DataSource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L87">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L87">method <b>get</b></a>
 </h4>
 
 
@@ -267,14 +267,14 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DataSource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L77">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L77">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DataSource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L98">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L98">method <b>isInstance</b></a>
 </h4>
 
 
@@ -285,7 +285,7 @@ Returns true if the given object is an instance of DataSource.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DataSource-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L108">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L108">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API ID for the GraphQL API for the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSource-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L112">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L112">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -301,7 +301,7 @@ The API ID for the GraphQL API for the DataSource.
 The ARN
 
 <h4 class="pdoc-member-header" id="DataSource-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L116">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L116">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ The ARN
 A description of the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSource-dynamodbConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L120">property <b>dynamodbConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L120">property <b>dynamodbConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dynamodbConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ A description of the DataSource.
 DynamoDB settings. See below
 
 <h4 class="pdoc-member-header" id="DataSource-elasticsearchConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L124">property <b>elasticsearchConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L124">property <b>elasticsearchConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>elasticsearchConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ DynamoDB settings. See below
 Amazon Elasticsearch settings. See below
 
 <h4 class="pdoc-member-header" id="DataSource-httpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L128">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L128">property <b>httpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceHttpConfig'>DataSourceHttpConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ Amazon Elasticsearch settings. See below
 HTTP settings. See below
 
 <h4 class="pdoc-member-header" id="DataSource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -342,7 +342,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DataSource-lambdaConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L132">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L132">property <b>lambdaConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataSourceLambdaConfig'>DataSourceLambdaConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ deployments and may be missing (undefined) during planning phases.
 AWS Lambda settings. See below
 
 <h4 class="pdoc-member-header" id="DataSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ AWS Lambda settings. See below
 A user-supplied name for the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSource-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L140">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L140">property <b>serviceRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ A user-supplied name for the DataSource.
 The IAM service role ARN for the data source.
 
 <h4 class="pdoc-member-header" id="DataSource-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L144">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L144">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ The IAM service role ARN for the data source.
 The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 
 <h4 class="pdoc-member-header" id="DataSource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L77">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L77">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -383,7 +383,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Function" data-link-title="Function">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L75">
         Resource <strong>Function</strong>
     </a>
 </h3>
@@ -458,7 +458,7 @@ const exampleFunction = new aws.appsync.Function("exampleFunction", {
 ```
 
 <h4 class="pdoc-member-header" id="Function-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -472,7 +472,7 @@ Create a Function resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Function-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L85">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L85">method <b>get</b></a>
 </h4>
 
 
@@ -483,14 +483,14 @@ Get an existing Function resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Function-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L75">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L75">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Function-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L96">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L96">method <b>isInstance</b></a>
 </h4>
 
 
@@ -501,7 +501,7 @@ Returns true if the given object is an instance of Function.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Function-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L106">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L106">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the associated AppSync API.
 
 <h4 class="pdoc-member-header" id="Function-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L110">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L110">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ The ID of the associated AppSync API.
 The ARN of the Function object.
 
 <h4 class="pdoc-member-header" id="Function-dataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L114">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L114">property <b>dataSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +525,7 @@ The ARN of the Function object.
 The Function DataSource name.
 
 <h4 class="pdoc-member-header" id="Function-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ The Function DataSource name.
 The Function description.
 
 <h4 class="pdoc-member-header" id="Function-functionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L122">property <b>functionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L122">property <b>functionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ The Function description.
 A unique ID representing the Function object.
 
 <h4 class="pdoc-member-header" id="Function-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L126">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L126">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ A unique ID representing the Function object.
 The version of the request mapping template. Currently the supported value is `2018-05-29`.
 
 <h4 class="pdoc-member-header" id="Function-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -558,7 +558,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Function-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ deployments and may be missing (undefined) during planning phases.
 The Function name. The function name does not have to be unique.
 
 <h4 class="pdoc-member-header" id="Function-requestMappingTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L134">property <b>requestMappingTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L134">property <b>requestMappingTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ The Function name. The function name does not have to be unique.
 The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
 
 <h4 class="pdoc-member-header" id="Function-responseMappingTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L138">property <b>responseMappingTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L138">property <b>responseMappingTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ The Function request mapping template. Functions support only the 2018-05-29 ver
 The Function response mapping template.
 
 <h4 class="pdoc-member-header" id="Function-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L75">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L75">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -591,7 +591,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GraphQLApi" data-link-title="GraphQLApi">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L128">
         Resource <strong>GraphQLApi</strong>
     </a>
 </h3>
@@ -718,7 +718,7 @@ AppSync GraphQL API can be imported using the GraphQL API ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="GraphQLApi-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L199"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L199"> <b>constructor</b></a>
 </h4>
 
 
@@ -732,7 +732,7 @@ Create a GraphQLApi resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L138">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L138">method <b>get</b></a>
 </h4>
 
 
@@ -743,14 +743,14 @@ Get an existing GraphQLApi resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L128">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L128">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GraphQLApi-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L149">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L149">method <b>isInstance</b></a>
 </h4>
 
 
@@ -761,7 +761,7 @@ Returns true if the given object is an instance of GraphQLApi.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-additionalAuthenticationProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L159">property <b>additionalAuthenticationProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L159">property <b>additionalAuthenticationProviders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalAuthenticationProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProvider'>GraphQLApiAdditionalAuthenticationProvider</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -769,7 +769,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 One or more additional authentication providers for the GraphqlApi. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L163">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L163">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -777,7 +777,7 @@ One or more additional authentication providers for the GraphqlApi. Defined belo
 The ARN
 
 <h4 class="pdoc-member-header" id="GraphQLApi-authenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L167">property <b>authenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L167">property <b>authenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -785,7 +785,7 @@ The ARN
 The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`
 
 <h4 class="pdoc-member-header" id="GraphQLApi-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L128">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L128">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -794,7 +794,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-logConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L171">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L171">property <b>logConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiLogConfig'>GraphQLApiLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ deployments and may be missing (undefined) during planning phases.
 Nested argument containing logging configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -810,7 +810,7 @@ Nested argument containing logging configuration. Defined below.
 A user-supplied name for the GraphqlApi.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-openidConnectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L179">property <b>openidConnectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L179">property <b>openidConnectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>openidConnectConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ A user-supplied name for the GraphqlApi.
 Nested argument containing OpenID Connect configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L183">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L183">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
 The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L187">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L187">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -834,7 +834,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-uris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L191">property <b>uris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L191">property <b>uris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -842,7 +842,7 @@ A map of tags to assign to the resource.
 Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
 
 <h4 class="pdoc-member-header" id="GraphQLApi-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L128">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L128">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -851,7 +851,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-userPoolConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L195">property <b>userPoolConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L195">property <b>userPoolConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userPoolConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -859,7 +859,7 @@ deployments.
 The Amazon Cognito User Pool configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApi-xrayEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L199">property <b>xrayEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L199">property <b>xrayEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xrayEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -867,7 +867,7 @@ The Amazon Cognito User Pool configuration. Defined below.
 Whether tracing with X-ray is enabled. Defaults to false.
 
 <h3 class="pdoc-module-header" id="Resolver" data-link-title="Resolver">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L101">
         Resource <strong>Resolver</strong>
     </a>
 </h3>
@@ -967,7 +967,7 @@ const mutationPipelineTest = new aws.appsync.Resolver("mutationPipelineTest", {
 ```
 
 <h4 class="pdoc-member-header" id="Resolver-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L168"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L168"> <b>constructor</b></a>
 </h4>
 
 
@@ -981,7 +981,7 @@ Create a Resolver resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Resolver-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L111">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L111">method <b>get</b></a>
 </h4>
 
 
@@ -992,14 +992,14 @@ Get an existing Resolver resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Resolver-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L101">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L101">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Resolver-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L122">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L122">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1010,7 +1010,7 @@ Returns true if the given object is an instance of Resolver.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Resolver-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L132">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L132">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1018,7 +1018,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API ID for the GraphQL API.
 
 <h4 class="pdoc-member-header" id="Resolver-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L136">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L136">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1026,7 +1026,7 @@ The API ID for the GraphQL API.
 The ARN
 
 <h4 class="pdoc-member-header" id="Resolver-cachingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L140">property <b>cachingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L140">property <b>cachingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cachingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResolverCachingConfig'>ResolverCachingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1034,7 +1034,7 @@ The ARN
 The CachingConfig.
 
 <h4 class="pdoc-member-header" id="Resolver-dataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L144">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L144">property <b>dataSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1042,7 +1042,7 @@ The CachingConfig.
 The DataSource name.
 
 <h4 class="pdoc-member-header" id="Resolver-field">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L148">property <b>field</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L148">property <b>field</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1050,7 +1050,7 @@ The DataSource name.
 The field name from the schema defined in the GraphQL API.
 
 <h4 class="pdoc-member-header" id="Resolver-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L101">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L101">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1059,7 +1059,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Resolver-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L152">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L152">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1067,7 +1067,7 @@ deployments and may be missing (undefined) during planning phases.
 The resolver type. Valid values are `UNIT` and `PIPELINE`.
 
 <h4 class="pdoc-member-header" id="Resolver-pipelineConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L156">property <b>pipelineConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L156">property <b>pipelineConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pipelineConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResolverPipelineConfig'>ResolverPipelineConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1075,7 +1075,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 The PipelineConfig.
 
 <h4 class="pdoc-member-header" id="Resolver-requestTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L160">property <b>requestTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L160">property <b>requestTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1083,7 +1083,7 @@ The PipelineConfig.
 The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
 
 <h4 class="pdoc-member-header" id="Resolver-responseTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L164">property <b>responseTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L164">property <b>responseTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ The request mapping template for UNIT resolver or 'before mapping template' for 
 The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 
 <h4 class="pdoc-member-header" id="Resolver-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L168">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L168">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ The response mapping template for UNIT resolver or 'after mapping template' for 
 The type name from the schema defined in the GraphQL API.
 
 <h4 class="pdoc-member-header" id="Resolver-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L101">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L101">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1111,7 +1111,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApiKeyArgs" data-link-title="ApiKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L138">
         interface <strong>ApiKeyArgs</strong>
     </a>
 </h3>
@@ -1121,7 +1121,7 @@ deployments.
 The set of arguments for constructing a ApiKey resource.
 
 <h4 class="pdoc-member-header" id="ApiKeyArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L142">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L142">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1129,7 +1129,7 @@ The set of arguments for constructing a ApiKey resource.
 The ID of the associated AppSync API
 
 <h4 class="pdoc-member-header" id="ApiKeyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1137,7 +1137,7 @@ The ID of the associated AppSync API
 The API key description. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ApiKeyArgs-expires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L150">property <b>expires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L150">property <b>expires</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expires?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1145,7 +1145,7 @@ The API key description. Defaults to "Managed by Pulumi".
 RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
 
 <h3 class="pdoc-module-header" id="ApiKeyState" data-link-title="ApiKeyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L116">
         interface <strong>ApiKeyState</strong>
     </a>
 </h3>
@@ -1155,7 +1155,7 @@ RFC3339 string representation of the expiry date. Rounded down to nearest hour. 
 Input properties used for looking up and filtering ApiKey resources.
 
 <h4 class="pdoc-member-header" id="ApiKeyState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L120">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L120">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ Input properties used for looking up and filtering ApiKey resources.
 The ID of the associated AppSync API
 
 <h4 class="pdoc-member-header" id="ApiKeyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L124">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L124">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ The ID of the associated AppSync API
 The API key description. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ApiKeyState-expires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L128">property <b>expires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L128">property <b>expires</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expires?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1179,7 +1179,7 @@ The API key description. Defaults to "Managed by Pulumi".
 RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
 
 <h4 class="pdoc-member-header" id="ApiKeyState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/apiKey.ts#L132">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/apiKey.ts#L132">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ RFC3339 string representation of the expiry date. Rounded down to nearest hour. 
 The API key
 
 <h3 class="pdoc-module-header" id="DataSourceArgs" data-link-title="DataSourceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L247">
         interface <strong>DataSourceArgs</strong>
     </a>
 </h3>
@@ -1197,7 +1197,7 @@ The API key
 The set of arguments for constructing a DataSource resource.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L251">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L251">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1205,7 @@ The set of arguments for constructing a DataSource resource.
 The API ID for the GraphQL API for the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L255">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L255">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ The API ID for the GraphQL API for the DataSource.
 A description of the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-dynamodbConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L259">property <b>dynamodbConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L259">property <b>dynamodbConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ A description of the DataSource.
 DynamoDB settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-elasticsearchConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L263">property <b>elasticsearchConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L263">property <b>elasticsearchConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ DynamoDB settings. See below
 Amazon Elasticsearch settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-httpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L267">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L267">property <b>httpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceHttpConfig'>DataSourceHttpConfig</a>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ Amazon Elasticsearch settings. See below
 HTTP settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-lambdaConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L271">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L271">property <b>lambdaConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceLambdaConfig'>DataSourceLambdaConfig</a>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ HTTP settings. See below
 AWS Lambda settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1253,7 +1253,7 @@ AWS Lambda settings. See below
 A user-supplied name for the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L279">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L279">property <b>serviceRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1261,7 +1261,7 @@ A user-supplied name for the DataSource.
 The IAM service role ARN for the data source.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L283">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L283">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1269,7 +1269,7 @@ The IAM service role ARN for the data source.
 The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 
 <h3 class="pdoc-module-header" id="DataSourceState" data-link-title="DataSourceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L201">
         interface <strong>DataSourceState</strong>
     </a>
 </h3>
@@ -1279,7 +1279,7 @@ The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZ
 Input properties used for looking up and filtering DataSource resources.
 
 <h4 class="pdoc-member-header" id="DataSourceState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L205">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L205">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1287,7 @@ Input properties used for looking up and filtering DataSource resources.
 The API ID for the GraphQL API for the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSourceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L209">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L209">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1295,7 +1295,7 @@ The API ID for the GraphQL API for the DataSource.
 The ARN
 
 <h4 class="pdoc-member-header" id="DataSourceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L213">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L213">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1303,7 +1303,7 @@ The ARN
 A description of the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSourceState-dynamodbConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L217">property <b>dynamodbConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L217">property <b>dynamodbConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a>&gt;;</code></pre>
@@ -1311,7 +1311,7 @@ A description of the DataSource.
 DynamoDB settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceState-elasticsearchConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L221">property <b>elasticsearchConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L221">property <b>elasticsearchConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a>&gt;;</code></pre>
@@ -1319,7 +1319,7 @@ DynamoDB settings. See below
 Amazon Elasticsearch settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceState-httpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L225">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L225">property <b>httpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceHttpConfig'>DataSourceHttpConfig</a>&gt;;</code></pre>
@@ -1327,7 +1327,7 @@ Amazon Elasticsearch settings. See below
 HTTP settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceState-lambdaConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L229">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L229">property <b>lambdaConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataSourceLambdaConfig'>DataSourceLambdaConfig</a>&gt;;</code></pre>
@@ -1335,7 +1335,7 @@ HTTP settings. See below
 AWS Lambda settings. See below
 
 <h4 class="pdoc-member-header" id="DataSourceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L233">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L233">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1343,7 +1343,7 @@ AWS Lambda settings. See below
 A user-supplied name for the DataSource.
 
 <h4 class="pdoc-member-header" id="DataSourceState-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L237">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L237">property <b>serviceRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1351,7 +1351,7 @@ A user-supplied name for the DataSource.
 The IAM service role ARN for the data source.
 
 <h4 class="pdoc-member-header" id="DataSourceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/dataSource.ts#L241">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/dataSource.ts#L241">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1359,7 +1359,7 @@ The IAM service role ARN for the data source.
 The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 
 <h3 class="pdoc-module-header" id="FunctionArgs" data-link-title="FunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L241">
         interface <strong>FunctionArgs</strong>
     </a>
 </h3>
@@ -1369,7 +1369,7 @@ The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZ
 The set of arguments for constructing a Function resource.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L245">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L245">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,7 +1377,7 @@ The set of arguments for constructing a Function resource.
 The ID of the associated AppSync API.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-dataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L249">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L249">property <b>dataSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1385,7 +1385,7 @@ The ID of the associated AppSync API.
 The Function DataSource name.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L253">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L253">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1393,7 +1393,7 @@ The Function DataSource name.
 The Function description.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L257">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L257">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1401,7 @@ The Function description.
 The version of the request mapping template. Currently the supported value is `2018-05-29`.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L261">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L261">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1409,7 +1409,7 @@ The version of the request mapping template. Currently the supported value is `2
 The Function name. The function name does not have to be unique.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-requestMappingTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L265">property <b>requestMappingTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L265">property <b>requestMappingTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1417,7 +1417,7 @@ The Function name. The function name does not have to be unique.
 The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-responseMappingTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L269">property <b>responseMappingTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L269">property <b>responseMappingTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1425,7 +1425,7 @@ The Function request mapping template. Functions support only the 2018-05-29 ver
 The Function response mapping template.
 
 <h3 class="pdoc-module-header" id="FunctionState" data-link-title="FunctionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L199">
         interface <strong>FunctionState</strong>
     </a>
 </h3>
@@ -1435,7 +1435,7 @@ The Function response mapping template.
 Input properties used for looking up and filtering Function resources.
 
 <h4 class="pdoc-member-header" id="FunctionState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L203">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L203">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1443,7 +1443,7 @@ Input properties used for looking up and filtering Function resources.
 The ID of the associated AppSync API.
 
 <h4 class="pdoc-member-header" id="FunctionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L207">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L207">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1451,7 +1451,7 @@ The ID of the associated AppSync API.
 The ARN of the Function object.
 
 <h4 class="pdoc-member-header" id="FunctionState-dataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L211">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L211">property <b>dataSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1459,7 +1459,7 @@ The ARN of the Function object.
 The Function DataSource name.
 
 <h4 class="pdoc-member-header" id="FunctionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L215">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L215">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1467,7 +1467,7 @@ The Function DataSource name.
 The Function description.
 
 <h4 class="pdoc-member-header" id="FunctionState-functionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L219">property <b>functionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L219">property <b>functionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1475,7 +1475,7 @@ The Function description.
 A unique ID representing the Function object.
 
 <h4 class="pdoc-member-header" id="FunctionState-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L223">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L223">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1483,7 +1483,7 @@ A unique ID representing the Function object.
 The version of the request mapping template. Currently the supported value is `2018-05-29`.
 
 <h4 class="pdoc-member-header" id="FunctionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L227">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1491,7 +1491,7 @@ The version of the request mapping template. Currently the supported value is `2
 The Function name. The function name does not have to be unique.
 
 <h4 class="pdoc-member-header" id="FunctionState-requestMappingTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L231">property <b>requestMappingTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L231">property <b>requestMappingTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMappingTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1499,7 +1499,7 @@ The Function name. The function name does not have to be unique.
 The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
 
 <h4 class="pdoc-member-header" id="FunctionState-responseMappingTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/function.ts#L235">property <b>responseMappingTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/function.ts#L235">property <b>responseMappingTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseMappingTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1507,7 +1507,7 @@ The Function request mapping template. Functions support only the 2018-05-29 ver
 The Function response mapping template.
 
 <h3 class="pdoc-module-header" id="GraphQLApiArgs" data-link-title="GraphQLApiArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L305">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L305">
         interface <strong>GraphQLApiArgs</strong>
     </a>
 </h3>
@@ -1517,7 +1517,7 @@ The Function response mapping template.
 The set of arguments for constructing a GraphQLApi resource.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-additionalAuthenticationProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L309">property <b>additionalAuthenticationProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L309">property <b>additionalAuthenticationProviders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalAuthenticationProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProvider'>GraphQLApiAdditionalAuthenticationProvider</a>&gt;[]&gt;;</code></pre>
@@ -1525,7 +1525,7 @@ The set of arguments for constructing a GraphQLApi resource.
 One or more additional authentication providers for the GraphqlApi. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-authenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L313">property <b>authenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L313">property <b>authenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1533,7 +1533,7 @@ One or more additional authentication providers for the GraphqlApi. Defined belo
 The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-logConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L317">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L317">property <b>logConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiLogConfig'>GraphQLApiLogConfig</a>&gt;;</code></pre>
@@ -1541,7 +1541,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
 Nested argument containing logging configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L321">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L321">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1549,7 +1549,7 @@ Nested argument containing logging configuration. Defined below.
 A user-supplied name for the GraphqlApi.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-openidConnectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L325">property <b>openidConnectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L325">property <b>openidConnectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a>&gt;;</code></pre>
@@ -1557,7 +1557,7 @@ A user-supplied name for the GraphqlApi.
 Nested argument containing OpenID Connect configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L329">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L329">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1565,7 +1565,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
 The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L333">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L333">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1573,7 +1573,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-userPoolConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L337">property <b>userPoolConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L337">property <b>userPoolConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a>&gt;;</code></pre>
@@ -1581,7 +1581,7 @@ A map of tags to assign to the resource.
 The Amazon Cognito User Pool configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiArgs-xrayEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L341">property <b>xrayEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L341">property <b>xrayEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xrayEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1589,7 +1589,7 @@ The Amazon Cognito User Pool configuration. Defined below.
 Whether tracing with X-ray is enabled. Defaults to false.
 
 <h3 class="pdoc-module-header" id="GraphQLApiState" data-link-title="GraphQLApiState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L255">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L255">
         interface <strong>GraphQLApiState</strong>
     </a>
 </h3>
@@ -1599,7 +1599,7 @@ Whether tracing with X-ray is enabled. Defaults to false.
 Input properties used for looking up and filtering GraphQLApi resources.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-additionalAuthenticationProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L259">property <b>additionalAuthenticationProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L259">property <b>additionalAuthenticationProviders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalAuthenticationProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProvider'>GraphQLApiAdditionalAuthenticationProvider</a>&gt;[]&gt;;</code></pre>
@@ -1607,7 +1607,7 @@ Input properties used for looking up and filtering GraphQLApi resources.
 One or more additional authentication providers for the GraphqlApi. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L263">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L263">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1615,7 +1615,7 @@ One or more additional authentication providers for the GraphqlApi. Defined belo
 The ARN
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-authenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L267">property <b>authenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L267">property <b>authenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1623,7 +1623,7 @@ The ARN
 The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-logConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L271">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L271">property <b>logConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiLogConfig'>GraphQLApiLogConfig</a>&gt;;</code></pre>
@@ -1631,7 +1631,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
 Nested argument containing logging configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1639,7 +1639,7 @@ Nested argument containing logging configuration. Defined below.
 A user-supplied name for the GraphqlApi.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-openidConnectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L279">property <b>openidConnectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L279">property <b>openidConnectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a>&gt;;</code></pre>
@@ -1647,7 +1647,7 @@ A user-supplied name for the GraphqlApi.
 Nested argument containing OpenID Connect configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L283">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L283">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1655,7 +1655,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
 The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L287">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L287">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1663,7 +1663,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-uris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L291">property <b>uris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L291">property <b>uris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1671,7 +1671,7 @@ A map of tags to assign to the resource.
 Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-userPoolConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L295">property <b>userPoolConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L295">property <b>userPoolConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a>&gt;;</code></pre>
@@ -1679,7 +1679,7 @@ Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-
 The Amazon Cognito User Pool configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="GraphQLApiState-xrayEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/graphQLApi.ts#L299">property <b>xrayEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/graphQLApi.ts#L299">property <b>xrayEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xrayEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1687,7 +1687,7 @@ The Amazon Cognito User Pool configuration. Defined below.
 Whether tracing with X-ray is enabled. Defaults to false.
 
 <h3 class="pdoc-module-header" id="ResolverArgs" data-link-title="ResolverArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L280">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L280">
         interface <strong>ResolverArgs</strong>
     </a>
 </h3>
@@ -1697,7 +1697,7 @@ Whether tracing with X-ray is enabled. Defaults to false.
 The set of arguments for constructing a Resolver resource.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L284">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L284">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1705,7 +1705,7 @@ The set of arguments for constructing a Resolver resource.
 The API ID for the GraphQL API.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-cachingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L288">property <b>cachingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L288">property <b>cachingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cachingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverCachingConfig'>ResolverCachingConfig</a>&gt;;</code></pre>
@@ -1713,7 +1713,7 @@ The API ID for the GraphQL API.
 The CachingConfig.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-dataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L292">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L292">property <b>dataSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1721,7 @@ The CachingConfig.
 The DataSource name.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-field">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L296">property <b>field</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L296">property <b>field</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1729,7 @@ The DataSource name.
 The field name from the schema defined in the GraphQL API.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L300">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L300">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1737,7 +1737,7 @@ The field name from the schema defined in the GraphQL API.
 The resolver type. Valid values are `UNIT` and `PIPELINE`.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-pipelineConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L304">property <b>pipelineConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L304">property <b>pipelineConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverPipelineConfig'>ResolverPipelineConfig</a>&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 The PipelineConfig.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-requestTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L308">property <b>requestTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L308">property <b>requestTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ The PipelineConfig.
 The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-responseTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L312">property <b>responseTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L312">property <b>responseTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1761,7 @@ The request mapping template for UNIT resolver or 'before mapping template' for 
 The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 
 <h4 class="pdoc-member-header" id="ResolverArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L316">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L316">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1769,7 @@ The response mapping template for UNIT resolver or 'after mapping template' for 
 The type name from the schema defined in the GraphQL API.
 
 <h3 class="pdoc-module-header" id="ResolverState" data-link-title="ResolverState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L234">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L234">
         interface <strong>ResolverState</strong>
     </a>
 </h3>
@@ -1779,7 +1779,7 @@ The type name from the schema defined in the GraphQL API.
 Input properties used for looking up and filtering Resolver resources.
 
 <h4 class="pdoc-member-header" id="ResolverState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L238">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L238">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1787,7 +1787,7 @@ Input properties used for looking up and filtering Resolver resources.
 The API ID for the GraphQL API.
 
 <h4 class="pdoc-member-header" id="ResolverState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L242">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L242">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1795,7 +1795,7 @@ The API ID for the GraphQL API.
 The ARN
 
 <h4 class="pdoc-member-header" id="ResolverState-cachingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L246">property <b>cachingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L246">property <b>cachingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cachingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverCachingConfig'>ResolverCachingConfig</a>&gt;;</code></pre>
@@ -1803,7 +1803,7 @@ The ARN
 The CachingConfig.
 
 <h4 class="pdoc-member-header" id="ResolverState-dataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L250">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L250">property <b>dataSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1811,7 +1811,7 @@ The CachingConfig.
 The DataSource name.
 
 <h4 class="pdoc-member-header" id="ResolverState-field">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L254">property <b>field</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L254">property <b>field</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>field?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1819,7 +1819,7 @@ The DataSource name.
 The field name from the schema defined in the GraphQL API.
 
 <h4 class="pdoc-member-header" id="ResolverState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L258">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L258">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1827,7 +1827,7 @@ The field name from the schema defined in the GraphQL API.
 The resolver type. Valid values are `UNIT` and `PIPELINE`.
 
 <h4 class="pdoc-member-header" id="ResolverState-pipelineConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L262">property <b>pipelineConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L262">property <b>pipelineConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverPipelineConfig'>ResolverPipelineConfig</a>&gt;;</code></pre>
@@ -1835,7 +1835,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 The PipelineConfig.
 
 <h4 class="pdoc-member-header" id="ResolverState-requestTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L266">property <b>requestTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L266">property <b>requestTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1843,7 +1843,7 @@ The PipelineConfig.
 The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
 
 <h4 class="pdoc-member-header" id="ResolverState-responseTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L270">property <b>responseTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L270">property <b>responseTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1851,7 +1851,7 @@ The request mapping template for UNIT resolver or 'before mapping template' for 
 The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 
 <h4 class="pdoc-member-header" id="ResolverState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c12ed064d3e53d2839c8a83426d06dd01a6bdd8f/sdk/nodejs/appsync/resolver.ts#L274">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/appsync/resolver.ts#L274">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

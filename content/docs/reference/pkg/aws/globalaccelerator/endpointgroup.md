@@ -119,7 +119,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/globalaccelerator/#pulumi_aws.globalaccelerator.EndpointGroup">EndpointGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupEndpointConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">traffic_dial_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/globalaccelerator/#pulumi_aws.globalaccelerator.EndpointGroup">EndpointGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupEndpointConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_overrides</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupPortOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">traffic_dial_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -368,6 +368,17 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
+        <span id="portoverrides_csharp">
+<a href="#portoverrides_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">List&lt;Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="thresholdcount_csharp">
 <a href="#thresholdcount_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Count</a>
 </span> 
@@ -468,6 +479,17 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="portoverrides_go">
+<a href="#portoverrides_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -576,6 +598,17 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
+        <span id="portoverrides_nodejs">
+<a href="#portoverrides_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">Endpoint<wbr>Group<wbr>Port<wbr>Override[]</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="thresholdcount_nodejs">
 <a href="#thresholdcount_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Count</a>
 </span> 
@@ -680,6 +713,17 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_overrides_python">
+<a href="#port_overrides_python" style="color: inherit; text-decoration: inherit;">port_<wbr>overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">Sequence[Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="threshold_count_python">
 <a href="#threshold_count_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>count</a>
 </span> 
@@ -720,6 +764,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -734,6 +789,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -754,6 +820,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -768,6 +845,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -799,7 +887,7 @@ Get an existing EndpointGroup resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupEndpointConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">traffic_dial_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> EndpointGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupEndpointConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_overrides</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupPortOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">traffic_dial_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> EndpointGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -915,6 +1003,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_endpointconfigurations_csharp">
 <a href="#state_endpointconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
 </span> 
@@ -990,6 +1089,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_portoverrides_csharp">
+<a href="#state_portoverrides_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">List&lt;Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_thresholdcount_csharp">
 <a href="#state_thresholdcount_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Count</a>
 </span> 
@@ -1016,6 +1126,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1094,6 +1215,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_portoverrides_go">
+<a href="#state_portoverrides_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_thresholdcount_go">
 <a href="#state_thresholdcount_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Count</a>
 </span> 
@@ -1120,6 +1252,17 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1198,6 +1341,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_portoverrides_nodejs">
+<a href="#state_portoverrides_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">Endpoint<wbr>Group<wbr>Port<wbr>Override[]</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_thresholdcount_nodejs">
 <a href="#state_thresholdcount_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Count</a>
 </span> 
@@ -1224,6 +1378,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1298,6 +1463,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_port_overrides_python">
+<a href="#state_port_overrides_python" style="color: inherit; text-decoration: inherit;">port_<wbr>overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">Sequence[Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1502,6 +1678,140 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="endpointgroupportoverride">Endpoint<wbr>Group<wbr>Port<wbr>Override</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupPortOverride">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointGroupPortOverride">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/globalaccelerator?tab=doc#EndpointGroupPortOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/globalaccelerator?tab=doc#EndpointGroupPortOverrideOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Inputs.EndpointGroupPortOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Outputs.EndpointGroupPortOverride.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointport_csharp">
+<a href="#endpointport_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="listenerport_csharp">
+<a href="#listenerport_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointport_go">
+<a href="#endpointport_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="listenerport_go">
+<a href="#listenerport_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointport_nodejs">
+<a href="#endpointport_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="listenerport_nodejs">
+<a href="#listenerport_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_port_python">
+<a href="#endpoint_port_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="listener_port_python">
+<a href="#listener_port_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
 {{% /md %}}</dd>
 
 </dl>
