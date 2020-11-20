@@ -14,6 +14,7 @@ Manages an Automation Connection with type `Azure`.
 
 
 
+
 ## Create a ConnectionCertificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

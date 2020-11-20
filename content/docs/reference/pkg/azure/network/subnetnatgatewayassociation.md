@@ -12,6 +12,7 @@ meta_desc: "Explore the SubnetNatGatewayAssociation resource of the network modu
 
 Associates a NAT Gateway with a Subnet within a Virtual Network.
 
+
 {{% examples %}}
 ## Example Usage
 

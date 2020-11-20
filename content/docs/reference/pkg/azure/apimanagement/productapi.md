@@ -12,6 +12,7 @@ meta_desc: "Explore the ProductApi resource of the apimanagement module, includi
 
 Manages an API Management API Assignment to a Product.
 
+
 {{% examples %}}
 ## Example Usage
 

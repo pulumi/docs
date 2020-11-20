@@ -13,6 +13,7 @@ meta_desc: "Explore the Assignment resource of the role module, including exampl
 
 Assigns a given Principal (User or Group) to a given Role.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the SubscriptionRule resource of the eventhub module, includ
 
 Manages a ServiceBus Subscription Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

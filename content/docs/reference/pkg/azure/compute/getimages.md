@@ -12,6 +12,7 @@ meta_desc: "Explore the GetImages function of the compute module, including exam
 
 Use this data source to access information about existing Images within a Resource Group.
 
+
 {{% examples %}}
 ## Example Usage
 

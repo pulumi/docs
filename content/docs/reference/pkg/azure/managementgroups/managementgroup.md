@@ -13,6 +13,7 @@ meta_desc: "Explore the ManagementGroup resource of the managementgroups module,
 
 Manages a Management Group.
 
+
 {{% examples %}}
 ## Example Usage
 

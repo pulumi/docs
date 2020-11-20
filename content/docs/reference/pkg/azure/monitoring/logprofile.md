@@ -14,6 +14,7 @@ Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-di
 
 > **NOTE:** It's only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with `StatusCode=409` will occur.
 
+
 {{% examples %}}
 ## Example Usage
 

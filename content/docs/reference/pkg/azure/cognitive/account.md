@@ -12,6 +12,7 @@ meta_desc: "Explore the Account resource of the cognitive module, including exam
 
 Manages a Cognitive Services Account.
 
+
 {{% examples %}}
 ## Example Usage
 

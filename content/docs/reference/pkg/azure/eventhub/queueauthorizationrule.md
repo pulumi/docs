@@ -13,6 +13,7 @@ meta_desc: "Explore the QueueAuthorizationRule resource of the eventhub module, 
 
 Manages an Authorization Rule for a ServiceBus Queue.
 
+
 {{% examples %}}
 ## Example Usage
 

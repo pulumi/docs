@@ -12,6 +12,7 @@ meta_desc: "Explore the Store resource of the datalake module, including example
 
 Manages an Azure Data Lake Store.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the AssignmentVirtualMachine resource of the maintenance mod
 
 Manages a maintenance assignment to virtual machine.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetJob function of the streamanalytics module, including
 
 Use this data source to access information about an existing Stream Analytics Job.
 
+
 {{% examples %}}
 ## Example Usage
 

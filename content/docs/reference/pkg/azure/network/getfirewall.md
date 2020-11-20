@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFirewall function of the network module, including ex
 
 Use this data source to access information about an existing Azure Firewall.
 
+
 {{% examples %}}
 ## Example Usage
 

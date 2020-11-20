@@ -12,6 +12,7 @@ meta_desc: "Explore the Factory resource of the datafactory module, including ex
 
 Manages an Azure Data Factory (Version 2).
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedServiceSqlServer resource of the datafactory modul
 
 Manages a Linked Service (connection) between a SQL Server and Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the kusto module, including example
 
 Manages a Kusto (also known as Azure Data Explorer) Database
 
+
 {{% examples %}}
 ## Example Usage
 

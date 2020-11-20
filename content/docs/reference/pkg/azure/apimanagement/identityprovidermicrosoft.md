@@ -12,6 +12,7 @@ meta_desc: "Explore the IdentityProviderMicrosoft resource of the apimanagement 
 
 Manages an API Management Microsoft Identity Provider.
 
+
 {{% examples %}}
 ## Example Usage
 

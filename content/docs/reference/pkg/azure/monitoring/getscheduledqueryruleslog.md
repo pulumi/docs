@@ -12,6 +12,7 @@ meta_desc: "Explore the GetScheduledQueryRulesLog function of the monitoring mod
 
 Use this data source to access the properties of a LogToMetricAction scheduled query rule.
 
+
 {{% examples %}}
 ## Example Usage
 

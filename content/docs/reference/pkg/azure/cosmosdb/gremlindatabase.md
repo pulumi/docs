@@ -12,6 +12,7 @@ meta_desc: "Explore the GremlinDatabase resource of the cosmosdb module, includi
 
 Manages a Gremlin Database within a Cosmos DB Account.
 
+
 {{% examples %}}
 ## Example Usage
 

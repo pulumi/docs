@@ -12,6 +12,7 @@ meta_desc: "Explore the TriggerCustom resource of the logicapps module, includin
 
 Manages a Custom Trigger within a Logic App Workflow
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVirtualNetwork function of the devtest module, includ
 
 Use this data source to access information about an existing Dev Test Lab Virtual Network.
 
+
 {{% examples %}}
 ## Example Usage
 

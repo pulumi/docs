@@ -12,6 +12,7 @@ meta_desc: "Explore the SyncGroup resource of the storage module, including exam
 
 Manages a Storage Sync Group.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificate function of the appservice module, includ
 
 Use this data source to access information about an App Service Certificate.
 
+
 {{% examples %}}
 ## Example Usage
 

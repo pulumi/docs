@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNetworkSecurityGroup function of the network module, 
 
 Use this data source to access information about an existing Network Security Group.
 
+
 {{% examples %}}
 ## Example Usage
 

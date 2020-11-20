@@ -14,6 +14,7 @@ Manages a certificate in an Azure Batch account.
 
 
 
+
 ## Create a Certificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

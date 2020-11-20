@@ -12,6 +12,7 @@ meta_desc: "Explore the Pipeline resource of the datafactory module, including e
 
 Manages a Pipeline inside a Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

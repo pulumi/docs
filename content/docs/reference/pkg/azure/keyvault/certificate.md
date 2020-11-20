@@ -12,6 +12,7 @@ meta_desc: "Explore the Certificate resource of the keyvault module, including e
 
 Manages a Key Vault Certificate.
 
+
 {{% examples %}}
 ## Example Usage
 

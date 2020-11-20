@@ -12,6 +12,7 @@ meta_desc: "Explore the ActionRuleSuppression resource of the monitoring module,
 
 Manages an Monitor Action Rule which type is suppression.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSharedImageVersions function of the compute module, i
 
 Use this data source to access information about existing Versions of a Shared Image within a Shared Image Gallery.
 
+
 {{% examples %}}
 ## Example Usage
 

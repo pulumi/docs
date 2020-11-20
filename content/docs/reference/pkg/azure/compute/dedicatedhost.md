@@ -12,6 +12,7 @@ meta_desc: "Explore the DedicatedHost resource of the compute module, including 
 
 Manage a Dedicated Host within a Dedicated Host Group.
 
+
 {{% examples %}}
 ## Example Usage
 

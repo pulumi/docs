@@ -12,6 +12,7 @@ meta_desc: "Explore the ExpressRouteGateway resource of the network module, incl
 
 Manages an ExpressRoute gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

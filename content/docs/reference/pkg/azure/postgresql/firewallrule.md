@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallRule resource of the postgresql module, includin
 
 Manages a Firewall Rule for a PostgreSQL Server
 
+
 {{% examples %}}
 ## Example Usage
 

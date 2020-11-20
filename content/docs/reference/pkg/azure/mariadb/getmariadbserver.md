@@ -12,6 +12,7 @@ meta_desc: "Explore the GetMariaDbServer function of the mariadb module, includi
 
 Use this data source to access information about an existing MariaDB Server.
 
+
 {{% examples %}}
 ## Example Usage
 

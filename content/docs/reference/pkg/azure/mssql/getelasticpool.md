@@ -12,6 +12,7 @@ meta_desc: "Explore the GetElasticPool function of the mssql module, including e
 
 Use this data source to access information about an existing SQL elastic pool.
 
+
 {{% examples %}}
 ## Example Usage
 

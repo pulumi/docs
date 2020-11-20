@@ -12,6 +12,7 @@ meta_desc: "Explore the EventHubNamespace resource of the eventhub module, inclu
 
 Manages an EventHub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

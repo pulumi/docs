@@ -12,6 +12,7 @@ meta_desc: "Explore the StreamInputEventHub resource of the streamanalytics modu
 
 Manages a Stream Analytics Stream Input EventHub.
 
+
 {{% examples %}}
 ## Example Usage
 

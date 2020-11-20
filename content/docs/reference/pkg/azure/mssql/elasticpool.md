@@ -12,6 +12,7 @@ meta_desc: "Explore the ElasticPool resource of the mssql module, including exam
 
 Allows you to manage an Azure SQL Elastic Pool via the `v3.0` API which allows for `vCore` and `DTU` based configurations.
 
+
 {{% examples %}}
 ## Example Usage
 

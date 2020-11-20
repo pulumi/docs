@@ -116,6 +116,7 @@ func main() {
 
 
 
+
 ## Create a Pool Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

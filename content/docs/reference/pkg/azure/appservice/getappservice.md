@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAppService function of the appservice module, includi
 
 Use this data source to access information about an existing App Service.
 
+
 {{% examples %}}
 ## Example Usage
 

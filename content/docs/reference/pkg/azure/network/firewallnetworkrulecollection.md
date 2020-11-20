@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallNetworkRuleCollection resource of the network mo
 
 Manages a Network Rule Collection within an Azure Firewall.
 
+
 {{% examples %}}
 ## Example Usage
 

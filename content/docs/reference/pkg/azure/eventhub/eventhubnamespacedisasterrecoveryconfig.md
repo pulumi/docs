@@ -12,6 +12,7 @@ meta_desc: "Explore the EventhubNamespaceDisasterRecoveryConfig resource of the 
 
 Manages an Disaster Recovery Config for an Event Hub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the PTRRecord resource of the privatedns module, including e
 
 Enables you to manage DNS PTR Records within Azure Private DNS.
 
+
 {{% examples %}}
 ## Example Usage
 

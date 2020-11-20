@@ -12,6 +12,7 @@ meta_desc: "Explore the Table resource of the storage module, including examples
 
 Manages a Table within an Azure Storage Account.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ Manages a Resource Group Template Deployment.
 
 > **Note:** This resource will automatically attempt to delete resources deployed by the ARM Template when it is deleted. You can opt-out of this by setting the `delete_nested_items_during_deletion` field within the `template_deployment` block of the `features` block to `false`.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClusterNodePool function of the containerservice modu
 
 Use this data source to access information about an existing Kubernetes Cluster Node Pool.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -508,6 +509,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="proximityplacementgroupid_csharp">
+<a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set backing this Node Pool will be placed.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -761,6 +773,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The priority of the Virtual Machines in the Virtual Machine Scale Set backing this Node Pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="proximityplacementgroupid_go">
+<a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set backing this Node Pool will be placed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1022,6 +1045,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="proximityplacementgroupid_nodejs">
+<a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set backing this Node Pool will be placed.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -1275,6 +1309,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The priority of the Virtual Machines in the Virtual Machine Scale Set backing this Node Pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="proximity_placement_group_id_python">
+<a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set backing this Node Pool will be placed.
 {{% /md %}}</dd>
 
     <dt class="property-"

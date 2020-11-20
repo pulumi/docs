@@ -12,6 +12,7 @@ meta_desc: "Explore the DataExportRule resource of the loganalytics module, incl
 
 Manages a Log Analytics Data Export Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallPolicyRuleCollectionGroup resource of the networ
 
 Manages a Firewall Policy Rule Collection Group.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 
 
+
 ## Create a ReplicatedVM Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -14,6 +14,7 @@ Enables or disables the Security Center Auto Provisioning feature for the subscr
 
 > **NOTE:** There is no resource name required, it will always be "default"
 
+
 {{% examples %}}
 ## Example Usage
 

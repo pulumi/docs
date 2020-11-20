@@ -12,6 +12,7 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the servicebus mo
 
 Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
 
+
 {{% examples %}}
 ## Example Usage
 

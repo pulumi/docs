@@ -12,6 +12,7 @@ meta_desc: "Explore the NatGateway resource of the network module, including exa
 
 Manages a Azure NAT Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

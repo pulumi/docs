@@ -12,6 +12,7 @@ meta_desc: "Explore the AnalyticsAccount resource of the datalake module, includ
 
 Manages an Azure Data Lake Analytics Account.
 
+
 {{% examples %}}
 ## Example Usage
 

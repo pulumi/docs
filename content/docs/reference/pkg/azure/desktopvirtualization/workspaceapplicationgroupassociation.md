@@ -12,6 +12,7 @@ meta_desc: "Explore the WorkspaceApplicationGroupAssociation resource of the des
 
 Manages a Virtual Desktop Workspace Application Group Association.
 
+
 {{% examples %}}
 ## Example Usage
 

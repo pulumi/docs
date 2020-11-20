@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPublicIP function of the network module, including ex
 
 Use this data source to access information about an existing Public IP Address.
 
+
 {{% examples %}}
 ## Example Usage
 

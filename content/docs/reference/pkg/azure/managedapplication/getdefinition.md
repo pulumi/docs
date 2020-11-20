@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDefinition function of the managedapplication module,
 
 Uses this data source to access information about an existing Managed Application Definition.
 
+
 {{% examples %}}
 ## Example Usage
 

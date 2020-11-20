@@ -12,6 +12,7 @@ meta_desc: "Explore the OutputBlob resource of the streamanalytics module, inclu
 
 Manages a Stream Analytics Output to Blob Storage.
 
+
 {{% examples %}}
 ## Example Usage
 

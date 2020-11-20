@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNamespace function of the notificationhub module, inc
 
 Use this data source to access information about an existing Notification Hub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

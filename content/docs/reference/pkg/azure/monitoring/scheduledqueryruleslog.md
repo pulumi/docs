@@ -14,6 +14,7 @@ Manages a LogToMetricAction Scheduled Query Rules resource within Azure Monitor.
 
 
 
+
 ## Create a ScheduledQueryRulesLog Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

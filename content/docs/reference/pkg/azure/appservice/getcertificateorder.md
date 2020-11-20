@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificateOrder function of the appservice module, i
 
 Use this data source to access information about an existing App Service Certificate Order.
 
+
 {{% examples %}}
 ## Example Usage
 

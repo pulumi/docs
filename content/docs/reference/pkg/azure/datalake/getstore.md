@@ -12,6 +12,7 @@ meta_desc: "Explore the GetStore function of the datalake module, including exam
 
 Use this data source to access information about an existing Data Lake Store.
 
+
 {{% examples %}}
 ## Example Usage
 

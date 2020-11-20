@@ -14,6 +14,7 @@ Use this data source to access information about an existing Azure Blueprint Def
 
 > **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
 
+
 {{% examples %}}
 ## Example Usage
 

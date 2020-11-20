@@ -12,6 +12,7 @@ meta_desc: "Explore the PointToPointVpnGateway resource of the network module, i
 
 Manages a Point-to-Site VPN Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -113,7 +114,7 @@ const example = new azure.network.PointToPointVpnGateway("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PointToPointVpnGateway">PointToPointVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PointToPointVpnGateway">PointToPointVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -342,6 +343,17 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -433,6 +445,17 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Server Configuration which this Point-to-Site VPN Gateway should use. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,6 +555,17 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -623,6 +657,17 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Server Configuration which this Point-to-Site VPN Gateway should use. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,7 +802,7 @@ Get an existing PointToPointVpnGateway resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PointToPointVpnGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PointToPointVpnGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -884,6 +929,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dnsservers_csharp">
+<a href="#state_dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -975,6 +1031,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsservers_go">
+<a href="#state_dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1074,6 +1141,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dnsservers_nodejs">
+<a href="#state_dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -1165,6 +1243,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dns_servers_python">
+<a href="#state_dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1299,6 +1388,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="route_csharp">
+<a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `route` block as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1326,6 +1426,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="route_go">
+<a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1357,6 +1468,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="route_nodejs">
+<a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}A `route` block as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1384,6 +1506,285 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="route_python">
+<a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `route` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PointToPointVpnGatewayConnectionConfigurationRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PointToPointVpnGatewayConnectionConfigurationRoute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#PointToPointVpnGatewayConnectionConfigurationRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#PointToPointVpnGatewayConnectionConfigurationRouteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.PointToPointVpnGatewayConnectionConfigurationRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.PointToPointVpnGatewayConnectionConfigurationRoute.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associatedroutetableid_csharp">
+<a href="#associatedroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Hub Route Table resource id associated with this Routing Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetable_csharp">
+<a href="#propagatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associatedroutetableid_go">
+<a href="#associatedroutetableid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Hub Route Table resource id associated with this Routing Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetable_go">
+<a href="#propagatedroutetable_go" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associatedroutetableid_nodejs">
+<a href="#associatedroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Hub Route Table resource id associated with this Routing Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetable_nodejs">
+<a href="#propagatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="associated_route_table_id_python">
+<a href="#associated_route_table_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Hub Route Table resource id associated with this Routing Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagated_route_table_python">
+<a href="#propagated_route_table_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PointToPointVpnGatewayConnectionConfigurationRoutePropagatedRouteTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PointToPointVpnGatewayConnectionConfigurationRoutePropagatedRouteTable">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#PointToPointVpnGatewayConnectionConfigurationRoutePropagatedRouteTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#PointToPointVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.PointToPointVpnGatewayConnectionConfigurationRoutePropagatedRouteTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.PointToPointVpnGatewayConnectionConfigurationRoutePropagatedRouteTable.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Virtual Hub Route Table resource id which the routes will be propagated to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to logically group Virtual Hub Route Tables which the routes will be propagated to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Virtual Hub Route Table resource id which the routes will be propagated to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to logically group Virtual Hub Route Tables which the routes will be propagated to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Virtual Hub Route Table resource id which the routes will be propagated to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to logically group Virtual Hub Route Tables which the routes will be propagated to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Virtual Hub Route Table resource id which the routes will be propagated to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to logically group Virtual Hub Route Tables which the routes will be propagated to.
 {{% /md %}}</dd>
 
 </dl>

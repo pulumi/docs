@@ -12,6 +12,7 @@ meta_desc: "Explore the SpringCloudApp resource of the appplatform module, inclu
 
 Manage an Azure Spring Cloud Application.
 
+
 {{% examples %}}
 ## Example Usage
 

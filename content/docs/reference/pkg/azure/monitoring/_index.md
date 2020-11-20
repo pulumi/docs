@@ -21,6 +21,7 @@ Explore the resources and functions of the monitoring module in the Azure packag
     <li><a href="metricalert" title="MetricAlert"><span class="symbol resource"></span>MetricAlert</a></li>
     <li><a href="scheduledqueryrulesalert" title="ScheduledQueryRulesAlert"><span class="symbol resource"></span>ScheduledQueryRulesAlert</a></li>
     <li><a href="scheduledqueryruleslog" title="ScheduledQueryRulesLog"><span class="symbol resource"></span>ScheduledQueryRulesLog</a></li>
+    <li><a href="smartdetectoralertrule" title="SmartDetectorAlertRule"><span class="symbol resource"></span>SmartDetectorAlertRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -41,7 +42,7 @@ Explore the resources and functions of the monitoring module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.30.1</dd>
+	<dd>3.31.0</dd>
 </dl>
 
 

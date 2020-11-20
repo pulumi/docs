@@ -12,6 +12,7 @@ meta_desc: "Explore the GetKubernetesCluster function of the containerservice mo
 
 Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).
 
+
 {{% examples %}}
 ## Example Usage
 

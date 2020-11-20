@@ -12,6 +12,7 @@ meta_desc: "Explore the ProtectedVM resource of the backup module, including exa
 
 Manages Azure Backup for an Azure VM
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the UserAssignedIdentity resource of the msi module, includi
 
 Manages a user assigned identity.
 
+
 {{% examples %}}
 ## Example Usage
 

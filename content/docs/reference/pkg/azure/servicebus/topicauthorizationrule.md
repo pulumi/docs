@@ -12,6 +12,7 @@ meta_desc: "Explore the TopicAuthorizationRule resource of the servicebus module
 
 Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 
+
 {{% examples %}}
 ## Example Usage
 

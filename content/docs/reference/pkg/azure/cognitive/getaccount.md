@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the cognitive module, including e
 
 Use this data source to access information about an existing Cognitive Services Account.
 
+
 {{% examples %}}
 ## Example Usage
 

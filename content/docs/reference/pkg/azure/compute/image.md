@@ -12,6 +12,7 @@ meta_desc: "Explore the Image resource of the compute module, including examples
 
 Manages a custom virtual machine image that can be used to create virtual machines.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the ResourceGroup resource of the core module, including exa
 
 Manages a Resource Group.
 
+
 {{% examples %}}
 ## Example Usage
 

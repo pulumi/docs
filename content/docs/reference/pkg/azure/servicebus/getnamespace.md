@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNamespace function of the servicebus module, includin
 
 Use this data source to access information about an existing ServiceBus Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

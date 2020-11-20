@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCluster function of the hdinsight module, including e
 
 Use this data source to access information about an existing HDInsight Cluster.
 
+
 {{% examples %}}
 ## Example Usage
 

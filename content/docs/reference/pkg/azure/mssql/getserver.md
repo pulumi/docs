@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServer function of the mssql module, including exampl
 
 Use this data source to access information about an existing Microsoft SQL Server.
 
+
 {{% examples %}}
 ## Example Usage
 

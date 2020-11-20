@@ -12,6 +12,7 @@ meta_desc: "Explore the Server resource of the mysql module, including examples,
 
 Manages a MySQL Server.
 
+
 {{% examples %}}
 ## Example Usage
 

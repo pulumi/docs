@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAppServicePlan function of the appservice module, inc
 
 Use this data source to access information about an existing App Service Plan (formerly known as a `Server Farm`).
 
+
 {{% examples %}}
 ## Example Usage
 

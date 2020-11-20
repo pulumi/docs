@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the mariadb module, including examp
 
 Manages a MariaDB Database within a MariaDB Server
 
+
 {{% examples %}}
 ## Example Usage
 

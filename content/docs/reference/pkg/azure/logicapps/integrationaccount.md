@@ -12,6 +12,7 @@ meta_desc: "Explore the IntegrationAccount resource of the logicapps module, inc
 
 Manages a Logic App Integration Account.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GroupUser resource of the apimanagement module, includin
 
 Manages an API Management User Assignment to a Group.
 
+
 {{% examples %}}
 ## Example Usage
 

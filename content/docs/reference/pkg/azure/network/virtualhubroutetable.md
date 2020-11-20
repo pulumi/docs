@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualHubRouteTable resource of the network module, inc
 
 Manages a Virtual Hub Route Table.
 
+
 {{% examples %}}
 ## Example Usage
 

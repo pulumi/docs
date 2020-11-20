@@ -14,6 +14,7 @@ Manages a Kusto (also known as Azure Data Explorer) Database Principal
 
 > **NOTE:** This resource is being **deprecated** due to API updates and should no longer be used.  Please use azure.kusto.DatabasePrincipalAssignment instead.
 
+
 {{% examples %}}
 ## Example Usage
 

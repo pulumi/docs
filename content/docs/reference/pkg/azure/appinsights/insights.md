@@ -12,6 +12,7 @@ meta_desc: "Explore the Insights resource of the appinsights module, including e
 
 Manages an Application Insights component.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ Manages an Azure Cosmos DB SQL API Dataset inside an Azure Data Factory.
 
 
 
+
 ## Create a DatasetCosmosDBApi Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

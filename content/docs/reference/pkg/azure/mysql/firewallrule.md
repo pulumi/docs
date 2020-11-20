@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallRule resource of the mysql module, including exa
 
 Manages a Firewall Rule for a MySQL Server.
 
+
 {{% examples %}}
 ## Example Usage
 

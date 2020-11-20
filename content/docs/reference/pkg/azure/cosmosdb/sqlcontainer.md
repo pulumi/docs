@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlContainer resource of the cosmosdb module, including 
 
 Manages a SQL Container within a Cosmos DB Account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1963,7 +1964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>
@@ -1992,7 +1993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>
@@ -2021,7 +2022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>
@@ -2050,7 +2051,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>
@@ -2176,7 +2177,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>
@@ -2194,7 +2195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>
@@ -2212,7 +2213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>
@@ -2230,7 +2231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path for which the indexing behavior applies to.
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd>
 
 </dl>

@@ -12,6 +12,7 @@ meta_desc: "Explore the Lock resource of the management module, including exampl
 
 Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.
 
+
 {{% examples %}}
 ## Example Usage
 

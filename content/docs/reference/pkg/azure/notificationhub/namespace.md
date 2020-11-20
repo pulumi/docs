@@ -12,6 +12,7 @@ meta_desc: "Explore the Namespace resource of the notificationhub module, includ
 
 Manages a Notification Hub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

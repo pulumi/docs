@@ -12,6 +12,7 @@ meta_desc: "Explore the ActionRuleActionGroup resource of the monitoring module,
 
 Manages an Monitor Action Rule which type is action group.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the NetworkInterface resource of the network module, includi
 
 Manages a Network Interface.
 
+
 {{% examples %}}
 ## Example Usage
 

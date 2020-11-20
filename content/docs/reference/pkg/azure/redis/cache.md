@@ -38,6 +38,7 @@ A `patch_schedule` block supports the following:
  - [Azure Redis Cache: SKU specific configuration limitations](https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings)
  - [Redis: Available Configuration Settings](http://redis.io/topics/config)
 
+
 {{% examples %}}
 ## Example Usage
 

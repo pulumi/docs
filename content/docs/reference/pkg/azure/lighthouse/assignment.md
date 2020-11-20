@@ -12,6 +12,7 @@ meta_desc: "Explore the Assignment resource of the lighthouse module, including 
 
 Manages a Lighthouse Assignment to a subscription, or to a resource group.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -18,6 +18,7 @@ Manages network rules inside of a Azure Storage Account.
 
 > **NOTE:** Deleting this resource updates the storage account back to the default values it had when the storage account was created.
 
+
 {{% examples %}}
 ## Example Usage
 

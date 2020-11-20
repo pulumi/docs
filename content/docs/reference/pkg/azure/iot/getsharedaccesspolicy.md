@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSharedAccessPolicy function of the iot module, includ
 
 Use this data source to access information about an existing IotHub Shared Access Policy
 
+
 {{% examples %}}
 ## Example Usage
 

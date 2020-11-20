@@ -12,6 +12,7 @@ meta_desc: "Explore the GetImage function of the compute module, including examp
 
 Use this data source to access information about an existing Image.
 
+
 {{% examples %}}
 ## Example Usage
 

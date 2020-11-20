@@ -12,6 +12,7 @@ meta_desc: "Explore the InteractiveQueryCluster resource of the hdinsight module
 
 Manages a HDInsight Interactive Query Cluster.
 
+
 {{% examples %}}
 ## Example Usage
 

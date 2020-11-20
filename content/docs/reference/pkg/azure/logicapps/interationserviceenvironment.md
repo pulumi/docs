@@ -12,6 +12,7 @@ meta_desc: "Explore the InterationServiceEnvironment resource of the logicapps m
 
 Manages private and isolated Logic App instances within an Azure virtual network.
 
+
 {{% examples %}}
 ## Example Usage
 

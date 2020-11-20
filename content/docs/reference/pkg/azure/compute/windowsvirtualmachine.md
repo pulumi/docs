@@ -22,6 +22,7 @@ Manages a Windows Virtual Machine.
 
 > In this release there's a known issue where the `public_ip_address` and `public_ip_addresses` fields may not be fully populated for Dynamic Public IP's.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4407,8 +4408,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccounturi_csharp">
 <a href="#storageaccounturi_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Uri</a>
 </span> 
@@ -4425,8 +4426,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccounturi_go">
 <a href="#storageaccounturi_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Uri</a>
 </span> 
@@ -4443,8 +4444,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccounturi_nodejs">
 <a href="#storageaccounturi_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Uri</a>
 </span> 
@@ -4461,8 +4462,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="storage_account_uri_python">
 <a href="#storage_account_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>uri</a>
 </span> 

@@ -13,6 +13,7 @@ meta_desc: "Explore the EventHubAuthorizationRule resource of the eventhub modul
 
 Manages a Event Hubs authorization Rule within an Event Hub.
 
+
 {{% examples %}}
 ## Example Usage
 

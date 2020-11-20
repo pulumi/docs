@@ -12,6 +12,7 @@ meta_desc: "Explore the NatGatewayPublicIpAssociation resource of the network mo
 
 Manages the association between a Nat Gateway and a Public IP.
 
+
 {{% examples %}}
 ## Example Usage
 

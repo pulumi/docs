@@ -12,6 +12,7 @@ meta_desc: "Explore the Service resource of the search module, including example
 
 Manages a Search Service.
 
+
 {{% examples %}}
 ## Example Usage
 

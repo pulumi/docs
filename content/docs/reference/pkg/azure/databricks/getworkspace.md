@@ -12,6 +12,7 @@ meta_desc: "Explore the GetWorkspace function of the databricks module, includin
 
 Use this data source to access information about an existing Databricks workspace.
 
+
 {{% examples %}}
 ## Example Usage
 

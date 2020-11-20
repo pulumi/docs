@@ -12,6 +12,7 @@ meta_desc: "Explore the Configuration resource of the maintenance module, includ
 
 Manages a maintenance configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

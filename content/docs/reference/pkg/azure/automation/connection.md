@@ -12,6 +12,7 @@ meta_desc: "Explore the Connection resource of the automation module, including 
 
 Manages an Automation Connection.
 
+
 {{% examples %}}
 ## Example Usage
 

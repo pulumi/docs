@@ -12,6 +12,7 @@ meta_desc: "Explore the EventHubNamespaceAuthorizationRule resource of the event
 
 Manages an Authorization Rule for an Event Hub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

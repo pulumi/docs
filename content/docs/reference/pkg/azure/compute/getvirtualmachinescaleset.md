@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVirtualMachineScaleSet function of the compute module
 
 Use this data source to access information about an existing Virtual Machine Scale Set.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the CertificateOrder resource of the appservice module, incl
 
 Manages an App Service Certificate Order.
 
+
 {{% examples %}}
 ## Example Usage
 

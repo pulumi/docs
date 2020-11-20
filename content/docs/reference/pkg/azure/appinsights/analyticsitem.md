@@ -12,6 +12,7 @@ meta_desc: "Explore the AnalyticsItem resource of the appinsights module, includ
 
 Manages an Application Insights Analytics Item component.
 
+
 {{% examples %}}
 ## Example Usage
 

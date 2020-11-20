@@ -12,6 +12,7 @@ meta_desc: "Explore the DatasetPostgresql resource of the datafactory module, in
 
 Manages a PostgreSQL Dataset inside a Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

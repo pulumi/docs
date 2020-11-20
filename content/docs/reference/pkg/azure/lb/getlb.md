@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLB function of the lb module, including examples, inp
 
 Use this data source to access information about an existing Load Balancer
 
+
 {{% examples %}}
 ## Example Usage
 

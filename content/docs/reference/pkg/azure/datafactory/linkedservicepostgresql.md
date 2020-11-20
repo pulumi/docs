@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedServicePostgresql resource of the datafactory modu
 
 Manages a Linked Service (connection) between PostgreSQL and Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

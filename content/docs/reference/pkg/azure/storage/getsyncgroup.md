@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSyncGroup function of the storage module, including e
 
 Use this data source to access information about an existing Storage Sync Group.
 
+
 {{% examples %}}
 ## Example Usage
 

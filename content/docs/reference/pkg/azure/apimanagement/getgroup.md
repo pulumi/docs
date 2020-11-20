@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGroup function of the apimanagement module, including
 
 Use this data source to access information about an existing API Management Group.
 
+
 {{% examples %}}
 ## Example Usage
 

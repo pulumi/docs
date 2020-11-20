@@ -12,6 +12,7 @@ meta_desc: "Explore the QueueAuthorizationRule resource of the servicebus module
 
 Manages an Authorization Rule for a ServiceBus Queue.
 
+
 {{% examples %}}
 ## Example Usage
 

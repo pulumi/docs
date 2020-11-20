@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the datashare module, including e
 
 Use this data source to access information about an existing Data Share Account.
 
+
 {{% examples %}}
 ## Example Usage
 

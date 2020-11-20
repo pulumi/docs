@@ -12,6 +12,7 @@ meta_desc: "Explore the GetHub function of the notificationhub module, including
 
 Use this data source to access information about an existing Notification Hub within a Notification Hub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ Manages a policy set definition.
 
 > **NOTE:**  Policy set definitions (also known as policy initiatives) do not take effect until they are assigned to a scope using a Policy Set Assignment.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -454,7 +455,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -571,7 +572,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -688,7 +689,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -805,7 +806,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1117,7 +1118,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1234,7 +1235,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1351,7 +1352,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1468,7 +1469,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `policy_definition_reference`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

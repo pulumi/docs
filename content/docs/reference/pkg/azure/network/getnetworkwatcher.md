@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNetworkWatcher function of the network module, includ
 
 Use this data source to access information about an existing Network Watcher.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetActionGroup function of the monitoring module, includ
 
 Use this data source to access the properties of an Action Group.
 
+
 {{% examples %}}
 ## Example Usage
 

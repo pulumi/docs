@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the mysql module, including example
 
 Manages a MySQL Database within a MySQL Server
 
+
 {{% examples %}}
 ## Example Usage
 

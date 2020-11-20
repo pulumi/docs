@@ -12,6 +12,7 @@ meta_desc: "Explore the SharedImageGallery resource of the compute module, inclu
 
 Manages a Shared Image Gallery.
 
+
 {{% examples %}}
 ## Example Usage
 

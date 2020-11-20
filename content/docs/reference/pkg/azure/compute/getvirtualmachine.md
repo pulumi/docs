@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVirtualMachine function of the compute module, includ
 
 Use this data source to access information about an existing Virtual Machine.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the cosmosdb module, including ex
 
 Use this data source to access information about an existing CosmosDB (formally DocumentDB) Account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -374,6 +375,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="keyvaultkeyid_csharp">
+<a href="#keyvaultkeyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Key Vault key URI for CMK encryption.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
@@ -666,6 +678,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If virtual network filtering is enabled for this Cosmos DB account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="keyvaultkeyid_go">
+<a href="#keyvaultkeyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Key Vault key URI for CMK encryption.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -966,6 +989,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="keyvaultkeyid_nodejs">
+<a href="#keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Key Vault key URI for CMK encryption.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span> 
@@ -1258,6 +1292,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If virtual network filtering is enabled for this Cosmos DB account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="key_vault_key_id_python">
+<a href="#key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Key Vault key URI for CMK encryption.
 {{% /md %}}</dd>
 
     <dt class="property-"

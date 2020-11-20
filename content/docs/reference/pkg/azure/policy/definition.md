@@ -14,6 +14,7 @@ Manages a policy rule definition on a management group or your provider subscrip
 
 Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.
 
+
 {{% examples %}}
 ## Example Usage
 

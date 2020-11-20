@@ -16,6 +16,7 @@ Manages the Pricing Tier for Azure Security Center in the current subscription.
 
 > **NOTE:** Deletion of this resource does not change or reset the pricing tier to `Free`
 
+
 {{% examples %}}
 ## Example Usage
 

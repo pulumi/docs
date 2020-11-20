@@ -12,6 +12,7 @@ meta_desc: "Explore the GetTrafficManager function of the network module, includ
 
 Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
 
+
 {{% examples %}}
 ## Example Usage
 

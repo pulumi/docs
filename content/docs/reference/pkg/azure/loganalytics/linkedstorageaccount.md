@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedStorageAccount resource of the loganalytics module
 
 Manages a Log Analytics Linked Storage Account.
 
+
 {{% examples %}}
 ## Example Usage
 

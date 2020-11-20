@@ -12,6 +12,7 @@ meta_desc: "Explore the ClusterPrincipalAssignment resource of the kusto module,
 
 Manages a Kusto Cluster Principal Assignment.
 
+
 {{% examples %}}
 ## Example Usage
 

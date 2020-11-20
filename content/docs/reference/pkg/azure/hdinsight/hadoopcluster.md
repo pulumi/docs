@@ -12,6 +12,7 @@ meta_desc: "Explore the HadoopCluster resource of the hdinsight module, includin
 
 Manages a HDInsight Hadoop Cluster.
 
+
 {{% examples %}}
 ## Example Usage
 

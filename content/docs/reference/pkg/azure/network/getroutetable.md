@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRouteTable function of the network module, including 
 
 Use this data source to access information about an existing Route Table.
 
+
 {{% examples %}}
 ## Example Usage
 

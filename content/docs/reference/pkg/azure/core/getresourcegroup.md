@@ -12,6 +12,7 @@ meta_desc: "Explore the GetResourceGroup function of the core module, including 
 
 Use this data source to access information about an existing Resource Group.
 
+
 {{% examples %}}
 ## Example Usage
 

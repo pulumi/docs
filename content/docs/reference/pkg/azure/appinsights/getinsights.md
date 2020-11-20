@@ -12,6 +12,7 @@ meta_desc: "Explore the GetInsights function of the appinsights module, includin
 
 Use this data source to access information about an existing Application Insights component.
 
+
 {{% examples %}}
 ## Example Usage
 

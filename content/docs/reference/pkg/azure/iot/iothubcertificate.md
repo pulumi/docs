@@ -14,6 +14,7 @@ Manages an IotHub Device Provisioning Service Certificate.
 
 
 
+
 ## Create a IotHubCertificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

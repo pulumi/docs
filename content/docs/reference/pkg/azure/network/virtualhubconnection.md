@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualHubConnection resource of the network module, inc
 
 Manages a Connection for a Virtual Hub.
 
+
 {{% examples %}}
 ## Example Usage
 

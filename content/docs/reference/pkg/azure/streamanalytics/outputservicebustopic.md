@@ -12,6 +12,7 @@ meta_desc: "Explore the OutputServicebusTopic resource of the streamanalytics mo
 
 Manages a Stream Analytics Output to a ServiceBus Topic.
 
+
 {{% examples %}}
 ## Example Usage
 

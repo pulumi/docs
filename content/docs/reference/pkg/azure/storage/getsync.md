@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSync function of the storage module, including exampl
 
 Use this data source to access information about an existing Storage Sync.
 
+
 {{% examples %}}
 ## Example Usage
 

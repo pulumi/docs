@@ -12,6 +12,7 @@ meta_desc: "Explore the PlacementGroup resource of the proximity module, includi
 
 Manages a proximity placement group for virtual machines, virtual machine scale sets and availability sets.
 
+
 {{% examples %}}
 ## Example Usage
 

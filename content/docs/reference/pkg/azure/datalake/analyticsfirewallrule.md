@@ -12,6 +12,7 @@ meta_desc: "Explore the AnalyticsFirewallRule resource of the datalake module, i
 
 Manages a Azure Data Lake Analytics Firewall Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

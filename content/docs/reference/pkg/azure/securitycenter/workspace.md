@@ -16,6 +16,7 @@ Manages the subscription's Security Center Workspace.
 
 > **NOTE:** The subscription's pricing model can not be `Free` for this to have any affect.
 
+
 {{% examples %}}
 ## Example Usage
 

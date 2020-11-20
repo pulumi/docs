@@ -12,6 +12,7 @@ meta_desc: "Explore the CustomProvider resource of the core module, including ex
 
 Manages an Azure Custom Provider.
 
+
 {{% examples %}}
 ## Example Usage
 

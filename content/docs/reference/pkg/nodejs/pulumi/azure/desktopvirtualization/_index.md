@@ -3,7 +3,7 @@ title: "Module desktopvirtualization"
 title_tag: "Module desktopvirtualization | Package @pulumi/azure | Node.js SDK"
 linktitle: "desktopvirtualization"
 meta_desc: "Explore members of the desktopvirtualization module in the @pulumi/azure package."
-git_sha: "e017cf62df4615a9a84e768d6370e640838fc2bc"
+git_sha: "edf6ad707defa77aa50be8a5aec9983f4d44d071"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ApplicationGroup" data-link-title="ApplicationGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">
         Resource <strong>ApplicationGroup</strong>
     </a>
 </h3>
@@ -86,7 +86,7 @@ const desktopapp = new azure.desktopvirtualization.ApplicationGroup("desktopapp"
 ```
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -100,7 +100,7 @@ Create a ApplicationGroup resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -111,14 +111,14 @@ Get an existing ApplicationGroup resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -129,7 +129,7 @@ Returns true if the given object is an instance of ApplicationGroup.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L78">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L78">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Option to set a description for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L82">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L82">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ Option to set a description for the Virtual Desktop Application Group.
 Option to set a friendly name for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-hostPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L87">property <b>hostPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L87">property <b>hostPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -163,7 +163,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L92">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L92">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ located. Changing the location/region forces a new resource to be created.
 The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L102">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L102">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ create the Virtual Desktop Application Group. Changing the resource group name f
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L106">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L106">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L111">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L111">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
 
 <h4 class="pdoc-member-header" id="ApplicationGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -216,7 +216,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="HostPool" data-link-title="HostPool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">
         Resource <strong>HostPool</strong>
     </a>
 </h3>
@@ -245,7 +245,7 @@ const exampleHostPool = new azure.desktopvirtualization.HostPool("exampleHostPoo
 ```
 
 <h4 class="pdoc-member-header" id="HostPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -259,7 +259,7 @@ Create a HostPool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HostPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -270,14 +270,14 @@ Get an existing HostPool resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HostPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HostPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -288,7 +288,7 @@ Returns true if the given object is an instance of HostPool.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HostPool-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description for the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPool-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L66">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L66">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ A description for the Virtual Desktop Host Pool.
 A friendly name for the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -313,7 +313,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HostPool-loadBalancerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L72">property <b>loadBalancerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L72">property <b>loadBalancerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadBalancerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ deployments and may be missing (undefined) during planning phases.
 `Persistent` should be used if the host pool type is `Personal`
 
 <h4 class="pdoc-member-header" id="HostPool-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L77">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ The location/region where the Virtual Desktop Host Pool is
 located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPool-maximumSessionsAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L82">property <b>maximumSessionsAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L82">property <b>maximumSessionsAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumSessionsAllowed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ A valid integer value from 0 to 999999 for the maximum number of users that have
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 
 <h4 class="pdoc-member-header" id="HostPool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ The name of the Virtual Desktop Host Pool. Changing the name
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPool-personalDesktopAssignmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L92">property <b>personalDesktopAssignmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L92">property <b>personalDesktopAssignmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>personalDesktopAssignmentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ forces a new resource to be created.
 `Direct` Assignment – Admin selects a specific host to assign to an user.
 
 <h4 class="pdoc-member-header" id="HostPool-preferredAppGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L97">property <b>preferredAppGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L97">property <b>preferredAppGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredAppGroupType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -368,7 +368,7 @@ Option to specify the preferred Application Group type for the Virtual Desktop H
 Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 
 <h4 class="pdoc-member-header" id="HostPool-registrationInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L101">property <b>registrationInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L101">property <b>registrationInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registrationInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HostPoolRegistrationInfo'>HostPoolRegistrationInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -376,7 +376,7 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 A `registrationInfo` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPool-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L107">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L107">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ create the Virtual Desktop Host Pool. Changing the resource group name forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L111">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L111">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="HostPool-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L116">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L116">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ The type of the Virtual Desktop Host Pool. Valid options are
 `Personal` or `Pooled`. Changing the type forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -412,12 +412,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="HostPool-validateEnvironment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L117">property <b>validateEnvironment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L117">property <b>validateEnvironment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validateEnvironment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Workspace" data-link-title="Workspace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L25">
         Resource <strong>Workspace</strong>
     </a>
 </h3>
@@ -442,7 +442,7 @@ const workspace = new azure.desktopvirtualization.Workspace("workspace", {
 ```
 
 <h4 class="pdoc-member-header" id="Workspace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -456,7 +456,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Workspace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -467,14 +467,14 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Workspace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Workspace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -485,7 +485,7 @@ Returns true if the given object is an instance of Workspace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Workspace-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description for the Virtual Desktop Workspace.
 
 <h4 class="pdoc-member-header" id="Workspace-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L60">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L60">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ A description for the Virtual Desktop Workspace.
 A friendly name for the Virtual Desktop Workspace.
 
 <h4 class="pdoc-member-header" id="Workspace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -510,7 +510,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Workspace-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L64">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L64">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ deployments and may be missing (undefined) during planning phases.
 The location/region where the Virtual Desktop Workspace is located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -527,7 +527,7 @@ The name of the Virtual Desktop Workspace. Changing the name
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ create the Virtual Desktop Workspace. Changing the resource group name forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L79">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Workspace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -554,7 +554,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="WorkspaceApplicationGroupAssociation" data-link-title="WorkspaceApplicationGroupAssociation">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">
         Resource <strong>WorkspaceApplicationGroupAssociation</strong>
     </a>
 </h3>
@@ -593,7 +593,7 @@ const workspaceremoteapp = new azure.desktopvirtualization.WorkspaceApplicationG
 ```
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -607,7 +607,7 @@ Create a WorkspaceApplicationGroupAssociation resource with the given unique nam
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -618,14 +618,14 @@ Get an existing WorkspaceApplicationGroupAssociation resource's state with the g
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -636,7 +636,7 @@ Returns true if the given object is an instance of WorkspaceApplicationGroupAsso
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-applicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L70">property <b>applicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L70">property <b>applicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The resource ID for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -653,7 +653,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -662,7 +662,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociation-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L74">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L74">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ The resource ID for the Virtual Desktop Workspace.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApplicationGroupArgs" data-link-title="ApplicationGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L210">
         interface <strong>ApplicationGroupArgs</strong>
     </a>
 </h3>
@@ -683,7 +683,7 @@ The resource ID for the Virtual Desktop Workspace.
 The set of arguments for constructing a ApplicationGroup resource.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L214">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L214">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -691,7 +691,7 @@ The set of arguments for constructing a ApplicationGroup resource.
 Option to set a description for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L218">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L218">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ Option to set a description for the Virtual Desktop Application Group.
 Option to set a friendly name for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-hostPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L223">property <b>hostPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L223">property <b>hostPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -708,7 +708,7 @@ Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L228">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L228">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L232">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L232">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -725,7 +725,7 @@ located. Changing the location/region forces a new resource to be created.
 The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L238">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L238">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -735,7 +735,7 @@ create the Virtual Desktop Application Group. Changing the resource group name f
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L242">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L242">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -743,7 +743,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L247">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L247">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -752,7 +752,7 @@ Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
 
 <h3 class="pdoc-module-header" id="ApplicationGroupState" data-link-title="ApplicationGroupState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L167">
         interface <strong>ApplicationGroupState</strong>
     </a>
 </h3>
@@ -762,7 +762,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
 Input properties used for looking up and filtering ApplicationGroup resources.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L171">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ Input properties used for looking up and filtering ApplicationGroup resources.
 Option to set a description for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L175">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L175">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ Option to set a description for the Virtual Desktop Application Group.
 Option to set a friendly name for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-hostPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L180">property <b>hostPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L180">property <b>hostPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -787,7 +787,7 @@ Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L185">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L185">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -796,7 +796,7 @@ The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ located. Changing the location/region forces a new resource to be created.
 The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L195">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L195">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -814,7 +814,7 @@ create the Virtual Desktop Application Group. Changing the resource group name f
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -822,7 +822,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ApplicationGroupState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L204">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/applicationGroup.ts#L204">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -831,7 +831,7 @@ Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
 
 <h3 class="pdoc-module-header" id="HostPoolArgs" data-link-title="HostPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L248">
         interface <strong>HostPoolArgs</strong>
     </a>
 </h3>
@@ -841,7 +841,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
 The set of arguments for constructing a HostPool resource.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L252">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L252">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,7 +849,7 @@ The set of arguments for constructing a HostPool resource.
 A description for the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L256">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L256">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -857,7 +857,7 @@ A description for the Virtual Desktop Host Pool.
 A friendly name for the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-loadBalancerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L262">property <b>loadBalancerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L262">property <b>loadBalancerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -867,7 +867,7 @@ A friendly name for the Virtual Desktop Host Pool.
 `Persistent` should be used if the host pool type is `Personal`
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L267">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L267">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -876,7 +876,7 @@ The location/region where the Virtual Desktop Host Pool is
 located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-maximumSessionsAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L272">property <b>maximumSessionsAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L272">property <b>maximumSessionsAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumSessionsAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ A valid integer value from 0 to 999999 for the maximum number of users that have
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L277">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L277">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +894,7 @@ The name of the Virtual Desktop Host Pool. Changing the name
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-personalDesktopAssignmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L282">property <b>personalDesktopAssignmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L282">property <b>personalDesktopAssignmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>personalDesktopAssignmentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -903,7 +903,7 @@ forces a new resource to be created.
 `Direct` Assignment – Admin selects a specific host to assign to an user.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-preferredAppGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L287">property <b>preferredAppGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L287">property <b>preferredAppGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredAppGroupType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -912,7 +912,7 @@ Option to specify the preferred Application Group type for the Virtual Desktop H
 Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-registrationInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L291">property <b>registrationInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L291">property <b>registrationInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registrationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HostPoolRegistrationInfo'>HostPoolRegistrationInfo</a>&gt;;</code></pre>
@@ -920,7 +920,7 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 A `registrationInfo` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L297">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L297">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -930,7 +930,7 @@ create the Virtual Desktop Host Pool. Changing the resource group name forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L301">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L301">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -938,7 +938,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L306">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L306">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -947,12 +947,12 @@ The type of the Virtual Desktop Host Pool. Valid options are
 `Personal` or `Pooled`. Changing the type forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolArgs-validateEnvironment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L307">property <b>validateEnvironment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L307">property <b>validateEnvironment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateEnvironment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="HostPoolState" data-link-title="HostPoolState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L183">
         interface <strong>HostPoolState</strong>
     </a>
 </h3>
@@ -962,7 +962,7 @@ The type of the Virtual Desktop Host Pool. Valid options are
 Input properties used for looking up and filtering HostPool resources.
 
 <h4 class="pdoc-member-header" id="HostPoolState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -970,7 +970,7 @@ Input properties used for looking up and filtering HostPool resources.
 A description for the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPoolState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L191">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L191">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -978,7 +978,7 @@ A description for the Virtual Desktop Host Pool.
 A friendly name for the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPoolState-loadBalancerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L197">property <b>loadBalancerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L197">property <b>loadBalancerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -988,7 +988,7 @@ A friendly name for the Virtual Desktop Host Pool.
 `Persistent` should be used if the host pool type is `Personal`
 
 <h4 class="pdoc-member-header" id="HostPoolState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L202">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L202">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -997,7 +997,7 @@ The location/region where the Virtual Desktop Host Pool is
 located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolState-maximumSessionsAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L207">property <b>maximumSessionsAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L207">property <b>maximumSessionsAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumSessionsAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ A valid integer value from 0 to 999999 for the maximum number of users that have
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 
 <h4 class="pdoc-member-header" id="HostPoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L212">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ The name of the Virtual Desktop Host Pool. Changing the name
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolState-personalDesktopAssignmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L217">property <b>personalDesktopAssignmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L217">property <b>personalDesktopAssignmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>personalDesktopAssignmentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ forces a new resource to be created.
 `Direct` Assignment – Admin selects a specific host to assign to an user.
 
 <h4 class="pdoc-member-header" id="HostPoolState-preferredAppGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L222">property <b>preferredAppGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L222">property <b>preferredAppGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredAppGroupType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ Option to specify the preferred Application Group type for the Virtual Desktop H
 Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 
 <h4 class="pdoc-member-header" id="HostPoolState-registrationInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L226">property <b>registrationInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L226">property <b>registrationInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registrationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HostPoolRegistrationInfo'>HostPoolRegistrationInfo</a>&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 A `registrationInfo` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 
 <h4 class="pdoc-member-header" id="HostPoolState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L232">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L232">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ create the Virtual Desktop Host Pool. Changing the resource group name forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L236">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L236">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1059,7 +1059,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="HostPoolState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L241">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L241">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1068,12 +1068,12 @@ The type of the Virtual Desktop Host Pool. Valid options are
 `Personal` or `Pooled`. Changing the type forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HostPoolState-validateEnvironment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/hostPool.ts#L242">property <b>validateEnvironment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/hostPool.ts#L242">property <b>validateEnvironment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateEnvironment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="WorkspaceApplicationGroupAssociationArgs" data-link-title="WorkspaceApplicationGroupAssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L129">
         interface <strong>WorkspaceApplicationGroupAssociationArgs</strong>
     </a>
 </h3>
@@ -1083,7 +1083,7 @@ The type of the Virtual Desktop Host Pool. Valid options are
 The set of arguments for constructing a WorkspaceApplicationGroupAssociation resource.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociationArgs-applicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L133">property <b>applicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L133">property <b>applicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ The set of arguments for constructing a WorkspaceApplicationGroupAssociation res
 The resource ID for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociationArgs-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L137">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L137">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ The resource ID for the Virtual Desktop Application Group.
 The resource ID for the Virtual Desktop Workspace.
 
 <h3 class="pdoc-module-header" id="WorkspaceApplicationGroupAssociationState" data-link-title="WorkspaceApplicationGroupAssociationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L115">
         interface <strong>WorkspaceApplicationGroupAssociationState</strong>
     </a>
 </h3>
@@ -1109,7 +1109,7 @@ The resource ID for the Virtual Desktop Workspace.
 Input properties used for looking up and filtering WorkspaceApplicationGroupAssociation resources.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociationState-applicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L119">property <b>applicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L119">property <b>applicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ Input properties used for looking up and filtering WorkspaceApplicationGroupAsso
 The resource ID for the Virtual Desktop Application Group.
 
 <h4 class="pdoc-member-header" id="WorkspaceApplicationGroupAssociationState-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L123">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspaceApplicationGroupAssociation.ts#L123">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ The resource ID for the Virtual Desktop Application Group.
 The resource ID for the Virtual Desktop Workspace.
 
 <h3 class="pdoc-module-header" id="WorkspaceArgs" data-link-title="WorkspaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L158">
         interface <strong>WorkspaceArgs</strong>
     </a>
 </h3>
@@ -1135,7 +1135,7 @@ The resource ID for the Virtual Desktop Workspace.
 The set of arguments for constructing a Workspace resource.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L162">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L162">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ The set of arguments for constructing a Workspace resource.
 A description for the Virtual Desktop Workspace.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L166">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L166">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ A description for the Virtual Desktop Workspace.
 A friendly name for the Virtual Desktop Workspace.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ A friendly name for the Virtual Desktop Workspace.
 The location/region where the Virtual Desktop Workspace is located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1168,7 +1168,7 @@ The name of the Virtual Desktop Workspace. Changing the name
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L181">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L181">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1178,7 +1178,7 @@ create the Virtual Desktop Workspace. Changing the resource group name forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L185">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1186,7 +1186,7 @@ a new resource to be created.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="WorkspaceState" data-link-title="WorkspaceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L125">
         interface <strong>WorkspaceState</strong>
     </a>
 </h3>
@@ -1196,7 +1196,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Workspace resources.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L129">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L129">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1204,7 +1204,7 @@ Input properties used for looking up and filtering Workspace resources.
 A description for the Virtual Desktop Workspace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L133">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L133">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ A description for the Virtual Desktop Workspace.
 A friendly name for the Virtual Desktop Workspace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L137">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L137">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ A friendly name for the Virtual Desktop Workspace.
 The location/region where the Virtual Desktop Workspace is located. Changing the location/region forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ The name of the Virtual Desktop Workspace. Changing the name
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L148">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L148">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1239,7 +1239,7 @@ create the Virtual Desktop Workspace. Changing the resource group name forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/desktopvirtualization/workspace.ts#L152">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/desktopvirtualization/workspace.ts#L152">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

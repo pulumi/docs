@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSubscription function of the core module, including e
 
 Use this data source to access information about an existing Subscription.
 
+
 {{% examples %}}
 ## Example Usage
 

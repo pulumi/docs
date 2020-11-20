@@ -12,6 +12,7 @@ meta_desc: "Explore the NsRecord resource of the dns module, including examples,
 
 Enables you to manage DNS NS Records within Azure DNS.
 
+
 {{% examples %}}
 ## Example Usage
 

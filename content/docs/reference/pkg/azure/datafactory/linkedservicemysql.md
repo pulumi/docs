@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedServiceMysql resource of the datafactory module, i
 
 Manages a Linked Service (connection) between MySQL and Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

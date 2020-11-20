@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedServiceKeyVault resource of the datafactory module
 
 Manages a Linked Service (connection) between Key Vault and Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

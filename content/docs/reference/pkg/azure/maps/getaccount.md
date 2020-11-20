@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the maps module, including exampl
 
 Use this data source to access information about an existing Azure Maps Account.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallRule resource of the sql module, including examp
 
 Allows you to manage an Azure SQL Firewall Rule
 
+
 {{% examples %}}
 ## Example Usage
 

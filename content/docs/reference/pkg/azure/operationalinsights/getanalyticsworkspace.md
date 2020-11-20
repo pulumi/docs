@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAnalyticsWorkspace function of the operationalinsight
 
 Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.
 
+
 {{% examples %}}
 ## Example Usage
 

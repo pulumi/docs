@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationGroup resource of the desktopvirtualization m
 
 Manages a Virtual Desktop Application Group.
 
+
 {{% examples %}}
 ## Example Usage
 

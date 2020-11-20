@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallRule resource of the redis module, including exa
 
 Manages a Firewall Rule associated with a Redis Cache.
 
+
 {{% examples %}}
 ## Example Usage
 

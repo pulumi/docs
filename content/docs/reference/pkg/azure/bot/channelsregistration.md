@@ -12,6 +12,7 @@ meta_desc: "Explore the ChannelsRegistration resource of the bot module, includi
 
 Manages a Bot Channels Registration.
 
+
 {{% examples %}}
 ## Example Usage
 

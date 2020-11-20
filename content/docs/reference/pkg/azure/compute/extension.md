@@ -17,6 +17,7 @@ and run automated tasks.
 
 > **NOTE:** Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.
 
+
 {{% examples %}}
 ## Example Usage
 

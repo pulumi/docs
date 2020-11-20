@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDedicatedHostGroup function of the compute module, in
 
 Use this data source to access information about an existing Dedicated Host Group.
 
+
 {{% examples %}}
 ## Example Usage
 

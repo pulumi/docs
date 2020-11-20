@@ -12,6 +12,7 @@ meta_desc: "Explore the AvailabilitySet resource of the compute module, includin
 
 Manages an Availability Set for Virtual Machines.
 
+
 {{% examples %}}
 ## Example Usage
 

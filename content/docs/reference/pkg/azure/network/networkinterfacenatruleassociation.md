@@ -12,6 +12,7 @@ meta_desc: "Explore the NetworkInterfaceNatRuleAssociation resource of the netwo
 
 Manages the association between a Network Interface and a Load Balancer's NAT Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

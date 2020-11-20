@@ -12,6 +12,7 @@ meta_desc: "Explore the TriggerHttpRequest resource of the logicapps module, inc
 
 Manages a HTTP Request Trigger within a Logic App Workflow
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the AdvancedThreatProtection resource of the securitycenter 
 
 Manages a resources Advanced Threat Protection setting.
 
+
 {{% examples %}}
 ## Example Usage
 

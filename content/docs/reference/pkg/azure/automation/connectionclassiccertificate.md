@@ -12,6 +12,7 @@ meta_desc: "Explore the ConnectionClassicCertificate resource of the automation 
 
 Manages an Automation Connection with type `AzureClassicCertificate`.
 
+
 {{% examples %}}
 ## Example Usage
 

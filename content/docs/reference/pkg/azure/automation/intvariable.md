@@ -12,6 +12,7 @@ meta_desc: "Explore the IntVariable resource of the automation module, including
 
 Manages a integer variable in Azure Automation
 
+
 {{% examples %}}
 ## Example Usage
 

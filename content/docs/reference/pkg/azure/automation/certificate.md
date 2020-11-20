@@ -14,6 +14,7 @@ Manages an Automation Certificate.
 
 
 
+
 ## Create a Certificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

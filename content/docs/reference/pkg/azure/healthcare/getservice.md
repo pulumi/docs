@@ -12,6 +12,7 @@ meta_desc: "Explore the GetService function of the healthcare module, including 
 
 Use this data source to access information about an existing Healthcare Service
 
+
 {{% examples %}}
 ## Example Usage
 

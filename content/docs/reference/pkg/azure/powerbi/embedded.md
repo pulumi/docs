@@ -12,6 +12,7 @@ meta_desc: "Explore the Embedded resource of the powerbi module, including examp
 
 Manages a PowerBI Embedded.
 
+
 {{% examples %}}
 ## Example Usage
 

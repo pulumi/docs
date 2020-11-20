@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServiceTags function of the network module, including
 
 Use this data source to access information about Service Tags.
 
+
 {{% examples %}}
 ## Example Usage
 

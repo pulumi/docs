@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVault function of the recoveryservices module, includ
 
 Use this data source to access information about an existing Recovery Services Vault.
 
+
 {{% examples %}}
 ## Example Usage
 

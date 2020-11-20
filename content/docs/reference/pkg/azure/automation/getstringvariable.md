@@ -12,6 +12,7 @@ meta_desc: "Explore the GetStringVariable function of the automation module, inc
 
 Use this data source to access information about an existing Automation String Variable.
 
+
 {{% examples %}}
 ## Example Usage
 

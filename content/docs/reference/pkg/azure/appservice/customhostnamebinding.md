@@ -12,6 +12,7 @@ meta_desc: "Explore the CustomHostnameBinding resource of the appservice module,
 
 Manages a Hostname Binding within an App Service (or Function App).
 
+
 {{% examples %}}
 ## Example Usage
 

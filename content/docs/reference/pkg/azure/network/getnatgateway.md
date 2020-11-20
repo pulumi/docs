@@ -14,6 +14,7 @@ Use this data source to access information about an existing NAT Gateway.
 
 
 
+
 ## Using GetNatGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

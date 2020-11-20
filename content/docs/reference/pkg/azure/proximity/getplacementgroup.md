@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPlacementGroup function of the proximity module, incl
 
 Use this data source to access information about an existing Proximity Placement Group.
 
+
 {{% examples %}}
 ## Example Usage
 

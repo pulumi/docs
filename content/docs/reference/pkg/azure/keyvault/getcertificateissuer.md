@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificateIssuer function of the keyvault module, in
 
 Use this data source to access information about an existing Key Vault Certificate Issuer.
 
+
 {{% examples %}}
 ## Example Usage
 

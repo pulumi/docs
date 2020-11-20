@@ -14,6 +14,7 @@ Manages a Security Alert Policy for a MSSQL Server.
 
 > **NOTE** Security Alert Policy is currently only available for MS SQL databases.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the UserAssignedIdentity resource of the authorization modul
 
 Manages a user assigned identity.
 
+
 {{% examples %}}
 ## Example Usage
 

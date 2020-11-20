@@ -12,6 +12,7 @@ meta_desc: "Explore the RoleAssignment resource of the synapse module, including
 
 Allows you to Manages a Synapse Role Assignment.
 
+
 {{% examples %}}
 ## Example Usage
 

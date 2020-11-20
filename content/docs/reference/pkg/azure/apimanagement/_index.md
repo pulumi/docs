@@ -21,6 +21,7 @@ Explore the resources and functions of the apimanagement module in the Azure pac
     <li><a href="authorizationserver" title="AuthorizationServer"><span class="symbol resource"></span>AuthorizationServer</a></li>
     <li><a href="backend" title="Backend"><span class="symbol resource"></span>Backend</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
     <li><a href="diagnostic" title="Diagnostic"><span class="symbol resource"></span>Diagnostic</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupuser" title="GroupUser"><span class="symbol resource"></span>GroupUser</a></li>
@@ -61,7 +62,7 @@ Explore the resources and functions of the apimanagement module in the Azure pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.30.1</dd>
+	<dd>3.31.0</dd>
 </dl>
 
 

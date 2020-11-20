@@ -12,6 +12,7 @@ meta_desc: "Explore the Zone resource of the privatedns module, including exampl
 
 Enables you to manage Private DNS zones within Azure DNS. These zones are hosted on Azure's name servers.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPlatformImage function of the compute module, includi
 
 Use this data source to access information about a Platform Image.
 
+
 {{% examples %}}
 ## Example Usage
 

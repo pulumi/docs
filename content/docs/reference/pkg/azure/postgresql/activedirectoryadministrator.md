@@ -12,6 +12,7 @@ meta_desc: "Explore the ActiveDirectoryAdministrator resource of the postgresql 
 
 Allows you to set a user or group as the AD administrator for an PostgreSQL server in Azure
 
+
 {{% examples %}}
 ## Example Usage
 

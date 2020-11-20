@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSharedImageGallery function of the compute module, in
 
 Use this data source to access information about an existing Shared Image Gallery.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNetworkInterface function of the network module, incl
 
 Use this data source to access information about an existing Network Interface.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the ConsumerGroup resource of the iot module, including exam
 
 Manages a Consumer Group within an IotHub
 
+
 {{% examples %}}
 ## Example Usage
 

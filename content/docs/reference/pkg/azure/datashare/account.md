@@ -12,6 +12,7 @@ meta_desc: "Explore the Account resource of the datashare module, including exam
 
 Manages a Data Share Account.
 
+
 {{% examples %}}
 ## Example Usage
 

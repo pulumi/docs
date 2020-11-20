@@ -14,6 +14,7 @@ Manages a Customer Managed Key for a Kusto Cluster.
 
 
 
+
 ## Create a ClusterCustomerManagedKey Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the RoleDefinition resource of the authorization module, inc
 
 Manages a custom Role Definition, used to assign Roles to Users/Principals. See ['Understand role definitions'](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions) in the Azure documentation for more details.
 
+
 {{% examples %}}
 ## Example Usage
 

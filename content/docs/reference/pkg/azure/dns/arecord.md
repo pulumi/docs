@@ -12,6 +12,7 @@ meta_desc: "Explore the ARecord resource of the dns module, including examples, 
 
 Enables you to manage DNS A Records within Azure DNS.
 
+
 {{% examples %}}
 ## Example Usage
 

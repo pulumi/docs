@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlDatabase resource of the cosmosdb module, including e
 
 Manages a SQL Database within a Cosmos DB Account.
 
+
 {{% examples %}}
 ## Example Usage
 

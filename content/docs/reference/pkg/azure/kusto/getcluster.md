@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCluster function of the kusto module, including examp
 
 Use this data source to access information about an existing Kusto (also known as Azure Data Explorer) Cluster
 
+
 {{% examples %}}
 ## Example Usage
 

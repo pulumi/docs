@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIntegrationAccount function of the logicapps module, 
 
 Use this data source to access information about an existing Logic App Integration Account.
 
+
 {{% examples %}}
 ## Example Usage
 

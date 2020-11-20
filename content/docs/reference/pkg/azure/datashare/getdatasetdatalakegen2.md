@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDatasetDataLakeGen2 function of the datashare module,
 
 Use this data source to access information about an existing Data Share Data Lake Gen2 Dataset.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetTopic function of the eventgrid module, including exa
 
 Use this data source to access information about an existing EventGrid Topic
 
+
 {{% examples %}}
 ## Example Usage
 
