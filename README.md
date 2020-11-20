@@ -99,7 +99,7 @@ brew install docfx
 
 `make ensure` will run `yarn install` which resolves project dependencies.
 
-`make lint_markdown` will run `yarn lint-markdown` which lints the markdown in the `content` directory.
+`make lint` will run `yarn lint-markdown` which lints the markdown in the `content` directory.
 
 `make build` will generate the website (published to `./public`).
 
