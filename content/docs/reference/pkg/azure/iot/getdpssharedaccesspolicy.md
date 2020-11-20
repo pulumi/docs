@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDpsSharedAccessPolicy function of the iot module, inc
 
 Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy
 
+
 {{% examples %}}
 ## Example Usage
 

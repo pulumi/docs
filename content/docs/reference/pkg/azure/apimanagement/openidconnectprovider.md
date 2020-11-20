@@ -12,6 +12,7 @@ meta_desc: "Explore the OpenIdConnectProvider resource of the apimanagement modu
 
 Manages an OpenID Connect Provider within a API Management Service.
 
+
 {{% examples %}}
 ## Example Usage
 

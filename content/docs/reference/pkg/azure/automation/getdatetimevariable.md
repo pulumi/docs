@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDateTimeVariable function of the automation module, i
 
 Use this data source to access information about an existing Automation Datetime Variable.
 
+
 {{% examples %}}
 ## Example Usage
 

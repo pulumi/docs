@@ -14,6 +14,7 @@ Manages an AzureNetwork DDoS Protection Plan.
 
 > **NOTE** Azure only allows `one` DDoS Protection Plan per region.
 
+
 {{% examples %}}
 ## Example Usage
 

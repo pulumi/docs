@@ -12,6 +12,7 @@ meta_desc: "Explore the Cluster resource of the eventhub module, including examp
 
 Manages an EventHub Cluster
 
+
 {{% examples %}}
 ## Example Usage
 

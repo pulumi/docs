@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDps function of the iot module, including examples, i
 
 Use this data source to access information about an existing IotHub Device Provisioning Service.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the GetEventhubNamespace function of the eventhub module, in
 
 Use this data source to access information about an existing EventHub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

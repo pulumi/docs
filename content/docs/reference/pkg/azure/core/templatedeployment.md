@@ -19,6 +19,7 @@ One workaround for this is to use a unique Resource Group for each ARM Template 
 
 This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. [More information](https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete).
 
+
 {{% examples %}}
 ## Example Usage
 

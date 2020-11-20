@@ -12,6 +12,7 @@ meta_desc: "Explore the Vault resource of the recoveryservices module, including
 
 Manages an Recovery Services Vault.
 
+
 {{% examples %}}
 ## Example Usage
 

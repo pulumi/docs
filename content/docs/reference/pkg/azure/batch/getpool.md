@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPool function of the batch module, including examples
 
 Use this data source to access information about an existing Batch pool
 
+
 {{% examples %}}
 ## Example Usage
 

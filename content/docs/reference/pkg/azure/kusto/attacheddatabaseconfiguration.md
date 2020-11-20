@@ -12,6 +12,7 @@ meta_desc: "Explore the AttachedDatabaseConfiguration resource of the kusto modu
 
 Manages a Kusto (also known as Azure Data Explorer) Attached Database Configuration
 
+
 {{% examples %}}
 ## Example Usage
 

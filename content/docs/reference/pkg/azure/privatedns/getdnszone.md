@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDnsZone function of the privatedns module, including 
 
 Use this data source to access information about an existing Private DNS Zone.
 
+
 {{% examples %}}
 ## Example Usage
 

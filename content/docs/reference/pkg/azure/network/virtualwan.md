@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualWan resource of the network module, including exa
 
 Manages a Virtual WAN.
 
+
 {{% examples %}}
 ## Example Usage
 

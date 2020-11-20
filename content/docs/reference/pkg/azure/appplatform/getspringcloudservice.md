@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSpringCloudService function of the appplatform module
 
 Use this data source to access information about an existing Spring Cloud Service.
 
+
 {{% examples %}}
 ## Example Usage
 

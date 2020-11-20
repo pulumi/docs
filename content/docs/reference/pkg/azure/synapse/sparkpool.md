@@ -12,6 +12,7 @@ meta_desc: "Explore the SparkPool resource of the synapse module, including exam
 
 Manages a Synapse Spark Pool.
 
+
 {{% examples %}}
 ## Example Usage
 

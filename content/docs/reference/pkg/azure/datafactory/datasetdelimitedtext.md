@@ -12,6 +12,7 @@ meta_desc: "Explore the DatasetDelimitedText resource of the datafactory module,
 
 Manages an Azure Delimited Text Dataset inside an Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

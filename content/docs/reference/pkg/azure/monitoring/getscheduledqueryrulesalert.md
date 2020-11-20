@@ -12,6 +12,7 @@ meta_desc: "Explore the GetScheduledQueryRulesAlert function of the monitoring m
 
 Use this data source to access the properties of an AlertingAction scheduled query rule.
 
+
 {{% examples %}}
 ## Example Usage
 

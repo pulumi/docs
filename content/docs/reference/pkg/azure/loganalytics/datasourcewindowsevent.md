@@ -12,6 +12,7 @@ meta_desc: "Explore the DataSourceWindowsEvent resource of the loganalytics modu
 
 Manages a Log Analytics Windows Event DataSource.
 
+
 {{% examples %}}
 ## Example Usage
 

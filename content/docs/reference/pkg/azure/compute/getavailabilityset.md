@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAvailabilitySet function of the compute module, inclu
 
 Use this data source to access information about an existing Availability Set.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFunctionApp function of the appservice module, includ
 
 Use this data source to access information about a Function App.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1483,6 +1484,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="healthcheckpath_csharp">
+<a href="#healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="http2enabled_csharp">
 <a href="#http2enabled_csharp" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
 </span> 
@@ -1640,6 +1651,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckpath_go">
+<a href="#healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1803,6 +1824,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="healthcheckpath_nodejs">
+<a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="http2enabled_nodejs">
 <a href="#http2enabled_nodejs" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
 </span> 
@@ -1960,6 +1991,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="health_check_path_python">
+<a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

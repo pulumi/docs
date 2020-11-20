@@ -12,6 +12,7 @@ meta_desc: "Explore the MetricAlert resource of the monitoring module, including
 
 Manages a Metric Alert within Azure Monitor.
 
+
 {{% examples %}}
 ## Example Usage
 

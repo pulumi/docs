@@ -12,6 +12,7 @@ meta_desc: "Explore the AuthorizationRule resource of the notificationhub module
 
 Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

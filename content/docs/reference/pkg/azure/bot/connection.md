@@ -12,6 +12,7 @@ meta_desc: "Explore the Connection resource of the bot module, including example
 
 Manages a Bot Connection.
 
+
 {{% examples %}}
 ## Example Usage
 

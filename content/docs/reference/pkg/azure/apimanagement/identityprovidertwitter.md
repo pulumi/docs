@@ -12,6 +12,7 @@ meta_desc: "Explore the IdentityProviderTwitter resource of the apimanagement mo
 
 Manages an API Management Twitter Identity Provider.
 
+
 {{% examples %}}
 ## Example Usage
 

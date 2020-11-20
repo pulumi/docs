@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAuthorizationRule function of the eventhub module, in
 
 Use this data source to access information about an existing Event Hubs Authorization Rule within an Event Hub.
 
+
 {{% examples %}}
 ## Example Usage
 

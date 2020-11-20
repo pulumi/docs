@@ -12,6 +12,7 @@ meta_desc: "Explore the GetKeyVault function of the keyvault module, including e
 
 Use this data source to access information about an existing Key Vault.
 
+
 {{% examples %}}
 ## Example Usage
 

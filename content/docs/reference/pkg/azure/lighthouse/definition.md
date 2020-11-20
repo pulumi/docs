@@ -12,6 +12,7 @@ meta_desc: "Explore the Definition resource of the lighthouse module, including 
 
 Manages a Lighthouse Definition.
 
+
 {{% examples %}}
 ## Example Usage
 

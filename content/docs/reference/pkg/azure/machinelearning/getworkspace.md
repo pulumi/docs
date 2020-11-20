@@ -12,6 +12,7 @@ meta_desc: "Explore the GetWorkspace function of the machinelearning module, inc
 
 Use this data source to access information about an existing Machine Learning Workspace.
 
+
 {{% examples %}}
 ## Example Usage
 

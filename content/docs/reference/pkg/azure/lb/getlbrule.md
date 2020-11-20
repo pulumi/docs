@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLBRule function of the lb module, including examples,
 
 Use this data source to access information about an existing Load Balancer Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

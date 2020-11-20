@@ -12,6 +12,7 @@ meta_desc: "Explore the Plan resource of the appservice module, including exampl
 
 Manages an App Service Plan component.
 
+
 {{% examples %}}
 ## Example Usage
 

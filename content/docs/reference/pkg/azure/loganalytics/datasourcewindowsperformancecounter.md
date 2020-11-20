@@ -12,6 +12,7 @@ meta_desc: "Explore the DataSourceWindowsPerformanceCounter resource of the loga
 
 Manages a Log Analytics (formally Operational Insights) Windows Performance Counter DataSource.
 
+
 {{% examples %}}
 ## Example Usage
 

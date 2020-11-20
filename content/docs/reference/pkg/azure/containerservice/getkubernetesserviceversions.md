@@ -12,6 +12,7 @@ meta_desc: "Explore the GetKubernetesServiceVersions function of the containerse
 
 Use this data source to retrieve the version of Kubernetes supported by Azure Kubernetes Service.
 
+
 {{% examples %}}
 ## Example Usage
 

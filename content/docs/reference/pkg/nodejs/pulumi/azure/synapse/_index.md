@@ -3,7 +3,7 @@ title: "Module synapse"
 title_tag: "Module synapse | Package @pulumi/azure | Node.js SDK"
 linktitle: "synapse"
 meta_desc: "Explore members of the synapse module in the @pulumi/azure package."
-git_sha: "e017cf62df4615a9a84e768d6370e640838fc2bc"
+git_sha: "edf6ad707defa77aa50be8a5aec9983f4d44d071"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="FirewallRule" data-link-title="FirewallRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L40">
         Resource <strong>FirewallRule</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ const exampleFirewallRule = new azure.synapse.FirewallRule("exampleFirewallRule"
 ```
 
 <h4 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -113,14 +113,14 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -131,7 +131,7 @@ Returns true if the given object is an instance of FirewallRule.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirewallRule-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L71">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L71">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ending IP address to allow through the firewall for this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -148,7 +148,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirewallRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ deployments and may be missing (undefined) during planning phases.
 The Name of the firewall rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L79">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L79">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ The Name of the firewall rule. Changing this forces a new resource to be created
 The starting IP address to allow through the firewall for this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRule-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L83">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L83">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ The starting IP address to allow through the firewall for this rule.
 The ID of the Synapse Workspace on which to create the Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -181,7 +181,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RoleAssignment" data-link-title="RoleAssignment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L48">
         Resource <strong>RoleAssignment</strong>
     </a>
 </h3>
@@ -229,7 +229,7 @@ const exampleRoleAssignment = new azure.synapse.RoleAssignment("exampleRoleAssig
 ```
 
 <h4 class="pdoc-member-header" id="RoleAssignment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -243,7 +243,7 @@ Create a RoleAssignment resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoleAssignment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -254,14 +254,14 @@ Get an existing RoleAssignment resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RoleAssignment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoleAssignment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -272,7 +272,7 @@ Returns true if the given object is an instance of RoleAssignment.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoleAssignment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -281,7 +281,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoleAssignment-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L79">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L79">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Principal (User, Group or Service Principal) to assign the Synapse Role Definition to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RoleAssignment-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L83">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L83">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ The ID of the Principal (User, Group or Service Principal) to assign the Synapse
 The Role Name of the Synapse Built-In Role. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RoleAssignment-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L87">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L87">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The Role Name of the Synapse Built-In Role. Changing this forces a new resource 
 The ID of the Synapse Workspace on which to create the Role Assignment. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RoleAssignment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -314,7 +314,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SparkPool" data-link-title="SparkPool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L52">
         Resource <strong>SparkPool</strong>
     </a>
 </h3>
@@ -364,7 +364,7 @@ const exampleSparkPool = new azure.synapse.SparkPool("exampleSparkPool", {
 ```
 
 <h4 class="pdoc-member-header" id="SparkPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L127"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L127"> <b>constructor</b></a>
 </h4>
 
 
@@ -378,7 +378,7 @@ Create a SparkPool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SparkPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -389,14 +389,14 @@ Get an existing SparkPool resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SparkPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SparkPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -407,7 +407,7 @@ Returns true if the given object is an instance of SparkPool.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SparkPool-autoPause">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L83">property <b>autoPause</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L83">property <b>autoPause</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoPause: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkPoolAutoPause'>SparkPoolAutoPause</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `autoPause` block as defined below.
 
 <h4 class="pdoc-member-header" id="SparkPool-autoScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L87">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L87">property <b>autoScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkPoolAutoScale'>SparkPoolAutoScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -423,7 +423,7 @@ An `autoPause` block as defined below.
 An `autoScale` block as defined below. Exactly one of `nodeCount` or `autoScale` must be specified.
 
 <h4 class="pdoc-member-header" id="SparkPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -432,7 +432,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SparkPool-libraryRequirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L91">property <b>libraryRequirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L91">property <b>libraryRequirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>libraryRequirement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SparkPoolLibraryRequirement'>SparkPoolLibraryRequirement</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ deployments and may be missing (undefined) during planning phases.
 A `libraryRequirement` block as defined below.
 
 <h4 class="pdoc-member-header" id="SparkPool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ A `libraryRequirement` block as defined below.
 The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
 
 <h4 class="pdoc-member-header" id="SparkPool-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L99">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L99">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ The name which should be used for this Synapse Spark Pool. Changing this forces 
 The number of nodes in the Spark Pool. Exactly one of `nodeCount` or `autoScale` must be specified.
 
 <h4 class="pdoc-member-header" id="SparkPool-nodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L103">property <b>nodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L103">property <b>nodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -464,7 +464,7 @@ The number of nodes in the Spark Pool. Exactly one of `nodeCount` or `autoScale`
 The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
 
 <h4 class="pdoc-member-header" id="SparkPool-nodeSizeFamily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L107">property <b>nodeSizeFamily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L107">property <b>nodeSizeFamily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeSizeFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +472,7 @@ The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `La
 The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
 
 <h4 class="pdoc-member-header" id="SparkPool-sparkEventsFolder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L111">property <b>sparkEventsFolder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L111">property <b>sparkEventsFolder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sparkEventsFolder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimiz
 The Spark events folder. Defaults to `/events`.
 
 <h4 class="pdoc-member-header" id="SparkPool-sparkLogFolder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L115">property <b>sparkLogFolder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L115">property <b>sparkLogFolder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sparkLogFolder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ The Spark events folder. Defaults to `/events`.
 The default folder where Spark logs will be written. Defaults to `/logs`.
 
 <h4 class="pdoc-member-header" id="SparkPool-sparkVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L119">property <b>sparkVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L119">property <b>sparkVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sparkVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -496,7 +496,7 @@ The default folder where Spark logs will be written. Defaults to `/logs`.
 The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
 
 <h4 class="pdoc-member-header" id="SparkPool-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L123">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L123">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -504,7 +504,7 @@ The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
 The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
 
 <h4 class="pdoc-member-header" id="SparkPool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L127">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L127">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Chang
 A mapping of tags which should be assigned to the Synapse Spark Pool.
 
 <h4 class="pdoc-member-header" id="SparkPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -521,7 +521,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SqlPool" data-link-title="SqlPool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L41">
         Resource <strong>SqlPool</strong>
     </a>
 </h3>
@@ -560,7 +560,7 @@ const exampleSqlPool = new azure.synapse.SqlPool("exampleSqlPool", {
 ```
 
 <h4 class="pdoc-member-header" id="SqlPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -574,7 +574,7 @@ Create a SqlPool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SqlPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -585,14 +585,14 @@ Get an existing SqlPool resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SqlPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SqlPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -603,7 +603,7 @@ Returns true if the given object is an instance of SqlPool.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SqlPool-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L72">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L72">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the collation to use with this pool, only applicable when `createMode` is set to `Default`. Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SqlPool-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L76">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L76">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -619,12 +619,12 @@ The name of the collation to use with this pool, only applicable when `createMod
 Specifies how to create the Sql Pool. Valid values are: `Default`, `Recovery` or `PointInTimeRestore`. Must be `Default` to create a new database. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="SqlPool-dataEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L77">property <b>dataEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L77">property <b>dataEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SqlPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -633,7 +633,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SqlPool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ deployments and may be missing (undefined) during planning phases.
 The name which should be used for this Synapse Sql Pool. Changing this forces a new synapse SqlPool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPool-recoveryDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L85">property <b>recoveryDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L85">property <b>recoveryDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryDatabaseId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -649,7 +649,7 @@ The name which should be used for this Synapse Sql Pool. Changing this forces a 
 The ID of the Synapse Sql Pool or Sql Database which is to back up, only applicable when `createMode` is set to `Recovery`. Changing this forces a new Synapse Sql Pool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPool-restore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L89">property <b>restore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L89">property <b>restore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlPoolRestore'>SqlPoolRestore</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ The ID of the Synapse Sql Pool or Sql Database which is to back up, only applica
 A `restore` block as defined below. only applicable when `createMode` is set to `PointInTimeRestore`.
 
 <h4 class="pdoc-member-header" id="SqlPool-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L93">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L93">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ A `restore` block as defined below. only applicable when `createMode` is set to 
 Specifies the SKU Name for this Synapse Sql Pool. Possible values are `DW100c`, `DW200c`, `DW300c`, `DW400c`, `DW500c`, `DW1000c`, `DW1500c`, `DW2000c`, `DW2500c`, `DW3000c`, `DW5000c`, `DW6000c`, `DW7500c`, `DW10000c`, `DW15000c` or `DW30000c`.
 
 <h4 class="pdoc-member-header" id="SqlPool-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L97">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L97">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ Specifies the SKU Name for this Synapse Sql Pool. Possible values are `DW100c`, 
 The ID of Synapse Workspace within which this Sql Pool should be created. Changing this forces a new Synapse Sql Pool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L101">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L101">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ The ID of Synapse Workspace within which this Sql Pool should be created. Changi
 A mapping of tags which should be assigned to the Synapse Sql Pool.
 
 <h4 class="pdoc-member-header" id="SqlPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -690,7 +690,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Workspace" data-link-title="Workspace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L45">
         Resource <strong>Workspace</strong>
     </a>
 </h3>
@@ -733,7 +733,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
 ```
 
 <h4 class="pdoc-member-header" id="Workspace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L120"> <b>constructor</b></a>
 </h4>
 
 
@@ -747,7 +747,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Workspace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -758,14 +758,14 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Workspace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Workspace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -776,7 +776,7 @@ Returns true if the given object is an instance of Workspace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Workspace-aadAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L76">property <b>aadAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L76">property <b>aadAdmin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aadAdmin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WorkspaceAadAdmin'>WorkspaceAadAdmin</a>&gt;;</code></pre>
@@ -784,7 +784,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `aadAdmin` block as defined below.
 
 <h4 class="pdoc-member-header" id="Workspace-connectivityEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L80">property <b>connectivityEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L80">property <b>connectivityEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectivityEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -792,7 +792,7 @@ An `aadAdmin` block as defined below.
 A list of Connectivity endpoints for this Synapse Workspace.
 
 <h4 class="pdoc-member-header" id="Workspace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -801,7 +801,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Workspace-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L84">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L84">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WorkspaceIdentity'>WorkspaceIdentity</a>[]&gt;;</code></pre>
@@ -809,7 +809,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 
 <h4 class="pdoc-member-header" id="Workspace-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L88">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L88">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -817,7 +817,7 @@ An `identity` block as defined below, which contains the Managed Service Identit
 Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L92">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L92">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedResourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ Specifies the Azure Region where the synapse Workspace should exist. Changing th
 Workspace managed resource group.
 
 <h4 class="pdoc-member-header" id="Workspace-managedVirtualNetworkEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L96">property <b>managedVirtualNetworkEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L96">property <b>managedVirtualNetworkEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedVirtualNetworkEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ Workspace managed resource group.
 Is Virtual Network enabled for all computes in this workspace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -841,7 +841,7 @@ Is Virtual Network enabled for all computes in this workspace. Changing this for
 Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L104">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L104">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,7 +849,7 @@ Specifies the name which should be used for this synapse Workspace. Changing thi
 Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-sqlAdministratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L108">property <b>sqlAdministratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L108">property <b>sqlAdministratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlAdministratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -857,7 +857,7 @@ Specifies the name of the Resource Group where the synapse Workspace should exis
 Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-sqlAdministratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L112">property <b>sqlAdministratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L112">property <b>sqlAdministratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlAdministratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -865,7 +865,7 @@ Specifies The Login Name of the SQL administrator. Changing this forces a new re
 The Password associated with the `sqlAdministratorLogin` for the SQL administrator.
 
 <h4 class="pdoc-member-header" id="Workspace-storageDataLakeGen2FilesystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L116">property <b>storageDataLakeGen2FilesystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L116">property <b>storageDataLakeGen2FilesystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageDataLakeGen2FilesystemId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -873,7 +873,7 @@ The Password associated with the `sqlAdministratorLogin` for the SQL administrat
 Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L120">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L120">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -881,7 +881,7 @@ Specifies the ID of storage data lake gen2 filesystem resource. Changing this fo
 A mapping of tags which should be assigned to the Synapse Workspace.
 
 <h4 class="pdoc-member-header" id="Workspace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -892,7 +892,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getWorkspace" data-link-title="getWorkspace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L25">
         Function <strong>getWorkspace</strong>
     </a>
 </h3>
@@ -919,7 +919,7 @@ export const id = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FirewallRuleArgs" data-link-title="FirewallRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L153">
         interface <strong>FirewallRuleArgs</strong>
     </a>
 </h3>
@@ -929,7 +929,7 @@ export const id = example.then(example => example.id);
 The set of arguments for constructing a FirewallRule resource.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L157">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L157">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -937,7 +937,7 @@ The set of arguments for constructing a FirewallRule resource.
 The ending IP address to allow through the firewall for this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -945,7 +945,7 @@ The ending IP address to allow through the firewall for this rule.
 The Name of the firewall rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L165">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L165">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -953,7 +953,7 @@ The Name of the firewall rule. Changing this forces a new resource to be created
 The starting IP address to allow through the firewall for this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L169">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L169">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -961,7 +961,7 @@ The starting IP address to allow through the firewall for this rule.
 The ID of the Synapse Workspace on which to create the Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="FirewallRuleState" data-link-title="FirewallRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L131">
         interface <strong>FirewallRuleState</strong>
     </a>
 </h3>
@@ -971,7 +971,7 @@ The ID of the Synapse Workspace on which to create the Firewall Rule. Changing t
 Input properties used for looking up and filtering FirewallRule resources.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L135">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L135">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ Input properties used for looking up and filtering FirewallRule resources.
 The ending IP address to allow through the firewall for this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -987,7 +987,7 @@ The ending IP address to allow through the firewall for this rule.
 The Name of the firewall rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L143">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L143">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -995,7 +995,7 @@ The Name of the firewall rule. Changing this forces a new resource to be created
 The starting IP address to allow through the firewall for this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/firewallRule.ts#L147">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/firewallRule.ts#L147">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ The starting IP address to allow through the firewall for this rule.
 The ID of the Synapse Workspace on which to create the Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetWorkspaceArgs" data-link-title="GetWorkspaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L42">
         interface <strong>GetWorkspaceArgs</strong>
     </a>
 </h3>
@@ -1013,7 +1013,7 @@ The ID of the Synapse Workspace on which to create the Firewall Rule. Changing t
 A collection of arguments for invoking getWorkspace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1021,7 +1021,7 @@ A collection of arguments for invoking getWorkspace.
 The name of this Synapse Workspace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1029,7 +1029,7 @@ The name of this Synapse Workspace.
 The name of the Resource Group where the Synapse Workspace exists.
 
 <h3 class="pdoc-module-header" id="GetWorkspaceResult" data-link-title="GetWorkspaceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L56">
         interface <strong>GetWorkspaceResult</strong>
     </a>
 </h3>
@@ -1039,7 +1039,7 @@ The name of the Resource Group where the Synapse Workspace exists.
 A collection of values returned by getWorkspace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-connectivityEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L60">property <b>connectivityEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L60">property <b>connectivityEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectivityEndpoints: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1047,7 +1047,7 @@ A collection of values returned by getWorkspace.
 A list of Connectivity endpoints for this Synapse Workspace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1055,7 +1055,7 @@ A list of Connectivity endpoints for this Synapse Workspace.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L68">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L68">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1063,17 +1063,17 @@ The provider-assigned unique ID for this managed resource.
 The Azure location where the Synapse Workspace exists.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L70">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L70">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/getWorkspace.ts#L74">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/getWorkspace.ts#L74">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1081,7 +1081,7 @@ The Azure location where the Synapse Workspace exists.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="RoleAssignmentArgs" data-link-title="RoleAssignmentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L151">
         interface <strong>RoleAssignmentArgs</strong>
     </a>
 </h3>
@@ -1091,7 +1091,7 @@ A mapping of tags assigned to the resource.
 The set of arguments for constructing a RoleAssignment resource.
 
 <h4 class="pdoc-member-header" id="RoleAssignmentArgs-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L155">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L155">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ The set of arguments for constructing a RoleAssignment resource.
 The ID of the Principal (User, Group or Service Principal) to assign the Synapse Role Definition to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RoleAssignmentArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L159">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L159">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,7 +1107,7 @@ The ID of the Principal (User, Group or Service Principal) to assign the Synapse
 The Role Name of the Synapse Built-In Role. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RoleAssignmentArgs-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L163">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L163">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1115,7 +1115,7 @@ The Role Name of the Synapse Built-In Role. Changing this forces a new resource 
 The ID of the Synapse Workspace on which to create the Role Assignment. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="RoleAssignmentState" data-link-title="RoleAssignmentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L133">
         interface <strong>RoleAssignmentState</strong>
     </a>
 </h3>
@@ -1125,7 +1125,7 @@ The ID of the Synapse Workspace on which to create the Role Assignment. Changing
 Input properties used for looking up and filtering RoleAssignment resources.
 
 <h4 class="pdoc-member-header" id="RoleAssignmentState-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L137">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L137">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ Input properties used for looking up and filtering RoleAssignment resources.
 The ID of the Principal (User, Group or Service Principal) to assign the Synapse Role Definition to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RoleAssignmentState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L141">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L141">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1141,7 +1141,7 @@ The ID of the Principal (User, Group or Service Principal) to assign the Synapse
 The Role Name of the Synapse Built-In Role. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RoleAssignmentState-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/roleAssignment.ts#L145">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/roleAssignment.ts#L145">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1149,7 +1149,7 @@ The Role Name of the Synapse Built-In Role. Changing this forces a new resource 
 The ID of the Synapse Workspace on which to create the Role Assignment. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SparkPoolArgs" data-link-title="SparkPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L245">
         interface <strong>SparkPoolArgs</strong>
     </a>
 </h3>
@@ -1159,7 +1159,7 @@ The ID of the Synapse Workspace on which to create the Role Assignment. Changing
 The set of arguments for constructing a SparkPool resource.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-autoPause">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L249">property <b>autoPause</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L249">property <b>autoPause</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPause?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkPoolAutoPause'>SparkPoolAutoPause</a>&gt;;</code></pre>
@@ -1167,7 +1167,7 @@ The set of arguments for constructing a SparkPool resource.
 An `autoPause` block as defined below.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-autoScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L253">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L253">property <b>autoScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkPoolAutoScale'>SparkPoolAutoScale</a>&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ An `autoPause` block as defined below.
 An `autoScale` block as defined below. Exactly one of `nodeCount` or `autoScale` must be specified.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-libraryRequirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L257">property <b>libraryRequirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L257">property <b>libraryRequirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>libraryRequirement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkPoolLibraryRequirement'>SparkPoolLibraryRequirement</a>&gt;;</code></pre>
@@ -1183,7 +1183,7 @@ An `autoScale` block as defined below. Exactly one of `nodeCount` or `autoScale`
 A `libraryRequirement` block as defined below.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L261">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L261">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ A `libraryRequirement` block as defined below.
 The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L265">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L265">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ The name which should be used for this Synapse Spark Pool. Changing this forces 
 The number of nodes in the Spark Pool. Exactly one of `nodeCount` or `autoScale` must be specified.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-nodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L269">property <b>nodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L269">property <b>nodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ The number of nodes in the Spark Pool. Exactly one of `nodeCount` or `autoScale`
 The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-nodeSizeFamily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L273">property <b>nodeSizeFamily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L273">property <b>nodeSizeFamily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeSizeFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `La
 The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-sparkEventsFolder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L277">property <b>sparkEventsFolder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L277">property <b>sparkEventsFolder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparkEventsFolder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1223,7 @@ The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimiz
 The Spark events folder. Defaults to `/events`.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-sparkLogFolder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L281">property <b>sparkLogFolder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L281">property <b>sparkLogFolder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparkLogFolder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ The Spark events folder. Defaults to `/events`.
 The default folder where Spark logs will be written. Defaults to `/logs`.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-sparkVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L285">property <b>sparkVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L285">property <b>sparkVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparkVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1239,7 +1239,7 @@ The default folder where Spark logs will be written. Defaults to `/logs`.
 The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L289">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L289">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +1247,7 @@ The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
 The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
 
 <h4 class="pdoc-member-header" id="SparkPoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L293">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L293">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Chang
 A mapping of tags which should be assigned to the Synapse Spark Pool.
 
 <h3 class="pdoc-module-header" id="SparkPoolState" data-link-title="SparkPoolState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L191">
         interface <strong>SparkPoolState</strong>
     </a>
 </h3>
@@ -1265,7 +1265,7 @@ A mapping of tags which should be assigned to the Synapse Spark Pool.
 Input properties used for looking up and filtering SparkPool resources.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-autoPause">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L195">property <b>autoPause</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L195">property <b>autoPause</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPause?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkPoolAutoPause'>SparkPoolAutoPause</a>&gt;;</code></pre>
@@ -1273,7 +1273,7 @@ Input properties used for looking up and filtering SparkPool resources.
 An `autoPause` block as defined below.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-autoScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L199">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L199">property <b>autoScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkPoolAutoScale'>SparkPoolAutoScale</a>&gt;;</code></pre>
@@ -1281,7 +1281,7 @@ An `autoPause` block as defined below.
 An `autoScale` block as defined below. Exactly one of `nodeCount` or `autoScale` must be specified.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-libraryRequirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L203">property <b>libraryRequirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L203">property <b>libraryRequirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>libraryRequirement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SparkPoolLibraryRequirement'>SparkPoolLibraryRequirement</a>&gt;;</code></pre>
@@ -1289,7 +1289,7 @@ An `autoScale` block as defined below. Exactly one of `nodeCount` or `autoScale`
 A `libraryRequirement` block as defined below.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1297,7 +1297,7 @@ A `libraryRequirement` block as defined below.
 The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L211">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L211">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1305,7 +1305,7 @@ The name which should be used for this Synapse Spark Pool. Changing this forces 
 The number of nodes in the Spark Pool. Exactly one of `nodeCount` or `autoScale` must be specified.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-nodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L215">property <b>nodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L215">property <b>nodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1313,7 +1313,7 @@ The number of nodes in the Spark Pool. Exactly one of `nodeCount` or `autoScale`
 The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-nodeSizeFamily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L219">property <b>nodeSizeFamily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L219">property <b>nodeSizeFamily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeSizeFamily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `La
 The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-sparkEventsFolder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L223">property <b>sparkEventsFolder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L223">property <b>sparkEventsFolder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparkEventsFolder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1329,7 +1329,7 @@ The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimiz
 The Spark events folder. Defaults to `/events`.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-sparkLogFolder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L227">property <b>sparkLogFolder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L227">property <b>sparkLogFolder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparkLogFolder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ The Spark events folder. Defaults to `/events`.
 The default folder where Spark logs will be written. Defaults to `/logs`.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-sparkVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L231">property <b>sparkVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L231">property <b>sparkVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparkVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1345,7 +1345,7 @@ The default folder where Spark logs will be written. Defaults to `/logs`.
 The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L235">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L235">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1353,7 +1353,7 @@ The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
 The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
 
 <h4 class="pdoc-member-header" id="SparkPoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sparkPool.ts#L239">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sparkPool.ts#L239">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1361,7 +1361,7 @@ The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Chang
 A mapping of tags which should be assigned to the Synapse Spark Pool.
 
 <h3 class="pdoc-module-header" id="SqlPoolArgs" data-link-title="SqlPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L195">
         interface <strong>SqlPoolArgs</strong>
     </a>
 </h3>
@@ -1371,7 +1371,7 @@ A mapping of tags which should be assigned to the Synapse Spark Pool.
 The set of arguments for constructing a SqlPool resource.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L199">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L199">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1379,7 +1379,7 @@ The set of arguments for constructing a SqlPool resource.
 The name of the collation to use with this pool, only applicable when `createMode` is set to `Default`. Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L203">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L203">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1387,12 +1387,12 @@ The name of the collation to use with this pool, only applicable when `createMod
 Specifies how to create the Sql Pool. Valid values are: `Default`, `Recovery` or `PointInTimeRestore`. Must be `Default` to create a new database. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-dataEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L204">property <b>dataEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L204">property <b>dataEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SqlPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ Specifies how to create the Sql Pool. Valid values are: `Default`, `Recovery` or
 The name which should be used for this Synapse Sql Pool. Changing this forces a new synapse SqlPool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-recoveryDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L212">property <b>recoveryDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L212">property <b>recoveryDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryDatabaseId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ The name which should be used for this Synapse Sql Pool. Changing this forces a 
 The ID of the Synapse Sql Pool or Sql Database which is to back up, only applicable when `createMode` is set to `Recovery`. Changing this forces a new Synapse Sql Pool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-restore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L216">property <b>restore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L216">property <b>restore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlPoolRestore'>SqlPoolRestore</a>&gt;;</code></pre>
@@ -1416,7 +1416,7 @@ The ID of the Synapse Sql Pool or Sql Database which is to back up, only applica
 A `restore` block as defined below. only applicable when `createMode` is set to `PointInTimeRestore`.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L220">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L220">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ A `restore` block as defined below. only applicable when `createMode` is set to 
 Specifies the SKU Name for this Synapse Sql Pool. Possible values are `DW100c`, `DW200c`, `DW300c`, `DW400c`, `DW500c`, `DW1000c`, `DW1500c`, `DW2000c`, `DW2500c`, `DW3000c`, `DW5000c`, `DW6000c`, `DW7500c`, `DW10000c`, `DW15000c` or `DW30000c`.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L224">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L224">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1432,7 +1432,7 @@ Specifies the SKU Name for this Synapse Sql Pool. Possible values are `DW100c`, 
 The ID of Synapse Workspace within which this Sql Pool should be created. Changing this forces a new Synapse Sql Pool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L228">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L228">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1440,7 +1440,7 @@ The ID of Synapse Workspace within which this Sql Pool should be created. Changi
 A mapping of tags which should be assigned to the Synapse Sql Pool.
 
 <h3 class="pdoc-module-header" id="SqlPoolState" data-link-title="SqlPoolState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L156">
         interface <strong>SqlPoolState</strong>
     </a>
 </h3>
@@ -1450,7 +1450,7 @@ A mapping of tags which should be assigned to the Synapse Sql Pool.
 Input properties used for looking up and filtering SqlPool resources.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L160">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L160">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1458,7 +1458,7 @@ Input properties used for looking up and filtering SqlPool resources.
 The name of the collation to use with this pool, only applicable when `createMode` is set to `Default`. Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L164">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L164">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1466,12 +1466,12 @@ The name of the collation to use with this pool, only applicable when `createMod
 Specifies how to create the Sql Pool. Valid values are: `Default`, `Recovery` or `PointInTimeRestore`. Must be `Default` to create a new database. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-dataEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L165">property <b>dataEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L165">property <b>dataEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SqlPoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L169">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1479,7 +1479,7 @@ Specifies how to create the Sql Pool. Valid values are: `Default`, `Recovery` or
 The name which should be used for this Synapse Sql Pool. Changing this forces a new synapse SqlPool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-recoveryDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L173">property <b>recoveryDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L173">property <b>recoveryDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryDatabaseId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1487,7 +1487,7 @@ The name which should be used for this Synapse Sql Pool. Changing this forces a 
 The ID of the Synapse Sql Pool or Sql Database which is to back up, only applicable when `createMode` is set to `Recovery`. Changing this forces a new Synapse Sql Pool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-restore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L177">property <b>restore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L177">property <b>restore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlPoolRestore'>SqlPoolRestore</a>&gt;;</code></pre>
@@ -1495,7 +1495,7 @@ The ID of the Synapse Sql Pool or Sql Database which is to back up, only applica
 A `restore` block as defined below. only applicable when `createMode` is set to `PointInTimeRestore`.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L181">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L181">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1503,7 @@ A `restore` block as defined below. only applicable when `createMode` is set to 
 Specifies the SKU Name for this Synapse Sql Pool. Possible values are `DW100c`, `DW200c`, `DW300c`, `DW400c`, `DW500c`, `DW1000c`, `DW1500c`, `DW2000c`, `DW2500c`, `DW3000c`, `DW5000c`, `DW6000c`, `DW7500c`, `DW10000c`, `DW15000c` or `DW30000c`.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-synapseWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L185">property <b>synapseWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L185">property <b>synapseWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>synapseWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1511,7 +1511,7 @@ Specifies the SKU Name for this Synapse Sql Pool. Possible values are `DW100c`, 
 The ID of Synapse Workspace within which this Sql Pool should be created. Changing this forces a new Synapse Sql Pool to be created.
 
 <h4 class="pdoc-member-header" id="SqlPoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/sqlPool.ts#L189">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/sqlPool.ts#L189">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1519,7 +1519,7 @@ The ID of Synapse Workspace within which this Sql Pool should be created. Changi
 A mapping of tags which should be assigned to the Synapse Sql Pool.
 
 <h3 class="pdoc-module-header" id="WorkspaceArgs" data-link-title="WorkspaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L241">
         interface <strong>WorkspaceArgs</strong>
     </a>
 </h3>
@@ -1529,7 +1529,7 @@ A mapping of tags which should be assigned to the Synapse Sql Pool.
 The set of arguments for constructing a Workspace resource.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-aadAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L245">property <b>aadAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L245">property <b>aadAdmin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aadAdmin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WorkspaceAadAdmin'>WorkspaceAadAdmin</a>&gt;;</code></pre>
@@ -1537,7 +1537,7 @@ The set of arguments for constructing a Workspace resource.
 An `aadAdmin` block as defined below.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L249">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L249">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1545,7 +1545,7 @@ An `aadAdmin` block as defined below.
 Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-managedVirtualNetworkEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L253">property <b>managedVirtualNetworkEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L253">property <b>managedVirtualNetworkEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedVirtualNetworkEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1553,7 +1553,7 @@ Specifies the Azure Region where the synapse Workspace should exist. Changing th
 Is Virtual Network enabled for all computes in this workspace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L257">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L257">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1561,7 +1561,7 @@ Is Virtual Network enabled for all computes in this workspace. Changing this for
 Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L261">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L261">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1569,7 +1569,7 @@ Specifies the name which should be used for this synapse Workspace. Changing thi
 Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-sqlAdministratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L265">property <b>sqlAdministratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L265">property <b>sqlAdministratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlAdministratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1577,7 +1577,7 @@ Specifies the name of the Resource Group where the synapse Workspace should exis
 Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-sqlAdministratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L269">property <b>sqlAdministratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L269">property <b>sqlAdministratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlAdministratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1585,7 +1585,7 @@ Specifies The Login Name of the SQL administrator. Changing this forces a new re
 The Password associated with the `sqlAdministratorLogin` for the SQL administrator.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-storageDataLakeGen2FilesystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L273">property <b>storageDataLakeGen2FilesystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L273">property <b>storageDataLakeGen2FilesystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageDataLakeGen2FilesystemId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1593,7 +1593,7 @@ The Password associated with the `sqlAdministratorLogin` for the SQL administrat
 Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L277">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L277">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1601,7 +1601,7 @@ Specifies the ID of storage data lake gen2 filesystem resource. Changing this fo
 A mapping of tags which should be assigned to the Synapse Workspace.
 
 <h3 class="pdoc-module-header" id="WorkspaceState" data-link-title="WorkspaceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L187">
         interface <strong>WorkspaceState</strong>
     </a>
 </h3>
@@ -1611,7 +1611,7 @@ A mapping of tags which should be assigned to the Synapse Workspace.
 Input properties used for looking up and filtering Workspace resources.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-aadAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L191">property <b>aadAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L191">property <b>aadAdmin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aadAdmin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WorkspaceAadAdmin'>WorkspaceAadAdmin</a>&gt;;</code></pre>
@@ -1619,7 +1619,7 @@ Input properties used for looking up and filtering Workspace resources.
 An `aadAdmin` block as defined below.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-connectivityEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L195">property <b>connectivityEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L195">property <b>connectivityEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectivityEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1627,7 +1627,7 @@ An `aadAdmin` block as defined below.
 A list of Connectivity endpoints for this Synapse Workspace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L199">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L199">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WorkspaceIdentity'>WorkspaceIdentity</a>&gt;[]&gt;;</code></pre>
@@ -1635,7 +1635,7 @@ A list of Connectivity endpoints for this Synapse Workspace.
 An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L203">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L203">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1643,7 +1643,7 @@ An `identity` block as defined below, which contains the Managed Service Identit
 Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L207">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L207">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedResourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1651,7 +1651,7 @@ Specifies the Azure Region where the synapse Workspace should exist. Changing th
 Workspace managed resource group.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-managedVirtualNetworkEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L211">property <b>managedVirtualNetworkEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L211">property <b>managedVirtualNetworkEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedVirtualNetworkEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1659,7 +1659,7 @@ Workspace managed resource group.
 Is Virtual Network enabled for all computes in this workspace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1667,7 +1667,7 @@ Is Virtual Network enabled for all computes in this workspace. Changing this for
 Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L219">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1675,7 +1675,7 @@ Specifies the name which should be used for this synapse Workspace. Changing thi
 Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-sqlAdministratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L223">property <b>sqlAdministratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L223">property <b>sqlAdministratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlAdministratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1683,7 +1683,7 @@ Specifies the name of the Resource Group where the synapse Workspace should exis
 Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-sqlAdministratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L227">property <b>sqlAdministratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L227">property <b>sqlAdministratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlAdministratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1691,7 +1691,7 @@ Specifies The Login Name of the SQL administrator. Changing this forces a new re
 The Password associated with the `sqlAdministratorLogin` for the SQL administrator.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-storageDataLakeGen2FilesystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L231">property <b>storageDataLakeGen2FilesystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L231">property <b>storageDataLakeGen2FilesystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageDataLakeGen2FilesystemId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1699,7 +1699,7 @@ The Password associated with the `sqlAdministratorLogin` for the SQL administrat
 Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e017cf62df4615a9a84e768d6370e640838fc2bc/sdk/nodejs/synapse/workspace.ts#L235">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/synapse/workspace.ts#L235">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

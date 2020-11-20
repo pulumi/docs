@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificate function of the batch module, including e
 
 Use this data source to access information about an existing certificate in a Batch Account.
 
+
 {{% examples %}}
 ## Example Usage
 

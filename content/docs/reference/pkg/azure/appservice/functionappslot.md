@@ -12,6 +12,7 @@ meta_desc: "Explore the FunctionAppSlot resource of the appservice module, inclu
 
 Manages a Function App deployment Slot.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4831,6 +4832,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="healthcheckpath_csharp">
+<a href="#healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="http2enabled_csharp">
 <a href="#http2enabled_csharp" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
 </span> 
@@ -4986,6 +4997,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this function app. Possible values include: `AllAllowed`, `FtpsOnly` and `Disabled`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthcheckpath_go">
+<a href="#healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5147,6 +5168,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="healthcheckpath_nodejs">
+<a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="http2enabled_nodejs">
 <a href="#http2enabled_nodejs" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
 </span> 
@@ -5302,6 +5333,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this function app. Possible values include: `AllAllowed`, `FtpsOnly` and `Disabled`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_check_path_python">
+<a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualMachine resource of the mssql module, including e
 
 Manages a Microsoft SQL Virtual Machine
 
+
 {{% examples %}}
 ## Example Usage
 

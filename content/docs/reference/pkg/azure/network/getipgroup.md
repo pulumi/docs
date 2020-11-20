@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpGroup function of the network module, including exa
 
 Use this data source to access information about an existing IP Group.
 
+
 {{% examples %}}
 ## Example Usage
 

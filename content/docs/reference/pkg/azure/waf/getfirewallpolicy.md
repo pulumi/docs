@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFirewallPolicy function of the waf module, including 
 
 Use this data source to access information about an existing Web Application Firewall Policy.
 
+
 {{% examples %}}
 ## Example Usage
 

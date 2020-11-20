@@ -12,6 +12,7 @@ meta_desc: "Explore the Assignment resource of the policy module, including exam
 
 Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.
 
+
 {{% examples %}}
 ## Example Usage
 

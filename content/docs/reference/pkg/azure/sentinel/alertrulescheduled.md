@@ -12,6 +12,7 @@ meta_desc: "Explore the AlertRuleScheduled resource of the sentinel module, incl
 
 Manages a Sentinel Scheduled Alert Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

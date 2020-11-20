@@ -12,6 +12,7 @@ meta_desc: "Explore the DomainTopic resource of the eventgrid module, including 
 
 Manages an EventGrid Domain Topic
 
+
 {{% examples %}}
 ## Example Usage
 

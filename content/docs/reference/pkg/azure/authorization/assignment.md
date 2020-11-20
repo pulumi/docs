@@ -12,6 +12,7 @@ meta_desc: "Explore the Assignment resource of the authorization module, includi
 
 Assigns a given Principal (User or Group) to a given Role.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlPool resource of the synapse module, including exampl
 
 Manages a Synapse Sql Pool.
 
+
 {{% examples %}}
 ## Example Usage
 

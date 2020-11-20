@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServer function of the postgresql module, including e
 
 Use this data source to access information about an existing PostgreSQL Azure Database Server.
 
+
 {{% examples %}}
 ## Example Usage
 

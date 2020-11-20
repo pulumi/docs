@@ -12,6 +12,7 @@ meta_desc: "Explore the Domain resource of the eventgrid module, including examp
 
 Manages an EventGrid Domain
 
+
 {{% examples %}}
 ## Example Usage
 

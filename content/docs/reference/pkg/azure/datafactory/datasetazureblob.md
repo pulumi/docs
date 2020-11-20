@@ -12,6 +12,7 @@ meta_desc: "Explore the DatasetAzureBlob resource of the datafactory module, inc
 
 Manages an Azure Blob Dataset inside an Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

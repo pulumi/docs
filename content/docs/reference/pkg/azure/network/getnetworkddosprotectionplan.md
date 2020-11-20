@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNetworkDdosProtectionPlan function of the network mod
 
 Use this data source to access information about an existing Azure Network DDoS Protection Plan.
 
+
 {{% examples %}}
 ## Example Usage
 

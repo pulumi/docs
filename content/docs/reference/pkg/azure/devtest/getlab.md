@@ -12,6 +12,7 @@ meta_desc: "Explore the GetLab function of the devtest module, including example
 
 Use this data source to access information about an existing Dev Test Lab.
 
+
 {{% examples %}}
 ## Example Usage
 

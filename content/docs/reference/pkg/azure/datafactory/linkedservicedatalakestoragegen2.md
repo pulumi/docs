@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedServiceDataLakeStorageGen2 resource of the datafac
 
 Manages a Linked Service (connection) between Data Lake Storage Gen2 and Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

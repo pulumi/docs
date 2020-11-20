@@ -12,6 +12,7 @@ meta_desc: "Explore the Namespace resource of the relay module, including exampl
 
 Manages an Azure Relay Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

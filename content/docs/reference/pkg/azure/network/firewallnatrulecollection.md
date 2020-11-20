@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallNatRuleCollection resource of the network module
 
 Manages a NAT Rule Collection within an Azure Firewall.
 
+
 {{% examples %}}
 ## Example Usage
 

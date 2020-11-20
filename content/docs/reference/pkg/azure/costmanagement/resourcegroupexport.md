@@ -12,6 +12,7 @@ meta_desc: "Explore the ResourceGroupExport resource of the costmanagement modul
 
 Manages an Azure Cost Management Export for a Resource Group.
 
+
 {{% examples %}}
 ## Example Usage
 

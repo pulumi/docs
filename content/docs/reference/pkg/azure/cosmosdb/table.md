@@ -12,6 +12,7 @@ meta_desc: "Explore the Table resource of the cosmosdb module, including example
 
 Manages a Table within a Cosmos DB Account.
 
+
 {{% examples %}}
 ## Example Usage
 

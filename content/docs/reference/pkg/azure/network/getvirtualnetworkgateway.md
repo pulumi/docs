@@ -12,6 +12,7 @@ meta_desc: "Explore the GetVirtualNetworkGateway function of the network module,
 
 Use this data source to access information about an existing Virtual Network Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

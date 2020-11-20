@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagedDisk resource of the compute module, including ex
 
 Manages a managed disk.
 
+
 {{% examples %}}
 ## Example Usage
 

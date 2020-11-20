@@ -13,6 +13,7 @@ meta_desc: "Explore the EventHubConsumerGroup resource of the eventhub module, i
 
 Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 
+
 {{% examples %}}
 ## Example Usage
 

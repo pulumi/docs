@@ -12,6 +12,11 @@ meta_desc: "Explore the Service resource of the apimanagement module, including 
 
 Manages an API Management Service.
 
+## Disclaimers
+
+> **Note:** It's possible to define Custom Domains both within the `azure.apimanagement.Service` resource via the `hostname_configurations` block and by using the `azure.apimanagement.CustomDomain` resource. However it's not possible to use both methods to manage Custom Domains within an API Management Service, since there'll be conflicts.
+
+
 {{% examples %}}
 ## Example Usage
 

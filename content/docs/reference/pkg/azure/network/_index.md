@@ -13,6 +13,7 @@ Explore the resources and functions of the network module in the Azure package.
 <ul class="api">
     <li><a href="applicationgateway" title="ApplicationGateway"><span class="symbol resource"></span>ApplicationGateway</a></li>
     <li><a href="applicationsecuritygroup" title="ApplicationSecurityGroup"><span class="symbol resource"></span>ApplicationSecurityGroup</a></li>
+    <li><a href="bgpconnection" title="BgpConnection"><span class="symbol resource"></span>BgpConnection</a></li>
     <li><a href="ddosprotectionplan" title="DdosProtectionPlan"><span class="symbol resource"></span>DdosProtectionPlan</a></li>
     <li><a href="expressroutecircuit" title="ExpressRouteCircuit"><span class="symbol resource"></span>ExpressRouteCircuit</a></li>
     <li><a href="expressroutecircuitauthorization" title="ExpressRouteCircuitAuthorization"><span class="symbol resource"></span>ExpressRouteCircuitAuthorization</a></li>
@@ -48,6 +49,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="routefilter" title="RouteFilter"><span class="symbol resource"></span>RouteFilter</a></li>
     <li><a href="routetable" title="RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
+    <li><a href="securitypartnerprovider" title="SecurityPartnerProvider"><span class="symbol resource"></span>SecurityPartnerProvider</a></li>
     <li><a href="subnet" title="Subnet"><span class="symbol resource"></span>Subnet</a></li>
     <li><a href="subnetnatgatewayassociation" title="SubnetNatGatewayAssociation"><span class="symbol resource"></span>SubnetNatGatewayAssociation</a></li>
     <li><a href="subnetnetworksecuritygroupassociation" title="SubnetNetworkSecurityGroupAssociation"><span class="symbol resource"></span>SubnetNetworkSecurityGroupAssociation</a></li>
@@ -88,6 +90,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="getservicetags" title="GetServiceTags"><span class="symbol function"></span>GetServiceTags</a></li>
     <li><a href="getsubnet" title="GetSubnet"><span class="symbol function"></span>GetSubnet</a></li>
     <li><a href="gettrafficmanager" title="GetTrafficManager"><span class="symbol function"></span>GetTrafficManager</a></li>
+    <li><a href="gettrafficmanagerprofile" title="GetTrafficManagerProfile"><span class="symbol function"></span>GetTrafficManagerProfile</a></li>
     <li><a href="getvirtualhub" title="GetVirtualHub"><span class="symbol function"></span>GetVirtualHub</a></li>
     <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="symbol function"></span>GetVirtualNetwork</a></li>
     <li><a href="getvirtualnetworkgateway" title="GetVirtualNetworkGateway"><span class="symbol function"></span>GetVirtualNetworkGateway</a></li>
@@ -102,7 +105,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.30.1</dd>
+	<dd>3.31.0</dd>
 </dl>
 
 

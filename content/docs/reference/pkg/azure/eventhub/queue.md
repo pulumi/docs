@@ -13,6 +13,7 @@ meta_desc: "Explore the Queue resource of the eventhub module, including example
 
 Manages a ServiceBus Queue.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetConfiguration function of the maintenance module, inc
 
 Use this data source to access information about an existing Maintenance Configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

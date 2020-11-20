@@ -12,6 +12,7 @@ meta_desc: "Explore the ShareDirectory resource of the storage module, including
 
 Manages a Directory within an Azure Storage File Share.
 
+
 {{% examples %}}
 ## Example Usage
 

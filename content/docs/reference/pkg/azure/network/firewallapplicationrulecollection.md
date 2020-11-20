@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallApplicationRuleCollection resource of the networ
 
 Manages an Application Rule Collection within an Azure Firewall.
 
+
 {{% examples %}}
 ## Example Usage
 

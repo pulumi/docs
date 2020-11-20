@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the postgresql module, including ex
 
 Manages a PostgreSQL Database within a PostgreSQL Server
 
+
 {{% examples %}}
 ## Example Usage
 

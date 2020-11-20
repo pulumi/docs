@@ -14,6 +14,7 @@ Manages an App Service certificate.
 
 
 
+
 ## Create a Certificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the HostPool resource of the desktopvirtualization module, i
 
 Manages a Virtual Desktop Host Pool.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the Endpoint resource of the trafficmanager module, includin
 
 Manages a Traffic Manager Endpoint.
 
+
 {{% examples %}}
 ## Example Usage
 

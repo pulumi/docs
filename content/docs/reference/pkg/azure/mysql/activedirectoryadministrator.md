@@ -12,6 +12,7 @@ meta_desc: "Explore the ActiveDirectoryAdministrator resource of the mysql modul
 
 Allows you to set a user or group as the AD administrator for an MySQL server in Azure
 
+
 {{% examples %}}
 ## Example Usage
 

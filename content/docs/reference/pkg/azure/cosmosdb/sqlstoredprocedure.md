@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlStoredProcedure resource of the cosmosdb module, incl
 
 Manages a SQL Stored Procedure within a Cosmos DB Account SQL Database.
 
+
 {{% examples %}}
 ## Example Usage
 

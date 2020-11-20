@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the batch module, including examp
 
 Use this data source to access information about an existing Batch Account.
 
+
 {{% examples %}}
 ## Example Usage
 

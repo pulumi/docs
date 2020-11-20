@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the databricks module, including e
 
 Manages a Databricks Workspace
 
+
 {{% examples %}}
 ## Example Usage
 

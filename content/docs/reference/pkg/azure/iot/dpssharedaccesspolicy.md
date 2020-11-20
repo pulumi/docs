@@ -12,6 +12,7 @@ meta_desc: "Explore the DpsSharedAccessPolicy resource of the iot module, includ
 
 Manages an IotHub Device Provisioning Service Shared Access Policy
 
+
 {{% examples %}}
 ## Example Usage
 

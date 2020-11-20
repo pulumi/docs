@@ -14,6 +14,7 @@ Manages a Windows Virtual Machine within a Dev Test Lab.
 
 
 
+
 ## Create a WindowsVirtualMachine Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

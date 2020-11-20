@@ -12,6 +12,7 @@ meta_desc: "Explore the GetUserAssignedIdentity function of the authorization mo
 
 Use this data source to access information about an existing User Assigned Identity.
 
+
 {{% examples %}}
 ## Example Usage
 

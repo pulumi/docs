@@ -14,6 +14,7 @@ Manages a MS SQL Database.
 
 > **NOTE:** The Database Extended Auditing Policy Can be set inline here as well as with the mssql_database_extended_auditing_policy resource resource. You can only use one or the other and using both will cause a conflict.
 
+
 {{% examples %}}
 ## Example Usage
 

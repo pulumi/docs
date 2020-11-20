@@ -12,6 +12,7 @@ meta_desc: "Explore the SpatialAnchorsAccount resource of the mixedreality modul
 
 Manages an Azure Spatial Anchors Account.
 
+
 {{% examples %}}
 ## Example Usage
 

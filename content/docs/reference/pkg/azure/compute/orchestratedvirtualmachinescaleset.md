@@ -16,6 +16,7 @@ Manages an Orchestrated Virtual Machine Scale Set.
 
 > **Note:** Azure is planning to deprecate the `single_placement_group` attribute in the Orchestrated Virtual Machine Scale Set starting from api-version `2019-12-01` and there will be a breaking change in the Orchestrated Virtual Machine Scale Set.
 
+
 {{% examples %}}
 ## Example Usage
 

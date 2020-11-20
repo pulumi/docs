@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDatabase function of the sql module, including exampl
 
 Use this data source to access information about an existing SQL Azure Database.
 
+
 {{% examples %}}
 ## Example Usage
 

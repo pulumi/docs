@@ -14,6 +14,7 @@ Manages an Azure Batch pool.
 
 
 
+
 ## Create a Pool Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

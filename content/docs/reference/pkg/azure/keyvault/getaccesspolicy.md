@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccessPolicy function of the keyvault module, includi
 
 Use this data source to access information about the permissions from the Management Key Vault Templates.
 
+
 {{% examples %}}
 ## Example Usage
 

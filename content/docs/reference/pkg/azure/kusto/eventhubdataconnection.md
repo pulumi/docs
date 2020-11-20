@@ -12,6 +12,7 @@ meta_desc: "Explore the EventhubDataConnection resource of the kusto module, inc
 
 Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection
 
+
 {{% examples %}}
 ## Example Usage
 

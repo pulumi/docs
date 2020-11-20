@@ -12,6 +12,7 @@ meta_desc: "Explore the IdentityProviderAad resource of the apimanagement module
 
 Manages an API Management AAD Identity Provider.
 
+
 {{% examples %}}
 ## Example Usage
 

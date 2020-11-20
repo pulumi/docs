@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSubnet function of the network module, including exam
 
 Use this data source to access information about an existing Subnet within a Virtual Network.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the DatasetHttp resource of the datafactory module, includin
 
 Manages an Azure HTTP Dataset inside an Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the IPGroup resource of the network module, including exampl
 
 Manages an IP group that contains a list of CIDRs and/or IP addresses.
 
+
 {{% examples %}}
 ## Example Usage
 

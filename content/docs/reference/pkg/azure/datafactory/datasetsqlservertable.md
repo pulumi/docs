@@ -12,6 +12,7 @@ meta_desc: "Explore the DatasetSqlServerTable resource of the datafactory module
 
 Manages a SQL Server Table Dataset inside a Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

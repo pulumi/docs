@@ -14,6 +14,7 @@ Manages a Data Share Kusto Cluster Dataset.
 
 
 
+
 ## Create a DatasetKustoCluster Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

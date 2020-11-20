@@ -13,6 +13,7 @@ meta_desc: "Explore the TopicAuthorizationRule resource of the eventhub module, 
 
 Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 
+
 {{% examples %}}
 ## Example Usage
 

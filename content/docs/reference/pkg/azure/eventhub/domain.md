@@ -13,6 +13,7 @@ meta_desc: "Explore the Domain resource of the eventhub module, including exampl
 
 Manages an EventGrid Domain
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the SavedSearch resource of the loganalytics module, includi
 
 Manages a Log Analytics (formally Operational Insights) Saved Search.
 
+
 {{% examples %}}
 ## Example Usage
 

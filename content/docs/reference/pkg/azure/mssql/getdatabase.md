@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDatabase function of the mssql module, including exam
 
 Use this data source to access information about an existing SQL database.
 
+
 {{% examples %}}
 ## Example Usage
 

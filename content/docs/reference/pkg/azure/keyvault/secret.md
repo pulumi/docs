@@ -14,6 +14,7 @@ Manages a Key Vault Secret.
 
 
 
+
 ## Create a Secret Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

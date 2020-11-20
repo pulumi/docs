@@ -12,6 +12,7 @@ meta_desc: "Explore the Queue resource of the servicebus module, including examp
 
 Manages a ServiceBus Queue.
 
+
 {{% examples %}}
 ## Example Usage
 

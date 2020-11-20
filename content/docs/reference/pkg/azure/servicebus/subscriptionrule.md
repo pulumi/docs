@@ -12,6 +12,7 @@ meta_desc: "Explore the SubscriptionRule resource of the servicebus module, incl
 
 Manages a ServiceBus Subscription Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

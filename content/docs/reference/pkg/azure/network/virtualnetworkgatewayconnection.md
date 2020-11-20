@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualNetworkGatewayConnection resource of the network 
 
 Manages a connection in an existing Virtual Network Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 

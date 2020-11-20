@@ -12,6 +12,7 @@ meta_desc: "Explore the LocalNetworkGateway resource of the network module, incl
 
 Manages a local network gateway connection over which specific connections can be configured.
 
+
 {{% examples %}}
 ## Example Usage
 

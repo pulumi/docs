@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAlertRule function of the sentinel module, including 
 
 Use this data source to access information about an existing Sentinel Alert Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

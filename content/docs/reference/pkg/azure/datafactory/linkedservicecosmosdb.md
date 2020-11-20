@@ -16,6 +16,7 @@ Manages a Linked Service (connection) between a SFTP Server and Azure Data Facto
 
 
 
+
 ## Create a LinkedServiceCosmosDb Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

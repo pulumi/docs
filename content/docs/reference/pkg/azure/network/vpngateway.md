@@ -12,6 +12,7 @@ meta_desc: "Explore the VpnGateway resource of the network module, including exa
 
 Manages a VPN Gateway within a Virtual Hub, which enables Site-to-Site communication.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -192,7 +193,7 @@ const exampleVpnGateway = new azure.network.VpnGateway("exampleVpnGateway", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VpnGateway">VpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayBgpSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VpnGateway">VpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VpnGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -392,7 +393,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">List&lt;Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -476,7 +477,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">[]Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -560,7 +561,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -644,7 +645,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">Sequence[Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -792,7 +793,7 @@ Get an existing VpnGateway resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayBgpSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpnGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[VpnGatewayBgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpnGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -912,7 +913,7 @@ The following state arguments are supported:
 <a href="#state_bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">List&lt;Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -996,7 +997,7 @@ The following state arguments are supported:
 <a href="#state_bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">[]Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1080,7 +1081,7 @@ The following state arguments are supported:
 <a href="#state_bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1164,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsetting">Sequence[Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1250,16 +1251,16 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-<h4 id="vpngatewaybgpsetting">Vpn<wbr>Gateway<wbr>Bgp<wbr>Setting</h4>
+<h4 id="vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnGatewayBgpSetting">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnGatewayBgpSettings">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VpnGatewayBgpSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VpnGatewayBgpSetting.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VpnGatewayBgpSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VpnGatewayBgpSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1299,6 +1300,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance0bgppeeringaddress_csharp">
+<a href="#instance0bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Instance0Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance1bgppeeringaddress_csharp">
+<a href="#instance1bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Instance1Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1341,6 +1364,28 @@ The following state arguments are supported:
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance0bgppeeringaddress_go">
+<a href="#instance0bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Instance0Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance1bgppeeringaddress_go">
+<a href="#instance1bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Instance1Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1381,6 +1426,28 @@ The following state arguments are supported:
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance0bgppeeringaddress_nodejs">
+<a href="#instance0bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">instance0Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance1bgppeeringaddress_nodejs">
+<a href="#instance1bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">instance1Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1419,6 +1486,472 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance0_bgp_peering_address_python">
+<a href="#instance0_bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">instance0_<wbr>bgp_<wbr>peering_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance1_bgp_peering_address_python">
+<a href="#instance1_bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">instance1_<wbr>bgp_<wbr>peering_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSettingsInstance0BgpPeeringAddress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnGatewayBgpSettingsInstance0BgpPeeringAddress">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingsInstance0BgpPeeringAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VpnGatewayBgpSettingsInstance0BgpPeeringAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VpnGatewayBgpSettingsInstance0BgpPeeringAddress.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customips_csharp">
+<a href="#customips_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultips_csharp">
+<a href="#defaultips_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_csharp">
+<a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelips_csharp">
+<a href="#tunnelips_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customips_go">
+<a href="#customips_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultips_go">
+<a href="#defaultips_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_go">
+<a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelips_go">
+<a href="#tunnelips_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customips_nodejs">
+<a href="#customips_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultips_nodejs">
+<a href="#defaultips_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_nodejs">
+<a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelips_nodejs">
+<a href="#tunnelips_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="custom_ips_python">
+<a href="#custom_ips_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_ips_python">
+<a href="#default_ips_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_configuration_id_python">
+<a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel_ips_python">
+<a href="#tunnel_ips_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnGatewayBgpSettingsInstance1BgpPeeringAddress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnGatewayBgpSettingsInstance1BgpPeeringAddress">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingsInstance1BgpPeeringAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VpnGatewayBgpSettingsInstance1BgpPeeringAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VpnGatewayBgpSettingsInstance1BgpPeeringAddress.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customips_csharp">
+<a href="#customips_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultips_csharp">
+<a href="#defaultips_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_csharp">
+<a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelips_csharp">
+<a href="#tunnelips_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customips_go">
+<a href="#customips_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultips_go">
+<a href="#defaultips_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_go">
+<a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelips_go">
+<a href="#tunnelips_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customips_nodejs">
+<a href="#customips_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultips_nodejs">
+<a href="#defaultips_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_nodejs">
+<a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelips_nodejs">
+<a href="#tunnelips_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="custom_ips_python">
+<a href="#custom_ips_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_ips_python">
+<a href="#default_ips_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_configuration_id_python">
+<a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel_ips_python">
+<a href="#tunnel_ips_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
 {{% /md %}}</dd>
 
 </dl>

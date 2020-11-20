@@ -14,6 +14,7 @@ Manages an Extension for a Virtual Machine Scale Set.
 
 > **NOTE:** This resource is not intended to be used with the `azure.compute.ScaleSet` resource - instead it's intended for this to be used with the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
 
+
 {{% examples %}}
 ## Example Usage
 

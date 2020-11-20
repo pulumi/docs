@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFactory function of the datafactory module, including
 
 Use this data source to access information about an existing Azure Data Factory (Version 2).
 
+
 {{% examples %}}
 ## Example Usage
 

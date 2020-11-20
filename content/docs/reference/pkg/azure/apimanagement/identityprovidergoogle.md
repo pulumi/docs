@@ -12,6 +12,7 @@ meta_desc: "Explore the IdentityProviderGoogle resource of the apimanagement mod
 
 Manages an API Management Google Identity Provider.
 
+
 {{% examples %}}
 ## Example Usage
 

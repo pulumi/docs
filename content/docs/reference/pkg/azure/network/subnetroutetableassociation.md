@@ -12,6 +12,7 @@ meta_desc: "Explore the SubnetRouteTableAssociation resource of the network modu
 
 Associates a Route Table with a Subnet within a Virtual Network.
 
+
 {{% examples %}}
 ## Example Usage
 

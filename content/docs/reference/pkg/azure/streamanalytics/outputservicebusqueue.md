@@ -12,6 +12,7 @@ meta_desc: "Explore the OutputServiceBusQueue resource of the streamanalytics mo
 
 Manages a Stream Analytics Output to a ServiceBus Queue.
 
+
 {{% examples %}}
 ## Example Usage
 

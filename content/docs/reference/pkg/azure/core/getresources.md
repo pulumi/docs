@@ -14,6 +14,7 @@ Use this data source to access information about existing resources.
 
 
 
+
 ## Using GetResources {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

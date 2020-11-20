@@ -12,6 +12,7 @@ meta_desc: "Explore the Registry resource of the containerservice module, includ
 
 Manages an Azure Container Registry.
 
+
 {{% examples %}}
 ## Example Usage
 

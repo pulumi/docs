@@ -12,6 +12,7 @@ meta_desc: "Explore the StoreFirewallRule resource of the datalake module, inclu
 
 Manages a Azure Data Lake Store Firewall Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

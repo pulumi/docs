@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualNetworkRule resource of the sql module, including
 
 Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.
 
+
 {{% examples %}}
 ## Example Usage
 

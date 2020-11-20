@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServiceEndpointConnections function of the privatelin
 
 Use this data source to access endpoint connection information about an existing Private Link Service.
 
+
 {{% examples %}}
 ## Example Usage
 

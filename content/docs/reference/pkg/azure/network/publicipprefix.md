@@ -12,6 +12,7 @@ meta_desc: "Explore the PublicIpPrefix resource of the network module, including
 
 Manages a Public IP Prefix.
 
+
 {{% examples %}}
 ## Example Usage
 

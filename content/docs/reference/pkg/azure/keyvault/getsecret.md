@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSecret function of the keyvault module, including exa
 
 Use this data source to access information about an existing Key Vault Secret.
 
+
 {{% examples %}}
 ## Example Usage
 

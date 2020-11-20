@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDedicatedHost function of the compute module, includi
 
 Use this data source to access information about an existing Dedicated Host.
 
+
 {{% examples %}}
 ## Example Usage
 

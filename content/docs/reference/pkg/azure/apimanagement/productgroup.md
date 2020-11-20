@@ -12,6 +12,7 @@ meta_desc: "Explore the ProductGroup resource of the apimanagement module, inclu
 
 Manages an API Management Product Assignment to a Group.
 
+
 {{% examples %}}
 ## Example Usage
 

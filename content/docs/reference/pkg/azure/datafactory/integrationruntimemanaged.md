@@ -12,6 +12,7 @@ meta_desc: "Explore the IntegrationRuntimeManaged resource of the datafactory mo
 
 Manages an Azure Data Factory Managed Integration Runtime.
 
+
 {{% examples %}}
 ## Example Usage
 

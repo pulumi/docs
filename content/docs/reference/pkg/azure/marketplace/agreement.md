@@ -12,6 +12,7 @@ meta_desc: "Explore the Agreement resource of the marketplace module, including 
 
 Allows accepting the Legal Terms for a Marketplace Image.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIntVariable function of the automation module, includ
 
 Use this data source to access information about an existing Automation Int Variable.
 
+
 {{% examples %}}
 ## Example Usage
 

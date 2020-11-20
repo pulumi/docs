@@ -12,6 +12,7 @@ meta_desc: "Explore the GetBoolVariable function of the automation module, inclu
 
 Use this data source to access information about an existing Automation Bool Variable.
 
+
 {{% examples %}}
 ## Example Usage
 

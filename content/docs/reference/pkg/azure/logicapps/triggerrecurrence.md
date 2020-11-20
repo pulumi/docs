@@ -12,6 +12,7 @@ meta_desc: "Explore the TriggerRecurrence resource of the logicapps module, incl
 
 Manages a Recurrence Trigger within a Logic App Workflow
 
+
 {{% examples %}}
 ## Example Usage
 

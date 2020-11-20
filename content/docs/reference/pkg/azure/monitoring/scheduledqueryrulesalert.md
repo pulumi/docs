@@ -14,6 +14,7 @@ Manages an AlertingAction Scheduled Query Rules resource within Azure Monitor.
 
 
 
+
 ## Create a ScheduledQueryRulesAlert Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

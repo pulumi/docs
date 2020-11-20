@@ -12,6 +12,7 @@ meta_desc: "Explore the Service resource of the healthcare module, including exa
 
 Manages a Healthcare Service.
 
+
 {{% examples %}}
 ## Example Usage
 

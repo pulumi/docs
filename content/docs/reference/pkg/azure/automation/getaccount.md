@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the automation module, including 
 
 Use this data source to access information about an existing Automation Account.
 
+
 {{% examples %}}
 ## Example Usage
 

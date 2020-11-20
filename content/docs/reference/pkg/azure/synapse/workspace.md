@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the synapse module, including exam
 
 Manages a Synapse Workspace.
 
+
 {{% examples %}}
 ## Example Usage
 

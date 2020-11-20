@@ -16,6 +16,7 @@ Manages the Data Access Settings for Azure Security Center.
 
 > **NOTE:** Deletion of this resource does not change or reset the data access settings
 
+
 {{% examples %}}
 ## Example Usage
 

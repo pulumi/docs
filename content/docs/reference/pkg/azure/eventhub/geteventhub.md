@@ -12,6 +12,7 @@ meta_desc: "Explore the GetEventHub function of the eventhub module, including e
 
 Use this data source to access information about an existing EventHub.
 
+
 {{% examples %}}
 ## Example Usage
 

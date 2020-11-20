@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualNetwork resource of the devtest module, including
 
 Manages a Virtual Network within a DevTest Lab.
 
+
 {{% examples %}}
 ## Example Usage
 

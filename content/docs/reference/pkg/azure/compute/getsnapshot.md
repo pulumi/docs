@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSnapshot function of the compute module, including ex
 
 Use this data source to access information about an existing Snapshot.
 
+
 {{% examples %}}
 ## Example Usage
 

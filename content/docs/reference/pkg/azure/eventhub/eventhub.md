@@ -12,6 +12,7 @@ meta_desc: "Explore the EventHub resource of the eventhub module, including exam
 
 Manages a Event Hubs as a nested resource within a Event Hubs namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

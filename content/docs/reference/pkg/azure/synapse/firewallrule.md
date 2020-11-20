@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallRule resource of the synapse module, including e
 
 Allows you to Manages a Synapse Firewall Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

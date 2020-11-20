@@ -12,6 +12,7 @@ meta_desc: "Explore the TriggerSchedule resource of the datafactory module, incl
 
 Manages a Trigger Schedule inside a Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

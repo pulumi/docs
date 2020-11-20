@@ -14,6 +14,7 @@ Use this data source to access information about an existing Role Definition.
 
 
 
+
 ## Using GetRoleDefinition {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

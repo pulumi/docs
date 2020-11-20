@@ -12,6 +12,7 @@ meta_desc: "Explore the ConnectionServicePrincipal resource of the automation mo
 
 Manages an Automation Connection with type `AzureServicePrincipal`.
 
+
 {{% examples %}}
 ## Example Usage
 

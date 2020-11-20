@@ -12,6 +12,7 @@ meta_desc: "Explore the MongoDatabase resource of the cosmosdb module, including
 
 Manages a Mongo Database within a Cosmos DB Account.
 
+
 {{% examples %}}
 ## Example Usage
 

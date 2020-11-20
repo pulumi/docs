@@ -12,6 +12,7 @@ meta_desc: "Explore the Account resource of the storage module, including exampl
 
 Manages an Azure Storage Account.
 
+
 {{% examples %}}
 ## Example Usage
 

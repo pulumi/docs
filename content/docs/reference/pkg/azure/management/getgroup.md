@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGroup function of the management module, including ex
 
 Use this data source to access information about an existing Management Group.
 
+
 {{% examples %}}
 ## Example Usage
 

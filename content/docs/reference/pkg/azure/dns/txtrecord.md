@@ -12,6 +12,7 @@ meta_desc: "Explore the TxtRecord resource of the dns module, including examples
 
 Enables you to manage DNS TXT Records within Azure DNS.
 
+
 {{% examples %}}
 ## Example Usage
 

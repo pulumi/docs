@@ -12,6 +12,7 @@ meta_desc: "Explore the GetConfigurationStore function of the appconfiguration m
 
 Use this data source to access information about an existing App Configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Namespace resource of the servicebus module, including e
 
 Manages a ServiceBus Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

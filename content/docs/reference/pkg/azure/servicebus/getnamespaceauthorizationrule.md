@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNamespaceAuthorizationRule function of the servicebus
 
 Use this data source to access information about an existing ServiceBus Namespace Authorization Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

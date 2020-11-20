@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationSecurityGroup resource of the network module,
 
 Manages an Application Security Group.
 
+
 {{% examples %}}
 ## Example Usage
 

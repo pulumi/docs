@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallRule resource of the mariadb module, including e
 
 Manages a Firewall Rule for a MariaDB Server
 
+
 {{% examples %}}
 ## Example Usage
 

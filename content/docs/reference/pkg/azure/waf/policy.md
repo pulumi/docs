@@ -12,6 +12,7 @@ meta_desc: "Explore the Policy resource of the waf module, including examples, i
 
 Manages a Azure Web Application Firewall Policy instance.
 
+
 {{% examples %}}
 ## Example Usage
 

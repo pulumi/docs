@@ -12,6 +12,7 @@ meta_desc: "Explore the ConfigurationStore resource of the appconfiguration modu
 
 Manages an Azure App Configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

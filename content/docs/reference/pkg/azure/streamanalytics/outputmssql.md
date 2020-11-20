@@ -12,6 +12,7 @@ meta_desc: "Explore the OutputMssql resource of the streamanalytics module, incl
 
 Manages a Stream Analytics Output to Microsoft SQL Server Database.
 
+
 {{% examples %}}
 ## Example Usage
 

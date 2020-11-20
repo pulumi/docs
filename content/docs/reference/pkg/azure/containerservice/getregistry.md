@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRegistry function of the containerservice module, inc
 
 Use this data source to access information about an existing Container Registry.
 
+
 {{% examples %}}
 ## Example Usage
 

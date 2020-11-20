@@ -13,6 +13,7 @@ meta_desc: "Explore the GetUserAssignedIdentity function of the core module, inc
 
 Use this data source to access information about an existing User Assigned Identity.
 
+
 {{% examples %}}
 ## Example Usage
 

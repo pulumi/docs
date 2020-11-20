@@ -14,6 +14,7 @@ Manages an Certificate within an API Management Service.
 
 
 
+
 ## Create a Certificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

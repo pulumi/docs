@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the storage module, including exa
 
 Use this data source to access information about an existing Storage Account.
 
+
 {{% examples %}}
 ## Example Usage
 

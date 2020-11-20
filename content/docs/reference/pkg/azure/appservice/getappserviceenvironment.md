@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAppServiceEnvironment function of the appservice modu
 
 Use this data source to access information about an existing App Service Environment.
 
+
 {{% examples %}}
 ## Example Usage
 

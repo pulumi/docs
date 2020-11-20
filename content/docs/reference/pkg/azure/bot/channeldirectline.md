@@ -14,6 +14,7 @@ Manages a Directline integration for a Bot Channel
 
 
 
+
 ## Create a ChannelDirectLine Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

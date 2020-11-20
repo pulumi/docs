@@ -12,6 +12,7 @@ meta_desc: "Explore the GetWorkspace function of the synapse module, including e
 
 Use this data source to access information about an existing Synapse Workspace.
 
+
 {{% examples %}}
 ## Example Usage
 

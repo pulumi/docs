@@ -12,6 +12,7 @@ meta_desc: "Explore the GetQueueAuthorizationRule function of the servicebus mod
 
 Use this data source to access information about an existing ServiceBus Queue Authorisation Rule within a ServiceBus Queue.
 
+
 {{% examples %}}
 ## Example Usage
 

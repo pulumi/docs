@@ -12,6 +12,7 @@ meta_desc: "Explore the GetApplicationSecurityGroup function of the network modu
 
 Use this data source to access information about an existing Application Security Group.
 
+
 {{% examples %}}
 ## Example Usage
 

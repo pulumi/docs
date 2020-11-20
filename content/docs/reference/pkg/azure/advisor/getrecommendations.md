@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRecommendations function of the advisor module, inclu
 
 Use this data source to access information about an existing Advisor Recommendations.
 
+
 {{% examples %}}
 ## Example Usage
 

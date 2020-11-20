@@ -12,6 +12,7 @@ meta_desc: "Explore the GetShare function of the datashare module, including exa
 
 Use this data source to access information about an existing Data Share.
 
+
 {{% examples %}}
 ## Example Usage
 

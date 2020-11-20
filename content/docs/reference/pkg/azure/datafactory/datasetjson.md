@@ -12,6 +12,7 @@ meta_desc: "Explore the DatasetJson resource of the datafactory module, includin
 
 Manages an Azure JSON Dataset inside an Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

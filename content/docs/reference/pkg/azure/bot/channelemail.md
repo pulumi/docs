@@ -16,6 +16,7 @@ Manages a Email integration for a Bot Channel
 
 
 
+
 ## Create a ChannelEmail Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

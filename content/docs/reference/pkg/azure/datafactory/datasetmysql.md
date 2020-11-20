@@ -12,6 +12,7 @@ meta_desc: "Explore the DatasetMysql resource of the datafactory module, includi
 
 Manages a MySQL Dataset inside a Azure Data Factory.
 
+
 {{% examples %}}
 ## Example Usage
 

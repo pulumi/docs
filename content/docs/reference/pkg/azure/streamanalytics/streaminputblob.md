@@ -12,6 +12,7 @@ meta_desc: "Explore the StreamInputBlob resource of the streamanalytics module, 
 
 Manages a Stream Analytics Stream Input Blob.
 
+
 {{% examples %}}
 ## Example Usage
 

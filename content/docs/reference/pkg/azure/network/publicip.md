@@ -12,6 +12,7 @@ meta_desc: "Explore the PublicIp resource of the network module, including examp
 
 Manages a Public IP Address.
 
+
 {{% examples %}}
 ## Example Usage
 

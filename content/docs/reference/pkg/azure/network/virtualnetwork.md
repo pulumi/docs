@@ -17,6 +17,7 @@ optionally be configured with a security group to be associated with the subnet.
 provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
 At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet's.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -277,7 +278,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetwork">VirtualNetwork</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_spaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ddos_protection_plan</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkDdosProtectionPlanArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetwork">VirtualNetwork</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_spaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bgp_community</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ddos_protection_plan</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkDdosProtectionPlanArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -473,6 +474,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
+        <span id="bgpcommunity_csharp">
+<a href="#bgpcommunity_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ddosprotectionplan_csharp">
 <a href="#ddosprotectionplan_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
 </span> 
@@ -537,6 +549,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmprotectionenabled_csharp">
+<a href="#vmprotectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -564,6 +587,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgpcommunity_go">
+<a href="#bgpcommunity_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -632,6 +666,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmprotectionenabled_go">
+<a href="#vmprotectionenabled_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -659,6 +704,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgpcommunity_nodejs">
+<a href="#bgpcommunity_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -727,6 +783,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmprotectionenabled_nodejs">
+<a href="#vmprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Protection<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -754,6 +821,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgp_community_python">
+<a href="#bgp_community_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -820,6 +898,17 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_protection_enabled_python">
+<a href="#vm_protection_enabled_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>protection_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -965,7 +1054,7 @@ Get an existing VirtualNetwork resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_spaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ddos_protection_plan</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkDdosProtectionPlanArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VirtualNetwork</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_spaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bgp_community</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ddos_protection_plan</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkDdosProtectionPlanArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> VirtualNetwork</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1092,6 +1181,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_bgpcommunity_csharp">
+<a href="#state_bgpcommunity_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ddosprotectionplan_csharp">
 <a href="#state_ddosprotectionplan_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
 </span> 
@@ -1178,6 +1278,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vmprotectionenabled_csharp">
+<a href="#state_vmprotectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1194,6 +1305,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_bgpcommunity_go">
+<a href="#state_bgpcommunity_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1284,6 +1406,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vmprotectionenabled_go">
+<a href="#state_vmprotectionenabled_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Protection<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1300,6 +1433,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_bgpcommunity_nodejs">
+<a href="#state_bgpcommunity_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,6 +1534,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vmprotectionenabled_nodejs">
+<a href="#state_vmprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Protection<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1406,6 +1561,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual network. You can supply more than one address space.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_bgp_community_python">
+<a href="#state_bgp_community_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>community</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP community attribute in format `<as-number>:<community-value>`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1494,6 +1660,17 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vm_protection_enabled_python">
+<a href="#state_vm_protection_enabled_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>protection_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to enable VM protection for all the subnets in this Virtual Network. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>

@@ -12,6 +12,7 @@ meta_desc: "Explore the OutputEventHub resource of the streamanalytics module, i
 
 Manages a Stream Analytics Output to an EventHub.
 
+
 {{% examples %}}
 ## Example Usage
 

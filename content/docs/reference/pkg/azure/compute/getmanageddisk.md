@@ -12,6 +12,7 @@ meta_desc: "Explore the GetManagedDisk function of the compute module, including
 
 Use this data source to access information about an existing Managed Disk.
 
+
 {{% examples %}}
 ## Example Usage
 

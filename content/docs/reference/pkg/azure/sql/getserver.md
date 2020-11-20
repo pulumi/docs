@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServer function of the sql module, including examples
 
 Use this data source to access information about an existing SQL Azure Database Server.
 
+
 {{% examples %}}
 ## Example Usage
 

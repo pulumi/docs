@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabasePrincipalAssignment resource of the kusto module
 
 Manages a Kusto (also known as Azure Data Explorer) Database Principal Assignment.
 
+
 {{% examples %}}
 ## Example Usage
 

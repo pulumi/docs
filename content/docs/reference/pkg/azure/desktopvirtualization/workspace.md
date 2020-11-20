@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the desktopvirtualization module, 
 
 Manages a Virtual Desktop Workspace.
 
+
 {{% examples %}}
 ## Example Usage
 

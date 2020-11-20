@@ -12,6 +12,7 @@ meta_desc: "Explore the GetConsumeGroup function of the eventhub module, includi
 
 Use this data source to access information about an existing Event Hubs Consumer Group within an Event Hub.
 
+
 {{% examples %}}
 ## Example Usage
 

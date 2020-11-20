@@ -12,6 +12,7 @@ meta_desc: "Explore the Snapshot resource of the compute module, including examp
 
 Manages a Disk Snapshot.
 
+
 {{% examples %}}
 ## Example Usage
 

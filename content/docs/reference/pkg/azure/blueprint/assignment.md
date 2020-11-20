@@ -16,6 +16,7 @@ Manages a Blueprint Assignment resource
 
 > **NOTE:** Azure Blueprint Assignments can only be applied to Subscriptions.  Assignments to Management Groups is not currently supported by the service or by this provider.
 
+
 {{% examples %}}
 ## Example Usage
 

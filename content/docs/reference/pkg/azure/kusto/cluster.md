@@ -12,6 +12,7 @@ meta_desc: "Explore the Cluster resource of the kusto module, including examples
 
 Manages a Kusto (also known as Azure Data Explorer) Cluster
 
+
 {{% examples %}}
 ## Example Usage
 

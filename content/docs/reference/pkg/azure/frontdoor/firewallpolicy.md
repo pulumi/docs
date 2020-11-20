@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallPolicy resource of the frontdoor module, includi
 
 Manages an Azure Front Door Web Application Firewall Policy instance.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -15,6 +15,7 @@ Manages a Route Table
 > **NOTE on Route Tables and Routes:** There is both a standalone `route` resource, and allows for Routes to be defined in-line within the `route_table` resource.
 At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the SpringCloudCertificate resource of the appplatform modul
 
 Manages an Azure Spring Cloud Certificate.
 
+
 {{% examples %}}
 ## Example Usage
 

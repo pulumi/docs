@@ -12,6 +12,7 @@ meta_desc: "Explore the AlertRuleMsSecurityIncident resource of the sentinel mod
 
 Manages a Sentinel MS Security Incident Alert Rule.
 
+
 {{% examples %}}
 ## Example Usage
 

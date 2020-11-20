@@ -12,6 +12,7 @@ meta_desc: "Explore the LoadBalancer resource of the lb module, including exampl
 
 Manages a Load Balancer Resource.
 
+
 {{% examples %}}
 ## Example Usage
 

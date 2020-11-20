@@ -13,6 +13,7 @@ meta_desc: "Explore the Namespace resource of the eventhub module, including exa
 
 Manages a ServiceBus Namespace.
 
+
 {{% examples %}}
 ## Example Usage
 

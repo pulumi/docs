@@ -14,6 +14,7 @@ Use this data source to access information about an existing API Management User
 
 
 
+
 ## Using GetUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
