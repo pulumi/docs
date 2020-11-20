@@ -61,14 +61,24 @@ instance = cloudamqp.Instance("demo-instance",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  cloudamqp "github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	cloudamqp "github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp"
 )
 
-instance, _ := cloudamqp.NewInstance(ctx, "demo-instance", &cloudamqp.InstanceArgs{
-	Plan:   pulumi.String("lemur"),
-	Region: pulumi.String("amazon-web-services::us-west-2"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := cloudamqp.NewInstance(ctx, "demo-instance", &cloudamqp.InstanceArgs{
+			Plan:   pulumi.String("lemur"),
+			Region: pulumi.String("amazon-web-services::us-west-2"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

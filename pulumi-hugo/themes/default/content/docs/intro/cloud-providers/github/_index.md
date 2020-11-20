@@ -63,14 +63,24 @@ repo = github.Repository("demo-repo",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  github "github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	github "github.com/pulumi/pulumi-github/sdk/go/github"
 )
 
-repository, _ := github.NewRepository(ctx, "demo-repo", &github.RepositoryArgs{
-  Description: pulumi.String("Generated from automated test"),
-  Private:     pulumi.Bool(true),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		repository, err := github.NewRepository(ctx, "demo-repo", &github.RepositoryArgs{
+			Description: pulumi.String("Generated from automated test"),
+			Private:     pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

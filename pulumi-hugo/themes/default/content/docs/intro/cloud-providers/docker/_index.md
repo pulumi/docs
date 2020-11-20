@@ -71,17 +71,30 @@ container = docker.Container("ubuntu",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  do "github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	do "github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
 )
 
-image, _ := docker.NewRemoteImage(ctx, "ubuntu", &docker.RemoteImageArgs{
-  Name: pulumi.String("ubuntu:precise"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		image, err := docker.NewRemoteImage(ctx, "ubuntu", &docker.RemoteImageArgs{
+			Name: pulumi.String("ubuntu:precise"),
+		})
+		if err != nil {
+			return err
+		}
 
-container, _ := docker.NewContainer(ctx, "ubuntu", &docker.ContainerArgs{
-  Image: image.Latest()
-})
+		container, err := docker.NewContainer(ctx, "ubuntu", &docker.ContainerArgs{
+			Image: image.Latest(),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}
