@@ -25,12 +25,15 @@
 }
 
 .pricing-compare-plans-table {
-    @apply mt-8;
+    @apply mt-4;
+
+    @screen lg {
+        @apply mt-8;
+    }
 
     .compare-plans-table-header {
         &-container {
-            @apply flex px-8 py-5;
-            background-color: rgba(42, 19, 55, 0.05);
+            @apply flex px-8 py-5 bg-gray-200;
         }
 
         &-item {
@@ -112,6 +115,10 @@
 
         .faq-item-label {
             @apply flex select-none;
+
+            p:first-child {
+                @apply pr-2;
+            }
 
             p, i {
                 @apply text-black;

@@ -16,7 +16,7 @@
 {{ define "main" }}
     <section id="plans" class="container mx-auto pricing-plans">
         <div class="w-full flex flex-col lg:flex-row px-5 lg:px-0">
-            <div class="w-full lg:w-1/4 lg:mx-3 border-2 border-solid border-b-0 lg:border-b-2 border-gray-400 rounded-b-none lg:rounded pb-12 lg:pb-10">
+            <div class="w-full lg:w-1/4 lg:mr-3 border-2 border-solid border-b-0 lg:border-b-2 border-gray-400 rounded-b-none lg:rounded pb-12 lg:pb-10">
                 <h2 class="text-3xl text-center mt-10 mb-0 lg:hidden">Pulumi Service</h2>
                 <div class="px-4 text-center mt-5 lg:mt-0 lg:mt-0">
                     <p class="pricing-plans-item-header">COMMUNITY</p>
@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="w-full lg:w-3/4 lg:mx-3 border-2 border-t-0 lg:border-t-2 border-gray-400 rounded-t-none lg:rounded pb-10">
+            <div class="w-full lg:w-3/4 lg:ml-3 border-2 border-t-0 lg:border-t-2 border-gray-400 rounded-t-none lg:rounded pb-10">
                 <div class="flex flex-col lg:flex-row">
                     <div class="pricing-plans-item-container">
                         <p class="pricing-plans-item-header">STARTER</p>
@@ -215,7 +215,9 @@
     <section id="open-source" class="container mx-auto mt-10 px-5 lg:px-0">
         <div class="border-2 border-solid border-gray-400 rounded text-center">
             <p class="text-3xl mt-10 mb-0">Open Source SDK</p>
-            <p class="text-sm text-gray-700 lg:mx-32 xl:mx-64 px-20">The SDK is a CLI and collection of libraries for defining and deploying cloud apps and infrastructure in code.</p>
+            <p class="text-sm text-gray-700 lg:mx-32 xl:mx-64 px-5 sm:px-20">
+                The SDK is a CLI and collection of libraries for defining and deploying cloud apps and infrastructure in code.
+            </p>
             <ul class="flex flex-col lg:flex-row justify-center list-none">
                 <li class="mx-5">
                     <span>
@@ -251,10 +253,11 @@
     <section id="compare" class="container mx-auto mt-16">
         <p class="text-4xl font-bold text-center">Compare Plans</p>
 
+        <p class="text-lg font-bold text-center mb-0 lg:hidden">Fundamentals</p>
         <div id="fundamentals" class="pricing-compare-plans-table">
             <div class="compare-plans-table-header-container">
                 <div class="compare-plans-table-header-item">
-                    <span class="font-bold">Fundamentals</span>
+                    <span class="font-bold hidden lg:block">Fundamentals</span>
                 </div>
                 <div class="compare-plans-table-header-item">
                     <span>TEAM STARTER</span>
@@ -373,10 +376,11 @@
             </div>
         </div>
 
+        <p class="text-lg font-bold text-center mb-0 lg:hidden">Continuous Delivery</p>
         <div id="continuous-delivery" class="pricing-compare-plans-table">
             <div class="compare-plans-table-header-container">
                 <div class="compare-plans-table-header-item">
-                    <span class="font-bold">Continuous Delivery</span>
+                    <span class="font-bold hidden lg:block">Continuous Delivery</span>
                 </div>
                 <div class="compare-plans-table-header-item">
                     <span>TEAM STARTER</span>
@@ -528,10 +532,11 @@
             </div>
         </div>
 
+        <p class="text-lg font-bold text-center mb-0 lg:hidden">CrossGuard Policy as Code</p>
         <div id="policy" class="pricing-compare-plans-table">
             <div class="compare-plans-table-header-container">
                 <div class="compare-plans-table-header-item">
-                    <span class="font-bold">CrossGuard Policy as Code</span>
+                    <span class="font-bold hidden lg:block">CrossGuard Policy as Code</span>
                 </div>
                 <div class="compare-plans-table-header-item">
                     <span>TEAM STARTER</span>
@@ -549,13 +554,13 @@
                     <span>Gated deployments</span>
                 </div>
                 <div class="compare-plans-table-row-item">
-                    <span>Local enforcement</span>
+                    <span>Local <span class="hidden md:block">enforcement</span></span>
                 </div>
                 <div class="compare-plans-table-row-item">
-                    <span>Local enforcement</span>
+                    <span>Local <span class="hidden md:block">enforcement</span></span>
                 </div>
                 <div class="compare-plans-table-row-item">
-                    <span>Server-side enforcement</span>
+                    <span>Server-side <span class="hidden md:block">enforcement</span></span>
                 </div>
             </div>
 
@@ -575,10 +580,11 @@
             </div>
         </div>
 
+        <p class="text-lg font-bold text-center mb-0 lg:hidden">Security</p>
         <div id="security" class="pricing-compare-plans-table">
             <div class="compare-plans-table-header-container">
                 <div class="compare-plans-table-header-item">
-                    <span class="font-bold">Security</span>
+                    <span class="font-bold hidden lg:block">Security</span>
                 </div>
                 <div class="compare-plans-table-header-item">
                     <span>TEAM STARTER</span>
@@ -697,10 +703,11 @@
             </div>
         </div>
 
+        <p class="text-lg font-bold text-center mb-0 lg:hidden">Support</p>
         <div id="support" class="pricing-compare-plans-table">
             <div class="compare-plans-table-header-container">
                 <div class="compare-plans-table-header-item">
-                    <span class="font-bold">Support</span>
+                    <span class="font-bold hidden lg:block">Support</span>
                 </div>
                 <div class="compare-plans-table-header-item">
                     <span>TEAM STARTER</span>
@@ -814,7 +821,7 @@
         <span id="faq-product" class="hidden"></span>
         <span id="faq-billing" class="hidden"></span>
 
-        <ul id="faq-headers" class="flex list-none mt-10">
+        <ul id="faq-headers" class="hidden lg:flex list-none mt-10">
             <li class="px-10 py-3 text-2xl mr-3 border-b-4 border-solid border-gray-400" data-faq-label="product">
                 <a href="#faq-product" class="text-black">Product</a>
             </li>
@@ -823,7 +830,8 @@
             </li>
         </ul>
 
-        <ul class="list-none mx-5 xl:ml-12" data-faq-type="faq-product">
+        <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Product</p>
+        <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-product">
             <li class="faq-item text-2xl">
                 <label class="cursor-pointer w-full">
                     <input type="checkbox" class="absolute invisible"></input>
@@ -984,7 +992,8 @@
             </li>
         </ul>
 
-        <ul class="list-none mx-5 xl:ml-12 hidden" data-faq-type="faq-billing">
+        <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Billing and Support</p>
+        <ul class="list-none p-0 mx-5 xl:ml-12 lg:hidden" data-faq-type="faq-billing">
             <li class="faq-item text-2xl">
                 <label class="cursor-pointer w-full">
                     <input type="checkbox" class="absolute invisible"></input>
