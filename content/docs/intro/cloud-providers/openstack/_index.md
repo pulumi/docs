@@ -64,14 +64,23 @@ instance = compute.Instance("test",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  import "github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	compute "github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
 )
 
-instance, _ := compute.NewInstance(ctx, "test", &compute.InstanceArgs{
-  FlavorName: pulumi.String("s1-2"),
-  ImageName:  pulumi.String("Ubuntu 16.04"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := compute.NewInstance(ctx, "test", &compute.InstanceArgs{
+			FlavorName: pulumi.String("s1-2"),
+			ImageName:  pulumi.String("Ubuntu 16.04"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

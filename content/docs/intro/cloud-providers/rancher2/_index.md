@@ -69,16 +69,25 @@ user = rancher2.User("my-user",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  rancher2 "github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	rancher2 "github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
 )
 
-user, _ := rancher2.NewUser(ctx, "my-user", &rancher2.UserArgs{
-  Name:     pulumi.String("Foo user"),
-  Username: pulumi.String("foo"),
-  Password: pulumi.String("initialPassw0rd"),
-  Enabled:  pulumi.Bool(true),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		user, err := rancher2.NewUser(ctx, "my-user", &rancher2.UserArgs{
+			Name:     pulumi.String("Foo user"),
+			Username: pulumi.String("foo"),
+			Password: pulumi.String("initialPassw0rd"),
+			Enabled:  pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

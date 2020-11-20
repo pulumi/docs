@@ -54,10 +54,21 @@ project = mongodbatlas.Project("my-demo-project")
 
 ```go
 import (
-  mongodbatlas "github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	mongodbatlas "github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
 )
 
-project, _ := mongodb.NewProject(ctx, "my-demo-project", &mongodb.ProjectArgs{})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := mongodb.NewProject(ctx, "my-demo-project", &mongodb.ProjectArgs{})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

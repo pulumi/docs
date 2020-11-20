@@ -54,10 +54,20 @@ my_db = postgresql.Database("my-database")
 
 ```go
 import (
-  postgresql "github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	postgresql "github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql"
 )
 
-myDb, _ := postgresql.NewDatabase(ctx, "my-database", &postgresql.DatabaseArgs{})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myDb, err := postgresql.NewDatabase(ctx, "my-database", &postgresql.DatabaseArgs{})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

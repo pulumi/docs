@@ -65,14 +65,24 @@ instance = do.Domain("test",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  do "github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	do "github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
 )
 
-domain, _ := do.NewDomain(ctx, "test", &do.DomainArgs{
-  Name:      pulumi.String("mydomain.com"),
-  IpAddress: pulumi.String("192.168.10.10"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		domain, err := do.NewDomain(ctx, "test", &do.DomainArgs{
+			Name:      pulumi.String("mydomain.com"),
+			IpAddress: pulumi.String("192.168.10.10"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

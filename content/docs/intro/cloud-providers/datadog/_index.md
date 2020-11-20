@@ -66,15 +66,25 @@ user = datadog.User("my-policy",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  datadog "github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	datadog "github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
 )
 
-user, _ := datadog.NewUser(ctx, "my-user", &datadog.UserArgs{
- Email:  pulumi.String("new@example.com"),
- Handle: pulumi.String("new@example.com"),
- Name:   pulumi.String("New User"),
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		user, err := datadog.NewUser(ctx, "my-user", &datadog.UserArgs{
+			Email:  pulumi.String("new@example.com"),
+			Handle: pulumi.String("new@example.com"),
+			Name:   pulumi.String("New User"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
 }
+
 ```
 
 {{% /choosable %}}

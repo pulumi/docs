@@ -88,20 +88,29 @@ webserver = venafi.Certificate("webserver",
 
 ```go
 import (
-    "github.com/pulumi/pulumi-venafi/sdk/go/venafi"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-venafi/sdk/go/venafi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
-cert, _ := venafi.NewCertificate(ctx, "webserver", &venafi.CertificateArgs{
-    Algorithm:  pulumi.String("RSA"),
-    CommonName: pulumi.String("web.venafi.example"),
-    KeyPassword: pulumi.String("Password123!"),
-    RsaBits:     pulumi.Int(2048),
-    SanDns: pulumi.StringArray{
-        pulumi.String("web01.venafi.example"),
-        pulumi.String("web02.venafi.example"),
-    },
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cert, err := venafi.NewCertificate(ctx, "webserver", &venafi.CertificateArgs{
+			Algorithm:   pulumi.String("RSA"),
+			CommonName:  pulumi.String("web.venafi.example"),
+			KeyPassword: pulumi.String("Password123!"),
+			RsaBits:     pulumi.Int(2048),
+			SanDns: pulumi.StringArray{
+				pulumi.String("web01.venafi.example"),
+				pulumi.String("web02.venafi.example"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

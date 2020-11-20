@@ -60,13 +60,22 @@ user = wavefront.User("demo-py",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  "github.com/pulumi/pulumi-wavefront/sdk/go/wavefront"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-wavefront/sdk/go/wavefront"
 )
 
-user, _ := wavefront.NewUser(ctx, "demo", &wavefront.UserArgs{
-  Email: pulumi.String("test+go@mycompany.io"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		user, err := wavefront.NewUser(ctx, "demo", &wavefront.UserArgs{
+			Email: pulumi.String("test+go@mycompany.io"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
