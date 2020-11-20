@@ -57,3 +57,11 @@ title = "10 Coolest Startups of 2019"
 featured = true
 img = "/logos/press/crn.png"
 url = "https://www.crn.com/slide-shows/applications-os/the-10-coolest-devops-startups-of-2019-so-far-/9?itc=refresh"
+
+"
+
+[[awards]]
+title = "10 Hottest Kubernetes Startups Of 2020"
+featured = true
+img = "/logos/press/crn.png"
+url = "https://www.crn.com/slide-shows/cloud/the-10-hottest-kubernetes-startups-of-2020/7"
