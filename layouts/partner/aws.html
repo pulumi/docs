@@ -9,14 +9,113 @@
                 </div>
             </div>
             <div class="w-full mt-16 lg:w-1/2 lg:mt-0">
-                {{ partial "code-tabbed" (dict "tabs" .Params.hero.ide.tabs "chrome" "true" "mode" "dark") }}
+                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe
+                        src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="Introduction to Pulumi: Modern Infrastructure as Code"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/6f8KF6UGN7g?autoplay=1><img src='/images/home/youtube-preview.png' alt='Introduction to Pulumi: Modern Infrastructure as Code'></a>"
+                    ></iframe>
+                </div>
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <div class="container mx-auto carousel-always-visible">
+    {{ $pageContext := . }}
+
+    <!-- Customer logos -->
+    <section class="my-16 px-4">
+        <h3 class="mt-12 mb-8 text-center">
+            Trusted by top engineering teams
+        </h3>
+        <div class="container mx-auto">
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
+                </a>
+                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                </a>
+                <a data-track="customer-logo" href="https://www.mbusa.com/"  target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                </a>
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                </a>
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
+            </div>
+        </div>
+        <p class="text-blue-500 text-center font-bold mt-10">
+            <a data-track="logos-case-study" href="{{ relref . "/case-studies" }}">Read our customer use cases</a> &rarr;
+        </p>
+    </section>
+
+    <!-- Start AWS re:Invent takeover content -->
+    <section class="container mx-auto text-center mb-12">
+        <p class="text-3xl font-bold">JOIN A WORKSHOP</p>
+        <ul class="flex flex-col lg:flex-row list-none text-left">
+            {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
+
+            {{ $reInventWorkshops := slice }}
+            {{ range $webinars }}
+                {{ if eq .Params.title "Building a Kubernetes Platform in Amazon EKS with Pulumi" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ else if eq .Params.title "Deploying Microservices with Pulumi and AWS Lambda" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ else if eq .Params.url_slug "introduction-to-pulumi" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ end }}
+            {{ end }}
+
+
+            {{ range $reInventWorkshops }}
+                {{ $link := printf "/resources/%s" .Params.url_slug }}
+                {{ $displayDate := dateFormat "January 2, 2006" .Params.main.sortable_date }}
+
+                {{ $tileOptions := (dict "pageContext" $pageContext "external" false "filters" "" "link" $link "icon" "users" "description" .Params.meta_desc "displayDate" $displayDate "data" . ) }}
+                {{ partial "content-tile.html" $tileOptions }}
+            {{ end }}
+        </ul>
+    </section>
+
+    <!-- Pick the blog listings. -->
+    {{ $blog := where $.Site.Pages "Type" "blog" }}
+
+    <section class="container mx-auto text-center mb-24">
+        <p class="text-3xl font-bold mb-16">AWS RE:INVENT NEWS & ANNOUNCEMENTS</p>
+        <div class="flex justify-center">
+            <div class="w-10/12">
+                {{ range first 3 $blog }}
+                    <div class="flex mb-5">
+                        <div class="w-1/2 mr-8">
+                            {{ partial "blog/poster" . }}
+                        </div>
+
+                        <div class="w-1/2 text-left">
+                            <p class="no-anchor text-2xl font-bold"><a data-track="post-{{ .Title | urlize }}" href="{{ .Permalink }}">{{ .Title }}</a></p>
+                            <div class="flex items-center">
+                                <span>
+                                    {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors ) }}
+                                </span>
+                                <span class="mr-2">∙</span>
+                                <time>
+                                    {{ .Date.Format "Monday, Jan 2, 2006" }}
+                                </time>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    <!-- End AWS re:invent takeover content -->
+
+    <div class="container mx-auto carousel-always-visible mb-24">
         <section class="w-full text-center">
             <div>
                 <div>
@@ -146,86 +245,6 @@
                         pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
                     </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Customer logos -->
-        <section class="my-16 px-4">
-            <h3 class="mt-12 mb-8 text-center">
-                Trusted by top engineering teams
-            </h3>
-            <div class="container mx-auto">
-                <div class="lg:flex items-center justify-center my-4">
-                    <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank" rel="noreferrer noopener">
-                        <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
-                    </a>
-                    <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank" rel="noreferrer noopener">
-                        <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
-                    </a>
-                    <a data-track="customer-logo" href="https://www.mbusa.com/"  target="_blank" rel="noreferrer noopener">
-                        <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
-                    </a>
-                    <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank" rel="noreferrer noopener">
-                        <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
-                    </a>
-                    <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank" rel="noreferrer noopener">
-                        <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
-                    </a>
-                </div>
-            </div>
-            <p class="text-blue-500 text-center font-bold mt-10">
-                <a data-track="logos-case-study" href="{{ relref . "/case-studies" }}">Read our customer use cases</a> &rarr;
-            </p>
-        </section>
-
-        <section class="flex flex-wrap mt-16">
-            <div class="w-full lg:w-1/2 p-10">
-                <p class="text-3xl font-bold inline-block">Feature Callout #1</p>
-                <p>
-                    Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
-                    velit urna, non semper sem sagittis nec. Aliquam aliquet risus quis urna ornare
-                    volutpat. Vivamus vitae laoreet turpis, sed aliquam orci. Suspendisse et ultrices
-                    dui. Nunc lobortis fringilla erat a auctor. Aenean consequat erat quis nulla auctor
-                    condimentum. Donec sollicitudin bibendum tortor.
-                </p>
-            </div>
-
-            <div class="w-full order-first lg:w-1/2 lg:order-last">
-                <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
-            </div>
-        </section>
-
-        <section class="flex flex-wrap mt-16">
-            <div class="w-full lg:w-1/2">
-                <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
-            </div>
-
-            <div class="w-full lg:w-1/2 p-10">
-                <p class="text-3xl font-bold inline-block">Feature Callout #2</p>
-                <p>
-                    Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
-                    velit urna, non semper sem sagittis nec. Aliquam aliquet risus quis urna ornare
-                    volutpat. Vivamus vitae laoreet turpis, sed aliquam orci. Suspendisse et ultrices
-                    dui. Nunc lobortis fringilla erat a auctor. Aenean consequat erat quis nulla auctor
-                    condimentum. Donec sollicitudin bibendum tortor.
-                </p>
-            </div>
-        </section>
-
-        <section class="flex flex-wrap mt-16">
-            <div class="w-full lg:w-1/2 p-10">
-                <p class="text-3xl font-bold inline-block">Feature Callout #3</p>
-                <p>
-                    Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
-                    velit urna, non semper sem sagittis nec. Aliquam aliquet risus quis urna ornare
-                    volutpat. Vivamus vitae laoreet turpis, sed aliquam orci. Suspendisse et ultrices
-                    dui. Nunc lobortis fringilla erat a auctor. Aenean consequat erat quis nulla auctor
-                    condimentum. Donec sollicitudin bibendum tortor.
-                </p>
-            </div>
-
-            <div class="w-full order-first lg:w-1/2 lg:order-last">
-                <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" />
             </div>
         </section>
     </div>
