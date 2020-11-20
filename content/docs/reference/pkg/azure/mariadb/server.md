@@ -12,7 +12,6 @@ meta_desc: "Explore the Server resource of the mariadb module, including example
 
 Manages a MariaDB Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2557,6 +2556,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+MariaDB Server's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mariadb/server:Server server1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMariaDB/servers/server1
+```
 
 
 

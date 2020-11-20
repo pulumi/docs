@@ -12,7 +12,6 @@ meta_desc: "Explore the Service resource of the signalr module, including exampl
 
 Manages an Azure SignalR service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2299,6 +2298,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+SignalR services can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:signalr/service:Service example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/terraform-signalr/providers/Microsoft.SignalRService/SignalR/tfex-signalr
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the EventHubNamespace resource of the eventhub module, inclu
 
 Manages an EventHub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2820,6 +2819,16 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 
 
 
+
+
+## Import
+
+
+EventHub Namespaces can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/eventHubNamespace:EventHubNamespace namespace1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/namespaces/namespace1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the AssignmentDedicatedHost resource of the maintenance modu
 
 Manages a maintenance assignment to Dedicated Host.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -895,6 +894,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Maintenance Assignment can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:maintenance/assignmentDedicatedHost:AssignmentDedicatedHost example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resGroup1/providers/microsoft.compute/hostGroups/group1/hosts/host1/providers/Microsoft.Maintenance/configurationAssignments/assign1
+```
 
 
 

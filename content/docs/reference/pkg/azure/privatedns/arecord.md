@@ -12,7 +12,6 @@ meta_desc: "Explore the ARecord resource of the privatedns module, including exa
 
 Enables you to manage DNS A Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1186,6 +1185,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Private DNS A Records can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:privatedns/aRecord:ARecord example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/privateDnsZones/zone1/A/myrecord1
+```
 
 
 

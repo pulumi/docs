@@ -12,7 +12,6 @@ meta_desc: "Explore the AAAARecord resource of the privatedns module, including 
 
 Enables you to manage DNS AAAA Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1194,6 +1193,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Private DNS AAAA Records can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:privatedns/aAAARecord:AAAARecord test /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/privateDnsZones/zone1/AAAA/myrecord1
+```
 
 
 

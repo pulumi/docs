@@ -14,7 +14,6 @@ Manages a PostgreSQL Virtual Network Rule.
 
 > **NOTE:** PostgreSQL Virtual Network Rules [can only be used with SKU Tiers of `GeneralPurpose` or `MemoryOptimized`](https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1129,6 +1128,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+PostgreSQL Virtual Network Rules can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:postgresql/virtualNetworkRule:VirtualNetworkRule rule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.DBforPostgreSQL/servers/myserver/virtualNetworkRules/vnetrulename
+```
 
 
 

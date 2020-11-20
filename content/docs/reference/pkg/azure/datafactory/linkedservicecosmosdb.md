@@ -16,7 +16,6 @@ Manages a Linked Service (connection) between a SFTP Server and Azure Data Facto
 
 
 
-
 ## Create a LinkedServiceCosmosDb Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1520,6 +1519,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory Linked Service's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/linkedServiceCosmosDb:LinkedServiceCosmosDb example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/linkedservices/example
+```
 
 
 

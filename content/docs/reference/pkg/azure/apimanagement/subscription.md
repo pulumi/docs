@@ -12,7 +12,6 @@ meta_desc: "Explore the Subscription resource of the apimanagement module, inclu
 
 Manages a Subscription within a API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1488,6 +1487,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Subscriptions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/subscription:Subscription example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-resources/providers/Microsoft.ApiManagement/service/example-apim/subscriptions/subscription-name
+```
 
 
 

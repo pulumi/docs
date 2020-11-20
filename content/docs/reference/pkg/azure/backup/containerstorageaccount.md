@@ -14,7 +14,6 @@ Manages registration of a storage account with Azure Backup. Storage accounts mu
 
 > **NOTE:** Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. [Read More](https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -875,6 +874,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Backup Storage Account Containers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:backup/containerStorageAccount:ContainerStorageAccount mycontainer "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource-group-name/providers/Microsoft.RecoveryServices/vaults/recovery-vault-name/backupFabrics/Azure/protectionContainers/StorageContainer;storage;storage-rg-name;storage-account"
+```
+
+ Note the ID requires quoting as there are semicolons
 
 
 

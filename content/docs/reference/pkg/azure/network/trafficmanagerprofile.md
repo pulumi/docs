@@ -12,7 +12,6 @@ meta_desc: "Explore the TrafficManagerProfile resource of the network module, in
 
 Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2024,6 +2023,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Traffic Manager Profiles can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/trafficManagerProfile:TrafficManagerProfile exampleProfile /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/trafficManagerProfiles/mytrafficmanagerprofile1
+```
 
 
 

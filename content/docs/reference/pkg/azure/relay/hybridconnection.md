@@ -12,7 +12,6 @@ meta_desc: "Explore the HybridConnection resource of the relay module, including
 
 Manages an Azure Relay Hybrid Connection.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1037,6 +1036,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Relay Hybrid Connection's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:relay/hybridConnection:HybridConnection relay1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Relay/namespaces/relay1/hybridConnections/hconn1
+```
 
 
 

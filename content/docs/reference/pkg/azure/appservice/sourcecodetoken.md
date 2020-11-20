@@ -14,7 +14,6 @@ Manages an App Service source control token.
 
 > **NOTE:** Source Control Tokens are configured at the subscription level, not on each App Service - as such this can only be configured Subscription-wide
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -806,6 +805,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+App Service Source Control Token's can be imported using the `type`, e.g.
+
+```sh
+ $ pulumi import azure:appservice/sourceCodeToken:SourceCodeToken example GitHub
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the VpnGateway resource of the network module, including exa
 
 Manages a VPN Gateway within a Virtual Hub, which enables Site-to-Site communication.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1963,6 +1962,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+VPN Gateways can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/vpnGateway:VpnGateway gateway1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/vpnGateways/gateway1
+```
 
 
 

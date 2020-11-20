@@ -12,7 +12,6 @@ meta_desc: "Explore the NetworkWatcherFlowLog resource of the network module, in
 
 Manages a Network Watcher Flow Log.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1819,6 +1818,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Network Watcher Flow Logs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/networkWatcherFlowLog:NetworkWatcherFlowLog watcher1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/networkWatchers/watcher1
+```
 
 
 

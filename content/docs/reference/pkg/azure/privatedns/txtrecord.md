@@ -12,7 +12,6 @@ meta_desc: "Explore the TxtRecord resource of the privatedns module, including e
 
 Enables you to manage DNS TXT Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1291,6 +1290,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Private DNS TXT Records can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:privatedns/txtRecord:TxtRecord test /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/privateDnsZones/contoso.com/TXT/test
+```
 
 
 

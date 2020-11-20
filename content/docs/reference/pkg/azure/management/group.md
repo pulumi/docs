@@ -12,7 +12,6 @@ meta_desc: "Explore the Group resource of the management module, including examp
 
 Manages a Management Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1024,6 +1023,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Management Groups can be imported using the `management group resource id`, e.g.
+
+```sh
+ $ pulumi import azure:management/group:Group example /providers/Microsoft.Management/managementGroups/group1
+```
 
 
 

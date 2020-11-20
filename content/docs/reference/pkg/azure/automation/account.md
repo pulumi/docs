@@ -12,7 +12,6 @@ meta_desc: "Explore the Account resource of the automation module, including exa
 
 Manages a Automation Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1274,6 +1273,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Automation Accounts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:automation/account:Account account1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Automation/automationAccounts/account1
+```
 
 
 

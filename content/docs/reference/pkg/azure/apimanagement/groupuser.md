@@ -12,7 +12,6 @@ meta_desc: "Explore the GroupUser resource of the apimanagement module, includin
 
 Manages an API Management User Assignment to a Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -922,6 +921,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Group Users can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/groupUser:GroupUser example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ApiManagement/service/service1/groups/groupId/users/user123
+```
 
 
 

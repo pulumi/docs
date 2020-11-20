@@ -12,7 +12,6 @@ meta_desc: "Explore the Dashboard resource of the dashboard module, including ex
 
 Manages a shared dashboard in the Azure Portal.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1374,6 +1373,18 @@ create the dashboard.
 
 
 
+
+
+## Import
+
+
+Dashboards can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:dashboard/dashboard:Dashboard my-board /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Portal/dashboards/00000000-0000-0000-0000-000000000000
+```
+
+ Note the URI in the above sample can be found using the Resource Explorer tool in the Azure Portal.
 
 
 

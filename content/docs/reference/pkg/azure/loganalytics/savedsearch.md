@@ -12,7 +12,6 @@ meta_desc: "Explore the SavedSearch resource of the loganalytics module, includi
 
 Manages a Log Analytics (formally Operational Insights) Saved Search.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1293,6 +1292,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Log Analytics Saved Searches can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:loganalytics/savedSearch:SavedSearch search1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.OperationalInsights/workspaces/workspace1/savedSearches/search1
+```
 
 
 

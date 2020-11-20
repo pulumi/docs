@@ -12,7 +12,6 @@ meta_desc: "Explore the ApplicationGateway resource of the network module, inclu
 
 Manages an Application Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -12086,6 +12085,16 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
+
+
+## Import
+
+
+Application Gateway's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/applicationGateway:ApplicationGateway example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/applicationGateways/myGateway1
+```
 
 
 

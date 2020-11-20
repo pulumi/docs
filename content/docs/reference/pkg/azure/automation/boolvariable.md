@@ -12,7 +12,6 @@ meta_desc: "Explore the BoolVariable resource of the automation module, includin
 
 Manages a boolean variable in Azure Automation
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1031,6 +1030,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Automation Bool Variable can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:automation/boolVariable:BoolVariable example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/tfex-example-rg/providers/Microsoft.Automation/automationAccounts/tfex-example-account/variables/tfex-example-var
+```
 
 
 

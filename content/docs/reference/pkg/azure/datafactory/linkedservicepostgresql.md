@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServicePostgresql resource of the datafactory modu
 
 Manages a Linked Service (connection) between PostgreSQL and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1368,6 +1367,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory PostgreSQL Linked Service's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/linkedServicePostgresql:LinkedServicePostgresql example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/linkedservices/example
+```
 
 
 

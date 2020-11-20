@@ -13,7 +13,6 @@ meta_desc: "Explore the ManangementLock resource of the managementresource modul
 
 Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1023,6 +1022,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Management Locks can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:managementresource/manangementLock:ManangementLock lock1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Authorization/locks/lock1
+```
 
 
 

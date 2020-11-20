@@ -15,7 +15,6 @@ Manages a Route Table
 > **NOTE on Route Tables and Routes:** There is both a standalone `route` resource, and allows for Routes to be defined in-line within the `route_table` resource.
 At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1443,6 +1442,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Route Tables can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/routeTable:RouteTable example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/routeTables/mytable1
+```
 
 
 

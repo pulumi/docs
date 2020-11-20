@@ -12,7 +12,6 @@ meta_desc: "Explore the Service resource of the search module, including example
 
 Manages a Search Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2019,6 +2018,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Search Services can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:search/service:Service example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Search/searchServices/service1
+```
 
 
 

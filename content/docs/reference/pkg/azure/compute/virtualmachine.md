@@ -18,7 +18,6 @@ Manages a Virtual Machine.
 
 > **Note:** Data Disks can be attached either directly on the `azure.compute.VirtualMachine` resource, or using the `azure.compute.DataDiskAttachment` resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6057,6 +6056,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Virtual Machines can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/virtualMachine:VirtualMachine example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.compute/virtualMachines/machine1
+```
 
 
 

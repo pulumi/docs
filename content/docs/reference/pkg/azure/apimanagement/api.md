@@ -12,7 +12,6 @@ meta_desc: "Explore the Api resource of the apimanagement module, including exam
 
 Manages an API within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3014,6 +3013,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management API's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/api:Api example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ApiManagement/service/instance1/apis/api1
+```
 
 
 

@@ -14,7 +14,6 @@ Manages an Extension for a Virtual Machine Scale Set.
 
 > **NOTE:** This resource is not intended to be used with the `azure.compute.ScaleSet` resource - instead it's intended for this to be used with the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1466,6 +1465,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Virtual Machine Scale Set Extensions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/virtualMachineScaleSetExtension:VirtualMachineScaleSetExtension test /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Compute/virtualMachineScaleSets/scaleSet1/extensions/extension1
+```
 
 
 

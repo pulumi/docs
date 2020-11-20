@@ -12,7 +12,6 @@ meta_desc: "Explore the GremlinGraph resource of the cosmosdb module, including 
 
 Manages a Gremlin Graph within a Cosmos DB Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2148,6 +2147,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Cosmos Gremlin Graphs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:cosmosdb/gremlinGraph:GremlinGraph example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/gremlinDatabases/db1/graphs/graphs1
+```
 
 
 

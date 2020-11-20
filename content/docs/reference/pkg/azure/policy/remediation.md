@@ -12,7 +12,6 @@ meta_desc: "Explore the Remediation resource of the policy module, including exa
 
 Manages an Azure Policy Remediation at the specified Scope.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1232,6 +1231,34 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Policy Remediations can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:policy/remediation:Remediation example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.PolicyInsights/remediations/remediation1
+```
+
+ or
+
+```sh
+ $ pulumi import azure:policy/remediation:Remediation example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.PolicyInsights/remediations/remediation1
+```
+
+ or
+
+```sh
+ $ pulumi import azure:policy/remediation:Remediation example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.PolicyInsights/remediations/remediation1
+```
+
+ or
+
+```sh
+ $ pulumi import azure:policy/remediation:Remediation example /providers/Microsoft.Management/managementGroups/my-mgmt-group-id/providers/Microsoft.PolicyInsights/remediations/remediation1
+```
 
 
 

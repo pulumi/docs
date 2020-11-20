@@ -12,7 +12,6 @@ meta_desc: "Explore the Group resource of the apimanagement module, including ex
 
 Manages an API Management Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1208,6 +1207,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/group:Group example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-resources/providers/Microsoft.ApiManagement/service/example-apim/groups/example-apimg
+```
 
 
 

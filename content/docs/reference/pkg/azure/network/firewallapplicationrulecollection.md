@@ -12,7 +12,6 @@ meta_desc: "Explore the FirewallApplicationRuleCollection resource of the networ
 
 Manages an Application Rule Collection within an Azure Firewall.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1769,6 +1768,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Firewall Application Rule Collections can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/firewallApplicationRuleCollection:FirewallApplicationRuleCollection example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/azureFirewalls/myfirewall/applicationRuleCollections/mycollection
+```
 
 
 

@@ -16,7 +16,6 @@ Manages a network security group that contains a list of network security rules.
 provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
 At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1816,6 +1815,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Network Security Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/networkSecurityGroup:NetworkSecurityGroup group1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/networkSecurityGroups/mySecurityGroup
+```
 
 
 

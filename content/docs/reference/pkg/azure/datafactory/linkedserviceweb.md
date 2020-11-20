@@ -14,7 +14,6 @@ Manages a Linked Service (connection) between a Web Server and Azure Data Factor
 
 > **Note:** All arguments including the client secret will be stored in the raw state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1622,6 +1621,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory Linked Service's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/linkedServiceWeb:LinkedServiceWeb example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/linkedservices/example
+```
 
 
 

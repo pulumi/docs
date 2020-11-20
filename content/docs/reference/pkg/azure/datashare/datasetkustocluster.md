@@ -14,7 +14,6 @@ Manages a Data Share Kusto Cluster Dataset.
 
 
 
-
 ## Create a DatasetKustoCluster Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -902,6 +901,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Share Kusto Cluster Datasets can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datashare/datasetKustoCluster:DatasetKustoCluster example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DataShare/accounts/account1/shares/share1/dataSets/dataSet1
+```
 
 
 

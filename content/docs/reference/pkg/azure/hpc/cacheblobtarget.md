@@ -14,7 +14,6 @@ Manages a Blob Target within a HPC Cache.
 
 > **NOTE:**: By request of the service team the provider no longer automatically registering the `Microsoft.StorageCache` Resource Provider for this resource. To register it you can run `az provider register --namespace 'Microsoft.StorageCache'`.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1197,6 +1196,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Blob Targets within an HPC Cache can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:hpc/cacheBlobTarget:CacheBlobTarget example azurerm_hpc_cache_blob_target.example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.StorageCache/caches/cache1/storageTargets/target1
+```
 
 
 

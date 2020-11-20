@@ -12,7 +12,6 @@ meta_desc: "Explore the MeshSecretValue resource of the servicefabric module, in
 
 Manages a Service Fabric Mesh Secret Value.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1016,6 +1015,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Service Fabric Mesh Secret Value can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:servicefabric/meshSecretValue:MeshSecretValue value1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ServiceFabricMesh/secrets/secret1/values/value1
+```
 
 
 

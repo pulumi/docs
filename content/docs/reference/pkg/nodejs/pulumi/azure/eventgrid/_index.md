@@ -3,7 +3,7 @@ title: "Module eventgrid"
 title_tag: "Module eventgrid | Package @pulumi/azure | Node.js SDK"
 linktitle: "eventgrid"
 meta_desc: "Explore members of the eventgrid module in the @pulumi/azure package."
-git_sha: "edf6ad707defa77aa50be8a5aec9983f4d44d071"
+git_sha: "1e6e272729ef317dfcecf40b50c7ce26be8e27d6"
 block_external_search_index: true
 ---
 
@@ -62,7 +62,7 @@ block_external_search_index: true
 
 <h2 id="events" data-link-title="events">namespace <strong>events</strong></h2>
 <h3 class="pdoc-module-header" id="onGridBlobCreated" data-link-title="onGridBlobCreated">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L228">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L228">
         function <strong>onGridBlobCreated</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ Creates a new subscription to events fired from Event Grid. The callback is exec
 a new Blob is created in a container of the Storage Account.
 
 <h3 class="pdoc-module-header" id="onGridBlobDeleted" data-link-title="onGridBlobDeleted">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L241">
         function <strong>onGridBlobDeleted</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ Creates a new subscription to events fired from Event Grid. The callback is exec
 a Blob is deleted from a container of the Storage Account.
 
 <h3 class="pdoc-module-header" id="onResourceGroupEvent" data-link-title="onResourceGroupEvent">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L253">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L253">
         function <strong>onResourceGroupEvent</strong>
     </a>
 </h3>
@@ -103,7 +103,7 @@ an event associated with the Resource Group fires.
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L35">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -128,8 +128,16 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 });
 ```
 
+#### Import
+
+EventGrid Domains can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventgrid/domain:Domain domain1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventGrid/domains/domain1
+```
+
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -143,7 +151,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -154,14 +162,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -172,7 +180,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L59">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L66">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +188,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Endpoint associated with the EventGrid Domain.
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -189,7 +197,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L63">property <b>inputMappingDefaultValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L70">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -197,7 +205,7 @@ deployments and may be missing (undefined) during planning phases.
 A `inputMappingDefaultValues` block as defined below.
 
 <h4 class="pdoc-member-header" id="Domain-inputMappingFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L67">property <b>inputMappingFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L74">property <b>inputMappingFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingFields'>DomainInputMappingFields</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -205,7 +213,7 @@ A `inputMappingDefaultValues` block as defined below.
 A `inputMappingFields` block as defined below.
 
 <h4 class="pdoc-member-header" id="Domain-inputSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L71">property <b>inputSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L78">property <b>inputSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputSchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -213,7 +221,7 @@ A `inputMappingFields` block as defined below.
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Domain-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L75">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L82">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +229,7 @@ Specifies the schema in which incoming events will be published to this domain. 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Domain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +237,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Domain-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L83">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L90">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +245,7 @@ Specifies the name of the EventGrid Domain resource. Changing this forces a new 
 The Primary Shared Access Key associated with the EventGrid Domain.
 
 <h4 class="pdoc-member-header" id="Domain-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L87">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L94">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +253,7 @@ The Primary Shared Access Key associated with the EventGrid Domain.
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Domain-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L91">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L98">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +261,7 @@ The name of the resource group in which the EventGrid Domain exists. Changing th
 The Secondary Shared Access Key associated with the EventGrid Domain.
 
 <h4 class="pdoc-member-header" id="Domain-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L102">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +269,7 @@ The Secondary Shared Access Key associated with the EventGrid Domain.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -270,7 +278,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainTopic" data-link-title="DomainTopic">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L38">
         Resource <strong>DomainTopic</strong>
     </a>
 </h3>
@@ -299,8 +307,16 @@ const exampleDomainTopic = new azure.eventgrid.DomainTopic("exampleDomainTopic",
 });
 ```
 
+#### Import
+
+EventGrid Domain Topics can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventgrid/domainTopic:DomainTopic topic1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventGrid/domains/domain1/topics/topic1
+```
+
 <h4 class="pdoc-member-header" id="DomainTopic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L77"> <b>constructor</b></a>
 </h4>
 
 
@@ -314,7 +330,7 @@ Create a DomainTopic resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainTopic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -325,14 +341,14 @@ Get an existing DomainTopic resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainTopic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainTopic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -343,7 +359,7 @@ Returns true if the given object is an instance of DomainTopic.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainTopic-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L61">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L69">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -351,7 +367,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the name of the EventGrid Domain. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainTopic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -360,7 +376,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainTopic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -368,7 +384,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the EventGrid Domain Topic resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainTopic-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L69">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L77">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -376,7 +392,7 @@ Specifies the name of the EventGrid Domain Topic resource. Changing this forces 
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainTopic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -385,7 +401,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventSubscription" data-link-title="EventSubscription">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L47">
         Resource <strong>EventSubscription</strong>
     </a>
 </h3>
@@ -420,8 +436,18 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
 });
 ```
 
+#### Import
+
+EventGrid Event Subscription's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventgrid/eventSubscription:EventSubscription eventSubscription1
+```
+
+ /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventGrid/topics/topic1/providers/Microsoft.EventGrid/eventSubscriptions/eventSubscription1
+
 <h4 class="pdoc-member-header" id="EventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L160"> <b>constructor</b></a>
 </h4>
 
 
@@ -435,7 +461,7 @@ Create a EventSubscription resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -446,14 +472,14 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -464,7 +490,7 @@ Returns true if the given object is an instance of EventSubscription.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventSubscription-advancedFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L69">property <b>advancedFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L78">property <b>advancedFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>advancedFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilter'>EventSubscriptionAdvancedFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -472,7 +498,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `advancedFilter` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-azureFunctionEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L73">property <b>azureFunctionEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L82">property <b>azureFunctionEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureFunctionEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAzureFunctionEndpoint'>EventSubscriptionAzureFunctionEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -480,7 +506,7 @@ A `advancedFilter` block as defined below.
 An `azureFunctionEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-eventDeliverySchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L77">property <b>eventDeliverySchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L86">property <b>eventDeliverySchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventDeliverySchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -488,7 +514,7 @@ An `azureFunctionEndpoint` block as defined below.
 Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscription-eventhubEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L83">property <b>eventhubEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L92">property <b>eventhubEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -500,7 +526,7 @@ Deprecated in favour of `eventhub_endpoint_id`
 A `eventhubEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-eventhubEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L87">property <b>eventhubEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L96">property <b>eventhubEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,7 +534,7 @@ A `eventhubEndpoint` block as defined below.
 Specifies the id where the Event Hub is located.
 
 <h4 class="pdoc-member-header" id="EventSubscription-expirationTimeUtc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L91">property <b>expirationTimeUtc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L100">property <b>expirationTimeUtc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationTimeUtc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -516,7 +542,7 @@ Specifies the id where the Event Hub is located.
 Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
 
 <h4 class="pdoc-member-header" id="EventSubscription-hybridConnectionEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L97">property <b>hybridConnectionEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L106">property <b>hybridConnectionEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -528,7 +554,7 @@ Deprecated in favour of `hybrid_connection_endpoint_id`
 A `hybridConnectionEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-hybridConnectionEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L101">property <b>hybridConnectionEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L110">property <b>hybridConnectionEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hybridConnectionEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -536,7 +562,7 @@ A `hybridConnectionEndpoint` block as defined below.
 Specifies the id where the Hybrid Connection is located.
 
 <h4 class="pdoc-member-header" id="EventSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -545,7 +571,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventSubscription-includedEventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L105">property <b>includedEventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L114">property <b>includedEventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includedEventTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -553,7 +579,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of applicable event types that need to be part of the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscription-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L109">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L118">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -561,7 +587,7 @@ A list of applicable event types that need to be part of the event subscription.
 A list of labels to assign to the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscription-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,7 +595,7 @@ A list of labels to assign to the event subscription.
 Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscription-retryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L117">property <b>retryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L126">property <b>retryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
@@ -577,7 +603,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 A `retryPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L121">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L130">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -585,7 +611,7 @@ A `retryPolicy` block as defined below.
 Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscription-serviceBusQueueEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L125">property <b>serviceBusQueueEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L134">property <b>serviceBusQueueEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceBusQueueEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -593,7 +619,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 Specifies the id where the Service Bus Queue is located.
 
 <h4 class="pdoc-member-header" id="EventSubscription-serviceBusTopicEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L129">property <b>serviceBusTopicEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L138">property <b>serviceBusTopicEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceBusTopicEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -601,7 +627,7 @@ Specifies the id where the Service Bus Queue is located.
 Specifies the id where the Service Bus Topic is located.
 
 <h4 class="pdoc-member-header" id="EventSubscription-storageBlobDeadLetterDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L133">property <b>storageBlobDeadLetterDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L142">property <b>storageBlobDeadLetterDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageBlobDeadLetterDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -609,7 +635,7 @@ Specifies the id where the Service Bus Topic is located.
 A `storageBlobDeadLetterDestination` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-storageQueueEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L137">property <b>storageQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L146">property <b>storageQueueEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -617,7 +643,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 A `storageQueueEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L141">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L150">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -625,7 +651,7 @@ A `storageQueueEndpoint` block as defined below.
 A `subjectFilter` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscription-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L147">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L156">property <b>topicName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -637,7 +663,7 @@ This field has been updated to readonly field since Apr 25, 2019 so no longer ha
 (Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -646,7 +672,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="EventSubscription-webhookEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L151">property <b>webhookEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L160">property <b>webhookEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webhookEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -654,7 +680,7 @@ deployments.
 A `webhookEndpoint` block as defined below.
 
 <h3 class="pdoc-module-header" id="GetSystemTopic" data-link-title="GetSystemTopic">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L42">
         Resource <strong>GetSystemTopic</strong>
     </a>
 </h3>
@@ -687,8 +713,16 @@ const examplegetSystemTopic = new azure.eventgrid.GetSystemTopic("examplegetSyst
 });
 ```
 
+#### Import
+
+Event Grid System Topic can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventgrid/getSystemTopic:getSystemTopic example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventGrid/systemTopics/systemTopic1
+```
+
 <h4 class="pdoc-member-header" id="GetSystemTopic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -702,7 +736,7 @@ Create a GetSystemTopic resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -713,14 +747,14 @@ Get an existing GetSystemTopic resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -731,7 +765,7 @@ Returns true if the given object is an instance of GetSystemTopic.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -740,7 +774,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L65">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -748,7 +782,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Event Grid System Topic should exist. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-metricArmResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L69">property <b>metricArmResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L77">property <b>metricArmResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricArmResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -756,7 +790,7 @@ The Azure Region where the Event Grid System Topic should exist. Changing this f
 The Metric ARM Resource ID of the Event Grid System Topic.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -764,7 +798,7 @@ The Metric ARM Resource ID of the Event Grid System Topic.
 The name which should be used for this Event Grid System Topic. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -772,7 +806,7 @@ The name which should be used for this Event Grid System Topic. Changing this fo
 The name of the Resource Group where the Event Grid System Topic should exist. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-sourceArmResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L81">property <b>sourceArmResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L89">property <b>sourceArmResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceArmResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -780,7 +814,7 @@ The name of the Resource Group where the Event Grid System Topic should exist. C
 The ID of the Event Grid System Topic ARM Source. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L93">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -788,7 +822,7 @@ The ID of the Event Grid System Topic ARM Source. Changing this forces a new Eve
 A mapping of tags which should be assigned to the Event Grid System Topic.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-topicType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L90">property <b>topicType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L98">property <b>topicType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -797,7 +831,7 @@ The Topic Type of the Event Grid System Topic. Possible values are: `Microsoft.A
 , `Microsoft.ContainerRegistry.Registries`, `Microsoft.Devices.IoTHubs`, `Microsoft.EventGrid.Domains`, `Microsoft.EventGrid.Topics`, `Microsoft.Eventhub.Namespaces`, `Microsoft.KeyVault.vaults`, `Microsoft.MachineLearningServices.Workspaces`, `Microsoft.Maps.Accounts`, `Microsoft.Media.MediaServices`, `Microsoft.Resources.ResourceGroups`, `Microsoft.Resources.Subscriptions`, `Microsoft.ServiceBus.Namespaces`, `Microsoft.SignalRService.SignalR`, `Microsoft.Storage.StorageAccounts`, `Microsoft.Web.ServerFarms` and `Microsoft.Web.Sites`. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -806,7 +840,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L37">
         Resource <strong>Topic</strong>
     </a>
 </h3>
@@ -833,8 +867,16 @@ const exampleTopic = new azure.eventgrid.Topic("exampleTopic", {
 });
 ```
 
+#### Import
+
+EventGrid Topic's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventgrid/topic:Topic topic1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventGrid/topics/topic1
+```
+
 <h4 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -848,7 +890,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -859,14 +901,14 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -877,7 +919,7 @@ Returns true if the given object is an instance of Topic.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Topic-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L61">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L68">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -885,7 +927,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Endpoint associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -894,7 +936,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Topic-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L65">property <b>inputMappingDefaultValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L72">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TopicInputMappingDefaultValues'>TopicInputMappingDefaultValues</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -902,7 +944,7 @@ deployments and may be missing (undefined) during planning phases.
 A `inputMappingDefaultValues` block as defined below.
 
 <h4 class="pdoc-member-header" id="Topic-inputMappingFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L69">property <b>inputMappingFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L76">property <b>inputMappingFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TopicInputMappingFields'>TopicInputMappingFields</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -910,7 +952,7 @@ A `inputMappingDefaultValues` block as defined below.
 A `inputMappingFields` block as defined below.
 
 <h4 class="pdoc-member-header" id="Topic-inputSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L73">property <b>inputSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L80">property <b>inputSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputSchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +960,7 @@ A `inputMappingFields` block as defined below.
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L84">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +968,7 @@ Specifies the schema in which incoming events will be published to this domain. 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -934,7 +976,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the EventGrid Topic resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L85">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L92">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -942,7 +984,7 @@ Specifies the name of the EventGrid Topic resource. Changing this forces a new r
 The Primary Shared Access Key associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="Topic-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L96">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -950,7 +992,7 @@ The Primary Shared Access Key associated with the EventGrid Topic.
 The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L93">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L100">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -958,7 +1000,7 @@ The name of the resource group in which the EventGrid Topic exists. Changing thi
 The Secondary Shared Access Key associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="Topic-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L104">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -966,7 +1008,7 @@ The Secondary Shared Access Key associated with the EventGrid Topic.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -977,7 +1019,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getTopic" data-link-title="getTopic">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L23">
         Function <strong>getTopic</strong>
     </a>
 </h3>
@@ -1003,7 +1045,7 @@ const example = pulumi.output(azure.eventgrid.getTopic({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L204">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -1013,7 +1055,7 @@ const example = pulumi.output(azure.eventgrid.getTopic({
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L201">property <b>inputMappingDefaultValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L208">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</code></pre>
@@ -1021,7 +1063,7 @@ The set of arguments for constructing a Domain resource.
 A `inputMappingDefaultValues` block as defined below.
 
 <h4 class="pdoc-member-header" id="DomainArgs-inputMappingFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L205">property <b>inputMappingFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L212">property <b>inputMappingFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</code></pre>
@@ -1029,7 +1071,7 @@ A `inputMappingDefaultValues` block as defined below.
 A `inputMappingFields` block as defined below.
 
 <h4 class="pdoc-member-header" id="DomainArgs-inputSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L209">property <b>inputSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L216">property <b>inputSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1037,7 +1079,7 @@ A `inputMappingFields` block as defined below.
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L213">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L220">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1045,7 +1087,7 @@ Specifies the schema in which incoming events will be published to this domain. 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L224">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1053,7 +1095,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L221">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L228">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1061,7 +1103,7 @@ Specifies the name of the EventGrid Domain resource. Changing this forces a new 
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L225">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L232">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1069,7 +1111,7 @@ The name of the resource group in which the EventGrid Domain exists. Changing th
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L158">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -1079,7 +1121,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L155">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L162">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,7 +1129,7 @@ Input properties used for looking up and filtering Domain resources.
 The Endpoint associated with the EventGrid Domain.
 
 <h4 class="pdoc-member-header" id="DomainState-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L159">property <b>inputMappingDefaultValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L166">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</code></pre>
@@ -1095,7 +1137,7 @@ The Endpoint associated with the EventGrid Domain.
 A `inputMappingDefaultValues` block as defined below.
 
 <h4 class="pdoc-member-header" id="DomainState-inputMappingFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L163">property <b>inputMappingFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L170">property <b>inputMappingFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</code></pre>
@@ -1103,7 +1145,7 @@ A `inputMappingDefaultValues` block as defined below.
 A `inputMappingFields` block as defined below.
 
 <h4 class="pdoc-member-header" id="DomainState-inputSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L167">property <b>inputSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L174">property <b>inputSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1111,7 +1153,7 @@ A `inputMappingFields` block as defined below.
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L171">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L178">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1161,7 @@ Specifies the schema in which incoming events will be published to this domain. 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1169,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainState-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L179">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L186">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1177,7 @@ Specifies the name of the EventGrid Domain resource. Changing this forces a new 
 The Primary Shared Access Key associated with the EventGrid Domain.
 
 <h4 class="pdoc-member-header" id="DomainState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L183">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L190">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1185,7 @@ The Primary Shared Access Key associated with the EventGrid Domain.
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainState-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L187">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L194">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1193,7 @@ The name of the resource group in which the EventGrid Domain exists. Changing th
 The Secondary Shared Access Key associated with the EventGrid Domain.
 
 <h4 class="pdoc-member-header" id="DomainState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domain.ts#L191">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domain.ts#L198">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1159,7 +1201,7 @@ The Secondary Shared Access Key associated with the EventGrid Domain.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DomainTopicArgs" data-link-title="DomainTopicArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L138">
         interface <strong>DomainTopicArgs</strong>
     </a>
 </h3>
@@ -1169,7 +1211,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a DomainTopic resource.
 
 <h4 class="pdoc-member-header" id="DomainTopicArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L134">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L142">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1177,7 +1219,7 @@ The set of arguments for constructing a DomainTopic resource.
 Specifies the name of the EventGrid Domain. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainTopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1185,7 +1227,7 @@ Specifies the name of the EventGrid Domain. Changing this forces a new resource 
 Specifies the name of the EventGrid Domain Topic resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainTopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L142">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L150">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1193,7 +1235,7 @@ Specifies the name of the EventGrid Domain Topic resource. Changing this forces 
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DomainTopicState" data-link-title="DomainTopicState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L120">
         interface <strong>DomainTopicState</strong>
     </a>
 </h3>
@@ -1203,7 +1245,7 @@ The name of the resource group in which the EventGrid Domain exists. Changing th
 Input properties used for looking up and filtering DomainTopic resources.
 
 <h4 class="pdoc-member-header" id="DomainTopicState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L116">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L124">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1211,7 +1253,7 @@ Input properties used for looking up and filtering DomainTopic resources.
 Specifies the name of the EventGrid Domain. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainTopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1219,7 +1261,7 @@ Specifies the name of the EventGrid Domain. Changing this forces a new resource 
 Specifies the name of the EventGrid Domain Topic resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DomainTopicState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/domainTopic.ts#L124">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/domainTopic.ts#L132">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1227,7 +1269,7 @@ Specifies the name of the EventGrid Domain Topic resource. Changing this forces 
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="EventGridCallbackSubscription" data-link-title="EventGridCallbackSubscription">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L114">
         class <strong>EventGridCallbackSubscription</strong>
     </a>
 </h3>
@@ -1238,14 +1280,14 @@ A callback-based subscription to events coming from Event Grid. Creates an Azure
 an Event Grid Event Subscription with the webhook URL pointing to the Azure Function.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EventGridCallbackSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, scope: <a href='#EventGridScope'>EventGridScope</a>, args: <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;T&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>getData</b></a>
 </h4>
 
 
@@ -1256,14 +1298,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>initialize</b></a>
 </h4>
 
 
@@ -1275,7 +1317,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1286,7 +1328,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L114">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -1301,17 +1343,17 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L755">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L755">property <b>functionApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-subscription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L115">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L115">property <b>subscription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscription: <a href='#EventSubscription'>EventSubscription</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L114">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L114">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1320,14 +1362,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventGridCallbackSubscriptionArgs" data-link-title="EventGridCallbackSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L70">
         interface <strong>EventGridCallbackSubscriptionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventGridCallbackSubscriptionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account?: storageForTypesOnly.Account;</code></pre>
@@ -1337,7 +1379,7 @@ not provided, a new storage account will create. It will be a 'Standard', 'LRS',
 account.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1345,7 +1387,7 @@ account.
 A key-value pair of App Settings.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</code></pre>
@@ -1353,7 +1395,7 @@ A key-value pair of App Settings.
 A `authSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -1362,7 +1404,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -1377,7 +1419,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1385,7 +1427,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -1393,7 +1435,7 @@ Should the Function App send session affinity cookies, which route client reques
 Options to control which files and packages are included with the serialized FunctionApp code.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1405,7 +1447,7 @@ Options to control which files and packages are included with the serialized Fun
 An `connection_string` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: storageForTypesOnly.Container;</code></pre>
@@ -1414,7 +1456,7 @@ The container to use where the zip-file blob for the FunctionApp will be located
 provided, the root container of the storage account will be used.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-dailyMemoryTimeQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyMemoryTimeQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1422,7 +1464,7 @@ provided, the root container of the storage account will be used.
 The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1430,7 +1472,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 Should the built-in logging of this Function App be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1438,7 +1480,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 Is the Function App enabled?
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L155">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L155">property <b>hostSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a>;</code></pre>
@@ -1446,7 +1488,7 @@ Is the Function App enabled?
 Host configuration options.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1454,7 +1496,7 @@ Host configuration options.
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</code></pre>
@@ -1462,7 +1504,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L80">property <b>includedEventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L80">property <b>includedEventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1470,7 +1512,7 @@ An `identity` block as defined below.
 A list of applicable event types that need to be part of the event subscription.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -1478,7 +1520,7 @@ A list of applicable event types that need to be part of the event subscription.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1486,7 +1528,7 @@ Input bindings.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1494,7 +1536,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the Function App.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1545,7 @@ Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not pro
 defaults to `~12`.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1511,7 +1553,7 @@ defaults to `~12`.
 A string indicating the Operating System type for this function app.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -1519,7 +1561,7 @@ A string indicating the Operating System type for this function app.
 Output bindings.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: appservice.Plan;</code></pre>
@@ -1532,7 +1574,7 @@ https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumpti
 more details.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: core.ResourceGroup;</code></pre>
@@ -1540,7 +1582,7 @@ more details.
 The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1549,7 +1591,7 @@ The name of the resource group in which to create the event subscription. [resou
 over [resourceGroupName]. If none of the two is supplied, the Queue's resource group will be used.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L85">property <b>retryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L85">property <b>retryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1560,7 +1602,7 @@ over [resourceGroupName]. If none of the two is supplied, the Queue's resource g
 A retry policy block as defined below.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</code></pre>
@@ -1568,7 +1610,7 @@ A retry policy block as defined below.
 A `site_config` object as defined below.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L90">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L90">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1580,7 +1622,7 @@ A `site_config` object as defined below.
 A subject filter block as defined below.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1588,7 +1630,7 @@ A subject filter block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1596,7 +1638,7 @@ A mapping of tags to assign to the resource.
 The runtime version associated with the Function App. Defaults to `~3`.
 
 <h3 class="pdoc-module-header" id="EventGridContext" data-link-title="EventGridContext">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L34">
         interface <strong>EventGridContext</strong>
     </a>
 </h3>
@@ -1606,7 +1648,7 @@ The runtime version associated with the Function App. Defaults to `~3`.
 Data that will be passed along in the context object to the EventGridCallback.
 
 <h4 class="pdoc-member-header" id="EventGridContext-done">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L49">method <b>done</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L49">method <b>done</b></a>
 </h4>
 
 
@@ -1618,7 +1660,7 @@ function is synchronous, you must call context.done at the end of execution. If 
 is asynchronous, you should not use this callback.
 
 <h4 class="pdoc-member-header" id="EventGridContext-bindingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L42">property <b>bindingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L42">property <b>bindingData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindingData: {
@@ -1630,7 +1672,7 @@ is asynchronous, you should not use this callback.
     };
 };</code></pre>
 <h4 class="pdoc-member-header" id="EventGridContext-bindingDefinitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>bindingDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>bindingDefinitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindingDefinitions: BindingDefinition[];</code></pre>
@@ -1638,14 +1680,14 @@ is asynchronous, you should not use this callback.
 Bindings your function uses, as defined in function.json.
 
 <h4 class="pdoc-member-header" id="EventGridContext-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L41">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L41">property <b>bindings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindings: {
     message: <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;;
 };</code></pre>
 <h4 class="pdoc-member-header" id="EventGridContext-executionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L36">property <b>executionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L36">property <b>executionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionContext: {
@@ -1654,12 +1696,12 @@ Bindings your function uses, as defined in function.json.
     invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</code></pre>
 <h4 class="pdoc-member-header" id="EventGridContext-invocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L35">property <b>invocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L35">property <b>invocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridContext-log">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>log</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>log</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>log: Logger;</code></pre>
@@ -1668,7 +1710,7 @@ Allows you to write streaming function logs. Calling directly allows you to writ
 at the default trace level.
 
 <h4 class="pdoc-member-header" id="EventGridContext-req">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>req</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>req</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>req?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HttpRequest'>HttpRequest</a>;</code></pre>
@@ -1676,7 +1718,7 @@ at the default trace level.
 HTTP request object. Provided to your function when using HTTP Bindings.
 
 <h4 class="pdoc-member-header" id="EventGridContext-res">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>res</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>res</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1684,7 +1726,7 @@ HTTP request object. Provided to your function when using HTTP Bindings.
 HTTP response object. Provided to your function when using HTTP Bindings.
 
 <h4 class="pdoc-member-header" id="EventGridContext-traceContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>traceContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L34">property <b>traceContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>traceContext: TraceContext;</code></pre>
@@ -1692,7 +1734,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 TraceContext information to enable distributed tracing scenarios.
 
 <h3 class="pdoc-module-header" id="EventGridEvent" data-link-title="EventGridEvent">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">
         interface <strong>EventGridEvent</strong>
     </a>
 </h3>
@@ -1702,47 +1744,47 @@ TraceContext information to enable distributed tracing scenarios.
 Event that will be passed along to the EventGridCallback.
 
 <h4 class="pdoc-member-header" id="EventGridEvent-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L28">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L28">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data: T;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridEvent-dataVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>dataVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>dataVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridEvent-eventTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>eventTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTime: Date;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridEvent-eventType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>eventType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>eventType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridEvent-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridEvent-metadataVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>metadataVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>metadataVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadataVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridEvent-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridEvent-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L27">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="EventGridFunction" data-link-title="EventGridFunction">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L58">
         class <strong>EventGridFunction</strong>
     </a>
 </h3>
@@ -1752,14 +1794,14 @@ Event that will be passed along to the EventGridCallback.
 Azure Function triggered by a Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EventGridFunction-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EventGridFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventGridFunctionArgs'>EventGridFunctionArgs</a>&lt;T&gt;)</code></pre>
 
 <h4 class="pdoc-member-header" id="EventGridFunction-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L493">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L493">property <b>appSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -1767,7 +1809,7 @@ Azure Function triggered by a Event Grid Topic.
 Application settings required by the function.
 
 <h4 class="pdoc-member-header" id="EventGridFunction-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L483">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L483">property <b>bindings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</code></pre>
@@ -1775,7 +1817,7 @@ Application settings required by the function.
 An array of function binding definitions.
 
 <h4 class="pdoc-member-header" id="EventGridFunction-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L488">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L488">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>callback: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackArgs'>CallbackArgs</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -1783,7 +1825,7 @@ An array of function binding definitions.
 Function callback.
 
 <h4 class="pdoc-member-header" id="EventGridFunction-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L478">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L478">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1791,14 +1833,14 @@ Function callback.
 Function name.
 
 <h3 class="pdoc-module-header" id="EventGridFunctionArgs" data-link-title="EventGridFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L52">
         interface <strong>EventGridFunctionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EventGridFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="EventGridFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -1807,7 +1849,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="EventGridFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -1822,7 +1864,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="EventGridFunctionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -1830,7 +1872,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="EventGridFunctionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -1838,7 +1880,7 @@ Input bindings.
 Output bindings.
 
 <h3 class="pdoc-module-header" id="EventGridScope" data-link-title="EventGridScope">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L97">
         interface <strong>EventGridScope</strong>
     </a>
 </h3>
@@ -1849,7 +1891,7 @@ Resource properties to scope an Event Grid subscription to. The shape fits most 
 so they can be passed directly.
 
 <h4 class="pdoc-member-header" id="EventGridScope-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L107">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1857,7 +1899,7 @@ so they can be passed directly.
 Azure Resource ID.
 
 <h4 class="pdoc-member-header" id="EventGridScope-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L102">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L102">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1866,7 +1908,7 @@ Resource group name to create subscription at, if another resource group is not 
 passed in subscription arguments.
 
 <h3 class="pdoc-module-header" id="EventSubscriptionArgs" data-link-title="EventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L319">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L328">
         interface <strong>EventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -1876,7 +1918,7 @@ passed in subscription arguments.
 The set of arguments for constructing a EventSubscription resource.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-advancedFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L323">property <b>advancedFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L332">property <b>advancedFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>advancedFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilter'>EventSubscriptionAdvancedFilter</a>&gt;;</code></pre>
@@ -1884,7 +1926,7 @@ The set of arguments for constructing a EventSubscription resource.
 A `advancedFilter` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-azureFunctionEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L327">property <b>azureFunctionEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L336">property <b>azureFunctionEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureFunctionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAzureFunctionEndpoint'>EventSubscriptionAzureFunctionEndpoint</a>&gt;;</code></pre>
@@ -1892,7 +1934,7 @@ A `advancedFilter` block as defined below.
 An `azureFunctionEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-eventDeliverySchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L331">property <b>eventDeliverySchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L340">property <b>eventDeliverySchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventDeliverySchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1900,7 +1942,7 @@ An `azureFunctionEndpoint` block as defined below.
 Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-eventhubEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L337">property <b>eventhubEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L346">property <b>eventhubEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1912,7 +1954,7 @@ Deprecated in favour of `eventhub_endpoint_id`
 A `eventhubEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-eventhubEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L341">property <b>eventhubEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L350">property <b>eventhubEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1920,7 +1962,7 @@ A `eventhubEndpoint` block as defined below.
 Specifies the id where the Event Hub is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-expirationTimeUtc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L345">property <b>expirationTimeUtc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L354">property <b>expirationTimeUtc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTimeUtc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1928,7 +1970,7 @@ Specifies the id where the Event Hub is located.
 Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-hybridConnectionEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L351">property <b>hybridConnectionEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L360">property <b>hybridConnectionEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1940,7 +1982,7 @@ Deprecated in favour of `hybrid_connection_endpoint_id`
 A `hybridConnectionEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-hybridConnectionEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L355">property <b>hybridConnectionEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L364">property <b>hybridConnectionEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hybridConnectionEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1948,7 +1990,7 @@ A `hybridConnectionEndpoint` block as defined below.
 Specifies the id where the Hybrid Connection is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L359">property <b>includedEventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L368">property <b>includedEventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1956,7 +1998,7 @@ Specifies the id where the Hybrid Connection is located.
 A list of applicable event types that need to be part of the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L363">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L372">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1964,7 +2006,7 @@ A list of applicable event types that need to be part of the event subscription.
 A list of labels to assign to the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L367">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L376">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1972,7 +2014,7 @@ A list of labels to assign to the event subscription.
 Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L371">property <b>retryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L380">property <b>retryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
@@ -1980,7 +2022,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 A `retryPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L375">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L384">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1988,7 +2030,7 @@ A `retryPolicy` block as defined below.
 Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-serviceBusQueueEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L379">property <b>serviceBusQueueEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L388">property <b>serviceBusQueueEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBusQueueEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1996,7 +2038,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 Specifies the id where the Service Bus Queue is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-serviceBusTopicEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L383">property <b>serviceBusTopicEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L392">property <b>serviceBusTopicEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBusTopicEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2004,7 +2046,7 @@ Specifies the id where the Service Bus Queue is located.
 Specifies the id where the Service Bus Topic is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-storageBlobDeadLetterDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L387">property <b>storageBlobDeadLetterDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L396">property <b>storageBlobDeadLetterDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</code></pre>
@@ -2012,7 +2054,7 @@ Specifies the id where the Service Bus Topic is located.
 A `storageBlobDeadLetterDestination` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-storageQueueEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L391">property <b>storageQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L400">property <b>storageQueueEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</code></pre>
@@ -2020,7 +2062,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 A `storageQueueEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L395">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L404">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</code></pre>
@@ -2028,7 +2070,7 @@ A `storageQueueEndpoint` block as defined below.
 A `subjectFilter` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L401">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L410">property <b>topicName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2040,7 +2082,7 @@ This field has been updated to readonly field since Apr 25, 2019 so no longer ha
 (Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-webhookEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L405">property <b>webhookEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L414">property <b>webhookEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</code></pre>
@@ -2048,7 +2090,7 @@ This field has been updated to readonly field since Apr 25, 2019 so no longer ha
 A `webhookEndpoint` block as defined below.
 
 <h3 class="pdoc-module-header" id="EventSubscriptionState" data-link-title="EventSubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L236">
         interface <strong>EventSubscriptionState</strong>
     </a>
 </h3>
@@ -2058,7 +2100,7 @@ A `webhookEndpoint` block as defined below.
 Input properties used for looking up and filtering EventSubscription resources.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-advancedFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L231">property <b>advancedFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L240">property <b>advancedFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>advancedFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilter'>EventSubscriptionAdvancedFilter</a>&gt;;</code></pre>
@@ -2066,7 +2108,7 @@ Input properties used for looking up and filtering EventSubscription resources.
 A `advancedFilter` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-azureFunctionEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L235">property <b>azureFunctionEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L244">property <b>azureFunctionEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureFunctionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAzureFunctionEndpoint'>EventSubscriptionAzureFunctionEndpoint</a>&gt;;</code></pre>
@@ -2074,7 +2116,7 @@ A `advancedFilter` block as defined below.
 An `azureFunctionEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-eventDeliverySchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L239">property <b>eventDeliverySchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L248">property <b>eventDeliverySchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventDeliverySchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2082,7 +2124,7 @@ An `azureFunctionEndpoint` block as defined below.
 Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-eventhubEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L245">property <b>eventhubEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L254">property <b>eventhubEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2094,7 +2136,7 @@ Deprecated in favour of `eventhub_endpoint_id`
 A `eventhubEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-eventhubEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L249">property <b>eventhubEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L258">property <b>eventhubEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2102,7 +2144,7 @@ A `eventhubEndpoint` block as defined below.
 Specifies the id where the Event Hub is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-expirationTimeUtc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L253">property <b>expirationTimeUtc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L262">property <b>expirationTimeUtc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTimeUtc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2110,7 +2152,7 @@ Specifies the id where the Event Hub is located.
 Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-hybridConnectionEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L259">property <b>hybridConnectionEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L268">property <b>hybridConnectionEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2122,7 +2164,7 @@ Deprecated in favour of `hybrid_connection_endpoint_id`
 A `hybridConnectionEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-hybridConnectionEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L263">property <b>hybridConnectionEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L272">property <b>hybridConnectionEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hybridConnectionEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2130,7 +2172,7 @@ A `hybridConnectionEndpoint` block as defined below.
 Specifies the id where the Hybrid Connection is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-includedEventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L267">property <b>includedEventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L276">property <b>includedEventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2138,7 +2180,7 @@ Specifies the id where the Hybrid Connection is located.
 A list of applicable event types that need to be part of the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L271">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L280">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2146,7 +2188,7 @@ A list of applicable event types that need to be part of the event subscription.
 A list of labels to assign to the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L284">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2154,7 +2196,7 @@ A list of labels to assign to the event subscription.
 Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-retryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L279">property <b>retryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L288">property <b>retryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</code></pre>
@@ -2162,7 +2204,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 A `retryPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L283">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L292">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2170,7 +2212,7 @@ A `retryPolicy` block as defined below.
 Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-serviceBusQueueEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L287">property <b>serviceBusQueueEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L296">property <b>serviceBusQueueEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBusQueueEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2178,7 +2220,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 Specifies the id where the Service Bus Queue is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-serviceBusTopicEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L291">property <b>serviceBusTopicEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L300">property <b>serviceBusTopicEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBusTopicEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2186,7 +2228,7 @@ Specifies the id where the Service Bus Queue is located.
 Specifies the id where the Service Bus Topic is located.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-storageBlobDeadLetterDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L295">property <b>storageBlobDeadLetterDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L304">property <b>storageBlobDeadLetterDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</code></pre>
@@ -2194,7 +2236,7 @@ Specifies the id where the Service Bus Topic is located.
 A `storageBlobDeadLetterDestination` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-storageQueueEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L299">property <b>storageQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L308">property <b>storageQueueEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</code></pre>
@@ -2202,7 +2244,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 A `storageQueueEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L303">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L312">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</code></pre>
@@ -2210,7 +2252,7 @@ A `storageQueueEndpoint` block as defined below.
 A `subjectFilter` block as defined below.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L309">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L318">property <b>topicName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2222,7 +2264,7 @@ This field has been updated to readonly field since Apr 25, 2019 so no longer ha
 (Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-webhookEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/eventSubscription.ts#L313">property <b>webhookEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/eventSubscription.ts#L322">property <b>webhookEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</code></pre>
@@ -2230,7 +2272,7 @@ This field has been updated to readonly field since Apr 25, 2019 so no longer ha
 A `webhookEndpoint` block as defined below.
 
 <h3 class="pdoc-module-header" id="GetSystemTopicArgs" data-link-title="GetSystemTopicArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L187">
         interface <strong>GetSystemTopicArgs</strong>
     </a>
 </h3>
@@ -2240,7 +2282,7 @@ A `webhookEndpoint` block as defined below.
 The set of arguments for constructing a GetSystemTopic resource.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L183">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L191">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2248,7 +2290,7 @@ The set of arguments for constructing a GetSystemTopic resource.
 The Azure Region where the Event Grid System Topic should exist. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L195">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2256,7 +2298,7 @@ The Azure Region where the Event Grid System Topic should exist. Changing this f
 The name which should be used for this Event Grid System Topic. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L191">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L199">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2264,7 +2306,7 @@ The name which should be used for this Event Grid System Topic. Changing this fo
 The name of the Resource Group where the Event Grid System Topic should exist. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicArgs-sourceArmResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L195">property <b>sourceArmResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L203">property <b>sourceArmResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArmResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2272,7 +2314,7 @@ The name of the Resource Group where the Event Grid System Topic should exist. C
 The ID of the Event Grid System Topic ARM Source. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L207">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2280,7 +2322,7 @@ The ID of the Event Grid System Topic ARM Source. Changing this forces a new Eve
 A mapping of tags which should be assigned to the Event Grid System Topic.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicArgs-topicType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L204">property <b>topicType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L212">property <b>topicType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2289,7 +2331,7 @@ The Topic Type of the Event Grid System Topic. Possible values are: `Microsoft.A
 , `Microsoft.ContainerRegistry.Registries`, `Microsoft.Devices.IoTHubs`, `Microsoft.EventGrid.Domains`, `Microsoft.EventGrid.Topics`, `Microsoft.Eventhub.Namespaces`, `Microsoft.KeyVault.vaults`, `Microsoft.MachineLearningServices.Workspaces`, `Microsoft.Maps.Accounts`, `Microsoft.Media.MediaServices`, `Microsoft.Resources.ResourceGroups`, `Microsoft.Resources.Subscriptions`, `Microsoft.ServiceBus.Namespaces`, `Microsoft.SignalRService.SignalR`, `Microsoft.Storage.StorageAccounts`, `Microsoft.Web.ServerFarms` and `Microsoft.Web.Sites`. Changing this forces a new Event Grid System Topic to be created.
 
 <h3 class="pdoc-module-header" id="GetSystemTopicState" data-link-title="GetSystemTopicState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L152">
         interface <strong>GetSystemTopicState</strong>
     </a>
 </h3>
@@ -2299,7 +2341,7 @@ The Topic Type of the Event Grid System Topic. Possible values are: `Microsoft.A
 Input properties used for looking up and filtering getSystemTopic resources.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L148">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L156">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2307,7 +2349,7 @@ Input properties used for looking up and filtering getSystemTopic resources.
 The Azure Region where the Event Grid System Topic should exist. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicState-metricArmResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L152">property <b>metricArmResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L160">property <b>metricArmResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricArmResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2315,7 +2357,7 @@ The Azure Region where the Event Grid System Topic should exist. Changing this f
 The Metric ARM Resource ID of the Event Grid System Topic.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2323,7 +2365,7 @@ The Metric ARM Resource ID of the Event Grid System Topic.
 The name which should be used for this Event Grid System Topic. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L160">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L168">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2331,7 +2373,7 @@ The name which should be used for this Event Grid System Topic. Changing this fo
 The name of the Resource Group where the Event Grid System Topic should exist. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicState-sourceArmResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L164">property <b>sourceArmResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L172">property <b>sourceArmResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArmResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2339,7 +2381,7 @@ The name of the Resource Group where the Event Grid System Topic should exist. C
 The ID of the Event Grid System Topic ARM Source. Changing this forces a new Event Grid System Topic to be created.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L168">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L176">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2347,7 +2389,7 @@ The ID of the Event Grid System Topic ARM Source. Changing this forces a new Eve
 A mapping of tags which should be assigned to the Event Grid System Topic.
 
 <h4 class="pdoc-member-header" id="GetSystemTopicState-topicType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getSystemTopic.ts#L173">property <b>topicType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getSystemTopic.ts#L181">property <b>topicType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2356,7 +2398,7 @@ The Topic Type of the Event Grid System Topic. Possible values are: `Microsoft.A
 , `Microsoft.ContainerRegistry.Registries`, `Microsoft.Devices.IoTHubs`, `Microsoft.EventGrid.Domains`, `Microsoft.EventGrid.Topics`, `Microsoft.Eventhub.Namespaces`, `Microsoft.KeyVault.vaults`, `Microsoft.MachineLearningServices.Workspaces`, `Microsoft.Maps.Accounts`, `Microsoft.Media.MediaServices`, `Microsoft.Resources.ResourceGroups`, `Microsoft.Resources.Subscriptions`, `Microsoft.ServiceBus.Namespaces`, `Microsoft.SignalRService.SignalR`, `Microsoft.Storage.StorageAccounts`, `Microsoft.Web.ServerFarms` and `Microsoft.Web.Sites`. Changing this forces a new Event Grid System Topic to be created.
 
 <h3 class="pdoc-module-header" id="GetTopicArgs" data-link-title="GetTopicArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L41">
         interface <strong>GetTopicArgs</strong>
     </a>
 </h3>
@@ -2366,7 +2408,7 @@ The Topic Type of the Event Grid System Topic. Possible values are: `Microsoft.A
 A collection of arguments for invoking getTopic.
 
 <h4 class="pdoc-member-header" id="GetTopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2374,7 +2416,7 @@ A collection of arguments for invoking getTopic.
 The name of the EventGrid Topic resource.
 
 <h4 class="pdoc-member-header" id="GetTopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2382,12 +2424,12 @@ The name of the EventGrid Topic resource.
 The name of the resource group in which the EventGrid Topic exists.
 
 <h4 class="pdoc-member-header" id="GetTopicArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L51">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L50">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetTopicResult" data-link-title="GetTopicResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L56">
         interface <strong>GetTopicResult</strong>
     </a>
 </h3>
@@ -2397,7 +2439,7 @@ The name of the resource group in which the EventGrid Topic exists.
 A collection of values returned by getTopic.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L61">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L60">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2405,7 +2447,7 @@ A collection of values returned by getTopic.
 The Endpoint associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2413,17 +2455,17 @@ The Endpoint associated with the EventGrid Topic.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L66">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L65">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicResult-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L71">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L70">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2431,12 +2473,12 @@ The provider-assigned unique ID for this managed resource.
 The Primary Shared Access Key associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L72">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L71">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicResult-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L76">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L75">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2444,19 +2486,19 @@ The Primary Shared Access Key associated with the EventGrid Topic.
 The Secondary Shared Access Key associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/getTopic.ts#L77">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/getTopic.ts#L76">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="ResourceGroupEventGridCallbackSubscriptionArgs" data-link-title="ResourceGroupEventGridCallbackSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L213">
         interface <strong>ResourceGroupEventGridCallbackSubscriptionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ResourceGroupEventGridCallbackSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;ResourceGroupEvent&gt;</code></pre>
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account?: storageForTypesOnly.Account;</code></pre>
@@ -2466,7 +2508,7 @@ not provided, a new storage account will create. It will be a 'Standard', 'LRS',
 account.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2474,7 +2516,7 @@ account.
 A key-value pair of App Settings.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</code></pre>
@@ -2482,7 +2524,7 @@ A key-value pair of App Settings.
 A `authSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;ResourceGroupEvent&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;ResourceGroupEvent&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -2491,7 +2533,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;ResourceGroupEvent&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;ResourceGroupEvent&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -2506,7 +2548,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2514,7 +2556,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -2522,7 +2564,7 @@ Should the Function App send session affinity cookies, which route client reques
 Options to control which files and packages are included with the serialized FunctionApp code.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2534,7 +2576,7 @@ Options to control which files and packages are included with the serialized Fun
 An `connection_string` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: storageForTypesOnly.Container;</code></pre>
@@ -2543,7 +2585,7 @@ The container to use where the zip-file blob for the FunctionApp will be located
 provided, the root container of the storage account will be used.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-dailyMemoryTimeQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyMemoryTimeQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2551,7 +2593,7 @@ provided, the root container of the storage account will be used.
 The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2559,7 +2601,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 Should the built-in logging of this Function App be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2567,7 +2609,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 Is the Function App enabled?
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L155">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L155">property <b>hostSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a>;</code></pre>
@@ -2575,7 +2617,7 @@ Is the Function App enabled?
 Host configuration options.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2583,7 +2625,7 @@ Host configuration options.
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</code></pre>
@@ -2591,7 +2633,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L80">property <b>includedEventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L80">property <b>includedEventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2599,7 +2641,7 @@ An `identity` block as defined below.
 A list of applicable event types that need to be part of the event subscription.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -2607,7 +2649,7 @@ A list of applicable event types that need to be part of the event subscription.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2615,7 +2657,7 @@ Input bindings.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2623,7 +2665,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the Function App.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2632,7 +2674,7 @@ Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not pro
 defaults to `~12`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2640,7 +2682,7 @@ defaults to `~12`.
 A string indicating the Operating System type for this function app.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -2648,7 +2690,7 @@ A string indicating the Operating System type for this function app.
 Output bindings.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: appservice.Plan;</code></pre>
@@ -2661,7 +2703,7 @@ https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumpti
 more details.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L217">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L217">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/azure/core/#ResourceGroup'>ResourceGroup</a>;</code></pre>
@@ -2669,7 +2711,7 @@ more details.
 Resource Group to subscribe to. Event Grid events for this resource group trigger the callback execution.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2678,7 +2720,7 @@ The name of the resource group in which to create the event subscription. [resou
 over [resourceGroupName]. If none of the two is supplied, the Queue's resource group will be used.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L85">property <b>retryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L85">property <b>retryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2689,7 +2731,7 @@ over [resourceGroupName]. If none of the two is supplied, the Queue's resource g
 A retry policy block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</code></pre>
@@ -2697,7 +2739,7 @@ A retry policy block as defined below.
 A `site_config` object as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L90">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L90">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2709,7 +2751,7 @@ A `site_config` object as defined below.
 A subject filter block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2717,7 +2759,7 @@ A subject filter block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2725,14 +2767,14 @@ A mapping of tags to assign to the resource.
 The runtime version associated with the Function App. Defaults to `~3`.
 
 <h3 class="pdoc-module-header" id="StorageAccountEventGridCallbackSubscriptionArgs" data-link-title="StorageAccountEventGridCallbackSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L192">
         interface <strong>StorageAccountEventGridCallbackSubscriptionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>StorageAccountEventGridCallbackSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;T&gt;</code></pre>
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account?: storageForTypesOnly.Account;</code></pre>
@@ -2742,7 +2784,7 @@ not provided, a new storage account will create. It will be a 'Standard', 'LRS',
 account.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2750,7 +2792,7 @@ account.
 A key-value pair of App Settings.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</code></pre>
@@ -2758,7 +2800,7 @@ A key-value pair of App Settings.
 A `authSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -2767,7 +2809,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -2782,7 +2824,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2790,7 +2832,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -2798,7 +2840,7 @@ Should the Function App send session affinity cookies, which route client reques
 Options to control which files and packages are included with the serialized FunctionApp code.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2810,7 +2852,7 @@ Options to control which files and packages are included with the serialized Fun
 An `connection_string` block as defined below.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: storageForTypesOnly.Container;</code></pre>
@@ -2819,7 +2861,7 @@ The container to use where the zip-file blob for the FunctionApp will be located
 provided, the root container of the storage account will be used.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-dailyMemoryTimeQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyMemoryTimeQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2827,7 +2869,7 @@ provided, the root container of the storage account will be used.
 The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2835,7 +2877,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 Should the built-in logging of this Function App be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2843,7 +2885,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 Is the Function App enabled?
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L155">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L155">property <b>hostSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a>;</code></pre>
@@ -2851,7 +2893,7 @@ Is the Function App enabled?
 Host configuration options.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2859,7 +2901,7 @@ Host configuration options.
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</code></pre>
@@ -2867,7 +2909,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L80">property <b>includedEventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L80">property <b>includedEventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2875,7 +2917,7 @@ An `identity` block as defined below.
 A list of applicable event types that need to be part of the event subscription.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -2883,7 +2925,7 @@ A list of applicable event types that need to be part of the event subscription.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2891,7 +2933,7 @@ Input bindings.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2899,7 +2941,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the Function App.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2908,7 +2950,7 @@ Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not pro
 defaults to `~12`.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2916,7 +2958,7 @@ defaults to `~12`.
 A string indicating the Operating System type for this function app.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -2924,7 +2966,7 @@ A string indicating the Operating System type for this function app.
 Output bindings.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: appservice.Plan;</code></pre>
@@ -2937,7 +2979,7 @@ https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumpti
 more details.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: core.ResourceGroup;</code></pre>
@@ -2945,7 +2987,7 @@ more details.
 The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2954,7 +2996,7 @@ The name of the resource group in which to create the event subscription. [resou
 over [resourceGroupName]. If none of the two is supplied, the Queue's resource group will be used.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L85">property <b>retryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L85">property <b>retryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2965,7 +3007,7 @@ over [resourceGroupName]. If none of the two is supplied, the Queue's resource g
 A retry policy block as defined below.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</code></pre>
@@ -2973,7 +3015,7 @@ A retry policy block as defined below.
 A `site_config` object as defined below.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-storageAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L196">property <b>storageAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L196">property <b>storageAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccount: <a href='/docs/reference/pkg/nodejs/pulumi/azure/storage/#Account'>Account</a>;</code></pre>
@@ -2981,7 +3023,7 @@ A `site_config` object as defined below.
 Storage Account to subscribe to. Event Grid events for this account trigger the callback execution.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/zMixins.ts#L90">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/zMixins.ts#L90">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2993,7 +3035,7 @@ Storage Account to subscribe to. Event Grid events for this account trigger the 
 A subject filter block as defined below.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3001,7 +3043,7 @@ A subject filter block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3009,7 +3051,7 @@ A mapping of tags to assign to the resource.
 The runtime version associated with the Function App. Defaults to `~3`.
 
 <h3 class="pdoc-module-header" id="TopicArgs" data-link-title="TopicArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L206">
         interface <strong>TopicArgs</strong>
     </a>
 </h3>
@@ -3019,7 +3061,7 @@ The runtime version associated with the Function App. Defaults to `~3`.
 The set of arguments for constructing a Topic resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L203">property <b>inputMappingDefaultValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L210">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TopicInputMappingDefaultValues'>TopicInputMappingDefaultValues</a>&gt;;</code></pre>
@@ -3027,7 +3069,7 @@ The set of arguments for constructing a Topic resource.
 A `inputMappingDefaultValues` block as defined below.
 
 <h4 class="pdoc-member-header" id="TopicArgs-inputMappingFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L207">property <b>inputMappingFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L214">property <b>inputMappingFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TopicInputMappingFields'>TopicInputMappingFields</a>&gt;;</code></pre>
@@ -3035,7 +3077,7 @@ A `inputMappingDefaultValues` block as defined below.
 A `inputMappingFields` block as defined below.
 
 <h4 class="pdoc-member-header" id="TopicArgs-inputSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L211">property <b>inputSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L218">property <b>inputSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3043,7 +3085,7 @@ A `inputMappingFields` block as defined below.
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L215">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L222">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3051,7 +3093,7 @@ Specifies the schema in which incoming events will be published to this domain. 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3059,7 +3101,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the EventGrid Topic resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L223">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L230">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3067,7 +3109,7 @@ Specifies the name of the EventGrid Topic resource. Changing this forces a new r
 The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L227">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L234">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3075,7 +3117,7 @@ The name of the resource group in which the EventGrid Topic exists. Changing thi
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L160">
         interface <strong>TopicState</strong>
     </a>
 </h3>
@@ -3085,7 +3127,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Topic resources.
 
 <h4 class="pdoc-member-header" id="TopicState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L157">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L164">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3093,7 +3135,7 @@ Input properties used for looking up and filtering Topic resources.
 The Endpoint associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="TopicState-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L161">property <b>inputMappingDefaultValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L168">property <b>inputMappingDefaultValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TopicInputMappingDefaultValues'>TopicInputMappingDefaultValues</a>&gt;;</code></pre>
@@ -3101,7 +3143,7 @@ The Endpoint associated with the EventGrid Topic.
 A `inputMappingDefaultValues` block as defined below.
 
 <h4 class="pdoc-member-header" id="TopicState-inputMappingFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L165">property <b>inputMappingFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L172">property <b>inputMappingFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TopicInputMappingFields'>TopicInputMappingFields</a>&gt;;</code></pre>
@@ -3109,7 +3151,7 @@ A `inputMappingDefaultValues` block as defined below.
 A `inputMappingFields` block as defined below.
 
 <h4 class="pdoc-member-header" id="TopicState-inputSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L169">property <b>inputSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L176">property <b>inputSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3117,7 +3159,7 @@ A `inputMappingFields` block as defined below.
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L173">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L180">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3125,7 +3167,7 @@ Specifies the schema in which incoming events will be published to this domain. 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3133,7 +3175,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the EventGrid Topic resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L181">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L188">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3141,7 +3183,7 @@ Specifies the name of the EventGrid Topic resource. Changing this forces a new r
 The Primary Shared Access Key associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="TopicState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L185">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L192">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3149,7 +3191,7 @@ The Primary Shared Access Key associated with the EventGrid Topic.
 The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L189">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L196">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3157,7 +3199,7 @@ The name of the resource group in which the EventGrid Topic exists. Changing thi
 The Secondary Shared Access Key associated with the EventGrid Topic.
 
 <h4 class="pdoc-member-header" id="TopicState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/eventgrid/topic.ts#L193">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/eventgrid/topic.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

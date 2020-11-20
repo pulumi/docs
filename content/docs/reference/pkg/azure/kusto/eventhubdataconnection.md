@@ -12,7 +12,6 @@ meta_desc: "Explore the EventhubDataConnection resource of the kusto module, inc
 
 Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1605,6 +1604,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Kusto EventHub Data Connections can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:kusto/eventhubDataConnection:EventhubDataConnection example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Kusto/Clusters/cluster1/Databases/database1/DataConnections/eventHubConnection1
+```
 
 
 

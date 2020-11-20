@@ -12,7 +12,6 @@ meta_desc: "Explore the MeshApplication resource of the servicefabric module, in
 
 Manages a Service Fabric Mesh Application.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1827,6 +1826,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Service Fabric Mesh Application can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:servicefabric/meshApplication:MeshApplication application1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ServiceFabricMesh/applications/application1
+```
 
 
 

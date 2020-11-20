@@ -12,7 +12,6 @@ meta_desc: "Explore the DiagnosticSetting resource of the monitoring module, inc
 
 Manages a Diagnostic Setting for an existing Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2069,6 +2068,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Diagnostic Settings can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/diagnosticSetting:DiagnosticSetting example /subscriptions/XXX/resourcegroups/resource_group/providers/microsoft.keyvault/vaults/vault|logMonitoring
+```
 
 
 

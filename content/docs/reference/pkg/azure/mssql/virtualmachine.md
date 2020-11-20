@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualMachine resource of the mssql module, including e
 
 Manages a Microsoft SQL Virtual Machine
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2642,6 +2641,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Sql Virtual Machines can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mssql/virtualMachine:VirtualMachine example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/example1
+```
 
 
 

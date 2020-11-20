@@ -12,7 +12,6 @@ meta_desc: "Explore the ResourceGroupExport resource of the costmanagement modul
 
 Manages an Azure Cost Management Export for a Resource Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1649,6 +1648,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Cost Management Export for a Resource Group can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:costmanagement/resourceGroupExport:ResourceGroupExport example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.CostManagement/exports/example
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the ConsumerGroup resource of the iot module, including exam
 
 Manages a Consumer Group within an IotHub
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -958,6 +957,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+IoTHub Consumer Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:iot/consumerGroup:ConsumerGroup group1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/IotHubs/hub1/eventHubEndpoints/events/ConsumerGroups/group1
+```
 
 
 

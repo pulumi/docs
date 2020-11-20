@@ -13,7 +13,6 @@ meta_desc: "Explore the UserAssignedIdentity resource of the msi module, includi
 
 Manages a user assigned identity.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1106,6 +1105,16 @@ create the user assigned identity.
 
 
 
+
+
+## Import
+
+
+User Assigned Identities can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:msi/userAssignedIdentity:UserAssignedIdentity exampleIdentity /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/acceptanceTestResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testIdentity
+```
 
 
 

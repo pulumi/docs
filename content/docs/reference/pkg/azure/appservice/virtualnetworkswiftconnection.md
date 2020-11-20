@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualNetworkSwiftConnection resource of the appservice
 
 Manages an App Service Virtual Network Association (this is for the [Regional VNet Integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration) which is still in preview).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -885,6 +884,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+App Service Virtual Network Associations can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appservice/virtualNetworkSwiftConnection:VirtualNetworkSwiftConnection myassociation /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Web/sites/instance1/networkconfig/virtualNetwork
+```
 
 
 

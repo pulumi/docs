@@ -12,7 +12,6 @@ meta_desc: "Explore the RegistryWebhook resource of the containerservice module,
 
 Manages an Azure Container Registry Webhook.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1490,6 +1489,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Container Registry Webhooks can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:containerservice/registryWebhook:RegistryWebhook example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/mygroup1/providers/Microsoft.ContainerRegistry/registries/myregistry1/webhooks/mywebhook1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualHubConnection resource of the network module, inc
 
 Manages a Connection for a Virtual Hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1723,6 +1722,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Virtual Hub Connection's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/virtualHubConnection:VirtualHubConnection example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/virtualHubs/hub1/hubVirtualNetworkConnections/connection1
+```
 
 
 

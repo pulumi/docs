@@ -12,7 +12,6 @@ meta_desc: "Explore the FirewallRule resource of the synapse module, including e
 
 Allows you to Manages a Synapse Firewall Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -988,6 +987,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Synapse Firewall Rule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:synapse/firewallRule:FirewallRule example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourcegroup1/providers/Microsoft.Synapse/workspaces/workspace1/firewallRules/rule1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the PolicyVM resource of the backup module, including exampl
 
 Manages an Azure Backup VM Backup Policy.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2512,6 +2511,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+VM Backup Policies can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:backup/policyVM:PolicyVM policy1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.RecoveryServices/vaults/example-recovery-vault/backupPolicies/policy1
+```
 
 
 

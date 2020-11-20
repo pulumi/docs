@@ -14,7 +14,6 @@ Manages a Virtual Network Gateway to establish secure, cross-premises connectivi
 
 > **Note:** Please be aware that provisioning a Virtual Network Gateway takes a long time (between 30 minutes and 1 hour)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3464,6 +3463,16 @@ revoked.
 
 
 
+
+
+## Import
+
+
+Virtual Network Gateways can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/virtualNetworkGateway:VirtualNetworkGateway exampleGateway /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup1/providers/Microsoft.Network/virtualNetworkGateways/myGateway1
+```
 
 
 

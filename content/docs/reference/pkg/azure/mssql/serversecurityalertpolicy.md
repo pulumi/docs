@@ -14,7 +14,6 @@ Manages a Security Alert Policy for a MSSQL Server.
 
 > **NOTE** Security Alert Policy is currently only available for MS SQL databases.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1440,6 +1439,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+MS SQL Server Security Alert Policy can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mssql/serverSecurityAlertPolicy:ServerSecurityAlertPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/acceptanceTestResourceGroup1/providers/Microsoft.Sql/servers/mssqlserver/securityAlertPolicies/Default
+```
 
 
 

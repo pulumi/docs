@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the postgresql module, including ex
 
 Manages a PostgreSQL Database within a PostgreSQL Server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1064,6 +1063,16 @@ new resource to be created.
 
 
 
+
+
+## Import
+
+
+PostgreSQL Database's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:postgresql/database:Database database1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforPostgreSQL/servers/server1/databases/database1
+```
 
 
 

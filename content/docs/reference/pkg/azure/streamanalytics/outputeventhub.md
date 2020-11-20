@@ -12,7 +12,6 @@ meta_desc: "Explore the OutputEventHub resource of the streamanalytics module, i
 
 Manages a Stream Analytics Output to an EventHub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1589,6 +1588,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Stream Analytics Outputs to an EventHub can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:streamanalytics/outputEventHub:OutputEventHub example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/group1/providers/Microsoft.StreamAnalytics/streamingjobs/job1/outputs/output1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the IntegrationRuntimeManaged resource of the datafactory mo
 
 Manages an Azure Data Factory Managed Integration Runtime.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2212,6 +2211,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory Integration Managed Runtimes can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/integrationRuntimeManaged:IntegrationRuntimeManaged example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/integrationruntimes/example
+```
 
 
 

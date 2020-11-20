@@ -12,7 +12,6 @@ meta_desc: "Explore the Namespace resource of the relay module, including exampl
 
 Manages an Azure Relay Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1450,6 +1449,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Azure Relay Namespace's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:relay/namespace:Namespace relay1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Relay/namespaces/relay1
+```
 
 
 

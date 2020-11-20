@@ -12,7 +12,6 @@ meta_desc: "Explore the StreamInputEventHub resource of the streamanalytics modu
 
 Manages a Stream Analytics Stream Input EventHub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1664,6 +1663,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Stream Analytics Stream Input EventHub's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:streamanalytics/streamInputEventHub:StreamInputEventHub example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/group1/providers/Microsoft.StreamAnalytics/streamingjobs/job1/inputs/input1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServiceSqlServer resource of the datafactory modul
 
 Manages a Linked Service (connection) between a SQL Server and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1368,6 +1367,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory SQL Server Linked Service's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/linkedServiceSqlServer:LinkedServiceSqlServer example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/linkedservices/example
+```
 
 
 

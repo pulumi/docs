@@ -12,7 +12,6 @@ meta_desc: "Explore the AvailabilitySet resource of the compute module, includin
 
 Manages an Availability Set for Virtual Machines.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1270,6 +1269,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Availability Sets can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/availabilitySet:AvailabilitySet group1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Compute/availabilitySets/webAvailSet
+```
 
 
 

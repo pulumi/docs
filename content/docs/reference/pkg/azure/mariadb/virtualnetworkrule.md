@@ -14,7 +14,6 @@ Manages a MariaDB Virtual Network Rule.
 
 > **NOTE:** MariaDB Virtual Network Rules [can only be used with SKU Tiers of `GeneralPurpose` or `MemoryOptimized`](https://docs.microsoft.com/en-us/azure/mariadb/concepts-data-access-security-vnet)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1037,6 +1036,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+MariaDB Virtual Network Rules can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mariadb/virtualNetworkRule:VirtualNetworkRule rule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/MariaDB/servers/myserver/virtualNetworkRules/vnetrulename
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the OpenIdConnectProvider resource of the apimanagement modu
 
 Manages an OpenID Connect Provider within a API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1300,6 +1299,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management OpenID Connect Providers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/openIdConnectProvider:OpenIdConnectProvider example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ApiManagement/service/instance1/openidConnectProviders/provider1
+```
 
 
 

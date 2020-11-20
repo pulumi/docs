@@ -12,7 +12,6 @@ meta_desc: "Explore the Container resource of the storage module, including exam
 
 Manages a Container within an Azure Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1209,6 +1208,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Storage Containers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/container:Container container1 https://example.blob.core.windows.net/container
+```
 
 
 

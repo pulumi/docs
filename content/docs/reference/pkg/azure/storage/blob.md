@@ -12,7 +12,6 @@ meta_desc: "Explore the Blob resource of the storage module, including examples,
 
 Manages a Blob within a Storage Container.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1767,6 +1766,16 @@ Changing this forces a new resource to be created.
 
 
 
+
+
+## Import
+
+
+Storage Blob's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/blob:Blob blob1 https://example.blob.core.windows.net/container/blob.vhd
+```
 
 
 

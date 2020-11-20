@@ -13,7 +13,6 @@ meta_desc: "Explore the Definition resource of the role module, including exampl
 
 Manages a custom Role Definition, used to assign Roles to Users/Principals. See ['Understand role definitions'](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions) in the Azure documentation for more details.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1429,6 +1428,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Role Definitions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:role/definition:Definition example "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/00000000-0000-0000-0000-000000000000|/subscriptions/00000000-0000-0000-0000-000000000000"
+```
 
 
 

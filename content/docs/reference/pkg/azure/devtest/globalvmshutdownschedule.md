@@ -14,7 +14,6 @@ Manages automated shutdown schedules for Azure VMs that are not within an Azure 
 this resource applies only to standard VMs, not DevTest Lab VMs. To manage automated shutdown schedules for DevTest Lab VMs, reference the
 `azure.devtest.Schedule` resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1575,6 +1574,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+An existing Dev Test Global Shutdown Schedule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:devtest/globalVMShutdownSchedule:GlobalVMShutdownSchedule example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-rg/providers/Microsoft.DevTestLab/schedules/shutdown-computevm-SampleVM
+```
+
+ The name of the resource within the `resource id` will always follow the format `shutdown-computevm-<VM Name>` where `<VM Name>` is replaced by the name of the target Virtual Machine
 
 
 

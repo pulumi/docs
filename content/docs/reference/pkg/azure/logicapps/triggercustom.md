@@ -12,7 +12,6 @@ meta_desc: "Explore the TriggerCustom resource of the logicapps module, includin
 
 Manages a Custom Trigger within a Logic App Workflow
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -859,6 +858,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Logic App Custom Triggers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:logicapps/triggerCustom:TriggerCustom custom1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Logic/workflows/workflow1/triggers/custom1
+```
 
 
 

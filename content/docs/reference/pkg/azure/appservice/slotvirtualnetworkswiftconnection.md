@@ -12,7 +12,6 @@ meta_desc: "Explore the SlotVirtualNetworkSwiftConnection resource of the appser
 
 Manages an App Service Slot's Virtual Network Association (this is for the [Regional VNet Integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration) which is still in preview).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1004,6 +1003,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+App Service Slot Virtual Network Associations can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appservice/slotVirtualNetworkSwiftConnection:SlotVirtualNetworkSwiftConnection myassociation /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Web/sites/instance1/slots/stageing/networkconfig/virtualNetwork
+```
 
 
 

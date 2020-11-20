@@ -12,7 +12,6 @@ meta_desc: "Explore the Image resource of the compute module, including examples
 
 Manages a custom virtual machine image that can be used to create virtual machines.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2066,6 +2065,16 @@ the image. Changing this forces a new resource to be created.
 
 
 
+
+
+## Import
+
+
+Images can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/image:Image example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.compute/images/image1
+```
 
 
 

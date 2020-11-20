@@ -14,7 +14,6 @@ Manages a Customer Managed Key for a PostgreSQL Server.
 
 
 
-
 ## Create a ServerKey Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -638,6 +637,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+A PostgreSQL Server Key can be imported using the `resource id` of the PostgreSQL Server Key, e.g.
+
+```sh
+ $ pulumi import azure:postgresql/serverKey:ServerKey example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DBforPostgreSQL/servers/server1/keys/keyvaultname_key-name_keyversion
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Logger resource of the apimanagement module, including e
 
 Manages a Logger within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1467,6 +1466,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Loggers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/logger:Logger example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/example-rg/Microsoft.ApiManagement/service/example-apim/loggers/example-logger
+```
 
 
 

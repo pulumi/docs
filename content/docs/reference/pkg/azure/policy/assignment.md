@@ -12,7 +12,6 @@ meta_desc: "Explore the Assignment resource of the policy module, including exam
 
 Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1841,6 +1840,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Policy Assignments can be imported using the `policy name`, e.g.
+
+```sh
+ $ pulumi import azure:policy/assignment:Assignment assignment1 /subscriptions/00000000-0000-0000-000000000000/providers/Microsoft.Authorization/policyAssignments/assignment1
+```
 
 
 

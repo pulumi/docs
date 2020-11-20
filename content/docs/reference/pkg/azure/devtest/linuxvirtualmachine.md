@@ -14,7 +14,6 @@ Manages a Linux Virtual Machine within a Dev Test Lab.
 
 
 
-
 ## Create a LinuxVirtualMachine Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -2540,6 +2539,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Dev Test Linux Virtual Machines can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:devtest/linuxVirtualMachine:LinuxVirtualMachine machine1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DevTestLab/labs/lab1/virtualmachines/machine1
+```
 
 
 

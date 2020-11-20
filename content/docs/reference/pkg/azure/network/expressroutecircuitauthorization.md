@@ -12,7 +12,6 @@ meta_desc: "Explore the ExpressRouteCircuitAuthorization resource of the network
 
 Manages an ExpressRoute Circuit Authorization.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1074,6 +1073,16 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
 
 
 
+
+
+## Import
+
+
+ExpressRoute Circuit Authorizations can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/expressRouteCircuitAuthorization:ExpressRouteCircuitAuthorization auth1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/expressRouteCircuits/myExpressRoute/authorizations/auth1
+```
 
 
 

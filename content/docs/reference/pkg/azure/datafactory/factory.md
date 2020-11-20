@@ -12,7 +12,6 @@ meta_desc: "Explore the Factory resource of the datafactory module, including ex
 
 Manages an Azure Data Factory (Version 2).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1929,6 +1928,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/factory:Factory example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example
+```
 
 
 

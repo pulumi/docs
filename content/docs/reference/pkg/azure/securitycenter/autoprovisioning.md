@@ -14,7 +14,6 @@ Enables or disables the Security Center Auto Provisioning feature for the subscr
 
 > **NOTE:** There is no resource name required, it will always be "default"
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -625,6 +624,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Security Center Auto Provisioning can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:securitycenter/autoProvisioning:AutoProvisioning example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Security/autoProvisioningSettings/default
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the ApplicationSecurityGroup resource of the network module,
 
 Manages an Application Security Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -918,6 +917,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Application Security Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/applicationSecurityGroup:ApplicationSecurityGroup securitygroup1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/applicationSecurityGroups/securitygroup1
+```
 
 
 

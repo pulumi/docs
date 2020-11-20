@@ -14,7 +14,6 @@ Manages a HDInsight Storm Cluster.
 
 !> **Note:** [HDInsight 3.6 is deprecated and will be retired on 2020-12-31 - HDInsight 4.0 no longer supports Storm Clusters](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#available-versions) - as such this resource is deprecated and will be removed in the next major version of the Provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4684,6 +4683,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+HDInsight Storm Clusters can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:hdinsight/stormCluster:StormCluster example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.HDInsight/clusters/cluster1}
+```
 
 
 

@@ -14,7 +14,6 @@ Manages a Slack integration for a Bot Channel
 
 > **Note** A bot can only have a single Slack Channel associated with it.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1221,6 +1220,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+The Slack Integration for a Bot Channel can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:bot/channelSlack:ChannelSlack example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.BotService/botServices/example/channels/SlackChannel
+```
 
 
 

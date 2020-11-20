@@ -16,7 +16,6 @@ Manages attaching a Disk to a Virtual Machine.
 
 > **Please Note:** only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the `storage_data_disk` block in the `azure.compute.VirtualMachine` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1362,6 +1361,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Virtual Machines Data Disk Attachments can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/dataDiskAttachment:DataDiskAttachment example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.compute/virtualMachines/machine1/dataDisks/disk1
+```
 
 
 

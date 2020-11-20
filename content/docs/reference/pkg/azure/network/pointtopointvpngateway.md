@@ -12,7 +12,6 @@ meta_desc: "Explore the PointToPointVpnGateway resource of the network module, i
 
 Manages a Point-to-Site VPN Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1886,6 +1885,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Point-to-Site VPN Gateway's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/pointToPointVpnGateway:PointToPointVpnGateway example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/p2svpnGateways/gateway1
+```
 
 
 

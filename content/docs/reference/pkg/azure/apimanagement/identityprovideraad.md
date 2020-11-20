@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityProviderAad resource of the apimanagement module
 
 Manages an API Management AAD Identity Provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1129,6 +1128,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management AAD Identity Provider can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/identityProviderAad:IdentityProviderAad example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ApiManagement/service/instance1/identityProviders/aad
+```
 
 
 

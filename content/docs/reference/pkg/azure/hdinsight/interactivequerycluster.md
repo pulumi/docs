@@ -12,7 +12,6 @@ meta_desc: "Explore the InteractiveQueryCluster resource of the hdinsight module
 
 Manages a HDInsight Interactive Query Cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4988,6 +4987,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+HDInsight Interactive Query Clusters can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:hdinsight/interactiveQueryCluster:InteractiveQueryCluster example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.HDInsight/clusters/cluster1}
+```
 
 
 

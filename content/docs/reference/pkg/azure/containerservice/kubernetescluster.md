@@ -12,7 +12,6 @@ meta_desc: "Explore the KubernetesCluster resource of the containerservice modul
 
 Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -8122,6 +8121,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Managed Kubernetes Clusters can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:containerservice/kubernetesCluster:KubernetesCluster cluster1 /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/group1/providers/Microsoft.ContainerService/managedClusters/cluster1
+```
 
 
 

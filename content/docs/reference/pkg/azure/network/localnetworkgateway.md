@@ -12,7 +12,6 @@ meta_desc: "Explore the LocalNetworkGateway resource of the network module, incl
 
 Manages a local network gateway connection over which specific connections can be configured.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1502,6 +1501,16 @@ BGP speaker.
 
 
 
+
+
+## Import
+
+
+Local Network Gateways can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/localNetworkGateway:LocalNetworkGateway lng1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/localNetworkGateways/lng1
+```
 
 
 

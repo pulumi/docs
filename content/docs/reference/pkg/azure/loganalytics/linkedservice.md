@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedService resource of the loganalytics module, inclu
 
 Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1150,6 +1149,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Log Analytics Workspaces can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:loganalytics/linkedService:LinkedService example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.OperationalInsights/workspaces/workspace1/linkedservices/automation
+```
 
 
 

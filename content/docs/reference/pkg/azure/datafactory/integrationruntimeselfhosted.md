@@ -12,7 +12,6 @@ meta_desc: "Explore the IntegrationRuntimeSelfHosted resource of the datafactory
 
 Manages a Data Factory Self-hosted Integration Runtime.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1284,6 +1283,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factories can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/integrationRuntimeSelfHosted:IntegrationRuntimeSelfHosted example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/integrationruntimes/example
+```
 
 
 

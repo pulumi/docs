@@ -12,7 +12,6 @@ meta_desc: "Explore the MongoCollection resource of the cosmosdb module, includi
 
 Manages a Mongo Collection within a Cosmos DB Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1829,6 +1828,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+CosmosDB Mongo Collection can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:cosmosdb/mongoCollection:MongoCollection collection1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/account1/mongodbDatabases/db1/collections/collection1
+```
 
 
 

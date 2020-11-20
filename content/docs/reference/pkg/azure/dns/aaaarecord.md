@@ -12,7 +12,6 @@ meta_desc: "Explore the AaaaRecord resource of the dns module, including example
 
 Enables you to manage DNS AAAA Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1399,6 +1398,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+AAAA records can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:dns/aaaaRecord:AaaaRecord example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/dnszones/zone1/AAAA/myrecord1
+```
 
 
 

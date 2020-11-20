@@ -14,7 +14,6 @@ Manages a Azure Database Migration Service.
 
 > **NOTE:** Destroying a Database Migration Service will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provide.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1148,6 +1147,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Database Migration Services can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:databasemigration/service:Service example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-rg/providers/Microsoft.DataMigration/services/database_migration_service1
+```
 
 
 

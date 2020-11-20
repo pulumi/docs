@@ -14,7 +14,6 @@ Manages a Linked Service (connection) between Azure SQL Database and Azure Data 
 
 > **Note:** All arguments including the connection_string will be stored in the raw state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1370,6 +1369,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory Azure SQL Database Linked Service's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/linkedServiceAzureSqlDatabase:LinkedServiceAzureSqlDatabase example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/linkedservices/example
+```
 
 
 

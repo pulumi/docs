@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSystemTopic resource of the eventgrid module, includi
 
 Manages an Event Grid System Topic.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1226,6 +1225,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Event Grid System Topic can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventgrid/getSystemTopic:getSystemTopic example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventGrid/systemTopics/systemTopic1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Zone resource of the dns module, including examples, inp
 
 Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure's name servers to which you can delegate the zone from the parent domain.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1087,6 +1086,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+DNS Zones can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:dns/zone:Zone zone1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/dnszones/zone1
+```
 
 
 

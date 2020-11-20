@@ -14,7 +14,6 @@ Manages a policy set definition.
 
 > **NOTE:**  Policy set definitions (also known as policy initiatives) do not take effect until they are assigned to a scope using a Policy Set Assignment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1721,6 +1720,22 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Policy Set Definitions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:policy/policySetDefinition:PolicySetDefinition example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/policySetDefinitions/testPolicySet
+```
+
+ or
+
+```sh
+ $ pulumi import azure:policy/policySetDefinition:PolicySetDefinition example /providers/Microsoft.Management/managementGroups/my-mgmt-group-id/providers/Microsoft.Authorization/policySetDefinitions/testPolicySet
+```
 
 
 

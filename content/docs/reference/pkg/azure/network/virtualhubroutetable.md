@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualHubRouteTable resource of the network module, inc
 
 Manages a Virtual Hub Route Table.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1380,6 +1379,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Virtual Hub Route Tables can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/virtualHubRouteTable:VirtualHubRouteTable example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/routeTable1
+```
 
 
 

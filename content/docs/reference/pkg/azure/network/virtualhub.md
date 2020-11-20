@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualHub resource of the network module, including exa
 
 Manages a Virtual Hub within a Virtual WAN.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1424,6 +1423,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Virtual Hub's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/virtualHub:VirtualHub example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/virtualHubs/hub1
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Explore the EventHubConsumerGroup resource of the eventhub module, i
 
 Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1069,6 +1068,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+EventHub Consumer Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/eventHubConsumerGroup:EventHubConsumerGroup consumerGroup1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/namespaces/namespace1/eventhubs/eventhub1/consumergroups/consumerGroup1
+```
 
 
 

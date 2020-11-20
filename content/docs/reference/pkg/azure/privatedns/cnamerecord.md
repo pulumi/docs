@@ -12,7 +12,6 @@ meta_desc: "Explore the CnameRecord resource of the privatedns module, including
 
 Enables you to manage DNS CNAME Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1181,6 +1180,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Private DNS CName Records can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:privatedns/cnameRecord:CnameRecord example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/privateDnsZones/zone1/CName/myrecord1
+```
 
 
 

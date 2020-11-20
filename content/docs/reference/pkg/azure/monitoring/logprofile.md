@@ -14,7 +14,6 @@ Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-di
 
 > **NOTE:** It's only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with `StatusCode=409` will occur.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1346,6 +1345,16 @@ new resource to be created.
 
 
 
+
+
+## Import
+
+
+A Log Profile can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/logProfile:LogProfile example /subscriptions/00000000-0000-0000-0000-000000000000/providers/microsoft.insights/logprofiles/test
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the ApiOperation resource of the apimanagement module, inclu
 
 Manages an API Operation within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4418,6 +4417,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management API Operation's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/apiOperation:ApiOperation example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ApiManagement/service/instance1/apis/api1/operations/operation1
+```
 
 
 

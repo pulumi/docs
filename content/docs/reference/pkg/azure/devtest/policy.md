@@ -12,7 +12,6 @@ meta_desc: "Explore the Policy resource of the devtest module, including example
 
 Manages a Policy within a Dev Test Policy Set.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1406,6 +1405,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Dev Test Policies can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:devtest/policy:Policy policy1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DevTestLab/labs/lab1/policysets/default/policies/policy1
+```
 
 
 

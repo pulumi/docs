@@ -12,7 +12,6 @@ meta_desc: "Explore the Definition resource of the lighthouse module, including 
 
 Manages a Lighthouse Definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1238,6 +1237,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Lighthouse Definitions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:lighthouse/definition:Definition example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ManagedServices/registrationDefinitions/00000000-0000-0000-0000-000000000000
+```
 
 
 

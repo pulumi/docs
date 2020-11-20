@@ -12,7 +12,6 @@ meta_desc: "Explore the SharedImage resource of the compute module, including ex
 
 Manages a Shared Image within a Shared Image Gallery.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2216,6 +2215,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Shared Images can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/sharedImage:SharedImage image1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Compute/galleries/gallery1/images/image1
+```
 
 
 

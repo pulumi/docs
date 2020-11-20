@@ -12,7 +12,6 @@ meta_desc: "Explore the MetricAlert resource of the monitoring module, including
 
 Manages a Metric Alert within Azure Monitor.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3548,6 +3547,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Metric Alerts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/metricAlert:MetricAlert main /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-resources/providers/microsoft.insights/metricalerts/example-metricalert
+```
 
 
 

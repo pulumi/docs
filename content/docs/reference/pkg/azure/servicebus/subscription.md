@@ -12,7 +12,6 @@ meta_desc: "Explore the Subscription resource of the servicebus module, includin
 
 Manages a ServiceBus Subscription.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1940,6 +1939,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Service Bus Subscriptions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:servicebus/subscription:Subscription example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.servicebus/namespaces/sbns1/topics/sntopic1/subscriptions/sbsub1
+```
 
 
 

@@ -16,7 +16,6 @@ Manages the Data Access Settings for Azure Security Center.
 
 > **NOTE:** Deletion of this resource does not change or reset the data access settings
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -720,6 +719,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+The setting can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:securitycenter/setting:Setting example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Security/settings/<setting_name>
+```
 
 
 

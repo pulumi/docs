@@ -12,7 +12,6 @@ meta_desc: "Explore the KafkaCluster resource of the hdinsight module, including
 
 Manages a HDInsight Kafka Cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5040,6 +5039,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+HDInsight Kafka Clusters can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:hdinsight/kafkaCluster:KafkaCluster example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.HDInsight/clusters/cluster1}
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Configuration resource of the maintenance module, includ
 
 Manages a maintenance configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1010,6 +1009,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Maintenance Configuration can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:maintenance/configuration:Configuration example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.maintenance/maintenanceconfigurations/example-mc
+```
 
 
 

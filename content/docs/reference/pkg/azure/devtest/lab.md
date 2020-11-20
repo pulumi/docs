@@ -12,7 +12,6 @@ meta_desc: "Explore the Lab resource of the devtest module, including examples, 
 
 Manages a Dev Test Lab.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1534,6 +1533,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Dev Test Labs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:devtest/lab:Lab lab1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DevTestLab/labs/lab1
+```
 
 
 

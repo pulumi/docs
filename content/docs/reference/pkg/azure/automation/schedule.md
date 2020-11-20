@@ -12,7 +12,6 @@ meta_desc: "Explore the Schedule resource of the automation module, including ex
 
 Manages a Automation Schedule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1704,6 +1703,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Automation Schedule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:automation/schedule:Schedule schedule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Automation/automationAccounts/account1/schedules/schedule1
+```
 
 
 

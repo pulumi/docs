@@ -12,7 +12,6 @@ meta_desc: "Explore the ApiKey resource of the appinsights module, including exa
 
 Manages an Application Insights API key.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1178,6 +1177,16 @@ new resource to be created.
 
 
 
+
+
+## Import
+
+
+Application Insights API keys can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appinsights/apiKey:ApiKey my_key /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.insights/components/instance1/apikeys/00000000-0000-0000-0000-000000000000
+```
 
 
 

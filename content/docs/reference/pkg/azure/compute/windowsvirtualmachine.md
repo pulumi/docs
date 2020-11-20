@@ -22,7 +22,6 @@ Manages a Windows Virtual Machine.
 
 > In this release there's a known issue where the `public_ip_address` and `public_ip_addresses` fields may not be fully populated for Dynamic Public IP's.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5946,6 +5945,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Windows Virtual Machines can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/windowsVirtualMachine:WindowsVirtualMachine example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/Microsoft.Compute/virtualMachines/machine1
+```
 
 
 

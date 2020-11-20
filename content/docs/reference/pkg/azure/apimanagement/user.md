@@ -12,7 +12,6 @@ meta_desc: "Explore the User resource of the apimanagement module, including exa
 
 Manages an API Management User.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1484,6 +1483,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Users can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/user:User example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ApiManagement/service/instance1/users/abc123
+```
 
 
 

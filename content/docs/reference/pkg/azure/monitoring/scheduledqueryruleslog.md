@@ -14,7 +14,6 @@ Manages a LogToMetricAction Scheduled Query Rules resource within Azure Monitor.
 
 
 
-
 ## Create a ScheduledQueryRulesLog Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1548,6 +1547,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Scheduled Query Rule Log can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/scheduledQueryRulesLog:ScheduledQueryRulesLog example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Insights/scheduledQueryRules/myrulename
+```
 
 
 

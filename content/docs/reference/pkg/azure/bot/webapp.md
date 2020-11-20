@@ -12,7 +12,6 @@ meta_desc: "Explore the WebApp resource of the bot module, including examples, i
 
 Manages a Bot Web App.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1712,6 +1711,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Bot Web App's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:bot/webApp:WebApp example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.BotService/botServices/example
+```
 
 
 
