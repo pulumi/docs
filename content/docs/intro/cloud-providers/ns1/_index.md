@@ -60,13 +60,23 @@ zone = ns1.Zone("demo-zone",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  ns1 "github.com/pulumi/pulumi-ns1/sdk/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	ns1 "github.com/pulumi/pulumi-ns1/sdk/go/ns1"
 )
 
-zone, _ := ns1.NewZone(ctx, "demo-zone", &ns1.ZoneArgs{
-  Zone: pulumi.String("demo.pulumi.io"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		zone, err := ns1.NewZone(ctx, "demo-zone", &ns1.ZoneArgs{
+			Zone: pulumi.String("demo.pulumi.io"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

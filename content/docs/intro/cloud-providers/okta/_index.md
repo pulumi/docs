@@ -68,16 +68,25 @@ last_name="user",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  user "github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	user "github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
 )
 
-user, _ := user.User(ctx, "example-user", &user.UserArgs{
-    FirstName: pulumi.String("random"),
-    LastName:  pulumi.String("user"),
-    Email:     pulumi.String("test-user@mydomain.com"),
-    Login:     pulumi.String("test-user@mydomain.com"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		user, err := user.User(ctx, "example-user", &user.UserArgs{
+			FirstName: pulumi.String("random"),
+			LastName:  pulumi.String("user"),
+			Email:     pulumi.String("test-user@mydomain.com"),
+			Login:     pulumi.String("test-user@mydomain.com"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

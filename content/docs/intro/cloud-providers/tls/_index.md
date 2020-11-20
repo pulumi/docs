@@ -56,14 +56,23 @@ key = tls.PrivateKey("my-private-key",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  tls "github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	tls "github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
 )
 
-key, _ := tls.NewPrivateKey(ctx, "my-private-key", &tls.PrivateKeyArgs{
-  Algorithm:  pulumi.String("ECDSA"),
-  EcdsaCurve: pulumi.String("P384"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		key, err := tls.NewPrivateKey(ctx, "my-private-key", &tls.PrivateKeyArgs{
+			Algorithm:  pulumi.String("ECDSA"),
+			EcdsaCurve: pulumi.String("P384"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

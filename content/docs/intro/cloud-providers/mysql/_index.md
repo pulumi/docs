@@ -54,10 +54,21 @@ my_db = mysql.Database("my-database")
 
 ```go
 import (
-  mysql "github.com/pulumi/pulumi-mysql/sdk/v2/go/mysql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	mysql "github.com/pulumi/pulumi-mysql/sdk/v2/go/mysql"
 )
 
-myDb, _ := mysql.NewDatabase(ctx, "my-database", &mysql.DatabaseArgs{})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myDb, err := mysql.NewDatabase(ctx, "my-database", &mysql.DatabaseArgs{})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

@@ -58,13 +58,23 @@ vpc = alicloud.vpc.Network("my-vpc",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  vpc "github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	vpc "github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 )
 
-vpc, _ := vpc.NewVpc(ctx, "demo-instance", &vpc.VpcArgs{
-	CidrBlock: pulumi.String("10.0.0.0/16"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := vpc.NewVpc(ctx, "demo-instance", &vpc.VpcArgs{
+			CidrBlock: pulumi.String("10.0.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

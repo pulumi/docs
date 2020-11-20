@@ -61,13 +61,22 @@ project = packet.Project("my-project",
 
 ```go
 import (
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-    packet "github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	packet "github.com/pulumi/pulumi-packet/sdk/v2/go/packet"
 )
 
-project, _ := packet.NewProject(ctx, "test", &packet.ProjectArgs{
-  Name: pulumi.String("DevelopmentEnvironment")
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := packet.NewProject(ctx, "test", &packet.ProjectArgs{
+			Name: pulumi.String("DevelopmentEnvironment"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
