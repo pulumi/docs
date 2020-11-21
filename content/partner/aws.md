@@ -8,8 +8,9 @@ meta_desc: Pulumi provides huge productivity gains and a unified programming mod
 hero:
     title: Cloud Engineering for AWS
     description: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis erat quis
-        libero fringilla commodo. Donec iaculis ipsum eu orci dignissim, sit amet porttitor velit eleifend.
+        Pulumi's infrastructure as code SDK helps create, deploy, and manage your
+        AWS infrastructure, including containers, serverless functions, and
+        other infrastructure using modern programming languages.
     cta_text: See what's new
     cta_url: "/blog/announcing-nextgen-azure-provider"
     ide:

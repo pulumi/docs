@@ -11,11 +11,10 @@
             <div class="w-full mt-16 lg:w-1/2 lg:mt-0">
                 <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
                     <iframe
-                        src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0"
+                        src="//www.youtube.com/embed/cCzoCUxqiVo?rel=0"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                         allowfullscreen=""
                         title="Introduction to Pulumi: Modern Infrastructure as Code"
-                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/6f8KF6UGN7g?autoplay=1><img src='/images/home/youtube-preview.png' alt='Introduction to Pulumi: Modern Infrastructure as Code'></a>"
                     ></iframe>
                 </div>
             </div>
@@ -58,7 +57,7 @@
     <!-- Start AWS re:Invent takeover content -->
     <section class="container mx-auto text-center mb-12">
         <p class="text-3xl font-bold">JOIN A WORKSHOP</p>
-        <ul class="flex flex-col lg:flex-row list-none text-left">
+        <ul class="flex flex-col lg:flex-row list-none text-left items-center">
             {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
 
             {{ $reInventWorkshops := slice }}
@@ -91,12 +90,12 @@
         <div class="flex justify-center">
             <div class="w-10/12">
                 {{ range first 3 $blog }}
-                    <div class="flex mb-5">
-                        <div class="w-1/2 mr-8">
+                    <div class="flex flex-col lg:flex-row mb-5">
+                        <div class="w-full lg:w-1/2 mr-8 aws-reinvent-blog-image">
                             {{ partial "blog/poster" . }}
                         </div>
 
-                        <div class="w-1/2 text-left">
+                        <div class="w-full lg:w-1/2 text-left">
                             <p class="no-anchor text-2xl font-bold"><a data-track="post-{{ .Title | urlize }}" href="{{ .Permalink }}">{{ .Title }}</a></p>
                             <div class="flex items-center">
                                 <span>
@@ -127,34 +126,38 @@
             </div>
             <p class="w-10/12 mx-auto text-4xl mt-0">Begin with the Engineer and their experience.</p>
             <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-                Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
-                ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
-                ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
+                Software development begins with the Engineer and they need tools and process that enable them
+                to deliver their ideas with the least amount of friction as possible. Pulumi puts the Engineer's
+                experience first and focuses on providing the tools neccessary to deliver infrastructure faster and
+                with more accuracy.
             </p>
-            <div class="flex flex-col md:flex-row lg:mt-12">
-                <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
+            <div class="flex flex-col xl:flex-row xl:mt-12">
+                <div class="w-full p-5 xl:p-0 xl:w-1/2">
                     <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
                         {{ partial "home/ide" . }}
                     </div>
                 </div>
 
-                <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
+                <div class="w-full xl:w-1/2 text-left px-10">
                     <p class="text-lg font-bold">IDE Autocomplete</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        By using Pulumi you use the producivity features available in
+                        your IDE like autocompletition, to help write infrastructure
+                        programs faster and with more accuracy.
                     </p>
 
                     <p class="text-lg font-bold">Native Testing Frameworks</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        With Pulumi you can take advantage our your preferred programming languages
+                        native testing frameworks to be able to test your infrastructure and applications
+                        through their entire lifecycle.
                     </p>
 
                     <p class="text-lg font-bold">Sharing and Reuse</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        Sharing and reusing your infrastructure code is available right out of the
+                        box with Pulumi. You can you use your preferred programming language's native
+                        package managers to share and distribute infrastructure code within your organization.
                     </p>
                 </div>
             </div>
@@ -171,34 +174,38 @@
             </div>
             <p class="w-10/12 mx-auto text-4xl mt-0">Reduce obstacles and increase collaboration to ship faster.</p>
             <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-                Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
-                ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
-                ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
+                Getting an application into production can be an overwhelming process. Pulumi empowers you and your
+                team to work together to reduce obstacles and increase collaboration across your entire software
+                delivery pipeline.
             </p>
-            <div class="flex flex-col md:flex-row lg:mt-12">
-                <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
+            <div class="flex flex-col xl:flex-row xl:mt-12">
+                <div class="w-full p-5 lg:p-0 xl:w-1/2">
                     <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
                         {{ partial "home/cli" . }}
                     </div>
                 </div>
 
-                <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
+                <div class="w-full xl:w-1/2 text-left px-10">
                     <p class="text-lg font-bold">Architect for self-service</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        Pulumi's unique approach to Infrastructure as Code allows you to build
+                        self-service infrastructure platforms. You can abstract away complexity
+                        for your teammates, allowing folks to focus what's important.
                     </p>
 
                     <p class="text-lg font-bold">Collaboration made easy</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        To be able to decrease the time our organization goes from ideation
+                        to value delivery, we need to give our engineers the tools they need to collaborate
+                        effectively. Pulumi provides you and your team with platform to collaborate on
+                        cloud infrastructure and improve the velocity of delivery.
                     </p>
 
-                    <p class="text-lg font-bold">Continuous Delivery from Day 1</p>
+                    <p class="text-lg font-bold">Continuously Delivery Value</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        Pulumi gives you the power to continuously test and deliver your cloud
+                        infrastructure. By automating your tesing and delivery you can focus more
+                        on delivering value to your customers.
                     </p>
                 </div>
             </div>
@@ -215,34 +222,37 @@
             </div>
             <p class="w-10/12 mx-auto text-4xl mt-0">Full auditability and visibility into all environments to tame complexity and put security first.</p>
             <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-                Maecenas a feugiat mi. Aliquam mattis tellus eget eros sodales egestas. Curabitur ac mauris vulputate,
-                ultrices augue et, tempus libero. Maecenas nec dolor at lectus faucibus mattis in vehicula dui. Pellentesque
-                ante augue, aliquam a posuere at, pharetra a arcu. Donec finibus rhoncus ligula.
+                Cloud Engineering can be a complex undertaking that you need full access and visiblity into. Pulumi
+                gives you access and visiblity into everything going on in your cloud environments so you can prevent
+                mistakes before they occur and respond rapidly to any incidents.
             </p>
-            <div class="flex flex-col md:flex-row lg:mt-12">
-                <div class="w-full order-first p-5 lg:p-0 lg:w-1/2 md:order-last">
+            <div class="flex flex-col xl:flex-row xl:mt-12">
+                <div class="w-full p-5 lg:p-0 xl:w-1/2">
                     <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
                         {{ partial "home/console" . }}
                     </div>
                 </div>
 
-                <div class="w-full order-last lg:w-1/2 md:order-first text-left px-10">
+                <div class="w-full xl:w-1/2 text-left px-10">
                     <p class="text-lg font-bold">Secrets management made easy</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        Pulumi provides you with any easy way to ensure secretes are kept safe
+                        during the entire software development lifecycle. You can have Pulumi
+                        manage your secrets for you or bring your own secrets management provider.
                     </p>
 
                     <p class="text-lg font-bold">Keep your workflows secure</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        When you enable Policy as Code within your organization you get the
+                        ability to define guardrails for your infrastructure, ensuring engineers
+                        are following best practices and putting security first.
                     </p>
 
                     <p class="text-lg font-bold">Manage your complexity</p>
                     <p>
-                        In congue ante in tortor laoreet, nec commodo augue gravida. Aenean et
-                        pulvinar magna. Nam at viverra ipsum. Etiam feugiat vehicula nunc eget bibendum.
+                        The Pulumi Console gives you full auditbility the current state of
+                        your cloud infrastructure. From seeing what resources are being managed
+                        by which stack, to the actions specific team members are performing.
                     </p>
                 </div>
             </div>
@@ -263,8 +273,9 @@
                         <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Start from scratch</p>
                             <p>
-                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
-                                velit urna, non semper sem sagittis nec.
+                                If you are new to Pulumi our Getting Started Guides are the place for you. In
+                                these guides you will learn the fundamentals of Pulumi while deploying some
+                                simple cloud infrastructure.
                             </p>
                             <p class="text-blue-500">
                                 <a href="{{ relref . "/docs/get-started/aws" }}" class="hover:mr-1 transition-all">Get started</a> &rarr;
@@ -282,8 +293,9 @@
                         <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Import an existing resource</p>
                             <p>
-                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
-                                velit urna, non semper sem sagittis nec.
+                                For people who are already managing infrastructure with a different tool
+                                or directly in the cloud's console, we have created adoption guides for
+                                incrementally adopting Pulumi.
                             </p>
                             <p class="text-blue-500">
                                 <a href="{{ relref . "/docs/guides/adopting" }}" class="hover:mr-1 transition-all">Read the guide</a> &rarr;
@@ -301,8 +313,9 @@
                         <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Clone an example</p>
                             <p>
-                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
-                                velit urna, non semper sem sagittis nec.
+                                We have created 150+ examples for you to choose from as way for
+                                you to quickly get started with Pulumi. You can deploy them as-is or
+                                use an example as a base for your own project.
                             </p>
                             <p class="text-blue-500">
                                 <a href="https://github.com/pulumi/examples" target="_blank" rel="noopener noreferrer" class="hover:mr-1 transition-all">View the examples</a> &rarr;
@@ -320,8 +333,9 @@
                         <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Convert Terraform</p>
                             <p>
-                                Curabitur neque sem, semper eu mollis ac, porta quis magna. Phasellus blandit
-                                velit urna, non semper sem sagittis nec.
+                                If you are already using Terraform to manage your infrastructure, we have
+                                built a tool for you to see what your HCL would look like in TypeScript, Python,
+                                C#, and Go.
                             </p>
                             <p class="text-blue-500">
                                 <a href="{{ relref . "/tf2pulumi" }}" class="hover:mr-1 transition-all">Try tf2pulumi</a> &rarr;
