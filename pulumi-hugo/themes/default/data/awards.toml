@@ -1,4 +1,10 @@
 [[awards]]
+title = "10 Hottest Kubernetes Startups Of 2020"
+featured = true
+img = "/logos/press/crn.png"
+url = "https://www.crn.com/slide-shows/cloud/the-10-hottest-kubernetes-startups-of-2020/7"
+
+[[awards]]
 title = "Gartner Cool Vendor 2020"
 featured = true
 img = "/logos/press/awards/gartner-cool-vendor.png"
