@@ -76,19 +76,22 @@ Resources:
     2 changes
 
 Duration: 10s
-```
 
-The user can then see the generated code they need to use as part of their application. I imported this resource into a
-TypeScript application:
-
-```bash
 Please copy the following code into your Pulumi application. Not doing so
 will cause Pulumi to report that an update will happen on the next update command.
 
 Please note, that the imported resources are marked as protected. To destroy them
 you will need to remove the `protect` option and run `pulumi update` *before*
 the destroy will take effect.
+```
 
+The user can then see the generated code they need to use as part of their application. I imported this resource into a
+TypeScript application:
+
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{< choosable language typescript >}}
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
@@ -100,6 +103,67 @@ const demo = new aws.s3.Bucket("infra-logs", {
     protect: true,
 });
 ```
+{{< /choosable >}}
+{{< choosable language python >}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+demo = aws.s3.Bucket("infra-logs",
+    acl="private",
+    bucket="cloud-infra-logs",
+    force_destroy=False,
+    opts=ResourceOptions(protect=True))
+```
+{{< /choosable >}}
+{{< choosable language go >}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := s3.NewBucket(ctx, "infra-logs", &s3.BucketArgs{
+			Acl:          pulumi.String("private"),
+			Bucket:       pulumi.String("cloud-infra-logs"),
+			ForceDestroy: pulumi.Bool(false),
+		}, pulumi.Protect(true))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{< /choosable >}}
+{{< choosable language csharp >}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demo = new Aws.S3.Bucket("infra-logs", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+            Bucket = "cloud-infra-logs",
+            ForceDestroy = false,
+        }, new CustomResourceOptions
+        {
+            Protect = true,
+        });
+    }
+
+}
+```
+{{< /choosable >}}
+{{< /chooser >}}
 
 This is valid Pulumi application code and can be added to your Pulumi application. Notice that the Pulumi resource is
 marked as `protect: true`. This means Pulumi will not delete that resource unless this protection attribute is removed
@@ -196,7 +260,14 @@ will cause Pulumi to report that an update will happen on the next update comman
 Please note, that the imported resources are marked as protected. To destroy them
 you will need to remove the `protect` option and run `pulumi update` *before*
 the destroy will take effect.
+```
 
+We can see the resultant code generation:
+
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{< choosable language typescript >}}
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
@@ -243,6 +314,183 @@ const private_1 = new aws.ec2.Subnet("private-1", {
 }, {
     protect: true,
 });
+```
+{{< /choosable >}}
+{{< choosable language python >}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+application_vpc = aws.ec2.Vpc("application-vpc",
+    assign_generated_ipv6_cidr_block=False,
+    cidr_block="172.16.0.0/16",
+    enable_dns_support=True,
+    instance_tenancy="default",
+    tags={
+        "Name": "pulumi-vpc",
+        "Owner": "pulumi",
+        "Project": "pulumi-k8s-aws-cluster",
+    },
+    opts=ResourceOptions(protect=True))
+public_1 = aws.ec2.Subnet("public-1",
+    assign_ipv6_address_on_creation=False,
+    cidr_block="172.16.32.0/19",
+    map_public_ip_on_launch=True,
+    tags={
+        "Name": "pulumi-vpc-public-1",
+        "Owner": "pulumi",
+        "Project": "pulumi-k8s-aws-cluster",
+        "kubernetes.io/role/elb": "1",
+        "type": "public",
+    },
+    vpc_id="vpc-0ad77710973388316",
+    opts=ResourceOptions(protect=True))
+private_1 = aws.ec2.Subnet("private-1",
+    assign_ipv6_address_on_creation=False,
+    cidr_block="172.16.160.0/19",
+    map_public_ip_on_launch=False,
+    tags={
+        "Name": "pulumi-vpc-private-1",
+        "Owner": "pulumi",
+        "Project": "pulumi-k8s-aws-cluster",
+        "kubernetes.io/role/internal-elb": "1",
+        "type": "private",
+    },
+    vpc_id="vpc-0ad77710973388316",
+    opts=ResourceOptions(protect=True))
+```
+{{< /choosable >}}
+{{< choosable language go >}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewVpc(ctx, "application_vpc", &ec2.VpcArgs{
+			AssignGeneratedIpv6CidrBlock: pulumi.Bool(false),
+			CidrBlock:                    pulumi.String("172.16.0.0/16"),
+			EnableDnsSupport:             pulumi.Bool(true),
+			InstanceTenancy:              pulumi.String("default"),
+			Tags: pulumi.StringMap{
+				"Name":    pulumi.String("pulumi-vpc"),
+				"Owner":   pulumi.String("pulumi"),
+				"Project": pulumi.String("pulumi-k8s-aws-cluster"),
+			},
+		}, pulumi.Protect(true))
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewSubnet(ctx, "public_1", &ec2.SubnetArgs{
+			AssignIpv6AddressOnCreation: pulumi.Bool(false),
+			CidrBlock:                   pulumi.String("172.16.32.0/19"),
+			MapPublicIpOnLaunch:         pulumi.Bool(true),
+			Tags: pulumi.StringMap{
+				"Name":                   pulumi.String("pulumi-vpc-public-1"),
+				"Owner":                  pulumi.String("pulumi"),
+				"Project":                pulumi.String("pulumi-k8s-aws-cluster"),
+				"kubernetes.io/role/elb": pulumi.String("1"),
+				"type":                   pulumi.String("public"),
+			},
+			VpcId: pulumi.String("vpc-0ad77710973388316"),
+		}, pulumi.Protect(true))
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewSubnet(ctx, "private_1", &ec2.SubnetArgs{
+			AssignIpv6AddressOnCreation: pulumi.Bool(false),
+			CidrBlock:                   pulumi.String("172.16.160.0/19"),
+			MapPublicIpOnLaunch:         pulumi.Bool(false),
+			Tags: pulumi.StringMap{
+				"Name":                            pulumi.String("pulumi-vpc-private-1"),
+				"Owner":                           pulumi.String("pulumi"),
+				"Project":                         pulumi.String("pulumi-k8s-aws-cluster"),
+				"kubernetes.io/role/internal-elb": pulumi.String("1"),
+				"type":                            pulumi.String("private"),
+			},
+			VpcId: pulumi.String("vpc-0ad77710973388316"),
+		}, pulumi.Protect(true))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{< /choosable >}}
+{{< choosable language csharp >}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application_vpc = new Aws.Ec2.Vpc("application-vpc", new Aws.Ec2.VpcArgs
+        {
+            AssignGeneratedIpv6CidrBlock = false,
+            CidrBlock = "172.16.0.0/16",
+            EnableDnsSupport = true,
+            InstanceTenancy = "default",
+            Tags =
+            {
+                { "Name", "pulumi-vpc" },
+                { "Owner", "pulumi" },
+                { "Project", "pulumi-k8s-aws-cluster" },
+            },
+        }, new CustomResourceOptions
+        {
+            Protect = true,
+        });
+        var public_1 = new Aws.Ec2.Subnet("public-1", new Aws.Ec2.SubnetArgs
+        {
+            AssignIpv6AddressOnCreation = false,
+            CidrBlock = "172.16.32.0/19",
+            MapPublicIpOnLaunch = true,
+            Tags =
+            {
+                { "Name", "pulumi-vpc-public-1" },
+                { "Owner", "pulumi" },
+                { "Project", "pulumi-k8s-aws-cluster" },
+                { "kubernetes.io/role/elb", "1" },
+                { "type", "public" },
+            },
+            VpcId = "vpc-0ad77710973388316",
+        }, new CustomResourceOptions
+        {
+            Protect = true,
+        });
+        var private_1 = new Aws.Ec2.Subnet("private-1", new Aws.Ec2.SubnetArgs
+        {
+            AssignIpv6AddressOnCreation = false,
+            CidrBlock = "172.16.160.0/19",
+            MapPublicIpOnLaunch = false,
+            Tags =
+            {
+                { "Name", "pulumi-vpc-private-1" },
+                { "Owner", "pulumi" },
+                { "Project", "pulumi-k8s-aws-cluster" },
+                { "kubernetes.io/role/internal-elb", "1" },
+                { "type", "private" },
+            },
+            VpcId = "vpc-0ad77710973388316",
+        }, new CustomResourceOptions
+        {
+            Protect = true,
+        });
+    }
+
+}
+```
+{{< /choosable >}}
+{{< /chooser >}}
+
+
 ```
 
 ## Documentation
