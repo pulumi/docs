@@ -119,10 +119,10 @@ Being able to manage all of our infrastructure as code and enhance the behavior 
 
 ## About the Pinpoint Team
 
-<iframe style="margin: 0px auto; display: block; border: 0;" title="Andrew Kunzel – Developer Profile" xml="lang" src="https://cards.pinpoint.com/profile?id=d160098419834b08&amp;env=edge" width="600" height="400" scrolling="no"></iframe>
+<iframe style="margin: 0px auto; display: block; border: 0;" title="Andrew Kunzel – Developer Profile" xml="lang" src="https://profile.pinpoint.com/u/9ba7405e227eb0c7" width="600" height="400" scrolling="no"></iframe>
 
 Read more about [Andrew](https://insights.pinpoint.com/developer-spotlight-andrew-kunzel-director-of-backend-engineering) in his Developer Spotlight.
 
-<iframe style="margin: 0px auto; display: block; border: 0;" title="Mike Goode – Developer Profile" xml="lang" src="https://cards.pinpoint.com/profile?id=aac75d10d212e12c&amp;env=edge" width="600" height="400" scrolling="no"></iframe>
+<iframe style="margin: 0px auto; display: block; border: 0;" title="Mike Goode – Developer Profile" xml="lang" src="https://profile.pinpoint.com/u/mike" width="600" height="400" scrolling="no"></iframe>
 
 Read more about [Mike](https://insights.pinpoint.com/developer-spotlight-michael-goode-platform-operations-engineer) in his Developer Spotlight.
